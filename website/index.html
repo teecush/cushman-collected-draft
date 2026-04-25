@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cushman Collected</title>
+    <meta
+      name="description"
+      content="The collected theatre criticism of Robert Cushman."
+    >
+    <link rel="stylesheet" href="./styles.css?v=44">
+  </head>
+  <body>
+    <header class="site-header">
+      <button class="icon-button" id="menuButton" aria-label="Open navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <a class="brand" href="#home" aria-label="Cushman Collected">
+        <img
+          src="https://images.squarespace-cdn.com/content/v1/5b686ff89d5abba58f12a1bd/1546905508569-Y2DBQ1MYPBE7FFFUX2VU/Robert+Cushman+logo.png"
+          alt="Cushman Collected"
+        >
+      </a>
+      <a class="search-link" href="#archive" aria-label="Search">
+        <span></span>
+      </a>
+    </header>
+
+    <nav class="drawer" id="drawer" aria-label="Site navigation">
+      <a href="#archive">Search the Archive</a>
+      <a href="#browse:types">Browse by Category</a>
+      <a href="#current">Current Collection</a>
+      <a href="#archive?type=theatre">Theatre</a>
+      <a href="#collection:shakespeare">Shakespeare</a>
+      <a href="#archive?type=musical-theatre">Musical Theatre</a>
+      <a href="#archive?type=television">Television</a>
+      <a href="#archive?type=music-concerts">Music & Concerts</a>
+      <a href="#archive?type=books-essays">Books & Essays</a>
+      <a href="#archive?type=people">People</a>
+      <a href="#archive?type=other-arts">Other Arts</a>
+      <a href="#index:people">Metadata Indexes</a>
+      <a href="#about">About Robert Cushman</a>
+    </nav>
+
+    <main>
+      <section class="intro" id="home">
+        <p class="lede">
+          Welcome to Cushman Collected, the collected reviews of internationally
+          acclaimed and award-winning theatre critic Robert Cushman. This is a
+          free digital resource spanning over forty years of British and Canadian
+          theatre criticism.
+        </p>
+        <p>
+          The archive currently features more than 2,500 public reviews and
+          essays, including Robert's Shakespeare criticism, Canadian theatre
+          coverage, musical theatre and music writing, and television criticism.
+          Recent self-published work from the original site will join the new
+          archive after launch.
+        </p>
+        <p>
+          Start with a browse path, or search across the full public archive by
+          title, production, company, city, or person.
+        </p>
+      </section>
+
+      <section class="archive" id="archive">
+        <div class="archive-heading">
+          <h1>Search the Archive</h1>
+          <p id="archiveCount">Loading records...</p>
+        </div>
+        <div class="search-panel">
+          <label class="search-field">
+            <span>Search</span>
+            <input id="searchInput" type="search" autocomplete="off" placeholder="Title, production, company, person, city">
+          </label>
+        </div>
+        <div class="filter-strip" aria-label="Archive filters">
+          <label>
+            <span>Type</span>
+            <select id="typeFilter"></select>
+          </label>
+          <label>
+            <span>Collection</span>
+            <select id="collectionFilter"></select>
+          </label>
+          <div class="search-tools" aria-label="Search tools">
+            <span>Sort</span>
+            <div class="sort-options" id="sortOptions">
+              <button class="is-active" type="button" data-sort="newest">Newest</button>
+              <button type="button" data-sort="oldest">Oldest</button>
+              <button type="button" data-sort="title">Title A-Z</button>
+            </div>
+          </div>
+          <button class="clear-button" id="clearFilters" type="button">Clear</button>
+        </div>
+        <div class="shakespeare-nav" id="shakespeareNav" hidden></div>
+        <div class="results" id="results"></div>
+      </section>
+
+      <section class="frontpage-directory" id="frontpageDirectory" aria-label="Primary site paths"></section>
+
+      <section class="browse-heading" id="browse">
+        <h2>Browse by Type</h2>
+      </section>
+
+      <section class="tile-grid" id="collectionTiles" aria-label="Collection links"></section>
+
+      <section class="browse-heading collection-heading" id="collections">
+        <h2>Collections</h2>
+      </section>
+
+      <section class="tile-grid secondary-grid" id="secondaryTiles" aria-label="Secondary collection links"></section>
+
+      <section class="browse-heading index-heading" id="indexes">
+        <h2>Indexes</h2>
+      </section>
+
+      <section class="tile-grid index-grid" id="indexTiles" aria-label="Metadata index links"></section>
+
+      <section class="article-view" id="articleView" hidden>
+        <a class="back-link" href="#archive">Back to archive</a>
+        <article id="article"></article>
+      </section>
+
+      <section class="index-view" id="indexView" hidden>
+        <a class="back-link" href="#home">Back to home</a>
+        <div id="indexContent"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <section>
+        <strong>Subscribe to Cushman Collected.</strong>
+        <p>Receive email updates when new articles are posted.</p>
+        <form>
+          <input type="email" placeholder="Email Address" aria-label="Email Address">
+          <button type="button">Sign Up</button>
+        </form>
+        <small>We respect your privacy and you may unsubscribe at any time.</small>
+      </section>
+      <section>
+        <strong>Support Cushman Collected.</strong>
+        <p>Your contribution will help expand the archive.</p>
+        <button type="button">Donate</button>
+      </section>
+    </footer>
+
+    <script src="./app.js?v=44" type="module"></script>
+  </body>
+</html>

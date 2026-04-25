@@ -1,0 +1,85 @@
+{
+  "export_dir": "site_export",
+  "source_dir": "repaired_structural_v2",
+  "counts": {
+    "total": 2726,
+    "publish": 2536,
+    "archive_only": 154,
+    "duplicate_variant": 35,
+    "exclude_from_publication": 1
+  },
+  "public_reviews": 2536,
+  "archive_records": 189,
+  "excluded_records": 1,
+  "map_points": 1771,
+  "sample_public_record": {
+    "slug": "1983-11-11-critics-cool-to-old-vic-s-blondel",
+    "route": "/reviews/1983-11-11-critics-cool-to-old-vic-s-blondel/",
+    "source_file": "1983.11.11.The_Globe_and_Mail.Critics_Cool_To_Old_VicS_Blondel.md",
+    "title": "Critics Cool To Old Vic's Blondel",
+    "date": "1983-11-11",
+    "year": "1983",
+    "publication": "The Globe and Mail",
+    "article_category": "Musical Review",
+    "collections": [
+      "The Musical Collection"
+    ],
+    "publication_status": "publish",
+    "editorial_issue_type": "",
+    "canonical_file": "",
+    "production_title": "Blondel",
+    "company": "Old Vic Theatre",
+    "venue": "Old Vic Theatre",
+    "city": "London, England",
+    "coordinates": [
+      51.5014,
+      -0.1099
+    ],
+    "people": [
+      "Chris Langham",
+      "David Burt",
+      "Paul Nicholas",
+      "Peter James",
+      "Stephen Oliver",
+      "Tim Goodchild",
+      "Tim Rice"
+    ],
+    "roles": {
+      "director": [
+        "Peter James"
+      ],
+      "actors": [
+        "Paul Nicholas",
+        "David Burt",
+        "Chris Langham"
+      ],
+      "playwright": [],
+      "composer_lyricist": [
+        "Tim Rice",
+        "Stephen Oliver"
+      ],
+      "musical_director": [],
+      "choreographer": [],
+      "orchestrator": [],
+      "arranger": [],
+      "assistant_director": [],
+      "stage_manager": [],
+      "assistant_musical_director": [],
+      "vocal_director": [],
+      "dance_captain": [],
+      "fight_director": [],
+      "dramaturg": [],
+      "producer": [],
+      "set_designer": [
+        "Tim Goodchild"
+      ],
+      "costume_designer": [],
+      "lighting_designer": [],
+      "sound_designer": [],
+      "musicians": [],
+      "performers": []
+    },
+    "word_count": 876
+  },
+  "duplicate_canonical_links": 35
+}
