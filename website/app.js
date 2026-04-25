@@ -1,4 +1,4 @@
-const DATA_URL = new URL("../site_export/data/public_reviews.json?v=44", import.meta.url);
+const DATA_URL = new URL("../site_export/data/public_reviews.json?v=48", import.meta.url);
 const CONTENT_ROOT = new URL("../site_export/content/reviews/", import.meta.url);
 const PAGE_SIZE = 36;
 const SHAKESPEARE_COLLECTION = "The Shakespeare Collection";
@@ -249,6 +249,8 @@ const els = {
   article: document.querySelector("#article"),
   indexView: document.querySelector("#indexView"),
   indexContent: document.querySelector("#indexContent"),
+  mapView: document.querySelector("#mapView"),
+  mapContent: document.querySelector("#mapContent"),
 };
 
 function hasActiveFilters() {
@@ -358,6 +360,43 @@ function entityMap(type) {
     });
   });
   return map;
+}
+
+function cityMapPoints() {
+  const map = entityMap("cities");
+  state.records.forEach((record) => {
+    const coordinates = Array.isArray(record.coordinates) ? record.coordinates : [];
+    const lat = Number(coordinates[0]);
+    const lon = Number(coordinates[1]);
+    if (!Number.isFinite(lat) || !Number.isFinite(lon)) return;
+    splitCityList(record.city).forEach((city) => {
+      const slug = entitySlug(city);
+      const point = map.get(slug) || {
+        slug,
+        label: city,
+        records: [],
+      };
+      if (!("latTotal" in point)) {
+        point.latTotal = 0;
+        point.lonTotal = 0;
+        point.coordinateCount = 0;
+      }
+      point.latTotal += lat;
+      point.lonTotal += lon;
+      point.coordinateCount += 1;
+      map.set(slug, point);
+    });
+  });
+
+  return [...map.values()]
+    .filter((point) => point.coordinateCount)
+    .map((point) => ({
+      ...point,
+      lat: point.latTotal / point.coordinateCount,
+      lon: point.lonTotal / point.coordinateCount,
+      count: point.records.length,
+    }))
+    .sort((a, b) => b.count - a.count || a.label.localeCompare(b.label));
 }
 
 function entityType(type) {
@@ -596,6 +635,12 @@ function renderFrontpageDirectory() {
     }))
     .filter((item) => item.count)
     .sort((a, b) => b.count - a.count || a.label.localeCompare(b.label));
+  indexLinks.unshift({
+    label: "Map",
+    href: "#map",
+    count: cityMapPoints().length,
+    featured: true,
+  });
 
   const sections = [
     {
@@ -780,6 +825,129 @@ function renderEntityPage(typeKey, slug) {
   list.className = "results entity-results";
   list.replaceChildren(...sortRecords(entry.records).map((record) => resultCard(record)));
   els.indexContent.replaceChildren(title, count, back, list);
+}
+
+function renderMapView() {
+  const points = cityMapPoints();
+  const title = document.createElement("h1");
+  title.textContent = "Archive Map";
+  const count = document.createElement("p");
+  count.className = "index-count";
+  const articleTotal = points.reduce((sum, point) => sum + point.count, 0);
+  count.textContent = `${points.length.toLocaleString()} places / ${articleTotal.toLocaleString()} mapped article references`;
+
+  const shell = document.createElement("div");
+  shell.className = "archive-map-shell";
+  const map = document.createElement("div");
+  map.className = "archive-map";
+  map.append(mapSvg(points));
+
+  const list = document.createElement("div");
+  list.className = "map-city-list";
+  const listTitle = document.createElement("h2");
+  listTitle.textContent = "Places";
+  const links = document.createElement("div");
+  links.className = "map-city-links";
+  points.forEach((point) => {
+    const link = document.createElement("a");
+    link.href = `#entity:cities:${point.slug}`;
+    link.innerHTML = `<span>${point.label}</span><em>${point.count.toLocaleString()}</em>`;
+    links.append(link);
+  });
+  list.replaceChildren(listTitle, links);
+  shell.replaceChildren(map, list);
+  els.mapContent.replaceChildren(title, count, shell);
+}
+
+function mapSvg(points) {
+  const width = 1000;
+  const height = 520;
+  const padding = 54;
+  const lats = points.map((point) => point.lat);
+  const lons = points.map((point) => point.lon);
+  const minLat = Math.min(...lats);
+  const maxLat = Math.max(...lats);
+  const minLon = Math.min(...lons);
+  const maxLon = Math.max(...lons);
+  const lonSpan = maxLon - minLon || 1;
+  const latSpan = maxLat - minLat || 1;
+  const maxCount = Math.max(...points.map((point) => point.count), 1);
+  const svg = createSvgElement("svg");
+  svg.setAttribute("viewBox", `0 0 ${width} ${height}`);
+  svg.setAttribute("role", "img");
+  svg.setAttribute("aria-label", "Map of archive article locations");
+
+  const background = createSvgElement("rect");
+  background.setAttribute("class", "map-paper");
+  background.setAttribute("width", width);
+  background.setAttribute("height", height);
+  svg.append(background);
+
+  for (let i = 1; i < 5; i += 1) {
+    const vertical = createSvgElement("line");
+    vertical.setAttribute("class", "map-gridline");
+    vertical.setAttribute("x1", padding + ((width - padding * 2) * i) / 5);
+    vertical.setAttribute("x2", padding + ((width - padding * 2) * i) / 5);
+    vertical.setAttribute("y1", padding);
+    vertical.setAttribute("y2", height - padding);
+    svg.append(vertical);
+    const horizontal = createSvgElement("line");
+    horizontal.setAttribute("class", "map-gridline");
+    horizontal.setAttribute("x1", padding);
+    horizontal.setAttribute("x2", width - padding);
+    horizontal.setAttribute("y1", padding + ((height - padding * 2) * i) / 5);
+    horizontal.setAttribute("y2", padding + ((height - padding * 2) * i) / 5);
+    svg.append(horizontal);
+  }
+
+  const plotted = points.map((point) => {
+    const x = padding + ((point.lon - minLon) / lonSpan) * (width - padding * 2);
+    const y = height - padding - ((point.lat - minLat) / latSpan) * (height - padding * 2);
+    const radius = 5 + Math.sqrt(point.count / maxCount) * 34;
+    return { ...point, x, y, radius };
+  });
+  const labelPoints = plotted
+    .filter((point, index) => index < 8 || point.count >= 4)
+    .map((point) => {
+      point.labelY = point.y;
+      return point;
+    })
+    .sort((a, b) => a.y - b.y);
+  labelPoints.forEach((point, index) => {
+    if (index === 0) return;
+    const previous = labelPoints[index - 1];
+    if (Math.abs(point.y - previous.labelY) < 18 && Math.abs(point.x - previous.x) < 120) {
+      point.labelY = previous.labelY + 18;
+    }
+  });
+
+  plotted.forEach((point) => {
+    const shouldLabel = labelPoints.includes(point);
+    const link = createSvgElement("a");
+    link.setAttribute("href", `#entity:cities:${point.slug}`);
+    const circle = createSvgElement("circle");
+    circle.setAttribute("class", "map-dot");
+    circle.setAttribute("cx", point.x.toFixed(2));
+    circle.setAttribute("cy", point.y.toFixed(2));
+    circle.setAttribute("r", point.radius.toFixed(2));
+    const label = createSvgElement("text");
+    label.setAttribute("class", "map-label");
+    const labelOnLeft = point.x > width - 190;
+    label.setAttribute("x", (labelOnLeft ? point.x - point.radius - 8 : point.x + point.radius + 8).toFixed(2));
+    label.setAttribute("y", ((point.labelY || point.y) + 4).toFixed(2));
+    label.setAttribute("text-anchor", labelOnLeft ? "end" : "start");
+    label.textContent = shouldLabel ? point.label : "";
+    const title = createSvgElement("title");
+    title.textContent = `${point.label}: ${point.count.toLocaleString()} ${point.count === 1 ? "article" : "articles"}`;
+    link.append(title, circle, label);
+    svg.append(link);
+  });
+
+  return svg;
+}
+
+function createSvgElement(name) {
+  return document.createElementNS("http://www.w3.org/2000/svg", name);
 }
 
 function archiveHrefForTile(title, key) {
@@ -1221,7 +1389,8 @@ function route() {
   const hash = window.location.hash || "#home";
   els.articleView.hidden = true;
   els.indexView.hidden = true;
-  document.body.classList.remove("article-open", "index-open");
+  els.mapView.hidden = true;
+  document.body.classList.remove("article-open", "index-open", "map-open");
 
   if (hash.startsWith("#review:")) {
     document.body.classList.add("article-open");
@@ -1248,6 +1417,14 @@ function route() {
       els.indexView.hidden = false;
       els.indexView.scrollIntoView({ behavior: "auto", block: "start" });
     }
+    return;
+  }
+
+  if (hash === "#map") {
+    document.body.classList.add("map-open");
+    renderMapView();
+    els.mapView.hidden = false;
+    els.mapView.scrollIntoView({ behavior: "auto", block: "start" });
     return;
   }
 
