@@ -2,62 +2,46 @@
   "export_dir": "site_export",
   "source_dir": "repaired_structural_v2",
   "counts": {
-    "total": 2752,
-    "publish": 2562,
+    "total": 2919,
+    "publish": 2729,
     "archive_only": 154,
     "duplicate_variant": 35,
     "exclude_from_publication": 1
   },
-  "public_reviews": 2562,
+  "public_reviews": 2729,
   "archive_records": 189,
   "excluded_records": 1,
   "map_points": 1771,
   "sample_public_record": {
-    "slug": "1983-11-11-critics-cool-to-old-vic-s-blondel",
-    "route": "/reviews/1983-11-11-critics-cool-to-old-vic-s-blondel/",
-    "source_file": "1983.11.11.The_Globe_and_Mail.Critics_Cool_To_Old_VicS_Blondel.md",
-    "title": "Critics Cool To Old Vic's Blondel",
-    "date": "1983-11-11",
-    "year": "1983",
-    "publication": "The Globe and Mail",
-    "article_category": "Musical Review",
+    "slug": "1973-04-29-hands-across-the-channel",
+    "route": "/reviews/1973-04-29-hands-across-the-channel/",
+    "source_file": "1973.04.29.Cushman_Collected.Hands_Across_the_Channel.md",
+    "title": "Hands Across the Channel",
+    "date": "1973-04-29",
+    "year": "1973",
+    "publication": "The Observer",
+    "article_category": "Theatre Review",
     "collections": [
-      "The Musical Collection"
+      "The Shakespeare Collection"
     ],
     "publication_status": "publish",
     "editorial_issue_type": "",
     "canonical_file": "",
-    "production_title": "Blondel",
-    "company": "Old Vic Theatre",
-    "venue": "Old Vic Theatre",
-    "city": "London, England",
-    "coordinates": [
-      51.5014,
-      -0.1099
-    ],
+    "production_title": "Richard III",
+    "company": "Royal Shakespeare Company",
+    "venue": "",
+    "city": "Stratford-upon-Avon",
+    "coordinates": [],
     "people": [
-      "Chris Langham",
-      "David Burt",
-      "Paul Nicholas",
-      "Peter James",
-      "Stephen Oliver",
-      "Tim Goodchild",
-      "Tim Rice"
+      "William Shakespeare"
     ],
     "roles": {
-      "director": [
-        "Peter James"
+      "director": [],
+      "actors": [],
+      "playwright": [
+        "William Shakespeare"
       ],
-      "actors": [
-        "Paul Nicholas",
-        "David Burt",
-        "Chris Langham"
-      ],
-      "playwright": [],
-      "composer_lyricist": [
-        "Tim Rice",
-        "Stephen Oliver"
-      ],
+      "composer_lyricist": [],
       "musical_director": [],
       "choreographer": [],
       "orchestrator": [],
@@ -70,9 +54,7 @@
       "fight_director": [],
       "dramaturg": [],
       "producer": [],
-      "set_designer": [
-        "Tim Goodchild"
-      ],
+      "set_designer": [],
       "costume_designer": [],
       "lighting_designer": [],
       "sound_designer": [],
@@ -80,7 +62,7 @@
       "performers": []
     },
     "media": [],
-    "word_count": 876
+    "word_count": 657
   },
   "duplicate_canonical_links": 35
 }
