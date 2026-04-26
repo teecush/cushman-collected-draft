@@ -1,4 +1,4 @@
-const DATA_URL = new URL("../site_export/data/public_reviews.json?v=70", import.meta.url);
+const DATA_URL = new URL("../site_export/data/public_reviews.json?v=71", import.meta.url);
 const CONTENT_ROOT = new URL("../site_export/content/reviews/", import.meta.url);
 const PAGE_SIZE = 36;
 const SHAKESPEARE_COLLECTION = "The Shakespeare Collection";
@@ -2526,7 +2526,7 @@ function renderResults() {
       ? `${total} public records`
       : `${shown} of ${total} public records`;
 
-  const cards = visible.map((record) => resultCard(record));
+  const cards = visible.map((record) => safeResultCard(record));
 
   if (state.filtered.length > state.visible) {
     const more = document.createElement("button");
@@ -2541,6 +2541,40 @@ function renderResults() {
   }
 
   els.results.replaceChildren(...cards);
+}
+
+function safeResultCard(record) {
+  try {
+    return resultCard(record);
+  } catch (error) {
+    console.error("Could not render result card", record?.slug, error);
+    return fallbackResultCard(record);
+  }
+}
+
+function fallbackResultCard(record) {
+  const card = document.createElement("a");
+  card.className = "result-card";
+  card.href = `#review:${record?.slug || ""}`;
+
+  const date = document.createElement("time");
+  date.textContent = formatDate(record?.date);
+
+  const title = document.createElement("span");
+  title.className = "card-title";
+  const headline = document.createElement("strong");
+  headline.textContent = record?.title || record?.production_title || "Untitled";
+  title.append(headline);
+
+  const meta = document.createElement("span");
+  meta.className = "meta";
+  meta.textContent = [record?.publication, record ? typeLabel(record) : ""].filter(Boolean).join(" / ");
+
+  const copy = document.createElement("span");
+  copy.className = "result-copy";
+  copy.append(date, title, meta);
+  card.append(copy);
+  return card;
 }
 
 function resultCard(record) {
