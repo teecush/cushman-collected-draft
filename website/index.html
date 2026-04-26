@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Rubik:wght@400;600;700;800;900&display=swap">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-    <link rel="stylesheet" href="./styles.css?v=62">
+    <link rel="stylesheet" href="./styles.css?v=63">
   </head>
   <body>
     <header class="site-header">
@@ -74,9 +74,9 @@
           <a href="#about">About</a>
           <div class="nav-dropdown">
             <a href="#about">About Robert Cushman</a>
+            <a href="#critics-circle">Critic's Circle</a>
             <a href="https://www.cushmancollected.com/checkout/donate?donatePageId=5c9b8016652dea361e5feb7d" target="_blank" rel="noopener">Donate</a>
-            <a href="https://www.cushmancollected.com/contact" target="_blank" rel="noopener">Subscribe</a>
-            <a href="https://www.cushmancollected.com/critics-circle" target="_blank" rel="noopener">Support</a>
+            <a href="#subscribe">Subscribe</a>
           </div>
         </div>
       </nav>
@@ -105,9 +105,9 @@
       <a href="#timeline">Timeline</a>
       <strong>About</strong>
       <a class="drawer-about" href="#about">About Robert Cushman</a>
+      <a href="#critics-circle">Critic's Circle</a>
       <a href="https://www.cushmancollected.com/checkout/donate?donatePageId=5c9b8016652dea361e5feb7d" target="_blank" rel="noopener">Donate</a>
-      <a href="https://www.cushmancollected.com/contact" target="_blank" rel="noopener">Subscribe</a>
-      <a href="https://www.cushmancollected.com/critics-circle" target="_blank" rel="noopener">Support</a>
+      <a href="#subscribe">Subscribe</a>
     </nav>
 
     <main>
@@ -209,7 +209,7 @@
         <p>Receive email updates when new articles are posted.</p>
         <form>
           <input type="email" placeholder="Email Address" aria-label="Email Address">
-          <button type="button">Sign Up</button>
+          <a class="footer-button" href="#subscribe">Sign Up</a>
         </form>
         <small>We respect your privacy and you may unsubscribe at any time.</small>
       </section>
@@ -218,9 +218,15 @@
         <p>Your contribution will help expand the archive.</p>
         <a class="footer-button" href="https://www.cushmancollected.com/checkout/donate?donatePageId=5c9b8016652dea361e5feb7d" target="_blank" rel="noopener">Donate</a>
       </section>
+      <section class="footer-circle">
+        <a class="footer-circle-button" href="#critics-circle">Critic's Circle</a>
+      </section>
+      <section class="footer-credit">
+        <p>Designed by <a href="http://www.colinsimmons.design" target="_blank" rel="noopener">Colin Simmons</a></p>
+      </section>
     </footer>
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    <script src="./app.js?v=62" type="module"></script>
+    <script src="./app.js?v=63" type="module"></script>
   </body>
 </html>

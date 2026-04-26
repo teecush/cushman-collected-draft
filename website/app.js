@@ -1,4 +1,4 @@
-const DATA_URL = new URL("../site_export/data/public_reviews.json?v=62", import.meta.url);
+const DATA_URL = new URL("../site_export/data/public_reviews.json?v=63", import.meta.url);
 const CONTENT_ROOT = new URL("../site_export/content/reviews/", import.meta.url);
 const PAGE_SIZE = 36;
 const SHAKESPEARE_COLLECTION = "The Shakespeare Collection";
@@ -1427,33 +1427,82 @@ function renderTimelineTool() {
 
 function renderAboutPage() {
   const title = document.createElement("h1");
-  title.textContent = "About Robert Cushman";
+  title.textContent = "Biography";
+  const page = document.createElement("div");
+  page.className = "about-page";
+  const image = document.createElement("figure");
+  image.className = "about-portrait";
+  image.innerHTML = `<img src="https://images.squarespace-cdn.com/content/v1/5b686ff89d5abba58f12a1bd/1554663146307-4GHNZP9WBABJ2GPUNF9Z/Robert%2BCushman%2Billustration" alt="Robert Cushman illustration"><figcaption>Illustration by Chloe Cushman.</figcaption>`;
+  const copy = document.createElement("div");
+  copy.className = "about-copy";
+  copy.innerHTML = `
+    <h2>Robert Cushman</h2>
+    <p>Robert Cushman was born in London and educated at Latymer Upper School, West London and Clare College, Cambridge. He went from there to the BBC where he worked in radio drama, TV arts programs, and for the World Service. He then directed in the London and regional theatre, and was theatre critic of <em>The Observer</em> from 1973 to 1984.</p>
+    <p>He moved to Canada in 1987, and was theatre critic of the <em>National Post</em> from its inception in 1999 until 2017. He has written extensively for other British and Canadian newspapers and magazines, and for the <em>New York Times</em>. He has continued to work in the theatre as an author, director and even as performer; the musical <em>Look to the Rainbow</em>, which he devised and directed, was produced in the West End in 1985. He was director of corporate communications for Livent Inc. in 1998-99.</p>
+    <p>He has also been a prolific broadcaster, especially on musical theatre and American popular song; popular series include <em>Book, Music and Lyrics</em> (BBC) and <em>Songbook</em> (CBC). His book <em>Fifty Seasons at Stratford</em>, a history of the Stratford Festival, was published in 2002; and he is a record eight-time winner of the Nathan Cohen Award for Excellence in Theatre Criticism.</p>
+    <p>He is married, with three children, and lives in Toronto.</p>
+  `;
+  page.replaceChildren(image, copy);
+  els.indexContent.replaceChildren(title, page);
+}
+
+function renderSubscribePage() {
+  const title = document.createElement("h1");
+  title.textContent = "Subscribe & Contact";
+  const page = document.createElement("div");
+  page.className = "contact-page";
+  page.innerHTML = `
+    <section>
+      <h2>Newsletter</h2>
+      <p>Subscribe to the Cushman Collected newsletter: every month, you’ll be the first to read new reviews and featured reviews curated from the archive.</p>
+      <form class="contact-form">
+        <input type="email" placeholder="Email Address" aria-label="Email Address">
+        <a class="footer-button" href="https://www.cushmancollected.com/contact" target="_blank" rel="noopener">Sign Up</a>
+      </form>
+      <small>We respect your privacy and you may unsubscribe at any time.</small>
+    </section>
+    <section>
+      <h2>Questions?</h2>
+      <p>Send the team of CushmanCollected.com an email at <a href="mailto:cushmancollected@gmail.com">cushmancollected@gmail.com</a>.</p>
+    </section>
+  `;
+  els.indexContent.replaceChildren(title, page);
+}
+
+function renderCriticsCirclePage() {
+  const title = document.createElement("h1");
+  title.textContent = "Critic’s Circle";
+  const supporters = [
+    "James and Sandra Pitblado", "Lloyd and Sharon Atkinson", "Jacquie Baby", "Eloise Ballou", "Calder Bennett", "Diana Bentley", "Nicolas Billon", "Jeanette Cairns", "Suzanne Cheriton", "Barry and Carole Cohen", "Rex Collins", "Laura Condlln", "Susan Coyne", "Katherine Cullen", "Anahita Dehbonehie", "David Demchuk", "Katherine Devlin", "Sarah Dodd", "Paul Dunn", "Richard Eyre", "Wayne Fairhead", "Barbara Fingerote", "Karen Fricker", "David Goldbloom", "Michael Healey", "Sebastien Heins", "Sherri Helwig", "Martha Henry", "David Alan Hilton", "Tracey Hoyt", "Randy Hughson", "Lindsay Junkin", "John Karastamatis", "Thomas Keating", "Sandra Keating", "Jill Keiley", "David Lint", "Youssef Marcus", "Jordan Mandlowitz", "Diego Matamoros & Robyn Stevan Matamoros", "Tom McCamus", "Nora Mclellan", "Scott McKowen", "Hannah Moscovitch", "Joanne O’Sullivan", "Patricia Patchet-Golubev", "Miles Potter", "Grant Ramsay", "Gale Rubenstein", "Carrie Sager", "Michael Shamata", "Holly Shephard", "Laurence Siegel", "Sarah Stanley", "Carly Street", "Carolyn Tanner", "Julie Tepperman", "Risa & Perry Tepperman", "Gail Tolley", "Craig Walker", "Maggie Woodley", "Joseph Ziegler", "Tamara Zielony",
+  ];
+  const team = ["Susan Stover", "Jessie Fraser", "Amy Keating", "Raylene Turner", "Sarah English", "Colin Simmons"];
+  const page = document.createElement("div");
+  page.className = "critics-page";
+  const quote = document.createElement("blockquote");
+  quote.innerHTML = `<p>“I can no other answer make but thanks,<br>And thanks, and ever thanks.”</p><cite>Twelfth Night</cite>`;
   const intro = document.createElement("p");
-  intro.className = "landing-intro";
-  intro.textContent = "Robert Cushman's collected criticism is being rebuilt here as a searchable, browsable public archive. Support and subscription links currently open the original Cushman Collected site while those pages are moved over.";
-  const cards = document.createElement("div");
-  cards.className = "landing-card-grid landing-card-grid-compact";
-  [
-    ["About Robert Cushman", "https://www.cushmancollected.com/about", "Original biography page"],
-    ["Donate", "https://www.cushmancollected.com/checkout/donate?donatePageId=5c9b8016652dea361e5feb7d", "Support expansion of the archive"],
-    ["Subscribe", "https://www.cushmancollected.com/contact", "Receive updates from Cushman Collected"],
-    ["Support", "https://www.cushmancollected.com/critics-circle", "Critic's Circle and supporters"],
-  ].forEach(([label, href, description]) => {
-    const card = document.createElement("a");
-    card.className = "landing-card";
-    card.href = href;
-    card.target = "_blank";
-    card.rel = "noopener";
-    const strong = document.createElement("strong");
-    strong.textContent = label;
+  intro.textContent = "Cushman Collected would like to acknowledge the incredible support of the donors who made this site possible.";
+  const lead = document.createElement("p");
+  lead.className = "lead-supporters";
+  lead.innerHTML = `<strong>Lead Supporters</strong><span>James and Sandra Pitblado</span>`;
+  const supporterList = document.createElement("div");
+  supporterList.className = "name-columns";
+  supporters.slice(1).forEach((name) => {
     const span = document.createElement("span");
-    span.textContent = "Original site";
-    const p = document.createElement("p");
-    p.textContent = description;
-    card.replaceChildren(strong, span, p);
-    cards.append(card);
+    span.textContent = name;
+    supporterList.append(span);
   });
-  els.indexContent.replaceChildren(title, intro, cards);
+  const teamIntro = document.createElement("p");
+  teamIntro.textContent = "Cushman Collected would also like to thank the incredible team who have contributed to the archiving of these reviews.";
+  const teamList = document.createElement("div");
+  teamList.className = "name-columns name-columns-short";
+  team.forEach((name) => {
+    const span = document.createElement("span");
+    span.textContent = name;
+    teamList.append(span);
+  });
+  page.replaceChildren(quote, intro, lead, supporterList, teamIntro, teamList);
+  els.indexContent.replaceChildren(title, page);
 }
 
 function renderMapView() {
@@ -2337,6 +2386,22 @@ function route() {
   if (hash === "#about") {
     document.body.classList.add("index-open");
     renderAboutPage();
+    els.indexView.hidden = false;
+    els.indexView.scrollIntoView({ behavior: "auto", block: "start" });
+    return;
+  }
+
+  if (hash === "#subscribe") {
+    document.body.classList.add("index-open");
+    renderSubscribePage();
+    els.indexView.hidden = false;
+    els.indexView.scrollIntoView({ behavior: "auto", block: "start" });
+    return;
+  }
+
+  if (hash === "#critics-circle") {
+    document.body.classList.add("index-open");
+    renderCriticsCirclePage();
     els.indexView.hidden = false;
     els.indexView.scrollIntoView({ behavior: "auto", block: "start" });
     return;
