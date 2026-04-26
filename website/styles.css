@@ -94,6 +94,7 @@ select {
 .site-nav-right {
   justify-self: start;
   padding-left: clamp(10px, 2vw, 24px);
+  justify-content: space-around;
 }
 
 .site-nav > a,
@@ -567,13 +568,13 @@ main {
 }
 
 .home-map-canvas {
-  height: 280px;
+  height: 340px;
   border: 1px solid var(--rule);
   background: var(--cream);
 }
 
 .home-map-canvas .leaflet-map {
-  height: 280px;
+  height: 340px;
   border: 0;
 }
 
@@ -728,11 +729,13 @@ main {
 
 .landing-card strong {
   font-family: var(--sans);
-  font-size: clamp(21px, 1.75vw, 28px);
+  font-size: clamp(19px, 1.6vw, 26px);
   font-weight: 900;
   line-height: 0.98;
   text-transform: uppercase;
-  overflow-wrap: anywhere;
+  hyphens: none;
+  overflow-wrap: normal;
+  word-break: normal;
 }
 
 .landing-card > span {
@@ -2106,6 +2109,81 @@ h1 {
   font-weight: 700;
 }
 
+.explore-tree-tool {
+  overflow: hidden;
+}
+
+.explore-tree {
+  display: block;
+  width: 100%;
+  min-height: 560px;
+  margin: 12px 0 22px;
+  overflow: visible;
+  border: 1px solid var(--rule);
+  background:
+    radial-gradient(circle at 45% 50%, rgba(58, 113, 153, 0.08), transparent 30%),
+    #fbfaf7;
+}
+
+.explore-tree-link {
+  fill: none;
+  stroke: rgba(35, 82, 118, 0.28);
+  stroke-width: 2;
+}
+
+.explore-tree-node {
+  cursor: pointer;
+  outline: none;
+  animation: bubble-pop-svg 220ms ease both;
+}
+
+.explore-tree-node circle {
+  fill: var(--node-color, var(--blue));
+  stroke: rgba(17, 17, 17, 0.16);
+  stroke-width: 1.5;
+  filter: drop-shadow(0 10px 16px rgba(0, 0, 0, 0.12));
+  transition: filter 160ms ease, stroke-width 160ms ease, transform 160ms ease;
+}
+
+.explore-tree-node:hover circle,
+.explore-tree-node:focus-visible circle {
+  filter: drop-shadow(0 16px 22px rgba(0, 0, 0, 0.16));
+  stroke-width: 3;
+}
+
+.explore-tree-node text {
+  fill: white;
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 0.2px;
+  pointer-events: none;
+  text-transform: uppercase;
+}
+
+.explore-tree-node.is-candidate text {
+  font-size: 11px;
+}
+
+.explore-tree-count {
+  font-size: 11px !important;
+  letter-spacing: 1.4px;
+}
+
+.explore-tree-node.is-active circle {
+  stroke: rgba(255, 255, 255, 0.85);
+  stroke-width: 4;
+}
+
+@keyframes bubble-pop-svg {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .timeline-years {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(72px, 1fr));
@@ -2144,6 +2222,112 @@ h1 {
 .timeline-results {
   border-top: 2px solid var(--ink);
   padding-top: 16px;
+}
+
+.timeline-rail {
+  margin: 26px 0 26px;
+  border-top: 2px solid var(--ink);
+  border-bottom: 1px solid var(--rule);
+  padding: 72px 10px 62px;
+  background:
+    linear-gradient(to right, transparent, rgba(35, 82, 118, 0.08), transparent),
+    #fbfaf7;
+}
+
+.timeline-track {
+  position: relative;
+  height: 150px;
+}
+
+.timeline-track::before {
+  content: "";
+  position: absolute;
+  top: 74px;
+  right: 0;
+  left: 0;
+  height: 4px;
+  background: var(--ink);
+}
+
+.timeline-segment {
+  position: absolute;
+  bottom: 76px;
+  width: 8px;
+  border: 0;
+  border-radius: 999px 999px 0 0;
+  background: var(--blue);
+  transform: translateX(-50%);
+  cursor: pointer;
+  transition: background 120ms ease, width 120ms ease;
+}
+
+.timeline-segment:hover,
+.timeline-segment.is-active {
+  width: 13px;
+  background: var(--blue-dark);
+}
+
+.timeline-thumb {
+  position: absolute;
+  top: 58px;
+  width: 30px;
+  height: 30px;
+  border: 3px solid var(--ink);
+  border-radius: 999px;
+  background: var(--paper);
+  transform: translateX(-50%);
+  cursor: grab;
+}
+
+.timeline-year-label {
+  position: absolute;
+  top: 8px;
+  min-width: 180px;
+  color: var(--blue-dark);
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 1.8px;
+  text-align: center;
+  text-transform: uppercase;
+  transform: translateX(-50%);
+}
+
+.timeline-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 26px;
+  border-top: 2px solid var(--ink);
+  padding-top: 14px;
+}
+
+.timeline-list a {
+  display: grid;
+  gap: 4px;
+  border-bottom: 1px solid var(--rule);
+  padding: 10px 0;
+  color: var(--ink);
+}
+
+.timeline-list strong {
+  font-family: var(--serif);
+  font-size: 17px;
+  line-height: 1.2;
+}
+
+.timeline-list span {
+  color: #555;
+  font-family: var(--serif);
+  font-size: 14px;
+}
+
+.timeline-list em {
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 .article-open .intro,
@@ -2227,6 +2411,19 @@ h1 {
   .explore-bubble-center {
     width: 142px;
     height: 142px;
+  }
+
+  .explore-tree {
+    min-height: 380px;
+  }
+
+  .timeline-list {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline-year-label {
+    min-width: 140px;
+    font-size: 11px;
   }
 
   .results,

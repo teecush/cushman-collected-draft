@@ -1,4 +1,4 @@
-const DATA_URL = new URL("../site_export/data/public_reviews.json?v=64", import.meta.url);
+const DATA_URL = new URL("../site_export/data/public_reviews.json?v=65", import.meta.url);
 const CONTENT_ROOT = new URL("../site_export/content/reviews/", import.meta.url);
 const PAGE_SIZE = 36;
 const SHAKESPEARE_COLLECTION = "The Shakespeare Collection";
@@ -1427,6 +1427,326 @@ function renderTimelineTool() {
   showYear([...years.keys()].sort().at(-1));
 }
 
+function renderExploreToolV2() {
+  const title = document.createElement("h1");
+  title.textContent = "Article Explorer";
+  const intro = document.createElement("p");
+  intro.className = "landing-intro";
+  intro.textContent = "Start with the whole archive, then open one branch at a time. Each choice stays visible so the path reads like a map.";
+  const tool = document.createElement("div");
+  tool.className = "explore-tool explore-tree-tool";
+  const pathBar = document.createElement("div");
+  pathBar.className = "explore-path";
+  const canvas = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+  canvas.classList.add("explore-tree");
+  canvas.setAttribute("viewBox", "0 0 1180 720");
+  canvas.setAttribute("role", "img");
+  canvas.setAttribute("aria-label", "Interactive archive explorer");
+  const list = document.createElement("div");
+  list.className = "explore-articles";
+  tool.replaceChildren(pathBar, canvas, list);
+
+  const path = [];
+  const branches = [
+    { key: "type", label: "Categories", next: "era" },
+    { key: "era", label: "Eras", next: "collection" },
+    { key: "collection", label: "Collections", next: "company" },
+    { key: "company", label: "Companies", next: "city" },
+    { key: "city", label: "Cities", next: "production" },
+    { key: "production", label: "Productions", next: "type" },
+  ];
+  const colors = ["#1f587f", "#7f7458", "#55736b", "#8a5f5f", "#6b5a7d", "#3f6f70"];
+  let currentBranch = "type";
+
+  const svgEl = (name, attrs = {}) => {
+    const el = document.createElementNS("http://www.w3.org/2000/svg", name);
+    Object.entries(attrs).forEach(([key, value]) => el.setAttribute(key, value));
+    return el;
+  };
+  const wrapWords = (label, maxChars = 11, maxLines = 3) => {
+    const words = String(label).replace(/^The\s+/i, "").split(/\s+/).filter(Boolean);
+    const lines = [];
+    let current = "";
+    words.forEach((word) => {
+      const next = current ? `${current} ${word}` : word;
+      if (next.length <= maxChars || !current) {
+        current = next;
+      } else {
+        lines.push(current);
+        current = word;
+      }
+    });
+    if (current) lines.push(current);
+    if (lines.length > maxLines) {
+      const kept = lines.slice(0, maxLines);
+      kept[maxLines - 1] = `${kept[maxLines - 1].replace(/\.+$/, "")}...`;
+      return kept;
+    }
+    return lines;
+  };
+  const filteredRecords = () => path.reduce((records, step) => records.filter((record) => step.test(record)), state.records);
+  const valuesForBranch = (records, branch) => {
+    const counts = new Map();
+    records.forEach((record) => {
+      let values = [];
+      if (branch === "type") values = [typeLabel(record)];
+      if (branch === "era") values = [record.year ? `${String(record.year).slice(0, 3)}0s` : ""];
+      if (branch === "collection") values = collectionNames(record);
+      if (branch === "company") values = splitEntityList(record.company);
+      if (branch === "city") values = splitCityList(record.city);
+      if (branch === "production") values = splitEntityList(record.production_title);
+      values.filter(Boolean).forEach((value) => counts.set(value, (counts.get(value) || 0) + 1));
+    });
+    return [...counts.entries()]
+      .map(([label, count]) => ({
+        label,
+        count,
+        branch,
+        next: branches.find((item) => item.key === branch)?.next || "type",
+        test: (record) => {
+          if (branch === "type") return typeLabel(record) === label;
+          if (branch === "era") return record.year && `${String(record.year).slice(0, 3)}0s` === label;
+          if (branch === "collection") return collectionNames(record).includes(label);
+          if (branch === "company") return splitEntityList(record.company).includes(label);
+          if (branch === "city") return splitCityList(record.city).includes(label);
+          if (branch === "production") return splitEntityList(record.production_title).includes(label);
+          return true;
+        },
+      }))
+      .sort((a, b) => b.count - a.count || a.label.localeCompare(b.label));
+  };
+  const addLink = (from, to) => {
+    canvas.append(svgEl("path", {
+      class: "explore-tree-link",
+      d: `M ${from.x + from.r} ${from.y} C ${(from.x + to.x) / 2} ${from.y}, ${(from.x + to.x) / 2} ${to.y}, ${to.x - to.r} ${to.y}`,
+    }));
+  };
+  const addNode = (node, onClick) => {
+    const group = svgEl("g", {
+      class: `explore-tree-node ${node.className || ""}`.trim(),
+      transform: `translate(${node.x} ${node.y})`,
+      tabindex: "0",
+      role: "button",
+      "aria-label": `${node.label}, ${node.count.toLocaleString()} articles`,
+    });
+    group.style.setProperty("--node-color", node.color || colors[0]);
+    group.append(svgEl("circle", { r: node.r }));
+    const lines = wrapWords(node.label, node.maxChars || 12, node.maxLines || 3);
+    lines.forEach((line, index) => {
+      const text = svgEl("text", {
+        y: (index - (lines.length - 1) / 2) * 17 - 5,
+        "text-anchor": "middle",
+      });
+      text.textContent = line;
+      group.append(text);
+    });
+    const count = svgEl("text", {
+      class: "explore-tree-count",
+      y: Math.min(node.r - 17, 38),
+      "text-anchor": "middle",
+    });
+    count.textContent = node.count.toLocaleString();
+    group.append(count);
+    group.addEventListener("click", onClick);
+    group.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        onClick();
+      }
+    });
+    canvas.append(group);
+  };
+  const renderTree = () => {
+    const records = filteredRecords();
+    pathBar.replaceChildren();
+    const reset = document.createElement("button");
+    reset.type = "button";
+    reset.textContent = "All articles";
+    reset.addEventListener("click", () => {
+      path.splice(0);
+      currentBranch = "type";
+      renderTree();
+    });
+    pathBar.append(reset);
+    path.forEach((step, index) => {
+      const crumb = document.createElement("button");
+      crumb.type = "button";
+      crumb.textContent = step.label;
+      crumb.addEventListener("click", () => {
+        path.splice(index + 1);
+        currentBranch = step.next;
+        renderTree();
+      });
+      pathBar.append(crumb);
+    });
+
+    canvas.replaceChildren();
+    const root = { x: 105, y: 360, r: 72, label: "All Articles", count: state.records.length, color: colors[0], className: "is-root", maxChars: 10 };
+    const branchNodes = branches.map((branch, index) => ({
+      ...branch,
+      x: 305,
+      y: 118 + index * 92,
+      r: currentBranch === branch.key ? 58 : 48,
+      count: records.length,
+      color: colors[index % colors.length],
+      className: currentBranch === branch.key ? "is-active" : "is-branch",
+      maxChars: 12,
+    }));
+    branchNodes.forEach((node) => addLink(root, node));
+    addNode(root, () => {
+      path.splice(0);
+      currentBranch = "type";
+      renderTree();
+    });
+    branchNodes.forEach((node) => addNode(node, () => {
+      currentBranch = node.key;
+      renderTree();
+    }));
+
+    let anchor = branchNodes.find((node) => node.key === currentBranch) || root;
+    path.forEach((step, index) => {
+      const node = {
+        ...step,
+        x: 500 + index * 150,
+        y: 360,
+        r: 54,
+        color: colors[(index + 2) % colors.length],
+        className: "is-path",
+        maxChars: 11,
+      };
+      addLink(anchor, node);
+      addNode(node, () => {
+        path.splice(index + 1);
+        currentBranch = step.next;
+        renderTree();
+      });
+      anchor = node;
+    });
+
+    const branch = currentBranch || path.at(-1)?.next || "type";
+    const items = valuesForBranch(records, branch).slice(0, 9);
+    const columnX = Math.min(1080, anchor.x + 230);
+    const gap = Math.min(80, 540 / Math.max(items.length, 1));
+    const startY = 360 - ((items.length - 1) * gap) / 2;
+    items.forEach((item, index) => {
+      const r = Math.max(39, Math.min(64, 38 + Math.sqrt(item.count || 1) * 1.1));
+      const node = {
+        ...item,
+        x: columnX,
+        y: startY + index * gap,
+        r,
+        color: colors[index % colors.length],
+        className: "is-candidate",
+        maxChars: r > 54 ? 12 : 9,
+        maxLines: 3,
+      };
+      addLink(anchor, node);
+      addNode(node, () => {
+        path.push(item);
+        currentBranch = item.next;
+        renderTree();
+      });
+    });
+
+    list.replaceChildren();
+    const listTitle = document.createElement("h2");
+    listTitle.textContent = `${records.length.toLocaleString()} articles`;
+    list.append(listTitle);
+    sortRecords(records).slice(0, 14).forEach((record) => {
+      const link = document.createElement("a");
+      link.href = `#review:${record.slug}`;
+      link.textContent = record.title;
+      list.append(link);
+    });
+  };
+  renderTree();
+  els.indexContent.replaceChildren(title, intro, tool);
+}
+
+function renderTimelineToolV2() {
+  const title = document.createElement("h1");
+  title.textContent = "Timeline";
+  const intro = document.createElement("p");
+  intro.className = "landing-intro";
+  intro.textContent = "Drag across the line to move through the archive. Thicker years mark denser parts of the record.";
+  const tool = document.createElement("div");
+  tool.className = "timeline-tool";
+  const years = new Map();
+  state.records.forEach((record) => {
+    if (!record.year) return;
+    const key = String(record.year);
+    if (!years.has(key)) years.set(key, []);
+    years.get(key).push(record);
+  });
+  const sortedYears = [...years.entries()].sort((a, b) => Number(a[0]) - Number(b[0]));
+  const rail = document.createElement("div");
+  rail.className = "timeline-rail";
+  const track = document.createElement("div");
+  track.className = "timeline-track";
+  const thumb = document.createElement("button");
+  thumb.type = "button";
+  thumb.className = "timeline-thumb";
+  thumb.setAttribute("aria-label", "Selected year");
+  const yearLabel = document.createElement("div");
+  yearLabel.className = "timeline-year-label";
+  const results = document.createElement("div");
+  results.className = "timeline-results timeline-list";
+  const max = Math.max(...sortedYears.map(([, items]) => items.length), 1);
+  const minYear = Number(sortedYears[0]?.[0] || new Date().getFullYear());
+  const maxYear = Number(sortedYears.at(-1)?.[0] || minYear);
+  const yearSpan = Math.max(1, maxYear - minYear);
+  let activeYear = String(maxYear);
+
+  const showYear = (year) => {
+    activeYear = String(year);
+    const records = sortRecords(years.get(activeYear) || []);
+    const pct = ((Number(activeYear) - minYear) / yearSpan) * 100;
+    thumb.style.left = `${pct}%`;
+    yearLabel.style.left = `${pct}%`;
+    yearLabel.textContent = `${activeYear} / ${records.length.toLocaleString()} ${records.length === 1 ? "article" : "articles"}`;
+    track.querySelectorAll(".timeline-segment").forEach((segment) => segment.classList.toggle("is-active", segment.dataset.year === activeYear));
+    results.replaceChildren();
+    records.slice(0, 28).forEach((record) => {
+      const link = document.createElement("a");
+      link.href = `#review:${record.slug}`;
+      const split = headlineParts(record.title);
+      link.innerHTML = `<strong>${split.headline}</strong>${split.deck ? `<span>${split.deck}</span>` : ""}<em>${formatDate(record.date) || record.year || ""} / ${typeLabel(record)}</em>`;
+      results.append(link);
+    });
+  };
+  const nearestYear = (clientX) => {
+    const rect = track.getBoundingClientRect();
+    const ratio = Math.max(0, Math.min(1, (clientX - rect.left) / rect.width));
+    const target = minYear + ratio * yearSpan;
+    return sortedYears.reduce((best, [year]) => (Math.abs(Number(year) - target) < Math.abs(Number(best) - target) ? year : best), sortedYears[0]?.[0] || String(minYear));
+  };
+  sortedYears.forEach(([year, records]) => {
+    const segment = document.createElement("button");
+    segment.type = "button";
+    segment.className = "timeline-segment";
+    segment.dataset.year = year;
+    segment.style.left = `${((Number(year) - minYear) / yearSpan) * 100}%`;
+    segment.style.height = `${18 + (records.length / max) * 82}px`;
+    segment.setAttribute("aria-label", `${year}, ${records.length} articles`);
+    segment.addEventListener("click", () => showYear(year));
+    track.append(segment);
+  });
+  track.append(thumb, yearLabel);
+  track.addEventListener("pointerdown", (event) => {
+    event.preventDefault();
+    track.setPointerCapture(event.pointerId);
+    showYear(nearestYear(event.clientX));
+  });
+  track.addEventListener("pointermove", (event) => {
+    if (event.buttons !== 1) return;
+    showYear(nearestYear(event.clientX));
+  });
+  rail.replaceChildren(track);
+  tool.replaceChildren(rail, results);
+  els.indexContent.replaceChildren(title, intro, tool);
+  showYear(activeYear);
+}
+
 function renderAboutPage() {
   const title = document.createElement("h1");
   title.textContent = "Biography";
@@ -1569,8 +1889,8 @@ function renderMapView() {
       venues,
       maxVenues: 80,
       maxVenueLabels: 14,
-      initialCenter: [43.6532, -79.3832],
-      initialZoom: 12,
+      initialCenter: [43.6515, -79.3835],
+      initialZoom: 13,
       searchControl: true,
       onSearch: filterMapList,
       onZoom: (zoom) => shell.classList.toggle("is-venue-zoom", zoom >= 9),
@@ -1588,8 +1908,8 @@ function renderHomeMap() {
     venues: venueMapPoints(),
     maxVenues: 60,
     maxVenueLabels: 6,
-    initialCenter: [43.6532, -79.3832],
-    initialZoom: 12,
+    initialCenter: [43.6515, -79.3835],
+    initialZoom: 13,
     searchControl: true,
   });
 }
@@ -1645,7 +1965,7 @@ function renderLeafletMap(container, points, options = {}) {
   const updateVenueVisibility = () => {
     const zoom = map.getZoom();
     venueMarkers.forEach((marker) => {
-      marker.setStyle({ opacity: zoom >= 10 ? 0.9 : 0, fillOpacity: zoom >= 10 ? 0.72 : 0 });
+      marker.setStyle({ opacity: zoom >= 11 ? 0.9 : 0, fillOpacity: zoom >= 11 ? 0.72 : 0 });
     });
     if (typeof options.onZoom === "function") options.onZoom(zoom);
   };
@@ -1671,10 +1991,23 @@ function renderLeafletMap(container, points, options = {}) {
     });
     map.getContainer().append(control);
   }
+  const refreshMapSize = () => {
+    map.invalidateSize();
+    if (options.initialCenter) map.setView(options.initialCenter, options.initialZoom || 8, { animate: false });
+    updateVenueVisibility();
+  };
   updateVenueVisibility();
-  setTimeout(() => map.invalidateSize(), 80);
+  requestAnimationFrame(refreshMapSize);
+  setTimeout(refreshMapSize, 80);
+  setTimeout(refreshMapSize, 350);
+  setTimeout(refreshMapSize, 900);
+  const observer = window.ResizeObserver ? new ResizeObserver(refreshMapSize) : null;
+  if (observer) observer.observe(mapNode);
   return {
-    remove: () => map.remove(),
+    remove: () => {
+      if (observer) observer.disconnect();
+      map.remove();
+    },
     focus: (query) => {
       if (!query) return;
       const match = searchable.find((item) => item.label.toLowerCase().includes(query));
@@ -2391,7 +2724,7 @@ function route() {
 
   if (hash === "#explore") {
     document.body.classList.add("index-open");
-    renderExploreTool();
+    renderExploreToolV2();
     els.indexView.hidden = false;
     els.indexView.scrollIntoView({ behavior: "auto", block: "start" });
     return;
@@ -2399,7 +2732,7 @@ function route() {
 
   if (hash === "#timeline") {
     document.body.classList.add("index-open");
-    renderTimelineTool();
+    renderTimelineToolV2();
     els.indexView.hidden = false;
     els.indexView.scrollIntoView({ behavior: "auto", block: "start" });
     return;
