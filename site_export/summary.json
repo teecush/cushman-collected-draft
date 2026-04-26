@@ -2,13 +2,13 @@
   "export_dir": "site_export",
   "source_dir": "repaired_structural_v2",
   "counts": {
-    "total": 2726,
-    "publish": 2536,
+    "total": 2752,
+    "publish": 2562,
     "archive_only": 154,
     "duplicate_variant": 35,
     "exclude_from_publication": 1
   },
-  "public_reviews": 2536,
+  "public_reviews": 2562,
   "archive_records": 189,
   "excluded_records": 1,
   "map_points": 1771,
@@ -79,6 +79,7 @@
       "musicians": [],
       "performers": []
     },
+    "media": [],
     "word_count": 876
   },
   "duplicate_canonical_links": 35

@@ -1,4 +1,4 @@
-const DATA_URL = new URL("../site_export/data/public_reviews.json?v=57", import.meta.url);
+const DATA_URL = new URL("../site_export/data/public_reviews.json?v=58", import.meta.url);
 const CONTENT_ROOT = new URL("../site_export/content/reviews/", import.meta.url);
 const PAGE_SIZE = 36;
 const SHAKESPEARE_COLLECTION = "The Shakespeare Collection";
@@ -1667,15 +1667,38 @@ function stripFrontmatter(markdown) {
 function paragraphNodes(markdown, record) {
   const inlineEntities = inlineLinkEntities(record);
   const linkedSlugs = new Set();
-  return stripFrontmatter(markdown)
+  const blocks = stripFrontmatter(markdown)
     .split(/\n{2,}/)
     .map((block) => block.trim())
-    .filter(Boolean)
-    .map((block) => {
-      const p = document.createElement("p");
-      appendInlineLinkedText(p, block.replace(/\s*\n\s*/g, " "), inlineEntities, linkedSlugs);
-      return p;
-    });
+    .filter(Boolean);
+  const nodes = [];
+  for (let index = 0; index < blocks.length; index += 1) {
+    const block = blocks[index];
+    const imageMatch = block.match(/^!\[(.*?)\]\((.*?)\)$/);
+    if (imageMatch) {
+      const figure = document.createElement("figure");
+      figure.className = "article-image";
+      const image = document.createElement("img");
+      image.alt = imageMatch[1] || "";
+      image.loading = "lazy";
+      image.src = new URL(imageMatch[2], CONTENT_ROOT).toString();
+      figure.append(image);
+      const next = blocks[index + 1] || "";
+      const captionMatch = next.match(/^\*(.*?)\*$/);
+      if (captionMatch) {
+        const caption = document.createElement("figcaption");
+        caption.textContent = captionMatch[1];
+        figure.append(caption);
+        index += 1;
+      }
+      nodes.push(figure);
+      continue;
+    }
+    const p = document.createElement("p");
+    appendInlineLinkedText(p, block.replace(/\s*\n\s*/g, " "), inlineEntities, linkedSlugs);
+    nodes.push(p);
+  }
+  return nodes;
 }
 
 function entityChip(type, label, prefix = "", group = "context") {
