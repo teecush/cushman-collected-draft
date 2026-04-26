@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Rubik:wght@400;600;700;800;900&display=swap">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-    <link rel="stylesheet" href="./styles.css?v=65">
+    <link rel="stylesheet" href="./styles.css?v=66">
   </head>
   <body>
     <header class="site-header">
@@ -36,7 +36,7 @@
             <div class="nav-subfolder">
               <a href="#section:collections">Collections</a>
               <div class="nav-side-menu">
-                <a href="#section:shakespeare">Shakespeare</a>
+                <a href="#section:shakespeare">Shakespeare Collection</a>
                 <a href="#collection:canadian">Canadian Collection</a>
                 <a href="#collection:stratford">Stratford Collection</a>
                 <a href="#collection:shaw">Shaw Collection</a>
@@ -157,9 +157,17 @@
         <div class="results" id="results"></div>
       </section>
 
+      <section class="current-feature" id="currentFeature" aria-label="Latest current article"></section>
+
+      <section class="browse-heading frontpage-browse-heading" aria-label="Browse the archive heading">
+        <h2>Browse the Archive</h2>
+      </section>
+
       <section class="frontpage-directory" id="frontpageDirectory" aria-label="Primary site paths"></section>
 
-      <section class="current-feature" id="currentFeature" aria-label="Latest current article"></section>
+      <section class="browse-heading explore-heading" aria-label="Explore the archive heading">
+        <h2>Explore the Archive</h2>
+      </section>
 
       <section class="home-map" id="homeMap" aria-label="Archive map preview">
         <div class="home-map-heading">
@@ -172,23 +180,36 @@
         <div class="home-map-canvas" id="homeMapCanvas"></div>
       </section>
 
-      <section class="browse-heading" id="browse">
+      <section class="explore-card-row" aria-label="Explore tools">
+        <a class="explore-home-card" href="#explore">
+          <span>Interactive Paths</span>
+          <strong>Article Explorer</strong>
+          <em>Open branches by category, era, collection, company, city, or production.</em>
+        </a>
+        <a class="explore-home-card" href="#timeline">
+          <span>Chronology</span>
+          <strong>Timeline</strong>
+          <em>Drag through forty years of reviews and essays by year.</em>
+        </a>
+      </section>
+
+      <section class="browse-heading home-secondary-nav" id="browse">
         <h2>Browse the Archive</h2>
       </section>
 
-      <section class="tile-grid" id="collectionTiles" aria-label="Collection links"></section>
+      <section class="tile-grid home-secondary-nav" id="collectionTiles" aria-label="Collection links"></section>
 
-      <section class="browse-heading collection-heading" id="collections">
+      <section class="browse-heading collection-heading home-secondary-nav" id="collections">
         <h2>Collections</h2>
       </section>
 
-      <section class="tile-grid secondary-grid" id="secondaryTiles" aria-label="Secondary collection links"></section>
+      <section class="tile-grid secondary-grid home-secondary-nav" id="secondaryTiles" aria-label="Secondary collection links"></section>
 
-      <section class="browse-heading index-heading" id="indexes">
+      <section class="browse-heading index-heading home-secondary-nav" id="indexes">
         <h2>Indexes</h2>
       </section>
 
-      <section class="tile-grid index-grid" id="indexTiles" aria-label="Metadata index links"></section>
+      <section class="tile-grid index-grid home-secondary-nav" id="indexTiles" aria-label="Metadata index links"></section>
 
       <section class="article-view" id="articleView" hidden>
         <a class="back-link" href="#archive">Back to archive</a>
@@ -230,6 +251,6 @@
     </footer>
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    <script src="./app.js?v=65" type="module"></script>
+    <script src="./app.js?v=66" type="module"></script>
   </body>
 </html>

@@ -1,4 +1,4 @@
-const DATA_URL = new URL("../site_export/data/public_reviews.json?v=65", import.meta.url);
+const DATA_URL = new URL("../site_export/data/public_reviews.json?v=66", import.meta.url);
 const CONTENT_ROOT = new URL("../site_export/content/reviews/", import.meta.url);
 const PAGE_SIZE = 36;
 const SHAKESPEARE_COLLECTION = "The Shakespeare Collection";
@@ -986,7 +986,7 @@ function renderFrontpageDirectory() {
     .sort((a, b) => b.count - a.count || a.label.localeCompare(b.label));
 
   const collectionLinks = [
-    { label: "Shakespeare", href: "#section:shakespeare", count: countForTile("Shakespeare"), featured: true },
+    { label: "Shakespeare Collection", href: "#section:shakespeare", count: countForTile("Shakespeare"), featured: true },
     ...SECONDARY_COLLECTION_TILES.map((title) => ({
       label: title.replace(/^The\s+/, ""),
       href: archiveHrefForTile(title, "collections"),
@@ -1003,6 +1003,9 @@ function renderFrontpageDirectory() {
     .filter((item) => item.count)
     .sort((a, b) => b.count - a.count || a.label.localeCompare(b.label));
   const currentCount = countForTile("Current Collection", "collections");
+  const currentRecords = state.records
+    .filter((record) => collectionNames(record).includes("Current Collection"))
+    .sort((a, b) => String(b.date).localeCompare(String(a.date)));
   const sections = [
     {
       id: "current",
@@ -1013,6 +1016,11 @@ function renderFrontpageDirectory() {
       links: currentCount
         ? [{ label: "Current Collection", href: "#collection:current", count: currentCount }]
         : [{ label: "Coming after launch", href: "#section:current", count: 0 }],
+      examples: currentRecords.slice(0, 4).map((record) => ({
+        label: record.title,
+        href: `#review:${record.slug}`,
+        date: formatDate(record.date),
+      })),
       limit: 1,
     },
     {
@@ -1075,7 +1083,12 @@ function renderCurrentFeature() {
   title.textContent = current.title;
   const meta = document.createElement("p");
   meta.textContent = [formatDate(current.date), current.production_title, current.company].filter(Boolean).join(" / ");
-  copy.replaceChildren(kicker, title, meta);
+  const currentLink = document.createElement("a");
+  currentLink.className = "current-page-link";
+  currentLink.href = "#collection:current";
+  currentLink.textContent = "Open Current Collection";
+  currentLink.addEventListener("click", (event) => event.stopPropagation());
+  copy.replaceChildren(kicker, title, meta, currentLink);
   link.append(copy);
   els.currentFeature.replaceChildren(link);
 }
@@ -1109,6 +1122,17 @@ function frontpageSection(section) {
   });
 
   article.replaceChildren(kicker, title, list);
+  if (section.examples?.length) {
+    const examples = document.createElement("div");
+    examples.className = "frontpage-latest";
+    section.examples.forEach((item) => {
+      const link = document.createElement("a");
+      link.href = item.href;
+      link.innerHTML = `<span>${item.label}</span>${item.date ? `<em>${item.date}</em>` : ""}`;
+      examples.append(link);
+    });
+    article.append(examples);
+  }
   return article;
 }
 
@@ -1246,7 +1270,7 @@ function renderExploreTool() {
   const branches = [
     { key: "type", label: "Categories", next: "era" },
     { key: "era", label: "Eras", next: "collection" },
-    { key: "collection", label: "Collections", next: "company" },
+    { key: "collection", label: "Curated Paths", next: "company" },
     { key: "company", label: "Companies", next: "city" },
     { key: "city", label: "Cities", next: "production" },
     { key: "production", label: "Productions", next: "type" },
@@ -1440,6 +1464,7 @@ function renderExploreToolV2() {
   const canvas = document.createElementNS("http://www.w3.org/2000/svg", "svg");
   canvas.classList.add("explore-tree");
   canvas.setAttribute("viewBox", "0 0 1180 720");
+  canvas.style.setProperty("--tree-scale", "1");
   canvas.setAttribute("role", "img");
   canvas.setAttribute("aria-label", "Interactive archive explorer");
   const list = document.createElement("div");
@@ -1457,6 +1482,7 @@ function renderExploreToolV2() {
   ];
   const colors = ["#1f587f", "#7f7458", "#55736b", "#8a5f5f", "#6b5a7d", "#3f6f70"];
   let currentBranch = "type";
+  let collapsedSignature = "";
 
   const svgEl = (name, attrs = {}) => {
     const el = document.createElementNS("http://www.w3.org/2000/svg", name);
@@ -1464,10 +1490,19 @@ function renderExploreToolV2() {
     return el;
   };
   const wrapWords = (label, maxChars = 11, maxLines = 3) => {
-    const words = String(label).replace(/^The\s+/i, "").split(/\s+/).filter(Boolean);
+    const text = String(label).replace(/^The\s+/i, "").replace(/&/g, "and");
+    const words = text.split(/\s+/).filter(Boolean);
     const lines = [];
     let current = "";
     words.forEach((word) => {
+      if (word.length > maxChars) {
+        if (current) {
+          lines.push(current);
+          current = "";
+        }
+        for (let i = 0; i < word.length; i += maxChars) lines.push(word.slice(i, i + maxChars));
+        return;
+      }
       const next = current ? `${current} ${word}` : word;
       if (next.length <= maxChars || !current) {
         current = next;
@@ -1531,7 +1566,7 @@ function renderExploreToolV2() {
     });
     group.style.setProperty("--node-color", node.color || colors[0]);
     group.append(svgEl("circle", { r: node.r }));
-    const lines = wrapWords(node.label, node.maxChars || 12, node.maxLines || 3);
+    const lines = wrapWords(node.label, node.maxChars || 10, node.maxLines || 3);
     lines.forEach((line, index) => {
       const text = svgEl("text", {
         y: (index - (lines.length - 1) / 2) * 17 - 5,
@@ -1565,6 +1600,7 @@ function renderExploreToolV2() {
     reset.addEventListener("click", () => {
       path.splice(0);
       currentBranch = "type";
+      collapsedSignature = "";
       renderTree();
     });
     pathBar.append(reset);
@@ -1575,6 +1611,7 @@ function renderExploreToolV2() {
       crumb.addEventListener("click", () => {
         path.splice(index + 1);
         currentBranch = step.next;
+        collapsedSignature = "";
         renderTree();
       });
       pathBar.append(crumb);
@@ -1590,18 +1627,25 @@ function renderExploreToolV2() {
       count: records.length,
       color: colors[index % colors.length],
       className: currentBranch === branch.key ? "is-active" : "is-branch",
-      maxChars: 12,
+      maxChars: 10,
     }));
     branchNodes.forEach((node) => addLink(root, node));
     addNode(root, () => {
       path.splice(0);
       currentBranch = "type";
+      collapsedSignature = "";
       renderTree();
     });
     branchNodes.forEach((node) => addNode(node, () => {
-      currentBranch = node.key;
-      renderTree();
-    }));
+        const signature = `branch:${node.key}:${path.length}`;
+        if (collapsedSignature === signature) {
+          collapsedSignature = "";
+        } else {
+          currentBranch = node.key;
+          collapsedSignature = signature;
+        }
+        renderTree();
+      }));
 
     let anchor = branchNodes.find((node) => node.key === currentBranch) || root;
     path.forEach((step, index) => {
@@ -1611,20 +1655,22 @@ function renderExploreToolV2() {
         y: 360,
         r: 54,
         color: colors[(index + 2) % colors.length],
-        className: "is-path",
-        maxChars: 11,
+        className: index === path.length - 1 ? "is-path is-active" : "is-path",
+        maxChars: 9,
       };
       addLink(anchor, node);
       addNode(node, () => {
+        const signature = `path:${index}:${step.label}`;
         path.splice(index + 1);
-        currentBranch = step.next;
+        currentBranch = collapsedSignature === signature ? step.branch : step.next;
+        collapsedSignature = collapsedSignature === signature ? "" : signature;
         renderTree();
       });
       anchor = node;
     });
 
     const branch = currentBranch || path.at(-1)?.next || "type";
-    const items = valuesForBranch(records, branch).slice(0, 9);
+    const items = collapsedSignature ? [] : valuesForBranch(records, branch).slice(0, 9);
     const columnX = Math.min(1080, anchor.x + 230);
     const gap = Math.min(80, 540 / Math.max(items.length, 1));
     const startY = 360 - ((items.length - 1) * gap) / 2;
@@ -1637,16 +1683,38 @@ function renderExploreToolV2() {
         r,
         color: colors[index % colors.length],
         className: "is-candidate",
-        maxChars: r > 54 ? 12 : 9,
+        maxChars: r > 54 ? 10 : 8,
         maxLines: 3,
       };
       addLink(anchor, node);
       addNode(node, () => {
         path.push(item);
         currentBranch = item.next;
+        collapsedSignature = "";
         renderTree();
       });
     });
+
+    const visibleNodes = [
+      root,
+      ...branchNodes,
+      ...path.map((step, index) => ({ ...step, x: 500 + index * 150, y: 360, r: 54 })),
+      ...items.map((item, index) => ({
+        ...item,
+        x: columnX,
+        y: startY + index * gap,
+        r: Math.max(39, Math.min(64, 38 + Math.sqrt(item.count || 1) * 1.1)),
+      })),
+    ];
+    const activeNodes = path.length || items.length
+      ? visibleNodes.filter((node) => node.x >= 250)
+      : visibleNodes;
+    const minX = Math.max(0, Math.min(...activeNodes.map((node) => node.x - node.r)) - 70);
+    const maxX = Math.min(1180, Math.max(...activeNodes.map((node) => node.x + node.r)) + 70);
+    const minY = Math.max(0, Math.min(...activeNodes.map((node) => node.y - node.r)) - 60);
+    const maxY = Math.min(720, Math.max(...activeNodes.map((node) => node.y + node.r)) + 60);
+    canvas.setAttribute("viewBox", `${minX} ${minY} ${Math.max(520, maxX - minX)} ${Math.max(360, maxY - minY)}`);
+    canvas.style.setProperty("--tree-scale", Math.min(1.2, 1180 / Math.max(520, maxX - minX)).toFixed(2));
 
     list.replaceChildren();
     const listTitle = document.createElement("h2");
@@ -1731,6 +1799,13 @@ function renderTimelineToolV2() {
     segment.addEventListener("click", () => showYear(year));
     track.append(segment);
   });
+  for (let year = Math.ceil(minYear / 5) * 5; year <= maxYear; year += 5) {
+    const guide = document.createElement("span");
+    guide.className = "timeline-guide";
+    guide.style.left = `${((year - minYear) / yearSpan) * 100}%`;
+    guide.textContent = year;
+    track.append(guide);
+  }
   track.append(thumb, yearLabel);
   track.addEventListener("pointerdown", (event) => {
     event.preventDefault();
@@ -1890,7 +1965,7 @@ function renderMapView() {
       maxVenues: 80,
       maxVenueLabels: 14,
       initialCenter: [43.6515, -79.3835],
-      initialZoom: 13,
+      initialZoom: 14,
       searchControl: true,
       onSearch: filterMapList,
       onZoom: (zoom) => shell.classList.toggle("is-venue-zoom", zoom >= 9),
@@ -1909,7 +1984,7 @@ function renderHomeMap() {
     maxVenues: 60,
     maxVenueLabels: 6,
     initialCenter: [43.6515, -79.3835],
-    initialZoom: 13,
+    initialZoom: 14,
     searchControl: true,
   });
 }
@@ -1939,10 +2014,10 @@ function renderLeafletMap(container, points, options = {}) {
     const radius = 6 + Math.sqrt(point.count / maxCount) * 18;
     const marker = L.circleMarker([point.lat, point.lon], {
       radius,
-      color: "#173f5f",
+      color: "#4c3f66",
       weight: 2,
-      fillColor: "#3a7199",
-      fillOpacity: 0.72,
+      fillColor: "#74618e",
+      fillOpacity: 0.82,
     }).addTo(map);
     marker.bindPopup(`<strong>${point.label}</strong>${point.count.toLocaleString()} mapped article references<br><a href="#entity:cities:${point.slug}">Open city index</a>`);
     searchable.push({ label: `${point.label} city`, point, marker, zoom: 9 });
@@ -1994,6 +2069,10 @@ function renderLeafletMap(container, points, options = {}) {
   const refreshMapSize = () => {
     map.invalidateSize();
     if (options.initialCenter) map.setView(options.initialCenter, options.initialZoom || 8, { animate: false });
+    points.forEach((point) => {
+      const marker = searchable.find((item) => item.point === point && item.label.includes("city"))?.marker;
+      if (marker && !map.hasLayer(marker)) marker.addTo(map);
+    });
     updateVenueVisibility();
   };
   updateVenueVisibility();
