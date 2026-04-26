@@ -1,4 +1,4 @@
-const DATA_URL = new URL("../site_export/data/public_reviews.json?v=66", import.meta.url);
+const DATA_URL = new URL("../site_export/data/public_reviews.json?v=67", import.meta.url);
 const CONTENT_ROOT = new URL("../site_export/content/reviews/", import.meta.url);
 const PAGE_SIZE = 36;
 const SHAKESPEARE_COLLECTION = "The Shakespeare Collection";
@@ -815,7 +815,7 @@ function renderLandingPage(kind) {
       title: "Current",
       count: `${countForTile("Current Collection", "collections").toLocaleString()} records`,
       intro: "Recent self-published writing from the original Cushman Collected site.",
-      items: [landingItem("Current Collection", "#collection:current", countForTile("Current Collection", "collections"), "", state.records.filter((record) => collectionNames(record).includes("Current Collection")))],
+      items: [landingItem("Current Collection", "#section:current", countForTile("Current Collection", "collections"), "", state.records.filter((record) => collectionNames(record).includes("Current Collection")))],
     },
     browse: {
       title: "Browse",
@@ -1012,9 +1012,9 @@ function renderFrontpageDirectory() {
       className: "frontpage-section frontpage-current",
       label: "New writing",
       title: "Current",
-      titleHref: "#collection:current",
+      titleHref: "#section:current",
       links: currentCount
-        ? [{ label: "Current Collection", href: "#collection:current", count: currentCount }]
+        ? [{ label: "Current Collection", href: "#section:current", count: currentCount }]
         : [{ label: "Coming after launch", href: "#section:current", count: 0 }],
       examples: currentRecords.slice(0, 4).map((record) => ({
         label: record.title,
@@ -1085,7 +1085,7 @@ function renderCurrentFeature() {
   meta.textContent = [formatDate(current.date), current.production_title, current.company].filter(Boolean).join(" / ");
   const currentLink = document.createElement("a");
   currentLink.className = "current-page-link";
-  currentLink.href = "#collection:current";
+  currentLink.href = "#section:current";
   currentLink.textContent = "Open Current Collection";
   currentLink.addEventListener("click", (event) => event.stopPropagation());
   copy.replaceChildren(kicker, title, meta, currentLink);
@@ -1483,6 +1483,8 @@ function renderExploreToolV2() {
   const colors = ["#1f587f", "#7f7458", "#55736b", "#8a5f5f", "#6b5a7d", "#3f6f70"];
   let currentBranch = "type";
   let collapsedSignature = "";
+  let currentViewBox = [0, 0, 1180, 720];
+  let viewBoxAnimation = 0;
 
   const svgEl = (name, attrs = {}) => {
     const el = document.createElementNS("http://www.w3.org/2000/svg", name);
@@ -1555,6 +1557,24 @@ function renderExploreToolV2() {
       class: "explore-tree-link",
       d: `M ${from.x + from.r} ${from.y} C ${(from.x + to.x) / 2} ${from.y}, ${(from.x + to.x) / 2} ${to.y}, ${to.x - to.r} ${to.y}`,
     }));
+  };
+  const setViewBoxAnimated = (next) => {
+    cancelAnimationFrame(viewBoxAnimation);
+    const start = currentViewBox;
+    const duration = 420;
+    const startedAt = performance.now();
+    const tick = (now) => {
+      const progress = Math.min(1, (now - startedAt) / duration);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      const values = start.map((value, index) => value + (next[index] - value) * eased);
+      canvas.setAttribute("viewBox", values.map((value) => value.toFixed(2)).join(" "));
+      if (progress < 1) {
+        viewBoxAnimation = requestAnimationFrame(tick);
+      } else {
+        currentViewBox = next;
+      }
+    };
+    viewBoxAnimation = requestAnimationFrame(tick);
   };
   const addNode = (node, onClick) => {
     const group = svgEl("g", {
@@ -1638,11 +1658,13 @@ function renderExploreToolV2() {
     });
     branchNodes.forEach((node) => addNode(node, () => {
         const signature = `branch:${node.key}:${path.length}`;
-        if (collapsedSignature === signature) {
+        if (currentBranch === node.key && collapsedSignature === signature) {
           collapsedSignature = "";
+        } else if (currentBranch === node.key) {
+          collapsedSignature = signature;
         } else {
           currentBranch = node.key;
-          collapsedSignature = signature;
+          collapsedSignature = "";
         }
         renderTree();
       }));
@@ -1661,9 +1683,17 @@ function renderExploreToolV2() {
       addLink(anchor, node);
       addNode(node, () => {
         const signature = `path:${index}:${step.label}`;
-        path.splice(index + 1);
-        currentBranch = collapsedSignature === signature ? step.branch : step.next;
-        collapsedSignature = collapsedSignature === signature ? "" : signature;
+        if (index === path.length - 1 && collapsedSignature === signature) {
+          collapsedSignature = "";
+          currentBranch = step.next;
+        } else if (index === path.length - 1) {
+          collapsedSignature = signature;
+          currentBranch = step.next;
+        } else {
+          path.splice(index + 1);
+          currentBranch = step.next;
+          collapsedSignature = "";
+        }
         renderTree();
       });
       anchor = node;
@@ -1713,8 +1743,9 @@ function renderExploreToolV2() {
     const maxX = Math.min(1180, Math.max(...activeNodes.map((node) => node.x + node.r)) + 70);
     const minY = Math.max(0, Math.min(...activeNodes.map((node) => node.y - node.r)) - 60);
     const maxY = Math.min(720, Math.max(...activeNodes.map((node) => node.y + node.r)) + 60);
-    canvas.setAttribute("viewBox", `${minX} ${minY} ${Math.max(520, maxX - minX)} ${Math.max(360, maxY - minY)}`);
-    canvas.style.setProperty("--tree-scale", Math.min(1.2, 1180 / Math.max(520, maxX - minX)).toFixed(2));
+    const nextViewBox = [minX, minY, Math.max(520, maxX - minX), Math.max(360, maxY - minY)];
+    setViewBoxAnimated(nextViewBox);
+    canvas.style.setProperty("--tree-scale", Math.min(1.2, 1180 / nextViewBox[2]).toFixed(2));
 
     list.replaceChildren();
     const listTitle = document.createElement("h2");
@@ -1723,7 +1754,18 @@ function renderExploreToolV2() {
     sortRecords(records).slice(0, 14).forEach((record) => {
       const link = document.createElement("a");
       link.href = `#review:${record.slug}`;
-      link.textContent = record.title;
+      const media = record.media?.[0];
+      if (media?.local_path) {
+        link.className = "has-thumb";
+        const thumb = document.createElement("img");
+        thumb.src = new URL(`../site_export/content/${media.local_path}`, import.meta.url);
+        thumb.alt = media.alt || media.caption || record.title || "";
+        thumb.loading = "lazy";
+        link.append(thumb);
+      }
+      const label = document.createElement("span");
+      label.textContent = record.title;
+      link.append(label);
       list.append(link);
     });
   };
@@ -1778,7 +1820,19 @@ function renderTimelineToolV2() {
       const link = document.createElement("a");
       link.href = `#review:${record.slug}`;
       const split = headlineParts(record.title);
-      link.innerHTML = `<strong>${split.headline}</strong>${split.deck ? `<span>${split.deck}</span>` : ""}<em>${formatDate(record.date) || record.year || ""} / ${typeLabel(record)}</em>`;
+      const media = record.media?.[0];
+      if (media?.local_path) {
+        link.className = "has-thumb";
+        const thumb = document.createElement("img");
+        thumb.src = new URL(`../site_export/content/${media.local_path}`, import.meta.url);
+        thumb.alt = media.alt || media.caption || record.title || "";
+        thumb.loading = "lazy";
+        link.append(thumb);
+      }
+      const copy = document.createElement("span");
+      copy.className = "timeline-copy";
+      copy.innerHTML = `<strong>${split.headline}</strong>${split.deck ? `<span>${split.deck}</span>` : ""}<em>${formatDate(record.date) || record.year || ""} / ${typeLabel(record)}</em>`;
+      link.append(copy);
       results.append(link);
     });
   };
@@ -1968,7 +2022,7 @@ function renderMapView() {
       initialZoom: 14,
       searchControl: true,
       onSearch: filterMapList,
-      onZoom: (zoom) => shell.classList.toggle("is-venue-zoom", zoom >= 9),
+      onZoom: (zoom) => shell.classList.toggle("is-venue-zoom", zoom >= 11),
     });
   });
 }
@@ -2026,9 +2080,9 @@ function renderLeafletMap(container, points, options = {}) {
   (options.venues || []).slice(0, options.maxVenues || 140).forEach((point) => {
     const marker = L.circleMarker([point.lat, point.lon], {
       radius: 5,
-      color: "#6b5b3d",
-      weight: 1.5,
-      fillColor: "#d8c99c",
+      color: "#4c3f66",
+      weight: 2,
+      fillColor: "#8a6fa8",
       fillOpacity: 0,
       opacity: 0,
     }).addTo(map);
@@ -2040,7 +2094,7 @@ function renderLeafletMap(container, points, options = {}) {
   const updateVenueVisibility = () => {
     const zoom = map.getZoom();
     venueMarkers.forEach((marker) => {
-      marker.setStyle({ opacity: zoom >= 11 ? 0.9 : 0, fillOpacity: zoom >= 11 ? 0.72 : 0 });
+      marker.setStyle({ opacity: zoom >= 11 ? 0.95 : 0, fillOpacity: zoom >= 11 ? 0.82 : 0 });
     });
     if (typeof options.onZoom === "function") options.onZoom(zoom);
   };
@@ -2480,6 +2534,16 @@ function resultCard(record) {
   const card = document.createElement("a");
   card.className = "result-card";
   card.href = `#review:${record.slug}`;
+  const media = record.media?.[0];
+  if (media?.local_path) {
+    card.classList.add("has-thumb");
+    const thumb = document.createElement("img");
+    thumb.className = "result-thumb";
+    thumb.src = new URL(`../site_export/content/${media.local_path}`, import.meta.url);
+    thumb.alt = media.alt || media.caption || record.title || "";
+    thumb.loading = "lazy";
+    card.append(thumb);
+  }
 
   const date = document.createElement("time");
   date.textContent = formatDate(record.date);
@@ -2513,9 +2577,12 @@ function resultCard(record) {
   meta.className = "meta";
   meta.textContent = [record.publication, typeLabel(record)].filter(Boolean).join(" / ");
 
-  card.append(date, title);
-  if (productionPartsList.length) card.append(production);
-  card.append(meta);
+  const copy = document.createElement("span");
+  copy.className = "result-copy";
+  copy.append(date, title);
+  if (productionPartsList.length) copy.insertBefore(production, meta);
+  copy.append(meta);
+  card.append(copy);
   return card;
 }
 
@@ -2936,9 +3003,6 @@ async function init() {
   renderFrontpageDirectory();
   renderCurrentFeature();
   renderHomeMap();
-  renderTiles();
-  renderSecondaryCollections();
-  renderIndexTiles();
   renderResults();
   route();
 }
