@@ -1,4 +1,4 @@
-const DATA_URL = new URL("../site_export/data/public_reviews.json?v=69", import.meta.url);
+const DATA_URL = new URL("../site_export/data/public_reviews.json?v=70", import.meta.url);
 const CONTENT_ROOT = new URL("../site_export/content/reviews/", import.meta.url);
 const PAGE_SIZE = 36;
 const SHAKESPEARE_COLLECTION = "The Shakespeare Collection";
@@ -2593,7 +2593,7 @@ function resultCard(record) {
   const copy = document.createElement("span");
   copy.className = "result-copy";
   copy.append(date, title);
-  if (productionPartsList.length) copy.insertBefore(production, meta);
+  if (productionPartsList.length) copy.append(production);
   copy.append(meta);
   card.append(copy);
   return card;
