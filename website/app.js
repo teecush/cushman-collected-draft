@@ -1,4 +1,4 @@
-const DATA_URL = new URL("../site_export/data/public_reviews.json?v=56", import.meta.url);
+const DATA_URL = new URL("../site_export/data/public_reviews.json?v=57", import.meta.url);
 const CONTENT_ROOT = new URL("../site_export/content/reviews/", import.meta.url);
 const PAGE_SIZE = 36;
 const SHAKESPEARE_COLLECTION = "The Shakespeare Collection";
@@ -86,9 +86,19 @@ const TYPE_GROUPS = [
     categories: ["Music Review", "Concert Review"],
   },
   {
-    value: "books-essays",
-    label: "Books & Essays",
-    categories: ["Book Review", "Opinion Piece", "Year in Review"],
+    value: "book-reviews",
+    label: "Book Reviews",
+    categories: ["Book Review"],
+  },
+  {
+    value: "essays-opinion",
+    label: "Essays & Opinion",
+    categories: ["Opinion Piece"],
+  },
+  {
+    value: "year-in-review",
+    label: "Year in Review",
+    categories: ["Year in Review"],
   },
   {
     value: "profiles",
@@ -137,6 +147,42 @@ const TYPE_BY_CATEGORY = new Map(
 );
 const TYPE_VALUE_BY_LABEL = new Map(TYPE_GROUPS.map((group) => [group.label, group.value]));
 const OTHER_ARTS_VALUES = ["comedy", "opera", "film", "dance", "circus"];
+const BOOKS_ESSAYS_VALUES = ["book-reviews", "essays-opinion", "year-in-review"];
+const SHAKESPEARE_PLAY_GROUPS = [
+  {
+    label: "Comedies",
+    titles: [
+      "All's Well That Ends Well",
+      "As You Like It",
+      "The Comedy of Errors",
+      "Love's Labour's Lost",
+      "Measure for Measure",
+      "The Merchant of Venice",
+      "The Merry Wives of Windsor",
+      "A Midsummer Night's Dream",
+      "Much Ado About Nothing",
+      "Pericles",
+      "The Taming of the Shrew",
+      "The Tempest",
+      "Twelfth Night",
+      "Two Gentlemen of Verona",
+      "The Two Noble Kinsmen",
+      "The Winter's Tale",
+    ],
+  },
+  {
+    label: "Tragedies",
+    titles: ["Antony & Cleopatra", "Coriolanus", "Cymbeline", "Julius Caesar", "King Lear", "Macbeth", "Othello", "Romeo & Juliet", "Hamlet", "Timon of Athens", "Titus Andronicus", "Troilus & Cressida"],
+  },
+  {
+    label: "Histories",
+    titles: ["Henry IV", "Henry V", "Henry VI", "Henry VIII", "King John", "Richard II", "Richard III"],
+  },
+  {
+    label: "Essays & Riffs",
+    titles: ["Thoughts on Shakespeare", "Riffs on Shakespeare"],
+  },
+];
 
 const browseTiles = {
   types: [
@@ -145,9 +191,16 @@ const browseTiles = {
     "Musical Theatre",
     "Television",
     "Music & Concerts",
-    "Books & Essays",
+    "Book Reviews",
+    "Essays & Opinion",
+    "Year in Review",
     "Profiles",
     "Obituaries",
+    "Opera",
+    "Comedy",
+    "Film",
+    "Dance",
+    "Circus",
     "Other Arts",
     "Site Notes",
   ],
@@ -430,6 +483,45 @@ function cityMapPoints() {
     .sort((a, b) => b.count - a.count || a.label.localeCompare(b.label));
 }
 
+function venueMapPoints() {
+  const map = new Map();
+  state.records.forEach((record) => {
+    const coordinates = Array.isArray(record.coordinates) ? record.coordinates : [];
+    const lat = Number(coordinates[0]);
+    const lon = Number(coordinates[1]);
+    if (!Number.isFinite(lat) || !Number.isFinite(lon)) return;
+    const city = splitCityList(record.city)[0] || "";
+    splitEntityList(record.venue).forEach((venue) => {
+      const slug = entitySlug(venue);
+      const point = map.get(slug) || {
+        slug,
+        label: venue,
+        city,
+        records: [],
+        latTotal: 0,
+        lonTotal: 0,
+        coordinateCount: 0,
+      };
+      if (city && !point.city) point.city = city;
+      point.records.push(record);
+      point.latTotal += lat;
+      point.lonTotal += lon;
+      point.coordinateCount += 1;
+      map.set(slug, point);
+    });
+  });
+
+  return [...map.values()]
+    .filter((point) => point.coordinateCount)
+    .map((point) => ({
+      ...point,
+      lat: point.latTotal / point.coordinateCount,
+      lon: point.lonTotal / point.coordinateCount,
+      count: point.records.length,
+    }))
+    .sort((a, b) => b.count - a.count || a.label.localeCompare(b.label));
+}
+
 function entityType(type) {
   return ENTITY_TYPES.find((item) => item.key === type);
 }
@@ -654,11 +746,25 @@ function countForOtherArts() {
 function landingItems(kind) {
   if (kind === "browse") {
     return [
-      ...["theatre", "musical-theatre", "television", "music-concerts", "books-essays", "profiles", "obituaries"].map((value) => {
+      ...[
+        "theatre",
+        "musical-theatre",
+        "television",
+        "music-concerts",
+        "opera",
+        "book-reviews",
+        "essays-opinion",
+        "year-in-review",
+        "profiles",
+        "obituaries",
+        "comedy",
+        "film",
+        "dance",
+        "circus",
+      ].map((value) => {
         const group = TYPE_GROUPS.find((item) => item.value === value);
         return landingItem(group.label, `#archive?type=${value}`, countForTypeValue(value), tileDescription(group.label), recordsForTypeValue(value));
       }),
-      landingItem("Other Arts", "#section:other-arts", countForOtherArts(), tileDescription("Other Arts"), OTHER_ARTS_VALUES.flatMap(recordsForTypeValue)),
       landingItem("Site Notes", "#archive?type=site-notes", countForTypeValue("site-notes"), tileDescription("Site Notes"), recordsForTypeValue("site-notes")),
     ];
   }
@@ -699,7 +805,7 @@ function landingItems(kind) {
 }
 
 function landingItem(title, href, count, description, records, unit = "records") {
-  return { title, href, count, unit, description, examples: sortRecords(records || []).slice(0, 3) };
+  return { title, href, count, unit, description, examples: [] };
 }
 
 function renderLandingPage(kind) {
@@ -769,8 +875,18 @@ function renderShakespeareLanding() {
   playHeading.className = "landing-subhead";
   playHeading.textContent = "Browse by Play";
   const plays = document.createElement("div");
-  plays.className = "tile-grid shakespeare-art-grid";
-  plays.replaceChildren(...browseTiles.shakespeare.map((title, index) => shakespeareArtTile(title, index)));
+  plays.className = "shakespeare-play-sections";
+  SHAKESPEARE_PLAY_GROUPS.forEach((group) => {
+    const groupTitle = document.createElement("h3");
+    groupTitle.className = "shakespeare-play-heading";
+    groupTitle.textContent = group.label;
+    const grid = document.createElement("div");
+    grid.className = "tile-grid shakespeare-art-grid";
+    grid.replaceChildren(
+      ...group.titles.map((playTitle) => shakespeareArtTile(playTitle, browseTiles.shakespeare.indexOf(playTitle)))
+    );
+    plays.append(groupTitle, grid);
+  });
   els.indexContent.replaceChildren(title, count, intro, groups, playHeading, plays);
 }
 
@@ -813,7 +929,7 @@ function landingCard(item) {
     example.textContent = record.title;
     examples.append(example);
   });
-  card.replaceChildren(title, count, description, examples);
+  card.replaceChildren(title, count, description);
   return card;
 }
 
@@ -1035,12 +1151,17 @@ function renderEntityPage(typeKey, slug) {
 
 function renderMapView() {
   const points = cityMapPoints();
+  const venues = venueMapPoints();
   const title = document.createElement("h1");
   title.textContent = "Archive Map";
   const count = document.createElement("p");
   count.className = "index-count";
   const articleTotal = points.reduce((sum, point) => sum + point.count, 0);
   count.textContent = `${points.length.toLocaleString()} places / ${articleTotal.toLocaleString()} mapped article references`;
+
+  const search = document.createElement("label");
+  search.className = "map-search";
+  search.innerHTML = `<span>Find a place or venue</span><input type="search" placeholder="City, venue, festival, theatre">`;
 
   const shell = document.createElement("div");
   shell.className = "archive-map-shell";
@@ -1055,77 +1176,68 @@ function renderMapView() {
   const listTitle = document.createElement("h2");
   listTitle.textContent = "Places";
   const links = document.createElement("div");
-  links.className = "map-city-links";
+  links.className = "map-link-list map-city-links";
   points.forEach((point) => {
     const link = document.createElement("a");
+    link.dataset.mapLabel = `${point.label} city`;
     link.href = `#entity:cities:${point.slug}`;
     link.innerHTML = `<span>${point.label}</span><em>${point.count.toLocaleString()}</em>`;
     links.append(link);
   });
-  list.replaceChildren(listTitle, links);
+  const venueTitle = document.createElement("h2");
+  venueTitle.textContent = "Venues";
+  const venueLinks = document.createElement("div");
+  venueLinks.className = "map-link-list map-venue-links";
+  venues.slice(0, 140).forEach((point) => {
+    const link = document.createElement("a");
+    link.dataset.mapLabel = `${point.label} ${point.city || ""} venue`;
+    link.href = `#entity:venues:${point.slug}`;
+    link.innerHTML = `<span>${point.label}${point.city ? `<small>${point.city}</small>` : ""}</span><em>${point.count.toLocaleString()}</em>`;
+    venueLinks.append(link);
+  });
+  const hint = document.createElement("p");
+  hint.className = "map-hint";
+  hint.textContent = "Zoom in to reveal venue markers.";
+  list.replaceChildren(listTitle, links, venueTitle, hint, venueLinks);
+  search.querySelector("input").addEventListener("input", (event) => {
+    const query = event.target.value.trim().toLowerCase();
+    list.querySelectorAll("a").forEach((link) => {
+      link.hidden = query && !link.dataset.mapLabel.toLowerCase().includes(query);
+    });
+  });
   shell.replaceChildren(map, list);
-  els.mapContent.replaceChildren(title, count, shell);
+  els.mapContent.replaceChildren(title, count, search, shell);
   requestAnimationFrame(() => {
-    state.fullMap = renderLeafletMap(canvas, points, {
+    state.fullMap = renderArchiveMap(canvas, points, {
       existingMap: state.fullMap,
       zoomControl: true,
       maxMarkers: points.length,
+      venues,
+      maxVenues: 80,
+      maxVenueLabels: 14,
+      onZoom: (zoom) => shell.classList.toggle("is-venue-zoom", zoom >= 1.35),
     });
   });
 }
 
 function renderHomeMap() {
   if (!els.homeMapCanvas || !state.records.length) return;
-  state.homeMap = renderLeafletMap(els.homeMapCanvas, cityMapPoints(), {
+  state.homeMap = renderArchiveMap(els.homeMapCanvas, cityMapPoints(), {
     existingMap: state.homeMap,
     zoomControl: false,
     maxMarkers: 18,
     compact: true,
+    venues: venueMapPoints(),
+    maxVenues: 24,
+    maxVenueLabels: 6,
   });
 }
 
-function renderLeafletMap(container, points, options = {}) {
+function renderArchiveMap(container, points, options = {}) {
   if (!container || !points.length) return null;
   if (options.existingMap) options.existingMap.remove();
   container.replaceChildren();
   return renderControlledSvgMap(container, points, options);
-  if (!window.L) {
-    container.append(mapSvg(points));
-    return null;
-  }
-
-  const map = window.L.map(container, {
-    attributionControl: !options.compact,
-    zoomControl: options.zoomControl !== false,
-    scrollWheelZoom: false,
-  });
-  const mapBounds = [[18, -145], [62, 15]];
-  window.L.imageOverlay(northAtlanticBasemapUrl(), mapBounds).addTo(map);
-
-  const maxCount = Math.max(...points.map((point) => point.count), 1);
-  const markerPoints = points.slice(0, options.maxMarkers || points.length);
-  const bounds = [];
-  markerPoints.forEach((point) => {
-    const radius = 6 + Math.sqrt(point.count / maxCount) * (options.compact ? 16 : 24);
-    const marker = window.L.circleMarker([point.lat, point.lon], {
-      radius,
-      color: "#111",
-      weight: 1.4,
-      fillColor: "#3a7199",
-      fillOpacity: 0.72,
-    }).addTo(map);
-    marker.bindPopup(`<strong>${point.label}</strong><br>${point.count.toLocaleString()} ${point.count === 1 ? "article" : "articles"}`);
-    marker.on("click", () => {
-      window.location.hash = `#entity:cities:${point.slug}`;
-    });
-    bounds.push([point.lat, point.lon]);
-  });
-  if (bounds.length) {
-    map.fitBounds(bounds, { padding: options.compact ? [18, 18] : [32, 32], maxZoom: options.compact ? 4 : 6 });
-    if (!options.compact) map.setMaxBounds(mapBounds);
-  }
-  setTimeout(() => map.invalidateSize(), 0);
-  return map;
 }
 
 function renderControlledSvgMap(container, points, options = {}) {
@@ -1149,43 +1261,19 @@ function renderControlledSvgMap(container, points, options = {}) {
   container.append(wrap);
   let zoom = 1;
   const setZoom = (next) => {
-    zoom = Math.max(1, Math.min(2.6, next));
+    zoom = Math.max(1, Math.min(1.65, next));
     stage.style.setProperty("--map-zoom", zoom);
+    wrap.classList.toggle("is-venue-zoom", zoom >= 1.35);
+    if (typeof options.onZoom === "function") options.onZoom(zoom);
   };
-  zoomIn.addEventListener("click", () => setZoom(zoom + 0.25));
-  zoomOut.addEventListener("click", () => setZoom(zoom - 0.25));
+  zoomIn.addEventListener("click", () => setZoom(zoom + 0.2));
+  zoomOut.addEventListener("click", () => setZoom(zoom - 0.2));
+  setZoom(1);
   return {
     remove() {
       container.replaceChildren();
     },
   };
-}
-
-function northAtlanticBasemapUrl() {
-  const svg = `
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700">
-      <rect width="1200" height="700" fill="#dfe8e8"/>
-      <g fill="#f6f5ef" stroke="#b8c3c3" stroke-width="3">
-        <path d="M0 0h520c-30 48-82 78-92 132-8 45 25 95-8 141-35 48-129 44-170 96-45 57-7 128-57 178-47 47-127 28-193 61z"/>
-        <path d="M228 88c72-47 170-65 245-34 43 18 59 52 35 80-30 36-112 40-151 82-29 31-12 71-53 95-53 31-141 4-171-45-37-62 22-136 95-178z"/>
-        <path d="M370 480c56 18 120 12 155 49 32 34 18 93-27 117-65 34-153-12-185-75-24-48 6-75 57-91z"/>
-        <path d="M470 610c62-10 124 7 155 43 21 24 14 40-29 47H383c10-42 38-78 87-90z"/>
-        <path d="M835 55c86-36 199-17 268 46 51 47 53 94 8 126-57 41-160 15-220-41-43-40-73-94-56-131z"/>
-        <path d="M990 200c81-11 153 15 210 68v432H884c-33-78 10-157 75-201 55-37 128-50 151-113 22-60-48-99-120-186z"/>
-        <path d="M872 333c38-20 82-13 105 15 19 22 13 50-14 65-35 20-91 4-111-28-15-24-6-40 20-52z"/>
-        <path d="M796 292c22-11 48-8 62 9 12 15 9 36-8 47-24 15-60 5-72-18-8-16-1-29 18-38z"/>
-        <path d="M1015 120c30-18 71-15 96 7 20 18 17 43-7 56-31 18-76 7-96-22-13-19-10-31 7-41z"/>
-      </g>
-      <g fill="#93a3a7" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700" letter-spacing="4" opacity=".75">
-        <text x="130" y="315">NORTH AMERICA</text>
-        <text x="915" y="350">EUROPE</text>
-        <text x="435" y="650">AMERICA</text>
-      </g>
-      <g stroke="#c9d1d1" stroke-width="1.4" opacity=".6">
-        <path d="M0 155h1200M0 350h1200M0 545h1200M220 0v700M500 0v700M780 0v700M1040 0v700"/>
-      </g>
-    </svg>`;
-  return `data:image/svg+xml;charset=UTF-8,${encodeURIComponent(svg)}`;
 }
 
 function mapSvg(points, options = {}) {
@@ -1243,6 +1331,13 @@ function mapSvg(points, options = {}) {
     const radius = 5 + Math.sqrt(point.count / maxCount) * (options.compact ? 25 : 34);
     return { ...point, x, y, radius };
   });
+  const venues = (options.venues || [])
+    .slice(0, options.maxVenues || 120)
+    .map((point) => {
+      const x = padding + ((point.lon - minLon) / lonSpan) * (width - padding * 2);
+      const y = height - padding - ((point.lat - minLat) / latSpan) * (height - padding * 2);
+      return { ...point, x, y };
+    });
   const labelPoints = plotted
     .filter((point, index) => index < 8 || point.count >= 4)
     .map((point) => {
@@ -1280,6 +1375,34 @@ function mapSvg(points, options = {}) {
     svg.append(link);
   });
 
+  venues.forEach((point, index) => {
+    const link = createSvgElement("a");
+    link.setAttribute("href", `#entity:venues:${point.slug}`);
+    link.setAttribute("class", `map-venue${index < (options.maxVenueLabels || 12) ? " map-venue-featured" : ""}`);
+    const offsetX = ((index % 11) - 5) * 11;
+    const offsetY = ((Math.floor(index / 11) % 7) - 3) * 8;
+    const x = point.x + offsetX;
+    const y = point.y + offsetY;
+    const title = createSvgElement("title");
+    title.textContent = `${point.label}${point.city ? `, ${point.city}` : ""}: ${point.count.toLocaleString()} ${point.count === 1 ? "article" : "articles"}`;
+    const marker = createSvgElement("g");
+    marker.setAttribute("transform", `translate(${x.toFixed(2)} ${y.toFixed(2)})`);
+    marker.append(
+      mapShape("polygon", { class: "map-venue-roof", points: "-8,-3 0,-11 8,-3" }),
+      mapShape("rect", { class: "map-venue-building", x: "-7", y: "-3", width: "14", height: "12", rx: "1" }),
+      mapShape("rect", { class: "map-venue-door", x: "-2", y: "2", width: "4", height: "7" }),
+      mapShape("line", { class: "map-venue-column", x1: "-5", x2: "-5", y1: "-2", y2: "8" }),
+      mapShape("line", { class: "map-venue-column", x1: "5", x2: "5", y1: "-2", y2: "8" })
+    );
+    const label = createSvgElement("text");
+    label.setAttribute("class", "map-venue-label");
+    label.setAttribute("x", (x + 11).toFixed(2));
+    label.setAttribute("y", (y + 5).toFixed(2));
+    label.textContent = point.label;
+    link.append(title, marker, label);
+    svg.append(link);
+  });
+
   return svg;
 }
 
@@ -1301,10 +1424,11 @@ function archiveHrefForTile(title, key) {
   if (collectionFromSlug(collectionSlug)) return `#collection:${collectionSlug}`;
 
   const typeMap = {
-    "Books & Essays": "books-essays",
+    "Book Reviews": "book-reviews",
     Circus: "circus",
     Comedy: "comedy",
     Dance: "dance",
+    "Essays & Opinion": "essays-opinion",
     Film: "film",
     "Music & Concerts": "music-concerts",
     "Musical Theatre": "musical-theatre",
@@ -1314,6 +1438,7 @@ function archiveHrefForTile(title, key) {
     "Site Notes": "site-notes",
     Television: "television",
     "Theatre Reviews": "theatre",
+    "Year in Review": "year-in-review",
   };
 
   if (typeMap[title]) {
@@ -1371,10 +1496,11 @@ function countForTile(title, key = "") {
   }
 
   const typeValue = {
-    "Books & Essays": "books-essays",
+    "Book Reviews": "book-reviews",
     Circus: "circus",
     Comedy: "comedy",
     Dance: "dance",
+    "Essays & Opinion": "essays-opinion",
     Film: "film",
     "Music & Concerts": "music-concerts",
     "Musical Theatre": "musical-theatre",
@@ -1384,6 +1510,7 @@ function countForTile(title, key = "") {
     "Site Notes": "site-notes",
     Television: "television",
     "Theatre Reviews": "theatre",
+    "Year in Review": "year-in-review",
   }[title];
 
   if (typeValue) {
@@ -1410,7 +1537,9 @@ function tileDescription(title) {
     "Musical Theatre": "Stage musicals and musical-theatre criticism.",
     Television: "Television criticism from the National Post years.",
     "Music & Concerts": "Concerts, recordings, cabaret, and music writing.",
-    "Books & Essays": "Book reviews, opinion pieces, year-end essays, and critical reflections.",
+    "Book Reviews": "Books, theatre books, memoirs, criticism, and related publishing.",
+    "Essays & Opinion": "Columns, opinion pieces, and critical reflections.",
+    "Year in Review": "Season summaries, rankings, and year-end essays.",
     Profiles: "Profiles, appreciations, interviews, and people-focused writing.",
     Obituaries: "Obituaries, memorial writing, and appreciations.",
     "Other Arts": "Comedy, film, opera, dance, and circus coverage.",
@@ -1574,8 +1703,10 @@ function articleEntityLinks(record) {
   ];
   const roleSlugs = new Set(roleValues.map(entitySlug));
   const mentionedPeople = (record.people || []).filter((name) => !roleSlugs.has(entitySlug(name)));
-  const contextGroups = [
+  const productionGroups = [
     ["productions", "Production", splitEntityList(record.production_title).slice(0, 4)],
+  ].filter(([, , values]) => values.length);
+  const contextGroups = [
     ["companies", "Company", splitEntityList(record.company).slice(0, 3)],
     ["venues", "Venue", splitEntityList(record.venue).slice(0, 2)],
     ["cities", "City", splitCityList(record.city).slice(0, 2)],
@@ -1597,10 +1728,11 @@ function articleEntityLinks(record) {
     ["people", "Mentioned", mentionedPeople.slice(0, 8)],
   ].filter(([, , values]) => values.length);
 
-  if (!contextGroups.length && !peopleGroups.length) return null;
+  if (!productionGroups.length && !contextGroups.length && !peopleGroups.length) return null;
   const wrap = document.createElement("div");
   wrap.className = "article-entity-groups";
 
+  if (productionGroups.length) wrap.append(articleEntityGroup("Production", productionGroups, "production"));
   if (contextGroups.length) wrap.append(articleEntityGroup("Work", contextGroups, "context"));
   if (peopleGroups.length) wrap.append(articleEntityGroup("People", peopleGroups, "people"));
 
@@ -1623,7 +1755,7 @@ function articleEntityGroup(label, groups, groupType) {
   nav.className = "article-entities";
   nav.setAttribute("aria-label", `${label} metadata links`);
   groups.forEach(([type, prefix, values]) => {
-    values.forEach((value) => nav.append(entityChip(type, value, prefix, groupType)));
+    values.forEach((value) => nav.append(entityChip(type, value, groupType === "production" ? "" : prefix, groupType)));
   });
   section.replaceChildren(heading, nav);
   return section;

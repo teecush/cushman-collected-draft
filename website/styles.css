@@ -82,7 +82,7 @@ select {
 .icon-button span {
   display: block;
   height: 2px;
-  background: var(--red);
+  background: var(--blue-dark);
 }
 
 .search-link {
@@ -131,10 +131,17 @@ select {
 
 .drawer strong {
   margin-top: 4px;
-  color: var(--red);
+  color: var(--blue-dark);
   font-size: 11px;
   letter-spacing: 1.8px;
   text-transform: uppercase;
+}
+
+.drawer .drawer-about {
+  border-top: 1px solid var(--rule);
+  padding-top: 10px;
+  color: var(--ink);
+  font-weight: 800;
 }
 
 main {
@@ -210,7 +217,7 @@ main {
   max-width: 100%;
   color: var(--ink);
   font-family: var(--sans);
-  font-size: clamp(22px, 1.75vw, 30px);
+  font-size: clamp(21px, 1.55vw, 28px);
   font-weight: 900;
   line-height: 0.98;
   text-transform: uppercase;
@@ -442,7 +449,7 @@ main {
 .landing-card {
   display: grid;
   gap: 9px;
-  min-height: 190px;
+  min-height: 165px;
   border-top: 3px solid var(--ink);
   padding: 16px;
   color: var(--ink);
@@ -451,10 +458,11 @@ main {
 
 .landing-card strong {
   font-family: var(--sans);
-  font-size: clamp(23px, 2vw, 32px);
+  font-size: clamp(21px, 1.75vw, 28px);
   font-weight: 900;
   line-height: 0.98;
   text-transform: uppercase;
+  overflow-wrap: anywhere;
 }
 
 .landing-card > span {
@@ -499,7 +507,22 @@ main {
 }
 
 .shakespeare-art-grid {
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+}
+
+.shakespeare-play-sections {
+  display: grid;
+  gap: 18px;
+}
+
+.shakespeare-play-heading {
+  margin: 12px 0 -2px;
+  color: var(--blue-dark);
+  font-family: var(--sans);
+  font-size: 14px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 .index-grid {
@@ -859,7 +882,12 @@ h1 {
   display: grid;
   grid-template-columns: 74px 1fr;
   gap: 10px;
-  align-items: start;
+  align-items: center;
+}
+
+.article-entity-section-production {
+  grid-template-columns: 1fr;
+  gap: 6px;
 }
 
 .article-entity-label {
@@ -876,12 +904,13 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
+  align-items: center;
 }
 
 .entity-chip,
 .entity-more {
   display: inline-flex;
-  align-items: baseline;
+  align-items: center;
   gap: 6px;
   border: 1px solid var(--chip-border, var(--rule));
   border-radius: 999px;
@@ -890,7 +919,7 @@ h1 {
   background: var(--chip-bg, #f7f7f7);
   font-family: var(--sans);
   font-size: 12px;
-  line-height: 1;
+  line-height: 1.1;
 }
 
 .entity-chip:hover {
@@ -901,17 +930,19 @@ h1 {
 .entity-chip span {
   color: var(--chip-label, var(--muted));
   font-weight: 700;
+  line-height: 1.1;
   text-transform: uppercase;
 }
 
 .entity-chip strong {
   font-weight: 700;
+  line-height: 1.1;
 }
 
 .entity-chip-featured {
   border-radius: 6px;
-  padding: 7px 12px;
-  font-size: 14px;
+  padding: 9px 13px;
+  font-size: 16px;
 }
 
 .entity-productions {
@@ -1145,6 +1176,10 @@ h1 {
   padding-top: 18px;
 }
 
+.archive-map-shell.is-venue-zoom .map-hint {
+  color: var(--blue-dark);
+}
+
 .archive-map {
   border: 1px solid var(--rule);
   background: var(--cream);
@@ -1153,6 +1188,35 @@ h1 {
 .map-canvas {
   height: 560px;
   min-height: 360px;
+}
+
+.map-search {
+  display: grid;
+  gap: 8px;
+  margin-top: 18px;
+  border-top: 2px solid var(--ink);
+  padding: 14px 0 0;
+  font-family: var(--sans);
+}
+
+.map-search span {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+}
+
+.map-search input {
+  width: min(620px, 100%);
+  border: 0;
+  border-bottom: 2px solid var(--ink);
+  padding: 6px 0 8px;
+  outline: 0;
+  color: var(--ink);
+  background: transparent;
+  font-family: var(--serif);
+  font-size: 26px;
 }
 
 .controlled-map {
@@ -1248,6 +1312,53 @@ h1 {
   text-transform: uppercase;
 }
 
+.map-venue {
+  display: none;
+}
+
+.controlled-map.is-venue-zoom .map-venue {
+  display: block;
+}
+
+.map-venue-building {
+  fill: #f4f0e8;
+  stroke: var(--ink);
+  stroke-width: 1.5;
+}
+
+.map-venue-roof {
+  fill: #d7cfbd;
+  stroke: var(--ink);
+  stroke-linejoin: round;
+  stroke-width: 1.5;
+}
+
+.map-venue-door {
+  fill: var(--blue-dark);
+}
+
+.map-venue-column {
+  stroke: var(--ink);
+  stroke-width: 1;
+}
+
+.map-venue-label {
+  display: none;
+  fill: var(--ink);
+  font-family: var(--sans);
+  font-size: 10px;
+  font-weight: 800;
+  paint-order: stroke;
+  pointer-events: none;
+  stroke: rgba(244, 240, 232, 0.9);
+  stroke-width: 4px;
+  text-transform: uppercase;
+}
+
+.map-venue-featured .map-venue-label {
+  display: block;
+}
+
 .map-city-list {
   display: grid;
   gap: 10px;
@@ -1261,14 +1372,22 @@ h1 {
   text-transform: uppercase;
 }
 
-.map-city-links {
+.map-hint {
+  margin: -2px 0 0;
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.map-link-list {
   display: grid;
-  max-height: 520px;
+  max-height: 250px;
   overflow: auto;
   border-top: 2px solid var(--ink);
 }
 
-.map-city-links a {
+.map-link-list a {
   display: flex;
   justify-content: space-between;
   gap: 16px;
@@ -1281,7 +1400,15 @@ h1 {
   text-transform: uppercase;
 }
 
-.map-city-links em {
+.map-link-list small {
+  display: block;
+  margin-top: 2px;
+  color: var(--muted);
+  font-size: 10px;
+  letter-spacing: 0.8px;
+}
+
+.map-link-list em {
   color: var(--blue-dark);
   font-style: normal;
 }
@@ -1366,7 +1493,7 @@ h1 {
     grid-template-columns: 1fr;
   }
 
-  .map-city-links {
+  .map-link-list {
     max-height: none;
   }
 
@@ -1380,6 +1507,11 @@ h1 {
 
   .map-canvas {
     height: 420px;
+  }
+
+  .map-venue-label,
+  .map-venue-featured .map-venue-label {
+    display: none;
   }
 
   .map-label {
