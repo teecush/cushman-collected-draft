@@ -1,4 +1,4 @@
-const DATA_URL = new URL("../site_export/data/public_reviews.json?v=67", import.meta.url);
+const DATA_URL = new URL("../site_export/data/public_reviews.json?v=68", import.meta.url);
 const CONTENT_ROOT = new URL("../site_export/content/reviews/", import.meta.url);
 const PAGE_SIZE = 36;
 const SHAKESPEARE_COLLECTION = "The Shakespeare Collection";
@@ -2066,25 +2066,28 @@ function renderLeafletMap(container, points, options = {}) {
   const maxCount = Math.max(...points.map((point) => point.count), 1);
   points.forEach((point) => {
     const radius = 6 + Math.sqrt(point.count / maxCount) * 18;
-    const marker = L.circleMarker([point.lat, point.lon], {
-      radius,
-      color: "#4c3f66",
-      weight: 2,
-      fillColor: "#74618e",
-      fillOpacity: 0.82,
+    const size = Math.round(radius * 2);
+    const marker = L.marker([point.lat, point.lon], {
+      icon: L.divIcon({
+        className: "map-pin-icon map-pin-city",
+        html: `<span style="width:${size}px;height:${size}px"></span>`,
+        iconSize: [size, size],
+        iconAnchor: [size / 2, size / 2],
+      }),
+      zIndexOffset: 500,
     }).addTo(map);
     marker.bindPopup(`<strong>${point.label}</strong>${point.count.toLocaleString()} mapped article references<br><a href="#entity:cities:${point.slug}">Open city index</a>`);
     searchable.push({ label: `${point.label} city`, point, marker, zoom: 9 });
     bounds.push([point.lat, point.lon]);
   });
   (options.venues || []).slice(0, options.maxVenues || 140).forEach((point) => {
-    const marker = L.circleMarker([point.lat, point.lon], {
-      radius: 5,
-      color: "#4c3f66",
-      weight: 2,
-      fillColor: "#8a6fa8",
-      fillOpacity: 0,
-      opacity: 0,
+    const marker = L.marker([point.lat, point.lon], {
+      icon: L.divIcon({
+        className: "map-pin-icon map-pin-venue",
+        html: "<span></span>",
+        iconSize: [14, 14],
+        iconAnchor: [7, 7],
+      }),
     }).addTo(map);
     marker.bindPopup(`<strong>${point.label}</strong>${point.city || ""}<br>${point.count.toLocaleString()} article references<br><a href="#entity:venues:${point.slug}">Open venue index</a>`);
     venueMarkers.push(marker);
@@ -2094,7 +2097,8 @@ function renderLeafletMap(container, points, options = {}) {
   const updateVenueVisibility = () => {
     const zoom = map.getZoom();
     venueMarkers.forEach((marker) => {
-      marker.setStyle({ opacity: zoom >= 11 ? 0.95 : 0, fillOpacity: zoom >= 11 ? 0.82 : 0 });
+      const el = marker.getElement();
+      if (el) el.style.opacity = zoom >= 11 ? "1" : "0";
     });
     if (typeof options.onZoom === "function") options.onZoom(zoom);
   };

@@ -738,7 +738,7 @@ main {
 }
 
 .home-secondary-nav {
-  display: none;
+  display: none !important;
 }
 
 .tile-grid {
@@ -1879,6 +1879,32 @@ h1 {
   margin-bottom: 4px;
 }
 
+.map-pin-icon {
+  display: grid;
+  place-items: center;
+  border: 0;
+  background: transparent;
+}
+
+.map-pin-icon span {
+  display: block;
+  border: 2px solid #2d2540;
+  border-radius: 999px;
+  background: #74618e;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.72), 0 3px 8px rgba(0, 0, 0, 0.28);
+}
+
+.map-pin-venue {
+  opacity: 0;
+  transition: opacity 140ms ease;
+}
+
+.map-pin-venue span {
+  width: 14px;
+  height: 14px;
+  background: #8a6fa8;
+}
+
 .map-search {
   display: none;
   gap: 8px;
@@ -2335,7 +2361,7 @@ h1 {
 .explore-tree-node text {
   fill: white;
   font-family: var(--sans);
-  font-size: calc(11px / var(--tree-scale, 1));
+  font-size: calc(10px / var(--tree-scale, 1));
   font-weight: 900;
   letter-spacing: 0;
   pointer-events: none;
@@ -2343,17 +2369,22 @@ h1 {
 }
 
 .explore-tree-node.is-candidate text {
-  font-size: calc(9.5px / var(--tree-scale, 1));
+  font-size: calc(8.5px / var(--tree-scale, 1));
 }
 
 .explore-tree-count {
-  font-size: calc(9.5px / var(--tree-scale, 1)) !important;
+  font-size: calc(8.5px / var(--tree-scale, 1)) !important;
   letter-spacing: 1.4px;
 }
 
 .explore-tree-node.is-active circle {
+  fill: #9a6f65;
   stroke: var(--ink);
-  stroke-width: 5;
+  stroke-width: 6;
+}
+
+.explore-tree-node.is-path circle {
+  fill: #6f5f88;
 }
 
 @keyframes bubble-pop-svg {
@@ -2468,7 +2499,7 @@ h1 {
 
 .timeline-year-label {
   position: absolute;
-  top: 116px;
+  top: 146px;
   min-width: 180px;
   color: var(--blue-dark);
   font-family: var(--sans);
@@ -2555,12 +2586,21 @@ h1 {
 .article-open .frontpage-directory,
 .index-open .frontpage-directory,
 .map-open .frontpage-directory,
+.article-open .frontpage-browse-heading,
+.index-open .frontpage-browse-heading,
+.map-open .frontpage-browse-heading,
 .article-open .current-feature,
 .index-open .current-feature,
 .map-open .current-feature,
 .article-open .home-map,
 .index-open .home-map,
 .map-open .home-map,
+.article-open .explore-card-row,
+.index-open .explore-card-row,
+.map-open .explore-card-row,
+.article-open .explore-heading,
+.index-open .explore-heading,
+.map-open .explore-heading,
 .article-open .browse-heading,
 .index-open .browse-heading,
 .map-open .browse-heading,
@@ -2572,8 +2612,11 @@ h1 {
 .map-open .archive,
 .search-open .intro,
 .search-open .frontpage-directory,
+.search-open .frontpage-browse-heading,
 .search-open .current-feature,
 .search-open .home-map,
+.search-open .explore-card-row,
+.search-open .explore-heading,
 .search-open .browse-heading,
 .search-open main > .tile-grid {
   display: none;
