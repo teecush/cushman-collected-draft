@@ -1,4 +1,4 @@
-const DATA_URL = new URL("../site_export/data/public_reviews.json?v=63", import.meta.url);
+const DATA_URL = new URL("../site_export/data/public_reviews.json?v=64", import.meta.url);
 const CONTENT_ROOT = new URL("../site_export/content/reviews/", import.meta.url);
 const PAGE_SIZE = 36;
 const SHAKESPEARE_COLLECTION = "The Shakespeare Collection";
@@ -1252,7 +1252,6 @@ function renderExploreTool() {
     { key: "production", label: "Productions", next: "type" },
   ];
   const colors = ["#1f587f", "#7f7458", "#55736b", "#8a5f5f", "#6b5a7d", "#3f6f70"];
-  let mode = "branch";
   let currentBranch = "";
 
   const filteredRecords = () =>
@@ -1289,42 +1288,21 @@ function renderExploreTool() {
       .sort((a, b) => b.count - a.count || a.label.localeCompare(b.label));
   };
 
-  const visibleItems = (records) => {
-    if (mode === "branch") {
-      return branches.map((branch, index) => ({
-        ...branch,
-        count: records.length,
-        color: colors[index % colors.length],
-        chooseBranch: true,
-      }));
-    }
-    return valuesForBranch(records, currentBranch)
-      .slice(0, 12)
-      .map((item, index) => ({
-        ...item,
-        color: colors[index % colors.length],
-      }));
-  };
-
-  const makeBubble = (item, index, total, records) => {
+  const makeBubble = (item, options = {}) => {
     const button = document.createElement("button");
     button.type = "button";
-    button.className = "explore-bubble";
-    const angle = (Math.PI * 2 * index) / Math.max(total, 1) - Math.PI / 2;
-    const radius = total > 8 ? 39 : 34;
-    button.style.setProperty("--bubble-x", `${50 + Math.cos(angle) * radius}%`);
-    button.style.setProperty("--bubble-y", `${50 + Math.sin(angle) * radius}%`);
-    button.style.setProperty("--bubble-size", `${Math.min(168, 86 + Math.sqrt(item.count || records.length) * 2.5)}px`);
-    button.style.setProperty("--node-color", item.color || colors[index % colors.length]);
+    button.className = `explore-bubble ${options.className || ""}`.trim();
+    button.style.setProperty("--bubble-x", `${options.x}%`);
+    button.style.setProperty("--bubble-y", `${options.y}%`);
+    button.style.setProperty("--bubble-size", `${options.size || Math.min(150, 78 + Math.sqrt(item.count || 1) * 2)}px`);
+    button.style.setProperty("--node-color", item.color || options.color || colors[0]);
     button.innerHTML = `<span>${item.label}</span><em>${item.count.toLocaleString()}</em>`;
     button.addEventListener("click", () => {
       if (item.chooseBranch) {
         currentBranch = item.key;
-        mode = "value";
       } else {
         path.push(item);
         currentBranch = item.next;
-        mode = "value";
       }
       renderBubbles();
     });
@@ -1339,7 +1317,6 @@ function renderExploreTool() {
     reset.textContent = "All articles";
     reset.addEventListener("click", () => {
       path.splice(0);
-      mode = "branch";
       currentBranch = "";
       renderBubbles();
     });
@@ -1351,25 +1328,50 @@ function renderExploreTool() {
       crumb.addEventListener("click", () => {
         path.splice(index + 1);
         currentBranch = step.next;
-        mode = "value";
         renderBubbles();
       });
       pathBar.append(crumb);
     });
 
     canvas.replaceChildren();
-    const center = document.createElement("button");
-    center.type = "button";
-    center.className = "explore-bubble explore-bubble-center";
-    center.innerHTML = `<span>${path.at(-1)?.label || "All Articles"}</span><em>${records.length.toLocaleString()}</em>`;
-    center.addEventListener("click", () => {
-      mode = "branch";
-      currentBranch = "";
-      renderBubbles();
+    const root = { label: "All Articles", count: state.records.length, color: colors[0] };
+    canvas.append(makeBubble(root, { x: 13, y: 50, size: 150, className: "explore-bubble-center explore-bubble-root", color: colors[0] }));
+
+    branches.forEach((branch, index) => {
+      const y = 15 + index * 14;
+      const bubble = makeBubble(
+        { ...branch, count: state.records.length, color: colors[index % colors.length], chooseBranch: true },
+        { x: 33, y, size: 108, className: currentBranch === branch.key && !path.length ? "is-active-branch" : "is-branch", color: colors[index % colors.length] },
+      );
+      canvas.append(bubble);
     });
-    canvas.append(center);
-    const items = visibleItems(records);
-    items.forEach((item, index) => canvas.append(makeBubble(item, index, items.length, records)));
+
+    let anchorX = 33;
+    let anchorY = branches.findIndex((branch) => branch.key === currentBranch);
+    anchorY = anchorY >= 0 && !path.length ? 15 + anchorY * 14 : 50;
+    path.forEach((step, index) => {
+      anchorX = Math.min(78, 47 + index * 15);
+      anchorY = 50;
+      canvas.append(makeBubble(step, {
+        x: anchorX,
+        y: anchorY,
+        size: 118,
+        className: "is-path",
+        color: colors[(index + 2) % colors.length],
+      }));
+    });
+
+    const branch = currentBranch || path.at(-1)?.next || "type";
+    const items = valuesForBranch(records, branch).slice(0, 10);
+    const candidateX = Math.min(88, anchorX + 20);
+    items.forEach((item, index) => {
+      const spread = Math.min(72, 12 + index * (76 / Math.max(items.length - 1, 1)));
+      const y = items.length === 1 ? anchorY : spread;
+      canvas.append(makeBubble(
+        { ...item, color: colors[index % colors.length] },
+        { x: candidateX, y, size: Math.min(128, 76 + Math.sqrt(item.count || 1) * 1.8), className: "is-candidate", color: colors[index % colors.length] },
+      ));
+    });
 
     list.replaceChildren();
     const listTitle = document.createElement("h2");
@@ -1515,10 +1517,6 @@ function renderMapView() {
   const articleTotal = points.reduce((sum, point) => sum + point.count, 0);
   count.textContent = `${points.length.toLocaleString()} places / ${articleTotal.toLocaleString()} mapped article references`;
 
-  const search = document.createElement("label");
-  search.className = "map-search";
-  search.innerHTML = `<span>Find a place or venue</span><input type="search" placeholder="City, venue, festival, theatre">`;
-
   const shell = document.createElement("div");
   shell.className = "archive-map-shell";
   const map = document.createElement("div");
@@ -1555,15 +1553,14 @@ function renderMapView() {
   hint.className = "map-hint";
   hint.textContent = "Zoom in to reveal venue markers.";
   list.replaceChildren(listTitle, links, venueTitle, hint, venueLinks);
-  search.querySelector("input").addEventListener("input", (event) => {
-    const query = event.target.value.trim().toLowerCase();
+  const filterMapList = (query) => {
     list.querySelectorAll("a").forEach((link) => {
       link.hidden = query && !link.dataset.mapLabel.toLowerCase().includes(query);
     });
     if (state.fullMap?.focus) state.fullMap.focus(query);
-  });
+  };
   shell.replaceChildren(map, list);
-  els.mapContent.replaceChildren(title, count, search, shell);
+  els.mapContent.replaceChildren(title, count, shell);
   requestAnimationFrame(() => {
     state.fullMap = renderArchiveMap(canvas, points, {
       existingMap: state.fullMap,
@@ -1573,7 +1570,9 @@ function renderMapView() {
       maxVenues: 80,
       maxVenueLabels: 14,
       initialCenter: [43.6532, -79.3832],
-      initialZoom: 8,
+      initialZoom: 12,
+      searchControl: true,
+      onSearch: filterMapList,
       onZoom: (zoom) => shell.classList.toggle("is-venue-zoom", zoom >= 9),
     });
   });
@@ -1590,7 +1589,8 @@ function renderHomeMap() {
     maxVenues: 60,
     maxVenueLabels: 6,
     initialCenter: [43.6532, -79.3832],
-    initialZoom: 7,
+    initialZoom: 12,
+    searchControl: true,
   });
 }
 
@@ -1613,6 +1613,7 @@ function renderLeafletMap(container, points, options = {}) {
   }).addTo(map);
   const bounds = [];
   const searchable = [];
+  const venueMarkers = [];
   const maxCount = Math.max(...points.map((point) => point.count), 1);
   points.forEach((point) => {
     const radius = 6 + Math.sqrt(point.count / maxCount) * 18;
@@ -1627,19 +1628,24 @@ function renderLeafletMap(container, points, options = {}) {
     searchable.push({ label: `${point.label} city`, point, marker, zoom: 9 });
     bounds.push([point.lat, point.lon]);
   });
-  (options.venues || []).forEach((point) => {
-    const marker = L.marker([point.lat, point.lon], { opacity: 0.78 }).addTo(map);
+  (options.venues || []).slice(0, options.maxVenues || 140).forEach((point) => {
+    const marker = L.circleMarker([point.lat, point.lon], {
+      radius: 5,
+      color: "#6b5b3d",
+      weight: 1.5,
+      fillColor: "#d8c99c",
+      fillOpacity: 0,
+      opacity: 0,
+    }).addTo(map);
     marker.bindPopup(`<strong>${point.label}</strong>${point.city || ""}<br>${point.count.toLocaleString()} article references<br><a href="#entity:venues:${point.slug}">Open venue index</a>`);
-    marker.on("add", () => {
-      if (map.getZoom() < 10) marker.setOpacity(0);
-    });
+    venueMarkers.push(marker);
     searchable.push({ label: `${point.label} ${point.city || ""} venue`, point, marker, zoom: 13 });
     bounds.push([point.lat, point.lon]);
   });
   const updateVenueVisibility = () => {
     const zoom = map.getZoom();
-    map.eachLayer((layer) => {
-      if (layer instanceof L.Marker) layer.setOpacity(zoom >= 9 ? 0.9 : 0);
+    venueMarkers.forEach((marker) => {
+      marker.setStyle({ opacity: zoom >= 10 ? 0.9 : 0, fillOpacity: zoom >= 10 ? 0.72 : 0 });
     });
     if (typeof options.onZoom === "function") options.onZoom(zoom);
   };
@@ -1648,6 +1654,22 @@ function renderLeafletMap(container, points, options = {}) {
     map.setView(options.initialCenter, options.initialZoom || 8);
   } else if (bounds.length) {
     map.fitBounds(bounds, { padding: [30, 30] });
+  }
+  if (options.searchControl) {
+    const control = L.DomUtil.create("label", "leaflet-search-control");
+    control.innerHTML = `<span>Search map</span><input type="search" placeholder="City or venue">`;
+    L.DomEvent.disableClickPropagation(control);
+    L.DomEvent.disableScrollPropagation(control);
+    const searchBox = control.querySelector("input");
+    searchBox.addEventListener("input", (event) => {
+      const query = event.target.value.trim().toLowerCase();
+      if (typeof options.onSearch === "function") options.onSearch(query);
+      if (query) {
+        const match = searchable.find((item) => item.label.toLowerCase().includes(query));
+        if (match) map.setView([match.point.lat, match.point.lon], match.zoom);
+      }
+    });
+    map.getContainer().append(control);
   }
   updateVenueVisibility();
   setTimeout(() => map.invalidateSize(), 80);
@@ -1658,7 +1680,7 @@ function renderLeafletMap(container, points, options = {}) {
       const match = searchable.find((item) => item.label.toLowerCase().includes(query));
       if (!match) return;
       map.setView([match.point.lat, match.point.lon], match.zoom);
-      match.marker.openPopup();
+      map.closePopup();
     },
   };
 }
