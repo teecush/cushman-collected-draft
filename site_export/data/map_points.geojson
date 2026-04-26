@@ -33630,25 +33630,6 @@
         "production_title": "Picture This",
         "article_category": "Theatre Review"
       }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -79.3908,
-          43.6452
-        ]
-      },
-      "properties": {
-        "title": "Condos are a sham; And other funny/true revelations from Second City's latest show",
-        "date": "2008-02-16",
-        "route": "/reviews/2008-02-16-condos-are-a-sham-and-other-funny-true-revelations-from-second-city-s-latest-show-2/",
-        "venue": "Second City",
-        "city": "Toronto",
-        "production_title": "Tazed and Confused",
-        "article_category": "Comedy Review"
-      }
     }
   ]
 }

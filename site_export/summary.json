@@ -3,15 +3,15 @@
   "source_dir": "repaired_structural_v2",
   "counts": {
     "total": 2919,
-    "publish": 2729,
+    "publish": 2728,
     "archive_only": 154,
-    "duplicate_variant": 35,
+    "duplicate_variant": 36,
     "exclude_from_publication": 1
   },
-  "public_reviews": 2729,
-  "archive_records": 189,
+  "public_reviews": 2728,
+  "archive_records": 190,
   "excluded_records": 1,
-  "map_points": 1771,
+  "map_points": 1770,
   "sample_public_record": {
     "slug": "1973-04-29-hands-across-the-channel",
     "route": "/reviews/1973-04-29-hands-across-the-channel/",
@@ -64,5 +64,5 @@
     "media": [],
     "word_count": 657
   },
-  "duplicate_canonical_links": 35
+  "duplicate_canonical_links": 36
 }

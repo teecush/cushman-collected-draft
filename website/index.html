@@ -11,27 +11,57 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Rubik:wght@400;600;700;800;900&display=swap">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-    <link rel="stylesheet" href="./styles.css?v=61">
+    <link rel="stylesheet" href="./styles.css?v=62">
   </head>
   <body>
     <header class="site-header">
+      <nav class="site-nav site-nav-left" id="siteNavLeft" aria-label="Primary navigation left">
+        <a class="nav-search" href="#search" aria-label="Search the archive"><span></span></a>
+        <a href="#section:current">Current</a>
+        <div class="nav-folder nav-folder-wide">
+          <a href="#section:browse">Browse</a>
+          <div class="nav-dropdown nav-mega">
+            <div class="nav-subfolder">
+              <a href="#section:browse">Categories</a>
+              <div class="nav-side-menu">
+                <a href="#archive?type=theatre">Theatre Reviews</a>
+                <a href="#archive?type=musical-theatre">Musical Theatre</a>
+                <a href="#archive?type=television">Television</a>
+                <a href="#archive?type=music-concerts">Music &amp; Concerts</a>
+                <a href="#archive?type=book-reviews">Book Reviews</a>
+                <a href="#archive?type=essays-opinion">Essays &amp; Opinion</a>
+                <a href="#section:other-arts">Other Arts</a>
+              </div>
+            </div>
+            <div class="nav-subfolder">
+              <a href="#section:collections">Collections</a>
+              <div class="nav-side-menu">
+                <a href="#section:shakespeare">Shakespeare</a>
+                <a href="#collection:canadian">Canadian Collection</a>
+                <a href="#collection:stratford">Stratford Collection</a>
+                <a href="#collection:shaw">Shaw Collection</a>
+              </div>
+            </div>
+            <div class="nav-subfolder">
+              <a href="#section:indexes">Indexes</a>
+              <div class="nav-side-menu">
+                <a href="#index:people">People</a>
+                <a href="#index:productions">Productions</a>
+                <a href="#index:companies">Companies</a>
+                <a href="#index:cities">Cities</a>
+                <a href="#index:venues">Venues</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
       <a class="brand" href="#home" aria-label="Cushman Collected">
         <img
           src="https://images.squarespace-cdn.com/content/v1/5b686ff89d5abba58f12a1bd/1546905508569-Y2DBQ1MYPBE7FFFUX2VU/Robert+Cushman+logo.png"
           alt="Cushman Collected"
         >
       </a>
-      <nav class="site-nav" id="siteNav" aria-label="Primary navigation">
-        <a href="#archive">Search</a>
-        <a href="#section:current">Current</a>
-        <div class="nav-folder">
-          <a href="#section:browse">Browse</a>
-          <div class="nav-dropdown">
-            <a href="#section:browse">Categories</a>
-            <a href="#section:collections">Collections</a>
-            <a href="#section:indexes">Indexes</a>
-          </div>
-        </div>
+      <nav class="site-nav site-nav-right" id="siteNavRight" aria-label="Primary navigation right">
         <div class="nav-folder">
           <a href="#explore">Explore</a>
           <div class="nav-dropdown">
@@ -44,7 +74,7 @@
           <a href="#about">About</a>
           <div class="nav-dropdown">
             <a href="#about">About Robert Cushman</a>
-            <a href="https://www.cushmancollected.com/?donatePageId=5c9b8016652dea361e5feb7d" target="_blank" rel="noopener">Donate</a>
+            <a href="https://www.cushmancollected.com/checkout/donate?donatePageId=5c9b8016652dea361e5feb7d" target="_blank" rel="noopener">Donate</a>
             <a href="https://www.cushmancollected.com/contact" target="_blank" rel="noopener">Subscribe</a>
             <a href="https://www.cushmancollected.com/critics-circle" target="_blank" rel="noopener">Support</a>
           </div>
@@ -55,14 +85,14 @@
         <span></span>
         <span></span>
       </button>
-      <a class="search-link" href="#archive" aria-label="Search">
+      <a class="search-link" href="#search" aria-label="Search">
         <span></span>
       </a>
     </header>
 
     <nav class="drawer" id="drawer" aria-label="Site navigation">
       <strong>Search</strong>
-      <a href="#archive">Search the Archive</a>
+      <a href="#search">Search the Archive</a>
       <strong>Current</strong>
       <a href="#section:current">Current Collection</a>
       <strong>Browse</strong>
@@ -75,7 +105,7 @@
       <a href="#timeline">Timeline</a>
       <strong>About</strong>
       <a class="drawer-about" href="#about">About Robert Cushman</a>
-      <a href="https://www.cushmancollected.com/?donatePageId=5c9b8016652dea361e5feb7d" target="_blank" rel="noopener">Donate</a>
+      <a href="https://www.cushmancollected.com/checkout/donate?donatePageId=5c9b8016652dea361e5feb7d" target="_blank" rel="noopener">Donate</a>
       <a href="https://www.cushmancollected.com/contact" target="_blank" rel="noopener">Subscribe</a>
       <a href="https://www.cushmancollected.com/critics-circle" target="_blank" rel="noopener">Support</a>
     </nav>
@@ -140,7 +170,7 @@
       </section>
 
       <section class="browse-heading" id="browse">
-        <h2>Browse by Type</h2>
+        <h2>Browse the Archive</h2>
       </section>
 
       <section class="tile-grid" id="collectionTiles" aria-label="Collection links"></section>
@@ -186,11 +216,11 @@
       <section>
         <strong>Support Cushman Collected.</strong>
         <p>Your contribution will help expand the archive.</p>
-        <a class="footer-button" href="https://www.cushmancollected.com/?donatePageId=5c9b8016652dea361e5feb7d" target="_blank" rel="noopener">Donate</a>
+        <a class="footer-button" href="https://www.cushmancollected.com/checkout/donate?donatePageId=5c9b8016652dea361e5feb7d" target="_blank" rel="noopener">Donate</a>
       </section>
     </footer>
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    <script src="./app.js?v=61" type="module"></script>
+    <script src="./app.js?v=62" type="module"></script>
   </body>
 </html>

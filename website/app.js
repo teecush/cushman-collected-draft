@@ -1,4 +1,4 @@
-const DATA_URL = new URL("../site_export/data/public_reviews.json?v=61", import.meta.url);
+const DATA_URL = new URL("../site_export/data/public_reviews.json?v=62", import.meta.url);
 const CONTENT_ROOT = new URL("../site_export/content/reviews/", import.meta.url);
 const PAGE_SIZE = 36;
 const SHAKESPEARE_COLLECTION = "The Shakespeare Collection";
@@ -1232,52 +1232,33 @@ function renderExploreTool() {
   title.textContent = "Article Explorer";
   const intro = document.createElement("p");
   intro.className = "landing-intro";
-  intro.textContent = "Choose a path and keep branching by category, era, collection, company, city, or production until the article set feels right.";
+  intro.textContent = "Start in the middle, then branch by category, era, collection, company, city, or production until the archive opens into a useful path.";
   const tool = document.createElement("div");
-  tool.className = "explore-tool";
-  const columns = document.createElement("div");
-  columns.className = "explore-columns";
-  tool.append(columns);
+  tool.className = "explore-tool explore-bubble-tool";
+  const pathBar = document.createElement("div");
+  pathBar.className = "explore-path";
+  const canvas = document.createElement("div");
+  canvas.className = "explore-bubble-canvas";
+  const list = document.createElement("div");
+  list.className = "explore-articles";
+  tool.replaceChildren(pathBar, canvas, list);
   const path = [];
-  const colors = ["#3a7199", "#80714f", "#55736b", "#8a5f5f", "#6b5a7d"];
+  const branches = [
+    { key: "type", label: "Categories", next: "era" },
+    { key: "era", label: "Eras", next: "collection" },
+    { key: "collection", label: "Collections", next: "company" },
+    { key: "company", label: "Companies", next: "city" },
+    { key: "city", label: "Cities", next: "production" },
+    { key: "production", label: "Productions", next: "type" },
+  ];
+  const colors = ["#1f587f", "#7f7458", "#55736b", "#8a5f5f", "#6b5a7d", "#3f6f70"];
+  let mode = "branch";
+  let currentBranch = "";
 
   const filteredRecords = () =>
     path.reduce((records, step) => records.filter((record) => step.test(record)), state.records);
 
-  const makeNode = (item, depth) => {
-    const button = document.createElement("button");
-    button.type = "button";
-    button.className = "explore-node";
-    button.style.setProperty("--node-color", colors[depth % colors.length]);
-    button.innerHTML = `<span>${item.label}</span><em>${item.count.toLocaleString()}</em>`;
-    button.addEventListener("click", () => {
-      path.splice(depth, path.length - depth, item);
-      renderColumns();
-    });
-    return button;
-  };
-
-  const column = (heading, items, depth) => {
-    const section = document.createElement("section");
-    section.className = "explore-column";
-    const h2 = document.createElement("h2");
-    h2.textContent = heading;
-    section.append(h2, ...items.slice(0, 22).map((item) => makeNode(item, depth)));
-    return section;
-  };
-
-  const branches = (records, depth) => {
-    if (depth === 0) {
-      return [
-        { label: "All Articles", count: records.length, test: () => true },
-        { label: "By Category", count: records.length, branch: "type", test: () => true },
-        { label: "By Era", count: records.length, branch: "era", test: () => true },
-        { label: "By Collection", count: records.length, branch: "collection", test: () => true },
-        { label: "By Company", count: records.length, branch: "company", test: () => true },
-        { label: "By City", count: records.length, branch: "city", test: () => true },
-      ];
-    }
-    const branch = path[depth - 1]?.branch || ["type", "era", "collection", "company", "city", "production"][depth % 6];
+  const valuesForBranch = (records, branch) => {
     const counts = new Map();
     records.forEach((record) => {
       let values = [];
@@ -1293,7 +1274,8 @@ function renderExploreTool() {
       .map(([label, count]) => ({
         label,
         count,
-        branch: ["type", "era", "collection", "company", "city", "production"][(depth + 1) % 6],
+        branch,
+        next: branches.find((item) => item.key === branch)?.next || "type",
         test: (record) => {
           if (branch === "type") return typeLabel(record) === label;
           if (branch === "era") return record.year && `${String(record.year).slice(0, 3)}0s` === label;
@@ -1307,30 +1289,100 @@ function renderExploreTool() {
       .sort((a, b) => b.count - a.count || a.label.localeCompare(b.label));
   };
 
-  const renderColumns = () => {
-    columns.replaceChildren();
-    let records = state.records;
-    columns.append(column("Start", branches(records, 0), 0));
-    path.forEach((step, index) => {
-      records = records.filter((record) => step.test(record));
-      columns.append(column(step.label, branches(records, index + 1), index + 1));
+  const visibleItems = (records) => {
+    if (mode === "branch") {
+      return branches.map((branch, index) => ({
+        ...branch,
+        count: records.length,
+        color: colors[index % colors.length],
+        chooseBranch: true,
+      }));
+    }
+    return valuesForBranch(records, currentBranch)
+      .slice(0, 12)
+      .map((item, index) => ({
+        ...item,
+        color: colors[index % colors.length],
+      }));
+  };
+
+  const makeBubble = (item, index, total, records) => {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "explore-bubble";
+    const angle = (Math.PI * 2 * index) / Math.max(total, 1) - Math.PI / 2;
+    const radius = total > 8 ? 39 : 34;
+    button.style.setProperty("--bubble-x", `${50 + Math.cos(angle) * radius}%`);
+    button.style.setProperty("--bubble-y", `${50 + Math.sin(angle) * radius}%`);
+    button.style.setProperty("--bubble-size", `${Math.min(168, 86 + Math.sqrt(item.count || records.length) * 2.5)}px`);
+    button.style.setProperty("--node-color", item.color || colors[index % colors.length]);
+    button.innerHTML = `<span>${item.label}</span><em>${item.count.toLocaleString()}</em>`;
+    button.addEventListener("click", () => {
+      if (item.chooseBranch) {
+        currentBranch = item.key;
+        mode = "value";
+      } else {
+        path.push(item);
+        currentBranch = item.next;
+        mode = "value";
+      }
+      renderBubbles();
     });
-    const final = document.createElement("section");
-    final.className = "explore-column";
-    const h2 = document.createElement("h2");
-    h2.textContent = `${records.length.toLocaleString()} articles`;
-    const list = document.createElement("div");
-    list.className = "explore-articles";
+    return button;
+  };
+
+  const renderBubbles = () => {
+    const records = filteredRecords();
+    pathBar.replaceChildren();
+    const reset = document.createElement("button");
+    reset.type = "button";
+    reset.textContent = "All articles";
+    reset.addEventListener("click", () => {
+      path.splice(0);
+      mode = "branch";
+      currentBranch = "";
+      renderBubbles();
+    });
+    pathBar.append(reset);
+    path.forEach((step, index) => {
+      const crumb = document.createElement("button");
+      crumb.type = "button";
+      crumb.textContent = step.label;
+      crumb.addEventListener("click", () => {
+        path.splice(index + 1);
+        currentBranch = step.next;
+        mode = "value";
+        renderBubbles();
+      });
+      pathBar.append(crumb);
+    });
+
+    canvas.replaceChildren();
+    const center = document.createElement("button");
+    center.type = "button";
+    center.className = "explore-bubble explore-bubble-center";
+    center.innerHTML = `<span>${path.at(-1)?.label || "All Articles"}</span><em>${records.length.toLocaleString()}</em>`;
+    center.addEventListener("click", () => {
+      mode = "branch";
+      currentBranch = "";
+      renderBubbles();
+    });
+    canvas.append(center);
+    const items = visibleItems(records);
+    items.forEach((item, index) => canvas.append(makeBubble(item, index, items.length, records)));
+
+    list.replaceChildren();
+    const listTitle = document.createElement("h2");
+    listTitle.textContent = `${records.length.toLocaleString()} articles`;
+    list.append(listTitle);
     sortRecords(records).slice(0, 18).forEach((record) => {
       const link = document.createElement("a");
       link.href = `#review:${record.slug}`;
       link.textContent = record.title;
       list.append(link);
     });
-    final.append(h2, list);
-    columns.append(final);
   };
-  renderColumns();
+  renderBubbles();
   els.indexContent.replaceChildren(title, intro, tool);
 }
 
@@ -1383,7 +1435,7 @@ function renderAboutPage() {
   cards.className = "landing-card-grid landing-card-grid-compact";
   [
     ["About Robert Cushman", "https://www.cushmancollected.com/about", "Original biography page"],
-    ["Donate", "https://www.cushmancollected.com/?donatePageId=5c9b8016652dea361e5feb7d", "Support expansion of the archive"],
+    ["Donate", "https://www.cushmancollected.com/checkout/donate?donatePageId=5c9b8016652dea361e5feb7d", "Support expansion of the archive"],
     ["Subscribe", "https://www.cushmancollected.com/contact", "Receive updates from Cushman Collected"],
     ["Support", "https://www.cushmancollected.com/critics-circle", "Critic's Circle and supporters"],
   ].forEach(([label, href, description]) => {
@@ -1459,6 +1511,7 @@ function renderMapView() {
     list.querySelectorAll("a").forEach((link) => {
       link.hidden = query && !link.dataset.mapLabel.toLowerCase().includes(query);
     });
+    if (state.fullMap?.focus) state.fullMap.focus(query);
   });
   shell.replaceChildren(map, list);
   els.mapContent.replaceChildren(title, count, search, shell);
@@ -1470,7 +1523,9 @@ function renderMapView() {
       venues,
       maxVenues: 80,
       maxVenueLabels: 14,
-      onZoom: (zoom) => shell.classList.toggle("is-venue-zoom", zoom >= 1.35),
+      initialCenter: [43.6532, -79.3832],
+      initialZoom: 8,
+      onZoom: (zoom) => shell.classList.toggle("is-venue-zoom", zoom >= 9),
     });
   });
 }
@@ -1479,12 +1534,14 @@ function renderHomeMap() {
   if (!els.homeMapCanvas || !state.records.length) return;
   state.homeMap = renderArchiveMap(els.homeMapCanvas, cityMapPoints(), {
     existingMap: state.homeMap,
-    zoomControl: false,
-    maxMarkers: 18,
-    compact: true,
+    zoomControl: true,
+    maxMarkers: 28,
+    compact: false,
     venues: venueMapPoints(),
-    maxVenues: 24,
+    maxVenues: 60,
     maxVenueLabels: 6,
+    initialCenter: [43.6532, -79.3832],
+    initialZoom: 7,
   });
 }
 
@@ -1500,12 +1557,13 @@ function renderLeafletMap(container, points, options = {}) {
   const mapNode = document.createElement("div");
   mapNode.className = "leaflet-map";
   container.append(mapNode);
-  const map = L.map(mapNode, { scrollWheelZoom: true });
+  const map = L.map(mapNode, { scrollWheelZoom: true, zoomControl: options.zoomControl !== false });
   L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
     maxZoom: 19,
     attribution: "&copy; OpenStreetMap contributors",
   }).addTo(map);
   const bounds = [];
+  const searchable = [];
   const maxCount = Math.max(...points.map((point) => point.count), 1);
   points.forEach((point) => {
     const radius = 6 + Math.sqrt(point.count / maxCount) * 18;
@@ -1517,6 +1575,7 @@ function renderLeafletMap(container, points, options = {}) {
       fillOpacity: 0.72,
     }).addTo(map);
     marker.bindPopup(`<strong>${point.label}</strong>${point.count.toLocaleString()} mapped article references<br><a href="#entity:cities:${point.slug}">Open city index</a>`);
+    searchable.push({ label: `${point.label} city`, point, marker, zoom: 9 });
     bounds.push([point.lat, point.lon]);
   });
   (options.venues || []).forEach((point) => {
@@ -1525,18 +1584,34 @@ function renderLeafletMap(container, points, options = {}) {
     marker.on("add", () => {
       if (map.getZoom() < 10) marker.setOpacity(0);
     });
+    searchable.push({ label: `${point.label} ${point.city || ""} venue`, point, marker, zoom: 13 });
     bounds.push([point.lat, point.lon]);
   });
-  map.on("zoomend", () => {
+  const updateVenueVisibility = () => {
     const zoom = map.getZoom();
     map.eachLayer((layer) => {
       if (layer instanceof L.Marker) layer.setOpacity(zoom >= 9 ? 0.9 : 0);
     });
-    if (typeof options.onZoom === "function") options.onZoom(zoom / 7);
-  });
-  if (bounds.length) map.fitBounds(bounds, { padding: [30, 30] });
+    if (typeof options.onZoom === "function") options.onZoom(zoom);
+  };
+  map.on("zoomend", updateVenueVisibility);
+  if (options.initialCenter) {
+    map.setView(options.initialCenter, options.initialZoom || 8);
+  } else if (bounds.length) {
+    map.fitBounds(bounds, { padding: [30, 30] });
+  }
+  updateVenueVisibility();
   setTimeout(() => map.invalidateSize(), 80);
-  return { remove: () => map.remove() };
+  return {
+    remove: () => map.remove(),
+    focus: (query) => {
+      if (!query) return;
+      const match = searchable.find((item) => item.label.toLowerCase().includes(query));
+      if (!match) return;
+      map.setView([match.point.lat, match.point.lon], match.zoom);
+      match.marker.openPopup();
+    },
+  };
 }
 
 function renderControlledSvgMap(container, points, options = {}) {
@@ -2196,7 +2271,7 @@ function route() {
   els.articleView.hidden = true;
   els.indexView.hidden = true;
   els.mapView.hidden = true;
-  document.body.classList.remove("article-open", "index-open", "map-open");
+  document.body.classList.remove("article-open", "index-open", "map-open", "search-open");
 
   if (hash.startsWith("#review:")) {
     document.body.classList.add("article-open");
@@ -2319,6 +2394,13 @@ function route() {
     } else {
       resetArchiveControls();
     }
+    scrollToSection("#archive");
+    return;
+  }
+
+  if (hash === "#search") {
+    document.body.classList.add("search-open");
+    resetArchiveControls();
     scrollToSection("#archive");
     return;
   }
