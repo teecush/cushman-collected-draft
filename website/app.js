@@ -1,4 +1,4 @@
-const DATA_URL = new URL("../site_export/data/public_reviews.json?v=48", import.meta.url);
+const DATA_URL = new URL("../site_export/data/public_reviews.json?v=56", import.meta.url);
 const CONTENT_ROOT = new URL("../site_export/content/reviews/", import.meta.url);
 const PAGE_SIZE = 36;
 const SHAKESPEARE_COLLECTION = "The Shakespeare Collection";
@@ -67,7 +67,7 @@ const ENTITY_TYPES = [
 const TYPE_GROUPS = [
   {
     value: "theatre",
-    label: "Theatre",
+    label: "Theatre Reviews",
     categories: ["Theatre Review", "Theatre Preview", "Theatre News", "Events Listing", "Awards Coverage"],
   },
   {
@@ -91,14 +91,39 @@ const TYPE_GROUPS = [
     categories: ["Book Review", "Opinion Piece", "Year in Review"],
   },
   {
-    value: "people",
-    label: "People",
-    categories: ["Profile", "Obituary"],
+    value: "profiles",
+    label: "Profiles",
+    categories: ["Profile"],
   },
   {
-    value: "other-arts",
-    label: "Other Arts",
-    categories: ["Comedy Review", "Film Review", "Opera Review", "Dance Review", "Circus Review"],
+    value: "obituaries",
+    label: "Obituaries",
+    categories: ["Obituary"],
+  },
+  {
+    value: "comedy",
+    label: "Comedy",
+    categories: ["Comedy Review"],
+  },
+  {
+    value: "opera",
+    label: "Opera",
+    categories: ["Opera Review"],
+  },
+  {
+    value: "film",
+    label: "Film",
+    categories: ["Film Review"],
+  },
+  {
+    value: "dance",
+    label: "Dance",
+    categories: ["Dance Review"],
+  },
+  {
+    value: "circus",
+    label: "Circus",
+    categories: ["Circus Review"],
   },
   {
     value: "site-notes",
@@ -110,16 +135,19 @@ const TYPE_GROUPS = [
 const TYPE_BY_CATEGORY = new Map(
   TYPE_GROUPS.flatMap((group) => group.categories.map((category) => [category, group]))
 );
+const TYPE_VALUE_BY_LABEL = new Map(TYPE_GROUPS.map((group) => [group.label, group.value]));
+const OTHER_ARTS_VALUES = ["comedy", "opera", "film", "dance", "circus"];
 
 const browseTiles = {
   types: [
-    "Theatre",
+    "Theatre Reviews",
     "Shakespeare",
     "Musical Theatre",
     "Television",
     "Music & Concerts",
     "Books & Essays",
-    "People",
+    "Profiles",
+    "Obituaries",
     "Other Arts",
     "Site Notes",
   ],
@@ -227,6 +255,8 @@ const state = {
   sort: "newest",
   hasActiveQuery: false,
   shakespeareGroup: "",
+  fullMap: null,
+  homeMap: null,
 };
 
 const els = {
@@ -234,6 +264,7 @@ const els = {
   menuButton: document.querySelector("#menuButton"),
   archive: document.querySelector("#archive"),
   frontpageDirectory: document.querySelector("#frontpageDirectory"),
+  homeMapCanvas: document.querySelector("#homeMapCanvas"),
   tiles: document.querySelector("#collectionTiles"),
   secondaryTiles: document.querySelector("#secondaryTiles"),
   indexTiles: document.querySelector("#indexTiles"),
@@ -608,6 +639,184 @@ function renderIndexTiles() {
   els.indexTiles.replaceChildren(...tiles);
 }
 
+function recordsForTypeValue(value) {
+  return state.records.filter((record) => typeGroup(record).value === value);
+}
+
+function countForTypeValue(value) {
+  return recordsForTypeValue(value).length;
+}
+
+function countForOtherArts() {
+  return OTHER_ARTS_VALUES.reduce((sum, value) => sum + countForTypeValue(value), 0);
+}
+
+function landingItems(kind) {
+  if (kind === "browse") {
+    return [
+      ...["theatre", "musical-theatre", "television", "music-concerts", "books-essays", "profiles", "obituaries"].map((value) => {
+        const group = TYPE_GROUPS.find((item) => item.value === value);
+        return landingItem(group.label, `#archive?type=${value}`, countForTypeValue(value), tileDescription(group.label), recordsForTypeValue(value));
+      }),
+      landingItem("Other Arts", "#section:other-arts", countForOtherArts(), tileDescription("Other Arts"), OTHER_ARTS_VALUES.flatMap(recordsForTypeValue)),
+      landingItem("Site Notes", "#archive?type=site-notes", countForTypeValue("site-notes"), tileDescription("Site Notes"), recordsForTypeValue("site-notes")),
+    ];
+  }
+
+  if (kind === "other-arts") {
+    return OTHER_ARTS_VALUES.map((value) => {
+      const group = TYPE_GROUPS.find((item) => item.value === value);
+      return landingItem(group.label, `#archive?type=${value}`, countForTypeValue(value), tileDescription(group.label), recordsForTypeValue(value));
+    });
+  }
+
+  if (kind === "collections") {
+    return [
+      landingItem("Shakespeare", "#section:shakespeare", countForTile("Shakespeare"), tileDescription("Shakespeare"), state.records.filter((record) => collectionNames(record).includes(SHAKESPEARE_COLLECTION))),
+      ...SECONDARY_COLLECTION_TILES.map((title) => {
+        const collection = collectionFromSlug(slugForCollection(title));
+        return landingItem(title.replace(/^The\s+/, ""), archiveHrefForTile(title, "collections"), countForTile(title, "collections"), tileDescription(title), state.records.filter((record) => collectionNames(record).includes(collection)));
+      }),
+    ];
+  }
+
+  if (kind === "indexes") {
+    return ENTITY_TYPES.map((type) => {
+      const entries = entityMap(type.key);
+      return landingItem(type.label, `#index:${type.key}`, entries.size, indexDescription(type.key), [], "entries");
+    }).filter((item) => item.count);
+  }
+
+  if (kind === "shakespeare") {
+    return SHAKESPEARE_GROUPS.map((group) => {
+      const href = group.value ? `#collection:shakespeare?group=${group.value}` : "#collection:shakespeare";
+      const records = state.records.filter((record) => collectionNames(record).includes(SHAKESPEARE_COLLECTION) && (!group.value || shakespeareGroup(record) === group.value));
+      return landingItem(group.label, href, records.length, group.description, records);
+    });
+  }
+
+  return [];
+}
+
+function landingItem(title, href, count, description, records, unit = "records") {
+  return { title, href, count, unit, description, examples: sortRecords(records || []).slice(0, 3) };
+}
+
+function renderLandingPage(kind) {
+  const config = {
+    current: {
+      title: "Current",
+      count: "Coming after launch",
+      intro: "Robert Cushman's recent self-published writing from the original site will live here after publication.",
+      items: [landingItem("Coming after launch", "#home", 0, "The current collection is reserved for recent self-published work.", [])],
+    },
+    browse: {
+      title: "Browse",
+      count: `${state.records.length.toLocaleString()} public records`,
+      intro: "Start with a category, then refine by search, collection, person, company, production, or city.",
+      items: landingItems("browse"),
+    },
+    collections: {
+      title: "Collections",
+      count: "Curated paths",
+      intro: "Gathered ways into the archive, led by Shakespeare and followed by recurring festivals, regions, and short-form groupings.",
+      items: landingItems("collections"),
+    },
+    indexes: {
+      title: "Indexes",
+      count: "Alphabetical maps",
+      intro: "Metadata pages for people, productions, companies, cities, roles, publications, and other structured archive paths.",
+      items: landingItems("indexes"),
+    },
+    "other-arts": {
+      title: "Other Arts",
+      count: `${countForOtherArts().toLocaleString()} records`,
+      intro: "The smaller arts categories are kept separate here so comedy, opera, film, dance, and circus do not disappear into one vague bucket.",
+      items: landingItems("other-arts"),
+    },
+  }[kind];
+
+  if (kind === "shakespeare") return renderShakespeareLanding();
+  if (!config) return;
+
+  const title = document.createElement("h1");
+  title.textContent = config.title;
+  const count = document.createElement("p");
+  count.className = "index-count";
+  count.textContent = config.count;
+  const intro = document.createElement("p");
+  intro.className = "landing-intro";
+  intro.textContent = config.intro;
+  const cards = document.createElement("div");
+  cards.className = "landing-card-grid";
+  cards.replaceChildren(...config.items.map(landingCard));
+  els.indexContent.replaceChildren(title, count, intro, cards);
+}
+
+function renderShakespeareLanding() {
+  const title = document.createElement("h1");
+  title.textContent = "Shakespeare";
+  const count = document.createElement("p");
+  count.className = "index-count";
+  count.textContent = `${countForTile("Shakespeare").toLocaleString()} records`;
+  const intro = document.createElement("p");
+  intro.className = "landing-intro";
+  intro.textContent = "A guided path through play reviews, Shakespeare-heavy essays, and adaptations or riffs.";
+  const groups = document.createElement("div");
+  groups.className = "landing-card-grid landing-card-grid-compact";
+  groups.replaceChildren(...landingItems("shakespeare").map(landingCard));
+  const playHeading = document.createElement("h2");
+  playHeading.className = "landing-subhead";
+  playHeading.textContent = "Browse by Play";
+  const plays = document.createElement("div");
+  plays.className = "tile-grid shakespeare-art-grid";
+  plays.replaceChildren(...browseTiles.shakespeare.map((title, index) => shakespeareArtTile(title, index)));
+  els.indexContent.replaceChildren(title, count, intro, groups, playHeading, plays);
+}
+
+function shakespeareArtTile(title, index) {
+  const link = document.createElement("a");
+  link.className = `tile${index > 15 ? " dark" : ""}`;
+  link.href = archiveHrefForTile(title, "shakespeare");
+  if (tileImages[title]) {
+    link.classList.add("has-image");
+    const image = document.createElement("img");
+    image.src = tileImages[title];
+    image.alt = title;
+    image.loading = "lazy";
+    link.replaceChildren(image);
+  } else {
+    const heading = document.createElement("strong");
+    heading.textContent = title;
+    const meta = document.createElement("span");
+    meta.textContent = "Browse";
+    link.replaceChildren(heading, meta);
+  }
+  return link;
+}
+
+function landingCard(item) {
+  const card = document.createElement("a");
+  card.className = "landing-card";
+  card.href = item.href;
+  const title = document.createElement("strong");
+  title.textContent = item.title;
+  const count = document.createElement("span");
+  const singularUnit = item.unit.replace(/s$/, "");
+  count.textContent = item.count ? `${item.count.toLocaleString()} ${item.count === 1 ? singularUnit : item.unit}` : "Not yet published";
+  const description = document.createElement("p");
+  description.textContent = item.description || "";
+  const examples = document.createElement("div");
+  examples.className = "landing-examples";
+  item.examples.forEach((record) => {
+    const example = document.createElement("em");
+    example.textContent = record.title;
+    examples.append(example);
+  });
+  card.replaceChildren(title, count, description, examples);
+  return card;
+}
+
 function renderFrontpageDirectory() {
   const browseLinks = TYPE_GROUPS
     .map((type) => ({
@@ -619,7 +828,7 @@ function renderFrontpageDirectory() {
     .sort((a, b) => b.count - a.count || a.label.localeCompare(b.label));
 
   const collectionLinks = [
-    { label: "Shakespeare", href: "#collection:shakespeare", count: countForTile("Shakespeare"), featured: true },
+    { label: "Shakespeare", href: "#section:shakespeare", count: countForTile("Shakespeare"), featured: true },
     ...SECONDARY_COLLECTION_TILES.map((title) => ({
       label: title.replace(/^The\s+/, ""),
       href: archiveHrefForTile(title, "collections"),
@@ -635,20 +844,14 @@ function renderFrontpageDirectory() {
     }))
     .filter((item) => item.count)
     .sort((a, b) => b.count - a.count || a.label.localeCompare(b.label));
-  indexLinks.unshift({
-    label: "Map",
-    href: "#map",
-    count: cityMapPoints().length,
-    featured: true,
-  });
-
   const sections = [
     {
       id: "current",
       className: "frontpage-section frontpage-current",
       label: "New writing",
       title: "Current",
-      links: [{ label: "Coming after launch", href: "#current", count: 0 }],
+      titleHref: "#section:current",
+      links: [{ label: "Coming after launch", href: "#section:current", count: 0 }],
       limit: 1,
     },
     {
@@ -656,6 +859,7 @@ function renderFrontpageDirectory() {
       className: "frontpage-section",
       label: "Categories",
       title: "Browse",
+      titleHref: "#section:browse",
       links: browseLinks,
       limit: 8,
     },
@@ -664,6 +868,7 @@ function renderFrontpageDirectory() {
       className: "frontpage-section frontpage-collections",
       label: "Curated paths",
       title: "Collections",
+      titleHref: "#section:collections",
       links: collectionLinks,
       limit: 6,
     },
@@ -672,6 +877,7 @@ function renderFrontpageDirectory() {
       className: "frontpage-section",
       label: "Alphabetical maps",
       title: "Indexes",
+      titleHref: "#section:indexes",
       links: indexLinks,
       limit: 10,
     },
@@ -691,7 +897,7 @@ function frontpageSection(section) {
 
   const title = document.createElement("a");
   title.className = "frontpage-title";
-  title.href = section.links[0]?.href || "#home";
+  title.href = section.titleHref || section.links[0]?.href || "#home";
   title.textContent = section.title;
 
   const list = document.createElement("div");
@@ -840,7 +1046,9 @@ function renderMapView() {
   shell.className = "archive-map-shell";
   const map = document.createElement("div");
   map.className = "archive-map";
-  map.append(mapSvg(points));
+  const canvas = document.createElement("div");
+  canvas.className = "map-canvas";
+  map.append(canvas);
 
   const list = document.createElement("div");
   list.className = "map-city-list";
@@ -857,9 +1065,130 @@ function renderMapView() {
   list.replaceChildren(listTitle, links);
   shell.replaceChildren(map, list);
   els.mapContent.replaceChildren(title, count, shell);
+  requestAnimationFrame(() => {
+    state.fullMap = renderLeafletMap(canvas, points, {
+      existingMap: state.fullMap,
+      zoomControl: true,
+      maxMarkers: points.length,
+    });
+  });
 }
 
-function mapSvg(points) {
+function renderHomeMap() {
+  if (!els.homeMapCanvas || !state.records.length) return;
+  state.homeMap = renderLeafletMap(els.homeMapCanvas, cityMapPoints(), {
+    existingMap: state.homeMap,
+    zoomControl: false,
+    maxMarkers: 18,
+    compact: true,
+  });
+}
+
+function renderLeafletMap(container, points, options = {}) {
+  if (!container || !points.length) return null;
+  if (options.existingMap) options.existingMap.remove();
+  container.replaceChildren();
+  return renderControlledSvgMap(container, points, options);
+  if (!window.L) {
+    container.append(mapSvg(points));
+    return null;
+  }
+
+  const map = window.L.map(container, {
+    attributionControl: !options.compact,
+    zoomControl: options.zoomControl !== false,
+    scrollWheelZoom: false,
+  });
+  const mapBounds = [[18, -145], [62, 15]];
+  window.L.imageOverlay(northAtlanticBasemapUrl(), mapBounds).addTo(map);
+
+  const maxCount = Math.max(...points.map((point) => point.count), 1);
+  const markerPoints = points.slice(0, options.maxMarkers || points.length);
+  const bounds = [];
+  markerPoints.forEach((point) => {
+    const radius = 6 + Math.sqrt(point.count / maxCount) * (options.compact ? 16 : 24);
+    const marker = window.L.circleMarker([point.lat, point.lon], {
+      radius,
+      color: "#111",
+      weight: 1.4,
+      fillColor: "#3a7199",
+      fillOpacity: 0.72,
+    }).addTo(map);
+    marker.bindPopup(`<strong>${point.label}</strong><br>${point.count.toLocaleString()} ${point.count === 1 ? "article" : "articles"}`);
+    marker.on("click", () => {
+      window.location.hash = `#entity:cities:${point.slug}`;
+    });
+    bounds.push([point.lat, point.lon]);
+  });
+  if (bounds.length) {
+    map.fitBounds(bounds, { padding: options.compact ? [18, 18] : [32, 32], maxZoom: options.compact ? 4 : 6 });
+    if (!options.compact) map.setMaxBounds(mapBounds);
+  }
+  setTimeout(() => map.invalidateSize(), 0);
+  return map;
+}
+
+function renderControlledSvgMap(container, points, options = {}) {
+  const wrap = document.createElement("div");
+  wrap.className = "controlled-map";
+  const controls = document.createElement("div");
+  controls.className = "map-controls";
+  const zoomIn = document.createElement("button");
+  zoomIn.type = "button";
+  zoomIn.textContent = "+";
+  zoomIn.setAttribute("aria-label", "Zoom in");
+  const zoomOut = document.createElement("button");
+  zoomOut.type = "button";
+  zoomOut.textContent = "−";
+  zoomOut.setAttribute("aria-label", "Zoom out");
+  controls.replaceChildren(zoomIn, zoomOut);
+  const stage = document.createElement("div");
+  stage.className = "map-stage";
+  stage.append(mapSvg(points, options));
+  wrap.replaceChildren(controls, stage);
+  container.append(wrap);
+  let zoom = 1;
+  const setZoom = (next) => {
+    zoom = Math.max(1, Math.min(2.6, next));
+    stage.style.setProperty("--map-zoom", zoom);
+  };
+  zoomIn.addEventListener("click", () => setZoom(zoom + 0.25));
+  zoomOut.addEventListener("click", () => setZoom(zoom - 0.25));
+  return {
+    remove() {
+      container.replaceChildren();
+    },
+  };
+}
+
+function northAtlanticBasemapUrl() {
+  const svg = `
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700">
+      <rect width="1200" height="700" fill="#dfe8e8"/>
+      <g fill="#f6f5ef" stroke="#b8c3c3" stroke-width="3">
+        <path d="M0 0h520c-30 48-82 78-92 132-8 45 25 95-8 141-35 48-129 44-170 96-45 57-7 128-57 178-47 47-127 28-193 61z"/>
+        <path d="M228 88c72-47 170-65 245-34 43 18 59 52 35 80-30 36-112 40-151 82-29 31-12 71-53 95-53 31-141 4-171-45-37-62 22-136 95-178z"/>
+        <path d="M370 480c56 18 120 12 155 49 32 34 18 93-27 117-65 34-153-12-185-75-24-48 6-75 57-91z"/>
+        <path d="M470 610c62-10 124 7 155 43 21 24 14 40-29 47H383c10-42 38-78 87-90z"/>
+        <path d="M835 55c86-36 199-17 268 46 51 47 53 94 8 126-57 41-160 15-220-41-43-40-73-94-56-131z"/>
+        <path d="M990 200c81-11 153 15 210 68v432H884c-33-78 10-157 75-201 55-37 128-50 151-113 22-60-48-99-120-186z"/>
+        <path d="M872 333c38-20 82-13 105 15 19 22 13 50-14 65-35 20-91 4-111-28-15-24-6-40 20-52z"/>
+        <path d="M796 292c22-11 48-8 62 9 12 15 9 36-8 47-24 15-60 5-72-18-8-16-1-29 18-38z"/>
+        <path d="M1015 120c30-18 71-15 96 7 20 18 17 43-7 56-31 18-76 7-96-22-13-19-10-31 7-41z"/>
+      </g>
+      <g fill="#93a3a7" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700" letter-spacing="4" opacity=".75">
+        <text x="130" y="315">NORTH AMERICA</text>
+        <text x="915" y="350">EUROPE</text>
+        <text x="435" y="650">AMERICA</text>
+      </g>
+      <g stroke="#c9d1d1" stroke-width="1.4" opacity=".6">
+        <path d="M0 155h1200M0 350h1200M0 545h1200M220 0v700M500 0v700M780 0v700M1040 0v700"/>
+      </g>
+    </svg>`;
+  return `data:image/svg+xml;charset=UTF-8,${encodeURIComponent(svg)}`;
+}
+
+function mapSvg(points, options = {}) {
   const width = 1000;
   const height = 520;
   const padding = 54;
@@ -877,11 +1206,19 @@ function mapSvg(points) {
   svg.setAttribute("role", "img");
   svg.setAttribute("aria-label", "Map of archive article locations");
 
-  const background = createSvgElement("rect");
-  background.setAttribute("class", "map-paper");
-  background.setAttribute("width", width);
-  background.setAttribute("height", height);
-  svg.append(background);
+  svg.append(mapShape("rect", { class: "map-water", width, height }));
+  const land = createSvgElement("g");
+  land.setAttribute("class", "map-land");
+  [
+    "M0 0h405c-24 38-70 72-72 116-3 61 55 97 19 148-38 53-143 42-181 102-39 61 19 117-24 160-37 37-96 20-147 50z",
+    "M154 66c69-42 175-55 232-15 40 28 26 71-32 91-48 17-111 15-139 56-21 30-2 72-47 91-55 23-126-16-144-73-17-54 39-115 130-150z",
+    "M302 377c48 16 102 6 134 35 35 31 8 84-42 96-60 14-130-30-141-81-7-34 12-49 49-50z",
+    "M754 46c91-34 204-4 258 57 39 44 27 88-28 107-74 25-178-26-219-99-18-32-21-54-11-65z",
+    "M873 170c100 10 203 65 255 146 52 80 27 156-54 198-69 36-149 42-187 95-24 34-13 70 16 91H1200V0H909c-64 37-88 83-36 170z",
+    "M794 292c38-18 83-9 105 19 20 25 8 54-24 66-39 14-84-6-101-39-12-23-4-38 20-46z",
+    "M725 250c22-10 49-5 61 12 10 14 4 33-14 42-24 12-54 3-65-18-7-15-2-27 18-36z",
+  ].forEach((d) => land.append(mapShape("path", { d })));
+  svg.append(land);
 
   for (let i = 1; i < 5; i += 1) {
     const vertical = createSvgElement("line");
@@ -903,7 +1240,7 @@ function mapSvg(points) {
   const plotted = points.map((point) => {
     const x = padding + ((point.lon - minLon) / lonSpan) * (width - padding * 2);
     const y = height - padding - ((point.lat - minLat) / latSpan) * (height - padding * 2);
-    const radius = 5 + Math.sqrt(point.count / maxCount) * 34;
+    const radius = 5 + Math.sqrt(point.count / maxCount) * (options.compact ? 25 : 34);
     return { ...point, x, y, radius };
   });
   const labelPoints = plotted
@@ -950,21 +1287,33 @@ function createSvgElement(name) {
   return document.createElementNS("http://www.w3.org/2000/svg", name);
 }
 
+function mapShape(name, attrs) {
+  const node = createSvgElement(name);
+  Object.entries(attrs).forEach(([key, value]) => node.setAttribute(key, value));
+  return node;
+}
+
 function archiveHrefForTile(title, key) {
-  if (title === "Shakespeare") return "#collection:shakespeare";
+  if (title === "Shakespeare") return "#section:shakespeare";
+  if (title === "Other Arts") return "#section:other-arts";
 
   const collectionSlug = slugForCollection(title);
   if (collectionFromSlug(collectionSlug)) return `#collection:${collectionSlug}`;
 
   const typeMap = {
     "Books & Essays": "books-essays",
+    Circus: "circus",
+    Comedy: "comedy",
+    Dance: "dance",
+    Film: "film",
     "Music & Concerts": "music-concerts",
     "Musical Theatre": "musical-theatre",
-    People: "people",
+    Obituaries: "obituaries",
+    Opera: "opera",
+    Profiles: "profiles",
     "Site Notes": "site-notes",
     Television: "television",
-    Theatre: "theatre",
-    "Other Arts": "other-arts",
+    "Theatre Reviews": "theatre",
   };
 
   if (typeMap[title]) {
@@ -1014,6 +1363,7 @@ function countForTile(title, key = "") {
   if (title === "Shakespeare") {
     return state.records.filter((record) => collectionNames(record).includes(SHAKESPEARE_COLLECTION)).length;
   }
+  if (title === "Other Arts") return countForOtherArts();
 
   const collection = collectionFromSlug(slugForCollection(title));
   if (collection) {
@@ -1022,13 +1372,18 @@ function countForTile(title, key = "") {
 
   const typeValue = {
     "Books & Essays": "books-essays",
+    Circus: "circus",
+    Comedy: "comedy",
+    Dance: "dance",
+    Film: "film",
     "Music & Concerts": "music-concerts",
     "Musical Theatre": "musical-theatre",
-    People: "people",
+    Obituaries: "obituaries",
+    Opera: "opera",
+    Profiles: "profiles",
     "Site Notes": "site-notes",
     Television: "television",
-    Theatre: "theatre",
-    "Other Arts": "other-arts",
+    "Theatre Reviews": "theatre",
   }[title];
 
   if (typeValue) {
@@ -1050,14 +1405,20 @@ function tileDescription(title) {
     "The Shaw Collection": "Coverage from Niagara-on-the-Lake and the Shaw Festival orbit.",
     "The Musical Collection": "Musical theatre, cabaret, recordings, concerts, and related profiles.",
     "Short Takes": "Capsules, roundups, listings, and brief notices.",
-    Theatre: "Straight theatre reviews, previews, news, listings, and awards coverage.",
+    "Theatre Reviews": "Straight theatre reviews, previews, news, listings, and awards coverage.",
     Shakespeare: "Play reviews, thoughts, adaptations, and complete play-by-play browsing.",
     "Musical Theatre": "Stage musicals and musical-theatre criticism.",
     Television: "Television criticism from the National Post years.",
     "Music & Concerts": "Concerts, recordings, cabaret, and music writing.",
     "Books & Essays": "Book reviews, opinion pieces, year-end essays, and critical reflections.",
-    People: "Profiles, appreciations, obituaries, and memorial writing.",
+    Profiles: "Profiles, appreciations, interviews, and people-focused writing.",
+    Obituaries: "Obituaries, memorial writing, and appreciations.",
     "Other Arts": "Comedy, film, opera, dance, and circus coverage.",
+    Comedy: "Comedy reviews and stand-up coverage.",
+    Opera: "Opera reviews and related performance writing.",
+    Film: "Film reviews and screen criticism.",
+    Dance: "Dance reviews and dance coverage.",
+    Circus: "Circus reviews and spectacle coverage.",
     "Site Notes": "Corrections and other small editorial records.",
     "Television Reviews": "Television criticism from the National Post years.",
   };
@@ -1190,7 +1551,7 @@ function paragraphNodes(markdown, record) {
 
 function entityChip(type, label, prefix = "", group = "context") {
   const link = document.createElement("a");
-  link.className = `entity-chip entity-${type} entity-group-${group}`;
+  link.className = `entity-chip entity-${type} entity-group-${group}${type === "productions" ? " entity-chip-featured" : ""}`;
   link.href = `#entity:${type}:${entitySlug(label)}`;
   link.innerHTML = `${prefix ? `<span>${prefix}</span>` : ""}<strong>${label}</strong>`;
   return link;
@@ -1357,18 +1718,6 @@ async function showReview(slug) {
   meta.className = "article-meta";
   meta.textContent = [record.publication, typeLabel(record)].filter(Boolean).join(" / ");
 
-  const production = document.createElement("p");
-  production.className = "article-production";
-  const productionPartsList = productionParts(record);
-  if (productionPartsList.length) {
-    const name = document.createElement("strong");
-    name.textContent = productionPartsList[0];
-    production.append(name);
-    productionPartsList.slice(1).forEach((part) => {
-      production.append(document.createTextNode(` / ${part}`));
-    });
-  }
-
   const body = document.createElement("div");
   body.className = "article-body";
   body.replaceChildren(...paragraphNodes(markdown, record));
@@ -1376,7 +1725,6 @@ async function showReview(slug) {
   const articleParts = [date, title];
   if (titleParts.deck) articleParts.push(deck);
   articleParts.push(meta);
-  if (productionPartsList.length) articleParts.push(production);
   const entityLinks = articleEntityLinks(record);
   if (entityLinks) articleParts.push(entityLinks);
   articleParts.push(body);
@@ -1387,6 +1735,7 @@ async function showReview(slug) {
 
 function route() {
   const hash = window.location.hash || "#home";
+  els.drawer.classList.remove("is-open");
   els.articleView.hidden = true;
   els.indexView.hidden = true;
   els.mapView.hidden = true;
@@ -1417,6 +1766,15 @@ function route() {
       els.indexView.hidden = false;
       els.indexView.scrollIntoView({ behavior: "auto", block: "start" });
     }
+    return;
+  }
+
+  if (hash.startsWith("#section:")) {
+    const section = hash.replace("#section:", "");
+    document.body.classList.add("index-open");
+    renderLandingPage(section);
+    els.indexView.hidden = false;
+    els.indexView.scrollIntoView({ behavior: "auto", block: "start" });
     return;
   }
 
@@ -1514,6 +1872,7 @@ async function init() {
   state.hasActiveQuery = false;
   populateFilters();
   renderFrontpageDirectory();
+  renderHomeMap();
   renderTiles();
   renderSecondaryCollections();
   renderIndexTiles();
@@ -1523,6 +1882,16 @@ async function init() {
 
 els.menuButton.addEventListener("click", () => {
   els.drawer.classList.toggle("is-open");
+});
+
+document.addEventListener("click", (event) => {
+  if (!els.drawer.classList.contains("is-open")) return;
+  if (els.drawer.contains(event.target) || els.menuButton.contains(event.target)) return;
+  els.drawer.classList.remove("is-open");
+});
+
+els.drawer.addEventListener("click", (event) => {
+  if (event.target.closest("a")) els.drawer.classList.remove("is-open");
 });
 
 els.searchInput.addEventListener("input", (event) => {

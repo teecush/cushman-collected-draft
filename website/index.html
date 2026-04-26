@@ -8,7 +8,8 @@
       name="description"
       content="The collected theatre criticism of Robert Cushman."
     >
-    <link rel="stylesheet" href="./styles.css?v=48">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <link rel="stylesheet" href="./styles.css?v=56">
   </head>
   <body>
     <header class="site-header">
@@ -29,19 +30,19 @@
     </header>
 
     <nav class="drawer" id="drawer" aria-label="Site navigation">
+      <strong>Start</strong>
       <a href="#archive">Search the Archive</a>
-      <a href="#browse:types">Browse by Category</a>
-      <a href="#current">Current Collection</a>
-      <a href="#archive?type=theatre">Theatre</a>
-      <a href="#collection:shakespeare">Shakespeare</a>
+      <a href="#section:browse">Browse</a>
+      <a href="#section:current">Current</a>
+      <a href="#section:collections">Collections</a>
+      <a href="#section:indexes">Indexes</a>
+      <a href="#map">Map</a>
+      <strong>Major Paths</strong>
+      <a href="#archive?type=theatre">Theatre Reviews</a>
       <a href="#archive?type=musical-theatre">Musical Theatre</a>
       <a href="#archive?type=television">Television</a>
-      <a href="#archive?type=music-concerts">Music & Concerts</a>
-      <a href="#archive?type=books-essays">Books & Essays</a>
-      <a href="#archive?type=people">People</a>
-      <a href="#archive?type=other-arts">Other Arts</a>
-      <a href="#map">Map</a>
-      <a href="#index:people">Metadata Indexes</a>
+      <a href="#section:shakespeare">Shakespeare</a>
+      <a href="#section:other-arts">Other Arts</a>
       <a href="#about">About Robert Cushman</a>
     </nav>
 
@@ -102,6 +103,17 @@
 
       <section class="frontpage-directory" id="frontpageDirectory" aria-label="Primary site paths"></section>
 
+      <section class="home-map" id="homeMap" aria-label="Archive map preview">
+        <div class="home-map-heading">
+          <div>
+            <span>Geography</span>
+            <h2>Archive Map</h2>
+          </div>
+          <a href="#map">Open full map</a>
+        </div>
+        <div class="home-map-canvas" id="homeMapCanvas"></div>
+      </section>
+
       <section class="browse-heading" id="browse">
         <h2>Browse by Type</h2>
       </section>
@@ -153,6 +165,7 @@
       </section>
     </footer>
 
-    <script src="./app.js?v=48" type="module"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="./app.js?v=56" type="module"></script>
   </body>
 </html>
