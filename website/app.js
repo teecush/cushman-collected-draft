@@ -1,4 +1,4 @@
-const DATA_URL = new URL("../site_export/data/public_reviews.json?v=58", import.meta.url);
+const DATA_URL = new URL("../site_export/data/public_reviews.json?v=59", import.meta.url);
 const CONTENT_ROOT = new URL("../site_export/content/reviews/", import.meta.url);
 const PAGE_SIZE = 36;
 const SHAKESPEARE_COLLECTION = "The Shakespeare Collection";
@@ -26,6 +26,7 @@ const SHAKESPEARE_GROUPS = [
   },
 ];
 const PUBLIC_COLLECTION_FILTERS = [
+  "Current Collection",
   "The Canadian Collection",
   SHAKESPEARE_COLLECTION,
   "The Stratford Collection",
@@ -812,9 +813,9 @@ function renderLandingPage(kind) {
   const config = {
     current: {
       title: "Current",
-      count: "Coming after launch",
-      intro: "Robert Cushman's recent self-published writing from the original site will live here after publication.",
-      items: [landingItem("Coming after launch", "#home", 0, "The current collection is reserved for recent self-published work.", [])],
+      count: `${countForTile("Current Collection", "collections").toLocaleString()} records`,
+      intro: "Recent self-published writing from the original Cushman Collected site.",
+      items: [landingItem("Current Collection", "#collection:current", countForTile("Current Collection", "collections"), "", state.records.filter((record) => collectionNames(record).includes("Current Collection")))],
     },
     browse: {
       title: "Browse",
@@ -960,14 +961,17 @@ function renderFrontpageDirectory() {
     }))
     .filter((item) => item.count)
     .sort((a, b) => b.count - a.count || a.label.localeCompare(b.label));
+  const currentCount = countForTile("Current Collection", "collections");
   const sections = [
     {
       id: "current",
       className: "frontpage-section frontpage-current",
       label: "New writing",
       title: "Current",
-      titleHref: "#section:current",
-      links: [{ label: "Coming after launch", href: "#section:current", count: 0 }],
+      titleHref: "#collection:current",
+      links: currentCount
+        ? [{ label: "Current Collection", href: "#collection:current", count: currentCount }]
+        : [{ label: "Coming after launch", href: "#section:current", count: 0 }],
       limit: 1,
     },
     {
@@ -1453,6 +1457,7 @@ function archiveHrefForTile(title, key) {
 
 function slugForCollection(title) {
   const map = {
+    "Current Collection": "current",
     "The Canadian Collection": "canadian",
     "The Stratford Collection": "stratford",
     "The Shaw Collection": "shaw",
@@ -1465,6 +1470,7 @@ function slugForCollection(title) {
 
 function collectionFromSlug(slug) {
   const map = {
+    current: "Current Collection",
     canadian: "The Canadian Collection",
     stratford: "The Stratford Collection",
     shaw: "The Shaw Collection",
