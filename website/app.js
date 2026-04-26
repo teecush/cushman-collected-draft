@@ -1,4 +1,4 @@
-const DATA_URL = new URL("../site_export/data/public_reviews.json?v=60", import.meta.url);
+const DATA_URL = new URL("../site_export/data/public_reviews.json?v=61", import.meta.url);
 const CONTENT_ROOT = new URL("../site_export/content/reviews/", import.meta.url);
 const PAGE_SIZE = 36;
 const SHAKESPEARE_COLLECTION = "The Shakespeare Collection";
@@ -37,7 +37,6 @@ const SECONDARY_COLLECTION_TILES = [
   "The Canadian Collection",
   "The Stratford Collection",
   "The Shaw Collection",
-  "Short Takes",
 ];
 const ENTITY_TYPES = [
   { key: "people", label: "People", singular: "Person" },
@@ -318,6 +317,7 @@ const els = {
   menuButton: document.querySelector("#menuButton"),
   archive: document.querySelector("#archive"),
   frontpageDirectory: document.querySelector("#frontpageDirectory"),
+  currentFeature: document.querySelector("#currentFeature"),
   homeMapCanvas: document.querySelector("#homeMapCanvas"),
   tiles: document.querySelector("#collectionTiles"),
   secondaryTiles: document.querySelector("#secondaryTiles"),
@@ -844,6 +844,7 @@ function renderLandingPage(kind) {
   }[kind];
 
   if (kind === "shakespeare") return renderShakespeareLanding();
+  if (kind === "current") return renderCurrentLanding();
   if (!config) return;
 
   const title = document.createElement("h1");
@@ -858,6 +859,46 @@ function renderLandingPage(kind) {
   cards.className = "landing-card-grid";
   cards.replaceChildren(...config.items.map(landingCard));
   els.indexContent.replaceChildren(title, count, intro, cards);
+}
+
+function renderCurrentLanding() {
+  const records = state.records
+    .filter((record) => collectionNames(record).includes("Current Collection"))
+    .sort((a, b) => String(b.date).localeCompare(String(a.date)));
+  const title = document.createElement("h1");
+  title.textContent = "Current";
+  const count = document.createElement("p");
+  count.className = "index-count";
+  count.textContent = `${records.length.toLocaleString()} records`;
+  const intro = document.createElement("p");
+  intro.className = "landing-intro";
+  intro.textContent = "Recent self-published writing from the original Cushman Collected site, presented with the images that accompanied the articles where available.";
+  const grid = document.createElement("div");
+  grid.className = "current-landing-grid";
+  records.forEach((record, index) => {
+    const link = document.createElement("a");
+    link.className = `current-landing-card${index === 0 ? " is-latest" : ""}`;
+    link.href = `#review:${record.slug}`;
+    const media = record.media?.[0];
+    if (media?.local_path) {
+      const img = document.createElement("img");
+      img.src = new URL(`../site_export/content/${media.local_path}`, import.meta.url);
+      img.alt = media.alt || media.caption || record.title;
+      img.loading = "lazy";
+      link.append(img);
+    }
+    const copy = document.createElement("div");
+    const date = document.createElement("span");
+    date.textContent = formatDate(record.date);
+    const heading = document.createElement("strong");
+    heading.textContent = record.title;
+    const meta = document.createElement("p");
+    meta.textContent = [record.production_title, record.company].filter(Boolean).join(" / ");
+    copy.replaceChildren(date, heading, meta);
+    link.append(copy);
+    grid.append(link);
+  });
+  els.indexContent.replaceChildren(title, count, intro, grid);
 }
 
 function renderShakespeareLanding() {
@@ -1004,6 +1045,39 @@ function renderFrontpageDirectory() {
   ];
 
   els.frontpageDirectory.replaceChildren(...sections.map(frontpageSection));
+}
+
+function renderCurrentFeature() {
+  if (!els.currentFeature) return;
+  const current = state.records
+    .filter((record) => collectionNames(record).includes("Current Collection"))
+    .sort((a, b) => String(b.date).localeCompare(String(a.date)))[0];
+  if (!current) {
+    els.currentFeature.replaceChildren();
+    return;
+  }
+  const media = current.media?.[0];
+  const link = document.createElement("a");
+  link.className = "current-feature-card";
+  link.href = `#review:${current.slug}`;
+  if (media?.local_path) {
+    const img = document.createElement("img");
+    img.src = new URL(`../site_export/content/${media.local_path}`, import.meta.url);
+    img.alt = media.alt || media.caption || current.title;
+    link.append(img);
+  }
+  const copy = document.createElement("div");
+  copy.className = "current-feature-copy";
+  const kicker = document.createElement("span");
+  kicker.className = "current-feature-kicker";
+  kicker.textContent = "Latest current article";
+  const title = document.createElement("h2");
+  title.textContent = current.title;
+  const meta = document.createElement("p");
+  meta.textContent = [formatDate(current.date), current.production_title, current.company].filter(Boolean).join(" / ");
+  copy.replaceChildren(kicker, title, meta);
+  link.append(copy);
+  els.currentFeature.replaceChildren(link);
 }
 
 function frontpageSection(section) {
@@ -1153,6 +1227,183 @@ function renderEntityPage(typeKey, slug) {
   els.indexContent.replaceChildren(title, count, back, list);
 }
 
+function renderExploreTool() {
+  const title = document.createElement("h1");
+  title.textContent = "Article Explorer";
+  const intro = document.createElement("p");
+  intro.className = "landing-intro";
+  intro.textContent = "Choose a path and keep branching by category, era, collection, company, city, or production until the article set feels right.";
+  const tool = document.createElement("div");
+  tool.className = "explore-tool";
+  const columns = document.createElement("div");
+  columns.className = "explore-columns";
+  tool.append(columns);
+  const path = [];
+  const colors = ["#3a7199", "#80714f", "#55736b", "#8a5f5f", "#6b5a7d"];
+
+  const filteredRecords = () =>
+    path.reduce((records, step) => records.filter((record) => step.test(record)), state.records);
+
+  const makeNode = (item, depth) => {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "explore-node";
+    button.style.setProperty("--node-color", colors[depth % colors.length]);
+    button.innerHTML = `<span>${item.label}</span><em>${item.count.toLocaleString()}</em>`;
+    button.addEventListener("click", () => {
+      path.splice(depth, path.length - depth, item);
+      renderColumns();
+    });
+    return button;
+  };
+
+  const column = (heading, items, depth) => {
+    const section = document.createElement("section");
+    section.className = "explore-column";
+    const h2 = document.createElement("h2");
+    h2.textContent = heading;
+    section.append(h2, ...items.slice(0, 22).map((item) => makeNode(item, depth)));
+    return section;
+  };
+
+  const branches = (records, depth) => {
+    if (depth === 0) {
+      return [
+        { label: "All Articles", count: records.length, test: () => true },
+        { label: "By Category", count: records.length, branch: "type", test: () => true },
+        { label: "By Era", count: records.length, branch: "era", test: () => true },
+        { label: "By Collection", count: records.length, branch: "collection", test: () => true },
+        { label: "By Company", count: records.length, branch: "company", test: () => true },
+        { label: "By City", count: records.length, branch: "city", test: () => true },
+      ];
+    }
+    const branch = path[depth - 1]?.branch || ["type", "era", "collection", "company", "city", "production"][depth % 6];
+    const counts = new Map();
+    records.forEach((record) => {
+      let values = [];
+      if (branch === "type") values = [typeLabel(record)];
+      if (branch === "era") values = [record.year ? `${String(record.year).slice(0, 3)}0s` : ""];
+      if (branch === "collection") values = collectionNames(record);
+      if (branch === "company") values = splitEntityList(record.company);
+      if (branch === "city") values = splitCityList(record.city);
+      if (branch === "production") values = splitEntityList(record.production_title);
+      values.filter(Boolean).forEach((value) => counts.set(value, (counts.get(value) || 0) + 1));
+    });
+    return [...counts.entries()]
+      .map(([label, count]) => ({
+        label,
+        count,
+        branch: ["type", "era", "collection", "company", "city", "production"][(depth + 1) % 6],
+        test: (record) => {
+          if (branch === "type") return typeLabel(record) === label;
+          if (branch === "era") return record.year && `${String(record.year).slice(0, 3)}0s` === label;
+          if (branch === "collection") return collectionNames(record).includes(label);
+          if (branch === "company") return splitEntityList(record.company).includes(label);
+          if (branch === "city") return splitCityList(record.city).includes(label);
+          if (branch === "production") return splitEntityList(record.production_title).includes(label);
+          return true;
+        },
+      }))
+      .sort((a, b) => b.count - a.count || a.label.localeCompare(b.label));
+  };
+
+  const renderColumns = () => {
+    columns.replaceChildren();
+    let records = state.records;
+    columns.append(column("Start", branches(records, 0), 0));
+    path.forEach((step, index) => {
+      records = records.filter((record) => step.test(record));
+      columns.append(column(step.label, branches(records, index + 1), index + 1));
+    });
+    const final = document.createElement("section");
+    final.className = "explore-column";
+    const h2 = document.createElement("h2");
+    h2.textContent = `${records.length.toLocaleString()} articles`;
+    const list = document.createElement("div");
+    list.className = "explore-articles";
+    sortRecords(records).slice(0, 18).forEach((record) => {
+      const link = document.createElement("a");
+      link.href = `#review:${record.slug}`;
+      link.textContent = record.title;
+      list.append(link);
+    });
+    final.append(h2, list);
+    columns.append(final);
+  };
+  renderColumns();
+  els.indexContent.replaceChildren(title, intro, tool);
+}
+
+function renderTimelineTool() {
+  const title = document.createElement("h1");
+  title.textContent = "Timeline";
+  const intro = document.createElement("p");
+  intro.className = "landing-intro";
+  intro.textContent = "Move through the archive year by year, with larger stacks marking denser parts of the record.";
+  const tool = document.createElement("div");
+  tool.className = "timeline-tool";
+  const years = new Map();
+  state.records.forEach((record) => {
+    if (!record.year) return;
+    const key = String(record.year);
+    if (!years.has(key)) years.set(key, []);
+    years.get(key).push(record);
+  });
+  const yearButtons = document.createElement("div");
+  yearButtons.className = "timeline-years";
+  const results = document.createElement("div");
+  results.className = "timeline-results results";
+  const max = Math.max(...[...years.values()].map((items) => items.length), 1);
+  const showYear = (year) => {
+    yearButtons.querySelectorAll(".timeline-year").forEach((button) => button.classList.toggle("is-active", button.dataset.year === year));
+    results.replaceChildren(...sortRecords(years.get(year) || []).slice(0, 36).map(resultCard));
+  };
+  [...years.entries()].sort((a, b) => a[0].localeCompare(b[0])).forEach(([year, records]) => {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "timeline-year";
+    button.dataset.year = year;
+    button.style.minHeight = `${58 + (records.length / max) * 90}px`;
+    button.innerHTML = `<strong>${year}</strong><span>${records.length.toLocaleString()}</span>`;
+    button.addEventListener("click", () => showYear(year));
+    yearButtons.append(button);
+  });
+  tool.replaceChildren(yearButtons, results);
+  els.indexContent.replaceChildren(title, intro, tool);
+  showYear([...years.keys()].sort().at(-1));
+}
+
+function renderAboutPage() {
+  const title = document.createElement("h1");
+  title.textContent = "About Robert Cushman";
+  const intro = document.createElement("p");
+  intro.className = "landing-intro";
+  intro.textContent = "Robert Cushman's collected criticism is being rebuilt here as a searchable, browsable public archive. Support and subscription links currently open the original Cushman Collected site while those pages are moved over.";
+  const cards = document.createElement("div");
+  cards.className = "landing-card-grid landing-card-grid-compact";
+  [
+    ["About Robert Cushman", "https://www.cushmancollected.com/about", "Original biography page"],
+    ["Donate", "https://www.cushmancollected.com/?donatePageId=5c9b8016652dea361e5feb7d", "Support expansion of the archive"],
+    ["Subscribe", "https://www.cushmancollected.com/contact", "Receive updates from Cushman Collected"],
+    ["Support", "https://www.cushmancollected.com/critics-circle", "Critic's Circle and supporters"],
+  ].forEach(([label, href, description]) => {
+    const card = document.createElement("a");
+    card.className = "landing-card";
+    card.href = href;
+    card.target = "_blank";
+    card.rel = "noopener";
+    const strong = document.createElement("strong");
+    strong.textContent = label;
+    const span = document.createElement("span");
+    span.textContent = "Original site";
+    const p = document.createElement("p");
+    p.textContent = description;
+    card.replaceChildren(strong, span, p);
+    cards.append(card);
+  });
+  els.indexContent.replaceChildren(title, intro, cards);
+}
+
 function renderMapView() {
   const points = cityMapPoints();
   const venues = venueMapPoints();
@@ -1241,7 +1492,51 @@ function renderArchiveMap(container, points, options = {}) {
   if (!container || !points.length) return null;
   if (options.existingMap) options.existingMap.remove();
   container.replaceChildren();
+  if (!options.compact && window.L) return renderLeafletMap(container, points, options);
   return renderControlledSvgMap(container, points, options);
+}
+
+function renderLeafletMap(container, points, options = {}) {
+  const mapNode = document.createElement("div");
+  mapNode.className = "leaflet-map";
+  container.append(mapNode);
+  const map = L.map(mapNode, { scrollWheelZoom: true });
+  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    maxZoom: 19,
+    attribution: "&copy; OpenStreetMap contributors",
+  }).addTo(map);
+  const bounds = [];
+  const maxCount = Math.max(...points.map((point) => point.count), 1);
+  points.forEach((point) => {
+    const radius = 6 + Math.sqrt(point.count / maxCount) * 18;
+    const marker = L.circleMarker([point.lat, point.lon], {
+      radius,
+      color: "#173f5f",
+      weight: 2,
+      fillColor: "#3a7199",
+      fillOpacity: 0.72,
+    }).addTo(map);
+    marker.bindPopup(`<strong>${point.label}</strong>${point.count.toLocaleString()} mapped article references<br><a href="#entity:cities:${point.slug}">Open city index</a>`);
+    bounds.push([point.lat, point.lon]);
+  });
+  (options.venues || []).forEach((point) => {
+    const marker = L.marker([point.lat, point.lon], { opacity: 0.78 }).addTo(map);
+    marker.bindPopup(`<strong>${point.label}</strong>${point.city || ""}<br>${point.count.toLocaleString()} article references<br><a href="#entity:venues:${point.slug}">Open venue index</a>`);
+    marker.on("add", () => {
+      if (map.getZoom() < 10) marker.setOpacity(0);
+    });
+    bounds.push([point.lat, point.lon]);
+  });
+  map.on("zoomend", () => {
+    const zoom = map.getZoom();
+    map.eachLayer((layer) => {
+      if (layer instanceof L.Marker) layer.setOpacity(zoom >= 9 ? 0.9 : 0);
+    });
+    if (typeof options.onZoom === "function") options.onZoom(zoom / 7);
+  });
+  if (bounds.length) map.fitBounds(bounds, { padding: [30, 30] });
+  setTimeout(() => map.invalidateSize(), 80);
+  return { remove: () => map.remove() };
 }
 
 function renderControlledSvgMap(container, points, options = {}) {
@@ -1739,6 +2034,7 @@ function articleEntityLinks(record) {
     ["companies", "Company", splitEntityList(record.company).slice(0, 3)],
     ["venues", "Venue", splitEntityList(record.venue).slice(0, 2)],
     ["cities", "City", splitCityList(record.city).slice(0, 2)],
+    ["collections", "Series", collectionNames(record).filter((name) => name === "Short Takes")],
   ].filter(([, , values]) => values.length);
 
   const peopleGroups = [
@@ -1947,6 +2243,30 @@ function route() {
     return;
   }
 
+  if (hash === "#explore") {
+    document.body.classList.add("index-open");
+    renderExploreTool();
+    els.indexView.hidden = false;
+    els.indexView.scrollIntoView({ behavior: "auto", block: "start" });
+    return;
+  }
+
+  if (hash === "#timeline") {
+    document.body.classList.add("index-open");
+    renderTimelineTool();
+    els.indexView.hidden = false;
+    els.indexView.scrollIntoView({ behavior: "auto", block: "start" });
+    return;
+  }
+
+  if (hash === "#about") {
+    document.body.classList.add("index-open");
+    renderAboutPage();
+    els.indexView.hidden = false;
+    els.indexView.scrollIntoView({ behavior: "auto", block: "start" });
+    return;
+  }
+
   if (hash.startsWith("#collection:")) {
     const [slug, queryString] = hash.replace("#collection:", "").split("?");
     const params = new URLSearchParams(queryString || "");
@@ -2033,6 +2353,7 @@ async function init() {
   state.hasActiveQuery = false;
   populateFilters();
   renderFrontpageDirectory();
+  renderCurrentFeature();
   renderHomeMap();
   renderTiles();
   renderSecondaryCollections();
