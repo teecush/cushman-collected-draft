@@ -1,4 +1,4 @@
-const DATA_URL = new URL("../site_export/data/public_reviews.json?v=68", import.meta.url);
+const DATA_URL = new URL("../site_export/data/public_reviews.json?v=69", import.meta.url);
 const CONTENT_ROOT = new URL("../site_export/content/reviews/", import.meta.url);
 const PAGE_SIZE = 36;
 const SHAKESPEARE_COLLECTION = "The Shakespeare Collection";
@@ -559,6 +559,7 @@ function searchable(record) {
 function applyFilters() {
   const query = state.query.trim().toLowerCase();
   state.hasActiveQuery = hasActiveFilters();
+  syncArchivePageClass();
   setArchiveExpanded(state.hasActiveQuery || document.activeElement === els.searchInput);
   state.filtered = state.records.filter((record) => {
     if (state.collection && !collectionNames(record).includes(state.collection)) return false;
@@ -593,12 +594,20 @@ function resetArchiveControls() {
   state.shakespeareGroup = "";
   state.hasActiveQuery = false;
   state.filtered = state.records;
+  syncArchivePageClass();
   els.searchInput.value = "";
   els.typeFilter.value = "";
   els.collectionFilter.value = "";
   setArchiveExpanded(false);
   renderShakespeareNav();
   renderResults();
+}
+
+function syncArchivePageClass() {
+  const hash = window.location.hash || "#home";
+  const isArchiveRoute =
+    hash.startsWith("#archive") || hash.startsWith("#collection:") || hash === "#search";
+  document.body.classList.toggle("search-open", state.hasActiveQuery || isArchiveRoute);
 }
 
 function makeOption(label, value = label) {
@@ -2917,6 +2926,7 @@ function route() {
     const params = new URLSearchParams(queryString || "");
     const collection = collectionFromSlug(slug);
     if (collection) {
+      document.body.classList.add("search-open");
       if (slug === "shakespeare") {
         renderTiles("shakespeare");
       }
@@ -2950,6 +2960,7 @@ function route() {
   }
 
   if (hash.startsWith("#archive")) {
+    document.body.classList.add("search-open");
     const [, queryString] = hash.split("?");
     if (queryString) {
       const params = new URLSearchParams(queryString);
@@ -3066,6 +3077,7 @@ els.clearFilters.addEventListener("click", () => {
   els.collectionFilter.value = "";
   els.typeFilter.value = "";
   state.filtered = state.records;
+  syncArchivePageClass();
   setArchiveExpanded(false);
   renderShakespeareNav();
   renderResults();
