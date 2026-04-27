@@ -1,4 +1,4 @@
-const DATA_URL = new URL("../site_export/data/public_reviews.json?v=72", import.meta.url);
+const DATA_URL = new URL("../site_export/data/public_reviews.json?v=74", import.meta.url);
 const CONTENT_ROOT = new URL("../site_export/content/reviews/", import.meta.url);
 const PAGE_SIZE = 36;
 const SHAKESPEARE_COLLECTION = "The Shakespeare Collection";
@@ -59,6 +59,7 @@ const ENTITY_TYPES = [
   { key: "sound-designers", label: "Sound Designers", singular: "Sound Designer", role: "sound_designer" },
   { key: "musicians", label: "Musicians", singular: "Musician", role: "musicians" },
   { key: "performers", label: "Performers", singular: "Performer", role: "performers" },
+  { key: "artists", label: "Artists", singular: "Artist", role: "artists" },
   { key: "producers", label: "Producers", singular: "Producer", role: "producer" },
   { key: "dramaturgs", label: "Dramaturgs", singular: "Dramaturg", role: "dramaturg" },
   { key: "fight-directors", label: "Fight Directors", singular: "Fight Director", role: "fight_director" },
@@ -1196,6 +1197,7 @@ function indexDescription(type) {
     "sound-designers": "Sound designers.",
     musicians: "Musicians.",
     performers: "Performers outside standard cast credits.",
+    artists: "Named artists and public figures whose exact production role is not represented elsewhere.",
     producers: "Producers and producing credits.",
     dramaturgs: "Dramaturgs.",
     "fight-directors": "Fight directors.",
@@ -2725,6 +2727,7 @@ function articleEntityLinks(record) {
     ...(record.roles?.sound_designer || []),
     ...(record.roles?.performers || []),
     ...(record.roles?.musicians || []),
+    ...(record.roles?.artists || []),
   ];
   const roleSlugs = new Set(roleValues.map(entitySlug));
   const mentionedPeople = (record.people || []).filter((name) => !roleSlugs.has(entitySlug(name)));
@@ -2751,6 +2754,7 @@ function articleEntityLinks(record) {
     ["sound-designers", "Sound", (record.roles?.sound_designer || []).slice(0, 2)],
     ["performers", "Performer", (record.roles?.performers || []).slice(0, 4)],
     ["musicians", "Musician", (record.roles?.musicians || []).slice(0, 4)],
+    ["artists", "Artist", (record.roles?.artists || []).slice(0, 4)],
     ["people", "Mentioned", mentionedPeople.slice(0, 8)],
   ].filter(([, , values]) => values.length);
 
@@ -2797,6 +2801,7 @@ function inlineLinkEntities(record) {
     ...(record.roles?.composer_lyricist || []).map((label) => ({ type: "composers-lyricists", label, priority: 4 })),
     ...(record.roles?.performers || []).map((label) => ({ type: "performers", label, priority: 4 })),
     ...(record.roles?.musicians || []).map((label) => ({ type: "musicians", label, priority: 4 })),
+    ...(record.roles?.artists || []).map((label) => ({ type: "artists", label, priority: 4 })),
   ];
 
   const seen = new Set();
