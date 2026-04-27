@@ -12,7 +12,7 @@ collection:
 era: modern
 year: '2005'
 production_title: Ain't Misbehavin'
-company: CanStage
+company: Canadian Stage
 venue: ''
 city: Toronto
 coordinates: []

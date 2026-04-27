@@ -10,10 +10,10 @@ collection: Short Takes
 era: contemporary
 year: '2004'
 production_title: Theatre Listings - Toronto
-company: Soulpepper Theatre Company, CanStage, Lorraine Kimsa Theatre for Young People,
-  Tarragon Theatre
-venue: Young Centre for the Performing Arts, Hummingbird Centre, Bluma Appel Theatre,
-  Lorraine Kimsa Theatre for Young People, Tarragon Extra Space, Tarragon Theatre,
+company: Soulpepper Theatre Company; Canadian Stage; Lorraine Kimsa Theatre for Young
+  People; Tarragon Theatre
+venue: Young Centre for the Performing Arts; Hummingbird Centre; Bluma Appel Theatre;
+  Lorraine Kimsa Theatre for Young People; Tarragon Extra Space; Tarragon Theatre;
   Elgin Theatre
 city: Toronto
 coordinates: []

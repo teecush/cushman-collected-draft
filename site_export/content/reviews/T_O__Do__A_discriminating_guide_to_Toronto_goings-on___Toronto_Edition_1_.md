@@ -10,9 +10,9 @@ collection: ''
 era: contemporary
 year: '2005'
 production_title: A Whistle in the Dark / The Bear / Trout Stanley
-company: CanStage, Factory Theatre, Artword Theatre
-venue: Berkeley Street Theatre Upstairs, The Grange Room at AGO, Factory Theatre,
-  Artword Theatre, CanStage
+company: Canadian Stage; Factory Theatre; Artword Theatre
+venue: Berkeley Street Theatre Upstairs; The Grange Room at AGO; Factory Theatre;
+  Artword Theatre; Berkeley Street Theatre
 city: Toronto
 coordinates: []
 editorial_status: done

@@ -1558,7 +1558,7 @@
     "editorial_issue_type": "duplicate_edition_variant",
     "canonical_file": "2005.04.08.National_Post.T.O._Do_A_Discriminating_Guide_To_Toronto_Today_National_Edition.md",
     "production_title": "Ain't Misbehavin'",
-    "company": "CanStage",
+    "company": "Canadian Stage",
     "venue": "CanStage",
     "city": "Toronto",
     "coordinates": [
@@ -4364,7 +4364,7 @@
       "Alan Bennett",
       "Fiona Reid",
       "Joseph Ziegler",
-      "Melody Johnson",
+      "Melody A. Johnson",
       "Morris Panych"
     ],
     "roles": {
@@ -4374,7 +4374,7 @@
       "actors": [
         "Joseph Ziegler",
         "Fiona Reid",
-        "Melody Johnson"
+        "Melody A. Johnson"
       ],
       "playwright": [
         "Alan Bennett"
@@ -5135,7 +5135,7 @@
     "editorial_issue_type": "duplicate_edition_variant",
     "canonical_file": "",
     "production_title": "Bombay Black",
-    "company": "Theatre Centre",
+    "company": "The Theatre Centre",
     "venue": "Theatre Centre",
     "city": "Toronto",
     "coordinates": [
@@ -7132,7 +7132,7 @@
     "editorial_issue_type": "duplicate_edition_variant",
     "canonical_file": "",
     "production_title": "Hair",
-    "company": "CanStage",
+    "company": "Canadian Stage",
     "venue": "Bluma Appel Theatre",
     "city": "Toronto",
     "coordinates": [
@@ -7204,7 +7204,7 @@
     "editorial_issue_type": "duplicate_edition_variant",
     "canonical_file": "",
     "production_title": "10 Days on Earth",
-    "company": "CanStage",
+    "company": "Canadian Stage",
     "venue": "Berkeley Street Theatre",
     "city": "Toronto",
     "coordinates": [
@@ -7265,7 +7265,7 @@
     "canonical_file": "",
     "production_title": "American Buffalo",
     "company": "Soulpepper Theatre Company",
-    "venue": "Young Centre",
+    "venue": "Young Centre for the Performing Arts",
     "city": "Toronto",
     "coordinates": [
       43.6503,
@@ -7806,7 +7806,7 @@
     "editorial_issue_type": "duplicate_digest",
     "canonical_file": "",
     "production_title": "Song and Dance; Care; Sparta; Boygroove; Wingfield's Inferno; 10 Days on Earth; Escape from Happiness",
-    "company": "Danforth Music Hall; Tarragon Theatre; Theatre Passe Muraille; Diesel Playhouse; Mirvish Productions; CanStage; Factory Theatre",
+    "company": "Danforth Music Hall; Tarragon Theatre; Theatre Passe Muraille; Diesel Playhouse; Mirvish Productions; Canadian Stage; Factory Theatre",
     "venue": "Danforth Music Hall; Tarragon Theatre; Theatre Passe Muraille; Diesel Playhouse; Royal Alexandra Theatre; Berkeley Street Theatre; Factory Theatre",
     "city": "Toronto",
     "coordinates": [],
@@ -7886,7 +7886,7 @@
     "editorial_issue_type": "duplicate_digest",
     "canonical_file": "",
     "production_title": "A Beautiful View; Mathilde; Arms and the Man; The Heiress; High Society; Song and Dance; Care; Boygroove; Wingfield's Inferno; 10 Days on Earth; The Lord of the Rings; Last Will and Videotape",
-    "company": "Da Da Kamera; Nightwood Theatre; Shaw Festival; Danforth Music Hall; Tarragon Theatre; Diesel Playhouse; Mirvish Productions; CanStage; Mysteriously Yours",
+    "company": "Da Da Kamera; Nightwood Theatre; Shaw Festival; Danforth Music Hall; Tarragon Theatre; Diesel Playhouse; Mirvish Productions; Canadian Stage; Mysteriously Yours",
     "venue": "Buddies in Bad Times Theatre; Young Centre for the Performing Arts; Festival Theatre; Royal George Theatre; Danforth Music Hall; Tarragon Theatre; Diesel Playhouse; Royal Alexandra Theatre; Berkeley Street Theatre; Princess of Wales Theatre; Mysteriously Yours",
     "city": "Toronto",
     "coordinates": [],
@@ -8004,7 +8004,7 @@
     "editorial_issue_type": "duplicate_digest",
     "canonical_file": "",
     "production_title": "Golda's Balcony; Mathilde; Care; Wingfield's Inferno; Boygroove; Song and Dance; 10 Days on Earth; The Heiress; Arms and the Man; High Society; The Lord of the Rings; Last Will and Videotape; Second City: Reloaded",
-    "company": "Elgin Theatre; Nightwood Theatre; Tarragon Theatre; Mirvish Productions; Diesel Playhouse; Danforth Music Hall; CanStage; Shaw Festival; Mysteriously Yours; Second City",
+    "company": "Elgin Theatre; Nightwood Theatre; Tarragon Theatre; Mirvish Productions; Diesel Playhouse; Danforth Music Hall; Canadian Stage; Shaw Festival; Mysteriously Yours; Second City",
     "venue": "Elgin Theatre; Young Centre for the Performing Arts; Tarragon Theatre; Royal Alexandra Theatre; Diesel Playhouse; Danforth Music Hall; Berkeley Street Theatre; Royal George Theatre; Festival Theatre; Princess of Wales Theatre; Mysteriously Yours; Second City",
     "city": "Toronto",
     "coordinates": [],
@@ -9357,8 +9357,8 @@
     "editorial_issue_type": "duplicate_digest",
     "canonical_file": "",
     "production_title": "Multiple Theatre Productions Review",
-    "company": "Various",
-    "venue": "Various",
+    "company": "",
+    "venue": "",
     "city": "Toronto/Niagara-on-the-Lake/Stratford",
     "coordinates": [],
     "people": [
@@ -9962,8 +9962,8 @@
     "editorial_issue_type": "duplicate_digest",
     "canonical_file": "",
     "production_title": "A Christmas Carol; Radio City Christmas Spectacular; Head-Smashed-In Buffalo Jump; Glorious!; Seussical; Songs for a New World; Thom Pain; The Oxford Roof Climbers Rebellion; Aladdin",
-    "company": "Various",
-    "venue": "Various",
+    "company": "",
+    "venue": "",
     "city": "Toronto",
     "coordinates": [],
     "people": [],
@@ -10011,8 +10011,8 @@
     "editorial_issue_type": "duplicate_digest",
     "canonical_file": "",
     "production_title": "Multiple Theatre Productions Listings",
-    "company": "Various",
-    "venue": "Various",
+    "company": "",
+    "venue": "",
     "city": "Toronto",
     "coordinates": [],
     "people": [
@@ -10095,8 +10095,8 @@
     "editorial_issue_type": "duplicate_digest",
     "canonical_file": "",
     "production_title": "2006 Toronto Theatre Year in Review",
-    "company": "Various",
-    "venue": "Various",
+    "company": "",
+    "venue": "",
     "city": "Toronto",
     "coordinates": [],
     "people": [
@@ -10373,7 +10373,7 @@
       "Berthold Carriere",
       "Blythe Wilson",
       "Dan Chameroy",
-      "David W. Keeley",
+      "David Keeley",
       "Donna Feore",
       "Jonathan Ellul",
       "Kyle Blair",
@@ -10390,7 +10390,7 @@
       "actors": [
         "Dan Chameroy",
         "Blythe Wilson",
-        "David W. Keeley",
+        "David Keeley",
         "Lindsay Thomas",
         "Kyle Blair",
         "Jonathan Ellul",
@@ -10688,7 +10688,7 @@
     "editorial_issue_type": "duplicate_edition_variant",
     "canonical_file": "2007.12.06.National_Post.What_would_Jesus_watch_The_Pagan_Christ_and_ER_raise_big_questions_National_Edition.md",
     "production_title": "ER / The Pagan Christ",
-    "company": "CTV / CBC",
+    "company": "CTV; CBC",
     "venue": "",
     "city": "",
     "coordinates": [],
@@ -10743,7 +10743,7 @@
     "editorial_issue_type": "duplicate_edition_variant",
     "canonical_file": "2007.12.06.National_Post.What_would_Jesus_watch_The_Pagan_Christ_and_ER_raise_big_questions_National_Edition.md",
     "production_title": "ER / The Pagan Christ",
-    "company": "CTV / CBC",
+    "company": "CTV; CBC",
     "venue": "",
     "city": "",
     "coordinates": [],
@@ -11404,7 +11404,6 @@
       -79.3595
     ],
     "people": [
-      "Creation Ensemble",
       "Dennis Lee",
       "Gregory Prest",
       "Ins Choi",
@@ -11413,9 +11412,7 @@
       "Raquel Duffy"
     ],
     "roles": {
-      "director": [
-        "Creation Ensemble"
-      ],
+      "director": [],
       "actors": [
         "Mike Ross",
         "Ken MacKenzie",
@@ -11569,7 +11566,7 @@
     "canonical_file": "2014.04.10.National_Post.Pecking_Order_Its_fight_and_flight_onstage_but_from_which_lover_in_Mike_Bartletts_riveting_play_Cock.md",
     "production_title": "Cock",
     "company": "Studio 180 Theatre",
-    "venue": "Studio 180 Theatre",
+    "venue": "",
     "city": "Toronto",
     "coordinates": [],
     "people": [
@@ -11739,8 +11736,8 @@
     "editorial_issue_type": "duplicate_edition_variant",
     "canonical_file": "2015.05.09.National_Post.Organ_grinder_Creditors_and_Liver_prove_that_our_hearts_will_always_be_grist_for_the_mill_when_former_lovers_linger_on.md",
     "production_title": "Creditors / Liver",
-    "company": "Coal Mine Theatre / Storefront Theatre",
-    "venue": "Coal Mine Theatre / Storefront Theatre",
+    "company": "Coal Mine Theatre; Storefront Theatre",
+    "venue": "Coal Mine Theatre; Storefront Theatre",
     "city": "Toronto",
     "coordinates": [
       43.6532,
@@ -12159,7 +12156,7 @@
     "editorial_issue_type": "duplicate_edition_variant",
     "canonical_file": "2024.10.05.The_Globe_and_Mail.I_Knew_Early_On_That_Maggie_Smith_Was_A_Treasure_On_Stage_The_Actor_De.md",
     "production_title": "Maggie Smith",
-    "company": "National Theatre, Stratford Festival",
+    "company": "National Theatre; Stratford Festival",
     "venue": "",
     "city": "",
     "coordinates": [],
@@ -12279,7 +12276,7 @@
     "editorial_issue_type": "multi_author_short_take",
     "canonical_file": "",
     "production_title": "Ain't Misbehavin'",
-    "company": "CanStage",
+    "company": "Canadian Stage",
     "venue": "",
     "city": "Toronto",
     "coordinates": [],
