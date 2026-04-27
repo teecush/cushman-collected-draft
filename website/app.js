@@ -1,4 +1,4 @@
-const DATA_URL = new URL("../site_export/data/public_reviews.json?v=71", import.meta.url);
+const DATA_URL = new URL("../site_export/data/public_reviews.json?v=72", import.meta.url);
 const CONTENT_ROOT = new URL("../site_export/content/reviews/", import.meta.url);
 const PAGE_SIZE = 36;
 const SHAKESPEARE_COLLECTION = "The Shakespeare Collection";
@@ -525,6 +525,35 @@ function venueMapPoints() {
 
 function entityType(type) {
   return ENTITY_TYPES.find((item) => item.key === type);
+}
+
+function isPersonIndex(typeKey) {
+  const type = entityType(typeKey);
+  return Boolean(typeKey === "people" || type?.role);
+}
+
+function personNameParts(label) {
+  const text = String(label || "").trim();
+  if (!text || text.includes(",") || !/\s/.test(text)) return { display: text, sort: text };
+
+  const suffixes = new Set(["jr", "jr.", "sr", "sr.", "ii", "iii", "iv"]);
+  const particles = new Set(["da", "de", "del", "della", "der", "des", "di", "dos", "du", "la", "le", "st", "st.", "van", "von"]);
+  const words = text.split(/\s+/);
+  const suffix = suffixes.has(words.at(-1)?.toLowerCase()) ? words.pop() : "";
+  let lastStart = words.length - 1;
+
+  while (lastStart > 0 && particles.has(words[lastStart - 1].toLowerCase())) {
+    lastStart -= 1;
+  }
+
+  const lastName = words.slice(lastStart).join(" ");
+  const firstNames = words.slice(0, lastStart).join(" ");
+  const display = [lastName, [firstNames, suffix].filter(Boolean).join(" ")].filter(Boolean).join(", ");
+  return { display, sort: display };
+}
+
+function indexDisplayLabel(typeKey, label) {
+  return isPersonIndex(typeKey) ? personNameParts(label).display : label;
 }
 
 function typeGroup(record) {
@@ -1173,14 +1202,14 @@ function indexDescription(type) {
   }[type] || "";
 }
 
-function indexSortText(label) {
-  return String(label || "")
+function indexSortText(label, typeKey = "") {
+  return String(indexDisplayLabel(typeKey, label) || "")
     .replace(/^[\s"'‘’“”.,;:!?()[\]{}]+/, "")
     .trim();
 }
 
-function indexGroupLabel(label) {
-  const text = indexSortText(label);
+function indexGroupLabel(label, typeKey = "") {
+  const text = indexSortText(label, typeKey);
   if (/^\d/.test(text)) return "0-9";
   const match = text.match(/[A-Za-z]/);
   return match ? match[0].toUpperCase() : "#";
@@ -1190,11 +1219,11 @@ function renderEntityIndex(typeKey) {
   const type = entityType(typeKey);
   if (!type) return;
   const entries = [...entityMap(typeKey).values()].sort((a, b) =>
-    indexSortText(a.label).localeCompare(indexSortText(b.label)) || a.label.localeCompare(b.label)
+    indexSortText(a.label, typeKey).localeCompare(indexSortText(b.label, typeKey)) || a.label.localeCompare(b.label)
   );
   const groups = new Map();
   entries.forEach((entry) => {
-    const letter = indexGroupLabel(entry.label);
+    const letter = indexGroupLabel(entry.label, typeKey);
     if (!groups.has(letter)) groups.set(letter, []);
     groups.get(letter).push(entry);
   });
@@ -1231,7 +1260,7 @@ function renderEntityIndex(typeKey) {
     items.forEach((entry) => {
       const link = document.createElement("a");
       link.href = `#entity:${typeKey}:${entry.slug}`;
-      link.innerHTML = `<span>${entry.label}</span><em>${entry.records.length.toLocaleString()}</em>`;
+      link.innerHTML = `<span>${indexDisplayLabel(typeKey, entry.label)}</span><em>${entry.records.length.toLocaleString()}</em>`;
       links.append(link);
     });
     section.replaceChildren(heading, links);
