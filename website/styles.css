@@ -625,6 +625,7 @@ main {
   height: 340px;
   border: 1px solid var(--rule);
   background: var(--cream);
+  overflow: hidden;
 }
 
 .home-map-canvas .leaflet-map {
@@ -684,10 +685,13 @@ main {
   margin-top: 8px;
   border-top: 1px solid rgba(17, 17, 17, 0.12);
   background:
-    radial-gradient(circle at 24% 50%, var(--blue-dark) 0 21px, transparent 22px),
-    radial-gradient(circle at 52% 35%, #8a5f5f 0 15px, transparent 16px),
-    radial-gradient(circle at 72% 58%, #55736b 0 18px, transparent 19px),
-    linear-gradient(90deg, transparent 22%, rgba(35, 82, 118, 0.28) 22% 74%, transparent 74%);
+    linear-gradient(var(--ink) 0 0) 0 18% / 100% 2px no-repeat,
+    linear-gradient(90deg, rgba(35, 82, 118, 0.2), rgba(35, 82, 118, 0.04)) 0 66% / 100% 1px no-repeat,
+    linear-gradient(#edf3f7 0 0) 0 36% / 28% 24px no-repeat,
+    linear-gradient(#f4f0e8 0 0) 31% 36% / 28% 24px no-repeat,
+    linear-gradient(#edf2ef 0 0) 62% 36% / 34% 24px no-repeat,
+    linear-gradient(#f4eeee 0 0) 0 70% / 34% 24px no-repeat,
+    linear-gradient(#edf3f7 0 0) 37% 70% / 46% 24px no-repeat;
   opacity: 0.86;
 }
 
@@ -2387,6 +2391,141 @@ h1 {
   fill: #6f5f88;
 }
 
+.explore-pill-tool {
+  overflow: hidden;
+}
+
+.explore-pill-scroller {
+  margin-top: 18px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  border: 1px solid var(--rule);
+  background:
+    linear-gradient(90deg, rgba(35, 82, 118, 0.06), transparent 18%, transparent 82%, rgba(35, 82, 118, 0.06)),
+    #fbfaf7;
+  scroll-behavior: smooth;
+}
+
+.explore-pill-columns {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  min-width: max-content;
+}
+
+.explore-pill-column,
+.explore-pill-results {
+  flex: 0 0 clamp(240px, 24vw, 330px);
+  min-height: 620px;
+  border-right: 1px solid var(--rule);
+  padding: 18px;
+}
+
+.explore-pill-results {
+  flex-basis: clamp(320px, 34vw, 480px);
+  border-right: 0;
+  background: rgba(240, 240, 240, 0.38);
+}
+
+.explore-pill-column h2,
+.explore-pill-results h2 {
+  margin: 0 0 8px;
+  color: var(--blue-dark);
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.explore-pill-column p {
+  margin: 0 0 16px;
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.explore-pill {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 14px;
+  align-items: center;
+  width: 100%;
+  margin: 0 0 10px;
+  border: 1px solid rgba(17, 17, 17, 0.14);
+  border-left: 8px solid var(--pill-color, var(--blue-dark));
+  border-radius: 999px;
+  padding: 11px 14px 11px 16px;
+  background: var(--pill-bg, #f7f5f0);
+  color: var(--ink);
+  cursor: pointer;
+  transition: border-color 150ms ease, box-shadow 150ms ease, color 150ms ease, transform 150ms ease;
+}
+
+.explore-pill:hover,
+.explore-pill:focus-visible {
+  color: var(--blue-dark);
+  border-color: rgba(35, 82, 118, 0.42);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+  transform: translateX(2px);
+}
+
+.explore-pill.is-active {
+  border-color: rgba(35, 82, 118, 0.5);
+  box-shadow: inset 0 0 0 2px rgba(35, 82, 118, 0.12);
+}
+
+.explore-pill span {
+  overflow: hidden;
+  font-family: var(--sans);
+  font-size: 14px;
+  font-weight: 900;
+  line-height: 1.05;
+  text-align: left;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+}
+
+.explore-pill em {
+  color: var(--blue-dark);
+  font-family: var(--sans);
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 900;
+}
+
+.explore-pill-0 {
+  --pill-color: var(--blue-dark);
+  --pill-bg: #edf3f7;
+}
+
+.explore-pill-1 {
+  --pill-color: #8a7d5f;
+  --pill-bg: #f4f0e8;
+}
+
+.explore-pill-2 {
+  --pill-color: #57766e;
+  --pill-bg: #edf2ef;
+}
+
+.explore-pill-3 {
+  --pill-color: #9a6f65;
+  --pill-bg: #f4eeee;
+}
+
+.explore-pill-4 {
+  --pill-color: #74648a;
+  --pill-bg: #f0eef4;
+}
+
+.explore-pill-5 {
+  --pill-color: #3f7476;
+  --pill-bg: #edf4f4;
+}
+
 @keyframes bubble-pop-svg {
   from {
     opacity: 0;
@@ -2776,6 +2915,16 @@ h1 {
 
   .home-map-canvas {
     height: 240px;
+  }
+
+  .home-map-canvas .leaflet-map {
+    height: 240px;
+  }
+
+  .explore-pill-column,
+  .explore-pill-results {
+    flex-basis: min(82vw, 330px);
+    min-height: 500px;
   }
 
   .map-canvas {

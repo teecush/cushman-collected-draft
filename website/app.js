@@ -1,4 +1,4 @@
-const DATA_URL = new URL("../site_export/data/public_reviews.json?v=75", import.meta.url);
+const DATA_URL = new URL("../site_export/data/public_reviews.json?v=76", import.meta.url);
 const CONTENT_ROOT = new URL("../site_export/content/reviews/", import.meta.url);
 const PAGE_SIZE = 36;
 const SHAKESPEARE_COLLECTION = "The Shakespeare Collection";
@@ -1496,20 +1496,15 @@ function renderExploreToolV2() {
   title.textContent = "Article Explorer";
   const intro = document.createElement("p");
   intro.className = "landing-intro";
-  intro.textContent = "Start with the whole archive, then open one branch at a time. Each choice stays visible so the path reads like a map.";
+  intro.textContent = "Choose a path, open a branch, and keep narrowing until the article list feels manageable.";
   const tool = document.createElement("div");
-  tool.className = "explore-tool explore-tree-tool";
-  const pathBar = document.createElement("div");
-  pathBar.className = "explore-path";
-  const canvas = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-  canvas.classList.add("explore-tree");
-  canvas.setAttribute("viewBox", "0 0 1180 720");
-  canvas.style.setProperty("--tree-scale", "1");
-  canvas.setAttribute("role", "img");
-  canvas.setAttribute("aria-label", "Interactive archive explorer");
-  const list = document.createElement("div");
-  list.className = "explore-articles";
-  tool.replaceChildren(pathBar, canvas, list);
+  tool.className = "explore-tool explore-pill-tool";
+  const scroller = document.createElement("div");
+  scroller.className = "explore-pill-scroller";
+  const columns = document.createElement("div");
+  columns.className = "explore-pill-columns";
+  scroller.append(columns);
+  tool.append(scroller);
 
   const path = [];
   const branches = [
@@ -1520,47 +1515,10 @@ function renderExploreToolV2() {
     { key: "city", label: "Cities", next: "production" },
     { key: "production", label: "Productions", next: "type" },
   ];
-  const colors = ["#1f587f", "#7f7458", "#55736b", "#8a5f5f", "#6b5a7d", "#3f6f70"];
-  let currentBranch = "type";
-  let collapsedSignature = "";
-  let currentViewBox = [0, 0, 1180, 720];
-  let viewBoxAnimation = 0;
+  const branchMeta = new Map(branches.map((branch, index) => [branch.key, { ...branch, color: index }]));
+  let openBranch = "type";
+  let pendingScroll = null;
 
-  const svgEl = (name, attrs = {}) => {
-    const el = document.createElementNS("http://www.w3.org/2000/svg", name);
-    Object.entries(attrs).forEach(([key, value]) => el.setAttribute(key, value));
-    return el;
-  };
-  const wrapWords = (label, maxChars = 11, maxLines = 3) => {
-    const text = String(label).replace(/^The\s+/i, "").replace(/&/g, "and");
-    const words = text.split(/\s+/).filter(Boolean);
-    const lines = [];
-    let current = "";
-    words.forEach((word) => {
-      if (word.length > maxChars) {
-        if (current) {
-          lines.push(current);
-          current = "";
-        }
-        for (let i = 0; i < word.length; i += maxChars) lines.push(word.slice(i, i + maxChars));
-        return;
-      }
-      const next = current ? `${current} ${word}` : word;
-      if (next.length <= maxChars || !current) {
-        current = next;
-      } else {
-        lines.push(current);
-        current = word;
-      }
-    });
-    if (current) lines.push(current);
-    if (lines.length > maxLines) {
-      const kept = lines.slice(0, maxLines);
-      kept[maxLines - 1] = `${kept[maxLines - 1].replace(/\.+$/, "")}...`;
-      return kept;
-    }
-    return lines;
-  };
   const filteredRecords = () => path.reduce((records, step) => records.filter((record) => step.test(record)), state.records);
   const valuesForBranch = (records, branch) => {
     const counts = new Map();
@@ -1592,206 +1550,41 @@ function renderExploreToolV2() {
       }))
       .sort((a, b) => b.count - a.count || a.label.localeCompare(b.label));
   };
-  const addLink = (from, to) => {
-    canvas.append(svgEl("path", {
-      class: "explore-tree-link",
-      d: `M ${from.x + from.r} ${from.y} C ${(from.x + to.x) / 2} ${from.y}, ${(from.x + to.x) / 2} ${to.y}, ${to.x - to.r} ${to.y}`,
-    }));
+
+  const makeColumn = (label, sublabel = "") => {
+    const column = document.createElement("section");
+    column.className = "explore-pill-column";
+    const heading = document.createElement("h2");
+    heading.textContent = label;
+    column.append(heading);
+    if (sublabel) {
+      const meta = document.createElement("p");
+      meta.textContent = sublabel;
+      column.append(meta);
+    }
+    return column;
   };
-  const setViewBoxAnimated = (next) => {
-    cancelAnimationFrame(viewBoxAnimation);
-    const start = currentViewBox;
-    const duration = 420;
-    const startedAt = performance.now();
-    const tick = (now) => {
-      const progress = Math.min(1, (now - startedAt) / duration);
-      const eased = 1 - Math.pow(1 - progress, 3);
-      const values = start.map((value, index) => value + (next[index] - value) * eased);
-      canvas.setAttribute("viewBox", values.map((value) => value.toFixed(2)).join(" "));
-      if (progress < 1) {
-        viewBoxAnimation = requestAnimationFrame(tick);
-      } else {
-        currentViewBox = next;
-      }
-    };
-    viewBoxAnimation = requestAnimationFrame(tick);
+
+  const makePill = (item, onClick, options = {}) => {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = `explore-pill explore-pill-${options.color ?? 0}${options.active ? " is-active" : ""}`.trim();
+    const label = document.createElement("span");
+    label.textContent = item.label;
+    const count = document.createElement("em");
+    count.textContent = item.count.toLocaleString();
+    button.append(label, count);
+    button.addEventListener("click", onClick);
+    return button;
   };
-  const addNode = (node, onClick) => {
-    const group = svgEl("g", {
-      class: `explore-tree-node ${node.className || ""}`.trim(),
-      transform: `translate(${node.x} ${node.y})`,
-      tabindex: "0",
-      role: "button",
-      "aria-label": `${node.label}, ${node.count.toLocaleString()} articles`,
-    });
-    group.style.setProperty("--node-color", node.color || colors[0]);
-    group.append(svgEl("circle", { r: node.r }));
-    const lines = wrapWords(node.label, node.maxChars || 10, node.maxLines || 3);
-    lines.forEach((line, index) => {
-      const text = svgEl("text", {
-        y: (index - (lines.length - 1) / 2) * 17 - 5,
-        "text-anchor": "middle",
-      });
-      text.textContent = line;
-      group.append(text);
-    });
-    const count = svgEl("text", {
-      class: "explore-tree-count",
-      y: Math.min(node.r - 17, 38),
-      "text-anchor": "middle",
-    });
-    count.textContent = node.count.toLocaleString();
-    group.append(count);
-    group.addEventListener("click", onClick);
-    group.addEventListener("keydown", (event) => {
-      if (event.key === "Enter" || event.key === " ") {
-        event.preventDefault();
-        onClick();
-      }
-    });
-    canvas.append(group);
-  };
-  const renderTree = () => {
-    const records = filteredRecords();
-    pathBar.replaceChildren();
-    const reset = document.createElement("button");
-    reset.type = "button";
-    reset.textContent = "All articles";
-    reset.addEventListener("click", () => {
-      path.splice(0);
-      currentBranch = "type";
-      collapsedSignature = "";
-      renderTree();
-    });
-    pathBar.append(reset);
-    path.forEach((step, index) => {
-      const crumb = document.createElement("button");
-      crumb.type = "button";
-      crumb.textContent = step.label;
-      crumb.addEventListener("click", () => {
-        path.splice(index + 1);
-        currentBranch = step.next;
-        collapsedSignature = "";
-        renderTree();
-      });
-      pathBar.append(crumb);
-    });
 
-    canvas.replaceChildren();
-    const root = { x: 105, y: 360, r: 72, label: "All Articles", count: state.records.length, color: colors[0], className: "is-root", maxChars: 10 };
-    const branchNodes = branches.map((branch, index) => ({
-      ...branch,
-      x: 305,
-      y: 118 + index * 92,
-      r: currentBranch === branch.key ? 58 : 48,
-      count: records.length,
-      color: colors[index % colors.length],
-      className: currentBranch === branch.key ? "is-active" : "is-branch",
-      maxChars: 10,
-    }));
-    branchNodes.forEach((node) => addLink(root, node));
-    addNode(root, () => {
-      path.splice(0);
-      currentBranch = "type";
-      collapsedSignature = "";
-      renderTree();
-    });
-    branchNodes.forEach((node) => addNode(node, () => {
-        const signature = `branch:${node.key}:${path.length}`;
-        if (currentBranch === node.key && collapsedSignature === signature) {
-          collapsedSignature = "";
-        } else if (currentBranch === node.key) {
-          collapsedSignature = signature;
-        } else {
-          currentBranch = node.key;
-          collapsedSignature = "";
-        }
-        renderTree();
-      }));
-
-    let anchor = branchNodes.find((node) => node.key === currentBranch) || root;
-    path.forEach((step, index) => {
-      const node = {
-        ...step,
-        x: 500 + index * 150,
-        y: 360,
-        r: 54,
-        color: colors[(index + 2) % colors.length],
-        className: index === path.length - 1 ? "is-path is-active" : "is-path",
-        maxChars: 9,
-      };
-      addLink(anchor, node);
-      addNode(node, () => {
-        const signature = `path:${index}:${step.label}`;
-        if (index === path.length - 1 && collapsedSignature === signature) {
-          collapsedSignature = "";
-          currentBranch = step.next;
-        } else if (index === path.length - 1) {
-          collapsedSignature = signature;
-          currentBranch = step.next;
-        } else {
-          path.splice(index + 1);
-          currentBranch = step.next;
-          collapsedSignature = "";
-        }
-        renderTree();
-      });
-      anchor = node;
-    });
-
-    const branch = currentBranch || path.at(-1)?.next || "type";
-    const items = collapsedSignature ? [] : valuesForBranch(records, branch).slice(0, 9);
-    const columnX = Math.min(1080, anchor.x + 230);
-    const gap = Math.min(80, 540 / Math.max(items.length, 1));
-    const startY = 360 - ((items.length - 1) * gap) / 2;
-    items.forEach((item, index) => {
-      const r = Math.max(39, Math.min(64, 38 + Math.sqrt(item.count || 1) * 1.1));
-      const node = {
-        ...item,
-        x: columnX,
-        y: startY + index * gap,
-        r,
-        color: colors[index % colors.length],
-        className: "is-candidate",
-        maxChars: r > 54 ? 10 : 8,
-        maxLines: 3,
-      };
-      addLink(anchor, node);
-      addNode(node, () => {
-        path.push(item);
-        currentBranch = item.next;
-        collapsedSignature = "";
-        renderTree();
-      });
-    });
-
-    const visibleNodes = [
-      root,
-      ...branchNodes,
-      ...path.map((step, index) => ({ ...step, x: 500 + index * 150, y: 360, r: 54 })),
-      ...items.map((item, index) => ({
-        ...item,
-        x: columnX,
-        y: startY + index * gap,
-        r: Math.max(39, Math.min(64, 38 + Math.sqrt(item.count || 1) * 1.1)),
-      })),
-    ];
-    const activeNodes = path.length || items.length
-      ? visibleNodes.filter((node) => node.x >= 250)
-      : visibleNodes;
-    const minX = Math.max(0, Math.min(...activeNodes.map((node) => node.x - node.r)) - 70);
-    const maxX = Math.min(1180, Math.max(...activeNodes.map((node) => node.x + node.r)) + 70);
-    const minY = Math.max(0, Math.min(...activeNodes.map((node) => node.y - node.r)) - 60);
-    const maxY = Math.min(720, Math.max(...activeNodes.map((node) => node.y + node.r)) + 60);
-    const nextViewBox = [minX, minY, Math.max(520, maxX - minX), Math.max(360, maxY - minY)];
-    setViewBoxAnimated(nextViewBox);
-    canvas.style.setProperty("--tree-scale", Math.min(1.2, 1180 / nextViewBox[2]).toFixed(2));
-
-    list.replaceChildren();
+  const renderResults = (records) => {
+    const list = document.createElement("section");
+    list.className = "explore-articles explore-pill-results";
     const listTitle = document.createElement("h2");
     listTitle.textContent = `${records.length.toLocaleString()} articles`;
     list.append(listTitle);
-    sortRecords(records).slice(0, 14).forEach((record) => {
+    sortRecords(records).slice(0, 18).forEach((record) => {
       const link = document.createElement("a");
       link.href = `#review:${record.slug}`;
       const media = record.media?.[0];
@@ -1808,6 +1601,77 @@ function renderExploreToolV2() {
       link.append(label);
       list.append(link);
     });
+    return list;
+  };
+
+  const scrollToEnd = () => {
+    requestAnimationFrame(() => {
+      scroller.scrollTo({ left: scroller.scrollWidth, behavior: "smooth" });
+    });
+  };
+  const scrollToColumn = (column) => {
+    requestAnimationFrame(() => {
+      scroller.scrollTo({ left: Math.max(0, column.offsetLeft - 18), behavior: "smooth" });
+    });
+  };
+
+  const renderTree = () => {
+    const records = filteredRecords();
+    columns.replaceChildren();
+
+    const startColumn = makeColumn("Start", `${state.records.length.toLocaleString()} public records`);
+    startColumn.append(makePill({ label: "All articles", count: state.records.length }, () => {
+      path.splice(0);
+      openBranch = "type";
+      renderTree();
+    }, { color: 0, active: !path.length }));
+    branches.forEach((branch, index) => {
+      startColumn.append(makePill({ label: branch.label, count: state.records.length }, () => {
+        openBranch = branch.key;
+        pendingScroll = "options";
+        renderTree();
+      }, { color: index, active: !path.length && openBranch === branch.key }));
+    });
+    columns.append(startColumn);
+
+    path.forEach((step, index) => {
+      const meta = branchMeta.get(step.branch);
+      const column = makeColumn(meta?.label || "Path", `${step.count.toLocaleString()} records`);
+      column.classList.add("is-path-column");
+      column.append(makePill(step, () => {
+        if (index === path.length - 1) {
+          const removed = path.pop();
+          openBranch = removed.branch;
+        } else {
+          path.splice(index + 1);
+          openBranch = step.next;
+        }
+        pendingScroll = "options";
+        renderTree();
+      }, { color: meta?.color ?? 0, active: true }));
+      columns.append(column);
+    });
+
+    const branch = openBranch || path.at(-1)?.next || "type";
+    const activeMeta = branchMeta.get(branch);
+    const optionsColumn = makeColumn(activeMeta?.label || "Choose", `${records.length.toLocaleString()} in current set`);
+    optionsColumn.classList.add("is-options-column");
+    valuesForBranch(records, branch).slice(0, 18).forEach((item) => {
+      optionsColumn.append(makePill(item, () => {
+        path.push(item);
+        openBranch = item.next;
+        pendingScroll = "end";
+        renderTree();
+      }, { color: activeMeta?.color ?? 0 }));
+    });
+    columns.append(optionsColumn, renderResults(records));
+    if (pendingScroll === "end") {
+      pendingScroll = null;
+      scrollToEnd();
+    } else if (pendingScroll === "options") {
+      pendingScroll = null;
+      scrollToColumn(optionsColumn);
+    }
   };
   renderTree();
   els.indexContent.replaceChildren(title, intro, tool);
