@@ -1,4 +1,4 @@
-const DATA_URL = new URL("./data/reviews.json?v=5", import.meta.url);
+const DATA_URL = new URL("./data/reviews.json?v=6", import.meta.url);
 
 const state = {
   records: [],
