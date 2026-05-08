@@ -1,9 +1,10 @@
-const DATA_URL = new URL("./data/reviews.json?v=6", import.meta.url);
+const DATA_URL = new URL("./data/reviews.json?v=7", import.meta.url);
 
 const state = {
   records: [],
   filtered: [],
   activeIndex: 0,
+  entityFilter: null,
 };
 
 const els = {
@@ -26,6 +27,28 @@ const els = {
 };
 
 const collator = new Intl.Collator("en", { numeric: true, sensitivity: "base" });
+
+const ENTITY_TYPES = {
+  productions: { label: "Production", values: (record) => record.production_title || record.productions || [] },
+  companies: { label: "Company", values: (record) => record.company || [] },
+  venues: { label: "Venue", values: (record) => record.venue || record.venues || [] },
+  cities: { label: "City", values: (record) => record.city || record.cities || [] },
+  directors: { label: "Director", values: (record) => record.roles?.director || [] },
+  playwrights: { label: "Playwright", values: (record) => record.roles?.playwright || [] },
+  actors: { label: "Actor", values: (record) => record.roles?.actors || [] },
+  "composers-lyricists": { label: "Music", values: (record) => record.roles?.composer_lyricist || [] },
+  "musical-directors": { label: "Music Director", values: (record) => record.roles?.musical_director || [] },
+  choreographers: { label: "Choreographer", values: (record) => record.roles?.choreographer || [] },
+  "set-designers": { label: "Set", values: (record) => record.roles?.set_designer || [] },
+  "costume-designers": { label: "Costume", values: (record) => record.roles?.costume_designer || [] },
+  "lighting-designers": { label: "Lighting", values: (record) => record.roles?.lighting_designer || [] },
+  "sound-designers": { label: "Sound", values: (record) => record.roles?.sound_designer || [] },
+  producers: { label: "Producer", values: (record) => record.roles?.producer || [] },
+  dramaturgs: { label: "Dramaturg", values: (record) => record.roles?.dramaturg || [] },
+  performers: { label: "Performer", values: (record) => record.roles?.performers || [] },
+  musicians: { label: "Musician", values: (record) => record.roles?.musicians || [] },
+  artists: { label: "Artist", values: (record) => record.roles?.artists || [] },
+};
 
 function escapeHtml(value) {
   return String(value ?? "")
@@ -76,6 +99,17 @@ function compactList(values, limit = 8) {
   return `${shown}${extra}`;
 }
 
+function entitySlug(value) {
+  return (
+    String(value || "")
+      .toLowerCase()
+      .replace(/&/g, " and ")
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/-+/g, "-")
+      .replace(/^-|-$/g, "") || "unknown"
+  );
+}
+
 function articleHash(index) {
   return `#article:${index + 1}`;
 }
@@ -86,6 +120,23 @@ function articleUrl(number) {
 
 function recordByNumber(number) {
   return state.records.findIndex((record) => record.number === number);
+}
+
+function entityValues(record, type) {
+  return (ENTITY_TYPES[type]?.values(record) || []).filter(Boolean);
+}
+
+function findEntityLabel(type, slug) {
+  for (const record of state.records) {
+    const match = entityValues(record, type).find((value) => entitySlug(value) === slug);
+    if (match) return match;
+  }
+  return slug.replace(/-/g, " ");
+}
+
+function matchesEntity(record) {
+  if (!state.entityFilter) return true;
+  return entityValues(record, state.entityFilter.type).some((value) => entitySlug(value) === state.entityFilter.slug);
 }
 
 function populateYears() {
@@ -101,6 +152,7 @@ function applyFilters() {
   const query = els.searchInput.value.trim().toLowerCase();
   const year = els.yearFilter.value;
   state.filtered = state.records.filter((record) => {
+    if (!matchesEntity(record)) return false;
     if (year && record.year !== year) return false;
     if (!query) return true;
     return slugText(record).includes(query);
@@ -109,7 +161,12 @@ function applyFilters() {
 }
 
 function renderResults() {
-  els.countLabel.textContent = `${state.records.length} draft articles`;
+  if (state.entityFilter) {
+    const typeLabel = ENTITY_TYPES[state.entityFilter.type]?.label || "Metadata";
+    els.countLabel.textContent = `${state.filtered.length} articles · ${typeLabel}: ${state.entityFilter.label}`;
+  } else {
+    els.countLabel.textContent = `${state.records.length} draft articles`;
+  }
   if (!state.filtered.length) {
     els.results.innerHTML = `<p class="empty">No matching articles.</p>`;
     return;
@@ -197,6 +254,17 @@ function navigate(delta) {
 
 function route() {
   const hash = location.hash || "#home";
+  if (hash.startsWith("#entity:")) {
+    const [, type, slug] = hash.split(":");
+    if (ENTITY_TYPES[type] && slug) {
+      state.entityFilter = { type, slug, label: findEntityLabel(type, slug) };
+      showList();
+      applyFilters();
+      document.getElementById("list").scrollIntoView({ behavior: "auto", block: "start" });
+      return;
+    }
+  }
+  state.entityFilter = null;
   if (hash.startsWith("#article:")) {
     const number = Number(hash.split(":")[1]);
     const index = Number.isFinite(number) ? recordByNumber(number) : -1;
@@ -205,6 +273,7 @@ function route() {
     showAbout();
   } else {
     showList();
+    applyFilters();
   }
 }
 
@@ -215,11 +284,13 @@ async function init() {
   state.records = data.records || [];
   state.filtered = state.records;
   populateYears();
-  applyFilters();
   route();
 }
 
-els.searchInput.addEventListener("input", applyFilters);
+els.searchInput.addEventListener("input", () => {
+  state.entityFilter = null;
+  applyFilters();
+});
 els.yearFilter.addEventListener("change", applyFilters);
 els.prevTop.addEventListener("click", () => navigate(-1));
 els.prevBottom.addEventListener("click", () => navigate(-1));

@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import json
+import re
 from html import escape
 from pathlib import Path
 
@@ -8,7 +9,7 @@ ROOT = Path(__file__).resolve().parent
 PROJECT_ROOT = ROOT.parent.parent
 DATA_PATH = ROOT / "data" / "reviews.json"
 ARTICLES_DIR = ROOT / "articles"
-ASSET_VERSION = "6"
+ASSET_VERSION = "7"
 
 ROLE_FIELDS = [
     ("directors", "Director", "director", 4),
@@ -101,6 +102,13 @@ def first_scalar(data, key, fallback=""):
     return values[0] if values else fallback
 
 
+def entity_slug(value):
+    value = str(value or "").lower().replace("&", " and ")
+    value = re.sub(r"[^a-z0-9]+", "-", value)
+    value = re.sub(r"-+", "-", value).strip("-")
+    return value or "unknown"
+
+
 def compact_list(values, limit=14):
     values = [value for value in values or [] if value]
     if not values:
@@ -114,9 +122,10 @@ def compact_list(values, limit=14):
 def entity_chip(type_name, label, prefix="", group="context", featured=False):
     featured_class = " entity-chip-featured" if featured else ""
     label_html = f"<span>{escape(prefix)}</span>" if prefix else ""
+    href = f"../index.html#entity:{type_name}:{entity_slug(label)}"
     return (
-        f'<span class="entity-chip entity-{type_name} entity-group-{group}{featured_class}">'
-        f"{label_html}<strong>{escape(str(label))}</strong></span>"
+        f'<a class="entity-chip entity-{type_name} entity-group-{group}{featured_class}" href="{href}">'
+        f"{label_html}<strong>{escape(str(label))}</strong></a>"
     )
 
 
@@ -177,6 +186,18 @@ def body_html(body):
 
 def article_filename(number):
     return f"{int(number):03d}.html"
+
+
+def enrich_record(record):
+    md = parse_frontmatter(record.get("markdownPath", ""))
+    roles = {key: as_list(md.get(key)) for _, _, key, _ in ROLE_FIELDS}
+    enriched = dict(record)
+    enriched["production_title"] = as_list(md.get("production_title")) or as_list(record.get("productions"))
+    enriched["company"] = as_list(md.get("company"))
+    enriched["venue"] = as_list(md.get("venue")) or as_list(record.get("venues"))
+    enriched["city"] = as_list(md.get("city")) or as_list(record.get("cities"))
+    enriched["roles"] = roles
+    return enriched
 
 
 def article_page(record, total):
@@ -268,7 +289,10 @@ def article_page(record, total):
 
 
 def main():
-    records = json.loads(DATA_PATH.read_text(encoding="utf-8"))["records"]
+    raw = json.loads(DATA_PATH.read_text(encoding="utf-8"))
+    records = [enrich_record(record) for record in raw["records"]]
+    raw["records"] = records
+    DATA_PATH.write_text(json.dumps(raw, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     ARTICLES_DIR.mkdir(exist_ok=True)
     for old_page in ARTICLES_DIR.glob("*.html"):
         old_page.unlink()
