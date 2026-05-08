@@ -9,7 +9,7 @@ ROOT = Path(__file__).resolve().parent
 PROJECT_ROOT = ROOT.parent.parent
 DATA_PATH = ROOT / "data" / "reviews.json"
 ARTICLES_DIR = ROOT / "articles"
-ASSET_VERSION = "7"
+ASSET_VERSION = "8"
 
 ROLE_FIELDS = [
     ("directors", "Director", "director", 4),
@@ -71,6 +71,18 @@ def parse_frontmatter(path):
             continue
         current_key = None
     return data
+
+
+def markdown_body(path):
+    full_path = PROJECT_ROOT / path
+    if not full_path.exists():
+        return ""
+    text = full_path.read_text(encoding="utf-8", errors="ignore")
+    if text.startswith("---"):
+        parts = text.split("---", 2)
+        if len(parts) >= 3:
+            return parts[2].strip()
+    return text.strip()
 
 
 def as_list(value):
@@ -192,6 +204,9 @@ def enrich_record(record):
     md = parse_frontmatter(record.get("markdownPath", ""))
     roles = {key: as_list(md.get(key)) for _, _, key, _ in ROLE_FIELDS}
     enriched = dict(record)
+    body = markdown_body(record.get("markdownPath", ""))
+    if body:
+        enriched["body"] = body
     enriched["production_title"] = as_list(md.get("production_title")) or as_list(record.get("productions"))
     enriched["company"] = as_list(md.get("company"))
     enriched["venue"] = as_list(md.get("venue")) or as_list(record.get("venues"))
