@@ -1,4 +1,4 @@
-const DATA_URL = new URL("./data/reviews.json?v=2", import.meta.url);
+const DATA_URL = new URL("./data/reviews.json?v=4", import.meta.url);
 
 const state = {
   records: [],
@@ -113,7 +113,7 @@ function renderResults() {
   els.results.innerHTML = state.filtered
     .map(
       (record) => `
-        <button class="result-row" type="button" data-number="${record.number}">
+        <a class="result-row" href="${articleHash(record.number - 1)}">
           <span class="result-number">${record.number}</span>
           <span class="result-date">${escapeHtml(record.date || "")}</span>
           <span class="result-title">${escapeHtml(record.title)}</span>
@@ -124,28 +124,10 @@ function renderResults() {
             ${record.productions?.length ? compactList(record.productions, 3) : ""}
           </span>
           <span class="result-open" aria-hidden="true">→</span>
-        </button>
+        </a>
       `
     )
     .join("");
-}
-
-function openArticleByNumber(number) {
-  const index = recordByNumber(number);
-  if (index < 0) return;
-  history.pushState(null, "", articleHash(index));
-  showArticle(index);
-}
-
-function bindResultClicks() {
-  els.results.addEventListener("click", (event) => {
-    const row = event.target.closest(".result-row");
-    if (!row) return;
-    event.preventDefault();
-    const number = Number(row.dataset.number);
-    if (!Number.isFinite(number)) return;
-    openArticleByNumber(number);
-  });
 }
 
 function showList() {
@@ -243,7 +225,6 @@ els.firstButton.addEventListener("click", () => (location.hash = articleHash(0))
 els.latestButton.addEventListener("click", () => (location.hash = articleHash(state.records.length - 1)));
 window.addEventListener("hashchange", route);
 window.addEventListener("popstate", route);
-bindResultClicks();
 
 init().catch((error) => {
   els.countLabel.textContent = "Could not load draft data";
