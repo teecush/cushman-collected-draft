@@ -1,4 +1,4 @@
-const DATA_URL = new URL("./data/reviews.json?v=4", import.meta.url);
+const DATA_URL = new URL("./data/reviews.json?v=5", import.meta.url);
 
 const state = {
   records: [],
@@ -80,6 +80,10 @@ function articleHash(index) {
   return `#article:${index + 1}`;
 }
 
+function articleUrl(number) {
+  return `./articles/${String(number).padStart(3, "0")}.html`;
+}
+
 function recordByNumber(number) {
   return state.records.findIndex((record) => record.number === number);
 }
@@ -113,7 +117,7 @@ function renderResults() {
   els.results.innerHTML = state.filtered
     .map(
       (record) => `
-        <a class="result-row" href="${articleHash(record.number - 1)}">
+        <a class="result-row" href="${articleUrl(record.number)}">
           <span class="result-number">${record.number}</span>
           <span class="result-date">${escapeHtml(record.date || "")}</span>
           <span class="result-title">${escapeHtml(record.title)}</span>
@@ -221,8 +225,8 @@ els.prevTop.addEventListener("click", () => navigate(-1));
 els.prevBottom.addEventListener("click", () => navigate(-1));
 els.nextTop.addEventListener("click", () => navigate(1));
 els.nextBottom.addEventListener("click", () => navigate(1));
-els.firstButton.addEventListener("click", () => (location.hash = articleHash(0)));
-els.latestButton.addEventListener("click", () => (location.hash = articleHash(state.records.length - 1)));
+els.firstButton.addEventListener("click", () => (location.href = articleUrl(1)));
+els.latestButton.addEventListener("click", () => (location.href = articleUrl(state.records.length)));
 window.addEventListener("hashchange", route);
 window.addEventListener("popstate", route);
 
