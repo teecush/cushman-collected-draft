@@ -1,4 +1,4 @@
-const DATA_URL = new URL("./data/reviews.json?v=1", import.meta.url);
+const DATA_URL = new URL("./data/reviews.json?v=2", import.meta.url);
 
 const state = {
   records: [],
@@ -113,17 +113,39 @@ function renderResults() {
   els.results.innerHTML = state.filtered
     .map(
       (record) => `
-        <a class="result-card" href="${articleHash(record.number - 1)}">
-          <span class="result-number">No. ${record.number} · ${escapeHtml(record.date || "")}</span>
-          <h2>${escapeHtml(record.title)}</h2>
-          <div class="result-meta">
+        <button class="result-row" type="button" data-number="${record.number}">
+          <span class="result-number">${record.number}</span>
+          <span class="result-date">${escapeHtml(record.date || "")}</span>
+          <span class="result-title">${escapeHtml(record.title)}</span>
+          <span class="result-meta">
             ${escapeHtml(record.publication || "")}${record.section ? ` · ${escapeHtml(record.section)}` : ""}
-            ${record.productions?.length ? `<br>${compactList(record.productions, 4)}` : ""}
-          </div>
-        </a>
+          </span>
+          <span class="result-productions">
+            ${record.productions?.length ? compactList(record.productions, 3) : ""}
+          </span>
+          <span class="result-open" aria-hidden="true">→</span>
+        </button>
       `
     )
     .join("");
+}
+
+function openArticleByNumber(number) {
+  const index = recordByNumber(number);
+  if (index < 0) return;
+  history.pushState(null, "", articleHash(index));
+  showArticle(index);
+}
+
+function bindResultClicks() {
+  els.results.addEventListener("click", (event) => {
+    const row = event.target.closest(".result-row");
+    if (!row) return;
+    event.preventDefault();
+    const number = Number(row.dataset.number);
+    if (!Number.isFinite(number)) return;
+    openArticleByNumber(number);
+  });
 }
 
 function showList() {
@@ -178,7 +200,7 @@ function showArticle(index) {
   [els.prevTop, els.prevBottom].forEach((button) => (button.disabled = clamped === 0));
   [els.nextTop, els.nextBottom].forEach((button) => (button.disabled = clamped === state.records.length - 1));
   document.title = `${record.number}. ${record.title} · Cushman Collected UK Draft`;
-  window.scrollTo({ top: 0, behavior: "instant" });
+  window.scrollTo(0, 0);
 }
 
 function navigate(delta) {
@@ -220,6 +242,8 @@ els.nextBottom.addEventListener("click", () => navigate(1));
 els.firstButton.addEventListener("click", () => (location.hash = articleHash(0)));
 els.latestButton.addEventListener("click", () => (location.hash = articleHash(state.records.length - 1)));
 window.addEventListener("hashchange", route);
+window.addEventListener("popstate", route);
+bindResultClicks();
 
 init().catch((error) => {
   els.countLabel.textContent = "Could not load draft data";
