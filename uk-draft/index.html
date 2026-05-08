@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cushman Collected - UK Collection Draft Viewer</title>
+    <meta name="description" content="Draft viewer for the UK collection of Robert Cushman's archive transcriptions.">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Rubik:wght@400;600;700;800&display=swap">
+    <link rel="stylesheet" href="./styles.css?v=1">
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="site-nav site-nav-left" aria-label="Draft navigation left">
+        <a href="#list">List</a>
+        <a href="#article:1">Start</a>
+      </nav>
+      <a class="brand" href="#home" aria-label="Cushman Collected draft viewer">
+        <span>Cushman Collected</span>
+      </a>
+      <nav class="site-nav site-nav-right" aria-label="Draft navigation right">
+        <a href="#about">About Draft</a>
+        <a href="../website/">Main Draft</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="intro" id="homeView">
+        <div>
+          <p class="eyebrow">Archive Draft</p>
+          <h1>Cushman Collected - UK Collection Draft Viewer</h1>
+          <p class="lede">A sequential reading draft of the UK Guardian and Observer archive transcriptions. This page is intentionally separate from the main site navigation while final audit work continues.</p>
+        </div>
+        <aside class="status-panel">
+          <span id="countLabel">Loading...</span>
+          <strong>Draft only</strong>
+          <p>Sequential text-only reader for the current UK collection draft.</p>
+        </aside>
+      </section>
+
+      <section class="toolbar" id="list">
+        <label class="search-field">
+          <span>Search</span>
+          <input id="searchInput" type="search" placeholder="Title, date, production, venue, text">
+        </label>
+        <label>
+          <span>Year</span>
+          <select id="yearFilter"></select>
+        </label>
+        <div class="tools">
+          <button type="button" id="firstButton">First</button>
+          <button type="button" id="latestButton">Latest</button>
+        </div>
+      </section>
+
+      <section class="results" id="results" aria-label="Article list"></section>
+
+      <section class="article-view" id="articleView" hidden>
+        <div class="reader-topbar" id="readerTopbar">
+          <button class="nav-button" id="prevTop" type="button" aria-label="Previous article">← Previous</button>
+          <div class="reader-progress" aria-label="Reading progress">
+            <div class="reader-progress-text" id="progressText"></div>
+            <div class="progress-track"><div id="progressFill"></div></div>
+          </div>
+          <button class="nav-button" id="nextTop" type="button" aria-label="Next article">Next →</button>
+        </div>
+        <article id="article"></article>
+        <div class="reader-bottom-nav">
+          <button class="nav-button" id="prevBottom" type="button">← Previous</button>
+          <a href="#list">Back to list</a>
+          <button class="nav-button" id="nextBottom" type="button">Next →</button>
+        </div>
+      </section>
+
+      <section class="about" id="aboutView" hidden>
+        <h2>About This Draft</h2>
+        <p>This is a private-stage review surface for the UK collection. It is not linked from the main draft home page.</p>
+        <p>This draft viewer intentionally contains text and metadata only.</p>
+      </section>
+    </main>
+
+    <script type="module" src="./app.js?v=1"></script>
+  </body>
+</html>
