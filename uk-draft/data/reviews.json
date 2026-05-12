@@ -305,10 +305,27 @@
         "London"
       ],
       "roles": {
-        "director": [],
-        "playwright": [],
-        "actors": [],
-        "composer_lyricist": [],
+        "director": [
+          "Terry Hands",
+          "Nicholas Wright"
+        ],
+        "playwright": [
+          "William Shakespeare",
+          "George Bernard Shaw",
+          "John Antrobus"
+        ],
+        "actors": [
+          "Denise Gence",
+          "Jacques Charon",
+          "Robert Hirsch",
+          "John Tordoff",
+          "Caroline Blakiston",
+          "Bill Fraser",
+          "Janet Webb"
+        ],
+        "composer_lyricist": [
+          "Galt MacDermot"
+        ],
         "musical_director": [],
         "choreographer": [],
         "set_designer": [],
