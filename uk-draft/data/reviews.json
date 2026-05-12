@@ -1629,7 +1629,6 @@
       "roles": {
         "director": [
           "Trevor Nunn",
-          "Tony Richardson",
           "Barry Kyle"
         ],
         "playwright": [
@@ -1644,7 +1643,7 @@
           "Richard Johnson",
           "John Wood",
           "Patrick Stewart",
-          "Vanessa Redgrave",
+          "Mark Dignam",
           "Janet Suzman",
           "Margaret Whiting",
           "Judy Geeson",
@@ -1667,19 +1666,87 @@
       "production_groups": [
         {
           "order": "1",
-          "production_title": "The Romans"
+          "production_title": "The Romans",
+          "company": [
+            "Royal Shakespeare Company"
+          ],
+          "venue": [
+            "Aldwych Theatre"
+          ],
+          "city": [
+            "London"
+          ],
+          "playwright": [
+            "William Shakespeare"
+          ]
         },
         {
           "order": "2",
-          "production_title": "Coriolanus"
+          "production_title": "Coriolanus",
+          "company": [
+            "Royal Shakespeare Company"
+          ],
+          "venue": [
+            "Aldwych Theatre"
+          ],
+          "city": [
+            "London"
+          ],
+          "director": [
+            "Trevor Nunn"
+          ],
+          "playwright": [
+            "William Shakespeare"
+          ],
+          "actors": [
+            "Nicol Williamson",
+            "Margaret Tyzack",
+            "Nicholas Selby",
+            "Morgan Sheppard"
+          ]
         },
         {
           "order": "3",
-          "production_title": "Julius Caesar"
+          "production_title": "Julius Caesar",
+          "company": [
+            "Royal Shakespeare Company"
+          ],
+          "venue": [
+            "Aldwych Theatre"
+          ],
+          "city": [
+            "London"
+          ],
+          "playwright": [
+            "William Shakespeare"
+          ],
+          "actors": [
+            "Richard Johnson",
+            "John Wood",
+            "Patrick Stewart",
+            "Mark Dignam",
+            "Margaret Tyzack"
+          ]
         },
         {
           "order": "4",
-          "production_title": "Antony and Cleopatra"
+          "production_title": "Antony and Cleopatra",
+          "company": [
+            "Royal Shakespeare Company"
+          ],
+          "venue": [
+            "Aldwych Theatre"
+          ],
+          "city": [
+            "London"
+          ],
+          "playwright": [
+            "William Shakespeare"
+          ],
+          "actors": [
+            "Janet Suzman",
+            "Richard Johnson"
+          ]
         },
         {
           "order": "5",
@@ -1687,20 +1754,20 @@
           "company": [
             "Royal Shakespeare Company"
           ],
+          "venue": [
+            "Aldwych Theatre"
+          ],
+          "city": [
+            "London"
+          ],
           "director": [
-            "Trevor Nunn",
-            "Tony Richardson"
+            "Trevor Nunn"
+          ],
+          "playwright": [
+            "William Shakespeare"
           ],
           "actors": [
-            "Nicol Williamson",
-            "Margaret Tyzack",
-            "Nicholas Selby",
-            "Morgan Sheppard",
-            "Richard Johnson",
-            "John Wood",
             "Patrick Stewart",
-            "Vanessa Redgrave",
-            "Janet Suzman",
             "Margaret Whiting",
             "Judy Geeson",
             "Colin Blakely"
@@ -1708,11 +1775,38 @@
         },
         {
           "order": "6",
-          "production_title": "Sylvia Plath programme"
+          "production_title": "Sylvia Plath programme",
+          "venue": [
+            "The Place"
+          ],
+          "city": [
+            "London"
+          ],
+          "director": [
+            "Barry Kyle"
+          ],
+          "playwright": [
+            "Sylvia Plath"
+          ]
         },
         {
           "order": "7",
-          "production_title": "Much Ado About Nothing"
+          "production_title": "Much Ado About Nothing",
+          "venue": [
+            "Young Vic"
+          ],
+          "company": [
+            "Young Vic"
+          ],
+          "city": [
+            "London"
+          ],
+          "playwright": [
+            "William Shakespeare"
+          ],
+          "actors": [
+            "Roy Hudd"
+          ]
         }
       ]
     },

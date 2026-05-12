@@ -9,7 +9,7 @@ ROOT = Path(__file__).resolve().parent
 PROJECT_ROOT = ROOT.parent.parent
 DATA_PATH = ROOT / "data" / "reviews.json"
 ARTICLES_DIR = ROOT / "articles"
-ASSET_VERSION = "18"
+ASSET_VERSION = "19"
 
 ROLE_FIELDS = [
     ("directors", "Director", "director", 4),
@@ -286,13 +286,13 @@ def grouped_role_values(production_groups):
 
 
 def shared_metadata_chips(md, production_groups):
-    sections = []
+    chip_rows = []
     company_values = [value for value in as_list(md.get("company")) if value not in grouped_values(production_groups, "company")]
     venue_values = [value for value in as_list(md.get("venue")) if value not in grouped_values(production_groups, "venue")]
     city_values = [value for value in as_list(md.get("city")) if value not in grouped_values(production_groups, "city")]
     context_chips = context_metadata_chips(company_values, venue_values, city_values)
     if context_chips:
-        sections.append(("Shared Context", "".join(context_chips), "context"))
+        chip_rows.append(("Shared Context", "".join(context_chips), "context"))
 
     people_chips = []
     assigned_people = grouped_role_values(production_groups)
@@ -302,17 +302,18 @@ def shared_metadata_chips(md, production_groups):
             if value not in assigned and value not in assigned_people:
                 people_chips.append(entity_chip(type_name, value, prefix, "people"))
     if people_chips:
-        sections.append(("Shared People", "".join(people_chips), "people"))
+        chip_rows.append(("Shared People", "".join(people_chips), "people"))
 
-    if not sections:
+    if not chip_rows:
         return ""
     section_html = "\n        ".join(
         f"""<section class="article-entity-section article-entity-section-{group}">
           <nav class="article-entities" aria-label="{escape(label)} metadata chips">{chips}</nav>
         </section>"""
-        for label, chips, group in sections
+        for label, chips, group in chip_rows
     )
     return f"""<div class="article-entity-groups article-entity-groups-shared">
+        <div class="article-shared-label">Shared context</div>
         {section_html}
       </div>"""
 
