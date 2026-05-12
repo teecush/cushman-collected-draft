@@ -9,7 +9,7 @@ ROOT = Path(__file__).resolve().parent
 PROJECT_ROOT = ROOT.parent.parent
 DATA_PATH = ROOT / "data" / "reviews.json"
 ARTICLES_DIR = ROOT / "articles"
-ASSET_VERSION = "12"
+ASSET_VERSION = "13"
 
 ROLE_FIELDS = [
     ("directors", "Director", "director", 4),
@@ -236,30 +236,33 @@ def metadata_chips(record):
     company_values = as_list(md.get("company"))
     venue_values = as_list(md.get("venue")) or as_list(record.get("venues"))
     city_values = as_list(md.get("city")) or as_list(record.get("cities"))
+    context_chips = context_metadata_chips(company_values, venue_values, city_values)
+    people_chips = people_metadata_chips(md)
+
+    if len(production_values) == 1:
+        return production_group_chips(
+            [
+                {
+                    "order": 1,
+                    "production_title": production_values[0],
+                    "_chips_html": "".join(context_chips + people_chips),
+                }
+            ]
+        )
+
     sections = []
+    production_html = ""
     if production_values:
-        chips = "".join(entity_chip("productions", value, featured=True, group="production") for value in production_values[:5])
-        sections.append(("Production", chips, "production"))
+        production_html = production_title_links(production_values)
 
-    context_chips = []
-    for value in company_values[:4]:
-        context_chips.append(entity_chip("companies", value, "Company"))
-    for value in venue_values[:3]:
-        context_chips.append(entity_chip("venues", value, "Venue"))
-    for value in city_values[:3]:
-        context_chips.append(entity_chip("cities", value, "City"))
     if context_chips:
-        sections.append(("Work", "".join(context_chips), "context"))
+        sections.append(("Shared Context", "".join(context_chips), "context"))
 
-    people_chips = []
-    for type_name, prefix, key, limit in ROLE_FIELDS:
-        for value in as_list(md.get(key))[:limit]:
-            people_chips.append(entity_chip(type_name, value, prefix, "people"))
     if people_chips:
-        sections.append(("People", "".join(people_chips), "people"))
+        sections.append(("Shared People", "".join(people_chips), "people"))
 
     if not sections:
-        return ""
+        return production_html
     section_html = "\n        ".join(
         f"""<section class="article-entity-section article-entity-section-{group}">
           <span class="article-entity-label">{escape(label)}</span>
@@ -267,9 +270,48 @@ def metadata_chips(record):
         </section>"""
         for label, chips, group in sections
     )
-    return f"""<div class="article-entity-groups">
+    entity_html = f"""<div class="article-entity-groups">
         {section_html}
       </div>"""
+    return production_html + entity_html
+
+
+def context_metadata_chips(company_values, venue_values, city_values):
+    chips = []
+    for value in company_values[:4]:
+        chips.append(entity_chip("companies", value, "Company"))
+    for value in venue_values[:3]:
+        chips.append(entity_chip("venues", value, "Venue"))
+    for value in city_values[:3]:
+        chips.append(entity_chip("cities", value, "City"))
+    return chips
+
+
+def people_metadata_chips(md):
+    chips = []
+    for type_name, prefix, key, limit in ROLE_FIELDS:
+        for value in as_list(md.get(key))[:limit]:
+            chips.append(entity_chip(type_name, value, prefix, "people"))
+    return chips
+
+
+def production_title_links(production_values):
+    group_html = []
+    for title in production_values:
+        title_href = entity_href("productions", title)
+        group_html.append(
+            f"""<section class="article-production-group article-production-title-only">
+            <h2><a class="production-title-link" href="{title_href}">{escape(str(title))}</a></h2>
+          </section>"""
+        )
+    if not group_html:
+        return ""
+    return f"""<div class="article-production-groups article-production-groups-simple">
+          <span class="article-entity-label">Reviewed Productions</span>
+          <div class="article-production-group-list">
+          {"".join(group_html)}
+          </div>
+        </div>"""
 
 
 def production_group_chips(production_groups):
@@ -281,16 +323,18 @@ def production_group_chips(production_groups):
     for group in ordered_groups:
         title = first_scalar(group, "production_title", "Untitled production")
         chips = []
-        for value in as_list(group.get("venue")):
-            chips.append(entity_chip("venues", value, "Venue", "context"))
-        for value in as_list(group.get("company")):
-            chips.append(entity_chip("companies", value, "Company", "context"))
-        for value in as_list(group.get("city")):
-            chips.append(entity_chip("cities", value, "City", "context"))
-        for type_name, prefix, key, limit in ROLE_FIELDS:
-            for value in as_list(group.get(key))[:limit]:
-                chips.append(entity_chip(type_name, value, prefix, "people"))
-        chips_html = "".join(chips)
+        chips_html = group.get("_chips_html")
+        if chips_html is None:
+            for value in as_list(group.get("venue")):
+                chips.append(entity_chip("venues", value, "Venue", "context"))
+            for value in as_list(group.get("company")):
+                chips.append(entity_chip("companies", value, "Company", "context"))
+            for value in as_list(group.get("city")):
+                chips.append(entity_chip("cities", value, "City", "context"))
+            for type_name, prefix, key, limit in ROLE_FIELDS:
+                for value in as_list(group.get(key))[:limit]:
+                    chips.append(entity_chip(type_name, value, prefix, "people"))
+            chips_html = "".join(chips)
         if not chips_html:
             chips_html = '<span class="entity-more">No production-specific chips</span>'
         title_href = entity_href("productions", title)
