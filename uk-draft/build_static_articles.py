@@ -9,7 +9,7 @@ ROOT = Path(__file__).resolve().parent
 PROJECT_ROOT = ROOT.parent.parent
 DATA_PATH = ROOT / "data" / "reviews.json"
 ARTICLES_DIR = ROOT / "articles"
-ASSET_VERSION = "17"
+ASSET_VERSION = "18"
 
 ROLE_FIELDS = [
     ("directors", "Director", "director", 4),
@@ -258,7 +258,6 @@ def metadata_chips(record):
         return production_html
     section_html = "\n        ".join(
         f"""<section class="article-entity-section article-entity-section-{group}">
-          <span class="article-entity-label">{escape(label)}</span>
           <nav class="article-entities" aria-label="{escape(label)} metadata chips">{chips}</nav>
         </section>"""
         for label, chips, group in sections
@@ -279,6 +278,13 @@ def grouped_values(production_groups, key):
     return values
 
 
+def grouped_role_values(production_groups):
+    values = set()
+    for key in [field_key for _, _, field_key, _ in ROLE_FIELDS]:
+        values.update(grouped_values(production_groups, key))
+    return values
+
+
 def shared_metadata_chips(md, production_groups):
     sections = []
     company_values = [value for value in as_list(md.get("company")) if value not in grouped_values(production_groups, "company")]
@@ -289,10 +295,11 @@ def shared_metadata_chips(md, production_groups):
         sections.append(("Shared Context", "".join(context_chips), "context"))
 
     people_chips = []
+    assigned_people = grouped_role_values(production_groups)
     for type_name, prefix, key, limit in ROLE_FIELDS:
         assigned = grouped_values(production_groups, key)
         for value in as_list(md.get(key))[:limit]:
-            if value not in assigned:
+            if value not in assigned and value not in assigned_people:
                 people_chips.append(entity_chip(type_name, value, prefix, "people"))
     if people_chips:
         sections.append(("Shared People", "".join(people_chips), "people"))
@@ -301,7 +308,6 @@ def shared_metadata_chips(md, production_groups):
         return ""
     section_html = "\n        ".join(
         f"""<section class="article-entity-section article-entity-section-{group}">
-          <span class="article-entity-label">{escape(label)}</span>
           <nav class="article-entities" aria-label="{escape(label)} metadata chips">{chips}</nav>
         </section>"""
         for label, chips, group in sections
@@ -342,7 +348,6 @@ def production_title_links(production_values):
     if not group_html:
         return ""
     return f"""<div class="article-production-groups article-production-groups-simple">
-          <span class="article-entity-label">Reviewed Productions</span>
           <div class="article-production-group-list">
           {"".join(group_html)}
           </div>
@@ -370,19 +375,20 @@ def production_group_chips(production_groups):
                 for value in as_list(group.get(key))[:limit]:
                     chips.append(entity_chip(type_name, value, prefix, "people"))
             chips_html = "".join(chips)
-        if not chips_html:
-            chips_html = '<span class="entity-more">No production-specific chips</span>'
         title_href = entity_href("productions", title)
+        nav_html = (
+            f'\n            <nav class="article-entities" aria-label="{escape(title)} production metadata chips">{chips_html}</nav>'
+            if chips_html
+            else ""
+        )
         group_html.append(
             f"""<section class="article-production-group">
-            <h2><a class="production-title-link" href="{title_href}">{escape(title)}</a></h2>
-            <nav class="article-entities" aria-label="{escape(title)} production metadata chips">{chips_html}</nav>
+            <h2><a class="production-title-link" href="{title_href}">{escape(title)}</a></h2>{nav_html}
           </section>"""
         )
     if not group_html:
         return ""
     return f"""<div class="article-production-groups">
-          <span class="article-entity-label">Reviewed Productions</span>
           <div class="article-production-group-list">
           {"".join(group_html)}
           </div>
