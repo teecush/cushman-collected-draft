@@ -9,7 +9,7 @@ ROOT = Path(__file__).resolve().parent
 PROJECT_ROOT = ROOT.parent.parent
 DATA_PATH = ROOT / "data" / "reviews.json"
 ARTICLES_DIR = ROOT / "articles"
-ASSET_VERSION = "8"
+ASSET_VERSION = "9"
 
 ROLE_FIELDS = [
     ("directors", "Director", "director", 4),
@@ -55,8 +55,11 @@ def parse_frontmatter(path):
     lines = frontmatter_text.splitlines()
     data = {}
     current_key = None
-    for line in lines:
+    i = 0
+    while i < len(lines):
+        line = lines[i]
         if not line.strip():
+            i += 1
             continue
         stripped = line.strip()
         if stripped.startswith("- ") and current_key:
@@ -64,21 +67,80 @@ def parse_frontmatter(path):
             if item and item not in ("[]", "''", '""'):
                 if isinstance(data.get(current_key), list):
                     data[current_key].append(item)
+            i += 1
             continue
         if not line.startswith(" ") and ":" in line:
             key, raw_value = line.split(":", 1)
             current_key = key.strip()
             value = raw_value.strip()
+            if current_key == "production_groups" and value in ("", "[]"):
+                groups, i = parse_production_groups(lines, i + 1)
+                data[current_key] = groups
+                continue
             if value in ("", "[]"):
                 data[current_key] = []
             else:
                 data[current_key] = strip_quotes(value)
+            i += 1
             continue
         if line.startswith(" ") and current_key and isinstance(data.get(current_key), str):
             data[current_key] = f"{data[current_key]} {line.strip()}".strip()
+            i += 1
             continue
         current_key = None
+        i += 1
     return data
+
+
+def parse_group_value(value):
+    value = strip_quotes(value)
+    if value in ("[]", "''", '""'):
+        return []
+    return value
+
+
+def parse_production_groups(lines, start):
+    groups = []
+    current_group = None
+    current_field = None
+    i = start
+    while i < len(lines):
+        line = lines[i]
+        if not line.startswith(" "):
+            break
+        stripped = line.strip()
+        if not stripped:
+            i += 1
+            continue
+        if line.startswith("  - "):
+            current_group = {}
+            groups.append(current_group)
+            current_field = None
+            item = line[4:].strip()
+            if ":" in item:
+                key, raw_value = item.split(":", 1)
+                value = raw_value.strip()
+                current_group[key.strip()] = parse_group_value(value) if value else []
+                current_field = key.strip()
+            i += 1
+            continue
+        if current_group is not None and line.startswith("    ") and ":" in stripped:
+            key, raw_value = stripped.split(":", 1)
+            value = raw_value.strip()
+            current_group[key.strip()] = parse_group_value(value) if value else []
+            current_field = key.strip()
+            i += 1
+            continue
+        if current_group is not None and current_field and line.startswith("      - "):
+            item = parse_group_value(line.strip()[2:].strip())
+            if item:
+                if not isinstance(current_group.get(current_field), list):
+                    current_group[current_field] = []
+                current_group[current_field].append(item)
+            i += 1
+            continue
+        i += 1
+    return groups, i
 
 
 def markdown_body(path):
@@ -162,6 +224,10 @@ def entity_chip(type_name, label, prefix="", group="context", featured=False):
 
 def metadata_chips(record):
     md = parse_frontmatter(record.get("markdownPath", ""))
+    production_groups = md.get("production_groups")
+    if production_groups:
+        return production_group_chips(production_groups)
+
     production_values = as_list(md.get("production_title")) or as_list(record.get("productions"))
     company_values = as_list(md.get("company"))
     venue_values = as_list(md.get("venue")) or as_list(record.get("venues"))
@@ -202,6 +268,43 @@ def metadata_chips(record):
       </div>"""
 
 
+def production_group_chips(production_groups):
+    ordered_groups = sorted(
+        [group for group in production_groups if isinstance(group, dict)],
+        key=lambda group: int(group.get("order") or 999),
+    )
+    group_html = []
+    for group in ordered_groups:
+        title = first_scalar(group, "production_title", "Untitled production")
+        chips = []
+        for value in as_list(group.get("venue")):
+            chips.append(entity_chip("venues", value, "Venue", "context"))
+        for value in as_list(group.get("company")):
+            chips.append(entity_chip("companies", value, "Company", "context"))
+        for value in as_list(group.get("city")):
+            chips.append(entity_chip("cities", value, "City", "context"))
+        for type_name, prefix, key, limit in ROLE_FIELDS:
+            for value in as_list(group.get(key))[:limit]:
+                chips.append(entity_chip(type_name, value, prefix, "people"))
+        chips_html = "".join(chips)
+        if not chips_html:
+            chips_html = '<span class="entity-more">No production-specific chips</span>'
+        group_html.append(
+            f"""<section class="article-production-group">
+            <h2>{escape(title)}</h2>
+            <nav class="article-entities" aria-label="{escape(title)} production metadata chips">{chips_html}</nav>
+          </section>"""
+        )
+    if not group_html:
+        return ""
+    return f"""<div class="article-production-groups">
+          <span class="article-entity-label">Reviewed Productions</span>
+          <div class="article-production-group-list">
+          {"".join(group_html)}
+          </div>
+        </div>"""
+
+
 def body_html(body):
     parts = []
     for paragraph in str(body or "").split("\n\n"):
@@ -231,6 +334,11 @@ def enrich_record(record):
     enriched["venue"] = as_list(md.get("venue")) or as_list(record.get("venues"))
     enriched["city"] = as_list(md.get("city")) or as_list(record.get("cities"))
     enriched["roles"] = roles
+    production_groups = md.get("production_groups", [])
+    if production_groups:
+        enriched["production_groups"] = production_groups
+    else:
+        enriched.pop("production_groups", None)
     category = first_scalar(md, "article_category") or first_scalar(md, "genre") or record.get("category", "")
     enriched["category"] = category
     enriched["people"] = as_list(md.get("people"))
