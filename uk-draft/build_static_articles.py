@@ -42,23 +42,28 @@ def parse_frontmatter(path):
     if not full_path.exists():
         return {}
     text = full_path.read_text(encoding="utf-8", errors="ignore")
-    if not text.startswith("---"):
+    if not text.startswith("---\n"):
         return {}
-    parts = text.split("---", 2)
-    if len(parts) < 3:
+    body_marker = text.find("\nbody: |")
+    closing = text.find("\n---", 4)
+    if body_marker != -1 and (closing == -1 or body_marker < closing):
+        frontmatter_text = text[4:body_marker]
+    elif closing != -1:
+        frontmatter_text = text[4:closing]
+    else:
         return {}
-    lines = parts[1].splitlines()
+    lines = frontmatter_text.splitlines()
     data = {}
     current_key = None
     for line in lines:
         if not line.strip():
             continue
-        if line.startswith("- ") and current_key:
-            item = strip_quotes(line[2:].strip())
+        stripped = line.strip()
+        if stripped.startswith("- ") and current_key:
+            item = strip_quotes(stripped[2:].strip())
             if item and item not in ("[]", "''", '""'):
-                if not isinstance(data.get(current_key), list):
-                    data[current_key] = []
-                data[current_key].append(item)
+                if isinstance(data.get(current_key), list):
+                    data[current_key].append(item)
             continue
         if not line.startswith(" ") and ":" in line:
             key, raw_value = line.split(":", 1)
@@ -69,6 +74,9 @@ def parse_frontmatter(path):
             else:
                 data[current_key] = strip_quotes(value)
             continue
+        if line.startswith(" ") and current_key and isinstance(data.get(current_key), str):
+            data[current_key] = f"{data[current_key]} {line.strip()}".strip()
+            continue
         current_key = None
     return data
 
@@ -78,7 +86,18 @@ def markdown_body(path):
     if not full_path.exists():
         return ""
     text = full_path.read_text(encoding="utf-8", errors="ignore")
-    if text.startswith("---"):
+    if text.startswith("---\n"):
+        marker = text.find("\nbody: |")
+        if marker != -1:
+            body_lines = []
+            for line in text[marker + len("\nbody: |") :].splitlines():
+                if line.startswith("  "):
+                    body_lines.append(line[2:])
+                elif not line.strip():
+                    body_lines.append("")
+                else:
+                    break
+            return "\n".join(body_lines).strip()
         parts = text.split("---", 2)
         if len(parts) >= 3:
             return parts[2].strip()
@@ -212,6 +231,12 @@ def enrich_record(record):
     enriched["venue"] = as_list(md.get("venue")) or as_list(record.get("venues"))
     enriched["city"] = as_list(md.get("city")) or as_list(record.get("cities"))
     enriched["roles"] = roles
+    category = first_scalar(md, "article_category") or first_scalar(md, "genre") or record.get("category", "")
+    enriched["category"] = category
+    enriched["people"] = as_list(md.get("people"))
+    enriched["productions"] = enriched["production_title"]
+    enriched["venues"] = enriched["venue"]
+    enriched["cities"] = enriched["city"]
     return enriched
 
 
