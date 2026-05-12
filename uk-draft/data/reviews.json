@@ -1,7 +1,7 @@
 {
   "title": "Cushman Collected - UK Collection Draft Viewer",
-  "generatedFrom": "local publish_verified Guardian/Observer markdown, raw JPGs not copied to GitHub Pages",
-  "count": 466,
+  "generatedFrom": "guardian_archive/markdown clean records plus appended F-QA-pass records, existing numbering preserved",
+  "count": 479,
   "records": [
     {
       "number": 1,
@@ -38840,6 +38840,1115 @@
         "lighting_designer": [
           "Paul Pyant"
         ],
+        "sound_designer": [],
+        "producer": [],
+        "dramaturg": [],
+        "performers": [],
+        "musicians": [],
+        "artists": []
+      }
+    },
+    {
+      "number": 467,
+      "id": "258617570",
+      "title": "Lower Fifth",
+      "author": "Robert Cushman",
+      "publication": "The Observer",
+      "section": "Review",
+      "date": "1976-01-11",
+      "year": "1976",
+      "category": "Theatre Review",
+      "url": "https://theguardian.newspapers.com/image/258617570/?match=1&terms=%22robert%20cushman%22",
+      "markdownPath": "guardian_archive/markdown/1976.01.11.The_Observer.258617570.md",
+      "productions": [
+        "The Browning Version",
+        "Carol's Christmas"
+      ],
+      "venues": [
+        "King's Head"
+      ],
+      "cities": [
+        "London"
+      ],
+      "people": [],
+      "body": "Not unexpectedly Terence Rattigan's The Browning Version, 28 years old, stands up very well in revival at the King's Head. It has, it must be confessed, a fair amount to stand up to; Rattigan's dialogue may be understated, but his play is made up of confrontations and these need more space than the huddled stage of a pub theatre can afford.\n\nThe rhythm of Stewart Trotter's production is not firm enough to compensate; or at least it was not on the first nervous night. This was characterised by a succession of timorous exits and entrances, as the actors manoeuvred between a small door and a large folding screen. This object was prescribed by the author and his executants on this occasion may well have cursed him for it.\n\nIt is characteristic of Rattigan, though, that having ordered the screen, and made one of his characters remark on its kindness to eavesdroppers, he makes very little use of it. This is not carelessness; it is sophistication. Rattigan finds space, within the confines of a long one-act play, not merely to tell his story, but to comment on his own means of telling it: on what he doesn't use as well as what he does. The title, you may remember, refers to a translation of the Agamemnon, a story, as Rattigan's schoolmaster hero remarks, of a murderous wife and cuckolded husband.\n\nThis is precisely the situation of his own marriage, though it is spiritual rather than physical assassination that his partner has in view. About to depart from a school where he has been at worst loathed and at best taken for granted, Andrew Crocker-Harris, known as \"The Crock\" and worse, finds the courage to insist that, for once, he will not be passed over. He, and not a more popular master, will make the closing speech at the end-of-term assembly. It may be an anti-climax but, as he says, an anti-climax can be effective.\n\nThe elegance of this closing line is rather spoiled in Mr Trotter's production by a thunderous delivery from Nigel Stock; we are given no chance to judge the effectiveness of anti-climax because what we are offered is a climax, perhaps to make up for the excitement we have been denied in earlier scenes where the text provides for it. Mrs Crocker-Harris's most venomous action is to cast doubt on the sincerity of the boy who has presented her husband with a copy of the Browning version as a farewell present; it should chill the blood, but it passes by quite casually here.\n\nPerhaps it is the fault of the play, or more precisely of my previous acquaintance with it. Rattigan's method of progressive revelation is particularly subject to the law of diminishing returns; people may keep their power to surprise, but not incidents. And apart from the Crock, the characters here are thin. The boy Taplow (a tenacious name in school fiction, as will be recognised by students of Professor Jimmy Edwards) veers quite arbitrarily from scorn to affection, and though Rattigan is careful to make his protagonist fair to his wife, he cannot manage to be quite that generous himself while she is on the stage. The result is that though The Browning Version compels attention (it is quite remorselessly watchable), it does not always reward it.\n\nMr Stock as the Crock is pretty good, but not really right. He is pudgy and crumpled not only in soul but in body, and so gives his author's game away from the start. He is not merely soft-centred (as the writing finally proves him to be), but soft-coated; when he is identified as the Himmler of the Lower Fifth, it seems odd and amusing rather than sad and inevitable. The rest of the acting is undistinguished, or the best of it is; Barbara Jefford is an actress I am always glad to see, but I feel she would be more at home as the Clytemnestra whom the play invokes than as the small-time harpy it actually provides.\n\nThe play, being less than great, suffers at the moment from its concerti with a style and a milieu we have grown unused to taking seriously, but (to answer the obvious question) I would be puzzled to name a current play that would revive as well in another 30 years.\n\n* * *\n\nPlayed with it is Carol's Christmas by Frank Marcus, an afterpiece on the first night, but a curtain-raiser thenceforward. Future audiences will thus be spared a bathos which threw a harshly ironic light on Crocker-Harris's last line. Mr Marcus is the only writer known to me who still takes waif-heroines seriously. This one is a prostitute who receives a visit from Santa Claus.",
+      "production_title": [
+        "The Browning Version",
+        "Carol's Christmas"
+      ],
+      "company": [],
+      "venue": [
+        "King's Head"
+      ],
+      "city": [
+        "London"
+      ],
+      "roles": {
+        "director": [
+          "Stewart Trotter"
+        ],
+        "playwright": [
+          "Terence Rattigan",
+          "Frank Marcus"
+        ],
+        "actors": [
+          "Nigel Stock",
+          "Barbara Jefford"
+        ],
+        "composer_lyricist": [],
+        "musical_director": [],
+        "choreographer": [],
+        "set_designer": [],
+        "costume_designer": [],
+        "lighting_designer": [],
+        "sound_designer": [],
+        "producer": [],
+        "dramaturg": [],
+        "performers": [],
+        "musicians": [],
+        "artists": []
+      }
+    },
+    {
+      "number": 468,
+      "id": "258620075",
+      "title": "Oh no you don't!",
+      "author": "Robert Cushman",
+      "publication": "The Observer",
+      "section": "Review",
+      "date": "1976-01-25",
+      "year": "1976",
+      "category": "Theatre Review",
+      "url": "https://theguardian.newspapers.com/image/258620075/?match=1&terms=%22robert%20cushman%22",
+      "markdownPath": "guardian_archive/markdown/1976.01.25.The_Observer.258620075.md",
+      "productions": [
+        "I DO! I DO!",
+        "Cakewalk",
+        "Funny Peculiar",
+        "Henry V"
+      ],
+      "venues": [
+        "Phoenix",
+        "Hampstead",
+        "Mermaid",
+        "Aldwych"
+      ],
+      "cities": [
+        "London"
+      ],
+      "people": [],
+      "body": "The new policy at the Phoenix--short runs, movie stars and season tickets--is inaugurated with I DO! I DO!, a two-handed musical about marriage that should do a lot for divorce.\n\nAt curtain-rise Rock Hudson takes Juliet Prowse. Over the rest of the evening they age 50 years. (The audience come out feeling pretty old, too.) They mature at different rates. Mr Hudson, sensing perhaps that grey hair becomes him, makes straight for middle age and stays there a good long time. Miss Prowse, on the other hand, remains pert and youthful until the very last moment: a moment at which both performers advance to the footlights, sit down, get out their paint-boxes, and mercilessly line their faces. Having thus earned their pensions, they totter (all old people totter; it's a rule) out of the house which they have inhabited for the duration.\n\nBut where do they go? This is the first time that we have been led to believe there is any world outside. When we think about it, we realise there must be, and we also realise that in 50 years it must have changed somewhat. We are never even told which 50 years are in question; the only clues are that Mr Hudson wears a funny old nightcap on his wedding night (until Miss Prowse giggles him out of it) and that about 10 years later, or so I would guess, they can apparently manage to keep a houseful of domestics (unseen of course) on what Mr Hudson makes from successful novels that sell 3,000 copies.\n\nBut, confusingly enough, the dialogue throughout reeks of the fifties--or at least of that decade's omnipresent TV comedies of domesticity. Stolid Mr Hudson, dizzy Miss Prowse: the eternal couple. And nothing happens to them, even inside the house. Once or twice, there are hints that they may be falling out of love, but a single song is enough to restore them to bliss. The tagline is something about marriage being difficult but worthwhile. It doesn't square with the facts of the show, which are that marriage is too easy to be worth the attention of mature people. If you're going in for it, say the authors, be like Miss Prowse: don't grow up.\n\nLittle good that his big number is followed almost immediately by Miss Prowse's one opportunity to stretch her own nimble legs, providing the only moments that approach excitement. Her voice, though, is a squawk. The score dates from 1966, and if I had heard no worse since I would count myself lucky. I found the first half of the show supportable, the second (where inertia really runs riot) not.\n\n* * *\n\nNeither, I am afraid, is there more joy in Cakewalk (Hampstead), an even smaller musical though with a larger cast. There are five performers, all pleasing; Dinah Stabb projects a schoolteacherish primness which makes her outbursts of song agreeably surprising, Gaye Brown, on the other hand, is a red-hot lady for whom song is a natural condition; she might be an English Elaine Stritch, and her Theatre Workshop experience has made her adept at distancing herself from ramshackle surroundings.\n\nThis is a valuable gift for a performer in Cakewalk since it has virtually no structure. It does have a setting and some kind of ambience; we are on a Hollywood island inhabited by hard drinkers and tempestuous ladies. It suggests Rain remade as a vehicle for Humphrey Bogart and Carmen Miranda. It was suggested to me afterwards that the idea was to parody nostalgia, but that is something that cannot be done. You indulge nostalgia or you let it alone. This show is an indulger. The music is variable but even the good numbers are sapped of effect by the script, which is limp to nonexistent. A show composed simply of good-humoured songs ought, in theory, to work; but in practice it is always dejecting. We need to be given some reason for being there.\n\n* * *\n\nFunny Peculiar (Mermaid) by Mike Stott is the newest of the sex-manual comedies. Like The Bed Before Yesterday and such, it not only preaches liberation but practises it. A good laugh is always liberating, and this piece has more of them than any other play in London. To be sure, they are mostly concentrated in the second act; the journey to the interval is tedious, redeemed only by a few bright lines. Mr Stott, a charitable dramatist, expends too much time on a couple of characters whom neither he nor his actors can make interesting. But his hero, Trevor (Richard Beckinsale), shows signs of life from the start; he is a small-town grocer who is understandably perturbed when the local vicar, suspected of homosexuality, hangs himself from his own bell-rope, but who cannot quite communicate the promptings of his permissive conscience to his wife. He wants to experiment, and she cannot bring herself to like the idea.\n\nThe play becomes enjoyably farcical when Trevor is seduced by a voluptuous customer and has to hop naked out of the window to escape her husband; touching when his wife (Julie Walters) finds out and tries painfully to define the limits of her own tolerance; and downright uproarious when Trevor relieves his frustrations by a prolonged bun-fight with a proud confectioner (Peter Postlethwaite). This scene is brilliantly directed by Alan Dossor.\n\nMr Stott has not quite worked out to what extent Trevor is to be taken as the comic victim of his own principles, or indeed whether he is fooling himself about their integrity. Having met with a slight accident, he spends the last scene encased in plaster, which is not a good position from which to communicate moral niceties; and the final resolution is, both ethically and theatrically, a bit glib. However this closing scene is also the occasion of a hilarious device for whose invention Mr Stott may be forgiven almost anything.\n\n* * *\n\nHenry V (Aldwych) lacks the invigorating back-to-the-wall quality which distinguished its first night at Stratford: an occasion on which the RSC fought free against odds as heavy as those at Agincourt. Farrah's sets now seem nothing special; they depended a lot on space, with which the Aldwych is far less generous. But individual performances are firmer, and the play interestingly emerges as having little to do with war. That aspect is covered at second-hand, through the excellent offices of Emrys James's friendly Chorus. But the main burden lies on the tension in Alan Howard's Henry, not between man and warrior, but simply between man and king. He yearns, not quite wholeheartedly, to be the one; performs--arduously but not without satisfaction--the duties of the other. This lends a peculiar excitement both to the ceremony speech and the encounters with Dan Maden's Williams, who is again unaffected. The other actors move through Terry Hands's production with a confidence that does both parties credit.",
+      "production_title": [
+        "I DO! I DO!",
+        "Cakewalk",
+        "Funny Peculiar",
+        "Henry V"
+      ],
+      "company": [
+        "Royal Shakespeare Company"
+      ],
+      "venue": [
+        "Phoenix",
+        "Hampstead",
+        "Mermaid",
+        "Aldwych"
+      ],
+      "city": [
+        "London"
+      ],
+      "roles": {
+        "director": [
+          "Alan Dossor",
+          "Terry Hands"
+        ],
+        "playwright": [
+          "Mike Stott",
+          "William Shakespeare"
+        ],
+        "actors": [
+          "Rock Hudson",
+          "Juliet Prowse",
+          "Dinah Stabb",
+          "Gaye Brown",
+          "Richard Beckinsale",
+          "Julie Walters",
+          "Peter Postlethwaite",
+          "Emrys James",
+          "Alan Howard",
+          "Dan Maden"
+        ],
+        "composer_lyricist": [],
+        "musical_director": [],
+        "choreographer": [],
+        "set_designer": [
+          "Farrah"
+        ],
+        "costume_designer": [],
+        "lighting_designer": [],
+        "sound_designer": [],
+        "producer": [],
+        "dramaturg": [],
+        "performers": [],
+        "musicians": [],
+        "artists": []
+      }
+    },
+    {
+      "number": 469,
+      "id": "258621231",
+      "title": "Sir John in splendour",
+      "author": "Robert Cushman",
+      "publication": "The Observer",
+      "section": "Review",
+      "date": "1976-02-01",
+      "year": "1976",
+      "category": "Theatre Review",
+      "url": "https://theguardian.newspapers.com/image/258621231/?match=1&terms=%22robert%20cushman%22",
+      "markdownPath": "guardian_archive/markdown/1976.02.01.The_Observer.258621231.md",
+      "productions": [
+        "Henry IV Part I",
+        "Henry IV Part II",
+        "Henry V",
+        "Comedians",
+        "Love's Old Sweet Song",
+        "The Ginger Man"
+      ],
+      "venues": [
+        "Aldwych",
+        "Wyndham's",
+        "Greenwich",
+        "Shaw"
+      ],
+      "cities": [
+        "London"
+      ],
+      "people": [],
+      "body": "The Royal Shakespeare Company, journeying between Warwickshire and London, seldom remains in a state of equilibrium. Of the RSC histories now on view at the Aldwych, two--Henry V and Henry IV Part II--now seem less exciting than they did last year at Stratford, but the remaining instalment, Henry IV Part I, has improved enormously.\n\nFirst and foremost, Brewster Mason no longer has laryngitis, so the play no longer lacks an effective Falstaff. Effective is actually a mean word to describe Mr Mason in this role, which represents the summit of his career. He laid the groundwork years ago when he portrayed the Falstaff of The Merry Wives of Windsor as a stately victim, majestic even in defeat. He is much the same character now, never a buffoon but certainly the funniest Falstaff I have seen. He is the first in my experience whose words are as rotund as his belly; he lets them slip in his own good time but effortlessly.\n\nThis is a quality that has always distinguished him in a pretty earnest company and it is true that when you consider his past performances there is nothing startlingly original about this one. Mr Mason has always been a massive gentlemanly actor with a weighty presence and a rolling voice; all he apparently does as Falstaff is to magnify these attributes to their fullest and richest.\n\nThe only variable with Mr Mason is his worldliness: the precise balance he strikes between geniality and cynicism. If there is to be any criticism of his Falstaff it may be that he is too sunny throughout. Even when he parades his infirmities (\"how subject we old men are to this vice of lying\") we do not believe in their reality; he is too disarming. It is a little difficult to see in what way he can possibly be misleading Hal; and though this may be all right for Part I--which may be regarded as a self-contained play with a happy ending--it weakens Part II.\n\nI still feel that in this play Falstaff should be sourer, less confident of his future; but he does now have a splendidly rattled moment at the end of the tavern scene, thrusting the recalcitrant Prince into the arms of Doll Tearsheet. \"His grace says that which his flesh and blood rebels against\" and Falstaff's only hope lies in encouraging the rebellion and destroying the grace.\n\nIn order to keep the outcome an open question Terry Hands, the director, has been forced into some shuffling. One problem of presenting the two plays together is that Hal's reconciliation with his father seems so complete at the end of Part I as to make their further estrangement in Part II incomprehensible. So the two of them have artificially to be kept at loggerheads: Emrys James presents a crafty, paranoid usurper with the gift of alienating everyone; he legitimately enrages Stuart Wilson's Hotspur (an attractive performance, but lightweight) and has much the same effect on his son. It is a little surprising that he commands the loyalty of his courtiers, not all of whom are creeps.\n\nThere are lines which can be held to justify Mr James's interpretation, but he has to do a suspicious amount of heavy acting to get by with the others. His death seems to go on for ever; and Alan Howard as Hal has somehow mislaid the agonised assumption of royalty that was previously the summation of his performance. He remains patchily magnificent, with some moments of ringing command and others of beguiling ease. His early attitude to his companions (\"I know you all\") is neither indulgent nor Machiavellian: just studiously playful.\n\nLater on, with his first battle behind him, he outlines with distinction a weary struggle between two kinds of distaste; homesick for the tavern when at court and for the court when in the tavern: happy nowhere. The habit of play-acting grows on him (his mimicry of his father is excellent) and once king he plays a fearful tyrant for the Lord Chief Justice before forgiving him. This is a faultless interpretation which only fits of manner prevent from turning into a faultless execution.\n\nMr Hands has laid the plays out beautifully, in stunningly economical sets by Farrah. In Part I he keeps the strands of action running in parallel by overlapping exits and entrances. At the beginning, Hal relaxes at one side of the stage while his father, miles away, denounces him on the other. At the close of Part II, while a couple of lords discuss the coming war with France, Falstaff remains silent with his back to us, reminding us of what we shall miss in Henry V. The Gloucestershire scenes are the finest comedy in English and I have never seen them so well done; Sydney Bromley's busy Shallow is balanced by Trevor Peacock's uproarious Silence (\"I'm sorry, I'll read that again\") (Mr Peacock is in glorious plumage this season with a fine sycophantic Poins and in Henry V an excellent Fluellen.) Both parts may, on occasion, be seen on the same day; but I think they will yield more if taken separately. They are lively enough to hold attention easily for three hours but, unlike the last Stratford history cycle, they lack the supreme excitement that keeps you in thrall for six.\n\n* * *\n\nTrevor Griffiths's Comedians, transferred to Wyndham's, remains the most vital play and production in London. Jimmy Jewel, the old master, grows and grows, though his longer speeches can still go slack; Kenneth Cranham, who now plays Gethin the rebel clown, is strong on rebellion but short on comedy. His predecessor, Jonathan Pryce, was a grotesque dandy and sharply aggressive; Mr Cranham is bluntly aggressive, doing ample justice to the play's arguments but not to its style.\n\n* * *\n\nAt Greenwich Love's Old Sweet Song, written and directed by John Hale, is equally shapeless and horribly repetitive. A mother and daughter maim their menfolk, across two continents, pausing only to exchange self-pity. Finally someone tells them how horrible they are, which is a relief but only increases the imbalance. The evening's only pleasure is the sight of the theatre's founder-director, Ewan Hooper, acting on his own stage; first erect and military, then crumpled and civilian, managing both moods with consummate tact.\n\n* * *\n\nThese transfers from the National and RSC dwarf the week's new offerings. At the Shaw there is a revival of J. P. Donleavy's The Ginger Man, set among American student-expatriates in Dublin in the fifties. The combination of lingoes makes it worth the hearing, but not necessarily worth the watching. It is a procession of incident (four characters, but the script is all dialogue) which could be unified only by an electric performance in the title-role. John Shrapnel, despite his arrestingly jagged voice, is placid. The play comes to life only when he charmingly seduces a three-quarters willing spinster whom Helen Ryan makes a fascinating mixture of primness and provocation. Hers is one of the best quiet performances in London.",
+      "production_title": [
+        "Henry IV Part I",
+        "Henry IV Part II",
+        "Henry V",
+        "Comedians",
+        "Love's Old Sweet Song",
+        "The Ginger Man"
+      ],
+      "company": [
+        "Royal Shakespeare Company",
+        "National Theatre"
+      ],
+      "venue": [
+        "Aldwych",
+        "Wyndham's",
+        "Greenwich",
+        "Shaw"
+      ],
+      "city": [
+        "London"
+      ],
+      "roles": {
+        "director": [
+          "Terry Hands",
+          "John Hale"
+        ],
+        "playwright": [
+          "William Shakespeare",
+          "Trevor Griffiths",
+          "John Hale",
+          "J. P. Donleavy"
+        ],
+        "actors": [
+          "Brewster Mason",
+          "Emrys James",
+          "Stuart Wilson",
+          "Alan Howard",
+          "Sydney Bromley",
+          "Trevor Peacock",
+          "Jimmy Jewel",
+          "Kenneth Cranham",
+          "Jonathan Pryce",
+          "Ewan Hooper",
+          "John Shrapnel",
+          "Helen Ryan"
+        ],
+        "composer_lyricist": [],
+        "musical_director": [],
+        "choreographer": [],
+        "set_designer": [
+          "Farrah"
+        ],
+        "costume_designer": [],
+        "lighting_designer": [],
+        "sound_designer": [],
+        "producer": [],
+        "dramaturg": [],
+        "performers": [],
+        "musicians": [],
+        "artists": []
+      }
+    },
+    {
+      "number": 470,
+      "id": "258622468",
+      "title": "The Other Hamlet",
+      "author": "Robert Cushman",
+      "publication": "The Observer",
+      "section": "Review",
+      "date": "1976-02-08",
+      "year": "1976",
+      "category": "Theatre Review",
+      "url": "https://theguardian.newspapers.com/image/258622468/?match=1&terms=%22robert%20cushman%22",
+      "markdownPath": "guardian_archive/markdown/1976.02.08.The_Observer.258622468.md",
+      "productions": [
+        "Hamlet",
+        "Treats",
+        "Shirley MacLaine",
+        "Beetles and Buckman"
+      ],
+      "venues": [
+        "Roundhouse",
+        "Old Vic",
+        "Royal Court",
+        "Palladium",
+        "Mayfair"
+      ],
+      "cities": [
+        "London"
+      ],
+      "people": [],
+      "body": "To get good notices it helps to be dead; when the Royal Shakespeare Company's studio Hamlet was first shown to the critics at Stratford's Other Place, its director, Buzz Goodbody, was already the late; and within a week she and the production were almost legend. This coincidence offered great cause for suspicion; so did the reiterated claim that this was \"a Hamlet for our time,\" which usually means that the actor is not up to the role. The production has now transferred to the cellarage beneath the Roundhouse, and I made my way warily downstairs.\n\nI was tired, apart from anything else, of director's Shakespeare; the current National Theatre production had found me willing to forgive much crudity for the sake of plainness, speed and an exhilarating central performance. I still think that for the moment that is the way to act Shakespeare in a large theatre; not to worry the text, but to let the text worry us. But a small room imposes different rules; it shows up any kind of sloppiness. The present version, for example, done in modern costume, closes with a military take-over by a sinister Fortinbras who has come to Denmark dressed for Vietnam. Offstage the boots of his soldiers mechanically crunch. We end in fact with a rampaging cliche: which I mention at the start in order to dispose of it quickly, since it is the only blemish on what, to my surprise, I found a fascinating evening.\n\nThis is a conversational \"Hamlet\" which discovers meaning from moment to moment without (as tends to happen at the Aldwych, even in a superior product like the \"Henries\") vaingloriously brandishing it in our faces. It exhibits, not merely intelligence, but common sense. White screens slide apart for entrances and make a superbly penetrable arras. The stage, at one end of the room, puts out arms along its sides: ledges which also serve for approaches and retreats as does the centre aisle which divides the audience. We are in the middle of the action; though this is a point of strategic rather than interpretative interest. George Baker's Claudius does tend to address us, in the quietly ingratiating tones of a modern royal, as if we were his privy council, but this must be because there are no actors to spare for that function onstage. There is no consistent effort to involve the audience as participants or accomplices; Ben Kingsley's Hamlet makes far less use of us in soliloquy than does Albert Finney at the Old Vic.\n\nMr Baker presents a Claudius outwardly bland, really troubled by Ophelia's madness, more than willing to stop at one murder. His avowal of enmity to Hamlet (\"like the hectic in my blood he rages\") is a frantic admission, long pent-up. Gertrude is immature and Ophelia a baby; but age triumphs. Griffith Jones, whose Ghost haunts the play as well as the castle, and Andre Van Gyseghem, a silky Polonius, are notably more impressive here than in the histories. Mr Van Gyseghem is particularly fine when briefing Reynaldo, whom Charles Dance makes a respectfully supercilious diplomatic cadet; for once this scene fulfils its text-book function of indicating a climate of suspicion and intrigue, one which duly infects the whole play.\n\nThe colouring stops short at the central character, who here, as always, seems unaware of what kind of story he is caught up in. Ben Kingsley, compact and swarthy, looks like an unco-operative defendant at a show trial, but except when matching wits with Rosencrantz and Guildenstern (who are excellently differentiated, R being the brain and G the heavy) shows little interest in politics on any scale. If the Finney Hamlet is questioning, his is quizzical; he is continually catching himself out in histrionic gestures and shamefacedly withdrawing. This is a Hamlet who thinks he knows about acting; his advice to the Players (as an amateur suddenly granted the right to instruct professionals he should appeal to all critics) is delightful in its rapt assurance, but no less warming is the respectfully dismissive response of Bob Peck's tragedian-in-chief.\n\nEarlier his subdued treatment of the Hecuba speech has taught Hamlet a valuable lesson which, Mr Kingsley suggests, he is willing but not quite able to learn. He cannot take the simple way out; faced with the golden opportunity to kill Claudius he hurls himself against the nearest wall, desperately arguing himself (\"that would be scanned\") out of an easy solution. When, a moment later, he stabs Polonius the discovery that he has got the wrong man hardly seems to surprise him; we may suspect that he would have been slower on the draw had it been the right one. For once the Ghost seems right in referring to his purpose as \"almost blunted.\" Mr Kingsley does his incisive best to sharpen it in the meeting with the Norwegian army; but he seems too intelligent to be taken in by so obviously thuggish a Fortinbras.\n\nHe suffers, like all Hamlets, from having the crucial shift in his character take place offstage, but he compensates better than most with \"This is I, Hamlet the Dane\" delivered not as rant but as quiet assertion. And the end, the duel becoming a fevered punch-up when he realises Laertes's treachery, is excellent. Mr Kingsley has been tagged as an unromantic Hamlet; I wouldn't know about that, but he must be the most sympathetic in years. Performance and production come, as always, separately wrapped but they do not clash; and each is generous.\n\n* * *\n\nChristopher Hampton's Treats (Royal Court) has one very funny delayed-action line and other instant but less satisfying laughs. It is also well-formed, its last scene a deftly graded echo of its first. But the action is very thin, plumped up by a kind of negative significance. The characters are insulated from events outside but occasionally rebuke themselves for it. This struck me as false; people who are not bothered are not bothered about not being bothered. Anyway, if their personal lives are all they and we have got, the dramatist ought to dig into them, and Mr Hampton supplies a regulation triangle which he keeps determinedly commonplace. Jane Asher, blanched as an almond, is a sour girl who shacks up alternately with James Bolam, a bastard, and Stephen Moore, a blunderer. Mr Moore's efforts to placate Miss Asher are amusing and a touch poignant, but this is ground that both author and actor have trodden before.\n\n* * *\n\nAt the Palladium Shirley MacLaine is doing a first-class job of being irresistible, despite obstructions. Some of these are self-created; she actually tells us about her legend, which is the opposite of disarming. She goes on though to justify it; her voice, her legs, her smile are precision instruments. She makes tear-jerking material touching (she literally touches us with it in a way which, for better or worse, is only possible in the theatre) and tough stuff dazzling. Her music (of which the best, naturally, comes from \"Sweet Charity\") is by Cy Coleman, who cannot be matched for rhythm by any other popular composer in the world.\n\n* * *\n\nBeetles and Buckman (Mayfair), comedy doctors, are also rousing song-and-dancers, though not often enough. Beetles (who was ill and is now well, which is comforting) looks a touch macabre, so his function as the straighter man of the two is intriguing. They are very clever and I wish they would sing more.",
+      "production_title": [
+        "Hamlet",
+        "Treats",
+        "Shirley MacLaine",
+        "Beetles and Buckman"
+      ],
+      "company": [
+        "Royal Shakespeare Company",
+        "National Theatre"
+      ],
+      "venue": [
+        "Roundhouse",
+        "Old Vic",
+        "Royal Court",
+        "Palladium",
+        "Mayfair"
+      ],
+      "city": [
+        "London"
+      ],
+      "roles": {
+        "director": [
+          "Buzz Goodbody"
+        ],
+        "playwright": [
+          "William Shakespeare",
+          "Christopher Hampton"
+        ],
+        "actors": [
+          "Ben Kingsley",
+          "Albert Finney",
+          "George Baker",
+          "Griffith Jones",
+          "Andre Van Gyseghem",
+          "Charles Dance",
+          "Bob Peck",
+          "Jane Asher",
+          "James Bolam",
+          "Stephen Moore",
+          "Shirley MacLaine"
+        ],
+        "composer_lyricist": [
+          "Cy Coleman"
+        ],
+        "musical_director": [],
+        "choreographer": [],
+        "set_designer": [],
+        "costume_designer": [],
+        "lighting_designer": [],
+        "sound_designer": [],
+        "producer": [],
+        "dramaturg": [],
+        "performers": [
+          "Beetles and Buckman"
+        ],
+        "musicians": [],
+        "artists": []
+      }
+    },
+    {
+      "number": 471,
+      "id": "258627255",
+      "title": "Fond farewell",
+      "author": "Robert Cushman",
+      "publication": "The Observer",
+      "section": "Review",
+      "date": "1976-03-07",
+      "year": "1976",
+      "category": "Theatre Review",
+      "url": "https://theguardian.newspapers.com/image/258627255/?match=1&terms=%22robert%20cushman%22",
+      "markdownPath": "guardian_archive/markdown/1976.03.07.The_Observer.258627255.md",
+      "productions": [
+        "Tribute To The Lady",
+        "The Bells",
+        "Winter Visitors",
+        "City Sugar"
+      ],
+      "venues": [
+        "Old Vic",
+        "Royal Victoria Coffee Music Hall",
+        "Greenwich",
+        "Bush",
+        "Comedy"
+      ],
+      "cities": [
+        "London"
+      ],
+      "people": [],
+      "body": "This week the critics, in advance for once of the public, are allowed into the new National Theatre. My column next Sunday will very likely be full of its wonders. But last Saturday we witnessed the National company's last performance at the Old Vic, its 12-year home; and an event less calculated to make anyone glad at the move to the South Bank it is difficult to imagine.\n\nThe performance was entitled Tribute To The Lady and it celebrated the eccentric and indomitable Lilian Baylis who in 1914, seeing attendances flagging at her Royal Victoria Coffee Music Hall, turned \"in despair\" to Shakespeare and who, by her death in 1937, had seen her Old Vic become the most important theatre in the country. Peggy Ashcroft played her rejoicingly; at the close, acknowledging that her boys and girls were about to depart to a posh new building costing thousands and thousands and thousands of pounds (she seemed to think them mad but forgivable), she promised that if new incumbents were not found for the old place she would come back and haunt us.\n\nThis injunction was delivered much in the style of Miss Baylis's own curtain speeches; or at least in what Dame Peggy fully convinced us to have been their style. She could pat her audiences' heads a bit; if they had been especially good; but on the whole flattery of the public was not her style. She was more likely to rebuke them, in a cascading voice, full of teeth: they had come short, or not come at all. Mondays were particularly shameful for poor attendance; and an entire production of King Lear seems to have perished from neglect. On such occasions the audience were addressed as \"bounders\"; and as they bent over in their stalls and tugged guiltily at their socks they had presumably to console themselves with the reflection that their task-mistress must have loved them, so to chastise them.\n\nThe real Miss Baylis, as was made clear by an actual recording, did not sound much like Dame Peggy; her voice had a double twang, part Cockney, part South African. Nor, I would guess, was she as endearingly aware of her own outrageousness as Dame Peggy seemed to be. But if not a historical facsimile, her attacking eccentric was a magnificent creation. This actress has not knocked me so completely out since The Wars of the Roses (not quite as long ago as it sounds); and never before has she made me laugh, though here she overflowed with comic energy. She seemed as grateful for its release as anyone; and it was this sense of liberation that pervaded the occasion.\n\nEarlier Sir John Gielgud had given us a superb, indeed revelatory, account of Hamlet's \"rogue and peasant slave\" soliloquy, marking, with a precision I have never heard before, the transition from ungoverned emotion to disciplined thought: \"About, my brain.\" Later Ralph Richardson wandered on to the stage and ambled around it for several heavenly minutes reminiscing. He then waylaid two unsuspecting fellow-actors who found themselves supporting him in the barge scene from Antony and Cleopatra. There should, of course, have been a third knight. The absence through illness of Laurence Olivier, whose career has been more closely linked with the Vic than that of any other actor, made the evening incomplete. He was to have read the narration; Albert Finney deputised with great good-humour.\n\nA couple of nights later I passed the Vic in its newly darkened state; already it looks sad and peeling. This is the first time it has ever been closed with no company imminent to open it again. Anybody who has grown up in London, interested in theatre, must have received part of his education there. Mine began in 1951: Henry V, with Alec Clunes, directed by Glen Byam Shaw, and, if anyone asks you, definitive. I grieve and hope for the place as much as anyone: the fact that it has now had a perfect requiem is the more reason for not laying it to rest.\n\nMiss Baylis's attitude to her plays, her players and her audiences--proprietorial, committed, and, except with money, generous--has yet to be improved on. But the Vic's glory resided in its doing work no one else would attempt; it was, for years, our best and only classical theatre. A reconstituted Old Vic on original lines would now be a poor relation of the National and the RSC. It has, when it re-opens, to find a new identity. I would rather see it permanently closed than second-rate.\n\n* * *\n\nIn The Bells (Greenwich), Freddie Jones plays Irving's legendary role of Mathias, the guilty Burgomaster driven to despair and death by the ringing in his ears (sleigh-bells, church-bells, all sorts of bells). Mr Jones, a heap of crumbling flesh, brilliantly conveys the tell-tale gnawings of fear; only the final set-piece, a silent re-enactment of his crime, strains his resources and our attention.\n\nAs regards Eric Thompson's production I must tread carefully; I once directed a Victorian play at this theatre and was dashed to find comic business that I had lifted bodily from the stage directions derided as my own insensitive invention. The silent-picture music which Mr Thompson repeatedly employs, though it seems to me to undercut the reality of Mr Jones, is indeed specified in Leopold Lewis's text. Maybe melodramatic conventions wear out more quickly than comic; I can see no justification for the lurid green light that hits the stage for Mathias's briefest asides. At best these devices remind us that we are seeing a specimen of nineteenth-century drama; it might be more enjoyable merely to see a play about a conscience-stricken murderer. In fairness, Mr Thompson's staging of Mathias's fatal vision is impressive.\n\n* * *\n\nSporting the best-heeled set ever seen at the Bush, Andy Smith's Winter Visitors has one penetrating lovers' row, and a great deal of overwrought domestic bickering. At the end the writer calls down vengeance on his characters for taking up everybody's time with their tedious and rather fanciful problems; it's difficult not to feel that he has himself to blame. The final scene brings on a gunman and with him some real suspense, not all caused by natural dread of a loud bang in a small theatre.\n\n* * *\n\nOne of the Bush's biggest successes, Stephen Poliakoff's City Sugar, now makes a smaller bang in a larger theatre, the Comedy: strong on detail but short on punch and shapelessly directed. John Shrapnel's weary ambitious DJ has gone, and with him much of the lazy, grimy, three-in-the-morning feeling that previously distinguished the play. Adam Faith's performance has speed, but no grip.",
+      "production_title": [
+        "Tribute To The Lady",
+        "The Bells",
+        "Winter Visitors",
+        "City Sugar"
+      ],
+      "company": [
+        "National Theatre",
+        "Royal Shakespeare Company"
+      ],
+      "venue": [
+        "Old Vic",
+        "Royal Victoria Coffee Music Hall",
+        "Greenwich",
+        "Bush",
+        "Comedy"
+      ],
+      "city": [
+        "London"
+      ],
+      "roles": {
+        "director": [
+          "Glen Byam Shaw",
+          "Eric Thompson"
+        ],
+        "playwright": [
+          "William Shakespeare",
+          "Leopold Lewis",
+          "Andy Smith",
+          "Stephen Poliakoff"
+        ],
+        "actors": [
+          "Peggy Ashcroft",
+          "John Gielgud",
+          "Ralph Richardson",
+          "Laurence Olivier",
+          "Albert Finney",
+          "Alec Clunes",
+          "Freddie Jones",
+          "John Shrapnel",
+          "Adam Faith"
+        ],
+        "composer_lyricist": [],
+        "musical_director": [],
+        "choreographer": [],
+        "set_designer": [],
+        "costume_designer": [],
+        "lighting_designer": [],
+        "sound_designer": [],
+        "producer": [],
+        "dramaturg": [],
+        "performers": [],
+        "musicians": [],
+        "artists": []
+      }
+    },
+    {
+      "number": 472,
+      "id": "258628631",
+      "title": "First impressions",
+      "author": "Robert Cushman",
+      "publication": "The Observer",
+      "section": "Review",
+      "date": "1976-03-14",
+      "year": "1976",
+      "category": "Theatre Review",
+      "url": "https://theguardian.newspapers.com/image/258628631/?match=1&terms=%22robert%20cushman%22",
+      "markdownPath": "guardian_archive/markdown/1976.03.14.The_Observer.258628631.md",
+      "productions": [
+        "Hamlet",
+        "John Gabriel Borkman",
+        "Plunder",
+        "Happy Days",
+        "Watch It Come Down"
+      ],
+      "venues": [
+        "National Theatre",
+        "Old Vic",
+        "Lyttelton"
+      ],
+      "cities": [
+        "London"
+      ],
+      "people": [],
+      "body": "The National Theatre's administrative staff moved into their new home on the South Bank some time before the actors. I have been haunting the place for a couple of months, researching a book and enjoying the view of the river: a glorious prospect from Somerset House to St Paul's. I was therefore inclined to regard the building as a marvellous office block which someone, reversing the usual practice, had to go and turn into a theatre.\n\nLast week the opening repertory--Hamlet, John Gabriel Borkman, Plunder, Happy Days, Watch It Come Down--transported from the Old Vic, was unpacked for the critics. The process took four days, at the end of which I begin already to take the new National for granted. It is very rare for a critic to spend four successive days anywhere: quite enough to convince him that he has found a home.\n\nIt is not a building to lift the heart: the squat grey fly-towers which crown and dominate it put paid to that. But there is a reassuring sturdiness about it. I like concrete; I even like the South Bank. Unless I am actually in a hurry to get somewhere, I enjoy threading my way through the channelled mazes from one culture-dome to another. The theatre is separated from the rest of the complex by Waterloo Bridge, but it is enfolded by its own profusion of balconies. Since the building fronts the river you have, if you come by car, to drive right around it, which spoils the impact and makes you feel like a tradesman. Much better to take a bus or taxi, get off on the bridge and descend on its steps. Do not, however, go straight down to entrance-level; make a detour, along as many terraces as possible. They are wide and gratifying.\n\nThe foyer seems at the moment the architect's most decisive success. It has two drawbacks: the carpets are decidedly tacky and the ceilings are menacingly low, progressively so as you ascend the building. But the three storeys do interact; they are furnished with what are referred to in Macbeth as buttresses and coigns of vantage. Looking up you are always liable to see someone poised nursing a drink and playfully prepared to spill it over you. Denys Lasdun's professed aim of using the patrons themselves to furnish his open spaces looks like being brilliantly realised. The fact that last week the obliging bodies were largely those of my colleagues made the effect all the more comforting if not invariably decorative.\n\nBut, even denuded of life, the main foyer is far from being a bleak plain: it curves, oddly, beguilingly, and unpredictably, from box office to bar to bookstall to bar again. And you can get a drink without too much suffering, and having got it can consume it without being buffeted. You can even sit down, at tables which break the area without cluttering it. The bookstall sells newspapers, which is a good idea, and the usherettes continue to sell a mass-produced ice-cream, which isn't. If the National could do a deal with one of the more individual manufacturers they might make theatrical history. The programmes are those from the Old Vic, slightly blown up and almost purged of advertising.\n\nOf the three auditoriums, only the Lyttelton is operational and that only just, as witness the lengthy scene-changes on Plunder and the roaring air-conditioning (particularly noticeable in the pauses of Happy Days, where it made its own contribution to Beckett's desolation). It is a strange animal: an orthodox, though phenomenally wide, proscenium stage matched to an auditorium that seems uneasy at being yoked to anything so conventional. The picture-frame stage is now old-fashioned. That does not invalidate it--many good plays have been written for it, and the National must produce them--but it demands a certain cosiness. Since the audience cannot enfold the stage, as in an open or studio theatre, the auditorium must caress the audience (as at the Old Vic or Wyndham's). There has to be some affection somewhere; Peter Hall, talking contemptuously on television of plush, gilt and cherubs, simply begged the question. The Lyttelton has, undeniably, the air of a large lecture-hall; the audience, spread out in long rows with never the relief of a centre aisle, are beleaguered by an imminent back wall. You feel splayed and crushed and the leg-room is none too generous.\n\nUndeniably, everybody in the stalls is near the stage and nothing obviously mars the sight-lines, but the focus, if you are seated at the end of a front row, can be odd. There is not so much to look at in Happy Days that you want to view it extravagantly sideways-on. The crowded action of Plunder is even more resistant to such angling. The plays in general seemed dwarfed by the stage; the only exceptions were Hamlet and Borkman, both ironically major classics which belong, according to Mr Hall's plan, on the unfinished open stage of the Olivier. Ibsen's play, especially its last scene, attained mythic dimensions. For Hamlet I had the luck to be seated dead-centre: the lines of John Bury's set (dowdy at the Vic, magnificent here) were completed by those of the auditorium. The stage-floor was patterned like a target, and soliloquies were delivered with magnetic effect from the bull's-eye.\n\nA seat in the circle frees you from claustrophobia, but removes you from the action. Such distance is unkind to actors (except acoustically--aurally, upstairs is even less peccable than downstairs) but generous to designers. The plays look mapped out; a full view of Hayden Griffin's majestic railway-station lent a new dimension to Watch It Come Down; it has to stand for something.\n\nThe plays themselves seemed, in last week's ambience, like so many demonstration-discs; and anyway no company can be at its best before an audience composed exclusively of freeloaders. Detailed criticism would be out of place, so I merely suggest:\n\n(a) that Happy Days on a Monday afternoon was an ostentatiously bleak beginning; that one immured actress is a boring spectacle, however terrifying the insights (and they are intermittent in this play); and that I would rather have seen Peggy Ashcroft give her Lilian Baylis again, since here, with all the finesse in the world, she seemed a bit bland and lacking in individuality;\n\n(b) that Dinsdale Landen now supplies Plunder with just what it needs (viz, a new self-perpetuating comic convention); his silly ass continually taking himself by surprise is miraculously delicate;\n\n(c) that Albert Finney's Hamlet, sketchy at first, flowers in madness and never loses its hold; that Susan Fleetwood's Ophelia is heartbreaking; that Angela Lansbury (though still handicapped by an unyielding voice and a crown and costume fitted for Snow White's stepmother) now fully imposes her view of Gertrude as an amenable woman, lulled by queenship, whose illusions visibly fall from her in the closet scene; that most of the other performances are now at least respectable; and that this was the peak of the week.\n\n(d) that nobody who hated Watch It Come Down the first time will be converted by a second look but that a sharp unspecified pain often breaks through the flaccid construction.\n\n(e) that though I believed in the crazy present of Ralph Richardson's Borkman, and strongly in his apotheosis, I extended no credit to his banking past; that Dame Peggy is nastier and more precise than she was, Wendy Hiller even more horribly erect, and Philip Stone a definite acquisition, but that this seemed, in general, an off-night.\n\nAnyway, I'm glad it's open.",
+      "production_title": [
+        "Hamlet",
+        "John Gabriel Borkman",
+        "Plunder",
+        "Happy Days",
+        "Watch It Come Down"
+      ],
+      "company": [
+        "National Theatre"
+      ],
+      "venue": [
+        "National Theatre",
+        "Old Vic",
+        "Lyttelton"
+      ],
+      "city": [
+        "London"
+      ],
+      "roles": {
+        "director": [
+          "Peter Hall"
+        ],
+        "playwright": [
+          "William Shakespeare",
+          "Henrik Ibsen",
+          "Ben Travers",
+          "Samuel Beckett",
+          "John Osborne"
+        ],
+        "actors": [
+          "Peggy Ashcroft",
+          "Dinsdale Landen",
+          "Albert Finney",
+          "Susan Fleetwood",
+          "Angela Lansbury",
+          "Ralph Richardson",
+          "Wendy Hiller",
+          "Philip Stone"
+        ],
+        "composer_lyricist": [],
+        "musical_director": [],
+        "choreographer": [],
+        "set_designer": [
+          "John Bury",
+          "Hayden Griffin"
+        ],
+        "costume_designer": [],
+        "lighting_designer": [],
+        "sound_designer": [],
+        "producer": [],
+        "dramaturg": [],
+        "performers": [],
+        "musicians": [],
+        "artists": []
+      }
+    },
+    {
+      "number": 473,
+      "id": "258629944",
+      "title": "Dame with a difference",
+      "author": "Robert Cushman",
+      "publication": "The Observer",
+      "section": "Review",
+      "date": "1976-03-21",
+      "year": "1976",
+      "category": "Theatre Review",
+      "url": "https://theguardian.newspapers.com/image/258629944/?match=1&terms=%22robert%20cushman%22",
+      "markdownPath": "guardian_archive/markdown/1976.03.21.The_Observer.258629944.md",
+      "productions": [
+        "Housewife-Superstar",
+        "13 Rue de L'Amour",
+        "Mardi Gras",
+        "Parcel Post",
+        "The Sons of Light",
+        "The Chairman"
+      ],
+      "venues": [
+        "Apollo",
+        "Phoenix",
+        "Piccadilly",
+        "Royal Court",
+        "University Theatre, Newcastle",
+        "Globe"
+      ],
+      "cities": [
+        "London",
+        "Newcastle"
+      ],
+      "people": [],
+      "body": "Very late last Tuesday night the Australian comedian Barry Humphries opened his one-man show at the Apollo. It was called Housewife-Superstar, after his most famous creation, Dame Edna Everage.\n\nEdna, on this occasion, lived up to the title, and several new stars cropped up in her orbit. They were not played by Mr Humphries. As a matter of fact they had paid to get in. They were called Dave and Leo and Meredith and Judy.\n\nDave, seated in a side-box, was just someone for Edna to say hello to, to get the act started. Leo was actually a Leo, who responded, from a vulnerable spot in the front row, when Edna asked him what sign he was. But Edna, once she has made a friend, does not relinquish him, and he was Leo, by name, for the rest of the night and (since we didn't even get started till 11) well into the morning.\n\nAnd then Judy. Edna is clean and proud of it. \"The bathroom,\" she explained to Dave, who hadn't asked, \"is an extra room we have in Australia; like your English woodshed.\" She then a bit inconsistently, quizzed Judy, who did not seem to be Australian, about her bathroom. \"What colour are the tiles? The tiles, Judy!\" Edna can get very excited, not to say snappish, when answers on her favourite topics are not as rapidly forthcoming as she would like. Nor will she tolerate bad manners. \"What's the matter?\" she demanded of us as we rocked. \"Haven't you ever sat in a West End theatre at midnight and heard a lady describe her bathroom before?\"\n\nIt seems that when Edna's daughter Velma lived in London she knew a Judy and Edna wondered if she could have been the same one. Judy, by now understandably bemused, said that she was. \"A reply which, it seems, Edna is not used to receiving at this point, and which sent the act deliriously spinning. But she had her revenge: half an hour later, in quite another context, came a quick, venomous reference to a girl called Judy \"posing as a friend of my daughter Velma.\" Edna's natural mode is syrupy and benign, but she is a viper when crossed.\n\nShe is a patroness to the manner born, though I dare say her damehood encouraged her enormously. She was, all things considered, very sweet to a gentleman in the stalls whom she suspected of being foreign (she knew that words would be wasted on him so she waved a scarf--\"they love bright colours\"--to keep him involved) and she could not have been kinder to another whom she tagged as a Senior Citizens (or, as the hour grew later and friendlier, simply Senior). What an escape, she mused, a night at the Apollo must represent for him: what a change from the Twilight Home--a world, like the one into which she had cast her own mother, \"of rubber sheets.\"\n\nSometimes one forgot Edna and remembered Mr Humphries: wondered whether he always flies as high and fast as this, or whether he was inspired unrepeatably by the lateness of the hour and the firstness of the night. Subsequent performances begin at normal times, but I may return if only to discover what happens in the second half. For, Mr Humphries having held forth for a staggering 90 minutes, the interval arrived well past my bedtime, and so I went home determined--since I had already enjoyed myself far more than critics are entitled to--not to tempt Providence. The insurance paid off, since next night I laughed again.\n\n* * *\n\n13 Rue de L'Amour (Phoenix) is the best production of a Feydeau farce since the National's A Flea in Her Ear. In some ways it even surpasses that dazzler since it eschews camp (an indulgence that Flea could afford, but which has fatally attacked the Feydeau productions which have infested the posh reps ever since.) Peter Dews's direction has other things on its mind besides unnatural speed; indeed Glynis Johns, as a Parisian wife who takes to adultery because she quite justifiably suspects that her husband has taken to it first, is notably poised and reflective. Probably she is too much so--her performance lacks daemonism--but there is compensation in Louis Jourdan's lover, sourly wounded in his self-esteem, and above all in James Grout's four-square husband, a compulsive bluffer who ends by deceiving himself.\n\nThis final scene, also prettily taken by Miss Johns, does more to justify the now standard comparison of Feydeau to Moliere than any other I have seen. After a sequence of comedies (by Coward, Lonsdale, Ben Travers) that have nearly come off, it is comforting to recognise the cool, merciless touch of a real master. The technical details delight as always; but so do such incidental touches as Mr Jourdan's declaration that he keeps a poem on Miss Johns next his heart--after which he tugs it out of his pants pocket. Then there is Margaret Courtenay, in the best scene-stealing performance in London; quivering with delight whenever a man raises his voice to her, and two well-contrasted ditherers in David Stoll and John Baddeley.\n\n* * *\n\nThe best week that the commercial theatre has had in ages was only partly sustained by Mardi Gras (Piccadilly). If colour, rhythm and vivacity could make a musical, this one would be fully made. It falls down on melody and on architecture. Melvyn Bragg's script is transparently in love with the New Orleans of jazz legend, but he has not been able to deliver a story of more than conventional melodrama.\n\nThere is plenty of performing talent (Lon Satton, Gaye Brown and Marsha Hunt are notable), but no real star. Nicky Henson is supposedly the hero, and the opening number reveals him to have a good growling jazz-voice, but he is kept idle for most of the evening. (And though he can do almost everything else, he cannot, it seems, radiate.) The score (Alan Blaikley and Ken Howard) is, like all English musicals, desperately weak on ballads; the stompers are not as good as the real thing, but when the beat is going you hardly notice; the programme lists seven orchestrators, which seems to show where the heart is. Dancing is better than average; Abd'Elkader Farrah's shiny set participates in the choreography, and his costumes help. But by the second act these elements are being employed indiscriminately to stop the rot of the plot, and the result is monotony.\n\n* * *\n\nBack in the land of the subsidised, Yemi Ajibade's Parcel Post is a domestic comedy (school of Quiet Wedding and Sailor Beware) that the Royal Court would not have dreamed of presenting (at least, I hope not) if the author and the characters were not African. The paternalism only begins to be justified 20 minutes from the end, and even then interest peters out.\n\nAt the University Theatre, Newcastle, David Rudkin's The Sons of Light is a massive allegory (three hours in a cut version) which sways between inflammatory inspiration and sci-fi banality. It needs to be done again; though, since its action is confused and its characterisation non-existent (except in the stage-directions which are brilliantly written), it will probably always fail. It need not, however, fail as abjectly as in Keith Hack's production which reinforces all that is worst in the writing. A character written as a schizophrenic hermaphrodite emerges as a routine mad girl. That the one sequence of clarity should be a prolonged account of death by torture is a comment certainly on the director, possibly on the author, and confessedly on the receptivity of us in the audience.\n\n* * *\n\nThe Chairman (Globe), a comedy about the PR department of a large company, whose members demonstrate a similarly mystifying standard of behaviour, is mildly amusing and--given its theme of the corrupting force of a totalitarian organisation--one which might have raised a few ripples outside its little frogpond. Most of the performances do better than the script, especially Tony Britton's smooth, peacock-pleased David and Peter Blythe's waterfall torrent of breathy giggles and hyper-kinesis as Peter.",
+      "production_title": [
+        "Housewife-Superstar",
+        "13 Rue de L'Amour",
+        "Mardi Gras",
+        "Parcel Post",
+        "The Sons of Light",
+        "The Chairman"
+      ],
+      "company": [],
+      "venue": [
+        "Apollo",
+        "Phoenix",
+        "Piccadilly",
+        "Royal Court",
+        "University Theatre, Newcastle",
+        "Globe"
+      ],
+      "city": [
+        "London",
+        "Newcastle"
+      ],
+      "roles": {
+        "director": [
+          "Peter Dews",
+          "Keith Hack"
+        ],
+        "playwright": [
+          "Georges Feydeau",
+          "Noel Coward",
+          "Frederick Lonsdale",
+          "Ben Travers",
+          "Melvyn Bragg",
+          "Yemi Ajibade",
+          "David Rudkin"
+        ],
+        "actors": [
+          "Barry Humphries",
+          "Glynis Johns",
+          "Louis Jourdan",
+          "James Grout",
+          "Margaret Courtenay",
+          "David Stoll",
+          "John Baddeley",
+          "Lon Satton",
+          "Gaye Brown",
+          "Marsha Hunt",
+          "Nicky Henson",
+          "Tony Britton",
+          "Peter Blythe"
+        ],
+        "composer_lyricist": [
+          "Alan Blaikley",
+          "Ken Howard"
+        ],
+        "musical_director": [],
+        "choreographer": [],
+        "set_designer": [
+          "Abd'Elkader Farrah"
+        ],
+        "costume_designer": [
+          "Abd'Elkader Farrah"
+        ],
+        "lighting_designer": [],
+        "sound_designer": [],
+        "producer": [],
+        "dramaturg": [],
+        "performers": [],
+        "musicians": [],
+        "artists": []
+      }
+    },
+    {
+      "number": 474,
+      "id": "258631425",
+      "title": "The pure in heart",
+      "author": "Robert Cushman",
+      "publication": "The Observer",
+      "section": "Review",
+      "date": "1976-03-28",
+      "year": "1976",
+      "category": "Theatre Review",
+      "url": "https://theguardian.newspapers.com/image/258631425/?match=1&terms=%22robert%20cushman%22",
+      "markdownPath": "guardian_archive/markdown/1976.03.28.The_Observer.258631425.md",
+      "productions": [
+        "Very Good Eddie",
+        "Gaslight",
+        "Sur Le Fil"
+      ],
+      "venues": [
+        "Piccadilly",
+        "Criterion",
+        "Greenwood, London Bridge"
+      ],
+      "cities": [
+        "London"
+      ],
+      "people": [],
+      "body": "This week's musical is quite the most feathery and unperturbed of shows. In the escapist musicals of the twenties and thirties, some disturbance--a couple of gangsters, say, or a team of fortune hunters--was generally admitted to menace the well-being of the virtuous. But Very Good Eddie belongs to an earlier age when it seems the pure in heart had things entirely to themselves. It was first staged in New York in 1915, though the programme at the Piccadilly dates the action as two years earlier. Even in its cradle, it seems, the show relied on period charm.\n\nIt may have taken 60 years to cross the Atlantic, but of late it has been a fast mover. Last July it was revived in Connecticut at a place called, prophetically, Goodspeed. A few months later, David Merrick had it on Broadway. A few months more, and we have it here. At least five other current New York shows--all of them, on the face of it, demanding importation more urgently than this one--are still struggling to get through Customs. But then, they are heavier laden.\n\nVery Good Eddie fits into the current West End scene with twofold neatness; it is light and it is old. To take the age first: I suspect that the omnipresence of revivals in the West End owes less to audience nostalgia than to managerial neurosis. No sane impresario could doubt that there is still a profit to be made on new plays, but how to choose them? Anyone can make a mistake, and play-readers doubtless make more than most. It is obviously safer to unearth a proven success from the past, even if you forfeit not only the good opinion of the critics but any chance of the big money. Please note that even in the last couple of years no old play has run as long as the new ones of Alan Ayckbourn and Simon Gray. The only revival that looks like challenging their longevity is Murder at the Vicarage, whose popularity has nothing to do with its age. I doubt if its audiences notice anything old-fashioned about it; it is timelessly terrible.\n\nVery Good Eddie moves on a higher plane, so its survival cannot be guaranteed. It is a work of composite authorship: one composer, one librettist, and nine lyricists, among whom Schuyler Greene may be credited with the hardest work, Elsie Janis with the neatest joke, and P. G. Wodehouse with the most famous name. Wodehouse turns out to have been an early rhymer of \"life\" with \"care and strife,\" but otherwise his \"Bungalow in Quogue\" (pronounced Quog) is one of the best numbers celebrating innocence with a touch of aerated fantasy. His colleagues are generally content just to smile, but at least their scansion is irreproachable.\n\nThe music is early Jerome Kern: post \"They Didn't Believe Me,\" but pre everything else. It has plenty of grace but--like much of Kern's work before his brilliant flowering in the thirties--it lacks spice. \"Good Night Boat\" has a suave lilt and \"I've Got to Dance\" prefigures the Kern who wrote for Fred Astaire. It's good to have neglected songs in circulation (the real justification for productions like this one usually is the original cast recording), but at a first hearing these tunes, blandly arranged, are disappointing. They sound, in truth, strangely English.\n\nSome of them have been interpolated from other Kern shows of the period: a succession of entertainments which were praised, in a period of inhuman extravaganzas, for their modesty and wit. The modesty is now more in evidence than the wit, and it is well preserved in Bill Gile's production, which itself contrasts refreshingly with the overblown style in which other old musicals have been revived. The performers never patronise their material, but it is difficult for the audience to avoid doing so. One wonders how they coped in 1915; did they too find it deliciously simple-minded, did they take it for real or for granted?\n\nNothing dates faster than realism in musicals (consider South Pacific) and the proper objection to Guy Bolton's script is not its lack of credibility but its lack of energy; it is half-hearted farce. The verbal humour is, on a strict count, awful; but it is the kind of awfulness that a bright vaudevillian--John Blythe in this case--can make irresistible. Mr Blythe's professionalism puts you in touch with the ages.\n\nThere is a deal of charm around, but it rarely makes any dramatic point. In fact it does so twice in the final revelation that the title of the show actually means something, and in a dance-duet which Richard Freeman and Prue Clarke turn into an enchantingly fleet-footed demonstration of falling in love. They play (if you can bear to hear the plot at this stage) two short people apparently condemned to marry two tall people. This is taken to be a particularly alarming kind of miscegenation; I don't know that I agree. Miss Clarke apart, the women in the show are inferior to the men. (What can be done about the British chorine?) Robert Swann is engaging as a chap who was at Yale with all the other chaps and who sings two songs, one at each end of the show, and both saying exactly the same thing. Act One takes place on a boat and Act Two in a honeymoon hotel. There you have plot and atmosphere.\n\n* * *\n\nPatrick Hamilton's Gaslight has both, but atmosphere is the more important. The plot is a drawn-out anecdote; what counts is Hamilton's relish for the details of his Victorian setting: the murk, the orotund speech, and the studied cruelty, class and connubial. Most of this is scuppered in the Criterion revival. There are three major roles, all radically miscast. A man is attempting to drive his wife mad; she fears and worships him. Anton Rodgers offers bloated sulks for calculated murderous caprice. His victim is Nicola Pagett, unalterably balanced and self-reliant; in the horrible final scene, where the worm turns, she has no reversal to make, and merely displays an anxiety to get the play over as soon as possible. An avuncular policeman, who adjures her to look into his face for comfort, is played by the greasily menacing Peter Vaughan.\n\n* * *\n\nSur Le Fil (Greenwood, London Bridge) is the first Arrabal play I have seen which amounts to more than a heap of self-regarding neuroses. Usually his directors indulge him; Jorge Lavelli keeps him on a tight lead and, miraculously, he ceases to whoop, or to whimper. His dramatic landscape takes on a sculptural reality--a ghost town, the end of the line--excellently realised in Max Bignens's set, and in the performances of Daniel Ivernel, Pierre Constant and Georges Chorafas. Poise is not a quality I expected to grant an Arrabal work, but here it is (M. Constant walking the tightrope of the title) in abundance.",
+      "production_title": [
+        "Very Good Eddie",
+        "Gaslight",
+        "Sur Le Fil"
+      ],
+      "company": [],
+      "venue": [
+        "Piccadilly",
+        "Criterion",
+        "Greenwood, London Bridge"
+      ],
+      "city": [
+        "London"
+      ],
+      "roles": {
+        "director": [
+          "Bill Gile",
+          "Jorge Lavelli"
+        ],
+        "playwright": [
+          "Guy Bolton",
+          "Patrick Hamilton",
+          "Fernando Arrabal"
+        ],
+        "actors": [
+          "John Blythe",
+          "Richard Freeman",
+          "Prue Clarke",
+          "Robert Swann",
+          "Anton Rodgers",
+          "Nicola Pagett",
+          "Peter Vaughan",
+          "Daniel Ivernel",
+          "Pierre Constant",
+          "Georges Chorafas"
+        ],
+        "composer_lyricist": [
+          "Jerome Kern",
+          "Schuyler Greene",
+          "Elsie Janis",
+          "P. G. Wodehouse"
+        ],
+        "musical_director": [],
+        "choreographer": [],
+        "set_designer": [
+          "Max Bignens"
+        ],
+        "costume_designer": [],
+        "lighting_designer": [],
+        "sound_designer": [],
+        "producer": [],
+        "dramaturg": [],
+        "performers": [],
+        "musicians": [],
+        "artists": []
+      }
+    },
+    {
+      "number": 475,
+      "id": "258634972",
+      "title": "Reviving a mixed Salad",
+      "author": "Robert Cushman",
+      "publication": "The Observer",
+      "section": "Review",
+      "date": "1976-04-18",
+      "year": "1976",
+      "category": "Theatre Review",
+      "url": "https://theguardian.newspapers.com/image/258634972/?match=1&terms=%22robert%20cushman%22",
+      "markdownPath": "guardian_archive/markdown/1976.04.18.The_Observer.258634972.md",
+      "productions": [
+        "Salad Days",
+        "Lenz",
+        "The Country Wife"
+      ],
+      "venues": [
+        "Duke of York's",
+        "Hampstead",
+        "Cambridge Arts"
+      ],
+      "cities": [
+        "London",
+        "Cambridge"
+      ],
+      "people": [],
+      "body": "THE PRESS looked a bit sheepish as it filed into Salad Days (Duke of York's). Most of it was weighed down with memories. The Evening Standard had reviewed the original production; had disliked it, and had been regarded - until enlightened opinion caught up with him - as a notorious curmudgeon for his pains.\n\nThe Observer also recalled that production, which he had seen when he was about 12. He had loved it then, but he had come to believe that 12 was the optimum age for a spectator of this show and that reaction had long set in. Still, nostalgia is a strange bloom and he was perhaps as likely to be re-enchanted as disgusted. On the whole, it was a test he would rather not face; particularly as it was likely to have no definite outcome and to leave him sitting, dispiritedly as usual, on the fence.\n\nIt is in fact from that fence that I now address you. Parts of Salad Days hold up well; others do not. The present production has some pleasing performances, but is not very good.\n\nSalad Days, as you too may remember, is about a boy and girl, just down from three suspiciously idyllic years at what seems to be Cambridge, which they follow up with a very similar month in London. The time is the early fifties, when the sun shone and birds sang in the park and that sort of thing. It is in the park that Jane and Timothy spend their time: he avoiding work, she (a reluctant deb fractionally before her time) avoiding marriage.\n\nThe first problem is solved when they take temporary possession of a magic piano, so constituted that all who hear it break into frenzied dance-steps which involve the transfer of money from their pockets into an upturned hat, thereby providing Jane and Timothy with a living wage. The second is settled by having the couple marry in the hope that they will subsequently fall in love; which, as the show proceeds, they unobtrusively do. (With each other.)\n\nSo far, you may be surprised to hear, so good: the romance is pleasant and uncomplicated, the magic piano is an inoffensive and efficient piece of whimsy, and the romance uncomplicated and likeable. It is buoyed up by three ballads which, to make no great claim for them, are as beguiling as anything heard in a British musical since the war. Thus far we have a piece of juvenilia as well worth your attention as Very Good Eddie.\n\nBut Julian Slade, though we have to look at their subsequent careers for proof of this, was no Jerome Kern. He filled this score out with chorus numbers of jigging, undistinguished cheerfulness; one or two of them (any one or two, really) would be all right, but a batch of them clogs up the evening. Such charm as they have is anyway destroyed in this production by the emergence from the pit of a droning mechanical noise, attributable to what the programme calls a Keyboard.\n\nSomething similar happens to the script, which is padded out with a succession of unrevivable revue sketches. These are now mainly entrusted to Elizabeth Seal, who looks alarmed, and Sheila Steafel, who looks dismissive (a more effective strategy). The leads, Adam Bareham and Christina Matthews, are unobjectionable, except on some of her high notes, and if there were still a great future in playing debs' delights, Osmund Bullock, as perfectly poised as named, would surely have one. But the honours on the first night went to Malcolm Rennie and Ian Talbot, playing policemen, for gallantry in the face of an unfunctioning property gramophone.\n\nI trust their difficulties were real: I would hardly know what to think of a production which went to the lengths of faking inefficiency. It was anyway typical of the rest of the show, a rest frequently disturbed by the thudding of a remarkably graceless drop-curtain. The show kept stalling; it lacked flow. (That's a line I recall from the original; the reply was \"I'm sorry, sir, it's Flo's day off.\" Why did they cut that? As bad remains behind.)\n\nI remember the original as being more wittily performed; it had the benefit of a good rep cast. It began as an end-of-term romp in Bristol. But spiritually it was a transplanted Cambridge show; it reeks of the Footlights of the early fifties or even - to judge from their last offering to arrive in London - of the early seventies. Maybe, in this era of laissez-faire desperation in the West End, its time has come again.\n\n* * *\n\nConsidering that it deals with a mad German writer of the eighteenth century rather than a sane English grocer of the twentieth, Mike Stott's Lenz (Hampstead) bears a surprising resemblance to his Funny Peculiar. In both, a supposedly adventurous spirit is set in the context of a remote village and found wanting. Mr Stott sets his German community to speaking modern (but never clangorously anachronistic) Yorkshire with remarkable success.\n\nThe play possesses abundant local life (my own salad days are receding, but I think I have the Eng. Lit. jargon right), but is gravely deficient in overall structure. Not even Jonathan Pryce, despite a new disturbing gentleness, can hold us merely by loosing off a series of unexplained tirades, though Lenz's frequent quotations from Hamlet afford a useful preview of what will plainly be one of the great inevitable performances of the next few years. There is an excellent sour and sturdy performance by Derek Smith, free of the sing-song mannerisms which have affected his work at Stratford.\n\n* * *\n\nThe London theatre having conspired to deny me a chance of ever seeing The Country Wife, I went to the Cambridge Arts to see it done by the company from the Oxford Playhouse. Wycherley's comedy has always struck me in the text as surpassingly moral; none of its rakes, innocents, cuckolds, whores and hypocrites gets less than his due. This production did not exactly destroy this impression for me; indeed it did nothing exactly. It was an evening of approximations. It was a faithful production; unless, as I am inclined to do, you count sloth and dowdiness as betrayals. As Restoration comedies go, this one is beautifully constructed, but if it once slackens its grasp it can be interminable.",
+      "production_title": [
+        "Salad Days",
+        "Lenz",
+        "The Country Wife"
+      ],
+      "company": [
+        "Oxford Playhouse"
+      ],
+      "venue": [
+        "Duke of York's",
+        "Hampstead",
+        "Cambridge Arts"
+      ],
+      "city": [
+        "London",
+        "Cambridge"
+      ],
+      "roles": {
+        "director": [],
+        "playwright": [
+          "Julian Slade",
+          "Mike Stott",
+          "William Wycherley"
+        ],
+        "actors": [
+          "Elizabeth Seal",
+          "Sheila Steafel",
+          "Adam Bareham",
+          "Christina Matthews",
+          "Osmund Bullock",
+          "Malcolm Rennie",
+          "Ian Talbot",
+          "Jonathan Pryce",
+          "Derek Smith"
+        ],
+        "composer_lyricist": [
+          "Julian Slade"
+        ],
+        "musical_director": [],
+        "choreographer": [],
+        "set_designer": [],
+        "costume_designer": [],
+        "lighting_designer": [],
+        "sound_designer": [],
+        "producer": [],
+        "dramaturg": [],
+        "performers": [],
+        "musicians": [],
+        "artists": []
+      }
+    },
+    {
+      "number": 476,
+      "id": "258641935",
+      "title": "In a hellish half-light",
+      "author": "Robert Cushman",
+      "publication": "The Observer",
+      "section": "Review",
+      "date": "1976-05-23",
+      "year": "1976",
+      "category": "Theatre Review",
+      "url": "https://theguardian.newspapers.com/image/258641935/?match=1&terms=%22robert%20cushman%22",
+      "markdownPath": "guardian_archive/markdown/1976.05.23.The_Observer.258641935.md",
+      "productions": [
+        "Play and Other Plays",
+        "Confusions",
+        "Noah",
+        "Dom Juan"
+      ],
+      "venues": [
+        "Royal Court",
+        "Apollo",
+        "Chichester",
+        "Hampstead"
+      ],
+      "cities": [
+        "London",
+        "Chichester"
+      ],
+      "people": [],
+      "body": "THE LAST SLICE of Samuel Beckett's seventieth birthday cake, as served up at the Royal Court, is a triple-decker, Play and Other Plays.\n\nPlay comes first. It is the eldest, 13 years old. A good sprig. With the years it has grown funnier. It is the one about the three people - a man and two women - encased in funeral urns. Once they were husband, wife and mistress. Now they are dead. (I think. Many agree.) On each of them in turn, a light plays. When it shines, they jabber, of their past and one another. The light is cruel. Not only does it prod them to speak, it will never let them finish. Bored with one, it constantly moves on to the next, and back again. Having exhausted their supply of confessions, it starts again. \"Repeat play exactly,\" says the stage-direction.\n\nThis repetition is purgatorial for them, but helpful for us. On the first hearing, we may grasp the shape of their affair; on the second, we can begin to take in the details, which are, in a high-class way, sordid. Love is not lovelier the second time around, and it gets progressively less so. Here are the remnants of a drawing-room comedy triangle laid out for us sub specie aeternitatis. Thus displayed, played, replayed, whose passions would not look ridiculous?\n\nMr Beckett shields us a bit by placing his characters outside the social circles to which most of us are accustomed. One of his ladies had a butler, whose fate she momentarily ponders. I might gawp at her at the Haymarket, but I will not identify with her at the Royal Court. I know my place, I was taught at the Court. However, when the poor adulterer expressed his distaste for the tea drunk by his entanglements (\"personally I preferred Lipton's\") when, as of course they would, they got together to discuss him - then I laughed.\n\nPlay impresses me too as a study in the psychology of interrogation. The trio complain of the light that oppresses them, but they fear, as much as anything, its going out. They have come to depend on it. They call it a \"hellish half-light,\" but they fear that really this is not hell, not eternal. (Their philosophy seems to be somewhere between \"confession is good for the soul\" and \"better the devil you know.\") And maybe their fears are realised. Perhaps, when the light goes out at the end of Play, it goes out for ever, consigning them to a well-earned rest.\n\nThe first play, then, now looks a masterpiece. But not the second, That Time. Not this time. Like most of Mr Beckett's plays it deals with the horror of the past. (I except Waiting for Godot, which is concerned with the horror of the future, and Happy Days, which satirises those who are not horrified by the present.) Here is the haggard face of Patrick Magee, surrounded by flowing grey hair (like a monstrous halo) and otherwise surrounded by darkness. Here is Mr Magee's voice, prerecorded, through three speakers, sounding less like a circular saw than usual; softened but no more attractive, and decidedly soporific.\n\nHigh on the list of the things which I can live, even die, without would be, had I ever thought of it, Mr Magee in three-track stereo. Faber and Faber, in the blurb to the published version (16pp., 50p) say of Magee and Magee and Magee: \"The voices speak of the past; nostalgic, regretful, elegiac, poignant, fragmentary.\" The adjectives are not really deniable, and I might have used a couple of them myself. But the substance is only a rerun of Krapp's Last Tape without the props: a process of refinement but not necessarily of enrichment.\n\nThe third play, Footfalls, moves in the opposite direction. Yes, I said moves. This is another piece for one player (Billie Whitelaw, who is extraordinary) and not only is she visible - dimly, I admit - from her head to her foot, but she gets about. This is, in all respects, the nearest thing to a full-length portrait Mr Beckett has painted in years. Miss Whitelaw is even given a realistic situation, a woman in her forties looking after her bedridden mother (unseen but vocal). The relationship (\"Would you like me to inject you again?\" - \"Yes, but it is too soon\") is terrifyingly, and - need I say - sparely evoked. Mother does not really nag; she worries, over her daughter's ceaseless padding up and down. She never goes out, just remembers. And that, we can hear the author saying, is what motion gets you; don't ask me for it again.\n\nMiss Whitelaw's memories take up half the play, and they lack nothing of skill in writing or performance. What they do lack is inevitability; the play does not have to tell this particular story to make this particular effect. Common to all three plays are the compulsive vomitings of the human voice and brain, and the hypnotic effect of thin white light. Mr Beckett, who provides rigorous instructions for them all and directed the last himself, is a gentleman and a showman.\n\n* * *\n\nThe night before this triple bill, a quintuple one from Alan Ayckbourn: Confusions (Apollo). The last confusion is actually quite Beckettian: a cast of five telling one another their troubles and realising that \"you might as well be talking to yourself.\" This is the kind of thing Mr Ayckbourn does least well (like the last act of Absurd Person Singular), but for most of the evening he is at his best.\n\nHis admirers seem split between those who prefer him to cram five plays into one evening, and those who like him to spread one play over three evenings. I am of the former party, especially since his fourth piece here offers a series of mechanical gags - I mean gags involving machines - unequalled outside Feydeau, or maybe even inside. As his characters fell victim to the ravages of berserk technology, I laughed as heartily as at the bun-fight in Funny Peculiar. In another piece, John Alderton, a travelling salesman, proceeds with great speed and smoothness from affability to desperation in his efforts to seduce Pauline Collins and Sheila Gish, two travelling salesgirls. This is Mr Ayckbourn's best dark piece to date; all three characters are naturals for the turns.\n\nA restaurant episode includes some virtuoso timing and miming of simultaneous conversations, and a final sidelong glance at husbandly complaisance that Wycherley might have approved. This leaves piece number one, which is based on an over-extended joke but which is still funny a lot of the time and can be forgotten by the end anyway. The actors (James Cossins and Derek Fowlds are the others) are all immaculate; the Alderton-Collins duo is developing as richly as could be wished.\n\n* * *\n\nAndre Obey's Noah has been a favourite school play for 40 years and so it looks at Chichester; especially with Gordon Jackson, a good and gentle actor, but no patriarch. Occasionally the play explores the nastier aspects of being the beneficiary of a holocaust, but generally it sticks to the dramatic lode (nostalgically Biblical but scrupulously irreligious) that Godspell was to mine so profitably. The Bear (Carl Oatley) is, I will say, endearing.\n\nIf Chichester is childish, Hampstead is horrible; the production of Moliere's Dom Juan is fitted out with tricks apparently designed to draw attention to its director, who would be better advised to cower in a corner. Tom Conti can encompass some of Juan's charm and a fraction of his demonism, but - in this eighteenth-century translation - hardly any of his language.",
+      "production_title": [
+        "Play and Other Plays",
+        "Confusions",
+        "Noah",
+        "Dom Juan"
+      ],
+      "company": [],
+      "venue": [
+        "Royal Court",
+        "Apollo",
+        "Chichester",
+        "Hampstead"
+      ],
+      "city": [
+        "London",
+        "Chichester"
+      ],
+      "roles": {
+        "director": [
+          "Samuel Beckett"
+        ],
+        "playwright": [
+          "Samuel Beckett",
+          "Alan Ayckbourn",
+          "Andre Obey",
+          "Moliere"
+        ],
+        "actors": [
+          "Patrick Magee",
+          "Billie Whitelaw",
+          "John Alderton",
+          "Pauline Collins",
+          "Sheila Gish",
+          "James Cossins",
+          "Derek Fowlds",
+          "Gordon Jackson",
+          "Carl Oatley",
+          "Tom Conti"
+        ],
+        "composer_lyricist": [],
+        "musical_director": [],
+        "choreographer": [],
+        "set_designer": [],
+        "costume_designer": [],
+        "lighting_designer": [],
+        "sound_designer": [],
+        "producer": [],
+        "dramaturg": [],
+        "performers": [],
+        "musicians": [],
+        "artists": []
+      }
+    },
+    {
+      "number": 477,
+      "id": "258648045",
+      "title": "Better black than white",
+      "author": "Robert Cushman",
+      "publication": "The Observer",
+      "section": "Review",
+      "date": "1976-07-04",
+      "year": "1976",
+      "category": "Theatre Review",
+      "url": "https://theguardian.newspapers.com/image/258648045/?match=1&terms=%22robert%20cushman%22",
+      "markdownPath": "guardian_archive/markdown/1976.07.04.The_Observer.258648045.md",
+      "productions": [
+        "Black Comedy",
+        "White Liars",
+        "The Bitter Tears of Petra von Kant",
+        "Hanratty In Hell"
+      ],
+      "venues": [
+        "Shaw",
+        "Theatre at New End",
+        "Open Space"
+      ],
+      "cities": [
+        "London"
+      ],
+      "people": [],
+      "body": "PETER SHAFFER'S Black Comedy, revived at the Shaw, is the theatrical equivalent of the Marx Brothers' stateroom scene in A Night at the Opera: a single mechanical joke indefinitely prolonged and becoming more irresistible every second. Mr Shaffer is a conscientious builder and both his blueprint and his construction are, on this occasion, immaculate. Black Comedy is probably the only classic farce written in England since the war.\n\nTo the initial premise - pitch darkness to the characters is brilliant light to the audience, and vice versa, and all stations in between - is added farce's essential staple: the hero to whom all this could not have happened at a worse moment.\n\nYoung Brindsley is faced with a power cut, a roomful of sculpture waiting to be viewed and hopefully bought by a deaf millionaire, the debbiest of fiancees to be kept sweet, her military martinet father to be impressed, expensive furniture borrowed to this end from the flat across the passage without the knowledge of its fanatically possessive possessor, the sudden return of said owner necessitating the return of the furniture before the darkness ends and he finds out, and the irruption of Brindsley's ex-bird, to whom most of this, especially the fiancee part, comes as a surprise. Mr Shaffer's deployment of these varied forces is masterly.\n\nPaul Giovanni's production, which is more notable for spurts of energy than for overall rhythm, will not altogether satisfy those who remember John Dexter's original; though it is of course doubtful whether anyone who saw that production will ever be really pleased by anything else ever again. Celia Bannerman as Clea is a bit too self-conscious about her charming candour to lay the ghost of Maggie Smith, though Gemma Craven's deb is daintily determined enough to take on the shade of Louise Purnell, whose delighted trill of \"Sexipegs!\" still echoes down the years. Peter Machin as Brin keeps the engine running, but his chirpy demeanour has more to do with the manner thought proper to a light comedian of the sixties than with the reactions of this person in this play. But nobody is actually bad; and both the play and its characters emerge as the most credible and engaging Mr Shaffer has created.\n\nApart from Black Comedy, which is only half an evening, this has been the direst theatrical week my fairly young remembrance can furnish. The rot started early with Mr Shaffer's curtain-raiser, White Liars, professedly re-written since its first London appearance. The most interesting addition, in view of the long line of male attachments in Mr Shaffer's plays, is the explicit acknowledgment that this one really is homosexual. The most valuable subtraction is the disembodied voice with which the fortune-telling Baroness, who governs the play, was wont to hold interminable conversations.\n\nThe theme remains the same. All three characters are living protective lies: the Baroness is no Baroness, the Northern prole pop-singer is middle class and southern, the manager who claims to have created him is an emotional parasite. The play was planned to complement Black Comedy (which contains a helpful line - helpful since otherwise we wouldn't have noticed - about a darkened room acting as a lie-detector) and it also of course resembles The Iceman Cometh. Mr Shaffer seems more optimistic than O'Neill about man's capacity to survive the death of his illusions, which is cheering, but perhaps a dramatist needs to treat this theme at four hours' length if he is to quell our desire to know what else might be new. The play suffers, like many of Mr Shaffer's, from its failure to find a believable idiom, especially for its young: Timothy Dalton as the singer is wet, but he is not helped by his author or by Mr Giovanni, who lowers the lights on him and leaves him to soliloquise.\n\n* * *\n\nRainer Werner Fassbinder's reputation is doubtless exaggerated, like all reputations, but I was enough affected by it to expect more from The Bitter Tears of Petra von Kant (Theatre at New End) than a boudoir weepie. Petra is a rich fashion designer spurned by her lover, who happens to be a girl; diligently I searched for irony, but found only stifling indulgence. (It was a stifling night and the New End is not air-conditioned; the heat-wave may asphyxiate the fringe.) I suppose the acting may have been intended ironically; Delphine Seyrig's English is very clear, but she gets the inflections wrong - as, with even deadlier effect, does everybody else in the cast except for Angela Pleasence, who is smoulderingly silent and for whom bully; seeing as those who speak have to say \"certainly I can well understand your bitterness\" or even, unanswerably I suppose, \"he stank of man as only men can stink.\" The production by Robert Walker is not good.\n\n* * *\n\nThe only fitting phrase for Hanratty In Hell was coined many years ago, at the opposite climatic extreme, by W. C. Fields: \"Tain't a fit night out for man nor beast.\" It is Charles Marowitz's last production at the Open Space, before moving on to other premises and to a programme that will abandon a policy of plays in favour of unspecified company work. This is a promise that Mr Marowitz keeps making, but maybe this time he means it; his treatment of texts is, in general, poundingly inept, but Brian Carr's piece deserves the worst he can do to it and may be meant as a valediction.\n\nMr Carr assumes Hanratty to have been wrongly convicted of the A6 murder and begins with some laboured joking about his status as an innocent in hell. We then shift, unexplained, back to earth and back in time for a reconstruction of the police investigation, with the coppers humorously renamed Kray, with methods to match. I am prepared to believe the worst of anyone, but I want more than just assertion; so apparently do Ronald Lewis as the super and Ken Parry as Lord Longford (another gas), since they experienced great difficulty in getting Mr Carr's words out of their mouths. Valerie Storie is also portrayed; jumping out of her wheelchair with joy when she gets the wrong man sent down. Whatever else may be in dispute, nobody has ever questioned that Miss Storie was raped and was crippled; this does not make her a saint, but it makes one reluctant to laugh at her just for kicks. The play's choice of culprit is Peter Alphon, who repeatedly confessed and withdrew his confession. It ends up telling us where he now lives, presumably so that the lynch-mobs will know where to go.",
+      "production_title": [
+        "Black Comedy",
+        "White Liars",
+        "The Bitter Tears of Petra von Kant",
+        "Hanratty In Hell"
+      ],
+      "company": [],
+      "venue": [
+        "Shaw",
+        "Theatre at New End",
+        "Open Space"
+      ],
+      "city": [
+        "London"
+      ],
+      "roles": {
+        "director": [
+          "Paul Giovanni",
+          "Robert Walker",
+          "Charles Marowitz"
+        ],
+        "playwright": [
+          "Peter Shaffer",
+          "Rainer Werner Fassbinder",
+          "Brian Carr"
+        ],
+        "actors": [
+          "Celia Bannerman",
+          "Maggie Smith",
+          "Gemma Craven",
+          "Louise Purnell",
+          "Peter Machin",
+          "Timothy Dalton",
+          "Delphine Seyrig",
+          "Angela Pleasence",
+          "Ronald Lewis",
+          "Ken Parry"
+        ],
+        "composer_lyricist": [],
+        "musical_director": [],
+        "choreographer": [],
+        "set_designer": [],
+        "costume_designer": [],
+        "lighting_designer": [],
+        "sound_designer": [],
+        "producer": [],
+        "dramaturg": [],
+        "performers": [],
+        "musicians": [],
+        "artists": []
+      }
+    },
+    {
+      "number": 478,
+      "id": "258648924",
+      "title": "The trouble with thrillers",
+      "author": "Robert Cushman",
+      "publication": "The Observer",
+      "section": "Review",
+      "date": "1976-07-11",
+      "year": "1976",
+      "category": "Theatre Review",
+      "url": "https://theguardian.newspapers.com/image/258648924/?match=1&terms=%22robert%20cushman%22",
+      "markdownPath": "guardian_archive/markdown/1976.07.11.The_Observer.258648924.md",
+      "productions": [
+        "Sparrowfall",
+        "The Man Himself",
+        "Emigres",
+        "Richard III",
+        "The Pleasure of His Company"
+      ],
+      "venues": [
+        "Hampstead",
+        "Young Vic",
+        "St George's Playhouse",
+        "Phoenix"
+      ],
+      "cities": [
+        "London"
+      ],
+      "people": [],
+      "body": "THE climax of Alan Drury's Sparrowfall (Hampstead) is the death of a comparatively innocent man. Just what special providence has decreed the fall of this particular sparrow is difficult to determine; though the motives of Mr Drury's characters - greed and self-protection - would seem to be conventional enough, it is difficult to come at them while the play is in progress. The form interposes. The play is a thriller, but not the kind that is usually found in the theatre.\n\nIf Time Out magazine is to be trusted (though its preview article laid so much stress on the play's extremely incidental music that I arrived at Hampstead half expecting a rock-musical), the influences were Alfred Hitchcock, Howard Hawks and (some inconsistency here) B-movies. But Hampstead has a small stage, and so one is more inclined, watching the play, to think of the small screen. Mr Drury gives us a business setting - his main character is something big and nasty in investments - and the effect is rather as if The Brothers had grown brains and sex organs.\n\nMr Drury's dialogue is studiously light and steely, and John Chapman's production matches it scrupulously. Nobody is allowed to betray any emotion except fear. As for the performances, they are well-tailored and well-groomed; collectively the cast displays the finest head of hair to be found on the London stage. The designer, Tanya McCallin, has divided her stage into a series of battleship-grey compartments, allowing the action to progress from flat to office to aerodrome with no immediate signs of strain.\n\nThere is strain, though; the play, production and design are faultlessly in style, but their success is self-defeating. Even in the hands of Hawks and Hitchcock the thriller is a pretty empty form, telling us things about human corruptibility which we knew already. The writers may supply smart dialogue - so does Mr Drury, at least some of the time - but nobody goes primarily to listen to it. Our object is to watch, and both cinema and television give us more to look at than the theatre ever can; even when the scene is stationary, the camera moves. Watching a single multiple set, however elegant and ingenious, is comparatively poor fun; all the action has to take place in corners and one aches to see the action take possession of the stage.\n\nThis play is the successor of the comic-strip pieces which a decade ago were going to save our theatre from bourgeois naturalism; they never get beyond the one-act lunchtime circuit because, by definition, they lacked staying-power. The form saves the playwright the trouble of exploring his characters; though Mr Drury's The Man Himself, which has been turning up at six o'clock performances in the National's Young Vic season, shows that he has the desire and the ability. In The Man Himself he exercises them in the simplest available form - the monologue - but he gives promise of becoming a public writer who can depict people as they are rather than as he would like them to be.\n\n* * *\n\nEmigres by the Polish writer Slawomir Mrozek, who has been absent from our stages for several years. He has been away from his homeland even longer, and this piece eventually supplies some piquant thoughts on the predicament of the expatriate. I say eventually since, at least in Kevin Billington's production, the play takes an unconscionable time to get going. Jim Norton, who is sort of intellectual, and Brian Cox, who is sort of thick, share a room in some city foreign to both of them; unfortunately both they and their environment seem very British, which saps the base of the play.\n\nThey might be in any old two-hander, and from time to time I was driven to think of them as two halves of the same character: a notoriously desperate critical gambit which proved as unhelpful here as it usually does. However, when Mrozek gets more specific about them - when each is forced to consider the possibility of the other being an informer, when Mr Norton forces Mr Cox to realise the unreality of his dreams of returning home and when Mr Cox half-heartedly and amusingly attempts suicide to Mr Norton's considerable impatience - both text and performance sharpen up.\n\n* * *\n\nAlan Badel is the leader of the lost generation of English classicists who give the St George's Playhouse its main reason for being. Appropriately, he is now appearing as Richard III. His Richard is less a devil than a driven imp, rolling downstage to deliver his first speech as a deadpan joke on the audience, and winning his way to the throne more by cheek than imposture. (This is reasonable: Richard, unlike Iago, is trusted by almost nobody.) His eyes are his tensest feature; they are hypnotically fixed as he waits to see how his victims will respond to his poison; always there is the chance of failure.\n\nRichard's disabilities allow Mr Badel to act, fascinatingly, at an incline; even when he has reached the throne he hugs its side. As an ironist Mr Badel is in the Olivier class; though the St George's acoustics are cruel to his throwaways; he can never secure a full-throated laugh. This is the more unfortunate because he falls short of Olivier in passion and in vocal, as opposed to physical, command; there seem to be no heights or depths to his voice, no bark, no ring. He is best in the prolonged cat-and-mouse game he plays with Richard Gale's Buckingham, or in the briefer contest with Lynn Farleigh's Anne, who ends up actually flirting with him; weakest in the frenzy of the end, by which time he seemed to be acting by rote. Most of Richard is there, but you have to dig for some of it.\n\nDouglas Campbell's production is a very enjoyable piece of storytelling in the Guthrie tradition; sometimes for worse (there is a spectacularly but pointlessly doddering Archbishop), but often for better. Richard's court is presented as a vast comfortless ante-chamber, the courtiers going on cold continuous progresses around the enthroned protagonist. The same idea works less well for the Bosworth ghosts, ceaselessly wandering at one and a half times normal speed (the approved theatrical rate for spectres). The cluttered facade of former productions has gone (and with it some of the Elizabethan theorising in the programme), leaving only the church's gothic pillars. These and the platform stage enable the production to look good even when its sound is muffled. Rosemary Leach's Elizabeth is the most commanding performance; and much of the personal interplay is on the road to being interesting.\n\n* * *\n\nThe Pleasure of His Company (Phoenix) is, I suppose, well-named; it exists to introduce us to Douglas Fairbanks Jr, who is dapper if not exciting. But there is hardly scope for excitement in Samuel Taylor's comedy which, though written in the fifties, has now been set in the thirties, so that its anodyne unreality may pass for period charm - prompting the thought that if Mr Fairbanks had brought over a genuine antique of the period (Philip Barry or S. N. Behrman) the lines could have been wittier, the sets just as plush; the fans would not notice the difference, and the rest of us would have a little more to keep us awake. As it is Peter Dews's production is the slowest thing imaginable; Mr Fairbanks reduces its pace to a stroll, Dinah Sheridan (though hers is the most conscientious performance) takes it down to a crawl, and Wilfrid Hyde White finally stops it in its tracks. The pungent satisfaction with which he surveys its corpse - as if he had drowned it in dry Martini - is the most amusing thing in the evening. Mr Hyde White refers to himself as inhabiting an ivory tower and addresses his grand-daughter as \"person.\" It is that kind of play; at least it would like to be.",
+      "production_title": [
+        "Sparrowfall",
+        "The Man Himself",
+        "Emigres",
+        "Richard III",
+        "The Pleasure of His Company"
+      ],
+      "company": [
+        "National Theatre",
+        "Young Vic"
+      ],
+      "venue": [
+        "Hampstead",
+        "Young Vic",
+        "St George's Playhouse",
+        "Phoenix"
+      ],
+      "city": [
+        "London"
+      ],
+      "roles": {
+        "director": [
+          "John Chapman",
+          "Kevin Billington",
+          "Douglas Campbell",
+          "Peter Dews"
+        ],
+        "playwright": [
+          "Alan Drury",
+          "Slawomir Mrozek",
+          "William Shakespeare",
+          "Samuel Taylor",
+          "Philip Barry",
+          "S. N. Behrman"
+        ],
+        "actors": [
+          "Jim Norton",
+          "Brian Cox",
+          "Alan Badel",
+          "Richard Gale",
+          "Lynn Farleigh",
+          "Rosemary Leach",
+          "Douglas Fairbanks Jr",
+          "Dinah Sheridan",
+          "Wilfrid Hyde White"
+        ],
+        "composer_lyricist": [],
+        "musical_director": [],
+        "choreographer": [],
+        "set_designer": [
+          "Tanya McCallin"
+        ],
+        "costume_designer": [],
+        "lighting_designer": [],
+        "sound_designer": [],
+        "producer": [],
+        "dramaturg": [],
+        "performers": [],
+        "musicians": [],
+        "artists": []
+      }
+    },
+    {
+      "number": 479,
+      "id": "258650559",
+      "title": "Hallelujah Chorus!",
+      "author": "Robert Cushman",
+      "publication": "The Observer",
+      "section": "Review",
+      "date": "1976-07-25",
+      "year": "1976",
+      "category": "Theatre Review",
+      "url": "https://theguardian.newspapers.com/image/258650559/?match=1&terms=%22robert%20cushman%22",
+      "markdownPath": "guardian_archive/markdown/1976.07.25.The_Observer.258650559.md",
+      "productions": [
+        "A Chorus Line",
+        "The Circle",
+        "Banana Ridge",
+        "Donkeys' Years"
+      ],
+      "venues": [
+        "Drury Lane",
+        "Chichester",
+        "Savoy",
+        "Globe"
+      ],
+      "cities": [
+        "London",
+        "Chichester"
+      ],
+      "people": [],
+      "body": "SIX years ago, in his choreography for Company, Michael Bennett devised a new convention for chorus numbers in a musical. He did it by dispensing with a chorus; when massed song and dance were called for, he used the principals, a dozen actors whom we had already got to know as individual characters. It was a lot more fun than the multiple anonymity that is generally to be found treading vigorously just outside the star's spotlight.\n\nIn A Chorus Line (Drury Lane), Mr Bennett, now director and presiding genius as well as choreographer, has worked the same trick in reverse. Instead of making a chorus out of individuals, he has made individuals out of a chorus. The framework of the show is an audition session for an unspecified musical; we begin in the most electric opening sequence I have ever seen, by watching the applicants going through their paces in tap and ballet. Some of them are sent home, 17 remain.\n\nThe director says that he needs eight of them, and that they will have to do more than dance. They will have lines, so he wants to find out what kind of people they are. The audition turns into a trial by inquisition, a contest at which we have nobody in particular to root for; we can only love the 17 for themselves and by the end we love them all.\n\nBut the main reason we love them is not because they are cute or because they had difficult childhoods, though it transpires that they all had; it is because they are so exhilaratingly good at their jobs. And here the line between performer and role really ceases to matter; these are fine actor-singer-dancers playing fine actor-singer-dancers, American specials.\n\nGood though they are, it does not follow that they would all be equally suited to the roles they are auditioning for. In effectively pretending that they would be, Mr Bennett cheats a bit. Seeing the show for the third time, I sagged slightly after the first number, when the dancing stopped and the confessional began. Part of the appeal of that beginning is its documentary quality; we are seduced into thinking that we are witnessing a dance-audition as it really is. What follows seems artificial.\n\nThe slump, though, is momentary, since we are soon given a bright succession of songs about professional hazards: about a girl who can dance but not sing, about another who stayed out of work until she got her breasts siliconised (the refrain of this song is \"Tits and Ass,\" though the programme politely refers to it as \"Dance: Ten; Looks: Three\"), about a third who suffered appallingly from an actor-teacher who ridiculed her earnest attempts to impersonate an ice-cream. This one, called \"Nothing,\" is the show's best song, but Edward Kleban's lyrics for all three are funny and sympathetic.\n\nMarvin Hamlisch's music is serviceable, though too much of the score is pure Radio Two middle-of-the-road; not really theatrical, not really pop. The show's official climax is an appallingly vague ballad called \"What I Did For Love,\" a detachable hit. It is supposed to be about performing, but takes care never to say so.\n\nBy this time we are far, but not very deep, into the characters' hang-ups, though these are usually dealt with in speech rather than song. Talking about why they are in the business, they never mention Applause. I capitalise that word since it was the title, a few years back, of a much inferior musical which, however, latched onto a point which A Chorus Line neglects. At least it neglects it explicitly; in style and performance, of course, it is a hugely effective machine for pleasing audiences.\n\nAs an epilogue, after the story is done and the winning eight selected, we get a unison number called \"One,\" the cast of 19 (the director and his assistant thrown in) high-kicking in gold suits and glorious unison while the practice-mirrors revolve to turn a stark set into a sumptuous one. (Many of the most exciting things in the theatre are done with mirrors.) This finale also serves as a curtain-call; and it sends us wild. There are hints in the dialogue earlier that Mr Bennett despises this kind of Hello Dolly extravagance, and that he hates the idea of the chorus as an exploited centipede. I do not believe though that any audience in the world is going to leave the theatre seeing in that number what he wants us to see. It is simply too enjoyable. And, as in Company, we enjoy it the more for having got to know the performers beforehand.\n\nLeonard Bernstein recently deplored the \"phony vitality\" of musicals. The achievement of A Chorus Line is to make the vitality genuine again. Obviously the performers believe in the material. A montage called \"Hello Twelve, Hello Thirteen, Hello Love\" (puberty recollected in rhythm) is the show's epitome: commonplace in substance, but conqueringly alight in delivery. Mr Bennett's choreography, as distinct from his direction, can be surprisingly uninspired; a solitary number not only compromises what the show is supposed to be saying, but fails in itself, being only a series of angular turns. I carp since it is difficult not to snipe at a myth, and in the best and worst senses that is what A Chorus Line is: not the best musical ever, not even the best of the last few years, but an insight into the essence of musical, the biggest theatrical high since the RSC's one-day marathon of The Wars of the Roses.\n\n* * *\n\nChichester came back to scratch last week with a revival of Maugham's The Circle, which Peter Dews's production showed to be the kind of searching laugh at conventional society that only a conservative writer could bring off. (A radical wouldn't bother.) Bill Fraser and Googie Withers find the silliness and the pain in a raddled pair of elderly lovers. Actually Miss Withers scants a bit on the silliness, but she more than compensates with her virtuoso delicacy when counselling her daughter-in-law against repeating her own mistakes and eloping to the FMS (Federated Malay States).\n\nCoincidentally, the FMS may actually be glimpsed, not looking at all pleasant, in Ben Travers's Banana Ridge (Savoy), just pre-war, spiced with Mr Travers's eccentric verbal wit, but never really sparking. Robert Morley and George Cole are a disappointing duo as members of a sort of paternity syndicate, blackmailed into supporting the offspring of a Miss Sue Long, from whom many must have departed to the strains of \"Sue Long, It's Been Good to See You.\" The play blows its top too soon, leaving the last scene an anti-climax.\n\nThis could not be said of Michael Frayn's Donkeys' Years (Globe) which, having got all possible comic mileage out of a group of Cambridge graduates (now employed from the Ministry of Education downwards) returned for a college reunion, very sensibly turns itself into farce, among the most inventive, hilarious and scrupulously motivated to be found in London, even in this new heyday of the genre. Common to both the play's moods is the double theme of the turning worm and the jangled university belle; a brilliant pair of performances by Andrew Robertson and Penelope Keith. Her recoil from him is particularly memorable. Michael Rudman's production is blessed by an excellent cast, and you leave the theatre liking the author: not the highest dramatic gift but a rare and good one.",
+      "production_title": [
+        "A Chorus Line",
+        "The Circle",
+        "Banana Ridge",
+        "Donkeys' Years"
+      ],
+      "company": [
+        "Royal Shakespeare Company"
+      ],
+      "venue": [
+        "Drury Lane",
+        "Chichester",
+        "Savoy",
+        "Globe"
+      ],
+      "city": [
+        "London",
+        "Chichester"
+      ],
+      "roles": {
+        "director": [
+          "Michael Bennett",
+          "Peter Dews",
+          "Michael Rudman"
+        ],
+        "playwright": [
+          "W. Somerset Maugham",
+          "Ben Travers",
+          "Michael Frayn"
+        ],
+        "actors": [
+          "Bill Fraser",
+          "Googie Withers",
+          "Robert Morley",
+          "George Cole",
+          "Andrew Robertson",
+          "Penelope Keith"
+        ],
+        "composer_lyricist": [
+          "Marvin Hamlisch",
+          "Edward Kleban",
+          "Leonard Bernstein"
+        ],
+        "musical_director": [],
+        "choreographer": [
+          "Michael Bennett"
+        ],
+        "set_designer": [],
+        "costume_designer": [],
+        "lighting_designer": [],
         "sound_designer": [],
         "producer": [],
         "dramaturg": [],
