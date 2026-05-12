@@ -69,9 +69,9 @@ article h1 { margin-top: 8px; font-size: clamp(42px, 6vw, 78px); line-height: .9
 .entity-chip span { color: var(--chip-label, var(--muted)); font-weight: 700; line-height: 1.1; text-transform: uppercase; }
 .entity-chip strong { font-weight: 700; line-height: 1.1; }
 .entity-chip-featured { border-radius: 999px; padding: 7px 12px; font-size: 13px; }
-.entity-productions { --chip-bg: #eef1f5; --chip-border: #c9d2dc; --chip-label: #526e88; }
+.entity-productions { --chip-bg: #f3f0e8; --chip-border: #d7cfbd; --chip-label: #80714f; }
 .entity-companies, .entity-venues { --chip-bg: #eef2f1; --chip-border: #cbd8d5; --chip-label: #55736b; }
-.entity-cities { --chip-bg: #f3f0e8; --chip-border: #d7cfbd; --chip-label: #80714f; }
+.entity-cities { --chip-bg: #eef1f5; --chip-border: #c9d2dc; --chip-label: #526e88; }
 .entity-group-people { --chip-bg: #f4eeee; --chip-border: #dbcaca; --chip-label: #8a5f5f; }
 .entity-directors, .entity-playwrights { --chip-bg: #f1eef5; --chip-border: #d2c8dd; --chip-label: #6b5a7d; }
 .article-body { margin-top: 32px; border-top: 2px solid var(--ink); padding-top: 30px; }
