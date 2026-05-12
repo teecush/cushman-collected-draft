@@ -3607,7 +3607,8 @@
             "Theatre at New End"
           ],
           "playwright": [
-            "Aeschylus"
+            "Aeschylus",
+            "Jean Anouilh"
           ],
           "actors": [
             "Angela Pleasence"
@@ -3623,6 +3624,9 @@
             "Peter Hall",
             "Laurence Olivier"
           ],
+          "playwright": [
+            "J. B. Priestley"
+          ],
           "actors": [
             "Paul Gregory",
             "Michael Jayston",
@@ -3633,6 +3637,9 @@
         {
           "order": "3",
           "production_title": "Roots",
+          "venue": [
+            "Young Vic"
+          ],
           "playwright": [
             "Arnold Wesker"
           ],
@@ -3936,6 +3943,9 @@
           "production_title": "Off the Peg",
           "venue": [
             "Arts Theatre Club"
+          ],
+          "actors": [
+            "Jim Bailey"
           ]
         },
         {
@@ -3974,6 +3984,9 @@
           "order": "6",
           "production_title": "Table Manners",
           "venue": [
+            "Greenwich"
+          ],
+          "city": [
             "Greenwich"
           ],
           "playwright": [
@@ -4125,6 +4138,9 @@
           "production_title": "The King",
           "venue": [
             "Shaw Theatre"
+          ],
+          "director": [
+            "Peter James"
           ],
           "playwright": [
             "David Cregan"
@@ -5080,7 +5096,8 @@
             "William Shakespeare"
           ],
           "actors": [
-            "Helen Mirren"
+            "Helen Mirren",
+            "Nicol Williamson"
           ]
         },
         {
@@ -5818,6 +5835,9 @@
           "director": [
             "Max Stafford-Clark"
           ],
+          "playwright": [
+            "John Osborne"
+          ],
           "actors": [
             "Jill Bennett",
             "Keith Barron",
@@ -5832,6 +5852,9 @@
           ],
           "director": [
             "Kevin Billington"
+          ],
+          "playwright": [
+            "Harold Pinter"
           ],
           "actors": [
             "John Alderton",
@@ -6352,7 +6375,8 @@
             "Haymarket"
           ],
           "playwright": [
-            "Ronald Millar"
+            "Ronald Millar",
+            "C. P. Snow"
           ],
           "actors": [
             "Zena Walker",
@@ -6809,7 +6833,8 @@
             "Ludmilla Mikael",
             "Yvonne Coulette",
             "Trevor Peacock",
-            "Derek Smith"
+            "Derek Smith",
+            "Alan Howard"
           ],
           "set_designer": [
             "Farrar"
@@ -7337,6 +7362,9 @@
           "company": [
             "Actors' Company"
           ],
+          "city": [
+            "Wimbledon"
+          ],
           "playwright": [
             "Kerry Lee Crabbe"
           ]
@@ -7384,8 +7412,12 @@
           "venue": [
             "Greenwich Theatre"
           ],
+          "city": [
+            "Greenwich"
+          ],
           "playwright": [
-            "Francis Beaumont"
+            "Francis Beaumont",
+            "Tom Stoppard"
           ]
         }
       ]
@@ -8708,6 +8740,9 @@
           "director": [
             "Jonathan Hale"
           ],
+          "playwright": [
+            "J. A. Whitehead"
+          ],
           "actors": [
             "Gary Bond",
             "Judy Cornwell",
@@ -9049,12 +9084,12 @@
           "venue": [
             "London Casino"
           ],
+          "composer_lyricist": [
+            "Bryan Blackburn"
+          ],
           "performers": [
             "Danny La Rue",
             "Sheila White"
-          ],
-          "composer_lyricist": [
-            "Bryan Blackburn"
           ]
         },
         {
@@ -9080,7 +9115,8 @@
             "Quaglino's"
           ],
           "performers": [
-            "Robert Buckman"
+            "Robert Buckman",
+            "Jonathan Miller"
           ]
         }
       ]
@@ -10272,6 +10308,9 @@
         {
           "order": "1",
           "production_title": "The Family Dance",
+          "playwright": [
+            "Felicity Browne"
+          ],
           "actors": [
             "Alec McCowen",
             "Annette Crosbie",
@@ -10905,7 +10944,8 @@
             "David Horlock"
           ],
           "playwright": [
-            "David Horlock"
+            "David Horlock",
+            "Lewis Carroll"
           ],
           "actors": [
             "Michael Rothwell"
@@ -14960,7 +15000,10 @@
         },
         {
           "order": "2",
-          "production_title": "All's Well That Ends Well"
+          "production_title": "All's Well That Ends Well",
+          "director": [
+            "David Jones"
+          ]
         },
         {
           "order": "3",
@@ -15970,19 +16013,56 @@
       "production_groups": [
         {
           "order": "1",
-          "production_title": "Antony and Cleopatra"
+          "production_title": "Antony and Cleopatra",
+          "director": [
+            "Toby Robertson"
+          ],
+          "actors": [
+            "Robert Eddison",
+            "Derek Jacobi",
+            "Timothy West"
+          ]
         },
         {
           "order": "2",
-          "production_title": "All for Love"
+          "production_title": "All for Love",
+          "director": [
+            "Frank Hauser"
+          ],
+          "actors": [
+            "Kenneth Gilbert",
+            "Barbara Jefford",
+            "Suzanne Bertish"
+          ]
         },
         {
           "order": "3",
-          "production_title": "Writers' Cramp"
+          "production_title": "Writers' Cramp",
+          "venue": [
+            "Carlton Studios"
+          ],
+          "playwright": [
+            "John Byrne"
+          ],
+          "artists": [
+            "F. S. McDade"
+          ]
         },
         {
           "order": "4",
-          "production_title": "Richard III Part II"
+          "production_title": "Richard III Part II",
+          "playwright": [
+            "David Pownall"
+          ],
+          "actors": [
+            "Stephen Boxer"
+          ],
+          "composer_lyricist": [
+            "Stephen Boxer"
+          ],
+          "artists": [
+            "George Orwell"
+          ]
         },
         {
           "order": "5",
@@ -16301,6 +16381,9 @@
           "production_title": "Queen Christina",
           "playwright": [
             "Pam Gems"
+          ],
+          "actors": [
+            "Sheila Allen"
           ]
         },
         {
@@ -16920,6 +17003,9 @@
         {
           "order": "1",
           "production_title": "Rosmersholm",
+          "director": [
+            "Clifford Williams"
+          ],
           "actors": [
             "Frank Middlemass",
             "Daniel Massey",
@@ -17643,7 +17729,14 @@
         },
         {
           "order": "4",
-          "production_title": "Cause Célèbre"
+          "production_title": "Cause Célèbre",
+          "playwright": [
+            "John Byrne",
+            "Pam Gems",
+            "Mary O'Malley",
+            "Howard Schuman",
+            "John Osborne"
+          ]
         },
         {
           "order": "5",
@@ -18100,7 +18193,8 @@
             "Barry Kyle"
           ],
           "playwright": [
-            "Charles Wood"
+            "Charles Wood",
+            "Peter Barnes"
           ],
           "actors": [
             "Paul Shelley",
@@ -18769,6 +18863,9 @@
           "production_title": "Don Juan",
           "director": [
             "David Thompson"
+          ],
+          "playwright": [
+            "Moliere"
           ],
           "actors": [
             "Frank Barrie",
@@ -20435,11 +20532,20 @@
       "production_groups": [
         {
           "order": "1",
-          "production_title": "Coriolanus"
+          "production_title": "Coriolanus",
+          "company": [
+            "Royal Shakespeare Company"
+          ],
+          "actors": [
+            "Alan Howard"
+          ]
         },
         {
           "order": "2",
-          "production_title": "Macbeth"
+          "production_title": "Macbeth",
+          "actors": [
+            "Albert Finney"
+          ]
         },
         {
           "order": "3",
@@ -20881,6 +20987,9 @@
         {
           "order": "8",
           "production_title": "The Travelling Music Show",
+          "venue": [
+            "Her Majesty's"
+          ],
           "actors": [
             "Bruce Forsyth"
           ],
@@ -21636,7 +21745,10 @@
       "production_groups": [
         {
           "order": "1",
-          "production_title": "The Marriage"
+          "production_title": "The Marriage",
+          "actors": [
+            "Leonid Bronevoy"
+          ]
         },
         {
           "order": "2",
@@ -22760,7 +22872,10 @@
       "production_groups": [
         {
           "order": "1",
-          "production_title": "The Complete Dramatic Works of William Shakespeare"
+          "production_title": "The Complete Dramatic Works of William Shakespeare",
+          "playwright": [
+            "William Shakespeare"
+          ]
         },
         {
           "order": "2",
@@ -22768,7 +22883,13 @@
         },
         {
           "order": "3",
-          "production_title": "Richard II"
+          "production_title": "Richard II",
+          "actors": [
+            "Derek Jacobi"
+          ],
+          "producer": [
+            "Cedric Messina"
+          ]
         },
         {
           "order": "4",
@@ -24219,7 +24340,8 @@
           "order": "2",
           "production_title": "Bob Hope",
           "actors": [
-            "Bob Hope"
+            "Bob Hope",
+            "Leslie Uggams"
           ]
         },
         {
@@ -24359,7 +24481,11 @@
         },
         {
           "order": "3",
-          "production_title": "Coriolanus"
+          "production_title": "Coriolanus",
+          "actors": [
+            "Robert Hirsch",
+            "Alan Howard"
+          ]
         },
         {
           "order": "4",
@@ -26895,6 +27021,9 @@
           ],
           "city": [
             "London"
+          ],
+          "playwright": [
+            "Lanford Wilson"
           ]
         },
         {
@@ -28994,6 +29123,9 @@
           "director": [
             "Michael Blakemore"
           ],
+          "playwright": [
+            "Michael Frayn"
+          ],
           "actors": [
             "Leonard Rossiter",
             "Pamela Salem",
@@ -29615,6 +29747,9 @@
         {
           "order": "2",
           "production_title": "Love on the Dole",
+          "venue": [
+            "Royal Exchange, Manchester"
+          ],
           "city": [
             "Manchester"
           ],
@@ -29748,6 +29883,12 @@
         {
           "order": "1",
           "production_title": "The Hothouse",
+          "director": [
+            "Harold Pinter"
+          ],
+          "playwright": [
+            "Harold Pinter"
+          ],
           "actors": [
             "Derek Newark",
             "James Grant",
@@ -29760,9 +29901,13 @@
           "director": [
             "Michael Elliott"
           ],
+          "playwright": [
+            "Ronald Harwood"
+          ],
           "actors": [
             "Freddie Jones",
-            "Lockwood West"
+            "Lockwood West",
+            "Tom Courtenay"
           ]
         },
         {
@@ -29913,6 +30058,9 @@
         {
           "order": "3",
           "production_title": "Towards a Nuclear Future",
+          "venue": [
+            "ICA"
+          ],
           "playwright": [
             "Pip Simmons"
           ]
@@ -30337,6 +30485,9 @@
           "production_title": "Sisterly Feelings",
           "director": [
             "Christopher Morahan"
+          ],
+          "playwright": [
+            "Alan Ayckbourn"
           ],
           "actors": [
             "Penelope Wilton",
@@ -31153,6 +31304,16 @@
           ],
           "city": [
             "Stratford, Ontario"
+          ],
+          "director": [
+            "Brian Bedford"
+          ],
+          "playwright": [
+            "Edna O'Brien"
+          ],
+          "actors": [
+            "Brian Bedford",
+            "Maggie Smith"
           ]
         },
         {
@@ -31294,7 +31455,8 @@
             "D. H. Lawrence"
           ],
           "actors": [
-            "Ian McKellen"
+            "Ian McKellen",
+            "Sheila Allen"
           ]
         },
         {
@@ -32706,7 +32868,11 @@
         },
         {
           "order": "2",
-          "production_title": "Richard II"
+          "production_title": "Richard II",
+          "actors": [
+            "Alan Howard",
+            "David Suchet"
+          ]
         },
         {
           "order": "3",
@@ -33035,6 +33201,9 @@
         {
           "order": "2",
           "production_title": "Act of Union",
+          "company": [
+            "Soho Poly"
+          ],
           "playwright": [
             "Seamus Finnegan"
           ],
@@ -34012,6 +34181,9 @@
           "director": [
             "Philip Prowse"
           ],
+          "playwright": [
+            "Christopher Marlowe"
+          ],
           "actors": [
             "Steven Dartnell",
             "John Breck",
@@ -34862,6 +35034,9 @@
           "city": [
             "Paris"
           ],
+          "director": [
+            "Peter Brook"
+          ],
           "actors": [
             "Natasha Parry",
             "Joseph Blatchley",
@@ -34982,6 +35157,9 @@
         {
           "order": "2",
           "production_title": "Don Juan",
+          "playwright": [
+            "Moliere"
+          ],
           "actors": [
             "Nigel Terry",
             "Ron Pember"
@@ -34990,6 +35168,9 @@
         {
           "order": "3",
           "production_title": "The Governess",
+          "city": [
+            "Bristol"
+          ],
           "playwright": [
             "Ian Sinclair"
           ]
@@ -36565,8 +36746,12 @@
           "venue": [
             "Riverside"
           ],
+          "director": [
+            "Ken Campbell"
+          ],
           "playwright": [
-            "Karel Capek"
+            "Karel Capek",
+            "Ken Campbell"
           ],
           "actors": [
             "Andy Rashleigh"
@@ -37214,6 +37399,9 @@
           "production_title": "The Love-Girl and the Innocent",
           "director": [
             "Clifford Williams"
+          ],
+          "playwright": [
+            "Alexander Solzhenitsyn"
           ],
           "set_designer": [
             "Ralph Koltai"
@@ -38209,6 +38397,9 @@
         {
           "order": "4",
           "production_title": "Blood on the Dole",
+          "company": [
+            "Liverpool Playhouse"
+          ],
           "playwright": [
             "Jim Morris"
           ],
@@ -39039,7 +39230,8 @@
             "Richard Brinsley Sheridan"
           ],
           "actors": [
-            "Paul Brooke"
+            "Paul Brooke",
+            "Nina Thomas"
           ],
           "set_designer": [
             "Bernard Culshaw"
@@ -39789,11 +39981,19 @@
       "production_groups": [
         {
           "order": "1",
-          "production_title": "Song and Dance"
+          "production_title": "Song and Dance",
+          "composer_lyricist": [
+            "Andrew Lloyd Webber"
+          ]
         },
         {
           "order": "2",
-          "production_title": "Boogie"
+          "production_title": "Boogie",
+          "actors": [
+            "Leonie Hofmeyer",
+            "Sarah McNair",
+            "Michele Maxwell"
+          ]
         },
         {
           "order": "3",
@@ -42689,13 +42889,19 @@
       "production_groups": [
         {
           "order": "1",
-          "production_title": "A Midsummer Night's Dream"
+          "production_title": "A Midsummer Night's Dream",
+          "director": [
+            "Bill Bryden"
+          ]
         },
         {
           "order": "2",
           "production_title": "Camelot",
           "playwright": [
             "William Shakespeare"
+          ],
+          "actors": [
+            "Richard Harris"
           ]
         },
         {
@@ -42795,15 +43001,36 @@
       "production_groups": [
         {
           "order": "1",
-          "production_title": "Still Life"
+          "production_title": "Still Life",
+          "playwright": [
+            "John Byrne"
+          ],
+          "set_designer": [
+            "John Byrne"
+          ]
         },
         {
           "order": "2",
-          "production_title": "Call Me Madam"
+          "production_title": "Call Me Madam",
+          "city": [
+            "Birmingham"
+          ],
+          "director": [
+            "Roger Redfarn"
+          ],
+          "choreographer": [
+            "Tudor Davies"
+          ],
+          "set_designer": [
+            "Terry Parsons"
+          ]
         },
         {
           "order": "3",
-          "production_title": "Aladdin"
+          "production_title": "Aladdin",
+          "composer_lyricist": [
+            "Elizabeth Swados"
+          ]
         },
         {
           "order": "4",
@@ -42903,6 +43130,9 @@
           "composer_lyricist": [
             "Dick Vosburgh",
             "Frank Lazarus"
+          ],
+          "performers": [
+            "Sheila Steafel"
           ]
         },
         {
@@ -44905,6 +45135,9 @@
         {
           "order": "2",
           "production_title": "West",
+          "playwright": [
+            "Steven Berkoff"
+          ],
           "actors": [
             "Stella Tanner",
             "Susan Kyd"
@@ -44923,6 +45156,9 @@
         {
           "order": "4",
           "production_title": "The Adventures of Jasper Ridley",
+          "director": [
+            "Pam Brighton"
+          ],
           "playwright": [
             "Nigel Williams"
           ],
@@ -44960,6 +45196,9 @@
         {
           "order": "8",
           "production_title": "On Your Toes",
+          "city": [
+            "New York"
+          ],
           "director": [
             "George Abbott",
             "Tommy Tune"
@@ -45994,7 +46233,19 @@
       "production_groups": [
         {
           "order": "1",
-          "production_title": "Singin' in the Rain"
+          "production_title": "Singin' in the Rain",
+          "director": [
+            "Tommy Steele"
+          ],
+          "actors": [
+            "Tommy Steele"
+          ],
+          "composer_lyricist": [
+            "Arthur Freed"
+          ],
+          "producer": [
+            "Harold Fielding"
+          ]
         },
         {
           "order": "2",
@@ -46407,7 +46658,11 @@
           "order": "1",
           "production_title": "Loving Reno",
           "director": [
-            "Simon Callow"
+            "Simon Callow",
+            "Snoo Wilson"
+          ],
+          "playwright": [
+            "Snoo Wilson"
           ],
           "actors": [
             "Philip Donaghy",
@@ -47450,7 +47705,8 @@
           ],
           "playwright": [
             "John Fletcher",
-            "Philip Massinger"
+            "Philip Massinger",
+            "Nicholas Wright"
           ],
           "actors": [
             "Sara Kestelman",
@@ -48481,7 +48737,16 @@
         },
         {
           "order": "2",
-          "production_title": "Empty Seats"
+          "production_title": "Empty Seats",
+          "playwright": [
+            "Joe Orton"
+          ],
+          "actors": [
+            "Edna Everage"
+          ],
+          "producer": [
+            "Michael White"
+          ]
         },
         {
           "order": "3",
@@ -48764,7 +49029,10 @@
         },
         {
           "order": "2",
-          "production_title": "Richard III"
+          "production_title": "Richard III",
+          "actors": [
+            "Colm Feore"
+          ]
         },
         {
           "order": "3",
@@ -49227,7 +49495,14 @@
         },
         {
           "order": "3",
-          "production_title": "Henry V"
+          "production_title": "Henry V",
+          "actors": [
+            "Sydney Bromley",
+            "Trevor Peacock"
+          ],
+          "set_designer": [
+            "Farrah"
+          ]
         },
         {
           "order": "4",
@@ -50214,6 +50489,9 @@
         {
           "order": "1",
           "production_title": "Black Comedy",
+          "playwright": [
+            "Peter Shaffer"
+          ],
           "actors": [
             "Celia Bannerman",
             "Maggie Smith",
@@ -50356,6 +50634,9 @@
           ],
           "director": [
             "John Chapman"
+          ],
+          "playwright": [
+            "Alan Drury"
           ],
           "set_designer": [
             "Tanya McCallin"
