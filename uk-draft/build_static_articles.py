@@ -9,7 +9,7 @@ ROOT = Path(__file__).resolve().parent
 PROJECT_ROOT = ROOT.parent.parent
 DATA_PATH = ROOT / "data" / "reviews.json"
 ARTICLES_DIR = ROOT / "articles"
-ASSET_VERSION = "10"
+ASSET_VERSION = "11"
 
 ROLE_FIELDS = [
     ("directors", "Director", "director", 4),
