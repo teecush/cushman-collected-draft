@@ -230,7 +230,7 @@ def metadata_chips(record):
     md = parse_frontmatter(record.get("markdownPath", ""))
     production_groups = md.get("production_groups")
     if production_groups:
-        return production_group_chips(production_groups)
+        return production_group_chips(production_groups) + shared_metadata_chips(md, production_groups)
 
     production_values = as_list(md.get("production_title")) or as_list(record.get("productions"))
     company_values = as_list(md.get("company"))
@@ -267,6 +267,48 @@ def metadata_chips(record):
         {section_html}
       </div>"""
     return production_html + entity_html
+
+
+def grouped_values(production_groups, key):
+    values = set()
+    for group in production_groups:
+        if not isinstance(group, dict):
+            continue
+        for value in as_list(group.get(key)):
+            values.add(str(value))
+    return values
+
+
+def shared_metadata_chips(md, production_groups):
+    sections = []
+    company_values = [value for value in as_list(md.get("company")) if value not in grouped_values(production_groups, "company")]
+    venue_values = [value for value in as_list(md.get("venue")) if value not in grouped_values(production_groups, "venue")]
+    city_values = [value for value in as_list(md.get("city")) if value not in grouped_values(production_groups, "city")]
+    context_chips = context_metadata_chips(company_values, venue_values, city_values)
+    if context_chips:
+        sections.append(("Shared Context", "".join(context_chips), "context"))
+
+    people_chips = []
+    for type_name, prefix, key, limit in ROLE_FIELDS:
+        assigned = grouped_values(production_groups, key)
+        for value in as_list(md.get(key))[:limit]:
+            if value not in assigned:
+                people_chips.append(entity_chip(type_name, value, prefix, "people"))
+    if people_chips:
+        sections.append(("Shared People", "".join(people_chips), "people"))
+
+    if not sections:
+        return ""
+    section_html = "\n        ".join(
+        f"""<section class="article-entity-section article-entity-section-{group}">
+          <span class="article-entity-label">{escape(label)}</span>
+          <nav class="article-entities" aria-label="{escape(label)} metadata chips">{chips}</nav>
+        </section>"""
+        for label, chips, group in sections
+    )
+    return f"""<div class="article-entity-groups article-entity-groups-shared">
+        {section_html}
+      </div>"""
 
 
 def context_metadata_chips(company_values, venue_values, city_values):
