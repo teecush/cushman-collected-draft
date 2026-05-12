@@ -168,9 +168,24 @@
         "London"
       ],
       "roles": {
-        "director": [],
-        "playwright": [],
-        "actors": [],
+        "director": [
+          "John Dexter",
+          "Patrick Garland",
+          "Laurence Olivier",
+          "Michael Blakemore",
+          "Frank Dunlop"
+        ],
+        "playwright": [
+          "William Shakespeare"
+        ],
+        "actors": [
+          "Anthony Hopkins",
+          "Edward Woodward",
+          "Maggie Smith",
+          "Paul Scofield",
+          "Alan Howard",
+          "Derek Jacobi"
+        ],
         "composer_lyricist": [],
         "musical_director": [],
         "choreographer": [],
@@ -431,7 +446,9 @@
       "roles": {
         "director": [],
         "playwright": [],
-        "actors": [],
+        "actors": [
+          "Angela Lansbury"
+        ],
         "composer_lyricist": [],
         "musical_director": [],
         "choreographer": [],
@@ -499,9 +516,25 @@
         "Stratford"
       ],
       "roles": {
-        "director": [],
-        "playwright": [],
-        "actors": [],
+        "director": [
+          "Buzz Goodbody",
+          "Jonathan Miller"
+        ],
+        "playwright": [
+          "William Shakespeare",
+          "John Marston",
+          "John Vanbrugh"
+        ],
+        "actors": [
+          "Eileen Atkins",
+          "David Suchet",
+          "Brian Glover",
+          "Clement McCallin",
+          "Tony Church",
+          "Richard Pasco",
+          "Hazel Hughes",
+          "Derek Godfrey"
+        ],
         "composer_lyricist": [],
         "musical_director": [],
         "choreographer": [],
@@ -511,7 +544,9 @@
         "sound_designer": [],
         "producer": [],
         "dramaturg": [],
-        "performers": [],
+        "performers": [
+          "Umewaka Noh Troupe"
+        ],
         "musicians": [],
         "artists": []
       }
@@ -569,8 +604,21 @@
       ],
       "roles": {
         "director": [],
-        "playwright": [],
-        "actors": [],
+        "playwright": [
+          "Irving Wardle",
+          "Jeremy Kingston",
+          "Samuel Beckett",
+          "Tom Stoppard"
+        ],
+        "actors": [
+          "Philip Donaghy",
+          "Nicholas Selby",
+          "Timothy West",
+          "Kenneth More",
+          "Frankie Howerd",
+          "Kent Baker",
+          "Bill Wallis"
+        ],
         "composer_lyricist": [],
         "musical_director": [],
         "choreographer": [],
@@ -580,7 +628,10 @@
         "sound_designer": [],
         "producer": [],
         "dramaturg": [],
-        "performers": [],
+        "performers": [
+          "Joan Littlewood",
+          "Danny La Rue"
+        ],
         "musicians": [],
         "artists": []
       }
@@ -637,9 +688,26 @@
         "Edinburgh"
       ],
       "roles": {
-        "director": [],
-        "playwright": [],
-        "actors": [],
+        "director": [
+          "David Giles",
+          "Radu Penciulescu",
+          "Roland Rees"
+        ],
+        "playwright": [
+          "Anton Chekhov",
+          "Georg Buchner",
+          "Bertolt Brecht",
+          "C. P. Taylor",
+          "Michael Almaz",
+          "Richard Crane"
+        ],
+        "actors": [
+          "Robin Ellis",
+          "Tenniel Evans",
+          "Ian McKellen",
+          "Robert Eddison",
+          "John Woodvine"
+        ],
         "composer_lyricist": [],
         "musical_director": [],
         "choreographer": [],
@@ -708,9 +776,31 @@
         "London"
       ],
       "roles": {
-        "director": [],
-        "playwright": [],
-        "actors": [],
+        "director": [
+          "David William",
+          "Mike Ockrent",
+          "Bernard Miles"
+        ],
+        "playwright": [
+          "William Congreve",
+          "Stanley Eveling",
+          "J. B. Priestley",
+          "Jean Kerr"
+        ],
+        "actors": [
+          "Robin Ellis",
+          "Edward Petherbridge",
+          "Paola Dionisotti",
+          "Caroline Blakiston",
+          "John Woodvine",
+          "Richard Ireson",
+          "Katy Manning",
+          "Susan Carpenter",
+          "Philip Stone",
+          "Campbell Singer",
+          "Elizabeth Tyrrell",
+          "Wendy Craig"
+        ],
         "composer_lyricist": [],
         "musical_director": [],
         "choreographer": [],
@@ -761,9 +851,29 @@
         "Oxford"
       ],
       "roles": {
-        "director": [],
-        "playwright": [],
-        "actors": [],
+        "director": [
+          "Frank Hauser",
+          "Edward Petherbridge",
+          "Fernando Arrabal"
+        ],
+        "playwright": [
+          "Ferenc Molnar",
+          "Gabriel Josipovici",
+          "R. D. Laing",
+          "Edward Petherbridge",
+          "Fernando Arrabal"
+        ],
+        "actors": [
+          "Judi Dench",
+          "Leo McKern",
+          "Edward Woodward",
+          "Caroline Blakiston",
+          "John Moreno",
+          "Malcolm Storry",
+          "Anthony Milner",
+          "Ian McDiarmid",
+          "Cilla Black"
+        ],
         "composer_lyricist": [],
         "musical_director": [],
         "choreographer": [],
@@ -773,7 +883,9 @@
         "sound_designer": [],
         "producer": [],
         "dramaturg": [],
-        "performers": [],
+        "performers": [
+          "Philippe Genty"
+        ],
         "musicians": [],
         "artists": []
       }
@@ -822,10 +934,27 @@
         "London"
       ],
       "roles": {
-        "director": [],
-        "playwright": [],
-        "actors": [],
-        "composer_lyricist": [],
+        "director": [
+          "Charles Marowitz",
+          "Roger Redfarn"
+        ],
+        "playwright": [
+          "Philip Magdalany",
+          "Oscar Hammerstein II"
+        ],
+        "actors": [
+          "Harry Towb",
+          "Geoffrey Hutchings",
+          "Colin Blakely",
+          "David Waller",
+          "Judy Geeson",
+          "Peter Wyngarde",
+          "Sally Ann Howes"
+        ],
+        "composer_lyricist": [
+          "Richard Rodgers",
+          "Oscar Hammerstein II"
+        ],
         "musical_director": [],
         "choreographer": [],
         "set_designer": [],
@@ -981,9 +1110,30 @@
         "London"
       ],
       "roles": {
-        "director": [],
-        "playwright": [],
-        "actors": [],
+        "director": [
+          "Trevor Nunn",
+          "Tony Richardson",
+          "Barry Kyle"
+        ],
+        "playwright": [
+          "William Shakespeare",
+          "Sylvia Plath"
+        ],
+        "actors": [
+          "Nicol Williamson",
+          "Margaret Tyzack",
+          "Nicholas Selby",
+          "Morgan Sheppard",
+          "Richard Johnson",
+          "John Wood",
+          "Patrick Stewart",
+          "Vanessa Redgrave",
+          "Janet Suzman",
+          "Margaret Whiting",
+          "Judy Geeson",
+          "Colin Blakely",
+          "Roy Hudd"
+        ],
         "composer_lyricist": [],
         "musical_director": [],
         "choreographer": [],
@@ -2513,9 +2663,33 @@
         "London"
       ],
       "roles": {
-        "director": [],
-        "playwright": [],
-        "actors": [],
+        "director": [
+          "Peter Hall",
+          "Laurence Olivier"
+        ],
+        "playwright": [
+          "Jean Anouilh",
+          "Aeschylus",
+          "J. B. Priestley",
+          "Arnold Wesker",
+          "William Congreve"
+        ],
+        "actors": [
+          "Angela Pleasence",
+          "Paul Gregory",
+          "Michael Jayston",
+          "Leslie Sands",
+          "Geoffrey Palmer",
+          "Joan Plowright",
+          "Tamara Ustinov",
+          "Paola Dionisotti",
+          "Robin Ellis",
+          "Edward Petherbridge",
+          "Caroline Blakiston",
+          "John Woodvine",
+          "Margery Mason",
+          "John Tordoff"
+        ],
         "composer_lyricist": [],
         "musical_director": [],
         "choreographer": [],
@@ -4184,8 +4358,26 @@
       "roles": {
         "director": [],
         "playwright": [],
-        "actors": [],
-        "composer_lyricist": [],
+        "actors": [
+          "Michael Crawford",
+          "John Mills",
+          "Judi Dench",
+          "Kenneth Nelson",
+          "Gertrude Lawrence",
+          "Claude Hulbert",
+          "Fred Astaire",
+          "Ginger Rogers"
+        ],
+        "composer_lyricist": [
+          "John Barry",
+          "Don Black",
+          "Andre Previn",
+          "Johnny Mercer",
+          "Cole Porter",
+          "George Gershwin",
+          "Jerome Kern",
+          "Irving Berlin"
+        ],
         "musical_director": [],
         "choreographer": [],
         "set_designer": [],
@@ -4196,7 +4388,9 @@
         "dramaturg": [],
         "performers": [],
         "musicians": [],
-        "artists": []
+        "artists": [
+          "P. G. Wodehouse"
+        ]
       }
     },
     {
@@ -4241,9 +4435,25 @@
         "London"
       ],
       "roles": {
-        "director": [],
-        "playwright": [],
-        "actors": [],
+        "director": [
+          "Max Stafford-Clark",
+          "Kevin Billington",
+          "Steven Dartnell"
+        ],
+        "playwright": [
+          "John Osborne",
+          "Harold Pinter",
+          "August Strindberg"
+        ],
+        "actors": [
+          "Jill Bennett",
+          "Keith Barron",
+          "Rachel Roberts",
+          "John Alderton",
+          "Sydney Tafler",
+          "Anna Wing",
+          "Basil Lord"
+        ],
         "composer_lyricist": [],
         "musical_director": [],
         "choreographer": [],
@@ -4280,9 +4490,31 @@
       "venue": [],
       "city": [],
       "roles": {
-        "director": [],
-        "playwright": [],
-        "actors": [],
+        "director": [
+          "Peter Hall",
+          "Chris Parr"
+        ],
+        "playwright": [
+          "Henrik Ibsen",
+          "Athol Fugard",
+          "Samuel Beckett",
+          "Howard Barker"
+        ],
+        "actors": [
+          "Ralph Richardson",
+          "Peggy Ashcroft",
+          "Wendy Hiller",
+          "Anna Carteret",
+          "Cheryl Campbell",
+          "Barbara Keogh",
+          "Yvonne Bryceland",
+          "Ben Kingsley",
+          "Billie Whitelaw",
+          "Billy Hamon",
+          "Roger Sloman",
+          "Rod Beacham",
+          "Isabel Dean"
+        ],
         "composer_lyricist": [],
         "musical_director": [],
         "choreographer": [],
@@ -4329,9 +4561,23 @@
       ],
       "city": [],
       "roles": {
-        "director": [],
-        "playwright": [],
-        "actors": [],
+        "director": [
+          "Mike Bogdanov"
+        ],
+        "playwright": [
+          "William Shakespeare",
+          "F. Scott Fitzgerald"
+        ],
+        "actors": [
+          "Matthew Guinness",
+          "Jane Lapotaire",
+          "Robert Lloyd",
+          "John Price",
+          "Mary Rutherford",
+          "Nicol Williamson",
+          "David Waller",
+          "Ron Pember"
+        ],
         "composer_lyricist": [],
         "musical_director": [],
         "choreographer": [],
@@ -4341,7 +4587,9 @@
         "sound_designer": [],
         "producer": [],
         "dramaturg": [],
-        "performers": [],
+        "performers": [
+          "Max Wall"
+        ],
         "musicians": [],
         "artists": []
       }
@@ -4755,8 +5003,15 @@
       ],
       "roles": {
         "director": [],
-        "playwright": [],
-        "actors": [],
+        "playwright": [
+          "Friedrich Schiller",
+          "James Kirkup"
+        ],
+        "actors": [
+          "Norman Wooland",
+          "Valerie Holliman",
+          "Dennis Edwards"
+        ],
         "composer_lyricist": [],
         "musical_director": [],
         "choreographer": [],
@@ -4766,7 +5021,9 @@
         "sound_designer": [],
         "producer": [],
         "dramaturg": [],
-        "performers": [],
+        "performers": [
+          "Belt and Braces"
+        ],
         "musicians": [],
         "artists": []
       }
@@ -8151,23 +8408,34 @@
           "Chris Parr"
         ],
         "playwright": [
-          "Ben Jonson",
           "Peter Barnes",
+          "Ben Jonson",
           "Euripides",
           "Sophocles",
           "Richard Crane"
         ],
-        "actors": [],
+        "actors": [
+          "Russell Hunter",
+          "Peter Vaughan",
+          "David Burke",
+          "Alan Rickman",
+          "Priscilla Smith",
+          "Godfrey Jackman"
+        ],
         "composer_lyricist": [],
         "musical_director": [],
         "choreographer": [],
         "set_designer": [],
-        "costume_designer": [],
+        "costume_designer": [
+          "Robin Archer"
+        ],
         "lighting_designer": [],
         "sound_designer": [],
         "producer": [],
         "dramaturg": [],
-        "performers": [],
+        "performers": [
+          "Shared Experience"
+        ],
         "musicians": [],
         "artists": []
       }
@@ -11136,13 +11404,44 @@
         "London"
       ],
       "roles": {
-        "director": [],
-        "playwright": [],
-        "actors": [],
+        "director": [
+          "Trevor Nunn",
+          "David Terence",
+          "Toby Robertson"
+        ],
+        "playwright": [
+          "Ben Jonson",
+          "George Bernard Shaw",
+          "Christopher Logue",
+          "Tony Harrison",
+          "Robert Bolt"
+        ],
+        "actors": [
+          "Nickolas Grace",
+          "Alan Cody",
+          "Susan Drury",
+          "Hilton McRae",
+          "Bobbie Brown",
+          "Paul Brooke",
+          "John Woodvine",
+          "Ian McKellen",
+          "Richard Pasco",
+          "Susan Hampshire",
+          "Maggie Smith",
+          "James Cossins",
+          "Nicky Henson",
+          "Enn Reitel",
+          "Gary Kettel",
+          "Nick Chelton",
+          "Timothy West"
+        ],
         "composer_lyricist": [],
         "musical_director": [],
         "choreographer": [],
-        "set_designer": [],
+        "set_designer": [
+          "Chris Dyer",
+          "Pamela Howard"
+        ],
         "costume_designer": [],
         "lighting_designer": [],
         "sound_designer": [],
@@ -11968,9 +12267,26 @@
         "London"
       ],
       "roles": {
-        "director": [],
-        "playwright": [],
-        "actors": [],
+        "director": [
+          "Mike Ockrent"
+        ],
+        "playwright": [
+          "Mary O'Malley",
+          "Howard Brenton",
+          "Edward Bond",
+          "Odön von Horváth"
+        ],
+        "actors": [
+          "Pat Heywood",
+          "Mike Grady",
+          "Jane Carr",
+          "Gillian Barge",
+          "Simon Callow",
+          "Paul Brooke",
+          "Paul Shelley",
+          "Paul Moriarty",
+          "Patrick Stewart"
+        ],
         "composer_lyricist": [],
         "musical_director": [],
         "choreographer": [],
@@ -12116,10 +12432,34 @@
         "Edinburgh"
       ],
       "roles": {
-        "director": [],
-        "playwright": [],
-        "actors": [],
-        "composer_lyricist": [],
+        "director": [
+          "Toby Robertson",
+          "Frank Hauser"
+        ],
+        "playwright": [
+          "William Shakespeare",
+          "John Dryden",
+          "John Byrne",
+          "David Pownall",
+          "Ian Watson",
+          "Pete Atkin"
+        ],
+        "actors": [
+          "John Turner",
+          "Alex McCowen",
+          "Robert Eddison",
+          "Derek Jacobi",
+          "Timothy West",
+          "Dorothy Tutin",
+          "Kenneth Gilbert",
+          "Barbara Jefford",
+          "Suzanne Bertish",
+          "Stephen Boxer"
+        ],
+        "composer_lyricist": [
+          "Pete Atkin",
+          "Stephen Boxer"
+        ],
         "musical_director": [],
         "choreographer": [],
         "set_designer": [],
@@ -12130,7 +12470,10 @@
         "dramaturg": [],
         "performers": [],
         "musicians": [],
-        "artists": []
+        "artists": [
+          "F. S. McDade",
+          "George Orwell"
+        ]
       }
     },
     {
@@ -12261,12 +12604,31 @@
         "Stratford-upon-Avon"
       ],
       "roles": {
-        "director": [],
-        "playwright": [],
-        "actors": [],
+        "director": [
+          "Trevor Nunn"
+        ],
+        "playwright": [
+          "Alan Bennett",
+          "William Shakespeare"
+        ],
+        "actors": [
+          "Alec Guinness",
+          "Rachel Kempson",
+          "Heather Canning",
+          "John Phillips",
+          "Faith Brook",
+          "Peter McEnery",
+          "Kate Nelligan",
+          "Emrys James",
+          "Judith Paris",
+          "Ian Gelder",
+          "David Shaw-Parker"
+        ],
         "composer_lyricist": [],
         "musical_director": [],
-        "choreographer": [],
+        "choreographer": [
+          "Gillian Lynne"
+        ],
         "set_designer": [],
         "costume_designer": [],
         "lighting_designer": [],
@@ -12330,9 +12692,30 @@
         "Manchester"
       ],
       "roles": {
-        "director": [],
-        "playwright": [],
-        "actors": [],
+        "director": [
+          "Trevor Nunn",
+          "Michael Elliott"
+        ],
+        "playwright": [
+          "William Shakespeare",
+          "Pam Gems",
+          "Ronald Harwood"
+        ],
+        "actors": [
+          "Marie Kean",
+          "Judith Harte",
+          "Susan Drury",
+          "Griffith Jones",
+          "John Woodvine",
+          "Bob Peck",
+          "Roger Rees",
+          "Ian McDiarmid",
+          "Greg Hicks",
+          "Judi Dench",
+          "Ian McKellen",
+          "Sheila Allen",
+          "Julie Harris"
+        ],
         "composer_lyricist": [],
         "musical_director": [],
         "choreographer": [],
@@ -12344,7 +12727,10 @@
         "dramaturg": [],
         "performers": [],
         "musicians": [],
-        "artists": []
+        "artists": [
+          "Emily Dickinson",
+          "Evelyn Waugh"
+        ]
       }
     },
     {
@@ -12392,9 +12778,25 @@
         "London"
       ],
       "roles": {
-        "director": [],
-        "playwright": [],
-        "actors": [],
+        "director": [
+          "Bill Bryden"
+        ],
+        "playwright": [
+          "Sean O'Casey",
+          "William Shakespeare",
+          "Willy Russell"
+        ],
+        "actors": [
+          "Cyril Cusack",
+          "Anna Manahan",
+          "Susan Fleetwood",
+          "Francesca Annis",
+          "Tony Church",
+          "John Nettles",
+          "Michael Pennington",
+          "Mike Gwilym",
+          "Wendy Craig"
+        ],
         "composer_lyricist": [],
         "musical_director": [],
         "choreographer": [],
@@ -13932,13 +14334,46 @@
         "London"
       ],
       "roles": {
-        "director": [],
-        "playwright": [],
-        "actors": [],
+        "director": [
+          "Peter Hall",
+          "Peter Gill",
+          "Tim Fywell"
+        ],
+        "playwright": [
+          "Anton Chekhov",
+          "Arnold Wesker",
+          "Michael Frayn",
+          "Terence Rattigan",
+          "Lenka Janurek",
+          "Steve Grant"
+        ],
+        "actors": [
+          "Albert Finney",
+          "Susan Fleetwood",
+          "Michael Gough",
+          "Michael Elphick",
+          "Ben Kingsley",
+          "Dorothy Tutin",
+          "Robert Stephens",
+          "Terence Rigby",
+          "Helen Ryan",
+          "Ralph Richardson",
+          "Susan Littler",
+          "Derek Thompson",
+          "Nicky Henson",
+          "Kenneth Cranham",
+          "Timothy Block",
+          "Jean Boht",
+          "Anthony Douze",
+          "Carol Frazer",
+          "Georgina Melville"
+        ],
         "composer_lyricist": [],
         "musical_director": [],
         "choreographer": [],
-        "set_designer": [],
+        "set_designer": [
+          "John Bury"
+        ],
         "costume_designer": [],
         "lighting_designer": [],
         "sound_designer": [],
@@ -13997,9 +14432,28 @@
         "London"
       ],
       "roles": {
-        "director": [],
-        "playwright": [],
-        "actors": [],
+        "director": [
+          "Leslie Lawton",
+          "Mike Nichols",
+          "Harold Pinter"
+        ],
+        "playwright": [
+          "David Rabe",
+          "Simon Gray",
+          "James Saunders",
+          "Anton Chekhov",
+          "Leo Tolstoy"
+        ],
+        "actors": [
+          "Don Warrington",
+          "James Aubrey",
+          "Jeffery Kissoon",
+          "Trevor Jones",
+          "Barry Foster",
+          "Jeremy Irons",
+          "Dinsdale Landen",
+          "David Suchet"
+        ],
         "composer_lyricist": [],
         "musical_director": [],
         "choreographer": [],
@@ -14464,9 +14918,30 @@
         "Sheffield"
       ],
       "roles": {
-        "director": [],
-        "playwright": [],
-        "actors": [],
+        "director": [
+          "Burt Shevelove",
+          "Bill Bryden",
+          "Sebastian Graham-Jones",
+          "Philip Prowse",
+          "Peter James"
+        ],
+        "playwright": [
+          "Leslie Bricusse",
+          "Anthony Newley",
+          "Keith Dewhurst",
+          "John Webster",
+          "Arthur Wing Pinero",
+          "Ron Hutchinson",
+          "Rayner Bourton"
+        ],
+        "actors": [
+          "Bruce Forsyth",
+          "Derek Griffiths",
+          "Julia Blalock",
+          "Mel Martin",
+          "Richard Easton",
+          "Rayner Bourton"
+        ],
         "composer_lyricist": [],
         "musical_director": [],
         "choreographer": [],
@@ -14710,15 +15185,33 @@
         "London"
       ],
       "roles": {
-        "director": [],
-        "playwright": [
-          "David Hare"
+        "director": [
+          "David Hare",
+          "Shuji Terayama",
+          "Jonathan Lynn"
         ],
-        "actors": [],
+        "playwright": [
+          "David Hare",
+          "Royce Ryton"
+        ],
+        "actors": [
+          "Kate Nelligan",
+          "Stephen Moore",
+          "Julie Covington",
+          "Basil Henson",
+          "Frederick Treves",
+          "David Schofield",
+          "Lindsay Duncan",
+          "Clive Merrison",
+          "Tim Brooke-Taylor",
+          "Graeme Garden"
+        ],
         "composer_lyricist": [],
         "musical_director": [],
         "choreographer": [],
-        "set_designer": [],
+        "set_designer": [
+          "Hayden Griffin"
+        ],
         "costume_designer": [],
         "lighting_designer": [],
         "sound_designer": [],
@@ -16093,8 +16586,21 @@
       ],
       "roles": {
         "director": [],
-        "playwright": [],
-        "actors": [],
+        "playwright": [
+          "David Mamet",
+          "August Strindberg",
+          "Stanley Houghton",
+          "Nigel Baldwin",
+          "Christopher Fry",
+          "Peter Nichols",
+          "Peter Flannery",
+          "Tom Stoppard"
+        ],
+        "actors": [
+          "Dave King",
+          "Emrys James",
+          "David Threlfall"
+        ],
         "composer_lyricist": [],
         "musical_director": [],
         "choreographer": [],
@@ -18131,9 +18637,33 @@
         "London"
       ],
       "roles": {
-        "director": [],
-        "playwright": [],
-        "actors": [],
+        "director": [
+          "Ronald Eyre",
+          "Christopher Morahan"
+        ],
+        "playwright": [
+          "Alan Williams",
+          "Ben Jonson",
+          "Charles Dickens",
+          "Michel de Ghelderode",
+          "Thomas Middleton",
+          "William Rowley",
+          "Michael Frayn",
+          "William Congreve",
+          "Michael Hastings",
+          "David Edgar",
+          "George Bernard Shaw",
+          "John Galsworthy"
+        ],
+        "actors": [
+          "Alan Aldred",
+          "Paul McDowell",
+          "Diana Quick",
+          "Michael Bryant",
+          "Dorothy Tutin",
+          "Patti Love",
+          "Dinsdale Landen"
+        ],
         "composer_lyricist": [],
         "musical_director": [],
         "choreographer": [],
@@ -18265,9 +18795,23 @@
         "London"
       ],
       "roles": {
-        "director": [],
-        "playwright": [],
-        "actors": [],
+        "director": [
+          "William Gaskill",
+          "Ken Russell"
+        ],
+        "playwright": [
+          "Thomas Middleton",
+          "William Rowley",
+          "Pete Townshend"
+        ],
+        "actors": [
+          "Nicky Henson",
+          "Dermot Crowley",
+          "Fred Pearson",
+          "Marjorie Yates",
+          "Bob Grant",
+          "Allan Love"
+        ],
         "composer_lyricist": [],
         "musical_director": [],
         "choreographer": [],
@@ -18793,7 +19337,11 @@
         "director": [],
         "playwright": [
           "John Byrne",
-          "Frederick Harrison"
+          "Frederick Harrison",
+          "Michael Bennett",
+          "Thomas Middleton",
+          "William Rowley",
+          "Keith Dewhurst"
         ],
         "actors": [],
         "composer_lyricist": [],
@@ -20752,7 +21300,9 @@
         ],
         "actors": [],
         "composer_lyricist": [],
-        "musical_director": [],
+        "musical_director": [
+          "Eduardo Mata"
+        ],
         "choreographer": [],
         "set_designer": [
           "Farrah"
@@ -20764,8 +21314,13 @@
         "sound_designer": [],
         "producer": [],
         "dramaturg": [],
-        "performers": [],
-        "musicians": [],
+        "performers": [
+          "Royal Ballet",
+          "London Symphony Orchestra"
+        ],
+        "musicians": [
+          "John Williams"
+        ],
         "artists": []
       }
     },
@@ -20914,7 +21469,9 @@
         "London"
       ],
       "roles": {
-        "director": [],
+        "director": [
+          "Francis Ford Coppola"
+        ],
         "playwright": [
           "Lanford Wilson"
         ],
@@ -20981,9 +21538,23 @@
         "Colchester"
       ],
       "roles": {
-        "director": [],
-        "playwright": [],
-        "actors": [],
+        "director": [
+          "Michael Rudman",
+          "David Buxton"
+        ],
+        "playwright": [
+          "Arthur Miller",
+          "Hubert Henry Davies",
+          "Richard Crane"
+        ],
+        "actors": [
+          "Warren Mitchell",
+          "Doreen Mantle",
+          "Bronwyn Williams",
+          "Philip Anthony",
+          "Richard Crane",
+          "Roger Leach"
+        ],
         "composer_lyricist": [],
         "musical_director": [],
         "choreographer": [],
@@ -22786,12 +23357,37 @@
         "London"
       ],
       "roles": {
-        "director": [],
-        "playwright": [],
-        "actors": [],
+        "director": [
+          "Frank Dunlop",
+          "David Jones",
+          "Jerome Robbins"
+        ],
+        "playwright": [
+          "William Shakespeare",
+          "Eugene O'Neill",
+          "Charles MacArthur",
+          "Ben Hecht",
+          "Harold Pinter",
+          "Brian Clark",
+          "Leo Tolstoy",
+          "Lanford Wilson"
+        ],
+        "actors": [
+          "Joe Morton",
+          "Marti Maraden",
+          "Sheila Allen",
+          "Mary Tyler Moore",
+          "Tom Conti",
+          "Sandy Duncan",
+          "Ann Miller",
+          "Mickey Rooney",
+          "Taina Elg"
+        ],
         "composer_lyricist": [],
         "musical_director": [],
-        "choreographer": [],
+        "choreographer": [
+          "Jerome Robbins"
+        ],
         "set_designer": [],
         "costume_designer": [],
         "lighting_designer": [],
@@ -24971,9 +25567,7 @@
       "roles": {
         "director": [
           "Michael Bogdanov",
-          "Max Stafford-Clark",
-          "Ronald Eyre",
-          "Alan Ayckbourn"
+          "Bill Alexander"
         ],
         "playwright": [
           "Howard Brenton",
@@ -24981,7 +25575,23 @@
           "Alan Bennett",
           "Alan Ayckbourn"
         ],
-        "actors": [],
+        "actors": [
+          "Michael Bryant",
+          "Stephan Moore",
+          "James Hayes",
+          "John Normington",
+          "James Carter",
+          "Toyah Willcox",
+          "Gwyneth Strong",
+          "Carole Hayman",
+          "Joan Plowright",
+          "Colin Blakely",
+          "Susan Littler",
+          "Liz Smith",
+          "Marcia Warren",
+          "Ronald Herdman",
+          "Susan Uebel"
+        ],
         "composer_lyricist": [],
         "musical_director": [],
         "choreographer": [],
@@ -25133,7 +25743,19 @@
           "Arthur Miller",
           "David Rudkin"
         ],
-        "actors": [],
+        "actors": [
+          "Peter Bourke",
+          "Brenda Blethyn",
+          "Michael Kitchen",
+          "Dorothy Tutin",
+          "John Wood",
+          "Mark McManus",
+          "Dinah Stabb",
+          "J. G. Devlin",
+          "Tony Haygarth",
+          "Brenda Bruce",
+          "Barbara Kinghorn"
+        ],
         "composer_lyricist": [],
         "musical_director": [],
         "choreographer": [],
@@ -27287,7 +27909,18 @@
         "dramaturg": [],
         "performers": [],
         "musicians": [],
-        "artists": []
+        "artists": [
+          "Richard Findlater",
+          "Samuel Beckett",
+          "Bill Gaskill",
+          "John Osborne",
+          "Jack Shepherd",
+          "Christopher Hampton",
+          "George Devine",
+          "Irving Wardle",
+          "Stuart Burge",
+          "Max Stafford-Clark"
+        ]
       }
     },
     {
@@ -31315,13 +31948,40 @@
         "Chichester"
       ],
       "roles": {
-        "director": [],
-        "playwright": [],
-        "actors": [],
+        "director": [
+          "Michael Bogdanov",
+          "John Dexter"
+        ],
+        "playwright": [
+          "Anton Chekhov",
+          "Henrik Ibsen",
+          "Ronald Firbank",
+          "Sandy Wilson"
+        ],
+        "actors": [
+          "Michael Bryant",
+          "Cherie Lunghi",
+          "Patti Love",
+          "Susannah York",
+          "Tom Baker",
+          "Ralph Bates",
+          "Irene Handl",
+          "Gretchen Franklin",
+          "Tom Bell",
+          "Fenella Fielding",
+          "Doris Hare",
+          "Marcia Ashton",
+          "Bertice Reading",
+          "Robert Helpmann",
+          "Cheryl Kennedy",
+          "Judy Campbell"
+        ],
         "composer_lyricist": [],
         "musical_director": [],
         "choreographer": [],
-        "set_designer": [],
+        "set_designer": [
+          "John Bury"
+        ],
         "costume_designer": [],
         "lighting_designer": [],
         "sound_designer": [],
@@ -31543,9 +32203,21 @@
         "London"
       ],
       "roles": {
-        "director": [],
-        "playwright": [],
-        "actors": [],
+        "director": [
+          "Ron Daniels"
+        ],
+        "playwright": [
+          "Henrik Ibsen",
+          "David Rudkin",
+          "William Shakespeare",
+          "Jean-Claude Grumberg"
+        ],
+        "actors": [
+          "Derek Jacobi",
+          "Mike Gwilym",
+          "Tom Wilkinson",
+          "Gary Waldhorn"
+        ],
         "composer_lyricist": [],
         "musical_director": [],
         "choreographer": [],
@@ -33100,9 +33772,20 @@
         "sound_designer": [],
         "producer": [],
         "dramaturg": [],
-        "performers": [],
+        "performers": [
+          "Mabel Mercer",
+          "Frank Sinatra",
+          "Bricktop",
+          "Bobby Short",
+          "Steve Ross",
+          "Ella Fitzgerald"
+        ],
         "musicians": [],
-        "artists": []
+        "artists": [
+          "Cole Porter",
+          "Noel Coward",
+          "Stephen Sondheim"
+        ]
       }
     },
     {
@@ -35071,9 +35754,41 @@
         "New York"
       ],
       "roles": {
-        "director": [],
-        "playwright": [],
-        "actors": [],
+        "director": [
+          "Nancy Meckler",
+          "Nick Hamm",
+          "Pam Brighton",
+          "Ellis Rabb",
+          "George Abbott",
+          "Tommy Tune"
+        ],
+        "playwright": [
+          "Brian Friel",
+          "Steven Berkoff",
+          "Nick Darke",
+          "Nigel Williams",
+          "Neil Simon",
+          "Marsha Norman",
+          "George S. Kaufman",
+          "Moss Hart",
+          "George Gershwin",
+          "DuBose Heyward"
+        ],
+        "actors": [
+          "T. P. McKenna",
+          "Martin Cochrane",
+          "Stephen Rea",
+          "Brian Protheroe",
+          "Stella Tanner",
+          "Susan Kyd",
+          "Billy MacColl",
+          "Matthew Broderick",
+          "Jason Robards",
+          "Colleen Dewhurst",
+          "Natalia Makarova",
+          "Tommy Tune",
+          "Twiggy"
+        ],
         "composer_lyricist": [],
         "musical_director": [],
         "choreographer": [],
@@ -35314,13 +36029,28 @@
         "London"
       ],
       "roles": {
-        "director": [],
-        "playwright": [],
-        "actors": [],
-        "composer_lyricist": [],
+        "director": [
+          "Michael Dolenz",
+          "Mike Alfreds"
+        ],
+        "playwright": [
+          "Alan Parker",
+          "Angelo Beolco",
+          "Peter Flannery"
+        ],
+        "actors": [
+          "Scott Sherrin"
+        ],
+        "composer_lyricist": [
+          "Paul Williams"
+        ],
         "musical_director": [],
-        "choreographer": [],
-        "set_designer": [],
+        "choreographer": [
+          "Gillian Gregory"
+        ],
+        "set_designer": [
+          "Ralph Koltai"
+        ],
         "costume_designer": [],
         "lighting_designer": [],
         "sound_designer": [],
@@ -37354,15 +38084,43 @@
         "London"
       ],
       "roles": {
-        "director": [],
-        "playwright": [],
-        "actors": [],
-        "composer_lyricist": [],
+        "director": [
+          "Mike Alfreds",
+          "Bob Fosse",
+          "Robert Gillespie"
+        ],
+        "playwright": [
+          "Marivaux",
+          "Timberlake Wertenbaker",
+          "Michael Abbensetts"
+        ],
+        "actors": [
+          "Maggie Wells",
+          "Holly Wilson",
+          "Philip Voss",
+          "James Smith",
+          "Sam Dale",
+          "Raul Newney",
+          "Joy Richardson",
+          "Jacqueline Pearce"
+        ],
+        "composer_lyricist": [
+          "Harry Warren",
+          "Johnny Mercer"
+        ],
         "musical_director": [],
-        "choreographer": [],
-        "set_designer": [],
-        "costume_designer": [],
-        "lighting_designer": [],
+        "choreographer": [
+          "Bob Fosse"
+        ],
+        "set_designer": [
+          "Paul Dart"
+        ],
+        "costume_designer": [
+          "Paul Dart"
+        ],
+        "lighting_designer": [
+          "Paul Dart"
+        ],
         "sound_designer": [],
         "producer": [],
         "dramaturg": [],
@@ -37752,9 +38510,18 @@
       "venue": [],
       "city": [],
       "roles": {
-        "director": [],
-        "playwright": [],
-        "actors": [],
+        "director": [
+          "Arthur Miller",
+          "Michael Rudman",
+          "Elia Kazan"
+        ],
+        "playwright": [
+          "Arthur Miller"
+        ],
+        "actors": [
+          "Dustin Hoffman",
+          "Lee J. Cobb"
+        ],
         "composer_lyricist": [],
         "musical_director": [],
         "choreographer": [],
@@ -37766,7 +38533,9 @@
         "dramaturg": [],
         "performers": [],
         "musicians": [],
-        "artists": []
+        "artists": [
+          "Willy Loman"
+        ]
       }
     },
     {
@@ -37874,8 +38643,20 @@
       "city": [],
       "roles": {
         "director": [],
-        "playwright": [],
-        "actors": [],
+        "playwright": [
+          "Samuel Beckett",
+          "Harold Pinter",
+          "Bertolt Brecht",
+          "John Osborne",
+          "W. H. Auden",
+          "Terence Rattigan",
+          "Joe Orton"
+        ],
+        "actors": [
+          "Bob Peck",
+          "Jonathan Pryce",
+          "Edna Everage"
+        ],
         "composer_lyricist": [],
         "musical_director": [],
         "choreographer": [],
@@ -37883,11 +38664,23 @@
         "costume_designer": [],
         "lighting_designer": [],
         "sound_designer": [],
-        "producer": [],
+        "producer": [
+          "Michael White",
+          "Binkie Beaumont"
+        ],
         "dramaturg": [],
         "performers": [],
         "musicians": [],
-        "artists": []
+        "artists": [
+          "Harold Hobson",
+          "George Devine",
+          "Richard Burton",
+          "Ken Tynan",
+          "G. Wilson Knight",
+          "Malcolm Muggeridge",
+          "Kitty Black",
+          "Michael Coveney"
+        ]
       }
     },
     {
@@ -38187,9 +38980,29 @@
         "sound_designer": [],
         "producer": [],
         "dramaturg": [],
-        "performers": [],
+        "performers": [
+          "Barbara Lea",
+          "Fred Astaire",
+          "Oscar Peterson",
+          "Frank Sinatra",
+          "Bing Crosby",
+          "Louis Armstrong",
+          "Peggy Lee",
+          "Rosemary Clooney",
+          "Billie Holiday",
+          "Bobby Darin",
+          "Sammy Davis",
+          "Al Jolson",
+          "Bobby McFerrin",
+          "Blossom Dearie",
+          "Jeri Southern",
+          "Pearl Bailey",
+          "Judy Garland"
+        ],
         "musicians": [],
-        "artists": []
+        "artists": [
+          "Will Friedwald"
+        ]
       }
     },
     {
@@ -39474,8 +40287,13 @@
         "sound_designer": [],
         "producer": [],
         "dramaturg": [],
-        "performers": [],
-        "musicians": [],
+        "performers": [
+          "Salena Jones",
+          "Susannah McCorkle"
+        ],
+        "musicians": [
+          "Keith Ingham"
+        ],
         "artists": []
       }
     },
@@ -39529,7 +40347,12 @@
         "sound_designer": [],
         "producer": [],
         "dramaturg": [],
-        "performers": [],
+        "performers": [
+          "Mabel Mercer",
+          "Bobby Short",
+          "Hugh Shannon",
+          "Dardanelle"
+        ],
         "musicians": [],
         "artists": []
       }
@@ -39564,7 +40387,10 @@
         "director": [],
         "playwright": [],
         "actors": [],
-        "composer_lyricist": [],
+        "composer_lyricist": [
+          "Alec Wilder",
+          "Richard Rodgers"
+        ],
         "musical_director": [],
         "choreographer": [],
         "set_designer": [],
@@ -39575,7 +40401,9 @@
         "dramaturg": [],
         "performers": [],
         "musicians": [],
-        "artists": []
+        "artists": [
+          "Benny Green"
+        ]
       }
     },
     {
@@ -39607,7 +40435,10 @@
         "director": [],
         "playwright": [],
         "actors": [],
-        "composer_lyricist": [],
+        "composer_lyricist": [
+          "Richard Rodgers",
+          "Lorenz Hart"
+        ],
         "musical_director": [],
         "choreographer": [],
         "set_designer": [],
@@ -39673,7 +40504,14 @@
         "dramaturg": [],
         "performers": [],
         "musicians": [],
-        "artists": []
+        "artists": [
+          "Michael Dale",
+          "Jonathan Miller",
+          "Peter Cook",
+          "Alan Bennett",
+          "Dudley Moore",
+          "Tom Stoppard"
+        ]
       }
     },
     {
@@ -39721,8 +40559,13 @@
       ],
       "roles": {
         "director": [],
-        "playwright": [],
-        "actors": [],
+        "playwright": [
+          "David Edgar",
+          "David Mamet"
+        ],
+        "actors": [
+          "Bob Peck"
+        ],
         "composer_lyricist": [],
         "musical_director": [],
         "choreographer": [],
@@ -39734,7 +40577,11 @@
         "dramaturg": [],
         "performers": [],
         "musicians": [],
-        "artists": []
+        "artists": [
+          "Ed Mirvish",
+          "Bob Fosse",
+          "Marvin Hamlisch"
+        ]
       }
     },
     {
@@ -39775,8 +40622,12 @@
         "London"
       ],
       "roles": {
-        "director": [],
-        "playwright": [],
+        "director": [
+          "Michael Blakemore"
+        ],
+        "playwright": [
+          "Michael Frayn"
+        ],
         "actors": [],
         "composer_lyricist": [],
         "musical_director": [],
@@ -39830,7 +40681,11 @@
       "roles": {
         "director": [],
         "playwright": [],
-        "actors": [],
+        "actors": [
+          "Richard Burton",
+          "Kate Burton",
+          "Faye Dunaway"
+        ],
         "composer_lyricist": [],
         "musical_director": [],
         "choreographer": [],
@@ -39842,7 +40697,9 @@
         "dramaturg": [],
         "performers": [],
         "musicians": [],
-        "artists": []
+        "artists": [
+          "Elizabeth Taylor"
+        ]
       }
     },
     {
@@ -39877,12 +40734,19 @@
       "venue": [],
       "city": [],
       "roles": {
-        "director": [],
+        "director": [
+          "Richard Attenborough"
+        ],
         "playwright": [],
-        "actors": [],
+        "actors": [
+          "Alyson Reed",
+          "Terence Mann"
+        ],
         "composer_lyricist": [],
         "musical_director": [],
-        "choreographer": [],
+        "choreographer": [
+          "Michael Bennett"
+        ],
         "set_designer": [],
         "costume_designer": [],
         "lighting_designer": [],
@@ -40053,7 +40917,11 @@
         "director": [],
         "playwright": [],
         "actors": [],
-        "composer_lyricist": [],
+        "composer_lyricist": [
+          "Sammy Cahn",
+          "Jule Styne",
+          "Jimmy Van Heusen"
+        ],
         "musical_director": [],
         "choreographer": [],
         "set_designer": [],
@@ -40062,7 +40930,9 @@
         "sound_designer": [],
         "producer": [],
         "dramaturg": [],
-        "performers": [],
+        "performers": [
+          "Frank Sinatra"
+        ],
         "musicians": [],
         "artists": []
       }
@@ -40095,9 +40965,13 @@
       "city": [],
       "roles": {
         "director": [],
-        "playwright": [],
+        "playwright": [
+          "W. S. Gilbert"
+        ],
         "actors": [],
-        "composer_lyricist": [],
+        "composer_lyricist": [
+          "Arthur Sullivan"
+        ],
         "musical_director": [],
         "choreographer": [],
         "set_designer": [],
@@ -40108,7 +40982,9 @@
         "dramaturg": [],
         "performers": [],
         "musicians": [],
-        "artists": []
+        "artists": [
+          "Michael Ffinch"
+        ]
       }
     },
     {
@@ -40142,7 +41018,9 @@
         "director": [],
         "playwright": [],
         "actors": [],
-        "composer_lyricist": [],
+        "composer_lyricist": [
+          "Johnny Burke"
+        ],
         "musical_director": [],
         "choreographer": [],
         "set_designer": [],
@@ -40151,7 +41029,11 @@
         "sound_designer": [],
         "producer": [],
         "dramaturg": [],
-        "performers": [],
+        "performers": [
+          "Fats Waller",
+          "Louis Armstrong",
+          "Lena Horne"
+        ],
         "musicians": [],
         "artists": []
       }
@@ -40200,8 +41082,13 @@
         "director": [
           "James Lapine"
         ],
-        "playwright": [],
-        "actors": [],
+        "playwright": [
+          "James Lapine"
+        ],
+        "actors": [
+          "Donna Murphy",
+          "Jere Shea"
+        ],
         "composer_lyricist": [
           "Stephen Sondheim"
         ],
@@ -40215,7 +41102,9 @@
         "dramaturg": [],
         "performers": [],
         "musicians": [],
-        "artists": []
+        "artists": [
+          "Ettore Scola"
+        ]
       }
     },
     {
@@ -40261,9 +41150,33 @@
       "venue": [],
       "city": [],
       "roles": {
-        "director": [],
-        "playwright": [],
-        "actors": [],
+        "director": [
+          "David Beaird",
+          "Gale Edwards",
+          "Alan Ayckbourn"
+        ],
+        "playwright": [
+          "David Beaird",
+          "George Bernard Shaw",
+          "William Gibson",
+          "Tom Dulack"
+        ],
+        "actors": [
+          "Leland Crooke",
+          "Ben Daniels",
+          "Susan Tracy",
+          "Angela Bruce",
+          "Paul Chapman",
+          "Jon Cryer",
+          "Imogen Stubbs",
+          "Ken Bones",
+          "Peter Jeffrey",
+          "Jasper Britton",
+          "David Daker",
+          "Jenny Seagrove",
+          "Catherine Holman",
+          "The Flying Karamazov Brothers"
+        ],
         "composer_lyricist": [],
         "musical_director": [],
         "choreographer": [],
@@ -40273,7 +41186,9 @@
         "sound_designer": [],
         "producer": [],
         "dramaturg": [],
-        "performers": [],
+        "performers": [
+          "The Flying Karamazov Brothers"
+        ],
         "musicians": [],
         "artists": []
       }
@@ -40322,19 +41237,61 @@
       "venue": [],
       "city": [],
       "roles": {
-        "director": [],
-        "playwright": [],
-        "actors": [],
-        "composer_lyricist": [],
+        "director": [
+          "Philip Prowse",
+          "Lindsay Posner",
+          "Jonathan Kent"
+        ],
+        "playwright": [
+          "Oscar Wilde",
+          "Henrik Ibsen",
+          "Pierre Corneille",
+          "Noel Coward",
+          "Cole Porter"
+        ],
+        "actors": [
+          "Amanda Elwes",
+          "Francesca Annis",
+          "Rupert Frazer",
+          "David Foxxe",
+          "Frank Middlemass",
+          "Simon Dutton",
+          "Josette Simon",
+          "Pip Donaghy",
+          "Liam de Staic",
+          "Emily Watson",
+          "Paul Higgins",
+          "Sean Baker",
+          "Matilde Ziegler",
+          "Peter Kelly",
+          "Duncan Bell",
+          "Susan Lynch",
+          "Samantha Bond",
+          "Bernard Lloyd",
+          "Pat Kirkwood"
+        ],
+        "composer_lyricist": [
+          "Peter Greenwell",
+          "Noel Coward",
+          "Cole Porter"
+        ],
         "musical_director": [],
         "choreographer": [],
-        "set_designer": [],
-        "costume_designer": [],
+        "set_designer": [
+          "Philip Prowse",
+          "Peter J Davison"
+        ],
+        "costume_designer": [
+          "Philip Prowse"
+        ],
         "lighting_designer": [],
         "sound_designer": [],
         "producer": [],
         "dramaturg": [],
-        "performers": [],
+        "performers": [
+          "Peter Greenwell",
+          "Pat Kirkwood"
+        ],
         "musicians": [],
         "artists": []
       }
@@ -40372,7 +41329,14 @@
         "director": [],
         "playwright": [],
         "actors": [],
-        "composer_lyricist": [],
+        "composer_lyricist": [
+          "Jule Styne",
+          "Richard Rodgers",
+          "Sammy Cahn",
+          "Betty Comden",
+          "Adolph Green",
+          "Stephen Sondheim"
+        ],
         "musical_director": [],
         "choreographer": [],
         "set_designer": [],
@@ -40418,7 +41382,11 @@
         "director": [],
         "playwright": [],
         "actors": [],
-        "composer_lyricist": [],
+        "composer_lyricist": [
+          "Eric Maschwitz",
+          "Jack Strachey",
+          "Harry Link"
+        ],
         "musical_director": [],
         "choreographer": [],
         "set_designer": [],
@@ -40427,7 +41395,10 @@
         "sound_designer": [],
         "producer": [],
         "dramaturg": [],
-        "performers": [],
+        "performers": [
+          "Leslie Hutchinson",
+          "Andrea Marcovicci"
+        ],
         "musicians": [],
         "artists": []
       }
@@ -40469,7 +41440,9 @@
         "director": [],
         "playwright": [],
         "actors": [],
-        "composer_lyricist": [],
+        "composer_lyricist": [
+          "Gene Lees"
+        ],
         "musical_director": [],
         "choreographer": [],
         "set_designer": [],
@@ -40478,9 +41451,17 @@
         "sound_designer": [],
         "producer": [],
         "dramaturg": [],
-        "performers": [],
-        "musicians": [],
-        "artists": []
+        "performers": [
+          "Frank Sinatra"
+        ],
+        "musicians": [
+          "Nelson Riddle",
+          "Don Costa",
+          "Quincy Jones"
+        ],
+        "artists": [
+          "Will Friedwald"
+        ]
       }
     },
     {
@@ -40526,7 +41507,16 @@
         "sound_designer": [],
         "producer": [],
         "dramaturg": [],
-        "performers": [],
+        "performers": [
+          "Dorothy Squires",
+          "Davy Kaye",
+          "Joey Grimaldi",
+          "Dan Leno",
+          "Terry Scott",
+          "Hugh Lloyd",
+          "Twiggy",
+          "Nicky Henson"
+        ],
         "musicians": [],
         "artists": []
       }
@@ -40561,9 +41551,16 @@
       "venue": [],
       "city": [],
       "roles": {
-        "director": [],
-        "playwright": [],
-        "actors": [],
+        "director": [
+          "Peter Hall"
+        ],
+        "playwright": [
+          "William Shakespeare"
+        ],
+        "actors": [
+          "Michael Pennington",
+          "Stephen Dillane"
+        ],
         "composer_lyricist": [],
         "musical_director": [],
         "choreographer": [],
@@ -40575,7 +41572,9 @@
         "dramaturg": [],
         "performers": [],
         "musicians": [],
-        "artists": []
+        "artists": [
+          "Michael Pennington"
+        ]
       }
     },
     {
@@ -40609,7 +41608,10 @@
         "director": [],
         "playwright": [],
         "actors": [],
-        "composer_lyricist": [],
+        "composer_lyricist": [
+          "Ira Gershwin",
+          "George Gershwin"
+        ],
         "musical_director": [],
         "choreographer": [],
         "set_designer": [],
@@ -40620,7 +41622,10 @@
         "dramaturg": [],
         "performers": [],
         "musicians": [],
-        "artists": []
+        "artists": [
+          "Leonore Gershwin",
+          "Philip Furia"
+        ]
       }
     },
     {
@@ -40664,9 +41669,16 @@
         "sound_designer": [],
         "producer": [],
         "dramaturg": [],
-        "performers": [],
+        "performers": [
+          "Ella Fitzgerald",
+          "Louis Armstrong",
+          "Fred Astaire"
+        ],
         "musicians": [],
-        "artists": []
+        "artists": [
+          "Norman Granz",
+          "Stuart Nicholson"
+        ]
       }
     },
     {
@@ -40703,9 +41715,17 @@
       ],
       "city": [],
       "roles": {
-        "director": [],
-        "playwright": [],
-        "actors": [],
+        "director": [
+          "David Leveaux",
+          "Peter Hall",
+          "Richard Eyre"
+        ],
+        "playwright": [
+          "Harold Pinter"
+        ],
+        "actors": [
+          "Gawn Grainger"
+        ],
         "composer_lyricist": [],
         "musical_director": [],
         "choreographer": [],
@@ -40717,7 +41737,9 @@
         "dramaturg": [],
         "performers": [],
         "musicians": [],
-        "artists": []
+        "artists": [
+          "Michael Billington"
+        ]
       }
     },
     {
@@ -40753,7 +41775,11 @@
         "director": [],
         "playwright": [],
         "actors": [],
-        "composer_lyricist": [],
+        "composer_lyricist": [
+          "Johnny Mercer",
+          "Harold Arlen",
+          "Antonio Carlos Jobim"
+        ],
         "musical_director": [],
         "choreographer": [],
         "set_designer": [],
@@ -40762,8 +41788,13 @@
         "sound_designer": [],
         "producer": [],
         "dramaturg": [],
-        "performers": [],
-        "musicians": [],
+        "performers": [
+          "Frank Sinatra"
+        ],
+        "musicians": [
+          "Nelson Riddle",
+          "Bill Miller"
+        ],
         "artists": []
       }
     },
@@ -40800,7 +41831,10 @@
         "director": [],
         "playwright": [],
         "actors": [],
-        "composer_lyricist": [],
+        "composer_lyricist": [
+          "George Gershwin",
+          "Ira Gershwin"
+        ],
         "musical_director": [],
         "choreographer": [],
         "set_designer": [],
@@ -40809,8 +41843,14 @@
         "sound_designer": [],
         "producer": [],
         "dramaturg": [],
-        "performers": [],
-        "musicians": [],
+        "performers": [
+          "Ella Fitzgerald",
+          "Fred Astaire",
+          "Sarah Vaughan"
+        ],
+        "musicians": [
+          "Miles Davis"
+        ],
         "artists": []
       }
     },
@@ -41014,7 +42054,9 @@
         "costume_designer": [],
         "lighting_designer": [],
         "sound_designer": [],
-        "producer": [],
+        "producer": [
+          "Jonathan James-Moore"
+        ],
         "dramaturg": [],
         "performers": [],
         "musicians": [],
@@ -41065,7 +42107,9 @@
         "London"
       ],
       "roles": {
-        "director": [],
+        "director": [
+          "David Leveaux"
+        ],
         "playwright": [],
         "actors": [],
         "composer_lyricist": [],
@@ -41077,9 +42121,19 @@
         "sound_designer": [],
         "producer": [],
         "dramaturg": [],
-        "performers": [],
+        "performers": [
+          "Frank Sinatra",
+          "Sammy Davis Jr.",
+          "Dean Martin",
+          "Tommy Dorsey",
+          "Rod Stewart",
+          "Michael Bublé",
+          "Antonio Carlos Jobim"
+        ],
         "musicians": [],
-        "artists": []
+        "artists": [
+          "Ava Gardner"
+        ]
       }
     },
     {
@@ -41122,7 +42176,9 @@
       ],
       "city": [],
       "roles": {
-        "director": [],
+        "director": [
+          "Jonathan Miller"
+        ],
         "playwright": [],
         "actors": [],
         "composer_lyricist": [],
@@ -41132,7 +42188,9 @@
         "costume_designer": [],
         "lighting_designer": [],
         "sound_designer": [],
-        "producer": [],
+        "producer": [
+          "Ed Mirvish"
+        ],
         "dramaturg": [],
         "performers": [],
         "musicians": [],
@@ -41175,9 +42233,13 @@
         "Stratford, Ontario"
       ],
       "roles": {
-        "director": [],
+        "director": [
+          "Michael Langham"
+        ],
         "playwright": [],
-        "actors": [],
+        "actors": [
+          "Brian Bedford"
+        ],
         "composer_lyricist": [],
         "musical_director": [],
         "choreographer": [],
@@ -41185,7 +42247,9 @@
         "costume_designer": [],
         "lighting_designer": [],
         "sound_designer": [],
-        "producer": [],
+        "producer": [
+          "Joe Papp"
+        ],
         "dramaturg": [],
         "performers": [],
         "musicians": [],
@@ -41238,9 +42302,18 @@
         "Toronto"
       ],
       "roles": {
-        "director": [],
-        "playwright": [],
-        "actors": [],
+        "director": [
+          "Robert Lepage",
+          "Gordon McCall",
+          "Kenneth Branagh"
+        ],
+        "playwright": [
+          "William Shakespeare"
+        ],
+        "actors": [
+          "Richard Briers",
+          "Kenneth Branagh"
+        ],
         "composer_lyricist": [],
         "musical_director": [],
         "choreographer": [],
@@ -41307,7 +42380,10 @@
         "Ottawa"
       ],
       "roles": {
-        "director": [],
+        "director": [
+          "Robert Lepage",
+          "Richard Eyre"
+        ],
         "playwright": [],
         "actors": [],
         "composer_lyricist": [],
@@ -41321,7 +42397,10 @@
         "dramaturg": [],
         "performers": [],
         "musicians": [],
-        "artists": []
+        "artists": [
+          "Denys Arcand",
+          "Michel Tremblay"
+        ]
       }
     },
     {
@@ -41351,7 +42430,9 @@
         "director": [],
         "playwright": [],
         "actors": [],
-        "composer_lyricist": [],
+        "composer_lyricist": [
+          "Cole Porter"
+        ],
         "musical_director": [],
         "choreographer": [],
         "set_designer": [],
@@ -41410,9 +42491,35 @@
       ],
       "city": [],
       "roles": {
-        "director": [],
-        "playwright": [],
-        "actors": [],
+        "director": [
+          "Mike Bradwell",
+          "Alan Ayckbourn"
+        ],
+        "playwright": [
+          "Catherine Johnson",
+          "John Lahr",
+          "Jacques Deval",
+          "Tom Dulack"
+        ],
+        "actors": [
+          "Jon Key",
+          "Kate Hardie",
+          "Katrin Cartlidge",
+          "Gary Love",
+          "Gwen Taylor",
+          "Gerard Murphy",
+          "Sian Phillips",
+          "Manning Redwood",
+          "Clive Carter",
+          "Connie Booth",
+          "Natalia Makarova",
+          "Robert Powell",
+          "Jeffrey Chiswick",
+          "Glyn Grain",
+          "Robert Austin",
+          "Peter Bourke",
+          "Susan Denaker"
+        ],
         "composer_lyricist": [],
         "musical_director": [],
         "choreographer": [],
@@ -41460,17 +42567,37 @@
       "city": [],
       "roles": {
         "director": [
-          "Jules Wright"
+          "Jules Wright",
+          "Judi Dench"
         ],
         "playwright": [
-          "Henrik Ibsen"
+          "Henrik Ibsen",
+          "Heidi Thomas",
+          "William Shakespeare",
+          "George Abbott",
+          "Euripides",
+          "Edward Bond"
         ],
-        "actors": [],
-        "composer_lyricist": [],
+        "actors": [
+          "Kathryn Pogson",
+          "Hugh Fraser",
+          "Alister Cameron",
+          "Jenny Galloway",
+          "Louise Gold",
+          "Gillian Bevan"
+        ],
+        "composer_lyricist": [
+          "Richard Rodgers",
+          "Lorenz Hart"
+        ],
         "musical_director": [],
         "choreographer": [],
-        "set_designer": [],
-        "costume_designer": [],
+        "set_designer": [
+          "James Merrifield"
+        ],
+        "costume_designer": [
+          "James Merrifield"
+        ],
         "lighting_designer": [],
         "sound_designer": [],
         "producer": [],
@@ -41508,9 +42635,16 @@
       "venue": [],
       "city": [],
       "roles": {
-        "director": [],
-        "playwright": [],
-        "actors": [],
+        "director": [
+          "Peter Brook"
+        ],
+        "playwright": [
+          "William Shakespeare"
+        ],
+        "actors": [
+          "John Gielgud",
+          "Richard Briers"
+        ],
         "composer_lyricist": [],
         "musical_director": [],
         "choreographer": [],
@@ -41522,7 +42656,9 @@
         "dramaturg": [],
         "performers": [],
         "musicians": [],
-        "artists": []
+        "artists": [
+          "John Miller"
+        ]
       }
     },
     {
@@ -41555,7 +42691,10 @@
         "director": [],
         "playwright": [],
         "actors": [],
-        "composer_lyricist": [],
+        "composer_lyricist": [
+          "Jerome Kern",
+          "Dorothy Fields"
+        ],
         "musical_director": [],
         "choreographer": [],
         "set_designer": [],
@@ -41564,7 +42703,10 @@
         "sound_designer": [],
         "producer": [],
         "dramaturg": [],
-        "performers": [],
+        "performers": [
+          "Fred Astaire",
+          "Ginger Rogers"
+        ],
         "musicians": [],
         "artists": []
       }
@@ -41597,10 +42739,14 @@
       "venue": [],
       "city": [],
       "roles": {
-        "director": [],
+        "director": [
+          "Harold Prince"
+        ],
         "playwright": [],
         "actors": [],
-        "composer_lyricist": [],
+        "composer_lyricist": [
+          "Stephen Sondheim"
+        ],
         "musical_director": [],
         "choreographer": [],
         "set_designer": [],
@@ -41609,9 +42755,14 @@
         "sound_designer": [],
         "producer": [],
         "dramaturg": [],
-        "performers": [],
+        "performers": [
+          "Glynis Johns",
+          "Jean Simmons"
+        ],
         "musicians": [],
-        "artists": []
+        "artists": [
+          "Ingmar Bergman"
+        ]
       }
     },
     {
@@ -41641,8 +42792,13 @@
       "venue": [],
       "city": [],
       "roles": {
-        "director": [],
-        "playwright": [],
+        "director": [
+          "Peter Brook",
+          "Richard Eyre"
+        ],
+        "playwright": [
+          "Harold Pinter"
+        ],
         "actors": [],
         "composer_lyricist": [],
         "musical_director": [],
@@ -41655,7 +42811,9 @@
         "dramaturg": [],
         "performers": [],
         "musicians": [],
-        "artists": []
+        "artists": [
+          "Michael Billington"
+        ]
       }
     },
     {
@@ -41692,7 +42850,13 @@
       "roles": {
         "director": [],
         "playwright": [],
-        "actors": [],
+        "actors": [
+          "Kenneth Branagh",
+          "Laurence Olivier",
+          "Orson Welles",
+          "Albert Finney",
+          "Ian McKellen"
+        ],
         "composer_lyricist": [],
         "musical_director": [],
         "choreographer": [],
@@ -41738,7 +42902,13 @@
         "director": [],
         "playwright": [],
         "actors": [],
-        "composer_lyricist": [],
+        "composer_lyricist": [
+          "Lionel Bart",
+          "Anthony Newley",
+          "Sandy Wilson",
+          "Andrew Lloyd Webber",
+          "Noel Coward"
+        ],
         "musical_director": [],
         "choreographer": [],
         "set_designer": [],
@@ -41817,9 +42987,19 @@
         "London"
       ],
       "roles": {
-        "director": [],
+        "director": [
+          "Michael Langham",
+          "Tyrone Guthrie",
+          "Peter Hall",
+          "Trevor Nunn",
+          "Deborah Warner"
+        ],
         "playwright": [],
-        "actors": [],
+        "actors": [
+          "Helen Burns",
+          "Brian Bedford",
+          "Christopher Plummer"
+        ],
         "composer_lyricist": [],
         "musical_director": [],
         "choreographer": [],
@@ -41934,13 +43114,46 @@
         "New York"
       ],
       "roles": {
-        "director": [],
+        "director": [
+          "Michael Blakemore",
+          "Richard Jones",
+          "Harold Prince",
+          "Bob Fosse"
+        ],
         "playwright": [],
-        "actors": [],
-        "composer_lyricist": [],
+        "actors": [
+          "Lillias White",
+          "Debra Monk",
+          "Robert Cuccioli",
+          "Linda Eder",
+          "Tonya Pinkins",
+          "Cheryl Freeman",
+          "Andree De Shields",
+          "Jim Dale",
+          "Andrea Martin",
+          "Bebe Neuwirth",
+          "Chita Rivera",
+          "Ann Reinking",
+          "Gwen Verdon"
+        ],
+        "composer_lyricist": [
+          "Cy Coleman",
+          "Ira Gasman",
+          "John Kander",
+          "Fred Ebb",
+          "Maury Yeston",
+          "Frank Wildhorn",
+          "Leslie Bricusse",
+          "Duke Ellington",
+          "Johnny Mercer",
+          "Leonard Bernstein",
+          "Hugh Wheeler"
+        ],
         "musical_director": [],
         "choreographer": [],
-        "set_designer": [],
+        "set_designer": [
+          "Stewart Laing"
+        ],
         "costume_designer": [],
         "lighting_designer": [],
         "sound_designer": [],
