@@ -9,7 +9,7 @@ ROOT = Path(__file__).resolve().parent
 PROJECT_ROOT = ROOT.parent.parent
 DATA_PATH = ROOT / "data" / "reviews.json"
 ARTICLES_DIR = ROOT / "articles"
-ASSET_VERSION = "20"
+ASSET_VERSION = "21"
 
 ROLE_FIELDS = [
     ("directors", "Director", "director", 4),
@@ -210,6 +210,20 @@ def compact_list(values, limit=14):
     if len(values) > limit:
         shown += f" +{len(values) - limit}"
     return shown
+
+
+def title_case_word(match):
+    word = match.group(0)
+    if "'" in word:
+        first, rest = word.split("'", 1)
+        if len(first) == 1:
+            return f"{first.upper()}'{rest[:1].upper()}{rest[1:].lower()}"
+        return f"{first[:1].upper()}{first[1:].lower()}'{rest.lower()}"
+    return word[:1].upper() + word[1:].lower()
+
+
+def title_case_headline(value):
+    return re.sub(r"[A-Za-z]+(?:'[A-Za-z]+)?", title_case_word, str(value or ""))
 
 
 def entity_chip(type_name, label, prefix="", group="context", featured=False):
@@ -417,6 +431,7 @@ def enrich_record(record):
     md = parse_frontmatter(record.get("markdownPath", ""))
     roles = {key: as_list(md.get(key)) for _, _, key, _ in ROLE_FIELDS}
     enriched = dict(record)
+    enriched["title"] = title_case_headline(md.get("title") or record.get("title", ""))
     body = markdown_body(record.get("markdownPath", ""))
     if body:
         enriched["body"] = body
