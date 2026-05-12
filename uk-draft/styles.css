@@ -60,6 +60,8 @@ article h1 { margin-top: 8px; font-size: clamp(42px, 6vw, 78px); line-height: .9
 .article-production-group-list { display: grid; gap: 12px; }
 .article-production-group { border-top: 1px solid var(--rule); padding-top: 12px; }
 .article-production-group h2 { margin: 0 0 8px; font-family: var(--sans); font-size: 15px; font-weight: 800; letter-spacing: 0; line-height: 1.25; }
+.production-title-link { display: inline-flex; align-items: center; border-bottom: 2px solid var(--blue); color: var(--ink); line-height: 1.15; }
+.production-title-link:hover, .production-title-link:focus-visible { color: var(--blue-dark); outline: none; }
 .article-entities { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
 .entity-chip, .entity-more { display: inline-flex; align-items: center; gap: 6px; border: 1px solid var(--chip-border, var(--rule)); border-radius: 999px; padding: 5px 10px; color: var(--ink); background: var(--chip-bg, #f7f7f7); font-family: var(--sans); font-size: 12px; line-height: 1.1; }
 .entity-chip span { color: var(--chip-label, var(--muted)); font-weight: 700; line-height: 1.1; text-transform: uppercase; }

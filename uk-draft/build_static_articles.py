@@ -9,7 +9,7 @@ ROOT = Path(__file__).resolve().parent
 PROJECT_ROOT = ROOT.parent.parent
 DATA_PATH = ROOT / "data" / "reviews.json"
 ARTICLES_DIR = ROOT / "articles"
-ASSET_VERSION = "9"
+ASSET_VERSION = "10"
 
 ROLE_FIELDS = [
     ("directors", "Director", "director", 4),
@@ -222,6 +222,10 @@ def entity_chip(type_name, label, prefix="", group="context", featured=False):
     )
 
 
+def entity_href(type_name, label):
+    return f"../index.html#entity:{type_name}:{entity_slug(label)}"
+
+
 def metadata_chips(record):
     md = parse_frontmatter(record.get("markdownPath", ""))
     production_groups = md.get("production_groups")
@@ -289,9 +293,10 @@ def production_group_chips(production_groups):
         chips_html = "".join(chips)
         if not chips_html:
             chips_html = '<span class="entity-more">No production-specific chips</span>'
+        title_href = entity_href("productions", title)
         group_html.append(
             f"""<section class="article-production-group">
-            <h2>{escape(title)}</h2>
+            <h2><a class="production-title-link" href="{title_href}">{escape(title)}</a></h2>
             <nav class="article-entities" aria-label="{escape(title)} production metadata chips">{chips_html}</nav>
           </section>"""
         )
