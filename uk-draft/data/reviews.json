@@ -1028,6 +1028,7 @@
           "order": "1",
           "production_title": "The Way of the World",
           "venue": [
+            "Royal Lyceum Theatre",
             "Arts Theatre, Cambridge"
           ],
           "company": [
@@ -1054,6 +1055,9 @@
         {
           "order": "2",
           "production_title": "Union Jack (and Bonzo)",
+          "venue": [
+            "Traverse Theatre"
+          ],
           "director": [
             "Mike Ockrent"
           ],
@@ -1069,6 +1073,9 @@
         {
           "order": "3",
           "production_title": "An Inspector Calls",
+          "venue": [
+            "Mermaid Theatre"
+          ],
           "city": [
             "London"
           ],
@@ -1087,6 +1094,9 @@
         {
           "order": "4",
           "production_title": "Finishing Touches",
+          "venue": [
+            "Apollo Theatre"
+          ],
           "playwright": [
             "Jean Kerr"
           ],
