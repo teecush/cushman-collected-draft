@@ -9,7 +9,7 @@ ROOT = Path(__file__).resolve().parent
 PROJECT_ROOT = ROOT.parent.parent
 DATA_PATH = ROOT / "data" / "reviews.json"
 ARTICLES_DIR = ROOT / "articles"
-ASSET_VERSION = "13"
+ASSET_VERSION = "14"
 
 ROLE_FIELDS = [
     ("directors", "Director", "director", 4),
@@ -239,27 +239,20 @@ def metadata_chips(record):
     context_chips = context_metadata_chips(company_values, venue_values, city_values)
     people_chips = people_metadata_chips(md)
 
-    if len(production_values) == 1:
-        return production_group_chips(
-            [
-                {
-                    "order": 1,
-                    "production_title": production_values[0],
-                    "_chips_html": "".join(context_chips + people_chips),
-                }
-            ]
-        )
-
     sections = []
     production_html = ""
-    if production_values:
+    if len(production_values) == 1:
+        chips = "".join(entity_chip("productions", value, featured=True, group="production") for value in production_values[:5])
+        sections.append(("Production", chips, "production"))
+    elif production_values:
         production_html = production_title_links(production_values)
+    shared_labels = len(production_values) > 1
 
     if context_chips:
-        sections.append(("Shared Context", "".join(context_chips), "context"))
+        sections.append(("Shared Context" if shared_labels else "Work", "".join(context_chips), "context"))
 
     if people_chips:
-        sections.append(("Shared People", "".join(people_chips), "people"))
+        sections.append(("Shared People" if shared_labels else "People", "".join(people_chips), "people"))
 
     if not sections:
         return production_html
