@@ -11449,71 +11449,6 @@
     "word_count": 1391
   },
   {
-    "slug": "1976-04-11-much-ado-about-india",
-    "route": "/reviews/1976-04-11-much-ado-about-india/",
-    "source_file": "1976.04.11.Cushman_Collected.Much_Ado_About_India.md",
-    "title": "Much Ado About India",
-    "date": "1976-04-11",
-    "year": "1976",
-    "publication": "The Observer",
-    "article_category": "Theatre Review",
-    "collections": [
-      "The Shakespeare Collection"
-    ],
-    "publication_status": "publish",
-    "editorial_issue_type": "",
-    "canonical_file": "",
-    "production_title": "Much Ado About Nothing; John Barton",
-    "company": "Royal Shakespeare Company",
-    "venue": "",
-    "city": "Stratford-upon-Avon",
-    "coordinates": [],
-    "people": [
-      "Donald Sinden",
-      "John Barton",
-      "John Woodvine",
-      "Judi Dench",
-      "William Shakespeare"
-    ],
-    "roles": {
-      "director": [
-        "John Barton"
-      ],
-      "actors": [
-        "Donald Sinden",
-        "Judi Dench",
-        "John Woodvine"
-      ],
-      "playwright": [
-        "John Barton",
-        "William Shakespeare"
-      ],
-      "composer_lyricist": [],
-      "musical_director": [],
-      "choreographer": [],
-      "orchestrator": [],
-      "arranger": [],
-      "assistant_director": [],
-      "stage_manager": [],
-      "assistant_musical_director": [],
-      "vocal_director": [],
-      "dance_captain": [],
-      "fight_director": [],
-      "dramaturg": [],
-      "producer": [],
-      "set_designer": [],
-      "costume_designer": [],
-      "lighting_designer": [],
-      "sound_designer": [],
-      "musicians": [],
-      "performers": [],
-      "artists": []
-    },
-    "production_groups": [],
-    "media": [],
-    "word_count": 941
-  },
-  {
     "slug": "1976-04-11-much-ado-in-india",
     "route": "/reviews/1976-04-11-much-ado-in-india/",
     "source_file": "1976.04.11.The_Observer.Much_Ado_In_India.md",
@@ -12406,7 +12341,8 @@
     "publication": "The Observer",
     "article_category": "Theatre Review",
     "collections": [
-      "The Shakespeare Collection"
+      "The Shakespeare Collection",
+      "UK Collection"
     ],
     "publication_status": "publish",
     "editorial_issue_type": "",
@@ -17518,67 +17454,6 @@
     ],
     "media": [],
     "word_count": 1243
-  },
-  {
-    "slug": "1977-05-15-ten-years-of-stratford",
-    "route": "/reviews/1977-05-15-ten-years-of-stratford/",
-    "source_file": "1977.05.15.Cushman_Collected.Ten_Years_of_Stratford.md",
-    "title": "Ten Years of Stratford",
-    "date": "1977-05-15",
-    "year": "1977",
-    "publication": "The Observer",
-    "article_category": "Opinion Piece",
-    "collections": [
-      "Thoughts on Shakespeare",
-      "The Shakespeare Collection"
-    ],
-    "publication_status": "publish",
-    "editorial_issue_type": "",
-    "canonical_file": "",
-    "production_title": "John Barton; Peter Brook; The Other Place",
-    "company": "Royal Shakespeare Company",
-    "venue": "",
-    "city": "Stratford-upon-Avon",
-    "coordinates": [],
-    "people": [
-      "John Barton",
-      "Peter Brook",
-      "Peter Hall"
-    ],
-    "roles": {
-      "director": [
-        "John Barton",
-        "Peter Brook",
-        "Peter Hall"
-      ],
-      "actors": [],
-      "playwright": [
-        "John Barton"
-      ],
-      "composer_lyricist": [],
-      "musical_director": [],
-      "choreographer": [],
-      "orchestrator": [],
-      "arranger": [],
-      "assistant_director": [],
-      "stage_manager": [],
-      "assistant_musical_director": [],
-      "vocal_director": [],
-      "dance_captain": [],
-      "fight_director": [],
-      "dramaturg": [],
-      "producer": [],
-      "set_designer": [],
-      "costume_designer": [],
-      "lighting_designer": [],
-      "sound_designer": [],
-      "musicians": [],
-      "performers": [],
-      "artists": []
-    },
-    "production_groups": [],
-    "media": [],
-    "word_count": 1073
   },
   {
     "slug": "1977-05-15-profile-trevor-nunn",
@@ -45832,7 +45707,8 @@
     "publication": "The Observer",
     "article_category": "Theatre Review",
     "collections": [
-      "The Shakespeare Collection"
+      "The Shakespeare Collection",
+      "UK Collection"
     ],
     "publication_status": "publish",
     "editorial_issue_type": "",
@@ -51655,67 +51531,6 @@
     ],
     "media": [],
     "word_count": 1216
-  },
-  {
-    "slug": "1983-06-19-stratford-s-henry-viii",
-    "route": "/reviews/1983-06-19-stratford-s-henry-viii/",
-    "source_file": "1983.06.19.Cushman_Collected.Stratford_s_Henry_VIII.md",
-    "title": "Stratford's Henry VIII",
-    "date": "1983-06-19",
-    "year": "1983",
-    "publication": "The Observer",
-    "article_category": "Theatre Review",
-    "collections": [
-      "The Shakespeare Collection"
-    ],
-    "publication_status": "publish",
-    "editorial_issue_type": "",
-    "canonical_file": "",
-    "production_title": "Henry VIII; Richard Griffiths",
-    "company": "Royal Shakespeare Company",
-    "venue": "",
-    "city": "Stratford-upon-Avon",
-    "coordinates": [],
-    "people": [
-      "Gemma Jones",
-      "John Fletcher",
-      "Richard Griffiths",
-      "William Shakespeare"
-    ],
-    "roles": {
-      "director": [],
-      "actors": [
-        "Richard Griffiths",
-        "Gemma Jones"
-      ],
-      "playwright": [
-        "John Fletcher",
-        "William Shakespeare"
-      ],
-      "composer_lyricist": [],
-      "musical_director": [],
-      "choreographer": [],
-      "orchestrator": [],
-      "arranger": [],
-      "assistant_director": [],
-      "stage_manager": [],
-      "assistant_musical_director": [],
-      "vocal_director": [],
-      "dance_captain": [],
-      "fight_director": [],
-      "dramaturg": [],
-      "producer": [],
-      "set_designer": [],
-      "costume_designer": [],
-      "lighting_designer": [],
-      "sound_designer": [],
-      "musicians": [],
-      "performers": [],
-      "artists": []
-    },
-    "production_groups": [],
-    "media": [],
-    "word_count": 546
   },
   {
     "slug": "1983-06-19-sir-ralph-in-naples",
@@ -64024,74 +63839,6 @@
     "production_groups": [],
     "media": [],
     "word_count": 775
-  },
-  {
-    "slug": "1993-01-19-call-him-irrepressible-too-appreciation-sammy-cahn-the-prolific-lyricist",
-    "route": "/reviews/1993-01-19-call-him-irrepressible-too-appreciation-sammy-cahn-the-prolific-lyricist/",
-    "source_file": "1993.01.19.The_Globe_and_Mail.Call_Him_Irrepressible_Too_Appreciation_Sammy_Cahn_The_Prolific_Lyrici.md",
-    "title": "Call Him Irrepressible, Too Appreciation - Sammy Cahn, The Prolific Lyricist",
-    "date": "1993-01-19",
-    "year": "1993",
-    "publication": "The Globe and Mail",
-    "article_category": "Obituary",
-    "collections": [
-      "The Musical Collection"
-    ],
-    "publication_status": "publish",
-    "editorial_issue_type": "",
-    "canonical_file": "",
-    "production_title": "Sammy Cahn",
-    "company": "",
-    "venue": "",
-    "city": "",
-    "coordinates": [],
-    "people": [
-      "Frank Sinatra",
-      "Ira Gershwin",
-      "Jimmie Lunceford",
-      "Jimmy Van Heusen",
-      "Jule Styne",
-      "Sammy Cahn",
-      "Yip Harburg"
-    ],
-    "roles": {
-      "director": [],
-      "actors": [],
-      "playwright": [],
-      "composer_lyricist": [
-        "Sammy Cahn",
-        "Ira Gershwin",
-        "Yip Harburg",
-        "Jimmy Van Heusen",
-        "Jule Styne"
-      ],
-      "musical_director": [],
-      "choreographer": [],
-      "orchestrator": [],
-      "arranger": [],
-      "assistant_director": [],
-      "stage_manager": [],
-      "assistant_musical_director": [],
-      "vocal_director": [],
-      "dance_captain": [],
-      "fight_director": [],
-      "dramaturg": [],
-      "producer": [],
-      "set_designer": [],
-      "costume_designer": [],
-      "lighting_designer": [],
-      "sound_designer": [],
-      "musicians": [
-        "Sammy Cahn",
-        "Frank Sinatra",
-        "Jimmie Lunceford"
-      ],
-      "performers": [],
-      "artists": []
-    },
-    "production_groups": [],
-    "media": [],
-    "word_count": 745
   },
   {
     "slug": "1993-02-06-the-cd-collector-show-tunes-underscored-broadway-musicals",

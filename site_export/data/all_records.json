@@ -11458,11 +11458,12 @@
     "publication": "The Observer",
     "article_category": "Theatre Review",
     "collections": [
-      "The Shakespeare Collection"
+      "The Shakespeare Collection",
+      "UK Collection"
     ],
-    "publication_status": "publish",
+    "publication_status": "duplicate_variant",
     "editorial_issue_type": "",
-    "canonical_file": "",
+    "canonical_file": "1976.04.11.The_Observer.Much_Ado_In_India.md",
     "production_title": "Much Ado About Nothing; John Barton",
     "company": "Royal Shakespeare Company",
     "venue": "",
@@ -12406,7 +12407,8 @@
     "publication": "The Observer",
     "article_category": "Theatre Review",
     "collections": [
-      "The Shakespeare Collection"
+      "The Shakespeare Collection",
+      "UK Collection"
     ],
     "publication_status": "publish",
     "editorial_issue_type": "",
@@ -17530,11 +17532,12 @@
     "article_category": "Opinion Piece",
     "collections": [
       "Thoughts on Shakespeare",
-      "The Shakespeare Collection"
+      "The Shakespeare Collection",
+      "UK Collection"
     ],
-    "publication_status": "publish",
+    "publication_status": "duplicate_variant",
     "editorial_issue_type": "",
-    "canonical_file": "",
+    "canonical_file": "1977.05.15.The_Observer.Profile_Trevor_Nunn.md",
     "production_title": "John Barton; Peter Brook; The Other Place",
     "company": "Royal Shakespeare Company",
     "venue": "",
@@ -45832,7 +45835,8 @@
     "publication": "The Observer",
     "article_category": "Theatre Review",
     "collections": [
-      "The Shakespeare Collection"
+      "The Shakespeare Collection",
+      "UK Collection"
     ],
     "publication_status": "publish",
     "editorial_issue_type": "",
@@ -51666,11 +51670,12 @@
     "publication": "The Observer",
     "article_category": "Theatre Review",
     "collections": [
-      "The Shakespeare Collection"
+      "The Shakespeare Collection",
+      "UK Collection"
     ],
-    "publication_status": "publish",
+    "publication_status": "duplicate_variant",
     "editorial_issue_type": "",
-    "canonical_file": "",
+    "canonical_file": "1983.06.19.The_Observer.Sir_Ralph_In_Naples.md",
     "production_title": "Henry VIII; Richard Griffiths",
     "company": "Royal Shakespeare Company",
     "venue": "",
@@ -64147,9 +64152,9 @@
     "collections": [
       "The Musical Collection"
     ],
-    "publication_status": "publish",
+    "publication_status": "duplicate_variant",
     "editorial_issue_type": "",
-    "canonical_file": "",
+    "canonical_file": "1993.01.17.The_Independent.Obituary_The_Man_Who_Defined_Sinatra_Twice_Sammy_Cahn_Died_On.md",
     "production_title": "Sammy Cahn",
     "company": "",
     "venue": "",
