@@ -1347,6 +1347,40 @@ h1 {
   align-items: center;
 }
 
+.article-production-groups {
+  display: grid;
+  gap: 8px;
+}
+
+.article-production-group {
+  display: grid;
+  gap: 7px;
+}
+
+.article-production-title-link {
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 14px;
+  font-weight: 750;
+  line-height: 1.2;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.article-production-title-link:hover {
+  color: var(--blue-dark);
+}
+
+.article-production-group-gap {
+  display: block;
+  height: 2px;
+}
+
+.article-production-group-entities {
+  padding-left: 0;
+}
+
 .entity-chip,
 .entity-more {
   display: inline-flex;

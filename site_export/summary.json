@@ -1,45 +1,53 @@
 {
-  "export_dir": "site_export",
-  "source_dir": "repaired_structural_v2",
+  "export_dir": "/Users/openclaw/Codex Projects/Cushman CODEXted/site_export",
+  "source_dir": "/Users/openclaw/Codex Projects/Cushman CODEXted/repaired_structural_v2",
   "counts": {
-    "total": 2919,
-    "publish": 2728,
+    "total": 3367,
+    "publish": 3176,
     "archive_only": 154,
     "duplicate_variant": 36,
     "exclude_from_publication": 1
   },
-  "public_reviews": 2728,
+  "public_reviews": 3176,
   "archive_records": 190,
   "excluded_records": 1,
   "map_points": 1770,
   "sample_public_record": {
-    "slug": "1973-04-29-hands-across-the-channel",
-    "route": "/reviews/1973-04-29-hands-across-the-channel/",
-    "source_file": "1973.04.29.Cushman_Collected.Hands_Across_the_Channel.md",
-    "title": "Hands Across the Channel",
-    "date": "1973-04-29",
-    "year": "1973",
-    "publication": "The Observer",
-    "article_category": "Theatre Review",
+    "slug": "1970-10-02-inside-the-shell-of-technique",
+    "route": "/reviews/1970-10-02-inside-the-shell-of-technique/",
+    "source_file": "1970.10.02.The_Guardian.Inside_The_Shell_Of_Technique.md",
+    "title": "Inside The Shell Of Technique",
+    "date": "1970-10-02",
+    "year": "1970",
+    "publication": "The Guardian",
+    "article_category": "Theatre Interview",
     "collections": [
-      "The Shakespeare Collection"
+      "UK Collection"
     ],
     "publication_status": "publish",
-    "editorial_issue_type": "",
+    "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "Richard III",
-    "company": "Royal Shakespeare Company",
-    "venue": "",
-    "city": "Stratford-upon-Avon",
+    "production_title": "Oedipus",
+    "company": "National Theatre / Young Vic",
+    "venue": "Young Vic",
+    "city": "London",
     "coordinates": [],
     "people": [
-      "William Shakespeare"
+      "Annabel Leventon",
+      "Roland Joffe",
+      "Ronald Pickup",
+      "Sophocles"
     ],
     "roles": {
-      "director": [],
-      "actors": [],
+      "director": [
+        "Roland Joffe"
+      ],
+      "actors": [
+        "Ronald Pickup",
+        "Annabel Leventon"
+      ],
       "playwright": [
-        "William Shakespeare"
+        "Sophocles"
       ],
       "composer_lyricist": [],
       "musical_director": [],
@@ -62,8 +70,9 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
-    "word_count": 657
+    "word_count": 928
   },
   "duplicate_canonical_links": 36
 }

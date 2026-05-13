@@ -1,4 +1,4 @@
-const DATA_URL = new URL("../site_export/data/public_reviews.json?v=76", import.meta.url);
+const DATA_URL = new URL("../site_export/data/public_reviews.json?v=77", import.meta.url);
 const CONTENT_ROOT = new URL("../site_export/content/reviews/", import.meta.url);
 const PAGE_SIZE = 36;
 const SHAKESPEARE_COLLECTION = "The Shakespeare Collection";
@@ -28,6 +28,7 @@ const SHAKESPEARE_GROUPS = [
 const PUBLIC_COLLECTION_FILTERS = [
   "Current Collection",
   "The Canadian Collection",
+  "UK Collection",
   SHAKESPEARE_COLLECTION,
   "The Stratford Collection",
   "The Shaw Collection",
@@ -35,6 +36,7 @@ const PUBLIC_COLLECTION_FILTERS = [
 ];
 const SECONDARY_COLLECTION_TILES = [
   "The Canadian Collection",
+  "UK Collection",
   "The Stratford Collection",
   "The Shaw Collection",
 ];
@@ -246,6 +248,7 @@ const browseTiles = {
   ],
   collections: [
     "The Canadian Collection",
+    "UK Collection",
     "The Stratford Collection",
     "The Shaw Collection",
     "The Musical Collection",
@@ -381,6 +384,41 @@ function splitCityList(value) {
     .filter((item) => item !== "Canada");
 }
 
+function uniqueEntityValues(values, transform = (value) => value) {
+  const seen = new Set();
+  const result = [];
+  values.forEach((value) => {
+    const label = String(transform(value) || "").trim();
+    if (!label) return;
+    const slug = entitySlug(label);
+    if (seen.has(slug)) return;
+    seen.add(slug);
+    result.push(label);
+  });
+  return result;
+}
+
+function productionGroups(record) {
+  return Array.isArray(record.production_groups)
+    ? record.production_groups.filter((group) => group && typeof group === "object" && group.production_title)
+    : [];
+}
+
+function groupedEntityValues(record, key, transform = splitEntityList) {
+  return uniqueEntityValues(
+    productionGroups(record).flatMap((group) => transform(group[key] || []))
+  );
+}
+
+function groupedRoleValues(record, role) {
+  return groupedEntityValues(record, role);
+}
+
+function valuesExceptGrouped(flatValues, groupedValues) {
+  const groupedSlugs = new Set(groupedValues.map(entitySlug));
+  return uniqueEntityValues(flatValues).filter((value) => !groupedSlugs.has(entitySlug(value)));
+}
+
 function sortRecords(records) {
   const sorted = [...records];
   if (state.sort === "oldest") {
@@ -402,12 +440,12 @@ function collectionNames(record) {
 
 function entityValues(record, type) {
   const role = entityType(type)?.role;
-  if (role) return splitEntityList(record.roles?.[role] || []);
-  if (type === "people") return record.people || [];
-  if (type === "productions") return splitEntityList(record.production_title);
-  if (type === "companies") return splitEntityList(record.company);
-  if (type === "venues") return splitEntityList(record.venue);
-  if (type === "cities") return splitCityList(record.city);
+  if (role) return uniqueEntityValues([...splitEntityList(record.roles?.[role] || []), ...groupedRoleValues(record, role)]);
+  if (type === "people") return uniqueEntityValues([...(record.people || []), ...productionGroups(record).flatMap((group) => ENTITY_TYPES.filter((item) => item.role).flatMap((item) => splitEntityList(group[item.role] || [])))]);
+  if (type === "productions") return uniqueEntityValues([...splitEntityList(record.production_title), ...groupedEntityValues(record, "production_title")]);
+  if (type === "companies") return uniqueEntityValues([...splitEntityList(record.company), ...groupedEntityValues(record, "company")]);
+  if (type === "venues") return uniqueEntityValues([...splitEntityList(record.venue), ...groupedEntityValues(record, "venue")]);
+  if (type === "cities") return uniqueEntityValues([...splitCityList(record.city), ...groupedEntityValues(record, "city", splitCityList)]);
   if (type === "publications") return splitEntityList(record.publication);
   if (type === "categories") return [typeLabel(record)];
   if (type === "collections") return collectionNames(record);
@@ -2577,7 +2615,60 @@ function entityChip(type, label, prefix = "", group = "context") {
   return link;
 }
 
+const ARTICLE_ROLE_GROUPS = [
+  ["directors", "Director", "director", 3],
+  ["playwrights", "Playwright", "playwright", 3],
+  ["actors", "Actor", "actors", 8],
+  ["composers-lyricists", "Music", "composer_lyricist", 4],
+  ["musical-directors", "Music Director", "musical_director", 2],
+  ["choreographers", "Choreographer", "choreographer", 2],
+  ["set-designers", "Set", "set_designer", 2],
+  ["costume-designers", "Costume", "costume_designer", 2],
+  ["lighting-designers", "Lighting", "lighting_designer", 2],
+  ["sound-designers", "Sound", "sound_designer", 2],
+  ["performers", "Performer", "performers", 4],
+  ["musicians", "Musician", "musicians", 4],
+  ["artists", "Artist", "artists", 4],
+];
+
+function articleProductionGroups(record) {
+  const groups = productionGroups(record);
+  if (!groups.length) return null;
+
+  const wrap = document.createElement("div");
+  wrap.className = "article-production-groups";
+  groups.forEach((group, index) => {
+    const section = document.createElement("section");
+    section.className = "article-production-group";
+    const title = document.createElement("a");
+    title.className = "article-production-title-link";
+    title.href = `#entity:productions:${entitySlug(group.production_title)}`;
+    title.textContent = group.production_title;
+    const nav = document.createElement("nav");
+    nav.className = "article-entities article-production-group-entities";
+    nav.setAttribute("aria-label", `${group.production_title} metadata links`);
+    [
+      ["companies", "Company", splitEntityList(group.company).slice(0, 3)],
+      ["venues", "Venue", splitEntityList(group.venue).slice(0, 2)],
+      ["cities", "City", splitCityList(group.city).slice(0, 2)],
+      ...ARTICLE_ROLE_GROUPS.map(([type, prefix, role, limit]) => [type, prefix, splitEntityList(group[role]).slice(0, limit)]),
+    ].forEach(([type, prefix, values]) => {
+      values.forEach((value) => nav.append(entityChip(type, value, prefix, "production")));
+    });
+    section.replaceChildren(title, nav);
+    wrap.append(section);
+    if (index < groups.length - 1) {
+      const spacer = document.createElement("span");
+      spacer.className = "article-production-group-gap";
+      spacer.setAttribute("aria-hidden", "true");
+      wrap.append(spacer);
+    }
+  });
+  return wrap;
+}
+
 function articleEntityLinks(record) {
+  const grouped = articleProductionGroups(record);
   const roleValues = [
     ...(record.roles?.director || []),
     ...(record.roles?.playwright || []),
@@ -2595,39 +2686,32 @@ function articleEntityLinks(record) {
   ];
   const roleSlugs = new Set(roleValues.map(entitySlug));
   const mentionedPeople = (record.people || []).filter((name) => !roleSlugs.has(entitySlug(name)));
+  const groupedProductionValues = groupedEntityValues(record, "production_title");
+  const groupedCompanyValues = groupedEntityValues(record, "company");
+  const groupedVenueValues = groupedEntityValues(record, "venue");
+  const groupedCityValues = groupedEntityValues(record, "city", splitCityList);
   const productionGroups = [
-    ["productions", "Production", splitEntityList(record.production_title).slice(0, 4)],
+    ["productions", "Production", valuesExceptGrouped(splitEntityList(record.production_title), groupedProductionValues).slice(0, 4)],
   ].filter(([, , values]) => values.length);
   const contextGroups = [
-    ["companies", "Company", splitEntityList(record.company).slice(0, 3)],
-    ["venues", "Venue", splitEntityList(record.venue).slice(0, 2)],
-    ["cities", "City", splitCityList(record.city).slice(0, 2)],
+    ["companies", "Company", valuesExceptGrouped(splitEntityList(record.company), groupedCompanyValues).slice(0, 3)],
+    ["venues", "Venue", valuesExceptGrouped(splitEntityList(record.venue), groupedVenueValues).slice(0, 2)],
+    ["cities", "City", valuesExceptGrouped(splitCityList(record.city), groupedCityValues).slice(0, 2)],
     ["collections", "Series", collectionNames(record).filter((name) => name === "Short Takes")],
   ].filter(([, , values]) => values.length);
 
   const peopleGroups = [
-    ["directors", "Director", (record.roles?.director || []).slice(0, 3)],
-    ["playwrights", "Playwright", (record.roles?.playwright || []).slice(0, 3)],
-    ["actors", "Actor", (record.roles?.actors || []).slice(0, 8)],
-    ["composers-lyricists", "Music", (record.roles?.composer_lyricist || []).slice(0, 4)],
-    ["musical-directors", "Music Director", (record.roles?.musical_director || []).slice(0, 2)],
-    ["choreographers", "Choreographer", (record.roles?.choreographer || []).slice(0, 2)],
-    ["set-designers", "Set", (record.roles?.set_designer || []).slice(0, 2)],
-    ["costume-designers", "Costume", (record.roles?.costume_designer || []).slice(0, 2)],
-    ["lighting-designers", "Lighting", (record.roles?.lighting_designer || []).slice(0, 2)],
-    ["sound-designers", "Sound", (record.roles?.sound_designer || []).slice(0, 2)],
-    ["performers", "Performer", (record.roles?.performers || []).slice(0, 4)],
-    ["musicians", "Musician", (record.roles?.musicians || []).slice(0, 4)],
-    ["artists", "Artist", (record.roles?.artists || []).slice(0, 4)],
+    ...ARTICLE_ROLE_GROUPS.map(([type, prefix, role, limit]) => [type, prefix, valuesExceptGrouped(record.roles?.[role] || [], groupedRoleValues(record, role)).slice(0, limit)]),
     ["people", "Mentioned", mentionedPeople.slice(0, 8)],
   ].filter(([, , values]) => values.length);
 
-  if (!productionGroups.length && !contextGroups.length && !peopleGroups.length) return null;
+  if (!grouped && !productionGroups.length && !contextGroups.length && !peopleGroups.length) return null;
   const wrap = document.createElement("div");
   wrap.className = "article-entity-groups";
 
+  if (grouped) wrap.append(grouped);
   if (productionGroups.length) wrap.append(articleEntityGroup("Production", productionGroups, "production"));
-  if (contextGroups.length) wrap.append(articleEntityGroup("Work", contextGroups, "context"));
+  if (contextGroups.length) wrap.append(articleEntityGroup(grouped ? "Shared Context" : "Work", contextGroups, "context"));
   if (peopleGroups.length) wrap.append(articleEntityGroup("People", peopleGroups, "people"));
 
   if (mentionedPeople.length > 8) {
@@ -2657,15 +2741,15 @@ function articleEntityGroup(label, groups, groupType) {
 
 function inlineLinkEntities(record) {
   const candidates = [
-    ...splitEntityList(record.production_title).map((label) => ({ type: "productions", label, priority: 1 })),
-    ...splitEntityList(record.company).map((label) => ({ type: "companies", label, priority: 2 })),
-    ...(record.roles?.director || []).map((label) => ({ type: "directors", label, priority: 3 })),
-    ...(record.roles?.playwright || []).map((label) => ({ type: "playwrights", label, priority: 3 })),
-    ...(record.roles?.actors || []).map((label) => ({ type: "actors", label, priority: 4 })),
-    ...(record.roles?.composer_lyricist || []).map((label) => ({ type: "composers-lyricists", label, priority: 4 })),
-    ...(record.roles?.performers || []).map((label) => ({ type: "performers", label, priority: 4 })),
-    ...(record.roles?.musicians || []).map((label) => ({ type: "musicians", label, priority: 4 })),
-    ...(record.roles?.artists || []).map((label) => ({ type: "artists", label, priority: 4 })),
+    ...entityValues(record, "productions").map((label) => ({ type: "productions", label, priority: 1 })),
+    ...entityValues(record, "companies").map((label) => ({ type: "companies", label, priority: 2 })),
+    ...entityValues(record, "directors").map((label) => ({ type: "directors", label, priority: 3 })),
+    ...entityValues(record, "playwrights").map((label) => ({ type: "playwrights", label, priority: 3 })),
+    ...entityValues(record, "actors").map((label) => ({ type: "actors", label, priority: 4 })),
+    ...entityValues(record, "composers-lyricists").map((label) => ({ type: "composers-lyricists", label, priority: 4 })),
+    ...entityValues(record, "performers").map((label) => ({ type: "performers", label, priority: 4 })),
+    ...entityValues(record, "musicians").map((label) => ({ type: "musicians", label, priority: 4 })),
+    ...entityValues(record, "artists").map((label) => ({ type: "artists", label, priority: 4 })),
   ];
 
   const seen = new Set();

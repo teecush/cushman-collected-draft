@@ -1,9 +1,9 @@
 [
   {
-    "slug": "1990-11-03-theatre-reviews-among-london-s-many-offerings-are-the-flawless-ensemble-productions-of-david-hare-s-racing-demon-and-arthur-miller-s-after-the-fall-featuring-a-brilliant-performance-by-black-actress-josette-simon-as-marilyn-monroe-national-theatre-struts-its-stuff-2",
-    "route": "/reviews/1990-11-03-theatre-reviews-among-london-s-many-offerings-are-the-flawless-ensemble-productions-of-david-hare-s-racing-demon-and-arthur-miller-s-after-the-fall-featuring-a-brilliant-performance-by-black-actress-josette-simon-as-marilyn-monroe-national-theatre-struts-its-stuff-2/",
+    "slug": "1990-11-03-theatre-reviews-among-london-s-many-offerings-are-the-flawless-ensemble",
+    "route": "/reviews/1990-11-03-theatre-reviews-among-london-s-many-offerings-are-the-flawless-ensemble/",
     "source_file": "1990.11.03.The_Globe_and_Mail.Theatre_ReviewsAmong_LondonS_Many_Offerings_Are_The_Flawless_Ensemble_.md",
-    "title": "Theatre Reviews: Among London's Many Offerings Are The Flawless Ensemble Productions Of David Hare's Racing Demon And Arthur Miller's After The Fall, Featuring A Brilliant Performance By Black Actress Josette Simon As Marilyn Monroe National Theatre Struts Its Stuff",
+    "title": "'Theatre Reviews: Among London''s Many Offerings Are The Flawless Ensemble",
     "date": "1990-11-03",
     "year": "1990",
     "publication": "The Globe and Mail",
@@ -19,8 +19,8 @@
     "venue": "Various London Venues",
     "city": "London, England",
     "coordinates": [
-      51.5074,
-      -0.1278
+      "51.5074",
+      "-0.1278"
     ],
     "people": [],
     "roles": {
@@ -48,6 +48,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 1199
   },
@@ -104,14 +105,15 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 527
   },
   {
-    "slug": "1996-05-01-musicals-much-contrary-to-rumours-of-their-demise-megamusicals-are-here-to-stay-though-one-is-tempted-to-make-a-few-suggestions",
-    "route": "/reviews/1996-05-01-musicals-much-contrary-to-rumours-of-their-demise-megamusicals-are-here-to-stay-though-one-is-tempted-to-make-a-few-suggestions/",
+    "slug": "1996-05-01-musicals-much-contrary-to-rumours-of-their-demise-megamusicals-are-here",
+    "route": "/reviews/1996-05-01-musicals-much-contrary-to-rumours-of-their-demise-megamusicals-are-here/",
     "source_file": "1996.05.01.Saturday_Night.Musicals_Much_Contrary_To_Rumours_Of_Their_Demise_Megamusicals_Are_Here_To.md",
-    "title": "Musicals Much: Contrary To Rumours Of Their Demise, Megamusicals Are Here To Stay, Though One Is Tempted To Make A Few Suggestions",
+    "title": "'Musicals Much: Contrary To Rumours Of Their Demise, Megamusicals Are Here",
     "date": "1996-05-01",
     "year": "1996",
     "publication": "Saturday Night",
@@ -159,6 +161,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 2171
   },
@@ -182,8 +185,8 @@
     "venue": "Atlantic Theatre Festival",
     "city": "Wolfville",
     "coordinates": [
-      45.0917,
-      -64.3647
+      "45.0917",
+      "-64.3647"
     ],
     "people": [],
     "roles": {
@@ -211,6 +214,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 1346
   },
@@ -258,6 +262,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 1876
   },
@@ -283,8 +288,8 @@
     "venue": "Stratford Festival",
     "city": "Stratford",
     "coordinates": [
-      43.37,
-      -80.9829
+      "43.37",
+      "-80.9829"
     ],
     "people": [],
     "roles": {
@@ -312,6 +317,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 1220
   },
@@ -335,8 +341,8 @@
     "venue": "Jane Mallett Theatre",
     "city": "Toronto",
     "coordinates": [
-      43.6486,
-      -79.3774
+      "43.6486",
+      "-79.3774"
     ],
     "people": [
       "Anne Wootten",
@@ -391,6 +397,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 767
   },
@@ -415,8 +422,8 @@
     "venue": "Festival Theatre",
     "city": "Stratford",
     "coordinates": [
-      43.3744,
-      -80.9686
+      "43.3744",
+      "-80.9686"
     ],
     "people": [
       "Brian Bedford",
@@ -466,6 +473,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 826
   },
@@ -515,6 +523,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 854
   },
@@ -538,8 +547,8 @@
     "venue": "Royal George Theatre",
     "city": "Niagara-on-the-Lake",
     "coordinates": [
-      43.2563435,
-      -79.0731515
+      "43.2563435",
+      "-79.0731515"
     ],
     "people": [
       "Barbara Gordon",
@@ -584,6 +593,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 706
   },
@@ -642,6 +652,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 824
   },
@@ -689,14 +700,15 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 2207
   },
   {
-    "slug": "2002-11-08-the-return-of-the-king-actor-christopher-plummer-in-town-to-receive-an-honorary-doctorate-from-ryerson-university-left-toronto-for-stardom-on-the-classical-stage-and-on-the-big-screen-his-presence-remains-undiminished-toronto-edition",
-    "route": "/reviews/2002-11-08-the-return-of-the-king-actor-christopher-plummer-in-town-to-receive-an-honorary-doctorate-from-ryerson-university-left-toronto-for-stardom-on-the-classical-stage-and-on-the-big-screen-his-presence-remains-undiminished-toronto-edition/",
+    "slug": "2002-11-08-the-return-of-the-king-actor-christopher-plummer-in-town-to-receive-an-honorary-2",
+    "route": "/reviews/2002-11-08-the-return-of-the-king-actor-christopher-plummer-in-town-to-receive-an-honorary-2/",
     "source_file": "2002.11.08.National_Post.The_return_of_the_king_Actor_Christopher_Plummer_in_town_to_receive_an_honorary_doctorate_from_Ryerson_University_left_Toronto_for_stardom_on_the_classical_stage_and_on_the_b.md",
-    "title": "The return of the king: Actor Christopher Plummer, in town to receive an honorary doctorate from Ryerson University, left Toronto for stardom on the classical stage and on the big screen. His presence remains undiminished: [Toronto Edition]",
+    "title": "'The return of the king: Actor Christopher Plummer, in town to receive an honorary",
     "date": "2002-11-08",
     "year": "2002",
     "publication": "National Post",
@@ -714,8 +726,8 @@
     "venue": "Stratford Festival",
     "city": "Stratford",
     "coordinates": [
-      43.3744,
-      -80.9686
+      "43.3744",
+      "-80.9686"
     ],
     "people": [
       "Christopher Plummer",
@@ -755,6 +767,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 1685
   },
@@ -780,8 +793,8 @@
     "venue": "Stratford Festival",
     "city": "Stratford",
     "coordinates": [
-      43.37,
-      -80.9829
+      "43.37",
+      "-80.9829"
     ],
     "people": [],
     "roles": {
@@ -809,6 +822,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 1275
   },
@@ -864,14 +878,15 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 622
   },
   {
-    "slug": "2004-03-30-the-musical-brat-pack-jamie-cullum-joins-crop-of-jazz-singers-reinventing-standards",
-    "route": "/reviews/2004-03-30-the-musical-brat-pack-jamie-cullum-joins-crop-of-jazz-singers-reinventing-standards/",
+    "slug": "2004-03-30-the-musical-brat-pack-jamie-cullum-joins-crop-of-jazz-singers-reinventing",
+    "route": "/reviews/2004-03-30-the-musical-brat-pack-jamie-cullum-joins-crop-of-jazz-singers-reinventing/",
     "source_file": "2004.03.30.National_Post.The_Musical_Brat_Pack_Jamie_Cullum_Joins_Crop_Of_Jazz_Singers_Reinventing_S.md",
-    "title": "The Musical Brat Pack: Jamie Cullum Joins Crop Of Jazz Singers Reinventing Standards",
+    "title": "'The Musical Brat Pack: Jamie Cullum Joins Crop Of Jazz Singers Reinventing",
     "date": "2004-03-30",
     "year": "2004",
     "publication": "National Post",
@@ -919,6 +934,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 1155
   },
@@ -926,7 +942,7 @@
     "slug": "2004-04-08-weekend-agenda-our-critics-guide-to-the-best-of-toronto",
     "route": "/reviews/2004-04-08-weekend-agenda-our-critics-guide-to-the-best-of-toronto/",
     "source_file": "2004.04.08.National_Post.Weekend_Agenda_Our_Critics_Guide_To_The_Best_Of_Toronto_Toronto_Edition.md",
-    "title": "Weekend Agenda: Our Critics' Guide To The Best Of Toronto",
+    "title": "Weekend Agenda: Our Critics'' Guide To The Best Of Toronto",
     "date": "2004-04-08",
     "year": "2004",
     "publication": "National Post",
@@ -966,14 +982,15 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 1141
   },
   {
-    "slug": "2004-07-26-two-shots-of-jazzy-matt-dusk-and-david-mahogany-cast-themselves-in-the-moulds-of-legends",
-    "route": "/reviews/2004-07-26-two-shots-of-jazzy-matt-dusk-and-david-mahogany-cast-themselves-in-the-moulds-of-legends/",
+    "slug": "2004-07-26-two-shots-of-jazzy-matt-dusk-and-david-mahogany-cast-themselves-in-the-moulds",
+    "route": "/reviews/2004-07-26-two-shots-of-jazzy-matt-dusk-and-david-mahogany-cast-themselves-in-the-moulds/",
     "source_file": "2004.07.26.National_Post.Two_Shots_Of_Jazzy_Matt_Dusk_And_David_Mahogany_Cast_Themselves_In_The_Moul.md",
-    "title": "Two Shots Of Jazzy: Matt Dusk And David Mahogany Cast Themselves In The Moulds Of Legends",
+    "title": "'Two Shots Of Jazzy: Matt Dusk And David Mahogany Cast Themselves In The Moulds",
     "date": "2004-07-26",
     "year": "2004",
     "publication": "National Post",
@@ -1019,6 +1036,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 1488
   },
@@ -1042,8 +1060,8 @@
     "venue": "Royal George Theatre",
     "city": "Niagara-on-the-Lake",
     "coordinates": [
-      43.2557,
-      -79.0732
+      "43.2557",
+      "-79.0732"
     ],
     "people": [
       "Diana Donnelly",
@@ -1091,6 +1109,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 997
   },
@@ -1114,8 +1133,8 @@
     "venue": "Tarragon Theatre",
     "city": "Toronto",
     "coordinates": [
-      43.675,
-      -79.4129
+      "43.675",
+      "-79.4129"
     ],
     "people": [
       "David Fox",
@@ -1159,6 +1178,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 661
   },
@@ -1182,8 +1202,8 @@
     "venue": "Factory Theatre",
     "city": "Toronto",
     "coordinates": [
-      43.6455,
-      -79.4028
+      "43.6455",
+      "-79.4028"
     ],
     "people": [
       "Claudia Dey",
@@ -1222,6 +1242,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 71
   },
@@ -1245,8 +1266,8 @@
     "venue": "Berkeley Street Theatre Upstairs",
     "city": "Toronto",
     "coordinates": [
-      43.6506,
-      -79.3641
+      "43.6506",
+      "-79.3641"
     ],
     "people": [
       "Allan Hawco",
@@ -1290,6 +1311,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 94
   },
@@ -1313,8 +1335,8 @@
     "venue": "Factory Theatre",
     "city": "Toronto",
     "coordinates": [
-      43.6455,
-      -79.4028
+      "43.6455",
+      "-79.4028"
     ],
     "people": [
       "Claudia Dey",
@@ -1356,6 +1378,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 93
   },
@@ -1379,8 +1402,8 @@
     "venue": "Berkeley Street Theatre Downstairs",
     "city": "Toronto",
     "coordinates": [
-      43.6506,
-      -79.3641
+      "43.6506",
+      "-79.3641"
     ],
     "people": [
       "Chris Abraham",
@@ -1418,6 +1441,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 82
   },
@@ -1443,8 +1467,8 @@
     "venue": "Theatre Passe Muraille",
     "city": "Toronto",
     "coordinates": [
-      43.6486,
-      -79.4026
+      "43.6486",
+      "-79.4026"
     ],
     "people": [
       "Blake Brooker",
@@ -1481,6 +1505,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 86
   },
@@ -1506,8 +1531,8 @@
     "venue": "Princess of Wales Theatre",
     "city": "Toronto",
     "coordinates": [
-      43.647,
-      -79.3892
+      "43.647",
+      "-79.3892"
     ],
     "people": [
       "Trey Anthony"
@@ -1539,6 +1564,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 80
   },
@@ -1562,8 +1588,8 @@
     "venue": "CanStage",
     "city": "Toronto",
     "coordinates": [
-      43.6474,
-      -79.3752
+      "43.6474",
+      "-79.3752"
     ],
     "people": [
       "Fats Waller",
@@ -1601,6 +1627,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 247
   },
@@ -1624,8 +1651,8 @@
     "venue": "Avon Theatre",
     "city": "Stratford",
     "coordinates": [
-      43.3692,
-      -80.9811
+      "43.3692",
+      "-80.9811"
     ],
     "people": [
       "Brigit Wilson",
@@ -1676,6 +1703,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 853
   },
@@ -1699,8 +1727,8 @@
     "venue": "Tom Patterson Theatre",
     "city": "Stratford",
     "coordinates": [
-      43.3736,
-      -80.9781
+      "43.3736",
+      "-80.9781"
     ],
     "people": [
       "Dana Green",
@@ -1752,6 +1780,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 522
   },
@@ -1776,8 +1805,8 @@
     "venue": "Avon Theatre",
     "city": "Stratford",
     "coordinates": [
-      43.3692,
-      -80.9811
+      "43.3692",
+      "-80.9811"
     ],
     "people": [
       "Barbara Dunn-Prosser",
@@ -1842,6 +1871,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 1163
   },
@@ -1866,8 +1896,8 @@
     "venue": "Tom Patterson Theatre",
     "city": "Stratford",
     "coordinates": [
-      43.3736,
-      -80.9781
+      "43.3736",
+      "-80.9781"
     ],
     "people": [
       "Fyodor Dostoevsky",
@@ -1904,6 +1934,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 79
   },
@@ -1929,8 +1960,8 @@
     "venue": "Tom Patterson Theatre",
     "city": "Stratford",
     "coordinates": [
-      43.3736,
-      -80.9781
+      "43.3736",
+      "-80.9781"
     ],
     "people": [
       "Rod Beattie"
@@ -1962,6 +1993,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 70
   },
@@ -1987,8 +2019,8 @@
     "venue": "Avon Theatre",
     "city": "Stratford",
     "coordinates": [
-      43.3692,
-      -80.9811
+      "43.3692",
+      "-80.9811"
     ],
     "people": [
       "James Lapine",
@@ -2026,6 +2058,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 68
   },
@@ -2049,8 +2082,8 @@
     "venue": "Panasonic Theatre",
     "city": "Toronto",
     "coordinates": [
-      43.6654,
-      -79.3839
+      "43.6654",
+      "-79.3839"
     ],
     "people": [
       "Blue Man Group"
@@ -2082,6 +2115,7 @@
       ],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 77
   },
@@ -2106,8 +2140,8 @@
     "venue": "Avon Theatre",
     "city": "Stratford",
     "coordinates": [
-      43.3692,
-      -80.9811
+      "43.3692",
+      "-80.9811"
     ],
     "people": [
       "Brian Bedford",
@@ -2149,6 +2183,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 69
   },
@@ -2174,8 +2209,8 @@
     "venue": "Festival Theatre, Niagara-on-the-Lake",
     "city": "Niagara-on-the-Lake",
     "coordinates": [
-      43.252,
-      -79.0677
+      "43.252",
+      "-79.0677"
     ],
     "people": [
       "Jackie Maxwell",
@@ -2210,6 +2245,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 86
   },
@@ -2235,8 +2271,8 @@
     "venue": "Studio Theatre",
     "city": "Stratford",
     "coordinates": [
-      43.3695,
-      -80.9801
+      "43.3695",
+      "-80.9801"
     ],
     "people": [
       "Diane D'Aquila",
@@ -2273,6 +2309,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 88
   },
@@ -2296,8 +2333,8 @@
     "venue": "Royal George Theatre",
     "city": "Niagara-on-the-Lake",
     "coordinates": [
-      43.2557,
-      -79.0719
+      "43.2557",
+      "-79.0719"
     ],
     "people": [
       "Diana Donnelly",
@@ -2350,6 +2387,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 731
   },
@@ -2375,8 +2413,8 @@
     "venue": "Studio Theatre",
     "city": "Stratford",
     "coordinates": [
-      43.3695,
-      -80.9801
+      "43.3695",
+      "-80.9801"
     ],
     "people": [
       "Diana Leblanc",
@@ -2417,6 +2455,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 86
   },
@@ -2483,6 +2522,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 73
   },
@@ -2507,8 +2547,8 @@
     "venue": "Royal George Theatre",
     "city": "Niagara-on-the-Lake",
     "coordinates": [
-      43.2557,
-      -79.0719
+      "43.2557",
+      "-79.0719"
     ],
     "people": [
       "Martin Happer",
@@ -2548,6 +2588,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 66
   },
@@ -2571,8 +2612,8 @@
     "venue": "Harbourfront Centre",
     "city": "Toronto",
     "coordinates": [
-      43.6385,
-      -79.3819
+      "43.6385",
+      "-79.3819"
     ],
     "people": [
       "Brent Carver",
@@ -2614,6 +2655,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 61
   },
@@ -2637,8 +2679,8 @@
     "venue": "Premiere Dance Theatre",
     "city": "Toronto",
     "coordinates": [
-      43.6486,
-      -79.4026
+      "43.6486",
+      "-79.4026"
     ],
     "people": [
       "Albert Schultz",
@@ -2678,6 +2720,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 66
   },
@@ -2703,8 +2746,8 @@
     "venue": "Court House Theatre",
     "city": "Niagara-on-the-Lake",
     "coordinates": [
-      43.2557,
-      -79.0719
+      "43.2557",
+      "-79.0719"
     ],
     "people": [
       "Ann-Marie MacDonald"
@@ -2736,6 +2779,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 64
   },
@@ -2760,8 +2804,8 @@
     "venue": "Withrow Park",
     "city": "Toronto",
     "coordinates": [
-      43.6725,
-      -79.3472
+      "43.6725",
+      "-79.3472"
     ],
     "people": [
       "Carly Street",
@@ -2799,6 +2843,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 80
   },
@@ -2822,8 +2867,8 @@
     "venue": "Studio Theatre",
     "city": "Stratford",
     "coordinates": [
-      43.3695,
-      -80.9801
+      "43.3695",
+      "-80.9801"
     ],
     "people": [
       "Christopher Marlowe",
@@ -2875,6 +2920,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 1020
   },
@@ -2882,7 +2928,7 @@
     "slug": "2005-08-26-defile-it-under-r-for-raunchy-toronto-edition",
     "route": "/reviews/2005-08-26-defile-it-under-r-for-raunchy-toronto-edition/",
     "source_file": "2005.08.26.National_Post.Defile_It_Under_R_For_Raunchy_Toronto_Edition.md",
-    "title": "Defile it under 'R' for raunchy: [Toronto Edition]",
+    "title": "Defile it under ''R'' for raunchy: [Toronto Edition]",
     "date": "2005-08-26",
     "year": "2005",
     "publication": "National Post",
@@ -2930,6 +2976,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 1023
   },
@@ -2953,8 +3000,8 @@
     "venue": "Studio Theatre",
     "city": "Stratford",
     "coordinates": [
-      43.3695,
-      -80.9801
+      "43.3695",
+      "-80.9801"
     ],
     "people": [
       "Christopher Marlowe",
@@ -2998,6 +3045,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 68
   },
@@ -3022,8 +3070,8 @@
     "venue": "Heritage Park",
     "city": "Barrie",
     "coordinates": [
-      44.3894,
-      -79.6903
+      "44.3894",
+      "-79.6903"
     ],
     "people": [
       "Richard Rose",
@@ -3058,6 +3106,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 82
   },
@@ -3081,8 +3130,8 @@
     "venue": "Festival Theatre",
     "city": "Stratford",
     "coordinates": [
-      43.3743517,
-      -80.9685714
+      "43.3743517",
+      "-80.9685714"
     ],
     "people": [
       "Amanda Plummer",
@@ -3126,6 +3175,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 75
   },
@@ -3149,8 +3199,8 @@
     "venue": "Harbourfront Centre",
     "city": "Toronto",
     "coordinates": [
-      43.6385,
-      -79.3819
+      "43.6385",
+      "-79.3819"
     ],
     "people": [
       "Brent Carver",
@@ -3192,6 +3242,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 66
   },
@@ -3216,8 +3267,8 @@
     "venue": "Berkeley Street Theatre",
     "city": "Toronto",
     "coordinates": [
-      43.6545,
-      -79.3663
+      "43.6545",
+      "-79.3663"
     ],
     "people": [
       "Catherine Muschamp",
@@ -3252,6 +3303,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 78
   },
@@ -3275,8 +3327,8 @@
     "venue": "Premiere Dance Theatre",
     "city": "Toronto",
     "coordinates": [
-      43.6401,
-      -79.3856
+      "43.6401",
+      "-79.3856"
     ],
     "people": [
       "Albert Schultz",
@@ -3316,6 +3368,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 75
   },
@@ -3339,8 +3392,8 @@
     "venue": "Studio Theatre",
     "city": "Stratford",
     "coordinates": [
-      43.3695,
-      -80.9801
+      "43.3695",
+      "-80.9801"
     ],
     "people": [
       "Christopher Marlowe",
@@ -3384,6 +3437,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 64
   },
@@ -3407,8 +3461,8 @@
     "venue": "Harbourfront Centre",
     "city": "Toronto",
     "coordinates": [
-      43.6385,
-      -79.3819
+      "43.6385",
+      "-79.3819"
     ],
     "people": [
       "Megan Follows",
@@ -3445,6 +3499,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 65
   },
@@ -3468,8 +3523,8 @@
     "venue": "Premiere Dance Theatre",
     "city": "Toronto",
     "coordinates": [
-      43.6401,
-      -79.3856
+      "43.6401",
+      "-79.3856"
     ],
     "people": [
       "Albert Schultz",
@@ -3509,6 +3564,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 64
   },
@@ -3532,8 +3588,8 @@
     "venue": "Premiere Dance Theatre",
     "city": "Toronto",
     "coordinates": [
-      43.6385,
-      -79.3819
+      "43.6385",
+      "-79.3819"
     ],
     "people": [
       "Albert Schultz",
@@ -3575,6 +3631,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 66
   },
@@ -3598,8 +3655,8 @@
     "venue": "Harbourfront Centre",
     "city": "Toronto",
     "coordinates": [
-      43.6379,
-      -79.3782
+      "43.6379",
+      "-79.3782"
     ],
     "people": [
       "Megan Follows",
@@ -3636,6 +3693,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 73
   },
@@ -3659,8 +3717,8 @@
     "venue": "Premier Dance Theatre",
     "city": "Toronto",
     "coordinates": [
-      43.6385,
-      -79.3819
+      "43.6385",
+      "-79.3819"
     ],
     "people": [
       "Albert Schultz",
@@ -3702,6 +3760,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 74
   },
@@ -3725,8 +3784,8 @@
     "venue": "Tom Patterson Theatre",
     "city": "Stratford",
     "coordinates": [
-      43.3736,
-      -80.9781
+      "43.3736",
+      "-80.9781"
     ],
     "people": [
       "Jonathan Goad",
@@ -3766,6 +3825,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 65
   },
@@ -3791,8 +3851,8 @@
     "venue": "Festival Theatre",
     "city": "Stratford",
     "coordinates": [
-      43.3744,
-      -80.9686
+      "43.3744",
+      "-80.9686"
     ],
     "people": [
       "Antoni Cimolino",
@@ -3838,6 +3898,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 76
   },
@@ -3863,8 +3924,8 @@
     "venue": "Avon Theatre",
     "city": "Stratford",
     "coordinates": [
-      43.3692425,
-      -80.9811428
+      "43.3692425",
+      "-80.9811428"
     ],
     "people": [
       "James Lapine",
@@ -3902,6 +3963,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 74
   },
@@ -3965,6 +4027,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 1144
   },
@@ -3988,8 +4051,8 @@
     "venue": "Canon Theatre",
     "city": "Toronto",
     "coordinates": [
-      43.6543,
-      -79.3791
+      "43.6543",
+      "-79.3791"
     ],
     "people": [
       "Billy Crystal"
@@ -4023,6 +4086,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 62
   },
@@ -4047,8 +4111,8 @@
     "venue": "Factory Studio",
     "city": "Toronto",
     "coordinates": [
-      43.6455029,
-      -79.4028205
+      "43.6455029",
+      "-79.4028205"
     ],
     "people": [
       "Dale Yim",
@@ -4091,6 +4155,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 65
   },
@@ -4112,9 +4177,9 @@
     "publication_status": "archive_only",
     "editorial_issue_type": "duplicate_digest",
     "canonical_file": "",
-    "production_title": "Better Parts/Fish Eyes, Les Miserables, The Optimists, Blue Man Group, Bus Stop",
+    "production_title": "Better Parts/Fish Eyes, Les Miserables, The Optimists, Blue Man",
     "company": "",
-    "venue": "Theatre Passe Muraille Backspace, Princess of Wales Theatre, Tarragon Theatre, Panasonic Theatre, Royal George Theatre",
+    "venue": "Theatre Passe Muraille Backspace, Princess of Wales Theatre, Tarragon Theatre,",
     "city": "Toronto, Niagara-on-the-Lake",
     "coordinates": [],
     "people": [
@@ -4149,6 +4214,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 311
   },
@@ -4173,8 +4239,8 @@
     "venue": "Theatre Passe Muraille Backspace",
     "city": "Toronto",
     "coordinates": [
-      43.6486,
-      -79.4026
+      "43.6486",
+      "-79.4026"
     ],
     "people": [
       "Anita Majumdar",
@@ -4211,6 +4277,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 71
   },
@@ -4236,8 +4303,8 @@
     "venue": "Festival Theatre",
     "city": "Niagara-on-the-Lake",
     "coordinates": [
-      43.252,
-      -79.0677
+      "43.252",
+      "-79.0677"
     ],
     "people": [
       "Jackie Maxwell",
@@ -4272,6 +4339,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 71
   },
@@ -4296,8 +4364,8 @@
     "venue": "Theatre Passe Muraille",
     "city": "Toronto",
     "coordinates": [
-      43.6486,
-      -79.4026
+      "43.6486",
+      "-79.4026"
     ],
     "people": [
       "Anna Chatterton",
@@ -4334,6 +4402,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 71
   },
@@ -4357,8 +4426,8 @@
     "venue": "Bluma Appel Theatre",
     "city": "Toronto",
     "coordinates": [
-      43.6474,
-      -79.3752
+      "43.6474",
+      "-79.3752"
     ],
     "people": [
       "Alan Bennett",
@@ -4400,6 +4469,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 73
   },
@@ -4424,8 +4494,8 @@
     "venue": "Princess of Wales Theatre",
     "city": "Toronto",
     "coordinates": [
-      43.647,
-      -79.3892
+      "43.647",
+      "-79.3892"
     ],
     "people": [
       "Claude-Michel Schoenberg"
@@ -4457,6 +4527,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 75
   },
@@ -4481,8 +4552,8 @@
     "venue": "Royal George Theatre",
     "city": "Niagara-on-the-Lake",
     "coordinates": [
-      43.2563,
-      -79.0732
+      "43.2563",
+      "-79.0732"
     ],
     "people": [
       "Martin Happer",
@@ -4522,6 +4593,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 72
   },
@@ -4546,8 +4618,8 @@
     "venue": "Tarragon Extra Space",
     "city": "Toronto",
     "coordinates": [
-      43.675,
-      -79.4129
+      "43.675",
+      "-79.4129"
     ],
     "people": [
       "Jordan Pettle",
@@ -4582,6 +4654,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 67
   },
@@ -4605,8 +4678,8 @@
     "venue": "Bluma Appel Theatre",
     "city": "Toronto",
     "coordinates": [
-      43.6474,
-      -79.3752
+      "43.6474",
+      "-79.3752"
     ],
     "people": [
       "Jackie Richardson"
@@ -4640,6 +4713,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 62
   },
@@ -4663,8 +4737,8 @@
     "venue": "Tarragon Theatre",
     "city": "Toronto",
     "coordinates": [
-      43.675,
-      -79.4129
+      "43.675",
+      "-79.4129"
     ],
     "people": [
       "Eric Peterson",
@@ -4706,6 +4780,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 61
   },
@@ -4729,8 +4804,8 @@
     "venue": "Factory Theatre",
     "city": "Toronto",
     "coordinates": [
-      43.6455,
-      -79.4028
+      "43.6455",
+      "-79.4028"
     ],
     "people": [
       "Wajdi Mouawad"
@@ -4762,6 +4837,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 64
   },
@@ -4785,8 +4861,8 @@
     "venue": "Berkeley Street Theatre",
     "city": "Toronto",
     "coordinates": [
-      43.6506,
-      -79.3641
+      "43.6506",
+      "-79.3641"
     ],
     "people": [
       "Edward Albee",
@@ -4824,6 +4900,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 59
   },
@@ -4847,8 +4924,8 @@
     "venue": "Buddies in Bad Times Theatre",
     "city": "Toronto",
     "coordinates": [
-      43.6632,
-      -79.383
+      "43.6632",
+      "-79.383"
     ],
     "people": [
       "Marie Brassard"
@@ -4884,6 +4961,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 61
   },
@@ -4907,8 +4985,8 @@
     "venue": "Canon Theatre",
     "city": "Toronto",
     "coordinates": [
-      43.6547,
-      -79.3791
+      "43.6547",
+      "-79.3791"
     ],
     "people": [
       "Billy Joel",
@@ -4945,6 +5023,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 78
   },
@@ -4970,8 +5049,8 @@
     "venue": "Elgin Theatre",
     "city": "Toronto",
     "coordinates": [
-      43.653,
-      -79.3793
+      "43.653",
+      "-79.3793"
     ],
     "people": [
       "Elena Juatco",
@@ -5007,6 +5086,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 68
   },
@@ -5030,8 +5110,8 @@
     "venue": "Theatre Passe Muraille Backspace",
     "city": "Toronto",
     "coordinates": [
-      43.6486,
-      -79.4026
+      "43.6486",
+      "-79.4026"
     ],
     "people": [
       "Raoul Bhaneja",
@@ -5069,6 +5149,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 69
   },
@@ -5116,6 +5197,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 666
   },
@@ -5139,8 +5221,8 @@
     "venue": "Theatre Centre",
     "city": "Toronto",
     "coordinates": [
-      43.6431,
-      -79.4236
+      "43.6431",
+      "-79.4236"
     ],
     "people": [
       "Anita Majumdar",
@@ -5182,6 +5264,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 67
   },
@@ -5205,8 +5288,8 @@
     "venue": "Bluma Appel Theatre",
     "city": "Toronto",
     "coordinates": [
-      43.6717129,
-      -79.3861135
+      "43.6717129",
+      "-79.3861135"
     ],
     "people": [
       "Astrid Janson",
@@ -5247,6 +5330,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 70
   },
@@ -5271,8 +5355,8 @@
     "venue": "Tarragon Theatre",
     "city": "Toronto",
     "coordinates": [
-      43.675,
-      -79.4129
+      "43.675",
+      "-79.4129"
     ],
     "people": [
       "Charlotte Jones",
@@ -5312,6 +5396,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 69
   },
@@ -5374,6 +5459,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 1028
   },
@@ -5397,8 +5483,8 @@
     "venue": "Tarragon Extra Space",
     "city": "Toronto",
     "coordinates": [
-      43.675,
-      -79.4129
+      "43.675",
+      "-79.4129"
     ],
     "people": [
       "Alana Dzebo",
@@ -5447,6 +5533,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 64
   },
@@ -5470,8 +5557,8 @@
     "venue": "Royal Alexandra Theatre",
     "city": "Toronto",
     "coordinates": [
-      43.6474,
-      -79.3876
+      "43.6474",
+      "-79.3876"
     ],
     "people": [
       "Andrea Chamberlain",
@@ -5517,6 +5604,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 52
   },
@@ -5540,8 +5628,8 @@
     "venue": "Berkeley Upstairs Theatre",
     "city": "Toronto",
     "coordinates": [
-      43.6506,
-      -79.3641
+      "43.6506",
+      "-79.3641"
     ],
     "people": [
       "Caryl Churchill",
@@ -5581,6 +5669,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 71
   },
@@ -5606,8 +5695,8 @@
     "venue": "Berkeley Street Theatre",
     "city": "Toronto",
     "coordinates": [
-      43.6506,
-      -79.3641
+      "43.6506",
+      "-79.3641"
     ],
     "people": [
       "Richard Greenblatt",
@@ -5646,6 +5735,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 64
   },
@@ -5670,8 +5760,8 @@
     "venue": "Tarragon Theatre",
     "city": "Toronto",
     "coordinates": [
-      43.675,
-      -79.4129
+      "43.675",
+      "-79.4129"
     ],
     "people": [
       "Charlotte Jones",
@@ -5711,6 +5801,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 69
   },
@@ -5778,6 +5869,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 50
   },
@@ -5801,8 +5893,8 @@
     "venue": "Marilyn and Charles Baillie Theatre",
     "city": "Toronto",
     "coordinates": [
-      43.6487,
-      -79.3774
+      "43.6487",
+      "-79.3774"
     ],
     "people": [
       "Albert Schultz",
@@ -5842,6 +5934,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 53
   },
@@ -5865,8 +5958,8 @@
     "venue": "Marilyn and Charles Baillie Theatre",
     "city": "Toronto",
     "coordinates": [
-      43.6503,
-      -79.3595
+      "43.6503",
+      "-79.3595"
     ],
     "people": [
       "Diego Matamoros",
@@ -5904,6 +5997,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 50
   },
@@ -5927,8 +6021,8 @@
     "venue": "Berkeley Upstairs Theatre",
     "city": "Toronto",
     "coordinates": [
-      43.6506,
-      -79.3641
+      "43.6506",
+      "-79.3641"
     ],
     "people": [
       "Caryl Churchill",
@@ -5966,6 +6060,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 59
   },
@@ -5989,8 +6084,8 @@
     "venue": "Artword Theatre",
     "city": "Toronto",
     "coordinates": [
-      43.6441,
-      -79.4003
+      "43.6441",
+      "-79.4003"
     ],
     "people": [
       "David Ferry",
@@ -6030,6 +6125,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 61
   },
@@ -6096,6 +6192,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 1411
   },
@@ -6119,8 +6216,8 @@
     "venue": "Bluma Appel Theatre",
     "city": "Toronto",
     "coordinates": [
-      43.6717,
-      -79.3861
+      "43.6717",
+      "-79.3861"
     ],
     "people": [
       "Doug Wright",
@@ -6158,6 +6255,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 70
   },
@@ -6181,8 +6279,8 @@
     "venue": "Factory Theatre",
     "city": "Toronto",
     "coordinates": [
-      43.6455,
-      -79.4028
+      "43.6455",
+      "-79.4028"
     ],
     "people": [
       "Andrew Moodie",
@@ -6219,6 +6317,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 60
   },
@@ -6242,8 +6341,8 @@
     "venue": "Marilyn and Charles Baillie Theatre",
     "city": "Toronto",
     "coordinates": [
-      43.6503,
-      -79.3595
+      "43.6503",
+      "-79.3595"
     ],
     "people": [
       "Albert Schultz",
@@ -6283,6 +6382,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 60
   },
@@ -6306,8 +6406,8 @@
     "venue": "Marilyn and Charles Baillie Theatre",
     "city": "Toronto",
     "coordinates": [
-      43.6503,
-      -79.3595
+      "43.6503",
+      "-79.3595"
     ],
     "people": [
       "Diego Matamoros",
@@ -6345,6 +6445,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 59
   },
@@ -6368,8 +6469,8 @@
     "venue": "Backspace",
     "city": "Toronto",
     "coordinates": [
-      43.6486,
-      -79.4026
+      "43.6486",
+      "-79.4026"
     ],
     "people": [
       "David Jansen",
@@ -6414,6 +6515,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 60
   },
@@ -6464,6 +6566,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 708
   },
@@ -6514,6 +6617,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 856
   },
@@ -6537,8 +6641,8 @@
     "venue": "Princess of Wales Theatre",
     "city": "Toronto",
     "coordinates": [
-      43.6470405,
-      -79.3892399
+      "43.6470405",
+      "-79.3892399"
     ],
     "people": [
       "James Loye",
@@ -6584,6 +6688,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 1028
   },
@@ -6641,6 +6746,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 791
   },
@@ -6704,6 +6810,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 835
   },
@@ -6727,8 +6834,8 @@
     "venue": "Cameron House",
     "city": "Toronto",
     "coordinates": [
-      43.6486,
-      -79.3976
+      "43.6486",
+      "-79.3976"
     ],
     "people": [
       "Greg Campbell",
@@ -6775,6 +6882,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 56
   },
@@ -6798,8 +6906,8 @@
     "venue": "Buddies in Bad Times Theatre",
     "city": "Toronto",
     "coordinates": [
-      43.6632,
-      -79.383
+      "43.6632",
+      "-79.383"
     ],
     "people": [
       "Anna Chatterton",
@@ -6836,6 +6944,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 57
   },
@@ -6890,6 +6999,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 1051
   },
@@ -6944,6 +7054,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 1050
   },
@@ -6998,6 +7109,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 1157
   },
@@ -7055,6 +7167,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 1188
   },
@@ -7112,6 +7225,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 1222
   },
@@ -7136,8 +7250,8 @@
     "venue": "Bluma Appel Theatre",
     "city": "Toronto",
     "coordinates": [
-      43.6474,
-      -79.3752
+      "43.6474",
+      "-79.3752"
     ],
     "people": [
       "Craig Burtanowski",
@@ -7184,6 +7298,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 68
   },
@@ -7208,8 +7323,8 @@
     "venue": "Berkeley Street Theatre",
     "city": "Toronto",
     "coordinates": [
-      43.6506,
-      -79.3641
+      "43.6506",
+      "-79.3641"
     ],
     "people": [
       "Ronnie Burkett"
@@ -7245,6 +7360,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 56
   },
@@ -7268,8 +7384,8 @@
     "venue": "Young Centre for the Performing Arts",
     "city": "Toronto",
     "coordinates": [
-      43.6503,
-      -79.3595
+      "43.6503",
+      "-79.3595"
     ],
     "people": [
       "David Mamet",
@@ -7309,6 +7425,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 62
   },
@@ -7334,8 +7451,8 @@
     "venue": "Diesel Playhouse",
     "city": "Toronto",
     "coordinates": [
-      43.6448,
-      -79.3876
+      "43.6448",
+      "-79.3876"
     ],
     "people": [
       "Aaron Machri",
@@ -7386,6 +7503,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 59
   },
@@ -7410,8 +7528,8 @@
     "venue": "Tarragon Theatre",
     "city": "Toronto",
     "coordinates": [
-      43.6749863,
-      -79.4129407
+      "43.6749863",
+      "-79.4129407"
     ],
     "people": [
       "Diane Flacks",
@@ -7451,6 +7569,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 66
   },
@@ -7475,8 +7594,8 @@
     "venue": "Factory Theatre",
     "city": "Toronto",
     "coordinates": [
-      43.6455,
-      -79.4028
+      "43.6455",
+      "-79.4028"
     ],
     "people": [
       "Clare Coulter",
@@ -7516,6 +7635,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 73
   },
@@ -7539,8 +7659,8 @@
     "venue": "Mysteriously Yours",
     "city": "Toronto",
     "coordinates": [
-      43.7014,
-      -79.3973
+      "43.7014",
+      "-79.3973"
     ],
     "people": [
       "Jean Daigle"
@@ -7572,6 +7692,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 55
   },
@@ -7596,8 +7717,8 @@
     "venue": "Theatre Passe Muraille",
     "city": "Toronto",
     "coordinates": [
-      43.6486,
-      -79.4026
+      "43.6486",
+      "-79.4026"
     ],
     "people": [
       "Bob Collins",
@@ -7641,6 +7762,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 60
   },
@@ -7665,8 +7787,8 @@
     "venue": "Princess of Wales Theatre",
     "city": "Toronto",
     "coordinates": [
-      43.6470405,
-      -79.3892399
+      "43.6470405",
+      "-79.3892399"
     ],
     "people": [
       "A.R. Rahman",
@@ -7708,6 +7830,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 47
   },
@@ -7732,8 +7855,8 @@
     "venue": "Festival Theatre",
     "city": "Niagara-on-the-Lake",
     "coordinates": [
-      43.252,
-      -79.0677
+      "43.252",
+      "-79.0677"
     ],
     "people": [
       "Arthur Kopit",
@@ -7787,6 +7910,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 999
   },
@@ -7805,9 +7929,9 @@
     "publication_status": "archive_only",
     "editorial_issue_type": "duplicate_digest",
     "canonical_file": "",
-    "production_title": "Song and Dance; Care; Sparta; Boygroove; Wingfield's Inferno; 10 Days on Earth; Escape from Happiness",
-    "company": "Danforth Music Hall; Tarragon Theatre; Theatre Passe Muraille; Diesel Playhouse; Mirvish Productions; Canadian Stage; Factory Theatre",
-    "venue": "Danforth Music Hall; Tarragon Theatre; Theatre Passe Muraille; Diesel Playhouse; Royal Alexandra Theatre; Berkeley Street Theatre; Factory Theatre",
+    "production_title": "Song and Dance; Care; Sparta; Boygroove; Wingfield's Inferno; 10",
+    "company": "Danforth Music Hall; Tarragon Theatre; Theatre Passe Muraille; Diesel Playhouse;",
+    "venue": "Danforth Music Hall; Tarragon Theatre; Theatre Passe Muraille; Diesel Playhouse;",
     "city": "Toronto",
     "coordinates": [],
     "people": [
@@ -7867,6 +7991,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 1488
   },
@@ -7885,9 +8010,9 @@
     "publication_status": "archive_only",
     "editorial_issue_type": "duplicate_digest",
     "canonical_file": "",
-    "production_title": "A Beautiful View; Mathilde; Arms and the Man; The Heiress; High Society; Song and Dance; Care; Boygroove; Wingfield's Inferno; 10 Days on Earth; The Lord of the Rings; Last Will and Videotape",
-    "company": "Da Da Kamera; Nightwood Theatre; Shaw Festival; Danforth Music Hall; Tarragon Theatre; Diesel Playhouse; Mirvish Productions; Canadian Stage; Mysteriously Yours",
-    "venue": "Buddies in Bad Times Theatre; Young Centre for the Performing Arts; Festival Theatre; Royal George Theatre; Danforth Music Hall; Tarragon Theatre; Diesel Playhouse; Royal Alexandra Theatre; Berkeley Street Theatre; Princess of Wales Theatre; Mysteriously Yours",
+    "production_title": "A Beautiful View; Mathilde; Arms and the Man; The Heiress; High",
+    "company": "Da Da Kamera; Nightwood Theatre; Shaw Festival; Danforth Music Hall; Tarragon",
+    "venue": "Buddies in Bad Times Theatre; Young Centre for the Performing Arts; Festival",
     "city": "Toronto",
     "coordinates": [],
     "people": [
@@ -7927,6 +8052,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 1699
   },
@@ -7987,6 +8113,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 997
   },
@@ -7994,7 +8121,7 @@
     "slug": "2006-05-27-inspiring-story-of-woman-and-country-but-play-doesn-t-contain-complexity",
     "route": "/reviews/2006-05-27-inspiring-story-of-woman-and-country-but-play-doesn-t-contain-complexity/",
     "source_file": "2006.05.27.National_Post.Inspiring_Story_Of_Woman_And_Country_But_Play_DoesnT_Contain_Complexity_Tor.md",
-    "title": "Inspiring Story Of Woman And Country: But Play Doesn'T Contain Complexity",
+    "title": "Inspiring Story Of Woman And Country: But Play Doesn''T Contain Complexity",
     "date": "2006-05-27",
     "year": "2006",
     "publication": "National Post",
@@ -8003,9 +8130,9 @@
     "publication_status": "archive_only",
     "editorial_issue_type": "duplicate_digest",
     "canonical_file": "",
-    "production_title": "Golda's Balcony; Mathilde; Care; Wingfield's Inferno; Boygroove; Song and Dance; 10 Days on Earth; The Heiress; Arms and the Man; High Society; The Lord of the Rings; Last Will and Videotape; Second City: Reloaded",
-    "company": "Elgin Theatre; Nightwood Theatre; Tarragon Theatre; Mirvish Productions; Diesel Playhouse; Danforth Music Hall; Canadian Stage; Shaw Festival; Mysteriously Yours; Second City",
-    "venue": "Elgin Theatre; Young Centre for the Performing Arts; Tarragon Theatre; Royal Alexandra Theatre; Diesel Playhouse; Danforth Music Hall; Berkeley Street Theatre; Royal George Theatre; Festival Theatre; Princess of Wales Theatre; Mysteriously Yours; Second City",
+    "production_title": "'Golda''s Balcony; Mathilde; Care; Wingfield''s Inferno; Boygroove;",
+    "company": "Elgin Theatre; Nightwood Theatre; Tarragon Theatre; Mirvish Productions;",
+    "venue": "Elgin Theatre; Young Centre for the Performing Arts; Tarragon Theatre; Royal",
     "city": "Toronto",
     "coordinates": [],
     "people": [
@@ -8064,14 +8191,15 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 1613
   },
   {
-    "slug": "2006-06-03-musical-recharges-murder-mystery-cast-provides-solid-comic-support-and-pleasant-voices",
-    "route": "/reviews/2006-06-03-musical-recharges-murder-mystery-cast-provides-solid-comic-support-and-pleasant-voices/",
+    "slug": "2006-06-03-musical-recharges-murder-mystery-cast-provides-solid-comic-support-and-pleasant",
+    "route": "/reviews/2006-06-03-musical-recharges-murder-mystery-cast-provides-solid-comic-support-and-pleasant/",
     "source_file": "2006.06.03.National_Post.Musical_Recharges_Murder_Mystery_Cast_Provides_Solid_Comic_Support_And_Plea.md",
-    "title": "Musical Recharges Murder Mystery: Cast Provides Solid Comic Support And Pleasant Voices",
+    "title": "'Musical Recharges Murder Mystery: Cast Provides Solid Comic Support And Pleasant",
     "date": "2006-06-03",
     "year": "2006",
     "publication": "National Post",
@@ -8087,8 +8215,8 @@
     "venue": "Mysteriously Yours Dinner Theatre",
     "city": "Toronto",
     "coordinates": [
-      43.7014,
-      -79.3973
+      "43.7014",
+      "-79.3973"
     ],
     "people": [
       "Barb Scheffler",
@@ -8141,14 +8269,15 @@
       ],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 1567
   },
   {
-    "slug": "2006-06-24-some-nods-are-inexplicable-a-desperate-season-a-desperate-slate-of-dora-nominees",
-    "route": "/reviews/2006-06-24-some-nods-are-inexplicable-a-desperate-season-a-desperate-slate-of-dora-nominees/",
+    "slug": "2006-06-24-some-nods-are-inexplicable-a-desperate-season-a-desperate-slate-of-dora",
+    "route": "/reviews/2006-06-24-some-nods-are-inexplicable-a-desperate-season-a-desperate-slate-of-dora/",
     "source_file": "2006.06.24.National_Post.Some_Nods_Are_Inexplicable_A_Desperate_Season_A_Desperate_Slate_Of_Dora_Nom.md",
-    "title": "Some Nods Are Inexplicable: A Desperate Season, A Desperate Slate Of Dora Nominees",
+    "title": "'Some Nods Are Inexplicable: A Desperate Season, A Desperate Slate Of Dora",
     "date": "2006-06-24",
     "year": "",
     "publication": "National Post",
@@ -8190,6 +8319,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 2188
   },
@@ -8213,8 +8343,8 @@
     "venue": "Festival Theatre",
     "city": "Niagara-on-the-Lake",
     "coordinates": [
-      43.252,
-      -79.0677
+      "43.252",
+      "-79.0677"
     ],
     "people": [
       "Arthur Miller",
@@ -8260,6 +8390,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 733
   },
@@ -8283,8 +8414,8 @@
     "venue": "Festival Theatre",
     "city": "Niagara-on-the-Lake",
     "coordinates": [
-      43.252,
-      -79.0677
+      "43.252",
+      "-79.0677"
     ],
     "people": [
       "Arthur Miller",
@@ -8341,6 +8472,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 942
   },
@@ -8364,8 +8496,8 @@
     "venue": "Coronation Park",
     "city": "Newmarket",
     "coordinates": [
-      44.0501,
-      -79.4594
+      "44.0501",
+      "-79.4594"
     ],
     "people": [
       "Alon Nashman",
@@ -8427,6 +8559,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 1733
   },
@@ -8450,8 +8583,8 @@
     "venue": "Studio Theatre",
     "city": "Stratford",
     "coordinates": [
-      43.3695,
-      -80.9801
+      "43.3695",
+      "-80.9801"
     ],
     "people": [
       "Geordie Johnson",
@@ -8492,6 +8625,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 845
   },
@@ -8515,8 +8649,8 @@
     "venue": "Young Centre for the Performing Arts",
     "city": "Toronto",
     "coordinates": [
-      43.6503,
-      -79.3595
+      "43.6503",
+      "-79.3595"
     ],
     "people": [
       "Djanet Sears",
@@ -8562,6 +8696,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 195
   },
@@ -8636,6 +8771,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 1189
   },
@@ -8654,9 +8790,9 @@
     "publication_status": "archive_only",
     "editorial_issue_type": "duplicate_digest",
     "canonical_file": "",
-    "production_title": "The Blonde, The Brunette And The Vengeful Redhead, Monty Python's Spamalot, The Comedy of Errors, Design for Living, Love Among the Russians, The Magic Fire, The Chairs, Harlem Duet, South Pacific, Much Ado About Nothing, The Lord of the Rings",
+    "production_title": "The Blonde, The Brunette And The Vengeful Redhead, Monty Python's",
     "company": "",
-    "venue": "Studio Theatre, Canon Theatre, Dream in High Park, Royal George Theatre, Court House Theatre, Young Centre for the Performing Arts, Avon Theatre, Festival Theatre, Princess of Wales Theatre",
+    "venue": "Studio Theatre, Canon Theatre, Dream in High Park, Royal George Theatre,",
     "city": "Stratford, Toronto, Niagara-on-the-Lake",
     "coordinates": [],
     "people": [
@@ -8754,6 +8890,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 920
   },
@@ -8811,6 +8948,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 1097
   },
@@ -8882,6 +9020,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 1835
   },
@@ -8906,8 +9045,8 @@
     "venue": "Young Centre for the Performing Arts",
     "city": "Toronto",
     "coordinates": [
-      43.6503,
-      -79.3595
+      "43.6503",
+      "-79.3595"
     ],
     "people": [
       "Joseph Ziegler",
@@ -8945,6 +9084,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 85
   },
@@ -8969,8 +9109,8 @@
     "venue": "Capitol Event Theatre",
     "city": "Toronto",
     "coordinates": [
-      43.7076,
-      -79.3987
+      "43.7076",
+      "-79.3987"
     ],
     "people": [],
     "roles": {
@@ -8998,6 +9138,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 72
   },
@@ -9023,8 +9164,8 @@
     "venue": "Festival Theatre",
     "city": "Stratford",
     "coordinates": [
-      43.3744,
-      -80.9686
+      "43.3744",
+      "-80.9686"
     ],
     "people": [
       "Lucy Peacock",
@@ -9066,6 +9207,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 85
   },
@@ -9090,8 +9232,8 @@
     "venue": "Court House Theatre",
     "city": "Niagara-on-the-Lake",
     "coordinates": [
-      43.2557,
-      -79.0719
+      "43.2557",
+      "-79.0719"
     ],
     "people": [
       "Henrik Ibsen",
@@ -9133,6 +9275,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 77
   },
@@ -9157,8 +9300,8 @@
     "venue": "Festival Theatre",
     "city": "Niagara-on-the-Lake",
     "coordinates": [
-      43.252,
-      -79.0677
+      "43.252",
+      "-79.0677"
     ],
     "people": [
       "Arthur Miller",
@@ -9200,6 +9343,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 74
   },
@@ -9224,8 +9368,8 @@
     "venue": "Court House Theatre",
     "city": "Niagara-on-the-Lake",
     "coordinates": [
-      43.2557,
-      -79.0719
+      "43.2557",
+      "-79.0719"
     ],
     "people": [
       "Jennifer Phipps",
@@ -9264,6 +9408,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 90
   },
@@ -9289,8 +9434,8 @@
     "venue": "Festival Theatre",
     "city": "Stratford",
     "coordinates": [
-      43.3744,
-      -80.9686
+      "43.3744",
+      "-80.9686"
     ],
     "people": [
       "Brian Bedford",
@@ -9338,6 +9483,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 115
   },
@@ -9450,6 +9596,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 834
   },
@@ -9497,6 +9644,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 2117
   },
@@ -9518,8 +9666,8 @@
     "venue": "Air Canada Centre",
     "city": "Toronto",
     "coordinates": [
-      43.643466,
-      -79.379064
+      "43.643466",
+      "-79.379064"
     ],
     "people": [
       "Barbra Streisand",
@@ -9553,6 +9701,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 824
   },
@@ -9625,6 +9774,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 2223
   },
@@ -9649,8 +9799,8 @@
     "venue": "Royal George Theatre",
     "city": "Niagara-on-the-Lake",
     "coordinates": [
-      43.2563,
-      -79.0732
+      "43.2563",
+      "-79.0732"
     ],
     "people": [
       "David Jansen",
@@ -9694,6 +9844,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 595
   },
@@ -9718,8 +9869,8 @@
     "venue": "Canon Theatre",
     "city": "Toronto",
     "coordinates": [
-      43.653,
-      -79.3793
+      "43.653",
+      "-79.3793"
     ],
     "people": [],
     "roles": {
@@ -9747,6 +9898,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 762
   },
@@ -9768,8 +9920,8 @@
     "venue": "Broadhurst Theatre",
     "city": "New York",
     "coordinates": [
-      40.758,
-      -73.9865
+      "40.758",
+      "-73.9865"
     ],
     "people": [
       "Alan Bennett",
@@ -9807,6 +9959,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 503
   },
@@ -9866,14 +10019,15 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 1184
   },
   {
-    "slug": "2006-11-25-horton-heard-a-negative-review-seussical-not-on-level-of-songs-for-a-new-world-or-thom-pain",
-    "route": "/reviews/2006-11-25-horton-heard-a-negative-review-seussical-not-on-level-of-songs-for-a-new-world-or-thom-pain/",
+    "slug": "2006-11-25-horton-heard-a-negative-review-seussical-not-on-level-of-songs-for-a-new",
+    "route": "/reviews/2006-11-25-horton-heard-a-negative-review-seussical-not-on-level-of-songs-for-a-new/",
     "source_file": "2006.11.25.National_Post.Horton_Heard_A_Negative_Review_Seussical_Not_On_Level_Of_Songs_For_A_New_Wo.md",
-    "title": "Horton Heard A Negative Review: Seussical Not On Level Of Songs For A New World Or Thom Pain",
+    "title": "'Horton Heard A Negative Review: Seussical Not On Level Of Songs For A New",
     "date": "2006-11-25",
     "year": "2006",
     "publication": "National Post",
@@ -9943,6 +10097,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 2136
   },
@@ -9961,7 +10116,7 @@
     "publication_status": "archive_only",
     "editorial_issue_type": "duplicate_digest",
     "canonical_file": "",
-    "production_title": "A Christmas Carol; Radio City Christmas Spectacular; Head-Smashed-In Buffalo Jump; Glorious!; Seussical; Songs for a New World; Thom Pain; The Oxford Roof Climbers Rebellion; Aladdin",
+    "production_title": "A Christmas Carol; Radio City Christmas Spectacular; Head-Smashed-In",
     "company": "",
     "venue": "",
     "city": "Toronto",
@@ -9992,6 +10147,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 934
   },
@@ -10076,6 +10232,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 706
   },
@@ -10215,14 +10372,15 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 2120
   },
   {
-    "slug": "2007-04-14-queen-s-soulless-show-for-a-narcissistic-generation-few-songs-work-in-contrived-musical",
-    "route": "/reviews/2007-04-14-queen-s-soulless-show-for-a-narcissistic-generation-few-songs-work-in-contrived-musical/",
+    "slug": "2007-04-14-queen-s-soulless-show-for-a-narcissistic-generation-few-songs-work-in-contrived",
+    "route": "/reviews/2007-04-14-queen-s-soulless-show-for-a-narcissistic-generation-few-songs-work-in-contrived/",
     "source_file": "2007.04.14.The_Ottawa_Citizen.QueenS_Soulless_Show_For_A_Narcissistic_Generation_Few_Songs_Work_In_C.md",
-    "title": "Queen'S Soulless Show For A Narcissistic Generation; Few Songs Work In Contrived Musical",
+    "title": "Queen'S Soulless Show For A Narcissistic Generation; Few Songs Work In Contrived",
     "date": "2007-04-14",
     "year": "2007",
     "publication": "The Ottawa Citizen",
@@ -10238,8 +10396,8 @@
     "venue": "Canon Theatre",
     "city": "Toronto",
     "coordinates": [
-      43.6543,
-      -79.3791
+      "43.6543",
+      "-79.3791"
     ],
     "people": [
       "Alanna Bridgewater",
@@ -10293,6 +10451,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 969
   },
@@ -10342,6 +10501,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 769
   },
@@ -10366,8 +10526,8 @@
     "venue": "Festival Theatre",
     "city": "Stratford",
     "coordinates": [
-      43.3744,
-      -80.9686
+      "43.3744",
+      "-80.9686"
     ],
     "people": [
       "Berthold Carriere",
@@ -10427,14 +10587,15 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 969
   },
   {
-    "slug": "2007-06-09-killings-up-as-sopranos-nears-end-series-mimicked-other-gangster-dramas-in-second-last-episode",
-    "route": "/reviews/2007-06-09-killings-up-as-sopranos-nears-end-series-mimicked-other-gangster-dramas-in-second-last-episode/",
+    "slug": "2007-06-09-killings-up-as-sopranos-nears-end-series-mimicked-other-gangster-dramas-in",
+    "route": "/reviews/2007-06-09-killings-up-as-sopranos-nears-end-series-mimicked-other-gangster-dramas-in/",
     "source_file": "2007.06.09.The_Ottawa_Citizen.Killings_Up_As_Sopranos_Nears_End_Series_Mimicked_Other_Gangster_Drama.md",
-    "title": "Killings Up As Sopranos Nears End; Series Mimicked Other Gangster Dramas In Second-Last Episode",
+    "title": "Killings Up As Sopranos Nears End; Series Mimicked Other Gangster Dramas In",
     "date": "2007-06-09",
     "year": "2007",
     "publication": "The Ottawa Citizen",
@@ -10476,6 +10637,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 948
   },
@@ -10525,6 +10687,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 1296
   },
@@ -10548,8 +10711,8 @@
     "venue": "Royal George Theatre",
     "city": "Niagara-on-the-Lake",
     "coordinates": [
-      43.2557,
-      -79.0711
+      "43.2557",
+      "-79.0711"
     ],
     "people": [
       "Jeff Meadows",
@@ -10593,6 +10756,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 781
   },
@@ -10616,8 +10780,8 @@
     "venue": "Sony Centre for the Performing Arts",
     "city": "Toronto",
     "coordinates": [
-      43.6456,
-      -79.3856
+      "43.6456",
+      "-79.3856"
     ],
     "people": [
       "David Ives",
@@ -10669,6 +10833,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 867
   },
@@ -10724,6 +10889,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 957
   },
@@ -10779,6 +10945,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 990
   },
@@ -10800,8 +10967,8 @@
     "venue": "The Old Mill",
     "city": "Toronto",
     "coordinates": [
-      43.6514,
-      -79.4937
+      "43.6514",
+      "-79.4937"
     ],
     "people": [
       "Bill Charlap",
@@ -10835,6 +11002,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 558
   },
@@ -10858,8 +11026,8 @@
     "venue": "Festival Theatre",
     "city": "Niagara-on-the-Lake",
     "coordinates": [
-      43.252,
-      -79.0677
+      "43.252",
+      "-79.0677"
     ],
     "people": [
       "Donna Belleville",
@@ -10908,6 +11076,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 881
   },
@@ -10931,8 +11100,8 @@
     "venue": "Princess of Wales Theatre",
     "city": "Toronto",
     "coordinates": [
-      43.647,
-      -79.3892
+      "43.647",
+      "-79.3892"
     ],
     "people": [
       "Becky Gulsvig",
@@ -10977,6 +11146,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 740
   },
@@ -11026,6 +11196,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 83
   },
@@ -11049,8 +11220,8 @@
     "venue": "Festival Theatre",
     "city": "Niagara-on-the-Lake",
     "coordinates": [
-      43.252,
-      -79.0677
+      "43.252",
+      "-79.0677"
     ],
     "people": [
       "Corrine Koslo",
@@ -11098,6 +11269,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 874
   },
@@ -11122,8 +11294,8 @@
     "venue": "Festival Theatre",
     "city": "Stratford",
     "coordinates": [
-      43.3744,
-      -80.9686
+      "43.3744",
+      "-80.9686"
     ],
     "people": [
       "Alan Jay Lerner",
@@ -11188,6 +11360,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 937
   },
@@ -11212,8 +11385,8 @@
     "venue": "Festival Theatre",
     "city": "Stratford",
     "coordinates": [
-      43.3744,
-      -80.9686
+      "43.3744",
+      "-80.9686"
     ],
     "people": [
       "Andrew Gillies",
@@ -11270,6 +11443,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 919
   },
@@ -11323,6 +11497,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 765
   },
@@ -11376,6 +11551,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 1080
   },
@@ -11400,8 +11576,8 @@
     "venue": "Young Centre for the Performing Arts",
     "city": "Toronto",
     "coordinates": [
-      43.6503,
-      -79.3595
+      "43.6503",
+      "-79.3595"
     ],
     "people": [
       "Dennis Lee",
@@ -11453,6 +11629,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 702
   },
@@ -11476,8 +11653,8 @@
     "venue": "Ed Mirvish Theatre",
     "city": "Toronto",
     "coordinates": [
-      43.653,
-      -79.3793
+      "43.653",
+      "-79.3793"
     ],
     "people": [
       "Andrew Lloyd Webber",
@@ -11548,14 +11725,15 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 1103
   },
   {
-    "slug": "2014-04-10-pecking-order-it-s-fight-and-flight-onstage-but-from-which-lover-in-mike-bartlett-s-riveting-play-cock",
-    "route": "/reviews/2014-04-10-pecking-order-it-s-fight-and-flight-onstage-but-from-which-lover-in-mike-bartlett-s-riveting-play-cock/",
+    "slug": "2014-04-10-pecking-order-it-s-fight-and-flight-onstage-but-from-which-lover-in",
+    "route": "/reviews/2014-04-10-pecking-order-it-s-fight-and-flight-onstage-but-from-which-lover-in/",
     "source_file": "2014.04.10.National Post.Cock.md",
-    "title": "Pecking Order; It\\'s Fight And Flight Onstage - But From Which Lover? - In Mike Bartlett\\'s Riveting Play Cock",
+    "title": "Pecking Order; It\\'s Fight And Flight Onstage - But From Which Lover? - In",
     "date": "2014-04-10",
     "year": "2014",
     "publication": "National Post",
@@ -11614,14 +11792,15 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 1100
   },
   {
-    "slug": "2014-09-27-baddest-guy-ben-kingsley-plays-another-villain-in-the-boxtrolls-and-as-usual-he-s-quite-comfortable-in-the-role",
-    "route": "/reviews/2014-09-27-baddest-guy-ben-kingsley-plays-another-villain-in-the-boxtrolls-and-as-usual-he-s-quite-comfortable-in-the-role/",
+    "slug": "2014-09-27-baddest-guy-ben-kingsley-plays-another-villain-in-the-boxtrolls-and-as-usual",
+    "route": "/reviews/2014-09-27-baddest-guy-ben-kingsley-plays-another-villain-in-the-boxtrolls-and-as-usual/",
     "source_file": "2014.09.27.National_Post.Baddest_Guy_Ben_Kingsley_Plays_Another_Villain_In_The_Boxtrolls_And_As_Usua.md",
-    "title": "Baddest Guy; Ben Kingsley Plays Another Villain In The Boxtrolls, And As Usual, He's Quite Comfortable In The Role",
+    "title": "Baddest Guy; Ben Kingsley Plays Another Villain In The Boxtrolls, And As Usual,",
     "date": "2014-09-27",
     "year": "2014",
     "publication": "National Post",
@@ -11670,6 +11849,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 427
   },
@@ -11717,14 +11897,15 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 147
   },
   {
-    "slug": "2015-05-09-organ-grinder-creditors-and-liver-prove-that-our-hearts-will-always-be-grist-for-the-mill-when-former-lovers-linger-on",
-    "route": "/reviews/2015-05-09-organ-grinder-creditors-and-liver-prove-that-our-hearts-will-always-be-grist-for-the-mill-when-former-lovers-linger-on/",
+    "slug": "2015-05-09-organ-grinder-creditors-and-liver-prove-that-our-hearts-will-always-be-grist",
+    "route": "/reviews/2015-05-09-organ-grinder-creditors-and-liver-prove-that-our-hearts-will-always-be-grist/",
     "source_file": "2015.05.09.National_Post.Organ_Grinder_Creditors_And_Liver_Prove_That_Our_Hearts_Will_Always_Be_Gris.md",
-    "title": "Organ Grinder: Creditors And Liver Prove That Our Hearts Will Always Be Grist For The Mill When Former Lovers Linger On",
+    "title": "'Organ Grinder: Creditors And Liver Prove That Our Hearts Will Always Be Grist",
     "date": "2015-05-09",
     "year": "2015",
     "publication": "National Post",
@@ -11740,8 +11921,8 @@
     "venue": "Coal Mine Theatre; Storefront Theatre",
     "city": "Toronto",
     "coordinates": [
-      43.6532,
-      -79.3832
+      "43.6532",
+      "-79.3832"
     ],
     "people": [
       "August Strindberg",
@@ -11796,6 +11977,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 1046
   },
@@ -11820,8 +12002,8 @@
     "venue": "Royal Alexandra Theatre",
     "city": "Toronto",
     "coordinates": [
-      43.6474,
-      -79.3876
+      "43.6474",
+      "-79.3876"
     ],
     "people": [
       "Astrid Van Wieren",
@@ -11892,14 +12074,15 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 1135
   },
   {
-    "slug": "2017-03-29-the-great-encompass-the-more-ground-it-attempts-to-cover-the-more-it-loses-touch-2",
-    "route": "/reviews/2017-03-29-the-great-encompass-the-more-ground-it-attempts-to-cover-the-more-it-loses-touch-2/",
+    "slug": "2017-03-29-the-great-encompass-the-more-ground-it-attempts-to-cover-the-more-it-loses-2",
+    "route": "/reviews/2017-03-29-the-great-encompass-the-more-ground-it-attempts-to-cover-the-more-it-loses-2/",
     "source_file": "2017.03.29.National_Post.Thegreatencompass_The_More_Ground_It_Attempts_To_Cover_The_More_It_Loses_To.md",
-    "title": "The Great Encompass; The More Ground It Attempts To Cover, The More It Loses Touch",
+    "title": "The Great Encompass; The More Ground It Attempts To Cover, The More It Loses",
     "date": "2017-03-29",
     "year": "2017",
     "publication": "National Post",
@@ -11915,8 +12098,8 @@
     "venue": "Elgin Theatre",
     "city": "Toronto",
     "coordinates": [
-      43.653,
-      -79.3793
+      "43.653",
+      "-79.3793"
     ],
     "people": [
       "Adrian Noble",
@@ -11974,6 +12157,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 988
   },
@@ -11995,8 +12179,8 @@
     "venue": "Tarragon Theatre",
     "city": "Toronto",
     "coordinates": [
-      43.675,
-      -79.4129
+      "43.675",
+      "-79.4129"
     ],
     "people": [
       "Brandon McGibbon",
@@ -12038,6 +12222,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 825
   },
@@ -12088,6 +12273,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 1488
   },
@@ -12137,6 +12323,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 1926
   },
@@ -12186,14 +12373,15 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 1212
   },
   {
-    "slug": "2008-02-16-condos-are-a-sham-and-other-funny-true-revelations-from-second-city-s-latest-show-2",
-    "route": "/reviews/2008-02-16-condos-are-a-sham-and-other-funny-true-revelations-from-second-city-s-latest-show-2/",
+    "slug": "2008-02-16-condos-are-a-sham-and-other-funny-true-revelations-from-second-city-s-latest",
+    "route": "/reviews/2008-02-16-condos-are-a-sham-and-other-funny-true-revelations-from-second-city-s-latest/",
     "source_file": "Condos are a sham; And other funny:true revelations from Second City's latest.md",
-    "title": "Condos are a sham; And other funny/true revelations from Second City's latest show",
+    "title": "'Condos are a sham; And other funny/true revelations from Second City''s latest",
     "date": "2008-02-16",
     "year": "2008",
     "publication": "",
@@ -12210,8 +12398,8 @@
     "venue": "Second City",
     "city": "Toronto",
     "coordinates": [
-      43.6452,
-      -79.3908
+      "43.6452",
+      "-79.3908"
     ],
     "people": [
       "Ashley Botting",
@@ -12256,6 +12444,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 767
   },
@@ -12313,6 +12502,7 @@
       "performers": [],
       "artists": []
     },
+    "production_groups": [],
     "media": [],
     "word_count": 239
   }
