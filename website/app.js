@@ -1,4 +1,4 @@
-const DATA_URL = new URL("../site_export/data/public_reviews.json?v=80", import.meta.url);
+const DATA_URL = new URL("../site_export/data/public_reviews.json?v=81", import.meta.url);
 const CONTENT_ROOT = new URL("../site_export/content/reviews/", import.meta.url);
 const PAGE_SIZE = 36;
 const SHAKESPEARE_COLLECTION = "The Shakespeare Collection";
@@ -2168,10 +2168,10 @@ function renderMapView() {
       zoomControl: true,
       maxMarkers: points.length,
       venues,
-      maxVenues: 80,
+      maxVenues: 240,
       maxVenueLabels: 14,
-      initialCenter: [25, 0],
-      initialZoom: 2,
+      initialCenter: [50, -35],
+      initialZoom: 3,
       searchControl: true,
       jumpControl: true,
       onSearch: filterMapList,
@@ -2188,10 +2188,10 @@ function renderHomeMap() {
     maxMarkers: 28,
     compact: false,
     venues: venueMapPoints(),
-    maxVenues: 60,
+    maxVenues: 180,
     maxVenueLabels: 6,
-    initialCenter: [25, 0],
-    initialZoom: 2,
+    initialCenter: [50, -35],
+    initialZoom: 3,
     searchControl: true,
     jumpControl: true,
   });
@@ -2219,7 +2219,7 @@ function renderLeafletMap(container, points, options = {}) {
   const venueMarkers = [];
   const maxCount = Math.max(...points.map((point) => point.count), 1);
   points.forEach((point) => {
-    const radius = 6 + Math.sqrt(point.count / maxCount) * 18;
+    const radius = 5 + Math.sqrt(point.count / maxCount) * 11;
     const size = Math.round(radius * 2);
     const marker = L.marker([point.lat, point.lon], {
       icon: L.divIcon({
@@ -2232,6 +2232,7 @@ function renderLeafletMap(container, points, options = {}) {
     }).addTo(map);
     marker.bindPopup(`<strong>${point.label}</strong>${point.count.toLocaleString()} mapped article references<br><a href="#entity:cities:${point.slug}">Open city index</a>`);
     searchable.push({ label: `${point.label} city`, point, marker, zoom: 9 });
+    marker._cushmanMarkerType = "city";
     bounds.push([point.lat, point.lon]);
   });
   (options.venues || []).slice(0, options.maxVenues || 140).forEach((point) => {
@@ -2254,6 +2255,11 @@ function renderLeafletMap(container, points, options = {}) {
       const el = marker.getElement();
       if (el) el.style.opacity = zoom >= 11 ? "1" : "0";
     });
+    searchable.forEach((item) => {
+      if (item.marker._cushmanMarkerType !== "city") return;
+      const el = item.marker.getElement();
+      if (el) el.style.opacity = zoom >= 11 ? "0.32" : "1";
+    });
     if (typeof options.onZoom === "function") options.onZoom(zoom);
   };
   map.on("zoomend", updateVenueVisibility);
@@ -2265,9 +2271,9 @@ function renderLeafletMap(container, points, options = {}) {
   if (options.jumpControl) {
     const jump = L.DomUtil.create("div", "leaflet-jump-control");
     const jumps = [
-      ["World", [25, 0], 2],
-      ["Toronto", [43.6532, -79.3832], 11],
-      ["London", [51.5072, -0.1276], 11],
+      ["World", [50, -35], 3],
+      ["Toronto", [43.6532, -79.3832], 13],
+      ["London", [51.5072, -0.1276], 12],
     ];
     jumps.forEach(([label, center, zoom]) => {
       const button = document.createElement("button");
