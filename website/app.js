@@ -1,4 +1,4 @@
-const DATA_URL = new URL("../site_export/data/public_reviews.json?v=81", import.meta.url);
+const DATA_URL = new URL("../site_export/data/public_reviews.json?v=82", import.meta.url);
 const CONTENT_ROOT = new URL("../site_export/content/reviews/", import.meta.url);
 const PAGE_SIZE = 36;
 const SHAKESPEARE_COLLECTION = "The Shakespeare Collection";
@@ -2548,6 +2548,7 @@ function slugForCollection(title) {
   const map = {
     "Current Collection": "current",
     "The Canadian Collection": "canadian",
+    "UK Collection": "uk",
     "The Stratford Collection": "stratford",
     "The Shaw Collection": "shaw",
     "The Musical Collection": "musical",
@@ -2561,6 +2562,7 @@ function collectionFromSlug(slug) {
   const map = {
     current: "Current Collection",
     canadian: "The Canadian Collection",
+    uk: "UK Collection",
     stratford: "The Stratford Collection",
     shaw: "The Shaw Collection",
     musical: "The Musical Collection",
