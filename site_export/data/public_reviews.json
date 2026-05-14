@@ -6309,10 +6309,10 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "",
-    "company": "",
-    "venue": "",
-    "city": "",
+    "production_title": "John Gabriel Borkman",
+    "company": "National Theatre",
+    "venue": "Old Vic",
+    "city": "London, England",
     "coordinates": [],
     "people": [
       "Anna Carteret",
@@ -26635,7 +26635,7 @@
     "canonical_file": "",
     "production_title": "On the Twentieth Century",
     "company": "Public Theater",
-    "venue": "Broadway",
+    "venue": "",
     "city": "New York; Toronto",
     "coordinates": [],
     "people": [
@@ -33451,7 +33451,7 @@
     "canonical_file": "",
     "production_title": "The Winter's Tale; Johnny on the Spot; Scrambled Feet; Betrayal; Whose Life Is It Anyway?; Peter Pan; Sugar Babies; Strider; Talley's Folly",
     "company": "",
-    "venue": "Brooklyn Academy of Music; Broadway",
+    "venue": "Brooklyn Academy of Music",
     "city": "New York; Brooklyn; London, England",
     "coordinates": [],
     "people": [
@@ -38242,7 +38242,7 @@
     "canonical_file": "",
     "production_title": "Amadeus",
     "company": "",
-    "venue": "Broadway",
+    "venue": "",
     "city": "New York",
     "coordinates": [],
     "people": [
@@ -42494,7 +42494,7 @@
     "canonical_file": "",
     "production_title": "Lena Horne: The Lady and Her Music; Sophisticated Ladies; Woman of the Year; Key Exchange; March of the Falsettos",
     "company": "",
-    "venue": "Broadway; Theatre Row",
+    "venue": "Theatre Row",
     "city": "New York",
     "coordinates": [],
     "people": [
@@ -47817,7 +47817,7 @@
     "date": "1982-10-24",
     "year": "1982",
     "publication": "The Observer",
-    "article_category": "Theatre Review",
+    "article_category": "Music Review",
     "collections": [
       "UK Collection"
     ],
@@ -48800,7 +48800,7 @@
     "canonical_file": "",
     "production_title": "Cats; Snoopy; Little Shop of Horrors; Nine",
     "company": "",
-    "venue": "Broadway",
+    "venue": "",
     "city": "New York",
     "coordinates": [],
     "people": [
@@ -50272,7 +50272,7 @@
     "canonical_file": "",
     "production_title": "King Lear",
     "company": "Channel 4",
-    "venue": "Television",
+    "venue": "",
     "city": "",
     "coordinates": [],
     "people": [
@@ -50636,7 +50636,7 @@
     "canonical_file": "",
     "production_title": "The Communication Cord; West; The Body; The Adventures of Jasper Ridley; Brighton Beach Memoirs; 'Night, Mother; You Can't Take It With You; On Your Toes; Porgy and Bess",
     "company": "",
-    "venue": "Hampstead Theatre; Warehouse Theatre; The Pit; Half Moon Theatre; Broadway",
+    "venue": "Hampstead Theatre; Warehouse Theatre; The Pit; Half Moon Theatre",
     "city": "London, England; New York",
     "coordinates": [],
     "people": [
@@ -83481,7 +83481,7 @@
     "date": "2000-03-06",
     "year": "2000",
     "publication": "National Post",
-    "article_category": "Theatre Review",
+    "article_category": "Profile",
     "collections": [],
     "publication_status": "publish",
     "editorial_issue_type": "body_restored_from_source",
@@ -86448,8 +86448,8 @@
     "editorial_issue_type": "",
     "canonical_file": "",
     "production_title": "Ally McBeal",
-    "company": "Fox Broadcasting Company",
-    "venue": "Fox Television Network",
+    "company": "Fox Broadcasting Company; Fox",
+    "venue": "",
     "city": "",
     "coordinates": [],
     "people": [
@@ -88111,15 +88111,15 @@
     "date": "2000-06-27",
     "year": "2000",
     "publication": "National Post",
-    "article_category": "Theatre Review",
+    "article_category": "Awards Coverage",
     "collections": [],
     "publication_status": "publish",
     "editorial_issue_type": "body_restored_from_source",
     "canonical_file": "",
     "production_title": "",
     "company": "",
-    "venue": "",
-    "city": "",
+    "venue": "Pantages Theatre",
+    "city": "Toronto",
     "coordinates": [],
     "people": [],
     "roles": {
@@ -113449,7 +113449,7 @@
     "canonical_file": "",
     "production_title": "Stormy Weather: The Music Of Harold Arlen",
     "company": "CBC",
-    "venue": "CBC Television",
+    "venue": "",
     "city": "Toronto",
     "coordinates": [],
     "people": [
@@ -114043,7 +114043,7 @@
     "editorial_issue_type": "",
     "canonical_file": "",
     "production_title": "Awake And Sing",
-    "company": "The Co.",
+    "company": "",
     "venue": "Equity Showcase Theatre",
     "city": "Toronto",
     "coordinates": [
@@ -117217,7 +117217,7 @@
     "production_title": "Shakespeare in the Park",
     "company": "",
     "venue": "",
-    "city": "Canada",
+    "city": "",
     "coordinates": [],
     "people": [],
     "roles": {
@@ -118296,7 +118296,7 @@
     "date": "2003-09-18",
     "year": "2003",
     "publication": "National Post",
-    "article_category": "Theatre Review",
+    "article_category": "Opinion Piece",
     "collections": [],
     "publication_status": "publish",
     "editorial_issue_type": "body_restored_from_source",
@@ -120599,7 +120599,7 @@
     "date": "2004-01-05",
     "year": "2004",
     "publication": "National Post",
-    "article_category": "Theatre Review",
+    "article_category": "Opinion Piece",
     "collections": [
       "The Canadian Collection"
     ],
@@ -127189,7 +127189,7 @@
     "date": "2004-06-26",
     "year": "2004",
     "publication": "National Post",
-    "article_category": "Theatre News",
+    "article_category": "Awards Coverage",
     "collections": [],
     "publication_status": "publish",
     "editorial_issue_type": "body_restored_from_source",
@@ -133113,7 +133113,7 @@
     "canonical_file": "",
     "production_title": "Broadway: The American Musical",
     "company": "PBS",
-    "venue": "PBS",
+    "venue": "",
     "city": "",
     "coordinates": [],
     "people": [],
@@ -140034,7 +140034,7 @@
     "canonical_file": "",
     "production_title": "Hedda Gabler; Journey's End; Happy End; The Tempest; Hello, Dolly!",
     "company": "",
-    "venue": "Buddies in Bad Times Theatre; Court House Theatre; Royal George Theatre; Festival",
+    "venue": "Buddies in Bad Times Theatre; Court House Theatre; Royal George Theatre",
     "city": "Toronto; Niagara-on-the-Lake; Stratford, Ontario",
     "coordinates": [],
     "people": [
@@ -141956,7 +141956,7 @@
     "title": "The Comedy of Errors at Theatre by the Bay",
     "date": "2005-09-03",
     "year": "2005",
-    "publication": "Cushman Collected",
+    "publication": "",
     "article_category": "Theatre Review",
     "collections": [
       "The Shakespeare Collection"
@@ -144277,7 +144277,7 @@
     "date": "2005-12-24",
     "year": "2005",
     "publication": "National Post",
-    "article_category": "Theatre Review",
+    "article_category": "Year in Review",
     "collections": [
       "The Canadian Collection"
     ],
@@ -147924,7 +147924,7 @@
     "canonical_file": "",
     "production_title": "24; Prison Break",
     "company": "Fox",
-    "venue": "Television",
+    "venue": "",
     "city": "",
     "coordinates": [],
     "people": [
@@ -155283,8 +155283,8 @@
     "editorial_issue_type": "",
     "canonical_file": "",
     "production_title": "The Sopranos",
-    "company": "HBO",
-    "venue": "The Movie Network",
+    "company": "HBO; The Movie Network",
+    "venue": "",
     "city": "",
     "coordinates": [],
     "people": [
@@ -159554,7 +159554,7 @@
     "canonical_file": "",
     "production_title": "As You Like It",
     "company": "HBO; The Movie Network",
-    "venue": "The Movie Network",
+    "venue": "",
     "city": "Toronto",
     "coordinates": [],
     "people": [
@@ -160549,7 +160549,7 @@
     "canonical_file": "",
     "production_title": "The Tudors",
     "company": "CBC",
-    "venue": "CBC Television",
+    "venue": "",
     "city": "Toronto",
     "coordinates": [
       "43.6532",
@@ -161188,7 +161188,7 @@
     "canonical_file": "",
     "production_title": "Weeds",
     "company": "Showcase",
-    "venue": "Showcase Television",
+    "venue": "",
     "city": "Toronto",
     "coordinates": [
       "43.6532",
@@ -161248,7 +161248,7 @@
     "canonical_file": "",
     "production_title": "'da Kink in My Hair",
     "company": "Global",
-    "venue": "Global Television",
+    "venue": "",
     "city": "Toronto",
     "coordinates": [
       "43.7001",
@@ -161768,7 +161768,7 @@
     "canonical_file": "",
     "production_title": "All About TV Snobs",
     "company": "National Post",
-    "venue": "National Post",
+    "venue": "",
     "city": "Toronto",
     "coordinates": [
       "43.6532",
@@ -163314,7 +163314,7 @@
     "canonical_file": "",
     "production_title": "Northanger Abbey",
     "company": "BBC",
-    "venue": "Television",
+    "venue": "",
     "city": "",
     "coordinates": [],
     "people": [
@@ -163550,7 +163550,7 @@
     "canonical_file": "",
     "production_title": "2007 Pop Culture Year in Review",
     "company": "National Post",
-    "venue": "National Post",
+    "venue": "",
     "city": "Toronto",
     "coordinates": [
       "43.6532",
@@ -167143,7 +167143,7 @@
     "canonical_file": "",
     "production_title": "Air Farce Live / Rick Mercer Report / This Hour Has 22 Minutes",
     "company": "CBC",
-    "venue": "CBC Television",
+    "venue": "",
     "city": "Toronto",
     "coordinates": [],
     "people": [
@@ -167394,7 +167394,7 @@
     "canonical_file": "",
     "production_title": "Extraordinary Rendition",
     "company": "TVO",
-    "venue": "Television",
+    "venue": "",
     "city": "",
     "coordinates": [],
     "people": [
@@ -168106,7 +168106,7 @@
     "canonical_file": "",
     "production_title": "The Hills",
     "company": "MTV",
-    "venue": "Television",
+    "venue": "",
     "city": "Los Angeles",
     "coordinates": [
       "34.0522",
@@ -170417,7 +170417,7 @@
     "canonical_file": "",
     "production_title": "The Naked Archaeologist",
     "company": "VisionTV",
-    "venue": "Television",
+    "venue": "",
     "city": "",
     "coordinates": [],
     "people": [
@@ -171147,8 +171147,8 @@
     "editorial_issue_type": "",
     "canonical_file": "",
     "production_title": "Generation Kill",
-    "company": "HBO",
-    "venue": "The Movie Network",
+    "company": "HBO; The Movie Network",
+    "venue": "",
     "city": "",
     "coordinates": [],
     "people": [
@@ -171820,7 +171820,7 @@
     "canonical_file": "",
     "production_title": "Mad Men",
     "company": "AMC",
-    "venue": "AMC Television",
+    "venue": "",
     "city": "New York",
     "coordinates": [
       "40.7128",
@@ -171954,8 +171954,8 @@
     "editorial_issue_type": "",
     "canonical_file": "",
     "production_title": "Torchwood",
-    "company": "BBC Wales",
-    "venue": "BBC Television",
+    "company": "BBC Wales; BBC",
+    "venue": "",
     "city": "Cardiff",
     "coordinates": [
       "51.4816",
@@ -172795,8 +172795,8 @@
     "editorial_issue_type": "",
     "canonical_file": "",
     "production_title": "True Blood",
-    "company": "HBO",
-    "venue": "The Movie Network",
+    "company": "HBO; The Movie Network",
+    "venue": "",
     "city": "",
     "coordinates": [],
     "people": [
@@ -172949,7 +172949,7 @@
     "canonical_file": "",
     "production_title": "Fringe",
     "company": "Fox",
-    "venue": "Fox Television",
+    "venue": "",
     "city": "Los Angeles",
     "coordinates": [
       "34.0522",
@@ -173200,8 +173200,8 @@
     "editorial_issue_type": "",
     "canonical_file": "",
     "production_title": "House",
-    "company": "Fox",
-    "venue": "Global Television",
+    "company": "Fox; Global",
+    "venue": "",
     "city": "New Jersey",
     "coordinates": [],
     "people": [],
@@ -173432,7 +173432,7 @@
     "canonical_file": "",
     "production_title": "Filth: The Mary Whitehouse Story",
     "company": "BBC",
-    "venue": "BBC Television",
+    "venue": "",
     "city": "London, England",
     "coordinates": [
       "51.5074",
@@ -173704,7 +173704,7 @@
     "canonical_file": "",
     "production_title": "Little Mosque on the Prairie",
     "company": "CBC",
-    "venue": "CBC Television",
+    "venue": "",
     "city": "Toronto",
     "coordinates": [
       "43.6532",
@@ -175320,7 +175320,7 @@
     "canonical_file": "",
     "production_title": "24: Redemption",
     "company": "Fox",
-    "venue": "Fox Television",
+    "venue": "",
     "city": "Los Angeles",
     "coordinates": [
       "34.0522",
@@ -176303,8 +176303,8 @@
     "editorial_issue_type": "",
     "canonical_file": "",
     "production_title": "Oliver Twist",
-    "company": "BBC; PBS",
-    "venue": "TVO",
+    "company": "BBC; PBS; TVO",
+    "venue": "",
     "city": "Toronto",
     "coordinates": [],
     "people": [
@@ -177378,7 +177378,7 @@
     "canonical_file": "",
     "production_title": "ZOS: Zone of Separation",
     "company": "CBC",
-    "venue": "CBC Television",
+    "venue": "",
     "city": "Toronto",
     "coordinates": [],
     "people": [
@@ -190458,14 +190458,18 @@
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
     "production_title": "The Tempest; King Lear; Caesar and Cleopatra; Barrymore; In Spite of Myself; Henry V; Richard III; The Lark; Cyrano de Bergerac; Hamlet; Romeo and Juliet; King John; The Sound of Music; The Royal Hunt of the Sun; The Man Who Would Be King; The Insider; The Imaginarium of Doctor Parnassus; The Last Station; The Fall of the Roman Empire",
-    "company": "",
+    "company": "Stratford Festival",
     "venue": "",
-    "city": "",
+    "city": "Stratford, Ontario",
     "coordinates": [],
-    "people": [],
+    "people": [
+      "Christopher Plummer"
+    ],
     "roles": {
       "director": [],
-      "actors": [],
+      "actors": [
+        "Christopher Plummer"
+      ],
       "playwright": [],
       "composer_lyricist": [],
       "musical_director": [],
@@ -190654,7 +190658,7 @@
     "canonical_file": "",
     "production_title": "A Little Night Music / Sondheim on Sondheim / Next to Normal",
     "company": "",
-    "venue": "New York theatres",
+    "venue": "",
     "city": "New York",
     "coordinates": [
       "40.759",
@@ -191092,7 +191096,7 @@
     "canonical_file": "",
     "production_title": "Red / A Behanding in Spokane / Our Town",
     "company": "",
-    "venue": "New York theatres",
+    "venue": "",
     "city": "New York",
     "coordinates": [],
     "people": [
@@ -194554,7 +194558,7 @@
     "canonical_file": "",
     "production_title": "Michael Feinstein's American Songbook",
     "company": "PBS",
-    "venue": "PBS",
+    "venue": "",
     "city": "",
     "coordinates": [],
     "people": [
@@ -205875,7 +205879,7 @@
     "title": "Theatrical Maverick With a Golden Voice",
     "date": "2011-11-27",
     "year": "2011",
-    "publication": "Cushman Collected",
+    "publication": "",
     "article_category": "Opinion Piece",
     "collections": [
       "The Stratford Collection",
@@ -207536,7 +207540,7 @@
     "title": "Coriolanus Film Review",
     "date": "2012-02-06",
     "year": "2012",
-    "publication": "Cushman Collected",
+    "publication": "",
     "article_category": "Film Review",
     "collections": [
       "The Shakespeare Collection"
@@ -210782,7 +210786,7 @@
     "canonical_file": "",
     "production_title": "Matilda / Written on the Heart / The Duchess of Malfi",
     "company": "Royal Shakespeare Company; Old Vic",
-    "venue": "West End; Old Vic",
+    "venue": "Old Vic",
     "city": "London, England",
     "coordinates": [],
     "people": [
@@ -212208,7 +212212,7 @@
     "canonical_file": "",
     "production_title": "When It Rains / Terre Haute / Breath in Between / Pieta",
     "company": "2b Theatre Company; SummerWorks Festival",
-    "venue": "Factory Mainspace; Lower Ossington Theatre; Theatre Passe Muraille; Theatre",
+    "venue": "Factory Mainspace; Lower Ossington Theatre; Theatre Passe Muraille",
     "city": "Toronto",
     "coordinates": [],
     "people": [
@@ -225644,7 +225648,7 @@
     "canonical_file": "",
     "production_title": "King Charles III / Great Britain",
     "company": "Almeida Theatre; National Theatre",
-    "venue": "Almeida Theatre; National Theatre; West End",
+    "venue": "Almeida Theatre; National Theatre",
     "city": "London, England",
     "coordinates": [],
     "people": [
@@ -225984,7 +225988,7 @@
     "canonical_file": "",
     "production_title": "The James Plays / The Scottsboro Boys",
     "company": "National Theatre of Scotland; National Theatre",
-    "venue": "Olivier Theatre; West End",
+    "venue": "Olivier Theatre",
     "city": "London, England",
     "coordinates": [],
     "people": [
@@ -226489,13 +226493,13 @@
     "date": "2015-01-10",
     "year": "2015",
     "publication": "National Post",
-    "article_category": "Theatre Review",
+    "article_category": "Theatre Preview",
     "collections": [],
     "publication_status": "publish",
     "editorial_issue_type": "body_restored_from_source",
     "canonical_file": "",
     "production_title": "",
-    "company": "",
+    "company": "Next Stage Theatre Festival",
     "venue": "Factory Theatre",
     "city": "Toronto",
     "coordinates": [
@@ -232906,7 +232910,7 @@
     "canonical_file": "",
     "production_title": "Making a Murderer",
     "company": "Netflix",
-    "venue": "Netflix Streaming Service",
+    "venue": "",
     "city": "",
     "coordinates": [],
     "people": [
@@ -241279,7 +241283,7 @@
     "title": "The Music Man",
     "date": "2018-06-07",
     "year": "2018",
-    "publication": "Cushman Collected",
+    "publication": "",
     "article_category": "Musical Review",
     "collections": [
       "Current Collection",
@@ -241380,7 +241384,7 @@
     "title": "To Kill a Mockingbird & Long Day's Journey Into Night",
     "date": "2018-06-23",
     "year": "2018",
-    "publication": "Cushman Collected",
+    "publication": "",
     "article_category": "Theatre Review",
     "collections": [
       "Current Collection",
@@ -241474,7 +241478,7 @@
     "title": "Robert Lepage’s Coriolanus",
     "date": "2018-07-01",
     "year": "2018",
-    "publication": "Cushman Collected",
+    "publication": "",
     "article_category": "Theatre Review",
     "collections": [
       "Current Collection",
@@ -241567,7 +241571,7 @@
     "title": "London Theatre - Some Dark and Light Matters",
     "date": "2018-12-10",
     "year": "2018",
-    "publication": "Cushman Collected",
+    "publication": "",
     "article_category": "Theatre Review",
     "collections": [
       "Current Collection"
@@ -241665,7 +241669,7 @@
     "title": "Stratford and Shaw Preview 2019",
     "date": "2019-04-28",
     "year": "2019",
-    "publication": "Cushman Collected",
+    "publication": "",
     "article_category": "Theatre Preview",
     "collections": [
       "Current Collection",
@@ -241759,7 +241763,7 @@
     "title": "Jennifer Phipps",
     "date": "2019-05-18",
     "year": "2019",
-    "publication": "Cushman Collected",
+    "publication": "",
     "article_category": "Profile",
     "collections": [
       "Current Collection",
@@ -241829,7 +241833,7 @@
     "title": "August: Osage County",
     "date": "2019-06-01",
     "year": "2019",
-    "publication": "Cushman Collected",
+    "publication": "",
     "article_category": "Theatre Review",
     "collections": [
       "Current Collection"
@@ -241911,7 +241915,7 @@
     "title": "Baking Up A Storm",
     "date": "2019-07-20",
     "year": "2019",
-    "publication": "Cushman Collected",
+    "publication": "",
     "article_category": "Musical Review",
     "collections": [
       "Current Collection",
@@ -241990,7 +241994,7 @@
     "title": "Fool Me Twice",
     "date": "2019-07-23",
     "year": "2019",
-    "publication": "Cushman Collected",
+    "publication": "",
     "article_category": "Theatre Review",
     "collections": [
       "Current Collection"
@@ -242122,7 +242126,7 @@
     "title": "Half Measure",
     "date": "2019-08-26",
     "year": "2019",
-    "publication": "Cushman Collected",
+    "publication": "",
     "article_category": "Theatre Review",
     "collections": [
       "Current Collection",
@@ -242187,7 +242191,7 @@
     "title": "Monosyllabic",
     "date": "2019-09-05",
     "year": "2019",
-    "publication": "Cushman Collected",
+    "publication": "",
     "article_category": "Theatre Review",
     "collections": [
       "Current Collection",
@@ -242281,7 +242285,7 @@
     "title": "To Hell and Back",
     "date": "2019-10-12",
     "year": "2019",
-    "publication": "Cushman Collected",
+    "publication": "",
     "article_category": "Theatre Review",
     "collections": [
       "Current Collection",
@@ -242365,7 +242369,7 @@
     "title": "Streetcars to Soulpepper Past",
     "date": "2019-10-25",
     "year": "2019",
-    "publication": "Cushman Collected",
+    "publication": "",
     "article_category": "Theatre Review",
     "collections": [
       "Current Collection"
@@ -242458,7 +242462,7 @@
     "title": "Personal Bests from a Decade of Theatre",
     "date": "2019-12-20",
     "year": "2019",
-    "publication": "Cushman Collected",
+    "publication": "",
     "article_category": "Year in Review",
     "collections": [
       "Current Collection"
@@ -242515,7 +242519,7 @@
     "title": "Late Stages: Looking Back at Some of the Last and Best of 2019",
     "date": "2020-01-20",
     "year": "2020",
-    "publication": "Cushman Collected",
+    "publication": "",
     "article_category": "Year in Review",
     "collections": [
       "Current Collection",
@@ -242605,7 +242609,7 @@
     "title": "Caesarean Sections",
     "date": "2020-01-23",
     "year": "2020",
-    "publication": "Cushman Collected",
+    "publication": "",
     "article_category": "Theatre Review",
     "collections": [
       "Current Collection",
@@ -242687,7 +242691,7 @@
     "title": "The Party's Over",
     "date": "2020-02-08",
     "year": "2020",
-    "publication": "Cushman Collected",
+    "publication": "",
     "article_category": "Theatre Review",
     "collections": [
       "Current Collection"
@@ -242756,7 +242760,7 @@
     "title": "Gimme Those Old Time Religions",
     "date": "2020-02-12",
     "year": "2020",
-    "publication": "Cushman Collected",
+    "publication": "",
     "article_category": "Theatre Review",
     "collections": [
       "Current Collection",
@@ -242847,7 +242851,7 @@
     "title": "HAMILTON: Seen, Heard and Revisited",
     "date": "2020-03-01",
     "year": "2020",
-    "publication": "Cushman Collected",
+    "publication": "",
     "article_category": "Musical Review",
     "collections": [
       "Current Collection",
@@ -242931,7 +242935,7 @@
     "title": "Tribute to Christopher Plummer",
     "date": "2021-02-07",
     "year": "2021",
-    "publication": "Cushman Collected",
+    "publication": "",
     "article_category": "Obituary",
     "collections": [
       "Current Collection",
@@ -243098,7 +243102,7 @@
     "title": "Tribute to Angela Lansbury",
     "date": "2022-11-24",
     "year": "2022",
-    "publication": "Cushman Collected",
+    "publication": "",
     "article_category": "Obituary",
     "collections": [
       "Current Collection",
@@ -243165,7 +243169,7 @@
     "title": "In Memoriam",
     "date": "2024-02-03",
     "year": "2024",
-    "publication": "Cushman Collected",
+    "publication": "",
     "article_category": "Obituary",
     "collections": [
       "Current Collection"
@@ -243317,7 +243321,7 @@
     "title": "Gosmersholm",
     "date": "2024-09-07",
     "year": "2024",
-    "publication": "Cushman Collected",
+    "publication": "",
     "article_category": "Opinion Piece",
     "collections": [
       "Current Collection"
@@ -243426,7 +243430,7 @@
     "title": "The Joy of Joe Ziegler",
     "date": "2025-08-04",
     "year": "2025",
-    "publication": "Cushman Collected",
+    "publication": "",
     "article_category": "Obituary",
     "collections": [
       "Current Collection",
@@ -243491,7 +243495,7 @@
     "title": "In Memory of Tom Stoppard",
     "date": "2026-01-04",
     "year": "2026",
-    "publication": "Cushman Collected",
+    "publication": "",
     "article_category": "Obituary",
     "collections": [
       "Current Collection"
@@ -243568,7 +243572,7 @@
     "title": "The Company Way",
     "date": "2026-02-08",
     "year": "2026",
-    "publication": "Cushman Collected",
+    "publication": "",
     "article_category": "Musical Review",
     "collections": [
       "Current Collection",
