@@ -1525,6 +1525,20 @@ h1 {
   --chip-label: #8a5f5f;
 }
 
+.entity-actors,
+.entity-performers,
+.entity-artists {
+  --chip-bg: #f6eee7;
+  --chip-border: #decabb;
+  --chip-label: #8a6248;
+}
+
+.entity-musicians {
+  --chip-bg: #f1eef5;
+  --chip-border: #d2c8dd;
+  --chip-label: #6b5a7d;
+}
+
 .entity-directors,
 .entity-playwrights {
   --chip-bg: #f1eef5;
