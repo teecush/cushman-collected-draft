@@ -1,4 +1,4 @@
-const DATA_URL = new URL("../site_export/data/public_reviews.json?v=88", import.meta.url);
+const DATA_URL = new URL("../site_export/data/public_reviews.json?v=89", import.meta.url);
 const CONTENT_ROOT = new URL("../site_export/content/reviews/", import.meta.url);
 const PAGE_SIZE = 36;
 const SHAKESPEARE_COLLECTION = "The Shakespeare Collection";
@@ -43,6 +43,7 @@ const SECONDARY_COLLECTION_TILES = [
 const ENTITY_TYPES = [
   { key: "people", label: "People", singular: "Person" },
   { key: "subjects", label: "Subjects", singular: "Subject" },
+  { key: "books", label: "Books", singular: "Book" },
   { key: "productions", label: "Productions", singular: "Production" },
   { key: "book-authors", label: "Book Authors", singular: "Book Author" },
   { key: "publishers", label: "Publishers", singular: "Publisher" },
@@ -508,6 +509,10 @@ function productionGroups(record) {
     : [];
 }
 
+function isBookReview(record) {
+  return String(record.article_category || "").trim().toLowerCase() === "book review";
+}
+
 function groupedEntityValues(record, key, transform = splitEntityList) {
   return uniqueEntityValues(
     productionGroups(record).flatMap((group) => transform(group[key] || []))
@@ -551,7 +556,8 @@ function entityValues(record, type) {
   if (role) return uniqueEntityValues([...splitEntityList(record.roles?.[role] || []), ...groupedRoleValues(record, role)]);
   if (type === "people") return uniqueEntityValues([...(record.people || []), ...splitEntityList(record.book_author), ...splitEntityList(record.subject_people), ...productionGroups(record).flatMap((group) => ENTITY_TYPES.filter((item) => item.role).flatMap((item) => splitEntityList(group[item.role] || [])))]);
   if (type === "subjects") return uniqueEntityValues(splitEntityList(record.subject_people));
-  if (type === "productions") return uniqueEntityValues([...splitEntityList(record.production_title), ...groupedEntityValues(record, "production_title")]);
+  if (type === "books") return isBookReview(record) ? uniqueEntityValues(splitEntityList(record.production_title)) : [];
+  if (type === "productions") return isBookReview(record) ? [] : uniqueEntityValues([...splitEntityList(record.production_title), ...groupedEntityValues(record, "production_title")]);
   if (type === "book-authors") return uniqueEntityValues(splitEntityList(record.book_author));
   if (type === "publishers") return uniqueEntityValues(splitEntityList(record.publisher));
   if (type === "companies") return uniqueEntityValues([...splitEntityList(record.company), ...groupedEntityValues(record, "company")]);
@@ -1387,7 +1393,8 @@ function indexDescription(type) {
   return {
     people: "Artists, writers, directors, performers, and other named people.",
     subjects: "People who are the focus of non-production pieces.",
-    productions: "Reviewed shows, books, broadcasts, recordings, and subjects.",
+    books: "Reviewed books and book-length works.",
+    productions: "Reviewed shows, broadcasts, recordings, and staged works.",
     "book-authors": "Authors and editors of reviewed books.",
     publishers: "Publishers of reviewed books.",
     companies: "Theatre companies, festivals, broadcasters, and producers.",
@@ -2914,12 +2921,13 @@ function articleProductionGroups(record) {
 
 function articleEntityLinks(record) {
   const grouped = articleProductionGroups(record);
+  const bookReview = isBookReview(record);
   const groupedProductionValues = groupedEntityValues(record, "production_title");
   const groupedCompanyValues = groupedEntityValues(record, "company");
   const groupedVenueValues = groupedEntityValues(record, "venue");
   const groupedCityValues = groupedEntityValues(record, "city", splitCityList);
   const productionGroups = [
-    ["productions", "Production", valuesExceptGrouped(splitEntityList(record.production_title), groupedProductionValues).slice(0, 4)],
+    [bookReview ? "books" : "productions", bookReview ? "Book" : "Production", valuesExceptGrouped(splitEntityList(record.production_title), groupedProductionValues).slice(0, 4)],
   ].filter(([, , values]) => values.length);
   const contextGroups = [
     ["book-authors", "Book Author", splitEntityList(record.book_author).slice(0, 4)],
@@ -2940,7 +2948,7 @@ function articleEntityLinks(record) {
   wrap.className = "article-entity-groups";
 
   if (grouped) wrap.append(grouped);
-  if (productionGroups.length) wrap.append(articleEntityGroup("Production", productionGroups, "production"));
+  if (productionGroups.length) wrap.append(articleEntityGroup(bookReview ? "Book" : "Production", productionGroups, "production"));
   if (contextGroups.length) wrap.append(articleEntityGroup(grouped ? "Shared Context" : "Work", contextGroups, "context"));
   if (peopleGroups.length) wrap.append(articleEntityGroup("People", peopleGroups, "people"));
 
@@ -2965,6 +2973,7 @@ function articleEntityGroup(label, groups, groupType) {
 
 function inlineLinkEntities(record) {
   const candidates = [
+    ...entityValues(record, "books").map((label) => ({ type: "books", label, priority: 1 })),
     ...entityValues(record, "productions").map((label) => ({ type: "productions", label, priority: 1 })),
     ...entityValues(record, "book-authors").map((label) => ({ type: "book-authors", label, priority: 2 })),
     ...entityValues(record, "subjects").map((label) => ({ type: "subjects", label, priority: 2 })),

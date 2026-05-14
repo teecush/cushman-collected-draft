@@ -39865,22 +39865,13 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "At the Royal Court",
-    "company": "English Stage Company",
-    "venue": "Royal Court Theatre",
+    "production_title": "At the Royal Court: 25 Years of the English Stage Company",
+    "company": "",
+    "venue": "",
     "city": "",
     "coordinates": [],
     "people": [
-      "Bill Gaskill",
-      "Christopher Hampton",
-      "George Devine",
-      "Irving Wardle",
-      "Jack Shepherd",
-      "John Osborne",
-      "Max Stafford-Clark",
-      "Richard Findlater",
-      "Samuel Beckett",
-      "Stuart Burge"
+      "Richard Findlater"
     ],
     "roles": {
       "director": [],
@@ -39905,22 +39896,13 @@
       "sound_designer": [],
       "musicians": [],
       "performers": [],
-      "artists": [
-        "Richard Findlater",
-        "Samuel Beckett",
-        "Bill Gaskill",
-        "John Osborne",
-        "Jack Shepherd",
-        "Christopher Hampton",
-        "George Devine",
-        "Irving Wardle",
-        "Stuart Burge",
-        "Max Stafford-Clark"
-      ]
+      "artists": []
     },
     "production_groups": [],
     "media": [],
-    "word_count": 712
+    "word_count": 712,
+    "book_author": "Richard Findlater",
+    "publisher": "Amber Lane Press"
   },
   {
     "slug": "1981-04-26-the-laughing-shylock",
@@ -41228,25 +41210,17 @@
     "canonical_file": "",
     "production_title": "Conversations with Ayckbourn",
     "company": "",
-    "venue": "Stephen Joseph Theatre in the Round",
-    "city": "Scarborough",
+    "venue": "",
+    "city": "",
     "coordinates": [],
     "people": [
       "Alan Ayckbourn",
-      "Eric Thompson",
-      "Phil Silvers"
+      "Ian Watson"
     ],
     "roles": {
-      "director": [
-        "Alan Ayckbourn",
-        "Eric Thompson"
-      ],
-      "actors": [
-        "Phil Silvers"
-      ],
-      "playwright": [
-        "Alan Ayckbourn"
-      ],
+      "director": [],
+      "actors": [],
+      "playwright": [],
       "composer_lyricist": [],
       "musical_director": [],
       "choreographer": [],
@@ -41270,7 +41244,10 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 799
+    "word_count": 799,
+    "book_author": "Ian Watson",
+    "publisher": "Macdonald",
+    "subject_people": "Alan Ayckbourn"
   },
   {
     "slug": "1981-07-12-war-games",
@@ -51341,13 +51318,6 @@
     "city": "",
     "coordinates": [],
     "people": [
-      "Eric Idle",
-      "Griff Rhys-Jones",
-      "Jack Hulbert",
-      "John Cleese",
-      "Jonathan Miller",
-      "Michael Frayn",
-      "Peter Cook",
       "Robert Hewison"
     ],
     "roles": {
@@ -51372,22 +51342,14 @@
       "lighting_designer": [],
       "sound_designer": [],
       "musicians": [],
-      "performers": [
-        "Peter Cook",
-        "Jonathan Miller",
-        "John Cleese",
-        "Eric Idle",
-        "Griff Rhys-Jones",
-        "Michael Frayn",
-        "Jack Hulbert"
-      ],
-      "artists": [
-        "Robert Hewison"
-      ]
+      "performers": [],
+      "artists": []
     },
     "production_groups": [],
     "media": [],
-    "word_count": 596
+    "word_count": 596,
+    "book_author": "Robert Hewison",
+    "publisher": "Methuen"
   },
   {
     "slug": "1983-06-12-falklands-tragedy",
@@ -54804,26 +54766,12 @@
     "city": "",
     "coordinates": [],
     "people": [
-      "Arthur Miller",
-      "Dustin Hoffman",
-      "Elia Kazan",
-      "Lee J. Cobb",
-      "Michael Rudman",
-      "Willy Loman"
+      "Arthur Miller"
     ],
     "roles": {
-      "director": [
-        "Arthur Miller",
-        "Michael Rudman",
-        "Elia Kazan"
-      ],
-      "actors": [
-        "Dustin Hoffman",
-        "Lee J. Cobb"
-      ],
-      "playwright": [
-        "Arthur Miller"
-      ],
+      "director": [],
+      "actors": [],
+      "playwright": [],
       "composer_lyricist": [],
       "musical_director": [],
       "choreographer": [],
@@ -54843,13 +54791,14 @@
       "sound_designer": [],
       "musicians": [],
       "performers": [],
-      "artists": [
-        "Willy Loman"
-      ]
+      "artists": []
     },
     "production_groups": [],
     "media": [],
-    "word_count": 631
+    "word_count": 631,
+    "book_author": "Arthur Miller",
+    "publisher": "Methuen",
+    "subject_people": "Arthur Miller"
   },
   {
     "slug": "1984-08-12-burton-s-last-role-a-supportive-father",
@@ -61930,7 +61879,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "",
+    "production_title": "Shakespeare: Hit or Miss?",
     "company": "",
     "venue": "",
     "city": "",
@@ -61938,21 +61887,12 @@
     "people": [
       "John Gielgud",
       "John Miller",
-      "Peter Brook",
-      "Richard Briers",
       "William Shakespeare"
     ],
     "roles": {
-      "director": [
-        "Peter Brook"
-      ],
-      "actors": [
-        "John Gielgud",
-        "Richard Briers"
-      ],
-      "playwright": [
-        "William Shakespeare"
-      ],
+      "director": [],
+      "actors": [],
+      "playwright": [],
       "composer_lyricist": [],
       "musical_director": [],
       "choreographer": [],
@@ -61972,14 +61912,14 @@
       "sound_designer": [],
       "musicians": [],
       "performers": [],
-      "artists": [
-        "John Miller",
-        "Richard Briers"
-      ]
+      "artists": []
     },
     "production_groups": [],
     "media": [],
-    "word_count": 460
+    "word_count": 460,
+    "book_author": "John Gielgud; John Miller",
+    "publisher": "Sidgwick",
+    "subject_people": "John Gielgud; William Shakespeare"
   },
   {
     "slug": "1992-01-16-the-fever",
@@ -62892,23 +62832,6 @@
     "city": "",
     "coordinates": [],
     "people": [
-      "Al Jolson",
-      "Barbara Lea",
-      "Billie Holiday",
-      "Bing Crosby",
-      "Blossom Dearie",
-      "Bobby Darin",
-      "Bobby McFerrin",
-      "Frank Sinatra",
-      "Fred Astaire",
-      "Jeri Southern",
-      "Judy Garland",
-      "Louis Armstrong",
-      "Oscar Peterson",
-      "Pearl Bailey",
-      "Peggy Lee",
-      "Rosemary Clooney",
-      "Sammy Davis",
       "Will Friedwald"
     ],
     "roles": {
@@ -62933,32 +62856,14 @@
       "lighting_designer": [],
       "sound_designer": [],
       "musicians": [],
-      "performers": [
-        "Barbara Lea",
-        "Fred Astaire",
-        "Oscar Peterson",
-        "Frank Sinatra",
-        "Bing Crosby",
-        "Louis Armstrong",
-        "Peggy Lee",
-        "Rosemary Clooney",
-        "Billie Holiday",
-        "Bobby Darin",
-        "Sammy Davis",
-        "Al Jolson",
-        "Bobby McFerrin",
-        "Blossom Dearie",
-        "Jeri Southern",
-        "Pearl Bailey",
-        "Judy Garland"
-      ],
-      "artists": [
-        "Will Friedwald"
-      ]
+      "performers": [],
+      "artists": []
     },
     "production_groups": [],
     "media": [],
-    "word_count": 765
+    "word_count": 765,
+    "book_author": "Will Friedwald",
+    "publisher": "Quartet"
   },
   {
     "slug": "1992-06-24-cross-current-theatre-sees-kiss-of-the-spider-woman-as-a-rare-serious-musical",
@@ -64089,7 +63994,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "",
+    "production_title": "Gilbert and Sullivan",
     "company": "",
     "venue": "",
     "city": "",
@@ -64102,12 +64007,8 @@
     "roles": {
       "director": [],
       "actors": [],
-      "playwright": [
-        "W. S. Gilbert"
-      ],
-      "composer_lyricist": [
-        "Arthur Sullivan"
-      ],
+      "playwright": [],
+      "composer_lyricist": [],
       "musical_director": [],
       "choreographer": [],
       "orchestrator": [],
@@ -64126,13 +64027,13 @@
       "sound_designer": [],
       "musicians": [],
       "performers": [],
-      "artists": [
-        "Michael Ffinch"
-      ]
+      "artists": []
     },
     "production_groups": [],
     "media": [],
-    "word_count": 542
+    "word_count": 542,
+    "book_author": "Michael Ffinch",
+    "subject_people": "W. S. Gilbert; Arthur Sullivan"
   },
   {
     "slug": "1993-05-28-theatre-review-saint-joan",
@@ -68085,28 +67986,19 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "",
-    "company": "English Shakespeare Company",
+    "production_title": "Hamlet: A User's Guide",
+    "company": "",
     "venue": "",
     "city": "",
     "coordinates": [],
     "people": [
       "Michael Pennington",
-      "Peter Hall",
-      "Stephen Dillane",
       "William Shakespeare"
     ],
     "roles": {
-      "director": [
-        "Peter Hall"
-      ],
-      "actors": [
-        "Michael Pennington",
-        "Stephen Dillane"
-      ],
-      "playwright": [
-        "William Shakespeare"
-      ],
+      "director": [],
+      "actors": [],
+      "playwright": [],
       "composer_lyricist": [],
       "musical_director": [],
       "choreographer": [],
@@ -68126,13 +68018,14 @@
       "sound_designer": [],
       "musicians": [],
       "performers": [],
-      "artists": [
-        "Michael Pennington"
-      ]
+      "artists": []
     },
     "production_groups": [],
     "media": [],
-    "word_count": 1710
+    "word_count": 1710,
+    "book_author": "Michael Pennington",
+    "publisher": "Nick Hern Books",
+    "subject_people": "Michael Pennington; William Shakespeare"
   },
   {
     "slug": "1996-02-07-theatre-review-bedtimes-and-bullies",
