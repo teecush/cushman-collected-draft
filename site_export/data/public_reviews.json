@@ -61337,6 +61337,9 @@
         ],
         "actors": [
           "Gary Reineke"
+        ],
+        "playwright": [
+          "Arthur Milner"
         ]
       },
       {
@@ -75447,8 +75450,8 @@
     "editorial_issue_type": "",
     "canonical_file": "",
     "production_title": "Waiting for Lewis; The Other Side of the Closet",
-    "company": "Theatre Direct Canada; Young People's Theatre",
-    "venue": "Buddies in Bad Times Theatre; Young People's Theatre",
+    "company": "Theatre Direct Canada; Young People''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''s Theatre",
+    "venue": "Buddies in Bad Times Theatre; Young People''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''s Theatre",
     "city": "Toronto",
     "coordinates": [],
     "people": [
@@ -75531,6 +75534,11 @@
         ],
         "playwright": [
           "Edward Roy"
+        ],
+        "actors": [
+          "Shaun Benson",
+          "Gil Garratt",
+          "Maryke Hendrikse"
         ]
       }
     ],
@@ -77640,7 +77648,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "",
     "canonical_file": "",
-    "production_title": "'Toronto Fringe Festival: The Jones Boy; Mysterium Tremendum; Hot",
+    "production_title": "''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''Toronto Fringe Festival: The Jones Boy; Mysterium Tremendum; Hot",
     "company": "",
     "venue": "Bloor Cinema; Poor Alex Theatre; Helen Gardiner Phelan Playhouse",
     "city": "Toronto",
@@ -77721,6 +77729,13 @@
         ],
         "playwright": [
           "Anton Piatigorsky"
+        ],
+        "director": [
+          "Chris Abraham"
+        ],
+        "actors": [
+          "Michael Waller",
+          "Jim Jones"
         ]
       },
       {
@@ -77731,6 +77746,10 @@
         ],
         "playwright": [
           "Teresa Pavlinek"
+        ],
+        "actors": [
+          "Teresa Pavlinek",
+          "Jonathan Wilson"
         ]
       }
     ],
@@ -85209,7 +85228,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "",
     "canonical_file": "",
-    "production_title": "Footfalls/Krapp's Last Tape; Otra Tempestad",
+    "production_title": "Footfalls/Krapp''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''s Last Tape; Otra Tempestad",
     "company": "World Stage; Teatro Buendia",
     "venue": "Harbourfront Centre; Buddies in Bad Times Theatre",
     "city": "Toronto",
@@ -85278,6 +85297,18 @@
         ],
         "venue": [
           "Buddies in Bad Times Theatre"
+        ],
+        "actors": [
+          "John Neville",
+          "Elizabeth Shepherd",
+          "Jennifer Phipps",
+          "Donald Davis",
+          "William Hutt",
+          "Diane D'Aquila",
+          "Giselle Navaroli"
+        ],
+        "playwright": [
+          "Samuel Beckett"
         ]
       }
     ],
@@ -88925,6 +88956,31 @@
         ],
         "director": [
           "Neil Munro"
+        ],
+        "actors": [
+          "David Schurmann",
+          "Corinne Koslo",
+          "Michael Ball",
+          "Peter Millard",
+          "Pamela Rabe",
+          "Wendy Thatcher",
+          "Lynne Cormack",
+          "Simon Bradbury",
+          "Jan Alexandra Smith",
+          "Craig Erickson",
+          "Pete Treadwell",
+          "Matthew MacFadzean"
+        ],
+        "playwright": [
+          "Noël Coward",
+          "Nigel Williams",
+          "William Golding"
+        ],
+        "set_designer": [
+          "Kelly Wolf"
+        ],
+        "costume_designer": [
+          "Kelly Wolf"
         ]
       }
     ],
@@ -89569,6 +89625,12 @@
         "production_title": "Spinning Into Butter",
         "venue": [
           "Mitzi E. Newhouse Theatre"
+        ],
+        "actors": [
+          "Hope Davis"
+        ],
+        "playwright": [
+          "Rebecca Gilman"
         ]
       },
       {
@@ -89576,6 +89638,17 @@
         "production_title": "The Man Who Came to Dinner",
         "venue": [
           "Selwyn Theatre"
+        ],
+        "director": [
+          "Jerry Zaks"
+        ],
+        "actors": [
+          "Nathan Lane",
+          "Lewis J. Stadlen"
+        ],
+        "playwright": [
+          "Moss Hart",
+          "George S. Kaufman"
         ]
       },
       {
@@ -89583,6 +89656,16 @@
         "production_title": "The Real Thing",
         "venue": [
           "Barrymore Theatre"
+        ],
+        "director": [
+          "David Leveaux"
+        ],
+        "actors": [
+          "Stephen Dillane",
+          "Jennifer Ehle"
+        ],
+        "playwright": [
+          "Tom Stoppard"
         ]
       }
     ],
@@ -90084,6 +90167,19 @@
         ],
         "playwright": [
           "Thornton Wilder"
+        ],
+        "actors": [
+          "Goldie Semple",
+          "Michael Ball",
+          "Corinne Koslo",
+          "Dylan Trowbridge",
+          "Kevin Bundy"
+        ],
+        "set_designer": [
+          "William Schmuck"
+        ],
+        "costume_designer": [
+          "William Schmuck"
         ]
       },
       {
@@ -90094,6 +90190,20 @@
         ],
         "playwright": [
           "Luigi Pirandello"
+        ],
+        "actors": [
+          "Norman Browning",
+          "Kelli Fox",
+          "Sharry Flett",
+          "Joel Hechter",
+          "Zoe Roycroft",
+          "Devon Tulloch",
+          "Ben Carlson",
+          "Jillian Cook",
+          "Barry MacGregor"
+        ],
+        "choreographer": [
+          "Tadeusz Bradecki"
         ]
       }
     ],
@@ -98539,6 +98649,31 @@
         ],
         "set_designer": [
           "Dany Lyne"
+        ],
+        "actors": [
+          "Douglas Campbell",
+          "Benedict Campbell",
+          "Graham Abbey",
+          "Jonathan Goad",
+          "Jane Spence",
+          "Richard McMillan",
+          "Barry MacGregor",
+          "Diane D'Aquila",
+          "Seana McKenna",
+          "Sara Topham",
+          "Domini Blythe",
+          "Paul Dunn",
+          "Keith Dinicol",
+          "Thom Marriott",
+          "Evan Buliung",
+          "Michael Therriault",
+          "Donald Carrier"
+        ],
+        "playwright": [
+          "William Shakespeare"
+        ],
+        "musicians": [
+          "Jill Vitols"
         ]
       }
     ],
@@ -103715,6 +103850,25 @@
         ],
         "playwright": [
           "R.H. Thomson"
+        ],
+        "director": [
+          "Jonas Jurasas"
+        ],
+        "actors": [
+          "Alison Sealy-Smith",
+          "Walter Borden",
+          "David Collins",
+          "Jackie Richardson",
+          "R.H. Thomson"
+        ],
+        "choreographer": [
+          "Vivine Scarlett"
+        ],
+        "set_designer": [
+          "Astrid Janson"
+        ],
+        "lighting_designer": [
+          "Paul Mathiesen"
         ]
       }
     ],
@@ -103793,6 +103947,9 @@
         ],
         "playwright": [
           "Kevin P. Patterson"
+        ],
+        "director": [
+          "Mark Wilson"
         ]
       }
     ],
@@ -103970,6 +104127,18 @@
         "production_title": "Cats",
         "venue": [
           "Canon Theatre"
+        ],
+        "playwright": [
+          "T. S. Eliot"
+        ],
+        "composer_lyricist": [
+          "Andrew Lloyd Webber"
+        ],
+        "choreographer": [
+          "Gillian Lynne"
+        ],
+        "set_designer": [
+          "John Napier"
         ]
       },
       {
@@ -103977,6 +104146,18 @@
         "production_title": "Christmas at the Ivanovs",
         "venue": [
           "Poor Alex Theatre"
+        ],
+        "director": [
+          "Aleksandar Sasha Lukac"
+        ],
+        "actors": [
+          "Michelle Polak",
+          "Michaela Hayek",
+          "Kurt Smeaton"
+        ],
+        "playwright": [
+          "Alexander Vedensky",
+          "Daniil Kharms"
         ]
       }
     ],
@@ -104430,7 +104611,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "",
     "canonical_file": "",
-    "production_title": "Zadie's Shoes; Belle",
+    "production_title": "Zadie''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''s Shoes; Belle",
     "company": "Factory Theatre",
     "venue": "Winter Garden Theatre; Factory Theatre",
     "city": "Toronto",
@@ -104512,6 +104693,22 @@
         ],
         "playwright": [
           "Florence Gibson"
+        ],
+        "director": [
+          "Jackie Maxwell"
+        ],
+        "actors": [
+          "Jordan Pettle",
+          "Kelli Fox",
+          "Randy Hughson",
+          "Paul Soles",
+          "Deborah Drakeford",
+          "Tara Rosling",
+          "Yanna McIntosh",
+          "Soo Garay",
+          "Nigel Shawn Williams",
+          "Alex Poch-Goldin",
+          "Janice Robinson"
         ]
       }
     ],
@@ -104864,6 +105061,25 @@
         "production_title": "Inertia [Phase Two]",
         "venue": [
           "Theatre Centre"
+        ],
+        "director": [
+          "Graham McLaren"
+        ],
+        "actors": [
+          "Maureen Beattie",
+          "Duncan Duff",
+          "Carol Ann Crawford",
+          "Lewis Howden",
+          "Sean MacMahon",
+          "Natasha Priest",
+          "Michelle Polak",
+          "Erika Hennebury"
+        ],
+        "playwright": [
+          "Liz Lochhead",
+          "Euripides",
+          "Anton Chekhov",
+          "Jean-Paul Sartre"
         ]
       }
     ],
@@ -104953,6 +105169,15 @@
         ],
         "playwright": [
           "Alessandro Baricco"
+        ],
+        "director": [
+          "Alisa Palmer"
+        ],
+        "actors": [
+          "Richard Greenblatt",
+          "Rick Roberts",
+          "Dylan Rosenthal",
+          "Tom McCamus"
         ]
       }
     ],
@@ -105047,6 +105272,18 @@
           "du Maurier Theatre Centre"
         ],
         "playwright": [
+          "Kristen Thomson"
+        ],
+        "director": [
+          "Eimuntas Nekrosius"
+        ],
+        "actors": [
+          "Andrius Mamontovas",
+          "Kestutis Jakstas",
+          "Povilas Budrys",
+          "Ramunas Rudokas",
+          "Viktorija Kuodyte",
+          "Vytautas Rumsas",
           "Kristen Thomson"
         ]
       }
@@ -108182,6 +108419,10 @@
         ],
         "playwright": [
           "Paul Dunn"
+        ],
+        "actors": [
+          "Damien Atkins",
+          "Kimwun Perehinec"
         ]
       },
       {
@@ -108192,6 +108433,10 @@
         ],
         "playwright": [
           "Anton Piatigorsky"
+        ],
+        "actors": [
+          "Karen Robinson",
+          "Paul Soles"
         ]
       }
     ],
@@ -109327,6 +109572,18 @@
         ],
         "playwright": [
           "Timothy Findley"
+        ],
+        "actors": [
+          "Paul Soles",
+          "Elizabeth Shepherd",
+          "Kimwun Perehinec",
+          "Brenda Robins",
+          "Damien Atkins",
+          "Brent Carver",
+          "Chick Reid",
+          "Karen Robinson",
+          "Gordon Rand",
+          "Stephen Ouimette"
         ]
       }
     ],
@@ -109450,6 +109707,25 @@
         ],
         "choreographer": [
           "Susan Stroman"
+        ],
+        "actors": [
+          "Harvey Fierstein",
+          "Marissa Jaret Winokur",
+          "Dick Latessa",
+          "Josefina Gabrielle",
+          "Patrick Wilson",
+          "Shuler Hensley"
+        ],
+        "playwright": [
+          "Thomas Meehan",
+          "Marc Shaiman",
+          "Scott Wittman"
+        ],
+        "set_designer": [
+          "David Rockwell"
+        ],
+        "costume_designer": [
+          "William Ivey Long"
         ]
       }
     ],
@@ -111868,6 +112144,15 @@
         ],
         "playwright": [
           "Hamish McColl"
+        ],
+        "director": [
+          "Kenneth Branagh"
+        ],
+        "actors": [
+          "Sean Foley",
+          "Hamish McColl",
+          "Toby Jones",
+          "Daniel Radcliffe"
         ]
       }
     ],
@@ -114483,6 +114768,9 @@
         ],
         "venue": [
           "Lyttelton Theatre"
+        ],
+        "playwright": [
+          "John Webster"
         ]
       }
     ],
@@ -115237,6 +115525,22 @@
         ],
         "venue": [
           "York Quay Studio Theatre"
+        ],
+        "director": [
+          "Amy Burton"
+        ],
+        "actors": [
+          "Rick Snyder",
+          "Peter Burns",
+          "David Pasquesi",
+          "Matt DeCaro",
+          "Tracy Letts",
+          "Alan Wider"
+        ],
+        "playwright": [
+          "David Mamet",
+          "Yael Farber",
+          "Thembi Mtshali"
         ]
       }
     ],
@@ -115474,6 +115778,20 @@
         ],
         "musicians": [
           "Charles Hazlewood"
+        ],
+        "director": [
+          "Mark Dornford-May"
+        ],
+        "actors": [
+          "Vumile Nomanyama",
+          "Andries Mbali",
+          "Sibusiso Ziqubu",
+          "Pauline Malefane",
+          "Steven Hicks",
+          "Zorro Sidloyi"
+        ],
+        "playwright": [
+          "David Greig"
         ]
       }
     ],
@@ -115494,7 +115812,7 @@
     "editorial_issue_type": "",
     "canonical_file": "",
     "production_title": "The Magnetism of the Heart; Gagarin Way",
-    "company": "Teatr Rozmaitosci; Crow's Theatre",
+    "company": "Teatr Rozmaitosci; Crow''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''s Theatre",
     "venue": "Premiere Dance Theatre; Buddies in Bad Times Theatre",
     "city": "Toronto",
     "coordinates": [],
@@ -115567,6 +115885,15 @@
         ],
         "playwright": [
           "Gregory Burke"
+        ],
+        "director": [
+          "Jim Millan"
+        ],
+        "actors": [
+          "Aidan Devine",
+          "Shawn Doyle",
+          "Matthew MacFadzean",
+          "Hardee T. Lineham"
         ]
       }
     ],
@@ -118294,6 +118621,28 @@
         ],
         "director": [
           "David Storch"
+        ],
+        "actors": [
+          "David Ferry",
+          "Oliver Dennis",
+          "Deborah Pollitt",
+          "Patrick Garrow",
+          "Patric Masurkevitch",
+          "Larry Yachimec",
+          "Andy Pogson",
+          "Tova Smith",
+          "Jonathan Geenen",
+          "David Collins",
+          "Genevieve Steele",
+          "Zainab Musa",
+          "Bruce Gooch",
+          "Sanjay Talwar",
+          "Chapelle Jaffe",
+          "Michael Spence",
+          "Michael Spencer-Davis"
+        ],
+        "playwright": [
+          "William Shakespeare"
         ]
       }
     ],
@@ -118848,7 +119197,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "",
     "canonical_file": "",
-    "production_title": "Love's Labour's Lost; Quiet in the Land",
+    "production_title": "Love''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''s Labour''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''s Lost; Quiet in the Land",
     "company": "Stratford Festival",
     "venue": "Festival Theatre; Tom Patterson Theatre",
     "city": "Stratford, Ontario",
@@ -118959,6 +119308,33 @@
         ],
         "playwright": [
           "Anne Chislett"
+        ],
+        "actors": [
+          "Graham Abbey",
+          "Barry MacGregor",
+          "Shane Carty",
+          "Les Carlson",
+          "Robert King",
+          "Jonathan Goad",
+          "Christy Bauman",
+          "Jacob James",
+          "Deborah Hay",
+          "Dana Green",
+          "Stephen Gartner",
+          "Brian Tree",
+          "Caleb Marshall",
+          "Sarah McVie",
+          "James Blendick",
+          "Brian Bedford",
+          "Michelle Giroux",
+          "Michael Therriault",
+          "Stephen Russell"
+        ],
+        "set_designer": [
+          "Santo Loquasto"
+        ],
+        "costume_designer": [
+          "Santo Loquasto"
         ]
       }
     ],
@@ -119525,6 +119901,37 @@
         ],
         "director": [
           "Daryl Cloran"
+        ],
+        "actors": [
+          "Peter Hutt",
+          "Blythe Wilson",
+          "Benedict Campbell",
+          "Guy Bannerman",
+          "Neil Barclay",
+          "Jeff Lillico",
+          "Mike Nadajewski",
+          "Glynis Ranney",
+          "Patricia Hamilton",
+          "Goldie Semple",
+          "Norman Browning",
+          "Caroline Cave",
+          "Jillian Cook",
+          "Simon Bradbury",
+          "Helen Taylor"
+        ],
+        "playwright": [
+          "Bertolt Brecht",
+          "Elisabeth Hauptmann",
+          "George S. Kaufman",
+          "Edna Ferber",
+          "Brian Friel"
+        ],
+        "composer_lyricist": [
+          "Kurt Weill",
+          "Bertolt Brecht"
+        ],
+        "musical_director": [
+          "Paul Sportelli"
         ]
       }
     ],
@@ -122107,6 +122514,12 @@
         ],
         "set_designer": [
           "John Thompson"
+        ],
+        "actors": [
+          "Jeff Miller",
+          "Mary Francis Moore",
+          "Jane Spidell",
+          "Randy Hughson"
         ]
       }
     ],
@@ -122408,6 +122821,19 @@
         ],
         "director": [
           "Marti Maraden"
+        ],
+        "actors": [
+          "Andrew Buckland",
+          "Lionel Newton",
+          "Tom Rooney",
+          "Fiona Reid",
+          "Ben Carlson",
+          "David Schurmann",
+          "Michelle Monteith",
+          "Douglas Campbell"
+        ],
+        "playwright": [
+          "William Shakespeare"
         ]
       }
     ],
@@ -125031,6 +125457,30 @@
         ],
         "playwright": [
           "Oscar Wilde"
+        ],
+        "actors": [
+          "Tara Rosling",
+          "Brigitte Robinson",
+          "Jillian Cook",
+          "Adam Brazier",
+          "Lorne Kennedy",
+          "David Leyshon",
+          "Jim Mezon",
+          "Evan Buliung",
+          "Guy Bannerman",
+          "Fiona Byrne",
+          "Goldie Semple",
+          "Patricia Hamilton",
+          "Nora McLellan"
+        ],
+        "set_designer": [
+          "Sue LePage"
+        ],
+        "lighting_designer": [
+          "Kevin Lamotte"
+        ],
+        "sound_designer": [
+          "Marc Desormeaux"
         ]
       }
     ],
@@ -125480,6 +125930,18 @@
         ],
         "venue": [
           "Tim Sims Playhouse"
+        ],
+        "director": [
+          "Deanne Taylor"
+        ],
+        "actors": [
+          "Paul Constable",
+          "Naomi Snieckus",
+          "Jamillah Ross",
+          "Matt Baram"
+        ],
+        "playwright": [
+          "Deanne Taylor"
         ]
       }
     ],
@@ -129234,6 +129696,9 @@
         ],
         "playwright": [
           "Edward Albee"
+        ],
+        "sound_designer": [
+          "John Lott"
         ]
       }
     ],
@@ -135615,9 +136080,9 @@
     "publication_status": "publish",
     "editorial_issue_type": "",
     "canonical_file": "",
-    "production_title": "The Winter's Tale; Aladdin",
+    "production_title": "The Winter''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''s Tale; Aladdin",
     "company": "Theatre Kingston; Ross Petty Productions",
-    "venue": "Harbourfront's Brigantine Room; Elgin Theatre",
+    "venue": "Harbourfront''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''s Brigantine Room; Elgin Theatre",
     "city": "Toronto",
     "coordinates": [],
     "people": [
@@ -135679,6 +136144,18 @@
         ],
         "venue": [
           "Harbourfront's Brigantine Room"
+        ],
+        "director": [
+          "Craig Walker"
+        ],
+        "actors": [
+          "Matthew Gibson",
+          "Jennifer Roblin",
+          "Peter Aston",
+          "Ivan Sherry"
+        ],
+        "playwright": [
+          "William Shakespeare"
         ]
       },
       {
@@ -135689,6 +136166,12 @@
         ],
         "venue": [
           "Elgin Theatre"
+        ],
+        "actors": [
+          "Jennifer Dale",
+          "Adam Brazier",
+          "Kyle Dadd",
+          "Ross Petty"
         ]
       }
     ],
@@ -136215,7 +136698,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "",
     "canonical_file": "",
-    "production_title": "Trout Stanley; The Little Dragon; Bea's Niece",
+    "production_title": "Trout Stanley; The Little Dragon; Bea''s Niece",
     "company": "Factory Theatre; Theatre Passe Muraille; Tarragon Theatre",
     "venue": "Factory Theatre; Theatre Passe Muraille; Tarragon Theatre",
     "city": "Toronto",
@@ -136287,6 +136770,9 @@
         ],
         "playwright": [
           "Claudia Dey"
+        ],
+        "lighting_designer": [
+          "Andrea Lundy"
         ]
       },
       {
@@ -136640,6 +137126,17 @@
         ],
         "playwright": [
           "Tom Murphy"
+        ],
+        "director": [
+          "Jason Byrne"
+        ],
+        "actors": [
+          "Joseph Ziegler",
+          "Jonathan Goad",
+          "Sarah Dodd",
+          "David Jansen",
+          "Oliver Becker",
+          "Aaron Poole"
         ]
       },
       {
@@ -136689,7 +137186,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "",
     "canonical_file": "",
-    "production_title": "Love's Labour's Lost; 'da Kink in My Hair",
+    "production_title": "Love''''''''''''''''''''''''''''''''s Labour''''''''''''''''''''''''''''''''s Lost; ''''''''''''''''''''''''''''''''da Kink in My Hair",
     "company": "National Arts Centre English Theatre; Mirvish Productions",
     "venue": "National Arts Centre; Princess of Wales Theatre",
     "city": "Ottawa; Toronto",
@@ -136769,6 +137266,25 @@
         ],
         "playwright": [
           "William Shakespeare"
+        ],
+        "actors": [
+          "Juan Chioran",
+          "Ben Carlson",
+          "Yanna McIntosh",
+          "Kelli Fox",
+          "Nigel Shawn Williams",
+          "David William",
+          "Peter Froehlich",
+          "David Schurmann"
+        ],
+        "set_designer": [
+          "John Pennoyer"
+        ],
+        "costume_designer": [
+          "John Pennoyer"
+        ],
+        "musicians": [
+          "Marc Desormeaux"
         ]
       },
       {
@@ -137485,6 +138001,10 @@
         "production_title": "No One Knows",
         "company": [
           "Harbinger Theatre"
+        ],
+        "musicians": [
+          "Wycliffe Gordon",
+          "Frank Wess"
         ]
       },
       {
@@ -137492,6 +138012,9 @@
         "production_title": "Whisper Sweet",
         "company": [
           "High Note"
+        ],
+        "musicians": [
+          "Norman Simmons"
         ]
       }
     ],
@@ -137767,6 +138290,9 @@
         "production_title": "Cast Iron",
         "venue": [
           "Tarragon Theatre Extra Space"
+        ],
+        "playwright": [
+          "Lisa Codrington"
         ]
       },
       {
@@ -137774,6 +138300,10 @@
         "production_title": "Pinter & Pirandello",
         "venue": [
           "Artword Theatre"
+        ],
+        "playwright": [
+          "Harold Pinter",
+          "Luigi Pirandello"
         ]
       }
     ],
@@ -138287,6 +138817,20 @@
         ],
         "venue": [
           "Tarragon Theatre"
+        ],
+        "director": [
+          "Daniel Brooks"
+        ],
+        "actors": [
+          "Randy Hughson",
+          "Laura de Carteret",
+          "Diego Matamoros",
+          "Maggie Huculak",
+          "Eric Peterson",
+          "Barbara Gordon"
+        ],
+        "playwright": [
+          "John Mighton"
         ]
       },
       {
@@ -138440,7 +138984,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "",
     "canonical_file": "",
-    "production_title": "My Mother's Feet; Macbeth",
+    "production_title": "My Mother''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''s Feet; Macbeth",
     "company": "Canadian Stage; Modern Times Stage Company",
     "venue": "Berkeley Street Theatre Upstairs; Theatre Centre",
     "city": "Toronto",
@@ -138502,6 +139046,17 @@
         ],
         "playwright": [
           "Gina Wilkinson"
+        ],
+        "director": [
+          "Micheline Chevrier"
+        ],
+        "actors": [
+          "Tom Rooney",
+          "Jane Spidell",
+          "Jerry Franken"
+        ],
+        "lighting_designer": [
+          "John Munro"
         ]
       },
       {
@@ -138907,6 +139462,13 @@
         ],
         "playwright": [
           "Francois Archambault"
+        ],
+        "director": [
+          "Ken Gass"
+        ],
+        "actors": [
+          "Geoffrey Pounsett",
+          "Richard Zeppieri"
         ]
       },
       {
@@ -139125,6 +139687,24 @@
         ],
         "playwright": [
           "Winnie Holtzman"
+        ],
+        "director": [
+          "Joe Mantello"
+        ],
+        "actors": [
+          "Stephanie J. Block",
+          "Kendra Kassebaum",
+          "David Garrison",
+          "Timothy Britten Parker"
+        ],
+        "composer_lyricist": [
+          "Stephen Schwartz"
+        ],
+        "choreographer": [
+          "Wayne Cilento"
+        ],
+        "set_designer": [
+          "Eugene Lee"
         ]
       },
       {
@@ -139159,7 +139739,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "",
     "canonical_file": "",
-    "production_title": "Ain't Misbehavin'; Bobby Short",
+    "production_title": "Ain''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''t Misbehavin''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''; Bobby Short",
     "company": "Canadian Stage",
     "venue": "Bluma Appel Theatre; Carlyle",
     "city": "Toronto",
@@ -139229,6 +139809,18 @@
         ],
         "composer_lyricist": [
           "Fats Waller"
+        ],
+        "director": [
+          "Marion J. Caffey"
+        ],
+        "musical_director": [
+          "William Foster McDaniel"
+        ],
+        "choreographer": [
+          "Marion J. Caffey"
+        ],
+        "set_designer": [
+          "Phillip Silver"
         ]
       },
       {
@@ -139807,7 +140399,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "",
     "canonical_file": "",
-    "production_title": "Alice's Affair; Trying; Rope Enough; Chekhov's Heartache",
+    "production_title": "Alice''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''s Affair; Trying; Rope Enough; Chekhov''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''s Heartache",
     "company": "Tarragon Theatre; Canadian Stage; Buddies in Bad Times Theatre; Theatre Smith-Gilmour",
     "venue": "Tarragon Theatre; Berkeley Street Theatre; Buddies in Bad Times Theatre; Factory",
     "city": "Toronto",
@@ -139898,6 +140490,13 @@
         ],
         "playwright": [
           "Susan Coyne"
+        ],
+        "actors": [
+          "Brooke Johnson",
+          "Nancy Palk",
+          "Brenda Robins",
+          "David Jansen",
+          "Susan Coyne"
         ]
       },
       {
@@ -139914,6 +140513,10 @@
         ],
         "playwright": [
           "Joanna McClelland Glass"
+        ],
+        "actors": [
+          "Caroline Cave",
+          "Paul Soles"
         ]
       },
       {
@@ -139930,6 +140533,9 @@
         ],
         "playwright": [
           "Sky Gilbert"
+        ],
+        "actors": [
+          "Gavin Crawford"
         ]
       },
       {
@@ -139946,6 +140552,10 @@
         ],
         "playwright": [
           "Anton Chekhov"
+        ],
+        "actors": [
+          "Michele Smith",
+          "Dean Gilmour"
         ]
       }
     ],
@@ -140230,6 +140840,15 @@
         ],
         "director": [
           "Ken Gass"
+        ],
+        "actors": [
+          "Jane Spidell",
+          "Ron White",
+          "David Ferry",
+          "Linda Prystawska"
+        ],
+        "playwright": [
+          "George F. Walker"
         ]
       },
       {
@@ -140243,6 +140862,15 @@
         ],
         "director": [
           "Leah Cherniak"
+        ],
+        "actors": [
+          "Rick Roberts",
+          "Jenny Young"
+        ],
+        "playwright": [
+          "Leah Cherniak",
+          "Robert Morgan",
+          "Martha Ross"
         ]
       }
     ],
@@ -140398,6 +141026,19 @@
         ],
         "composer_lyricist": [
           "Tim Rice"
+        ],
+        "director": [
+          "Ken Gass"
+        ],
+        "actors": [
+          "Dennis O'Connor",
+          "Brenda Bazinet",
+          "Ron White",
+          "David Ferry",
+          "Jody Stevens"
+        ],
+        "playwright": [
+          "George F. Walker"
         ]
       },
       {
@@ -140497,7 +141138,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "",
     "canonical_file": "",
-    "production_title": "Journey's End; Happy End",
+    "production_title": "Journey''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''s End; Happy End",
     "company": "Shaw Festival",
     "venue": "Court House Theatre; Royal George Theatre",
     "city": "Niagara-on-the-Lake",
@@ -140582,6 +141223,15 @@
         ],
         "director": [
           "Christopher Newton"
+        ],
+        "actors": [
+          "Evan Buliung",
+          "Patrick Galligan",
+          "Jeff Lillico",
+          "Simon Bradbury"
+        ],
+        "playwright": [
+          "R.C. Sherriff"
         ]
       },
       {
@@ -140592,6 +141242,19 @@
         ],
         "director": [
           "Tadeusz Bradecki"
+        ],
+        "actors": [
+          "Ben Carlson",
+          "Glynis Ranney",
+          "Jay Turvey",
+          "Jeff Madden",
+          "Donna Belleville"
+        ],
+        "playwright": [
+          "Elisabeth Hauptmann"
+        ],
+        "set_designer": [
+          "Peter Hartwell"
         ]
       }
     ],
@@ -141207,6 +141870,24 @@
         ],
         "playwright": [
           "Jason Sherman"
+        ],
+        "actors": [
+          "Cynthia Dale",
+          "David Snelgrove",
+          "James Blendick",
+          "Brigit Wilson",
+          "Thom Marriott",
+          "Jonathan Goad",
+          "Scott Wentworth",
+          "Shane Carty",
+          "Peter van Gestel",
+          "Ron Kennell",
+          "Michelle Giroux",
+          "Dixie Seatle",
+          "Dana Green"
+        ],
+        "set_designer": [
+          "Lorenzo Savoini"
         ]
       }
     ],
@@ -141320,7 +142001,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "",
     "canonical_file": "",
-    "production_title": "Fallen Angels; Wingfield's Inferno",
+    "production_title": "Fallen Angels; Wingfield''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''s Inferno",
     "company": "Stratford Festival",
     "venue": "Avon Theatre; Tom Patterson Theatre",
     "city": "Stratford, Ontario",
@@ -141400,6 +142081,15 @@
         ],
         "playwright": [
           "Dan Needles"
+        ],
+        "actors": [
+          "Rod Beattie",
+          "Lucy Peacock",
+          "Joyce Campion",
+          "Seana McKenna"
+        ],
+        "costume_designer": [
+          "Susan Benson"
         ]
       }
     ],
@@ -142077,6 +142767,19 @@
         ],
         "playwright": [
           "Tennessee Williams"
+        ],
+        "actors": [
+          "Seana McKenna",
+          "Jonathan Goad",
+          "Dana Green",
+          "Sarah McVie",
+          "Thom Marriott",
+          "Scott Wentworth",
+          "Michelle Giroux",
+          "Brigit Wilson"
+        ],
+        "set_designer": [
+          "Peter Hartwell"
         ]
       },
       {
@@ -142087,6 +142790,9 @@
         ],
         "playwright": [
           "Nicholas Billon"
+        ],
+        "actors": [
+          "Diana Leblanc"
         ]
       },
       {
@@ -142097,6 +142803,9 @@
         ],
         "playwright": [
           "Ruth Draper"
+        ],
+        "actors": [
+          "Lally Cadeau"
         ]
       }
     ],
@@ -142190,6 +142899,16 @@
         ],
         "director": [
           "James MacDonald"
+        ],
+        "actors": [
+          "Juan Chioran",
+          "Jacklyn Francis",
+          "Xuan Fraser",
+          "Anousha Alamian",
+          "Jim Warren"
+        ],
+        "musicians": [
+          "Jonathan Monro"
         ]
       },
       {
@@ -142203,6 +142922,10 @@
         ],
         "director": [
           "David Ferry"
+        ],
+        "actors": [
+          "Paulino Nunes",
+          "Elizabeth Saunders"
         ]
       }
     ],
@@ -142395,6 +143118,28 @@
         ],
         "playwright": [
           "Lillian Hellman"
+        ],
+        "actors": [
+          "Diana Donnelly",
+          "Benedict Campbell",
+          "Ben Carlson",
+          "Mary Haney",
+          "Evan Buliung",
+          "David Leyshon",
+          "Sharry Flett",
+          "Jenny L. Wright",
+          "Peter Hutt",
+          "Mike Shara",
+          "Jim Mezon",
+          "Laurie Paton",
+          "Charlotte Gowdy",
+          "David Schurmann",
+          "Patricia Hamilton",
+          "Wendy Thatcher",
+          "Goldie Semple"
+        ],
+        "set_designer": [
+          "Christina Poddubiuk"
         ]
       }
     ],
@@ -142586,6 +143331,18 @@
         ],
         "set_designer": [
           "Judith Bowden"
+        ],
+        "director": [
+          "Jackie Maxwell"
+        ],
+        "actors": [
+          "Nicole Underhay",
+          "Martin Happer",
+          "Mary Haney",
+          "Diana Donnelly",
+          "Michael Ball",
+          "Norman Browning",
+          "Peter Krantz"
         ]
       }
     ],
@@ -143670,6 +144427,9 @@
         ],
         "playwright": [
           "Catherine Muschamp"
+        ],
+        "actors": [
+          "Chapelle Jaffe"
         ]
       },
       {
@@ -143686,6 +144446,14 @@
         ],
         "playwright": [
           "William Shakespeare"
+        ],
+        "actors": [
+          "Kyle Horton",
+          "Michael Rubenfeld",
+          "Brandon McGibbon",
+          "Brendan Murray",
+          "Philippa Domville",
+          "Victor Ertmannis"
         ]
       }
     ],
@@ -144132,6 +144900,30 @@
         ],
         "venue": [
           "Harbourfront Centre"
+        ],
+        "director": [
+          "Chris Abraham"
+        ],
+        "actors": [
+          "Liisa Repo-Martell",
+          "Ann-Marie Kerr",
+          "Colombe Demers",
+          "Jordan Pettle",
+          "David Jansen"
+        ],
+        "playwright": [
+          "John Steinbeck",
+          "Arthur Schnitzler",
+          "Harley Granville Barker"
+        ],
+        "dramaturg": [
+          "Chris Abraham"
+        ],
+        "set_designer": [
+          "Julie Fox"
+        ],
+        "sound_designer": [
+          "Jan Komarek"
         ]
       },
       {
@@ -144948,6 +145740,12 @@
         ],
         "venue": [
           "Royal Alexandra Theatre"
+        ],
+        "actors": [
+          "Barry Humphries"
+        ],
+        "playwright": [
+          "Barry Humphries"
         ]
       },
       {
@@ -144958,6 +145756,11 @@
         ],
         "venue": [
           "Second City"
+        ],
+        "actors": [
+          "Anand Rajaram",
+          "Matt Baram",
+          "Paul Bates"
         ]
       }
     ],
@@ -145497,6 +146300,10 @@
         "production_title": "The Amorous Servant",
         "venue": [
           "Artword Theatre"
+        ],
+        "playwright": [
+          "Carlo Goldoni",
+          "John van Burek"
         ]
       }
     ],
@@ -145579,8 +146386,8 @@
     "publication_status": "publish",
     "editorial_issue_type": "composite_article",
     "canonical_file": "",
-    "production_title": "Last Will and Videotape; Movin' Out",
-    "company": "Mysteriously Yours; Movin' Out touring production",
+    "production_title": "Last Will and Videotape; Movin'''''''''''''''''''''''''''''''' Out",
+    "company": "Mysteriously Yours; Movin'''''''''''''''''''''''''''''''' Out touring production",
     "venue": "Mysteriously Yours; Canon Theatre",
     "city": "Toronto",
     "coordinates": [],
@@ -145632,6 +146439,9 @@
         ],
         "venue": [
           "Mysteriously Yours"
+        ],
+        "actors": [
+          "Jean Daigle"
         ]
       },
       {
@@ -145642,6 +146452,15 @@
         ],
         "venue": [
           "Canon Theatre"
+        ],
+        "composer_lyricist": [
+          "Billy Joel"
+        ],
+        "choreographer": [
+          "Twyla Tharp"
+        ],
+        "musicians": [
+          "James Fox"
         ]
       }
     ],
@@ -146466,6 +147285,11 @@
         ],
         "set_designer": [
           "Astrid Janson"
+        ],
+        "actors": [
+          "Anita Majumdar",
+          "Sanjay Talwar",
+          "Deena Aziz"
         ]
       },
       {
@@ -146861,6 +147685,15 @@
         ],
         "venue": [
           "Hummingbird Centre"
+        ],
+        "director": [
+          "Tim Albery"
+        ],
+        "set_designer": [
+          "Michael Levine"
+        ],
+        "lighting_designer": [
+          "David Finn"
         ]
       },
       {
@@ -147128,6 +147961,14 @@
         ],
         "playwright": [
           "Ronald Weihs"
+        ],
+        "actors": [
+          "David Ferry",
+          "Irene Poole",
+          "Brett Christopher",
+          "Karl Pruner",
+          "Jennifer Phipps",
+          "Claire Jenkins"
         ]
       },
       {
@@ -147141,6 +147982,10 @@
         ],
         "playwright": [
           "Andrew Moodie"
+        ],
+        "actors": [
+          "Maurice Dean Wint",
+          "Kevin Hanchard"
         ]
       }
     ],
@@ -147503,6 +148348,20 @@
         ],
         "venue": [
           "Theatre Passe Muraille Backspace"
+        ],
+        "director": [
+          "Kate Lynch"
+        ],
+        "actors": [
+          "Patricia Fagan",
+          "Jordan Pettle",
+          "David Jansen"
+        ],
+        "playwright": [
+          "Tom Walmsley"
+        ],
+        "set_designer": [
+          "Kelly Wolf"
         ]
       },
       {
@@ -147768,6 +148627,22 @@
         ],
         "playwright": [
           "Michel Tremblay"
+        ],
+        "director": [
+          "Leah Cherniak"
+        ],
+        "actors": [
+          "Caroline Cave",
+          "Claire Calnan",
+          "Nancy Beatty",
+          "Jeffrey R. Smith",
+          "Brendan Gall"
+        ],
+        "set_designer": [
+          "Yannik Larivee"
+        ],
+        "lighting_designer": [
+          "Yannik Larivee"
         ]
       },
       {
@@ -147964,7 +148839,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "composite_article",
     "canonical_file": "",
-    "production_title": "The Monument; Hana's Suitcase",
+    "production_title": "The Monument; Hana''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''s Suitcase",
     "company": "Obsidian Theatre Company; Lorraine Kimsa Theatre for Young People",
     "venue": "Berkeley Street Theatre Downstairs; Lorraine Kimsa Theatre for Young People",
     "city": "Toronto",
@@ -148048,6 +148923,16 @@
         ],
         "set_designer": [
           "Shawn Kerwin"
+        ],
+        "actors": [
+          "Yanna McIntosh",
+          "Siu Ta",
+          "Richard Lee",
+          "Jean Yoon",
+          "Jessica Greenberg",
+          "Paul Dunn",
+          "Eric Trask",
+          "Sarah Orenstein"
         ]
       },
       {
@@ -148312,6 +149197,12 @@
         ],
         "venue": [
           "Cameron House"
+        ],
+        "actors": [
+          "Richard Alan Campbell",
+          "Greg Campbell",
+          "Jim Jones",
+          "Kerry Ann Doherty"
         ]
       },
       {
@@ -148729,7 +149620,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "composite_article",
     "canonical_file": "",
-    "production_title": "American Buffalo; Who's Afraid of Virginia Woolf?",
+    "production_title": "American Buffalo; Who''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''s Afraid of Virginia Woolf?",
     "company": "Soulpepper Theatre Company; Neptune Theatre",
     "venue": "Young Centre for the Performing Arts; Neptune Theatre",
     "city": "Toronto",
@@ -148788,11 +149679,28 @@
         ],
         "venue": [
           "Young Centre for the Performing Arts"
+        ],
+        "director": [
+          "Stuart Hughes"
+        ],
+        "actors": [
+          "Ted Dykstra",
+          "Jeff Lillico",
+          "Michael Hanrahan"
+        ],
+        "playwright": [
+          "David Mamet"
+        ],
+        "set_designer": [
+          "Victoria Wallace"
+        ],
+        "costume_designer": [
+          "Victoria Wallace"
         ]
       },
       {
         "order": "2",
-        "production_title": "Who's Afraid of Virginia Woolf?",
+        "production_title": "Who''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''s Afraid of Virginia Woolf?",
         "company": [
           "Neptune Theatre"
         ],
@@ -149140,6 +150048,9 @@
         ],
         "playwright": [
           "Diane Flacks"
+        ],
+        "director": [
+          "Eda Holmes"
         ]
       },
       {
@@ -150993,6 +151904,17 @@
         ],
         "playwright": [
           "Don McKellar"
+        ],
+        "actors": [
+          "Bob Martin",
+          "Beth Leavel",
+          "Sutton Foster"
+        ],
+        "set_designer": [
+          "David Gallo"
+        ],
+        "costume_designer": [
+          "Gregg Barnes"
         ]
       },
       {
@@ -152290,7 +153212,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "",
     "canonical_file": "",
-    "production_title": "I Am Not a Dinner Mint; Bird Flu Over the Cuckoo's Nest",
+    "production_title": "I Am Not a Dinner Mint; Bird Flu Over the Cuckoo''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''s Nest",
     "company": "Harbourfront Centre; Second City",
     "venue": "Harbourfront Centre; Second City",
     "city": "Toronto",
@@ -152362,6 +153284,17 @@
         ],
         "playwright": [
           "Trey Anthony"
+        ],
+        "actors": [
+          "Trey Anthony",
+          "Rachel-Lea Rickards",
+          "Graziella Mastrangelo",
+          "Aktina Stathaki",
+          "Anand Rajaram",
+          "Matt Baram",
+          "Naomi Snieckus",
+          "David Raitt",
+          "Ashley Botting"
         ]
       },
       {
@@ -153711,6 +154644,19 @@
         ],
         "playwright": [
           "Allen Cole"
+        ],
+        "actors": [
+          "David Keeley",
+          "Tamara Bernier",
+          "Corinne Koslo",
+          "Frank Moore",
+          "Martin Julien",
+          "Randi Helmers",
+          "John Millard",
+          "Salvatore Antonio"
+        ],
+        "composer_lyricist": [
+          "Allen Cole"
         ]
       },
       {
@@ -154040,7 +154986,7 @@
     "editorial_issue_type": "",
     "canonical_file": "",
     "production_title": "Descent; The Famous Victories of Henry V",
-    "company": "Theatre Passe Muraille; Shakespeare and the Queen's Men",
+    "company": "Theatre Passe Muraille; Shakespeare and the Queen''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''s Men",
     "venue": "Theatre Passe Muraille; Tranzac Club",
     "city": "Toronto",
     "coordinates": [],
@@ -154102,6 +155048,15 @@
         ],
         "playwright": [
           "Tom Walmsley"
+        ],
+        "director": [
+          "Kate Lynch"
+        ],
+        "actors": [
+          "Brendan Murray",
+          "Christopher Morris",
+          "John Blackwood",
+          "Paul Fauteux"
         ]
       },
       {
@@ -154614,6 +155569,14 @@
         ],
         "venue": [
           "Hummingbird Centre"
+        ],
+        "actors": [
+          "John Paul Almon",
+          "Bethe Austin",
+          "Christopher Stanton",
+          "Tricia Lahde",
+          "Chris Hanratty",
+          "Shira Leuchter"
         ]
       },
       {
@@ -155315,6 +156278,12 @@
         ],
         "playwright": [
           "John Mighton"
+        ],
+        "actors": [
+          "Eric Peterson",
+          "Carolyn Hetherington",
+          "Laura de Carteret",
+          "Daniel MacIvor"
         ]
       },
       {
@@ -155347,6 +156316,10 @@
         ],
         "playwright": [
           "Rosa Laborde"
+        ],
+        "actors": [
+          "Cara Pifko",
+          "Sergio Di Zio"
         ]
       }
     ],
@@ -155802,6 +156775,15 @@
         ],
         "set_designer": [
           "Andjelija Djuric"
+        ],
+        "actors": [
+          "Jacklyn Francis",
+          "Yanna McIntosh",
+          "Cliff Saunders",
+          "Jordan Pettle"
+        ],
+        "playwright": [
+          "David S. Craig"
         ]
       },
       {
@@ -155818,6 +156800,9 @@
         ],
         "set_designer": [
           "Nicholas Muni"
+        ],
+        "composer_lyricist": [
+          "Charles Gounod"
         ]
       }
     ],
@@ -157445,6 +158430,10 @@
         ],
         "playwright": [
           "Thornton Wilder"
+        ],
+        "actors": [
+          "Steven McCarthy",
+          "Michelle Monteith"
         ]
       },
       {
@@ -157461,6 +158450,12 @@
         ],
         "playwright": [
           "Robert Chafe"
+        ],
+        "actors": [
+          "Deidre Gillard-Rowlings",
+          "Darryl Avalon Hopkins",
+          "Robert Wyatt Thorne",
+          "Melanie Caines"
         ]
       }
     ],
@@ -158686,6 +159681,11 @@
         ],
         "playwright": [
           "Daniel MacIvor"
+        ],
+        "actors": [
+          "Caroline Gillis",
+          "Emmy Alcorn",
+          "Sarah Dodd"
         ]
       },
       {
@@ -159375,7 +160375,7 @@
     "canonical_file": "",
     "production_title": "Risk Everything / Back Home",
     "company": "TR Warszawa; Urban Theatre Projects",
-    "venue": "McBride's Bicycle Shop; undisclosed Toronto backyard",
+    "venue": "McBride''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''s Bicycle Shop; undisclosed Toronto backyard",
     "city": "Toronto",
     "coordinates": [],
     "people": [
@@ -159445,6 +160445,18 @@
         ],
         "venue": [
           "undisclosed Toronto backyard"
+        ],
+        "director": [
+          "Alicia Talbot"
+        ],
+        "actors": [
+          "Aleksandra Konieczna",
+          "Agnieszka Podsiadlik",
+          "Jan Drawnel",
+          "Aaron Fa'Aoso",
+          "Buddy Dannoun",
+          "Leo Tanoi",
+          "Shannon Williams"
         ]
       }
     ],
@@ -160040,6 +161052,18 @@
         "production_title": "Better Living",
         "venue": [
           "Factory Theatre"
+        ],
+        "director": [
+          "Ken Gass"
+        ],
+        "actors": [
+          "Clare Coulter",
+          "Ron White",
+          "Irene Poole",
+          "Sarah Manninen",
+          "Lisa Norton",
+          "Brandon McGibbon",
+          "Oliver Becker"
         ]
       },
       {
@@ -160047,6 +161071,9 @@
         "production_title": "Tough!",
         "venue": [
           "Factory Theatre Studio"
+        ],
+        "actors": [
+          "Bethany Jillard"
         ]
       }
     ],
@@ -177879,6 +178906,12 @@
         ],
         "playwright": [
           "Brooke Johnson"
+        ],
+        "director": [
+          "Allyson McMackon"
+        ],
+        "actors": [
+          "Brooke Johnson"
         ]
       },
       {
@@ -177892,6 +178925,14 @@
         ],
         "playwright": [
           "Jacob Richmond"
+        ],
+        "director": [
+          "Jacob Richmond",
+          "Britt Small"
+        ],
+        "actors": [
+          "Camille Steubel",
+          "Amitai Marmorstein"
         ]
       }
     ],
@@ -178151,6 +179192,20 @@
         ],
         "playwright": [
           "Charles Dickens"
+        ],
+        "actors": [
+          "Mike Shara",
+          "Marla McLean",
+          "Patrick McKenna",
+          "Juan Chioran",
+          "Douglas E. Hughes",
+          "Leslie Arden",
+          "Blair Williams",
+          "Joseph Ziegler",
+          "Oliver Dennis",
+          "John Jarvis",
+          "Patrick Galligan",
+          "Maggie Huculak"
         ]
       }
     ],
@@ -182630,6 +183685,13 @@
         ],
         "set_designer": [
           "Ben Chaisson"
+        ],
+        "actors": [
+          "Rick Miller"
+        ],
+        "playwright": [
+          "Daniel Brooks",
+          "Rick Miller"
         ]
       },
       {
@@ -182643,6 +183705,9 @@
         ],
         "set_designer": [
           "Beth Kates"
+        ],
+        "actors": [
+          "Karl Ang"
         ]
       }
     ],
@@ -183017,7 +184082,7 @@
     "slug": "2009-05-16-shows-that-leave-you-wanting-more-and-that-s-the-issue-with-doubt-and-tuesdays",
     "route": "/reviews/2009-05-16-shows-that-leave-you-wanting-more-and-that-s-the-issue-with-doubt-and-tuesdays/",
     "source_file": "2009.05.16.National_Post.Shows_That_Leave_You_Wanting_More_And_ThatS_The_Issue_With_Doubt_And_Tuesda.md",
-    "title": "Shows That Leave You Wanting More; And That's The Issue With Doubt And Tuesdays",
+    "title": "Shows That Leave You Wanting More; And That''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''s The Issue With Doubt And Tuesdays",
     "date": "2009-05-16",
     "year": "2009",
     "publication": "National Post",
@@ -183097,6 +184162,11 @@
         ],
         "playwright": [
           "John Patrick Shanley"
+        ],
+        "actors": [
+          "David Storch",
+          "Daniela Vlaskalic",
+          "Raven Dauda"
         ]
       },
       {
@@ -183110,6 +184180,9 @@
         ],
         "playwright": [
           "Jeffrey Hatcher"
+        ],
+        "actors": [
+          "Rick Roberts"
         ]
       },
       {
@@ -184317,7 +185390,7 @@
     "slug": "2009-06-13-perhaps-edgar-allan-should-be-left-to-homer-luminato-s-dramatic-offerings",
     "route": "/reviews/2009-06-13-perhaps-edgar-allan-should-be-left-to-homer-luminato-s-dramatic-offerings/",
     "source_file": "2009.06.13.National_Post.Perhaps_Edgar_Allen_Should_Be_Left_To_Homer_LuminatoS_Dramatic_Offerings_Le.md",
-    "title": "Perhaps Edgar Allan Should Be Left To Homer; Luminato's Dramatic Offerings",
+    "title": "Perhaps Edgar Allan Should Be Left To Homer; Luminato''''s Dramatic Offerings",
     "date": "2009-06-13",
     "year": "2009",
     "publication": "National Post",
@@ -188147,6 +189220,19 @@
         "production_title": "The Drowning Girls",
         "venue": [
           "Tarragon Theatre Extra Space"
+        ],
+        "director": [
+          "Charlie Tomlinson"
+        ],
+        "actors": [
+          "Beth Graham",
+          "Daniela Vlaskalic",
+          "Natascha Girgis"
+        ],
+        "playwright": [
+          "Charlie Tomlinson",
+          "Beth Graham",
+          "Daniela Vlaskalic"
         ]
       },
       {
@@ -188154,6 +189240,10 @@
         "production_title": "Bash'd",
         "venue": [
           "Theatre Passe Muraille"
+        ],
+        "actors": [
+          "Chris Craddock",
+          "Nathan Cuckow"
         ]
       }
     ],
@@ -188304,7 +189394,7 @@
     "slug": "2009-11-07-a-mama-s-boy-stares-down-his-problems-in-that-face-while-yellowman-on-prejudice",
     "route": "/reviews/2009-11-07-a-mama-s-boy-stares-down-his-problems-in-that-face-while-yellowman-on-prejudice/",
     "source_file": "2009.11.07.National_Post.A_MamaSboy_Stares_Down_His_Problems_In_That_Face_While_Yellowman_On_Prejudi.md",
-    "title": "A Mama's Boy Stares Down His Problems In That Face; While Yellowman, On Prejudice",
+    "title": "A Mama''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''s Boy Stares Down His Problems In That Face; While Yellowman, On Prejudice",
     "date": "2009-11-07",
     "year": "2009",
     "publication": "National Post",
@@ -188390,6 +189480,10 @@
         ],
         "playwright": [
           "Dael Orlandersmith"
+        ],
+        "actors": [
+          "Dean Marshall",
+          "Odena"
         ]
       }
     ],
@@ -189541,7 +190635,7 @@
     "slug": "2009-12-12-civil-elegies-a-good-bite-but-doesn-t-satiate-and-why-lieutenant-of-inishmore",
     "route": "/reviews/2009-12-12-civil-elegies-a-good-bite-but-doesn-t-satiate-and-why-lieutenant-of-inishmore/",
     "source_file": "2009.12.12.National_Post.Civil_Elegies_A_Good_Bite_But_DoesnT_Satiate_And_Why_Lieutenant_Of_Inishmor.md",
-    "title": "Civil Elegies A Good Bite, But Doesn't Satiate; And Why Lieutenant Of Inishmore",
+    "title": "Civil Elegies A Good Bite, But Doesn''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''t Satiate; And Why Lieutenant Of Inishmore",
     "date": "2009-12-12",
     "year": "2009",
     "publication": "National Post",
@@ -191112,6 +192206,24 @@
         ],
         "venue": [
           "Berkeley Street Theatre Downstairs"
+        ],
+        "director": [
+          "Robert McQueen"
+        ],
+        "actors": [
+          "Jacquelyn French",
+          "Jeff Lillico",
+          "Juan Chioran",
+          "Christina Gordon",
+          "Tracy Michailidis",
+          "Michael Torontow",
+          "Patty Jamieson"
+        ],
+        "playwright": [
+          "Craig Lucas"
+        ],
+        "composer_lyricist": [
+          "Adam Guettel"
         ]
       },
       {
@@ -191122,6 +192234,11 @@
         ],
         "venue": [
           "Canon Theatre"
+        ],
+        "actors": [
+          "Melissa Gilbert",
+          "Kevin Massey",
+          "Kara Lindsay"
         ]
       }
     ],
@@ -192383,6 +193500,12 @@
         ],
         "director": [
           "Allyson McMackon"
+        ],
+        "actors": [
+          "Maev Beaty"
+        ],
+        "set_designer": [
+          "Lindsay Anne Black"
         ]
       },
       {
@@ -192396,6 +193519,15 @@
         ],
         "director": [
           "Sarah Garton Stanley"
+        ],
+        "actors": [
+          "Ryan Hollyman",
+          "Michelle Latimer",
+          "Holly Lewis",
+          "Michelle Monteith"
+        ],
+        "playwright": [
+          "Tara Beagan"
         ]
       }
     ],
@@ -192797,6 +193929,11 @@
         ],
         "playwright": [
           "Marcel Ayme"
+        ],
+        "actors": [
+          "Jonathan Brass",
+          "Kate Ross",
+          "Alex Dault"
         ]
       },
       {
@@ -192807,6 +193944,9 @@
         ],
         "playwright": [
           "Sean O'Casey"
+        ],
+        "actors": [
+          "Andy Trithardt"
         ]
       }
     ],
@@ -193867,7 +195007,7 @@
     "slug": "2010-05-22-a-fear-of-death-and-what-comes-after-it-where-s-my-money-and-la-sagouine",
     "route": "/reviews/2010-05-22-a-fear-of-death-and-what-comes-after-it-where-s-my-money-and-la-sagouine/",
     "source_file": "2010.05.22.National_Post.A_Fear_Of_Death_And_What_Comes_After_It_WhereS_My_Money_And_La_Sagouine_Tac.md",
-    "title": "A Fear Of Death, And What Comes After It; Where's My Money? And La Sagouine",
+    "title": "A Fear Of Death, And What Comes After It; Where''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''s My Money? And La Sagouine",
     "date": "2010-05-22",
     "year": "2010",
     "publication": "National Post",
@@ -193876,7 +195016,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "",
     "canonical_file": "",
-    "production_title": "Where's My Money? / La Sagouine",
+    "production_title": "Where''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''s My Money? / La Sagouine",
     "company": "",
     "venue": "Pia Bouman Studio Theatre; Berkeley Street Theatre Downstairs",
     "city": "Toronto",
@@ -193932,7 +195072,7 @@
     "production_groups": [
       {
         "order": "1",
-        "production_title": "Where's My Money?",
+        "production_title": "Where''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''s My Money?",
         "venue": [
           "Pia Bouman Studio Theatre"
         ],
@@ -193948,6 +195088,9 @@
         ],
         "playwright": [
           "Antonine Maillet"
+        ],
+        "actors": [
+          "Viola Leger"
         ]
       }
     ],
@@ -194163,7 +195306,7 @@
     "slug": "2010-06-05-what-good-is-reality-anyway-shaw-s-season-strong-with-the-cherry-orchard",
     "route": "/reviews/2010-06-05-what-good-is-reality-anyway-shaw-s-season-strong-with-the-cherry-orchard/",
     "source_file": "2010.06.05.National_Post.What_Good_Is_Reality_Anyway_ShawS_Season_Strong_With_The_Cherry_Orchard_And.md",
-    "title": "What Good Is Reality, Anyway?; Shaw's Season Strong With The Cherry Orchard",
+    "title": "What Good Is Reality, Anyway?; Shaw''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''s Season Strong With The Cherry Orchard",
     "date": "2010-06-05",
     "year": "2010",
     "publication": "National Post",
@@ -194267,6 +195410,18 @@
         ],
         "set_designer": [
           "Peter Hartwell"
+        ],
+        "actors": [
+          "Laurie Paton",
+          "Benedict Campbell",
+          "Al Kozlik",
+          "Julie Martell",
+          "Gabrielle Jones",
+          "Jim Mezon",
+          "Gord Rand",
+          "Severn Thompson",
+          "Mark Uhre",
+          "Neil Barclay"
         ]
       },
       {
@@ -194280,6 +195435,13 @@
         ],
         "set_designer": [
           "Sue LePage"
+        ],
+        "actors": [
+          "Gray Powell",
+          "Norman Browning",
+          "Diana Donnelly",
+          "Mary Haney",
+          "Peter Krantz"
         ]
       }
     ],
@@ -194383,7 +195545,7 @@
     "slug": "2010-06-12-she-s-their-fire-at-their-desire-she-s-got-it-one-touch-of-venus-is-delightful",
     "route": "/reviews/2010-06-12-she-s-their-fire-at-their-desire-she-s-got-it-one-touch-of-venus-is-delightful/",
     "source_file": "2010.06.12.National_Post.SheS_Their_Fire_At_Their_Desire_SheS_Got_It_One_Touch_Of_Venus_Is_Delightfu.md",
-    "title": "She's Their Fire, at Their Desire, She's Got It; One Touch of Venus Is Delightful;",
+    "title": "She''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''s Their Fire, at Their Desire, She''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''s Got It; One Touch of Venus Is Delightful;",
     "date": "2010-06-12",
     "year": "2010",
     "publication": "National Post",
@@ -194495,6 +195657,23 @@
         ],
         "set_designer": [
           "Camellia Koo"
+        ],
+        "actors": [
+          "Robin Evan Willis",
+          "Kyle Blair",
+          "Mark Uhre",
+          "Deborah Hay",
+          "Jay Turvey",
+          "Neil Barclay",
+          "Julie Martell",
+          "Gabrielle Jones"
+        ],
+        "playwright": [
+          "S.J. Perelman",
+          "Ogden Nash"
+        ],
+        "choreographer": [
+          "Michael Lichtefeld"
         ]
       },
       {
@@ -194508,6 +195687,12 @@
         ],
         "set_designer": [
           "William Schmuck"
+        ],
+        "actors": [
+          "Kelli Fox",
+          "Wendy Thatcher",
+          "Melanie Phillipson",
+          "Patty Jamieson"
         ]
       }
     ],
@@ -195477,6 +196662,18 @@
         ],
         "playwright": [
           "George Bernard Shaw"
+        ],
+        "actors": [
+          "Patrick Galligan",
+          "Krista Colosimo",
+          "Jonathan Gould",
+          "Ric Reid",
+          "Patrick McManus",
+          "Thom Marriott",
+          "Cherissa Richards"
+        ],
+        "set_designer": [
+          "Ken MacDonald"
         ]
       },
       {
@@ -195490,6 +196687,11 @@
         ],
         "playwright": [
           "J. M. Barrie"
+        ],
+        "actors": [
+          "Diana Donnelly",
+          "Gord Rand",
+          "Peter Millard"
         ]
       }
     ],
@@ -196375,7 +197577,7 @@
     "slug": "2010-08-28-when-light-verse-becomes-too-heavy-caryl-churchill-s-play-is-prescient-but",
     "route": "/reviews/2010-08-28-when-light-verse-becomes-too-heavy-caryl-churchill-s-play-is-prescient-but/",
     "source_file": "2010.08.28.National_Post.When_Light_Verse_Becomes_Too_Heavy_Caryl_ChurchillS_Play_Is_Prescient_But_R.md",
-    "title": "When Light Verse Becomes Too Heavy; Caryl Churchill's Play Is Prescient But",
+    "title": "When Light Verse Becomes Too Heavy; Caryl Churchill''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''s Play Is Prescient But",
     "date": "2010-08-28",
     "year": "2010",
     "publication": "National Post",
@@ -196460,6 +197662,13 @@
         ],
         "playwright": [
           "Caryl Churchill"
+        ],
+        "actors": [
+          "Anthony Bekenn",
+          "Steven Sutcliffe",
+          "David Schurmann",
+          "Graeme Somerville",
+          "Ali Momen"
         ]
       },
       {
@@ -196473,6 +197682,11 @@
         ],
         "playwright": [
           "Linda Griffiths"
+        ],
+        "actors": [
+          "Kelli Fox",
+          "Sharry Flett",
+          "Donna Belleville"
         ]
       }
     ],
@@ -196681,7 +197895,7 @@
     "slug": "2010-09-04-macis-back-yet-another-musical-depression-era-king-of-thieves-a-mole-for",
     "route": "/reviews/2010-09-04-macis-back-yet-another-musical-depression-era-king-of-thieves-a-mole-for/",
     "source_file": "2010.09.04.National_Post.Macis_Back_Yet_Another_Musical_Depression-Era_King_Of_Thieves_A_Mole_For_Th.md",
-    "title": "'Macis Back: Yet Another Musical; Depression-Era King Of Thieves: A Mole For",
+    "title": "''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''Macis Back: Yet Another Musical; Depression-Era King Of Thieves: A Mole For",
     "date": "2010-09-04",
     "year": "2010",
     "publication": "National Post",
@@ -196777,6 +197991,21 @@
         ],
         "playwright": [
           "George F. Walker"
+        ],
+        "actors": [
+          "Evan Buliung",
+          "Nora McLellan",
+          "Nigel Bennett",
+          "Shane Carty",
+          "Sandy Winsby",
+          "Scott A. Hurst",
+          "Sean Cullen"
+        ],
+        "composer_lyricist": [
+          "John Roby"
+        ],
+        "set_designer": [
+          "Peter Hartwell"
         ]
       },
       {
@@ -196790,6 +198019,10 @@
         ],
         "playwright": [
           "Michel Tremblay"
+        ],
+        "actors": [
+          "Lucy Peacock",
+          "Tom Rooney"
         ]
       }
     ],
@@ -197361,7 +198594,7 @@
     "slug": "2010-10-09-it-s-mind-over-meta-hard-times-ali-ali-the-deportation-hearings-and",
     "route": "/reviews/2010-10-09-it-s-mind-over-meta-hard-times-ali-ali-the-deportation-hearings-and/",
     "source_file": "2010.10.09.National_Post.Its_mind_over_meta_Hard_Times_Ali_Ali_The_Deportation_Hearings_and_title_of_show.md",
-    "title": "'It''s mind over meta; Hard Times, Ali & Ali: The Deportation Hearings and",
+    "title": "''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''It''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''s mind over meta; Hard Times, Ali & Ali: The Deportation Hearings and",
     "date": "2010-10-09",
     "year": "2010",
     "publication": "National Post",
@@ -197445,6 +198678,22 @@
         ],
         "director": [
           "Chris Earle"
+        ],
+        "actors": [
+          "David Holmes",
+          "Ann Holmes",
+          "Anand Rajaram",
+          "Guillermo Verdecchia",
+          "Marcus Youssef",
+          "Paul Sun-Hyung Lee",
+          "Anita Majumdar"
+        ],
+        "playwright": [
+          "Chris Earle",
+          "Guillermo Verdecchia",
+          "Marcus Youssef",
+          "Camyar Chai",
+          "Charles Dickens"
         ]
       },
       {
@@ -197941,6 +199190,20 @@
         ],
         "playwright": [
           "Arthur Miller"
+        ],
+        "actors": [
+          "Joseph Ziegler",
+          "Nancy Palk",
+          "Ari Cohen",
+          "Tim Campbell",
+          "Michael Hanrahan",
+          "Gregory Prest",
+          "Brendan Wall",
+          "Ins Choi",
+          "Raquel Duffy"
+        ],
+        "set_designer": [
+          "Lorenzo Savoini"
         ]
       },
       {
@@ -197951,6 +199214,12 @@
         ],
         "playwright": [
           "Lorraine Hansberry"
+        ],
+        "actors": [
+          "Bahia Watson",
+          "Charles Officer",
+          "Abena Malika",
+          "Alison Sealy-Smith"
         ]
       }
     ],
@@ -202519,6 +203788,17 @@
         ],
         "playwright": [
           "Kate Cayley"
+        ],
+        "director": [
+          "Alan Dilworth"
+        ],
+        "actors": [
+          "Eric Goulem",
+          "Paul Dunn",
+          "Sarah Orenstein",
+          "Richard McMillan",
+          "Caroline Gillis",
+          "Claire Calnan"
         ]
       },
       {
@@ -202531,6 +203811,9 @@
           "Al Green Theatre"
         ],
         "playwright": [
+          "Jim Brochu"
+        ],
+        "actors": [
           "Jim Brochu"
         ]
       }
@@ -202766,7 +204049,7 @@
     "slug": "2011-04-16-an-imported-play-can-t-match-our-town-a-feeble-british-show-and-soulpepper",
     "route": "/reviews/2011-04-16-an-imported-play-can-t-match-our-town-a-feeble-british-show-and-soulpepper/",
     "source_file": "2011.04.16.National_Post.An_Imported_Play_CanT_Match_Our_Town_A_Feeble_British_Show_And_Soulpepper_A.md",
-    "title": "An Imported Play Can't Match Our Town; A Feeble British Show And Soulpepper",
+    "title": "An Imported Play Can''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''t Match Our Town; A Feeble British Show And Soulpepper",
     "date": "2011-04-16",
     "year": "2011",
     "publication": "National Post",
@@ -202859,6 +204142,22 @@
         ],
         "venue": [
           "Panasonic Theatre"
+        ],
+        "director": [
+          "Jeremy Dyson",
+          "Andy Nyman",
+          "Sean Holmes"
+        ],
+        "actors": [
+          "Jason Blicker",
+          "Jack Langedijk",
+          "David Reale",
+          "Darrin Baker"
+        ],
+        "playwright": [
+          "Jeremy Dyson",
+          "Andy Nyman",
+          "Thornton Wilder"
         ]
       },
       {
@@ -202869,6 +204168,21 @@
         ],
         "venue": [
           "Young Centre for the Performing Arts"
+        ],
+        "director": [
+          "Joseph Ziegler"
+        ],
+        "actors": [
+          "Krystin Pellerin",
+          "Nancy Palk",
+          "William Webster",
+          "Brenda Robins",
+          "Diego Matamoros",
+          "Kevin Bundy",
+          "Jane Spidell",
+          "Jeff Lillico",
+          "Dominique Matamoros",
+          "Albert Schultz"
         ]
       }
     ],
@@ -204364,6 +205678,24 @@
         ],
         "composer_lyricist": [
           "Tim Rice"
+        ],
+        "actors": [
+          "Chilina Kennedy",
+          "Josh Young",
+          "Bruce Dow",
+          "Evan Buliung",
+          "Tom McCamus",
+          "Steve Ross",
+          "Randy Hughson"
+        ],
+        "set_designer": [
+          "Robert Brill"
+        ],
+        "costume_designer": [
+          "Paul Tazewell"
+        ],
+        "lighting_designer": [
+          "Howell Binkley"
         ]
       }
     ],
@@ -204464,6 +205796,11 @@
         ],
         "playwright": [
           "Lennox Robinson"
+        ],
+        "actors": [
+          "Mary Haney",
+          "Corrine Koslo",
+          "Craig Pike"
         ]
       },
       {
@@ -204477,6 +205814,14 @@
         ],
         "playwright": [
           "Bernard Shaw"
+        ],
+        "actors": [
+          "Nigel Shawn Williams",
+          "Wade Bogert-O'Brien",
+          "Claire Jullien",
+          "Krista Colosimo",
+          "Graeme Somerville",
+          "Norman Browning"
         ]
       }
     ],
@@ -205166,6 +206511,29 @@
         ],
         "director": [
           "Brett Christopher"
+        ],
+        "actors": [
+          "David Janssen",
+          "Kelly McIntosh",
+          "Jovanni Sy",
+          "Nicole Robert",
+          "George Masswohl",
+          "Sean Dixon",
+          "John Blackwood",
+          "Jasmine Chen",
+          "Robert Joy",
+          "Ruby Joy",
+          "Caden Douglas",
+          "Ryan Hollyman",
+          "Scott A. Hurst",
+          "Kristian Bruun",
+          "Jennifer Toulmin"
+        ],
+        "playwright": [
+          "William Shakespeare"
+        ],
+        "composer_lyricist": [
+          "Jonathan Monro"
         ]
       }
     ],
@@ -206161,6 +207529,13 @@
         ],
         "playwright": [
           "Suzan-Lori Parks"
+        ],
+        "actors": [
+          "Kevin Hanchard",
+          "Nigel Shawn Williams",
+          "Julie Martell",
+          "Jeff Meadows",
+          "Lorne Kennedy"
         ]
       },
       {
@@ -206439,6 +207814,22 @@
         ],
         "playwright": [
           "Michel Tremblay"
+        ],
+        "actors": [
+          "Ben Carlson",
+          "Sara Topham",
+          "Kelli Fox",
+          "Peter Hutt",
+          "Juan Chioran",
+          "Martha Farrell",
+          "Gareth Potter",
+          "Oliver Becker"
+        ],
+        "set_designer": [
+          "John Lee Beatty"
+        ],
+        "costume_designer": [
+          "Robin Fraser Paye"
         ]
       }
     ],
@@ -206664,7 +208055,7 @@
     "slug": "2011-08-27-savage-whimsy-or-how-to-describe-white-biting-dog-and-cirque-s-totem",
     "route": "/reviews/2011-08-27-savage-whimsy-or-how-to-describe-white-biting-dog-and-cirque-s-totem/",
     "source_file": "2011.08.27.National_Post.Savage_Whimsy_Or_How_To_Describe_White_Biting_Dog_And_CirqueS_Totem.md",
-    "title": "Savage Whimsy; Or, How To Describe White Biting Dog And Cirque's Totem",
+    "title": "Savage Whimsy; Or, How To Describe White Biting Dog And Cirque''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''s Totem",
     "date": "2011-08-27",
     "year": "2011",
     "publication": "National Post",
@@ -206741,6 +208132,19 @@
         ],
         "director": [
           "Nancy Palk"
+        ],
+        "actors": [
+          "Joseph Ziegler",
+          "Fiona Reid",
+          "Gregory Prest",
+          "Mike Ross",
+          "Michaela Washburn"
+        ],
+        "playwright": [
+          "Judith Thompson"
+        ],
+        "set_designer": [
+          "Christina Poddubiuk"
         ]
       },
       {
@@ -207745,6 +209149,16 @@
         ],
         "playwright": [
           "James Gangl"
+        ],
+        "director": [
+          "Ashlie Corcoran"
+        ],
+        "actors": [
+          "David Jansen",
+          "Naomi Wright",
+          "Hardee T. Lineham",
+          "Jesse Aaron Dwyre",
+          "James Gangl"
         ]
       }
     ],
@@ -208493,6 +209907,14 @@
         ],
         "venue": [
           "Imperial Pub"
+        ],
+        "actors": [
+          "Marcel Dragonieri",
+          "Justin Miller",
+          "Briana Templeton"
+        ],
+        "playwright": [
+          "Max Frisch"
         ]
       },
       {
@@ -208503,6 +209925,13 @@
         ],
         "venue": [
           "Walmer Centre Theatre"
+        ],
+        "actors": [
+          "Dov Mickelson"
+        ],
+        "playwright": [
+          "Adam Seelig",
+          "Luigi Pirandello"
         ]
       }
     ],
@@ -208762,6 +210191,15 @@
         ],
         "playwright": [
           "Tomson Highway"
+        ],
+        "actors": [
+          "Paul Braunstein",
+          "Rick Alan Campbell",
+          "Greg Campbell",
+          "Mac Fyfe",
+          "Jean Yoon",
+          "Kyra Harper",
+          "Billy Merasty"
         ]
       }
     ],
@@ -209611,6 +211049,12 @@
         ],
         "actors": [
           "Lesley Faulkner"
+        ],
+        "director": [
+          "Peter Pasyk"
+        ],
+        "playwright": [
+          "Christopher Shinn"
         ]
       }
     ],
@@ -209621,7 +211065,7 @@
     "slug": "2011-12-20-star-powered-song-dance-a-quick-tour-of-broadway-s-best-bets-this-season",
     "route": "/reviews/2011-12-20-star-powered-song-dance-a-quick-tour-of-broadway-s-best-bets-this-season/",
     "source_file": "2011.12.20.National_Post.Star-Powered_Song_Dance_A_Quick_Tour_Of_BroadwayS_Best_Bets_This_Season.md",
-    "title": "Star-Powered Song & Dance; A Quick Tour Of Broadway's Best Bets This Season",
+    "title": "Star-Powered Song & Dance; A Quick Tour Of Broadway''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''s Best Bets This Season",
     "date": "2011-12-20",
     "year": "2011",
     "publication": "National Post",
@@ -209634,7 +211078,7 @@
     "canonical_file": "",
     "production_title": "How to Succeed in Business Without Really Trying / Seminar / The",
     "company": "Broadway production",
-    "venue": "Al Hirschfeld Theatre; Golden Theatre; Eugene O'Neill Theatre",
+    "venue": "Al Hirschfeld Theatre; Golden Theatre; Eugene O''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''Neill Theatre",
     "city": "New York",
     "coordinates": [
       "40.7589",
@@ -209702,6 +211146,10 @@
         "production_title": "How to Succeed in Business Without Really Trying",
         "venue": [
           "Al Hirschfeld Theatre"
+        ],
+        "actors": [
+          "Daniel Radcliffe",
+          "John Larroquette"
         ]
       },
       {
@@ -209709,6 +211157,10 @@
         "production_title": "Seminar",
         "venue": [
           "Golden Theatre"
+        ],
+        "actors": [
+          "Lily Rabe",
+          "Hamish Linklater"
         ]
       },
       {
@@ -209716,6 +211168,16 @@
         "production_title": "The",
         "venue": [
           "Eugene O'Neill Theatre"
+        ],
+        "actors": [
+          "Andrew Rannells",
+          "Josh Gad",
+          "Nikki M. James"
+        ],
+        "playwright": [
+          "Trey Parker",
+          "Matt Stone",
+          "Robert Lopez"
         ]
       }
     ],
@@ -210070,7 +211532,7 @@
     "slug": "2012-01-07-the-mechanics-of-relationships-love-sex-money-and-tomasso-s-party-at-next",
     "route": "/reviews/2012-01-07-the-mechanics-of-relationships-love-sex-money-and-tomasso-s-party-at-next/",
     "source_file": "2012.01.07.National_Post.The_Mechanics_Of_Relationships_Love_Sex_Money_And_TomassoS_Party_At_Next_St.md",
-    "title": "The Mechanics Of Relationships; Love, Sex, Money And Tomasso's Party At Next",
+    "title": "The Mechanics Of Relationships; Love, Sex, Money And Tomasso''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''s Party At Next",
     "date": "2012-01-07",
     "year": "2012",
     "publication": "National Post",
@@ -210152,6 +211614,13 @@
         ],
         "playwright": [
           "Kit Sandler"
+        ],
+        "actors": [
+          "Gwenlyn Cumyn",
+          "Scott Clarkson",
+          "Daniel Pagett",
+          "Len Silvini",
+          "Brooke Morgan"
         ]
       },
       {
@@ -210165,6 +211634,10 @@
         ],
         "playwright": [
           "Jules Lewis"
+        ],
+        "actors": [
+          "Simon Bracken",
+          "Leah Doz"
         ]
       }
     ],
@@ -210589,6 +212062,20 @@
         ],
         "playwright": [
           "Christopher Shinn"
+        ],
+        "actors": [
+          "Paul Sun-Hyung Lee",
+          "Jean Yoon",
+          "Esther Jun",
+          "Cle Bennett",
+          "Tatiana Maslany",
+          "Ben Lewis",
+          "Indrit Kasapi",
+          "Mike McPhaden",
+          "Richard Lee"
+        ],
+        "set_designer": [
+          "Ken MacKenzie"
         ]
       }
     ],
@@ -210897,6 +212384,9 @@
         ],
         "playwright": [
           "Ravi Jain"
+        ],
+        "actors": [
+          "Asha Jain"
         ]
       },
       {
@@ -210910,6 +212400,10 @@
         ],
         "playwright": [
           "Jeff Baron"
+        ],
+        "actors": [
+          "Theodore Bikel",
+          "Aidan DeSalaiz"
         ]
       }
     ],
@@ -211224,6 +212718,14 @@
         ],
         "playwright": [
           "Fyodor Dostoevsky"
+        ],
+        "actors": [
+          "Adam Paolozza",
+          "Viktor Lukawski",
+          "Arif Mirabdolbaghi"
+        ],
+        "musicians": [
+          "Arif Mirabdolbaghi"
         ]
       },
       {
@@ -211237,6 +212739,10 @@
         ],
         "playwright": [
           "Eugene O'Neill"
+        ],
+        "actors": [
+          "Laurence Dean Ifill",
+          "Michael Kash"
         ]
       }
     ],
@@ -211462,7 +212968,7 @@
     "editorial_issue_type": "",
     "canonical_file": "",
     "production_title": "Seeds / Dani Girl",
-    "company": "Crow's Theatre; Porte Parole; Talk Is Free Theatre",
+    "company": "Crow''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''s Theatre; Porte Parole; Talk Is Free Theatre",
     "venue": "Young Centre for the Performing Arts; Theatre Passe Muraille Backspace",
     "city": "Toronto",
     "coordinates": [],
@@ -211550,6 +213056,23 @@
         ],
         "playwright": [
           "Annabel Soutar"
+        ],
+        "actors": [
+          "Eric Peterson",
+          "Tanja Jacobs",
+          "Alex Ivanovici",
+          "Mariah Inger",
+          "Bruce Dinsmore",
+          "Cary Lawrence"
+        ],
+        "set_designer": [
+          "Julie Fox"
+        ],
+        "lighting_designer": [
+          "Ana Capellutto"
+        ],
+        "sound_designer": [
+          "Richard Feren"
         ]
       },
       {
@@ -211563,6 +213086,12 @@
         ],
         "playwright": [
           "Christopher Dimond"
+        ],
+        "actors": [
+          "Gabi Epstein",
+          "Jonathan Logan",
+          "Amanda Leblanc",
+          "Jeff Madden"
         ]
       }
     ],
@@ -211734,6 +213263,16 @@
         ],
         "director": [
           "Diana Leblanc"
+        ],
+        "actors": [
+          "Joseph Ziegler",
+          "Nancy Palk",
+          "Evan Buliung",
+          "Gregory Prest",
+          "Krystin Pellerin"
+        ],
+        "playwright": [
+          "Eugene O'Neill"
         ]
       },
       {
@@ -211743,6 +213282,13 @@
           "Factory Theatre Studio"
         ],
         "director": [
+          "Nir Paldi"
+        ],
+        "actors": [
+          "Amy Nostbakken"
+        ],
+        "playwright": [
+          "Amy Nostbakken",
           "Nir Paldi"
         ]
       }
@@ -211842,8 +213388,8 @@
     "editorial_issue_type": "",
     "canonical_file": "",
     "production_title": "The Happy Woman / The Never Ending Story",
-    "company": "Nightwood Theatre; Young People's Theatre",
-    "venue": "Berkeley Street Theatre Downstairs; Young People's Theatre",
+    "company": "Nightwood Theatre; Young People''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''s Theatre",
+    "venue": "Berkeley Street Theatre Downstairs; Young People''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''s Theatre",
     "city": "Toronto",
     "coordinates": [],
     "people": [
@@ -211918,6 +213464,19 @@
         ],
         "director": [
           "Kelly Thornton"
+        ],
+        "actors": [
+          "Barbara Gordon",
+          "Maev Beaty",
+          "Martin Happer",
+          "Ingrid Rae Doucet",
+          "Maria Vacratsis"
+        ],
+        "set_designer": [
+          "Denyse Karn"
+        ],
+        "costume_designer": [
+          "Denyse Karn"
         ]
       },
       {
@@ -211931,6 +213490,15 @@
         ],
         "director": [
           "David S. Craig"
+        ],
+        "actors": [
+          "Adamo Ruggiero",
+          "Charlotte Moore",
+          "Natasha Greenblatt"
+        ],
+        "playwright": [
+          "David S. Craig",
+          "Michael Ende"
         ]
       }
     ],
@@ -212393,6 +213961,11 @@
         ],
         "playwright": [
           "Tennessee Williams"
+        ],
+        "actors": [
+          "Kate Valk",
+          "Scott Shepherd",
+          "Ari Fliakos"
         ]
       },
       {
@@ -212409,6 +213982,10 @@
         ],
         "playwright": [
           "Matthew Mackenzie"
+        ],
+        "actors": [
+          "Thomas Olajide",
+          "Jajube Mandiela"
         ]
       }
     ],
@@ -212501,6 +214078,20 @@
         ],
         "venue": [
           "Tarragon Theatre Extra Space"
+        ],
+        "actors": [
+          "Evan Webber",
+          "Frank Cox-O'Connell",
+          "Chris Stanton",
+          "Clare Coulter",
+          "Caroline Gillis",
+          "Jessica Moss"
+        ],
+        "playwright": [
+          "Evan Webber",
+          "Frank Cox-O'Connell",
+          "Sophocles",
+          "Daniel MacIvor"
         ]
       }
     ],
@@ -213102,6 +214693,18 @@
         ],
         "playwright": [
           "Michel Tremblay"
+        ],
+        "director": [
+          "Richard Rose"
+        ],
+        "actors": [
+          "Meg Tilly",
+          "Jane Spidell",
+          "Tony Nappo",
+          "Cliff Saunders",
+          "Matthew Edison",
+          "Sophie Goulet",
+          "Cara Gee"
         ]
       },
       {
@@ -213111,6 +214714,10 @@
           "Tarragon Near Studio"
         ],
         "playwright": [
+          "Daniel Karasik"
+        ],
+        "actors": [
+          "Amelia Sargisson",
           "Daniel Karasik"
         ]
       }
@@ -213285,6 +214892,13 @@
         ],
         "playwright": [
           "Rajiv Joseph"
+        ],
+        "director": [
+          "Stefan Dzeparoski"
+        ],
+        "actors": [
+          "Peter Mooney",
+          "Janet Porter"
         ]
       }
     ],
@@ -213554,6 +215168,16 @@
         ],
         "playwright": [
           "Bernard Shaw"
+        ],
+        "actors": [
+          "Graeme Somerville",
+          "Sharry Flett",
+          "Marla McLean",
+          "Kate Hennig",
+          "Jenny L. Wright",
+          "Thom Marriott",
+          "Jeff Meadows",
+          "Tara Rosling"
         ]
       }
     ],
@@ -214040,6 +215664,24 @@
         ],
         "playwright": [
           "William Shakespeare"
+        ],
+        "actors": [
+          "Ben Carlson",
+          "Deborah Hay",
+          "Juan Chioran",
+          "Tyrone Savage",
+          "James Blendick",
+          "Bethany Jillard",
+          "Timothy D. Stickney",
+          "Michael Blake",
+          "Victor Ertmannis",
+          "Gareth Potter"
+        ],
+        "composer_lyricist": [
+          "Jonathan Monro"
+        ],
+        "set_designer": [
+          "Santo Loquasto"
         ]
       },
       {
@@ -214056,6 +215698,13 @@
         ],
         "playwright": [
           "Terence Rattigan"
+        ],
+        "actors": [
+          "Martin Happer",
+          "Ben Sanders",
+          "Wade Bogert-O'Brien",
+          "Robin Evan Willis",
+          "Julie Martell"
         ]
       }
     ],
@@ -214981,7 +216630,7 @@
     "slug": "2012-07-14-the-wild-green-yonder-little-musicals-for-big-dreamers-wanderlust-trouble",
     "route": "/reviews/2012-07-14-the-wild-green-yonder-little-musicals-for-big-dreamers-wanderlust-trouble/",
     "source_file": "2012.07.14.National_Post.The_wild_green_yonder_Little_musicals_for_big_dreamers_Wanderlust_Trouble_in_Tahiti.md",
-    "title": "'The wild green yonder; Little musicals for big dreamers: Wanderlust, Trouble",
+    "title": "''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''The wild green yonder; Little musicals for big dreamers: Wanderlust, Trouble",
     "date": "2012-07-14",
     "year": "2012",
     "publication": "National Post",
@@ -215091,6 +216740,23 @@
         ],
         "choreographer": [
           "Diana Coatsworth"
+        ],
+        "actors": [
+          "Tom Rooney",
+          "Randy Hughson",
+          "Dan Chameroy",
+          "Robin Hutton",
+          "Lucy Peacock",
+          "Ken James Stewart",
+          "Xuan Fraser",
+          "Troy Adams"
+        ],
+        "composer_lyricist": [
+          "Marek Norman",
+          "Robert Service"
+        ],
+        "set_designer": [
+          "Ken MacDonald"
         ]
       },
       {
@@ -215110,6 +216776,13 @@
         ],
         "choreographer": [
           "Linda Garneau"
+        ],
+        "actors": [
+          "Elodie Gillett",
+          "Mark Uhre"
+        ],
+        "musical_director": [
+          "Paul Sportelli"
         ]
       }
     ],
@@ -216016,6 +217689,12 @@
         ],
         "playwright": [
           "Anthony Black"
+        ],
+        "director": [
+          "Anthony Black"
+        ],
+        "set_designer": [
+          "Nick Bottomley"
         ]
       },
       {
@@ -216026,6 +217705,10 @@
         ],
         "playwright": [
           "Edmund White"
+        ],
+        "actors": [
+          "Todd Michael Sandomirsky",
+          "Terrence Bryant"
         ]
       },
       {
@@ -216036,6 +217719,13 @@
         ],
         "playwright": [
           "Anton Piatigorsky"
+        ],
+        "director": [
+          "Brendan Healy"
+        ],
+        "actors": [
+          "Amy Rutherford",
+          "Paul Fauteux"
         ]
       },
       {
@@ -216043,6 +217733,9 @@
         "production_title": "Pieta",
         "playwright": [
           "Astrid Saalbach"
+        ],
+        "actors": [
+          "Tamsin Kelsey"
         ]
       }
     ],
@@ -218971,6 +220664,11 @@
         ],
         "playwright": [
           "Kat Sandler"
+        ],
+        "actors": [
+          "Daniel Pagett",
+          "Tim Walker",
+          "Tosha Doiron"
         ]
       },
       {
@@ -218987,6 +220685,16 @@
         ],
         "playwright": [
           "Margaret Atwood"
+        ],
+        "actors": [
+          "Megan Follows",
+          "Neema Bickersteth"
+        ],
+        "choreographer": [
+          "Monica Dottor"
+        ],
+        "set_designer": [
+          "Denyse Karn"
         ]
       }
     ],
@@ -219295,7 +221003,7 @@
     "slug": "2013-02-21-the-bard-reworked-soulpepper-finds-new-depths-in-stoppard-while-shakespeare-s",
     "route": "/reviews/2013-02-21-the-bard-reworked-soulpepper-finds-new-depths-in-stoppard-while-shakespeare-s/",
     "source_file": "2013.02.21.National_Post.The_Bard_Reworked_Soulpepper_Finds_New_Depths_In_Stoppard_While_Shakespeare.md",
-    "title": "The Bard Reworked; Soulpepper Finds New Depths In Stoppard, While Shakespeare's",
+    "title": "The Bard Reworked; Soulpepper Finds New Depths In Stoppard, While Shakespeare''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''s",
     "date": "2013-02-21",
     "year": "2013",
     "publication": "National Post",
@@ -219370,6 +221078,16 @@
         "production_title": "Rosencrantz and Guildenstern Are Dead",
         "venue": [
           "Young Centre for the Performing Arts"
+        ],
+        "director": [
+          "Joseph Ziegler"
+        ],
+        "actors": [
+          "Jordan Pettle",
+          "Kenneth Welsh"
+        ],
+        "playwright": [
+          "Tom Stoppard"
         ]
       },
       {
@@ -219637,7 +221355,7 @@
     "slug": "2013-03-09-reversals-of-fortune-two-new-plays-explore-the-folly-of-fate-while-mary-walsh-s",
     "route": "/reviews/2013-03-09-reversals-of-fortune-two-new-plays-explore-the-folly-of-fate-while-mary-walsh-s/",
     "source_file": "2013.03.09.National_Post.Reversals_Of_Fortune_Two_New_Plays_Explore_The_Folly_Of_Fate_While_Mary_Wal.md",
-    "title": "Reversals Of Fortune; Two New Plays Explore The Folly Of Fate, While Mary Walsh's",
+    "title": "Reversals Of Fortune; Two New Plays Explore The Folly Of Fate, While Mary Walsh''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''s",
     "date": "2013-03-09",
     "year": "2013",
     "publication": "National Post",
@@ -219817,7 +221535,7 @@
     "slug": "2013-03-23-stereogripes-ching-chong-chinaman-returns-to-the-same-joke-while-second-city-s",
     "route": "/reviews/2013-03-23-stereogripes-ching-chong-chinaman-returns-to-the-same-joke-while-second-city-s/",
     "source_file": "2013.03.23.National_Post.Stereogripes_Ching_Chong_Chinaman_Returns_To_The_Same_Joke_While_Second_Cit.md",
-    "title": "Stereogripes; Ching Chong Chinaman Returns To The Same Joke, While Second City's",
+    "title": "Stereogripes; Ching Chong Chinaman Returns To The Same Joke, While Second City''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''s",
     "date": "2013-03-23",
     "year": "2013",
     "publication": "National Post",
@@ -219896,6 +221614,17 @@
         ],
         "venue": [
           "Aki Studio Theatre"
+        ],
+        "director": [
+          "Nina Lee Aquino"
+        ],
+        "actors": [
+          "Jane Luk",
+          "Richard Lee",
+          "Brenda Aquino"
+        ],
+        "playwright": [
+          "Lauren Yee"
         ]
       },
       {
@@ -219906,6 +221635,13 @@
         ],
         "venue": [
           "Second City"
+        ],
+        "director": [
+          "Kerry Griffin"
+        ],
+        "actors": [
+          "Nigel Downer",
+          "Jason DeRosse"
         ]
       },
       {
@@ -219916,6 +221652,14 @@
         ],
         "venue": [
           "Factory Theatre"
+        ],
+        "actors": [
+          "Kawa Ada",
+          "Lauren Vandenbrook",
+          "Claire Calnan"
+        ],
+        "playwright": [
+          "Nicolas Billon"
         ]
       }
     ],
@@ -220011,6 +221755,12 @@
         ],
         "playwright": [
           "Melissa Jane Gibson"
+        ],
+        "actors": [
+          "Laura Condlln",
+          "Yanna McIntosh",
+          "Jonathon Young",
+          "Alon Nashman"
         ]
       },
       {
@@ -220027,6 +221777,12 @@
         ],
         "playwright": [
           "Daniel MacIvor"
+        ],
+        "actors": [
+          "David Storch",
+          "Michael Dufays",
+          "Tyson James",
+          "Cara Gee"
         ]
       }
     ],
@@ -220085,7 +221841,7 @@
     "slug": "2013-04-06-toaster-fight-sam-shepard-s-true-west-finally-works-the-whipping-boy-s-dixieland",
     "route": "/reviews/2013-04-06-toaster-fight-sam-shepard-s-true-west-finally-works-the-whipping-boy-s-dixieland/",
     "source_file": "2013.04.06.National_Post.Toaster_Fight_Sam_ShepardS_True_West_Finally_Works_The_Whipping_BoyS_Dixiel.md",
-    "title": "Toaster Fight!; Sam Shepard's True West Finally Works; The Whipping Boy's Dixieland",
+    "title": "Toaster Fight!; Sam Shepard''''''''''''''''''''''''''''''''s True West Finally Works; The Whipping Boy''''''''''''''''''''''''''''''''s Dixieland",
     "date": "2013-04-06",
     "year": "2013",
     "publication": "National Post",
@@ -220161,6 +221917,18 @@
         ],
         "playwright": [
           "Sam Shepard"
+        ],
+        "director": [
+          "Nancy Palk"
+        ],
+        "actors": [
+          "Stuart Hughes",
+          "Mike Ross",
+          "Ari Cohen",
+          "Patricia Hamilton"
+        ],
+        "set_designer": [
+          "Ken MacDonald"
         ]
       },
       {
@@ -220171,6 +221939,11 @@
         ],
         "playwright": [
           "Matthew Lopez"
+        ],
+        "actors": [
+          "Brett Donahue",
+          "Thomas Olajide",
+          "Sterling Jarvis"
         ]
       }
     ],
@@ -222042,6 +223815,9 @@
         ],
         "director": [
           "Ker Wells"
+        ],
+        "playwright": [
+          "William Shakespeare"
         ]
       },
       {
@@ -222154,6 +223930,28 @@
         "production_title": "Enchanted April",
         "venue": [
           "Festival Theatre"
+        ],
+        "director": [
+          "Craig Hall"
+        ],
+        "actors": [
+          "Jim Mezon",
+          "Peter Krantz",
+          "Tara Rosling",
+          "Marla McLean",
+          "Donna Belleville",
+          "Sharry Flett"
+        ],
+        "playwright": [
+          "Brian Friel",
+          "Matthew Barber",
+          "Elizabeth von Arnim"
+        ],
+        "set_designer": [
+          "Christina Poddubiuk"
+        ],
+        "lighting_designer": [
+          "Bonnie Beecher"
         ]
       }
     ],
@@ -222231,7 +224029,7 @@
     "slug": "2013-07-27-pip-pip-hooray-soulpepper-s-great-expectations-lives-up-to-its-name-for",
     "route": "/reviews/2013-07-27-pip-pip-hooray-soulpepper-s-great-expectations-lives-up-to-its-name-for/",
     "source_file": "2013.07.27.National_Post.Pip_Pip_Hooray_SoulpepperS_Great_Expectations_Lives_Up_To_Its_Name_-_For_Th.md",
-    "title": "Pip, Pip, Hooray!; Soulpepper's Great Expectations Lives Up To Its Name - For",
+    "title": "Pip, Pip, Hooray!; Soulpepper''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''s Great Expectations Lives Up To Its Name - For",
     "date": "2013-07-27",
     "year": "2013",
     "publication": "National Post",
@@ -222530,6 +224328,13 @@
         ],
         "playwright": [
           "John Murrell"
+        ],
+        "actors": [
+          "Martha Henry",
+          "Luke Humphrey"
+        ],
+        "set_designer": [
+          "Michael Gianfrancesco"
         ]
       },
       {
@@ -222546,6 +224351,19 @@
         ],
         "playwright": [
           "Craig Lucas"
+        ],
+        "actors": [
+          "Jeff Irving",
+          "Jacqueline Thair",
+          "Patty Jamieson",
+          "Shawn Wright",
+          "Juan Chioran",
+          "Julain Molnar",
+          "Kelly Wong",
+          "Kaylee Harwood"
+        ],
+        "composer_lyricist": [
+          "Adam Guettel"
         ]
       }
     ],
@@ -222937,7 +224755,7 @@
     "slug": "2013-09-07-physical-skitness-second-city-s-latest-revue-reaches-new-levels-of-agility",
     "route": "/reviews/2013-09-07-physical-skitness-second-city-s-latest-revue-reaches-new-levels-of-agility/",
     "source_file": "2013.09.07.National_Post.Physical_Skitness_Second_CityS_Latest_Revue_Reaches_New_Levels_Of_Agility_A.md",
-    "title": "Physical Skitness; Second City's Latest Revue Reaches New Levels Of Agility",
+    "title": "Physical Skitness; Second City''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''s Latest Revue Reaches New Levels Of Agility",
     "date": "2013-09-07",
     "year": "2013",
     "publication": "National Post",
@@ -223015,6 +224833,20 @@
         ],
         "venue": [
           "Second City Mainstage"
+        ],
+        "director": [
+          "Kerry Griffin"
+        ],
+        "actors": [
+          "Connor Thompson",
+          "Kevin Vidal",
+          "Jan Caruana",
+          "Stacey McGunnigle",
+          "Craig Brown",
+          "Allison Price"
+        ],
+        "set_designer": [
+          "Camellia Koo"
         ]
       },
       {
@@ -223025,6 +224857,12 @@
         ],
         "venue": [
           "Dancemakers Studio"
+        ],
+        "actors": [
+          "David Coomber"
+        ],
+        "playwright": [
+          "John Herbert"
         ]
       }
     ],
@@ -223480,6 +225318,15 @@
         ],
         "director": [
           "Vikki Anderson"
+        ],
+        "actors": [
+          "Maria Vacratsis",
+          "Richard Greenblatt",
+          "Owen Mason",
+          "Alex Furber",
+          "Gord Rand",
+          "Claire Calnan",
+          "PJ Prudat"
         ]
       },
       {
@@ -223490,6 +225337,19 @@
         ],
         "director": [
           "Ker Wells"
+        ],
+        "actors": [
+          "Courtney Ch'ng Lancaster",
+          "Maggie Huculak",
+          "W. Joseph Matheson",
+          "Kevin MacDonald"
+        ],
+        "playwright": [
+          "Sarah Berthiaume",
+          "Nadine Desrochers"
+        ],
+        "set_designer": [
+          "Yannik Larivee"
         ]
       }
     ],
@@ -223923,6 +225783,12 @@
         ],
         "set_designer": [
           "Astrid Janson"
+        ],
+        "actors": [
+          "Tara Nicodemo",
+          "Matthew MacFadzean",
+          "Dan Lett",
+          "Evan Buliung"
         ]
       },
       {
@@ -223942,6 +225808,15 @@
         ],
         "set_designer": [
           "Gillian Gallow"
+        ],
+        "actors": [
+          "Grace Lynn Kung",
+          "Ryan Cunningham",
+          "Kate Corbett",
+          "Louis Klanfer"
+        ],
+        "lighting_designer": [
+          "Bonnie Beecher"
         ]
       }
     ],
@@ -224035,6 +225910,16 @@
         ],
         "playwright": [
           "John Patrick Shanley"
+        ],
+        "director": [
+          "Sarah Kitz"
+        ],
+        "actors": [
+          "Diana Bentley",
+          "Melissa D'Agostino",
+          "Nick Abraham",
+          "Caitlin Driscoll",
+          "Tim Walker"
         ]
       },
       {
@@ -224048,6 +225933,14 @@
         ],
         "playwright": [
           "Fyodor Dostoevsky"
+        ],
+        "director": [
+          "Adam Paolozza",
+          "Arif Mirabdolbaghi",
+          "Viktor Lukawski"
+        ],
+        "lighting_designer": [
+          "Andre du Toit"
         ]
       }
     ],
@@ -224069,7 +225962,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "",
     "canonical_file": "",
-    "production_title": "Moss Park / Where's My Money?",
+    "production_title": "Moss Park / Where''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''s My Money?",
     "company": "Green Thumb Theatre",
     "venue": "Theatre Passe Muraille; Sterling Studio Theatre",
     "city": "Toronto",
@@ -224132,11 +226025,17 @@
         ],
         "playwright": [
           "George F. Walker"
+        ],
+        "actors": [
+          "Graeme McComb",
+          "Haley McGee",
+          "Emily Coutts",
+          "Michael Goldlist"
         ]
       },
       {
         "order": "2",
-        "production_title": "Where's My Money?",
+        "production_title": "Where''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''s My Money?",
         "venue": [
           "Sterling Studio Theatre"
         ],
@@ -224321,6 +226220,15 @@
         ],
         "playwright": [
           "Beth Graham"
+        ],
+        "actors": [
+          "Karen Robinson",
+          "Alexis Gordon",
+          "Lucinda Davis",
+          "Peyson Rock"
+        ],
+        "set_designer": [
+          "Camellia Koo"
         ]
       },
       {
@@ -224337,6 +226245,14 @@
         ],
         "playwright": [
           "Joan MacLeod"
+        ],
+        "actors": [
+          "Ian Lake",
+          "Colin Mercer",
+          "Michelle Monteith"
+        ],
+        "lighting_designer": [
+          "Graeme S. Thomson"
         ]
       }
     ],
@@ -224493,6 +226409,22 @@
         "production_title": "After Miss Julie",
         "venue": [
           "Storefront Theatre"
+        ],
+        "director": [
+          "David Ferry"
+        ],
+        "actors": [
+          "Amy Keating"
+        ],
+        "playwright": [
+          "Patrick Marber",
+          "August Strindberg"
+        ],
+        "set_designer": [
+          "David Ferry"
+        ],
+        "lighting_designer": [
+          "David Ferry"
         ]
       },
       {
@@ -224500,6 +226432,13 @@
         "production_title": "The Sacrifice Zone",
         "venue": [
           "Factory Theatre Studio"
+        ],
+        "director": [
+          "Jacquie P.A. Thomas"
+        ],
+        "actors": [
+          "Michelle Polak",
+          "Sam Benson"
         ]
       },
       {
@@ -224603,7 +226542,7 @@
     "slug": "2013-11-30-kind-of-bleu-robert-lepage-s-sideways-story-of-miles-davis-via-a-quebecois",
     "route": "/reviews/2013-11-30-kind-of-bleu-robert-lepage-s-sideways-story-of-miles-davis-via-a-quebecois/",
     "source_file": "2013.11.30.National_Post.Kind_Of_Bleu_Robert_LepageS_Sideways_Story_Of_Miles_Davis_Via_A_Quebecois_T.md",
-    "title": "Kind Of Bleu; Robert Lepage's Sideways Story Of Miles Davis Via A Quebecois",
+    "title": "Kind Of Bleu; Robert Lepage''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''s Sideways Story Of Miles Davis Via A Quebecois",
     "date": "2013-11-30",
     "year": "2013",
     "publication": "National Post",
@@ -224775,7 +226714,7 @@
     "slug": "2013-12-07-god-and-mermaids-while-there-s-not-much-to-carnage-up-the-street-you-ll-find",
     "route": "/reviews/2013-12-07-god-and-mermaids-while-there-s-not-much-to-carnage-up-the-street-you-ll-find/",
     "source_file": "2013.12.07.National_Post.God_And_Mermaids_While_ThereS_Not_Much_To_Carnage_Up_The_Street_YouLl_Find_.md",
-    "title": "God And Mermaids; While There's Not Much To Carnage, Up The Street You'Ll Find",
+    "title": "God And Mermaids; While There''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''S Not Much To Carnage, Up The Street You''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''Ll Find",
     "date": "2013-12-07",
     "year": "2013",
     "publication": "National Post",
@@ -224884,6 +226823,9 @@
         ],
         "costume_designer": [
           "Erika Connor"
+        ],
+        "actors": [
+          "Tony Nappo"
         ]
       },
       {
@@ -224903,6 +226845,22 @@
         ],
         "costume_designer": [
           "Michael Gianfrancesco"
+        ],
+        "actors": [
+          "Chilina Kennedy",
+          "Dan Chameroy",
+          "Ross Petty",
+          "Eddie Glen",
+          "Reid Janisse",
+          "Jordan Clark",
+          "Marc Devigne",
+          "Lana Carillo"
+        ],
+        "playwright": [
+          "Reid Janisse"
+        ],
+        "choreographer": [
+          "Marc Kimmelman"
         ]
       }
     ],
@@ -225592,6 +227550,11 @@
         ],
         "playwright": [
           "Michel Tremblay"
+        ],
+        "actors": [
+          "Maria del Mar",
+          "Irene Poole",
+          "Richard McMillan"
         ]
       }
     ],
@@ -225671,7 +227634,7 @@
     "slug": "2014-02-01-songs-sung-true-this-verbatim-musical-is-an-idea-that-shouldn-t-work-but-mostly",
     "route": "/reviews/2014-02-01-songs-sung-true-this-verbatim-musical-is-an-idea-that-shouldn-t-work-but-mostly/",
     "source_file": "2014.02.01.National_Post.Songs_Sung_True_This_Verbatim_Musical_Is_An_Idea_That_ShouldnT_Work_But_Mos.md",
-    "title": "Songs Sung True; This Verbatim Musical Is An Idea That Shouldn't Work But Mostly",
+    "title": "Songs Sung True; This Verbatim Musical Is An Idea That Shouldn''''''''''''''''''''''''''''''''T Work But Mostly",
     "date": "2014-02-01",
     "year": "2014",
     "publication": "National Post",
@@ -225773,6 +227736,28 @@
         ],
         "playwright": [
           "Alecky Blythe"
+        ],
+        "actors": [
+          "Fiona Reid",
+          "George Masswhohl",
+          "Steve Ross",
+          "Michelle Fisk",
+          "Sean Arbuckle",
+          "Shawn Wright",
+          "Damien Atkins",
+          "Julain Molnar",
+          "Ben Carlson",
+          "Deborah Hay",
+          "Glynis Ranney"
+        ],
+        "composer_lyricist": [
+          "Adam Cork"
+        ],
+        "musical_director": [
+          "Reza Jacobs"
+        ],
+        "costume_designer": [
+          "Judith Bowden"
         ]
       },
       {
@@ -225786,6 +227771,12 @@
         ],
         "playwright": [
           "Lynn Ahrens"
+        ],
+        "actors": [
+          "Jewelle Blackman"
+        ],
+        "composer_lyricist": [
+          "Stephen Flaherty"
         ]
       }
     ],
@@ -225796,7 +227787,7 @@
     "slug": "2014-02-08-back-to-the-front-in-the-1936-play-idiot-s-delight-an-assortment-of-characters",
     "route": "/reviews/2014-02-08-back-to-the-front-in-the-1936-play-idiot-s-delight-an-assortment-of-characters/",
     "source_file": "2014.02.08.National_Post.Back_To_The_Front_In_The_1936_Play_IdiotS_Delight_An_Assortment_Of_Characte.md",
-    "title": "Back To The Front; In The 1936 Play Idiot's Delight, An Assortment Of Characters",
+    "title": "Back To The Front; In The 1936 Play Idiot''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''S Delight, An Assortment Of Characters",
     "date": "2014-02-08",
     "year": "2014",
     "publication": "National Post",
@@ -225884,6 +227875,25 @@
         ],
         "venue": [
           "Young Centre for the Performing Arts"
+        ],
+        "director": [
+          "Albert Schultz"
+        ],
+        "actors": [
+          "Dan Chameroy",
+          "Raquel Duffy",
+          "Evan Buliung",
+          "Gregory Prest",
+          "Gordon Hecht",
+          "Michaela Davies",
+          "William Webster",
+          "Diego Matamoros"
+        ],
+        "playwright": [
+          "Robert E. Sherwood"
+        ],
+        "set_designer": [
+          "Lorenzo Savoini"
         ]
       },
       {
@@ -225894,6 +227904,17 @@
         ],
         "venue": [
           "Royal Alexandra Theatre"
+        ],
+        "director": [
+          "David Farr",
+          "Gisli Orn Gardarsson"
+        ],
+        "actors": [
+          "Bjorn Thors"
+        ],
+        "playwright": [
+          "David Farr",
+          "Gisli Orn Gardarsson"
         ]
       }
     ],
@@ -226257,7 +228278,7 @@
     "slug": "2014-03-15-force-and-subtlety-sixteen-scandals-may-well-be-second-city-s-best-revue-ever",
     "route": "/reviews/2014-03-15-force-and-subtlety-sixteen-scandals-may-well-be-second-city-s-best-revue-ever/",
     "source_file": "2014.03.15.National_Post.Force_And_Subtlety_Sixteen_Scandals_May_Well_Be_Second_CityS_Best_Revue_Eve.md",
-    "title": "Force And Subtlety; Sixteen Scandals May Well Be Second City's Best Revue Ever",
+    "title": "Force And Subtlety; Sixteen Scandals May Well Be Second City''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''s Best Revue Ever",
     "date": "2014-03-15",
     "year": "2014",
     "publication": "National Post",
@@ -226347,6 +228368,21 @@
         ],
         "director": [
           "Chris Earle"
+        ],
+        "actors": [
+          "Connor Thompson",
+          "Kevin Vidal",
+          "Ashley Botting",
+          "Allison Price",
+          "Sarah Hillier",
+          "Craig Brown",
+          "Richard Zeppieri"
+        ],
+        "playwright": [
+          "Priscilla Uppal"
+        ],
+        "musical_director": [
+          "Matthew Reid"
         ]
       },
       {
@@ -226370,7 +228406,7 @@
     "slug": "2014-03-22-bird-in-their-hands-the-chekhov-collective-s-ethos-of-a-yearlong-process-has",
     "route": "/reviews/2014-03-22-bird-in-their-hands-the-chekhov-collective-s-ethos-of-a-yearlong-process-has/",
     "source_file": "2014.03.22.National_Post.Bird_In_Their_Hands_The_Chekhov_CollectiveS_Ethos_Of_A_Yearlong_Process_Has.md",
-    "title": "Bird In Their Hands; The Chekhov Collective's Ethos Of A Yearlong Process Has",
+    "title": "Bird In Their Hands; The Chekhov Collective''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''s Ethos Of A Yearlong Process Has",
     "date": "2014-03-22",
     "year": "2014",
     "publication": "National Post",
@@ -226459,6 +228495,18 @@
         ],
         "director": [
           "Peggy Coffey"
+        ],
+        "actors": [
+          "Rena Polley",
+          "Nicole Wilson",
+          "Riley Gilchrist",
+          "Patrick Garrow",
+          "Greg Ellwand",
+          "Andrei Preda"
+        ],
+        "playwright": [
+          "Anton Chekhov",
+          "Rena Polley"
         ]
       },
       {
@@ -226472,6 +228520,15 @@
         ],
         "director": [
           "Megan Follows"
+        ],
+        "actors": [
+          "Allegra Fulton"
+        ],
+        "playwright": [
+          "Jennifer Tremblay"
+        ],
+        "set_designer": [
+          "Denyse Karn"
         ]
       }
     ],
@@ -226690,7 +228747,7 @@
     "slug": "2014-04-12-tis-a-pity-she-s-not-as-compelling-as-her-counterpart-in-erin-shields",
     "route": "/reviews/2014-04-12-tis-a-pity-she-s-not-as-compelling-as-her-counterpart-in-erin-shields/",
     "source_file": "2014.04.12.National_Post.Tis_A_Pity_SheS_..._Not_As_Compelling_As_Her_Counterpart_In_Erin_Shields_So.md",
-    "title": "Tis A Pity She's ...; Not As Compelling As Her Counterpart In Erin Shields'",
+    "title": "Tis A Pity She''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''S ...; Not As Compelling As Her Counterpart In Erin Shields''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''",
     "date": "2014-04-12",
     "year": "2014",
     "publication": "National Post",
@@ -226765,6 +228822,16 @@
         ],
         "playwright": [
           "Erin Shields"
+        ],
+        "director": [
+          "Andrea Donaldson"
+        ],
+        "actors": [
+          "Derek Boyes",
+          "Miriam Fernandes"
+        ],
+        "set_designer": [
+          "Ken MacKenzie"
         ]
       },
       {
@@ -226778,6 +228845,9 @@
         ],
         "playwright": [
           "Michael Hollingsworth"
+        ],
+        "actors": [
+          "Mac Fyfe"
         ]
       }
     ],
@@ -227011,6 +229081,14 @@
         ],
         "playwright": [
           "Roger Crane"
+        ],
+        "actors": [
+          "David Suchet",
+          "Richard O'Callaghan",
+          "Nigel Bennett",
+          "Bernard Lloyd",
+          "Donald Douglas",
+          "David Ferry"
         ]
       },
       {
@@ -227027,6 +229105,12 @@
         ],
         "playwright": [
           "Sean Dixon"
+        ],
+        "actors": [
+          "Daniel Kash"
+        ],
+        "set_designer": [
+          "Camellia Koo"
         ]
       }
     ],
@@ -227305,7 +229389,7 @@
     "slug": "2014-05-24-art-imitating-death-judith-thompson-s-play-of-the-ashley-smith-tragedy-may",
     "route": "/reviews/2014-05-24-art-imitating-death-judith-thompson-s-play-of-the-ashley-smith-tragedy-may/",
     "source_file": "2014.05.24.National_Post.Art_Imitating_Death_Judith_ThompsonS_Play_Of_The_Ashley_Smith_Tragedy_May_B.md",
-    "title": "Art Imitating Death; Judith Thompson's Play Of The Ashley Smith Tragedy May",
+    "title": "Art Imitating Death; Judith Thompson''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''S Play Of The Ashley Smith Tragedy May",
     "date": "2014-05-24",
     "year": "2014",
     "publication": "National Post",
@@ -228281,6 +230365,16 @@
         ],
         "playwright": [
           "J. B. Priestley"
+        ],
+        "actors": [
+          "Catherine McGregor",
+          "Patrick McManus",
+          "Thom Marriott",
+          "Claire Jullien",
+          "Mary Haney",
+          "Jennifer Dzialoszynski",
+          "Kate Hennig",
+          "Patrick Galligan"
         ]
       },
       {
@@ -228294,6 +230388,16 @@
         ],
         "playwright": [
           "Philip Barry"
+        ],
+        "actors": [
+          "Gray Powell",
+          "Moya O'Connell"
+        ],
+        "set_designer": [
+          "William Schmuck"
+        ],
+        "costume_designer": [
+          "William Schmuck"
         ]
       }
     ],
@@ -229323,7 +231427,7 @@
     "slug": "2014-08-30-shakespeare-parts-productions-of-antony-and-cleopatra-and-cymbeline-s-reign",
     "route": "/reviews/2014-08-30-shakespeare-parts-productions-of-antony-and-cleopatra-and-cymbeline-s-reign/",
     "source_file": "2014.08.30.National_Post.Shakespeare_Parts_Productions_Of_Antony_And_Cleopatra_And_CymbelineS_Reign_.md",
-    "title": "Shakespeare Parts; Productions Of Antony and Cleopatra And Cymbeline's Reign,",
+    "title": "Shakespeare Parts; Productions Of Antony and Cleopatra And Cymbeline''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''S Reign,",
     "date": "2014-08-30",
     "year": "2014",
     "publication": "National Post",
@@ -229417,6 +231521,12 @@
         ],
         "playwright": [
           "William Shakespeare"
+        ],
+        "actors": [
+          "Kaitlyn Riordan",
+          "Hume Baugh",
+          "Jesse Griffiths",
+          "David Patrick Flemming"
         ]
       },
       {
@@ -229688,6 +231798,27 @@
         ],
         "venue": [
           "Studio Theatre"
+        ],
+        "actors": [
+          "Jenny Young",
+          "Claire Lautier",
+          "Wayne Best",
+          "Graham Abbey",
+          "Patricia Collins",
+          "Brigit Wilson",
+          "Rylan Wikie"
+        ],
+        "playwright": [
+          "Michel-Marc Bouchard"
+        ],
+        "set_designer": [
+          "Michael Gianfrancesco"
+        ],
+        "costume_designer": [
+          "Michael Gianfrancesco"
+        ],
+        "lighting_designer": [
+          "Kimberly Purtell"
         ]
       },
       {
@@ -229698,6 +231829,13 @@
         ],
         "venue": [
           "Theatre Centre"
+        ],
+        "actors": [
+          "Byron Abalos",
+          "Colin Doyle",
+          "Darrel Gamotin",
+          "Richard Lee",
+          "Jeff Yung"
         ]
       }
     ],
@@ -230103,7 +232241,7 @@
     "slug": "2014-10-11-one-for-the-funny-second-city-s-rebel-without-a-cosmos-has-its-share-of-giggle-worthy",
     "route": "/reviews/2014-10-11-one-for-the-funny-second-city-s-rebel-without-a-cosmos-has-its-share-of-giggle-worthy/",
     "source_file": "2014.10.11.National_Post.One_For_The_Funny_Second_CityS_Rebel_Without_A_Cosmos_Has_Its_Share_Of_Gigg.md",
-    "title": "One For The Funny; Second City's Rebel Without A Cosmos Has Its Share Of Giggle-Worthy",
+    "title": "One For The Funny; Second City''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''s Rebel Without A Cosmos Has Its Share Of Giggle-Worthy",
     "date": "2014-10-11",
     "year": "2014",
     "publication": "National Post",
@@ -230181,6 +232319,19 @@
         ],
         "venue": [
           "Second City"
+        ],
+        "director": [
+          "Reid Janisse"
+        ],
+        "actors": [
+          "Connor Thompson",
+          "Ashley Botting",
+          "Ethan Muskat",
+          "Kevin Whalen",
+          "Allison Price"
+        ],
+        "set_designer": [
+          "Camellia Koo"
         ]
       },
       {
@@ -230191,6 +232342,14 @@
         ],
         "venue": [
           "Theatre Passe Muraille Backspace"
+        ],
+        "actors": [
+          "Emily Hurson",
+          "Mary Francis Moore",
+          "Randi Helmers"
+        ],
+        "playwright": [
+          "Alison Lawrence"
         ]
       }
     ],
@@ -230472,6 +232631,10 @@
         ],
         "playwright": [
           "Mike Bartlett"
+        ],
+        "actors": [
+          "Tim Pigott-Smith",
+          "Miles Richardson"
         ]
       },
       {
@@ -230485,6 +232648,9 @@
         ],
         "playwright": [
           "Richard Bean"
+        ],
+        "actors": [
+          "Kate Brittain"
         ]
       }
     ],
@@ -230684,6 +232850,19 @@
         ],
         "playwright": [
           "Stephen Adly Guirgis"
+        ],
+        "actors": [
+          "Sergio Di Zio",
+          "Ted Dykstra",
+          "Juan Chioran",
+          "Melissa D'Agostino",
+          "Nicole Stamp"
+        ],
+        "fight_director": [
+          "Simon Fon"
+        ],
+        "set_designer": [
+          "Steve Lucas"
         ]
       },
       {
@@ -230700,6 +232879,16 @@
         ],
         "playwright": [
           "Tom Stoppard"
+        ],
+        "actors": [
+          "Gray Powell",
+          "Kate Besworth",
+          "Diana Donnelly",
+          "Patrick McManus",
+          "Kyle Orzech",
+          "Ric Reid",
+          "Sanjay Talwar",
+          "Michael Ball"
         ]
       }
     ],
@@ -230803,6 +232992,14 @@
         ],
         "playwright": [
           "Lucy Kirkwood"
+        ],
+        "actors": [
+          "Patrick Galligan",
+          "Ian D. Clark",
+          "Jessica Greenberg",
+          "James Graham",
+          "Aaron Stern",
+          "Susan Coyne"
         ]
       },
       {
@@ -230819,6 +233016,16 @@
         ],
         "playwright": [
           "Morris Panych"
+        ],
+        "actors": [
+          "Laura Condolln",
+          "Matthew Edison",
+          "Jordan Pettle",
+          "Bruce Dow",
+          "Rebecca Northan"
+        ],
+        "set_designer": [
+          "Ken MacDonald"
         ]
       }
     ],
@@ -230934,6 +233141,9 @@
         ],
         "composer_lyricist": [
           "Fred Ebb"
+        ],
+        "choreographer": [
+          "Susan Stroman"
         ]
       }
     ],
@@ -231065,7 +233275,7 @@
     "slug": "2014-12-06-this-charming-man-petty-s-cinderella-covers-familiar-ground-while-blackbird",
     "route": "/reviews/2014-12-06-this-charming-man-petty-s-cinderella-covers-familiar-ground-while-blackbird/",
     "source_file": "2014.12.06.National_Post.This_Charming_Man_PettyS_Cinderella_Covers_Familiar_Ground_While_Blackbird_.md",
-    "title": "This Charming Man; Petty's Cinderella Covers Familiar Ground, While Blackbird",
+    "title": "This Charming Man; Petty''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''s Cinderella Covers Familiar Ground, While Blackbird",
     "date": "2014-12-06",
     "year": "2014",
     "publication": "National Post",
@@ -231140,6 +233350,14 @@
         ],
         "playwright": [
           "Reid Janisse"
+        ],
+        "actors": [
+          "Danielle Wade",
+          "Jeff Lillico",
+          "Dan Chameroy",
+          "Ross Petty",
+          "Eddie Glen",
+          "Reid Janisse"
         ]
       },
       {
@@ -231150,6 +233368,12 @@
         ],
         "playwright": [
           "David Harrower"
+        ],
+        "director": [
+          "David Ferry"
+        ],
+        "actors": [
+          "David Ferry"
         ]
       }
     ],
@@ -231172,8 +233396,8 @@
     "editorial_issue_type": "",
     "canonical_file": "",
     "production_title": "James and the Giant Peach / The Brown Bull of Cuailnge",
-    "company": "Young People's Theatre; The Room",
-    "venue": "Young People's Theatre; Sidemart Theatrical Grocery",
+    "company": "Young People''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''s Theatre; The Room",
+    "venue": "Young People''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''s Theatre; Sidemart Theatrical Grocery",
     "city": "Toronto",
     "coordinates": [],
     "people": [
@@ -231262,6 +233486,22 @@
         ],
         "musicians": [
           "Dylan Roberts"
+        ],
+        "actors": [
+          "Alessandro Costantini",
+          "Karen Wood",
+          "Robin Fisher",
+          "Dale Miller",
+          "Lana Carillo",
+          "Saccha Dennis",
+          "Stewart Adam McKensy",
+          "Jacob MacInnis"
+        ],
+        "set_designer": [
+          "Yannik Larivee"
+        ],
+        "costume_designer": [
+          "Robin Fisher"
         ]
       },
       {
@@ -231278,6 +233518,15 @@
         ],
         "musicians": [
           "Anand Rajaram"
+        ],
+        "actors": [
+          "Neil Wechsler",
+          "Antonio Cayonne",
+          "Gabriella Colavecchio",
+          "Anand Rajaram"
+        ],
+        "playwright": [
+          "Neil Wechsler"
         ]
       }
     ],
@@ -231755,6 +234004,13 @@
         ],
         "playwright": [
           "Diane Flacks"
+        ],
+        "actors": [
+          "Jordan Pettle",
+          "Michelle Monteith",
+          "Jane Spidell",
+          "Ari Cohen",
+          "Jenny Young"
         ]
       },
       {
@@ -231768,6 +234024,9 @@
         ],
         "playwright": [
           "Rick Miller"
+        ],
+        "actors": [
+          "Rick Miller"
         ]
       },
       {
@@ -231780,6 +234039,9 @@
           "Alan Dilworth"
         ],
         "playwright": [
+          "Andrew Kushnir"
+        ],
+        "actors": [
           "Andrew Kushnir"
         ]
       }
@@ -232263,6 +234525,12 @@
         ],
         "playwright": [
           "Noël Coward"
+        ],
+        "actors": [
+          "Angela Lansbury",
+          "Charles Edwards",
+          "Charlotte Parry",
+          "Jemima Rooper"
         ]
       },
       {
@@ -232279,6 +234547,14 @@
         ],
         "playwright": [
           "A.R. Gurney"
+        ],
+        "actors": [
+          "Sarah Wilson",
+          "Brenda Robins",
+          "Derek Boyes",
+          "Jeff Lillico",
+          "Courtney Ch'ng Lancaster",
+          "Diego Matamoros"
         ]
       }
     ],
@@ -232559,6 +234835,15 @@
         ],
         "playwright": [
           "Simon Stephens"
+        ],
+        "actors": [
+          "Molly Parker",
+          "Hardee T. Lineham",
+          "Lynne Griffin",
+          "Vivien Endicott-Douglas",
+          "Philip Riccio",
+          "Izaak Smith",
+          "Alex Poch-Goldin"
         ]
       },
       {
@@ -232575,6 +234860,10 @@
         ],
         "playwright": [
           "Daniel MacIvor"
+        ],
+        "actors": [
+          "Maria Vacratsis",
+          "Patrick Kwok-Choon"
         ]
       }
     ],
@@ -232991,7 +235280,7 @@
     "slug": "2015-04-18-femmes-the-breaks-david-mamet-s-boston-marriage-offers-a-19th-century-female-focused",
     "route": "/reviews/2015-04-18-femmes-the-breaks-david-mamet-s-boston-marriage-offers-a-19th-century-female-focused/",
     "source_file": "2015.04.18.National_Post.Femmes_The_Breaks_David_MametS_Boston_Marriage_Offers_A_19Th-Century_Female.md",
-    "title": "Femmes The Breaks; David Mamet's Boston Marriage Offers A 19Th-Century, Female-Focused",
+    "title": "Femmes The Breaks; David Mamet''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''s Boston Marriage Offers A 19Th-Century, Female-Focused",
     "date": "2015-04-18",
     "year": "2015",
     "publication": "National Post",
@@ -233067,6 +235356,14 @@
         ],
         "director": [
           "Kelli Fox"
+        ],
+        "actors": [
+          "Catherine McNally",
+          "Deborah Drakeford",
+          "Charlotte Dennis"
+        ],
+        "playwright": [
+          "David Mamet"
         ]
       },
       {
@@ -233080,6 +235377,14 @@
         ],
         "director": [
           "William Kentridge"
+        ],
+        "actors": [
+          "David Minnaar",
+          "Busi Zokufa"
+        ],
+        "playwright": [
+          "Alfred Jarry",
+          "Jane Taylor"
         ]
       }
     ],
@@ -233185,6 +235490,21 @@
         ],
         "playwright": [
           "Daniel Karasik"
+        ],
+        "actors": [
+          "Jeff Lillico",
+          "Jeff Irving",
+          "Rosemary Dunsmore",
+          "Christine Horne"
+        ],
+        "set_designer": [
+          "Camellia Koo"
+        ],
+        "lighting_designer": [
+          "Rebecca Picherack"
+        ],
+        "sound_designer": [
+          "John Gzowski"
         ]
       },
       {
@@ -233198,6 +235518,14 @@
         ],
         "playwright": [
           "Michel-Marc Bouchard"
+        ],
+        "actors": [
+          "Christopher Stanton",
+          "Shauna Black",
+          "Elizabeth Tanner",
+          "Sarah Dodd",
+          "Kate Hennig",
+          "Nicole Underhay"
         ]
       }
     ],
@@ -233503,6 +235831,13 @@
         ],
         "director": [
           "Rae Ellen Bodie"
+        ],
+        "actors": [
+          "Hardee T. Lineham"
+        ],
+        "playwright": [
+          "August Strindberg",
+          "David Greig"
         ]
       },
       {
@@ -233515,6 +235850,18 @@
           "Storefront Theatre"
         ],
         "director": [
+          "Kat Sandler"
+        ],
+        "actors": [
+          "Liisa Repo-Martell",
+          "Noah Reid",
+          "Shaun Benson",
+          "Sean Sullivan",
+          "Katelyn McCulloch",
+          "Michael Musi",
+          "Claire Armstrong"
+        ],
+        "playwright": [
           "Kat Sandler"
         ]
       }
@@ -233766,7 +236113,7 @@
     "slug": "2015-05-23-good-news-bad-news-shaw-festival-s-the-lady-from-the-sea-excellent-and",
     "route": "/reviews/2015-05-23-good-news-bad-news-shaw-festival-s-the-lady-from-the-sea-excellent-and/",
     "source_file": "2015.05.23.National Post.The_Lady_from_the_Sea.md",
-    "title": "Good News, Bad News; Shaw Festival's The Lady From The Sea - Excellent - And",
+    "title": "Good News, Bad News; Shaw Festival''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''s The Lady From The Sea - Excellent - And",
     "date": "2015-05-23",
     "year": "2015",
     "publication": "National Post",
@@ -234146,7 +236493,7 @@
     "slug": "2015-06-08-dynamic-duo-the-varying-pleasures-of-stratford-s-rodgers-and-hammerstein-double",
     "route": "/reviews/2015-06-08-dynamic-duo-the-varying-pleasures-of-stratford-s-rodgers-and-hammerstein-double/",
     "source_file": "2015.06.08.National_Post.Dynamic_Duo_The_Varying_Pleasures_Of_StratfordS_Rodgers_And_Hammerstein_Dou.md",
-    "title": "Dynamic Duo; The Varying Pleasures Of Stratford's Rodgers And Hammerstein Double",
+    "title": "Dynamic Duo; The Varying Pleasures Of Stratford''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''s Rodgers And Hammerstein Double",
     "date": "2015-06-08",
     "year": "2015",
     "publication": "National Post",
@@ -234253,6 +236600,27 @@
         ],
         "composer_lyricist": [
           "Oscar Hammerstein II"
+        ],
+        "actors": [
+          "Alexis Gordon",
+          "Jonathan Winsby",
+          "Robin Evan Willis",
+          "Sean Alexander Hauk",
+          "Alana Hibbert",
+          "Evan Buliung",
+          "Ben Carlson",
+          "Stephanie Rothenberg",
+          "Anita Krause",
+          "Peter Hutt"
+        ],
+        "playwright": [
+          "Richard Rodgers"
+        ],
+        "choreographer": [
+          "Michael Lichtefeld"
+        ],
+        "set_designer": [
+          "Michael Gianfrancesco"
         ]
       }
     ],
@@ -235193,7 +237561,7 @@
     "editorial_issue_type": "",
     "canonical_file": "",
     "production_title": "The Watershed / 20,000 Leagues Under the Sea",
-    "company": "Crow's Theatre; Porte Parole",
+    "company": "Crow''''s Theatre; Porte Parole",
     "venue": "",
     "city": "Toronto",
     "coordinates": [],
@@ -236629,6 +238997,15 @@
         ],
         "playwright": [
           "Ferenc Molnar"
+        ],
+        "actors": [
+          "Diego Matamoros",
+          "William Webster",
+          "C. David Johnson",
+          "Oliver Dennis",
+          "Gordon Hecht",
+          "Raquel Duffy",
+          "Gregory Prest"
         ]
       },
       {
@@ -236639,6 +239016,14 @@
         ],
         "playwright": [
           "Pamela Mala Sinha"
+        ],
+        "actors": [
+          "Oyin Oladejo",
+          "Liisa Repo-Martell",
+          "Caroline Gillis",
+          "Irene Poole",
+          "Pamela Mala Sinha",
+          "Deborah Drakeford"
         ]
       }
     ],
@@ -236850,7 +239235,7 @@
     "slug": "2015-10-03-asylum-seekers-soulpepper-s-marat-sade-finds-that-all-the-world-s-a-cage",
     "route": "/reviews/2015-10-03-asylum-seekers-soulpepper-s-marat-sade-finds-that-all-the-world-s-a-cage/",
     "source_file": "2015.10.03.The_Globe_and_Mail.Asylum_Seekers_Soulpeppers_Marat_Sade.md",
-    "title": "Asylum seekers; Soulpepper's Marat/Sade finds that all the world's a cage,",
+    "title": "Asylum seekers; Soulpepper''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''s Marat/Sade finds that all the world''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''s a cage,",
     "date": "2015-10-03",
     "year": "2015",
     "publication": "The Globe and Mail",
@@ -236926,6 +239311,13 @@
         ],
         "composer_lyricist": [
           "Mike Ross"
+        ],
+        "director": [
+          "Albert Schultz"
+        ],
+        "actors": [
+          "Katherine Gauthier",
+          "Gregory Prest"
         ]
       },
       {
@@ -237195,6 +239587,15 @@
         ],
         "performers": [
           "Matt Baram"
+        ],
+        "director": [
+          "Walter Asmus"
+        ],
+        "actors": [
+          "Lisa Dwan"
+        ],
+        "lighting_designer": [
+          "James Farncombe"
         ]
       },
       {
@@ -237282,7 +239683,7 @@
     "slug": "2015-10-31-move-over-jack-bauer-devilishly-clever-butcher-s-suspenseful-plot-twists",
     "route": "/reviews/2015-10-31-move-over-jack-bauer-devilishly-clever-butcher-s-suspenseful-plot-twists/",
     "source_file": "2015.10.31.National_Post.Move_Over_Jack_Bauer_Devilishly_Clever_ButcherS_Suspensful_Plot_Twists_Woul.md",
-    "title": "Move Over Jack Bauer; Devilishly Clever, Butcher's Suspenseful Plot Twists",
+    "title": "Move Over Jack Bauer; Devilishly Clever, Butcher''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''s Suspenseful Plot Twists",
     "date": "2015-10-31",
     "year": "2015",
     "publication": "National Post",
@@ -237379,6 +239780,10 @@
         ],
         "playwright": [
           "Linda Griffiths"
+        ],
+        "actors": [
+          "Juno Rinaldi",
+          "Julie Stewart"
         ]
       }
     ],
@@ -237389,7 +239794,7 @@
     "slug": "2015-11-07-on-the-hook-jez-butterworth-s-the-river-easily-reels-in-its-audience-at-coal",
     "route": "/reviews/2015-11-07-on-the-hook-jez-butterworth-s-the-river-easily-reels-in-its-audience-at-coal/",
     "source_file": "2015.11.07.National_Post.On_The_Hook_Jez_ButterworthS_The_River_Easily_Reels_In_Its_Audience_At_Coal.md",
-    "title": "On The Hook; Jez Butterworth's The River Easily Reels In Its Audience At Coal",
+    "title": "On The Hook; Jez Butterworth''''s The River Easily Reels In Its Audience At Coal",
     "date": "2015-11-07",
     "year": "2015",
     "publication": "National Post",
@@ -237649,7 +240054,7 @@
     "slug": "2015-12-01-unsentimental-scandal-a-brilliant-piece-of-mercilessly-serious-comedy-and",
     "route": "/reviews/2015-12-01-unsentimental-scandal-a-brilliant-piece-of-mercilessly-serious-comedy-and/",
     "source_file": "2015.12.01.National_Post.Unsentimental_Scandal_A_Brilliant_Piece_Of_Mercilessly_Serious_Comedy_And_T.md",
-    "title": "Unsentimental Scandal; 'A Brilliant Piece Of Mercilessly Serious Comedy, And",
+    "title": "Unsentimental Scandal; ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''A Brilliant Piece Of Mercilessly Serious Comedy, And",
     "date": "2015-12-01",
     "year": "2015",
     "publication": "National Post",
@@ -237744,6 +240149,16 @@
         ],
         "playwright": [
           "Bruce Norris"
+        ],
+        "actors": [
+          "Martha Burns",
+          "Sarah Dodd",
+          "Torri Higginson",
+          "Nicola Lipman",
+          "Maria Vacratsis",
+          "Kelly McNamee",
+          "Abigail Pew",
+          "Salvatore Antonio"
         ]
       },
       {
@@ -237757,6 +240172,11 @@
         ],
         "playwright": [
           "Anosh Irani"
+        ],
+        "actors": [
+          "Kawa Ada",
+          "Anusree Roy",
+          "Howard J. Davis"
         ]
       }
     ],
@@ -237767,7 +240187,7 @@
     "slug": "2015-12-05-look-who-s-40-40-middle-age-hasn-t-been-kind-to-excitement-free-jacob-two-two",
     "route": "/reviews/2015-12-05-look-who-s-40-40-middle-age-hasn-t-been-kind-to-excitement-free-jacob-two-two/",
     "source_file": "2015.12.05.National Post.Jacob_Two_Two_Meets_the_Hooded_Fang.md",
-    "title": "Look Who's 40-40; Middle Age Hasn't Been Kind To Excitement-Free Jacob Two-Two",
+    "title": "Look Who''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''s 40-40; Middle Age Hasn''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''t Been Kind To Excitement-Free Jacob Two-Two",
     "date": "2015-12-05",
     "year": "2015",
     "publication": "National Post",
@@ -237779,8 +240199,8 @@
     "editorial_issue_type": "",
     "canonical_file": "",
     "production_title": "Jacob Two-Two Meets the Hooded Fang / King Lear",
-    "company": "Young People's Theatre; Theatre Passe Muraille",
-    "venue": "Young People's Theatre; Theatre Passe Muraille",
+    "company": "Young People''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''s Theatre; Theatre Passe Muraille",
+    "venue": "Young People''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''s Theatre; Theatre Passe Muraille",
     "city": "Toronto",
     "coordinates": [],
     "people": [
@@ -239304,6 +241724,16 @@
         ],
         "playwright": [
           "Ayad Akhtar"
+        ],
+        "actors": [
+          "Raoul Bhaneja",
+          "Michael Rubenfeld",
+          "Birgitte Solem",
+          "Karen Glave",
+          "Ali Momen"
+        ],
+        "set_designer": [
+          "Sue LePage"
         ]
       },
       {
@@ -239420,6 +241850,16 @@
         ],
         "playwright": [
           "Tracy Letts"
+        ],
+        "actors": [
+          "Matthew Gouveia",
+          "Matthew Edison"
+        ],
+        "set_designer": [
+          "Patrick Lavender"
+        ],
+        "sound_designer": [
+          "Christopher Stanton"
         ]
       },
       {
@@ -239436,6 +241876,15 @@
         ],
         "playwright": [
           "Brian Yorkey"
+        ],
+        "actors": [
+          "Jackie Burns",
+          "Matthew Hydzik",
+          "Darren A. Herbert",
+          "Anthony Rapp"
+        ],
+        "composer_lyricist": [
+          "Tom Kitt"
         ]
       }
     ],
@@ -239787,6 +242236,33 @@
         ],
         "director": [
           "Jackie Maxwell"
+        ],
+        "actors": [
+          "Tara Rosling",
+          "Graeme Somerville",
+          "Nicole Underhay",
+          "Patrick McManus",
+          "Neil Barclay",
+          "Marla McLean",
+          "David Schurmann",
+          "Peter Millard",
+          "Sharry Flett",
+          "Thom Marriott",
+          "Wade Bogert-O'Brien",
+          "Gray Powell",
+          "Shawn Wright"
+        ],
+        "playwright": [
+          "Lewis Carroll",
+          "Peter Hinton",
+          "Anton Chekhov",
+          "Annie Baker"
+        ],
+        "composer_lyricist": [
+          "Allen Cole"
+        ],
+        "set_designer": [
+          "Eo Sharpe"
         ]
       },
       {
@@ -239890,6 +242366,11 @@
         ],
         "playwright": [
           "Donald Margulies"
+        ],
+        "actors": [
+          "Eric Peterson",
+          "Clare Coulter",
+          "Tony Ofori"
         ]
       },
       {
@@ -239906,6 +242387,15 @@
         ],
         "playwright": [
           "Colm Toibin"
+        ],
+        "actors": [
+          "Nancy Palk"
+        ],
+        "lighting_designer": [
+          "Lorenzo Savoini"
+        ],
+        "sound_designer": [
+          "Richard Feren"
         ]
       }
     ],
@@ -239989,7 +242479,7 @@
     "slug": "2016-06-08-revival-of-the-fittest-arthur-miller-s-incident-at-vichy-and-all-my-sons-were",
     "route": "/reviews/2016-06-08-revival-of-the-fittest-arthur-miller-s-incident-at-vichy-and-all-my-sons-were/",
     "source_file": "2016.06.08.National_Post.Revival_Of_The_Fittest_Arthur_MillerS_Incident_At_Vichy_And_All_My_Sons_Wer.md",
-    "title": "Revival of the Fittest; Arthur Miller's Incident at Vichy and All My Sons Were",
+    "title": "Revival of the Fittest; Arthur Miller''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''s Incident at Vichy and All My Sons Were",
     "date": "2016-06-08",
     "year": "2016",
     "publication": "National Post",
@@ -240095,6 +242585,24 @@
         ],
         "director": [
           "Martha Henry"
+        ],
+        "actors": [
+          "Oliver Dennis",
+          "Kawa Ada",
+          "Stuart Hughes",
+          "Diego Matamoros",
+          "Joseph Ziegler",
+          "Tim Campbell",
+          "Lucy Peacock",
+          "E.B. Smith",
+          "Michael Blake",
+          "Sarah Afful"
+        ],
+        "playwright": [
+          "Arthur Miller"
+        ],
+        "set_designer": [
+          "Douglas Paraschuk"
         ]
       }
     ],
@@ -240593,6 +243101,14 @@
         ],
         "musicians": [
           "Britta Johnson"
+        ],
+        "actors": [
+          "Ashley Botting",
+          "Andrew Cameron",
+          "Brandon Coffey",
+          "Christine Horne",
+          "Beau Dixon",
+          "Karl Ang"
         ]
       },
       {
@@ -240609,6 +243125,23 @@
         ],
         "musicians": [
           "Kevin Wong"
+        ],
+        "actors": [
+          "Anika Johnson",
+          "Tim Funnell",
+          "Alana Hibbert",
+          "Kate Blackburn",
+          "Janet Gigliotti",
+          "Kaylee Harwood"
+        ],
+        "composer_lyricist": [
+          "Britta Johnson"
+        ],
+        "musical_director": [
+          "Britta Johnson"
+        ],
+        "set_designer": [
+          "Brandon Kleiman"
         ]
       }
     ],
@@ -242074,6 +244607,17 @@
         ],
         "playwright": [
           "Samuel Beckett"
+        ],
+        "actors": [
+          "Paul Fauteux",
+          "Jonathon Young",
+          "Shannon Mercer",
+          "Kristina Szabo"
+        ],
+        "musicians": [
+          "Shannon Mercer",
+          "Kristina Szabo",
+          "Garrett Shouldice"
         ]
       },
       {
@@ -242087,6 +244631,14 @@
         ],
         "playwright": [
           "Athol Fugard"
+        ],
+        "actors": [
+          "James Daly",
+          "Allan Louis",
+          "Andre Sills"
+        ],
+        "set_designer": [
+          "Peter Hartwell"
         ]
       }
     ],
@@ -242375,6 +244927,24 @@
         "production_title": "Acquiesce",
         "venue": [
           "Factory Theatre"
+        ],
+        "director": [
+          "Nina Lee Aquino"
+        ],
+        "actors": [
+          "David Yee",
+          "Richard Lee",
+          "John Ng",
+          "Rosie Simon",
+          "Sidney Bateman",
+          "Melvin Diggs",
+          "Matias Plaul"
+        ],
+        "playwright": [
+          "David Yee"
+        ],
+        "performers": [
+          "The Seven Fingers"
         ]
       }
     ],
@@ -246267,6 +248837,12 @@
         ],
         "playwright": [
           "Julia Lederer"
+        ],
+        "set_designer": [
+          "Christine Urquhart"
+        ],
+        "sound_designer": [
+          "Andy Trithardt"
         ]
       },
       {
@@ -247187,7 +249763,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "",
     "canonical_file": "",
-    "production_title": "To Kill a Mockingbird; Long Day's Journey Into Night",
+    "production_title": "To Kill a Mockingbird; Long Day''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''s Journey Into Night",
     "company": "Stratford Festival",
     "venue": "",
     "city": "Stratford, Ontario",
@@ -247257,6 +249833,15 @@
         ],
         "playwright": [
           "Christopher Sergel"
+        ],
+        "actors": [
+          "Matthew G. Brown",
+          "Jonathan Goad",
+          "Joseph Ziegler",
+          "Jonelle Gunderson",
+          "Randy Hughson",
+          "Sophia Walker",
+          "Irene Poole"
         ]
       },
       {
@@ -247267,6 +249852,10 @@
         ],
         "playwright": [
           "Eugene O'Neill"
+        ],
+        "actors": [
+          "Scott Wentworth",
+          "Seana McKenna"
         ]
       }
     ],
@@ -247472,6 +250061,13 @@
         ],
         "director": [
           "Matthew Dunster"
+        ],
+        "actors": [
+          "Jim Broadbent",
+          "Elizabeth Berrington"
+        ],
+        "playwright": [
+          "Martin McDonagh"
         ]
       },
       {
@@ -247485,6 +250081,13 @@
         ],
         "director": [
           "Marianne Elliott"
+        ],
+        "actors": [
+          "Patti LuPone",
+          "Jonathan Bailey"
+        ],
+        "composer_lyricist": [
+          "Stephen Sondheim"
         ]
       },
       {
@@ -247498,6 +250101,13 @@
         ],
         "director": [
           "Nicholas Hytner"
+        ],
+        "actors": [
+          "Claudie Blakley",
+          "Sam Troughton"
+        ],
+        "playwright": [
+          "Nina Raine"
         ]
       },
       {
@@ -247511,6 +250121,9 @@
         ],
         "director": [
           "Emma Rice"
+        ],
+        "playwright": [
+          "Angela Carter"
         ]
       }
     ],
@@ -248668,7 +251281,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "",
     "canonical_file": "",
-    "production_title": "Jesus Hopped the 'A' Train; Caroline, or Change",
+    "production_title": "Jesus Hopped the ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''A'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''' Train; Caroline, or Change",
     "company": "Soulpepper Theatre Company; Obsidian Theatre Company; The Musical Stage Company",
     "venue": "Young Centre for the Performing Arts; Winter Garden Theatre",
     "city": "Toronto",
@@ -248751,6 +251364,13 @@
         ],
         "playwright": [
           "Tony Kushner"
+        ],
+        "actors": [
+          "Jully Black",
+          "Vanessa Sears"
+        ],
+        "composer_lyricist": [
+          "Jeanine Tesori"
         ]
       }
     ],
