@@ -1,4 +1,4 @@
-const DATA_URL = new URL("../site_export/data/public_reviews.json?v=89", import.meta.url);
+const DATA_URL = new URL("../site_export/data/public_reviews.json?v=91", import.meta.url);
 const CONTENT_ROOT = new URL("../site_export/content/reviews/", import.meta.url);
 const PAGE_SIZE = 36;
 const SHAKESPEARE_COLLECTION = "The Shakespeare Collection";
@@ -603,11 +603,17 @@ function coordinatesForVenue(venue) {
   return VENUE_COORDINATES.get(coordinateKey(venue));
 }
 
-function pointCoordinates(record, city = "", venue = "") {
-  const coordinates = Array.isArray(record.coordinates) ? record.coordinates : [];
+function normalizePointCoordinates(coordinates) {
+  if (!Array.isArray(coordinates)) return null;
   const lat = Number(coordinates[0]);
   const lon = Number(coordinates[1]);
   if (Number.isFinite(lat) && Number.isFinite(lon)) return [lat, lon];
+  return null;
+}
+
+function pointCoordinates(record, city = "", venue = "", directCoordinates = null) {
+  const direct = normalizePointCoordinates(directCoordinates);
+  if (direct) return direct;
   if (venue) {
     const venueCoordinates = coordinatesForVenue(venue);
     if (venueCoordinates) return venueCoordinates;
@@ -616,7 +622,7 @@ function pointCoordinates(record, city = "", venue = "") {
     const cityCoordinates = coordinatesForCity(city);
     if (cityCoordinates) return cityCoordinates;
   }
-  return null;
+  return normalizePointCoordinates(record.coordinates);
 }
 
 function recordVenueCityPairs(record) {
@@ -624,12 +630,20 @@ function recordVenueCityPairs(record) {
   productionGroups(record).forEach((group) => {
     const venues = splitEntityList(group.venue);
     const cities = splitCityList(group.city);
-    venues.forEach((venue, index) => pairs.push({ venue, city: cities[index] || cities[0] || splitCityList(record.city)[0] || "" }));
+    if (venues.length) {
+      venues.forEach((venue, index) => pairs.push({
+        venue,
+        city: cities[index] || cities[0] || splitCityList(record.city)[0] || "",
+        coordinates: normalizePointCoordinates(group.coordinates),
+      }));
+    } else {
+      cities.forEach((city) => pairs.push({ venue: "", city, coordinates: normalizePointCoordinates(group.coordinates) }));
+    }
   });
   if (pairs.length) return pairs;
   const venues = splitEntityList(record.venue);
   const cities = splitCityList(record.city);
-  venues.forEach((venue, index) => pairs.push({ venue, city: cities[index] || cities[0] || "" }));
+  venues.forEach((venue, index) => pairs.push({ venue, city: cities[index] || cities[0] || "", coordinates: null }));
   return pairs;
 }
 
@@ -655,8 +669,12 @@ function entityMap(type) {
 function cityMapPoints() {
   const map = entityMap("cities");
   state.records.forEach((record) => {
-    splitCityList(record.city).forEach((city) => {
-      const coordinates = pointCoordinates(record, city);
+    const groupPairs = recordVenueCityPairs(record);
+    const cityPairs = groupPairs.length
+      ? groupPairs.filter((pair) => pair.city)
+      : splitCityList(record.city).map((city) => ({ city, venue: "", coordinates: null }));
+    cityPairs.forEach(({ city, venue, coordinates: pairCoordinates }) => {
+      const coordinates = pointCoordinates(record, city, venue, pairCoordinates);
       if (!coordinates) return;
       const [lat, lon] = coordinates;
       const slug = entitySlug(city);
@@ -691,8 +709,8 @@ function cityMapPoints() {
 function venueMapPoints() {
   const map = new Map();
   state.records.forEach((record) => {
-    recordVenueCityPairs(record).forEach(({ venue, city }) => {
-      const coordinates = pointCoordinates(record, city, venue);
+    recordVenueCityPairs(record).forEach(({ venue, city, coordinates: pairCoordinates }) => {
+      const coordinates = pointCoordinates(record, city, venue, pairCoordinates);
       if (!coordinates) return;
       const [lat, lon] = coordinates;
       const slug = entitySlug(venue);
