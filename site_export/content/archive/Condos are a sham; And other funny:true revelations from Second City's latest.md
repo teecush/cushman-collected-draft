@@ -24,7 +24,6 @@ publication_status: duplicate_variant
 editorial_issue_type: duplicate_variant
 canonical_file: 2008.02.16.National_Post.Condos_are_a_sham_And_other_funnytrue_revelations_from_Second_Citys_latest_show_Toronto_Edition.md
 editorial_notes: Duplicate old-site variant of the canonical National Post record; retained for provenance but hidden from public browsing.
-mentions: []
 tags:
 - Condominiums
 automatic_tags: []

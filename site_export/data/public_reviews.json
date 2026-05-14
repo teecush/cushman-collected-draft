@@ -11324,7 +11324,7 @@
     "canonical_file": "",
     "production_title": "Romeo and Juliet; The Merry Wives of Windsor; Evening Light; Once Upon A Time; Widowers' Houses",
     "company": "Royal Shakespeare Company; Bristol Old Vic; Actors' Company",
-    "venue": "Aldwych Theatre; Bristol Old Vic; Theatre Royal, Bristol; Little Theatre, Bristol; Wimbledon Theatre",
+    "venue": "",
     "city": "Stratford-upon-Avon; London, England; Bristol; Wimbledon",
     "coordinates": [],
     "people": [
@@ -26635,7 +26635,7 @@
     "canonical_file": "",
     "production_title": "On the Twentieth Century",
     "company": "Public Theater",
-    "venue": "Public Theatre; Tarragon Theatre",
+    "venue": "",
     "city": "New York; Toronto",
     "coordinates": [],
     "people": [
@@ -39449,7 +39449,7 @@
     "canonical_file": "",
     "production_title": "The Duchess of Malfi; The Merchant of Venice; I'm Getting My Act Together and Taking It On the Road; Balconville; The Cherry Orchard",
     "company": "Royal Exchange Theatre; Shared Experience; Centaur Company",
-    "venue": "Roundhouse; Old Vic; Bouffes-du-Nord",
+    "venue": "",
     "city": "London, England; Paris",
     "coordinates": [],
     "people": [
@@ -39866,6 +39866,8 @@
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
     "production_title": "At the Royal Court",
+    "book_author": "Richard Findlater",
+    "publisher": "Amber Lane Press",
     "company": "English Stage Company",
     "venue": "Royal Court Theatre",
     "city": "",
@@ -39905,22 +39907,12 @@
       "sound_designer": [],
       "musicians": [],
       "performers": [],
-      "artists": [
-        "Richard Findlater",
-        "Samuel Beckett",
-        "Bill Gaskill",
-        "John Osborne",
-        "Jack Shepherd",
-        "Christopher Hampton",
-        "George Devine",
-        "Irving Wardle",
-        "Stuart Burge",
-        "Max Stafford-Clark"
-      ]
+      "artists": []
     },
     "production_groups": [],
     "media": [],
-    "word_count": 712
+    "word_count": 712,
+    "subject_people": "Samuel Beckett; Bill Gaskill; John Osborne; Jack Shepherd; Christopher Hampton; George Devine; Irving Wardle; Stuart Burge; Max Stafford-Clark"
   },
   {
     "slug": "1981-04-26-the-laughing-shylock",
@@ -41227,6 +41219,8 @@
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
     "production_title": "Conversations with Ayckbourn",
+    "book_author": "Ian Watson",
+    "publisher": "Macdonald",
     "company": "",
     "venue": "Stephen Joseph Theatre in the Round",
     "city": "Scarborough",
@@ -41234,19 +41228,13 @@
     "people": [
       "Alan Ayckbourn",
       "Eric Thompson",
+      "Ian Watson",
       "Phil Silvers"
     ],
     "roles": {
-      "director": [
-        "Alan Ayckbourn",
-        "Eric Thompson"
-      ],
-      "actors": [
-        "Phil Silvers"
-      ],
-      "playwright": [
-        "Alan Ayckbourn"
-      ],
+      "director": [],
+      "actors": [],
+      "playwright": [],
       "composer_lyricist": [],
       "musical_director": [],
       "choreographer": [],
@@ -41270,7 +41258,8 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 799
+    "word_count": 799,
+    "subject_people": "Alan Ayckbourn; Eric Thompson; Phil Silvers"
   },
   {
     "slug": "1981-07-12-war-games",
@@ -51336,6 +51325,8 @@
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
     "production_title": "Footlights!: A Hundred Years of Cambridge Comedy",
+    "book_author": "Robert Hewison",
+    "publisher": "Methuen",
     "company": "",
     "venue": "",
     "city": "",
@@ -51372,22 +51363,13 @@
       "lighting_designer": [],
       "sound_designer": [],
       "musicians": [],
-      "performers": [
-        "Peter Cook",
-        "Jonathan Miller",
-        "John Cleese",
-        "Eric Idle",
-        "Griff Rhys-Jones",
-        "Michael Frayn",
-        "Jack Hulbert"
-      ],
-      "artists": [
-        "Robert Hewison"
-      ]
+      "performers": [],
+      "artists": []
     },
     "production_groups": [],
     "media": [],
-    "word_count": 596
+    "word_count": 596,
+    "subject_people": "Peter Cook; Jonathan Miller; John Cleese; Eric Idle; Griff Rhys-Jones; Michael Frayn; Jack Hulbert"
   },
   {
     "slug": "1983-06-12-falklands-tragedy",
@@ -54799,6 +54781,8 @@
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
     "production_title": "Salesman in Beijing",
+    "book_author": "Arthur Miller",
+    "publisher": "Methuen",
     "company": "",
     "venue": "",
     "city": "",
@@ -54812,18 +54796,9 @@
       "Willy Loman"
     ],
     "roles": {
-      "director": [
-        "Arthur Miller",
-        "Michael Rudman",
-        "Elia Kazan"
-      ],
-      "actors": [
-        "Dustin Hoffman",
-        "Lee J. Cobb"
-      ],
-      "playwright": [
-        "Arthur Miller"
-      ],
+      "director": [],
+      "actors": [],
+      "playwright": [],
       "composer_lyricist": [],
       "musical_director": [],
       "choreographer": [],
@@ -54843,13 +54818,12 @@
       "sound_designer": [],
       "musicians": [],
       "performers": [],
-      "artists": [
-        "Willy Loman"
-      ]
+      "artists": []
     },
     "production_groups": [],
     "media": [],
-    "word_count": 631
+    "word_count": 631,
+    "subject_people": "Michael Rudman; Elia Kazan; Dustin Hoffman; Lee J. Cobb; Willy Loman"
   },
   {
     "slug": "1984-08-12-burton-s-last-role-a-supportive-father",
@@ -55807,11 +55781,18 @@
     "editorial_issue_type": "",
     "canonical_file": "",
     "production_title": "William Shakespeare: A Textual Companion",
+    "book_author": "Stanley Wells; Gary Taylor; John Jowett; William Montgomery",
+    "publisher": "Oxford",
     "company": "",
     "venue": "",
     "city": "",
     "coordinates": [],
-    "people": [],
+    "people": [
+      "Gary Taylor",
+      "John Jowett",
+      "Stanley Wells",
+      "William Montgomery"
+    ],
     "roles": {
       "director": [],
       "actors": [],
@@ -55905,11 +55886,15 @@
     "editorial_issue_type": "",
     "canonical_file": "",
     "production_title": "The Politics Of Paradise: A Vindication Of Byron",
+    "book_author": "Michael Foot",
+    "publisher": "Collins",
     "company": "",
     "venue": "",
     "city": "",
     "coordinates": [],
-    "people": [],
+    "people": [
+      "Michael Foot"
+    ],
     "roles": {
       "director": [],
       "actors": [],
@@ -55953,11 +55938,15 @@
     "editorial_issue_type": "",
     "canonical_file": "",
     "production_title": "It Wasn't All Velvet",
+    "book_author": "Mel Tormé",
+    "publisher": "Viking",
     "company": "",
     "venue": "",
     "city": "",
     "coordinates": [],
-    "people": [],
+    "people": [
+      "Mel Tormé"
+    ],
     "roles": {
       "director": [],
       "actors": [],
@@ -56082,11 +56071,15 @@
     "editorial_issue_type": "",
     "canonical_file": "",
     "production_title": "Gilbert: The Man Who Was G. K. Chesterton",
+    "book_author": "Michael Coren",
+    "publisher": "Random House",
     "company": "",
     "venue": "",
     "city": "",
     "coordinates": [],
-    "people": [],
+    "people": [
+      "Michael Coren"
+    ],
     "roles": {
       "director": [],
       "actors": [],
@@ -56256,11 +56249,15 @@
     "editorial_issue_type": "",
     "canonical_file": "",
     "production_title": "All Things Considered",
+    "book_author": "Bernard Levin",
+    "publisher": "Random House",
     "company": "",
     "venue": "",
     "city": "",
     "coordinates": [],
-    "people": [],
+    "people": [
+      "Bernard Levin"
+    ],
     "roles": {
       "director": [],
       "actors": [],
@@ -56376,11 +56373,15 @@
     "editorial_issue_type": "",
     "canonical_file": "",
     "production_title": "Harold Prince and the American Musical Theatre",
+    "book_author": "Foster Hirsch",
+    "publisher": "Cambridge University Press",
     "company": "",
     "venue": "",
     "city": "",
     "coordinates": [],
-    "people": [],
+    "people": [
+      "Foster Hirsch"
+    ],
     "roles": {
       "director": [],
       "actors": [],
@@ -56533,11 +56534,16 @@
     "editorial_issue_type": "",
     "canonical_file": "",
     "production_title": "'Zero Mostel: A Biography / Citizen Welles: A Biography of Orson",
+    "book_author": "Jared Brown; Frank Brady",
+    "publisher": "Collier-Macmillan",
     "company": "",
     "venue": "",
     "city": "",
     "coordinates": [],
-    "people": [],
+    "people": [
+      "Frank Brady",
+      "Jared Brown"
+    ],
     "roles": {
       "director": [],
       "actors": [],
@@ -56870,11 +56876,15 @@
     "editorial_issue_type": "",
     "canonical_file": "",
     "production_title": "Bernard Shaw Volume II: 1898-1918 The Pursuit of Power",
+    "book_author": "Michael Holroyd",
+    "publisher": "Random House",
     "company": "",
     "venue": "",
     "city": "",
     "coordinates": [],
-    "people": [],
+    "people": [
+      "Michael Holroyd"
+    ],
     "roles": {
       "director": [],
       "actors": [],
@@ -57725,11 +57735,17 @@
     "editorial_issue_type": "",
     "canonical_file": "",
     "production_title": "Broadway Anecdotes / All My Best Friends",
+    "book_author": "Peter Hay; George Burns; David Fisher",
+    "publisher": "Oxford; Putnam",
     "company": "",
     "venue": "",
     "city": "",
     "coordinates": [],
-    "people": [],
+    "people": [
+      "David Fisher",
+      "George Burns",
+      "Peter Hay"
+    ],
     "roles": {
       "director": [],
       "actors": [],
@@ -58741,11 +58757,15 @@
     "editorial_issue_type": "",
     "canonical_file": "",
     "production_title": "Some Freaks",
+    "book_author": "David Mamet",
+    "publisher": "Viking",
     "company": "",
     "venue": "",
     "city": "",
     "coordinates": [],
-    "people": [],
+    "people": [
+      "David Mamet"
+    ],
     "roles": {
       "director": [],
       "actors": [],
@@ -59321,11 +59341,15 @@
     "editorial_issue_type": "",
     "canonical_file": "",
     "production_title": "Garbo Her Story",
+    "book_author": "Antoni Gronowicz",
+    "publisher": "General",
     "company": "",
     "venue": "",
     "city": "",
     "coordinates": [],
-    "people": [],
+    "people": [
+      "Antoni Gronowicz"
+    ],
     "roles": {
       "director": [],
       "actors": [],
@@ -60688,11 +60712,15 @@
     "editorial_issue_type": "",
     "canonical_file": "",
     "production_title": "'Inventing Champagne: The Worlds of Lerner and Loewe / All His Jazz:",
+    "book_author": "Martin Gottfried",
+    "publisher": "Bantam",
     "company": "",
     "venue": "",
     "city": "",
     "coordinates": [],
-    "people": [],
+    "people": [
+      "Martin Gottfried"
+    ],
     "roles": {
       "director": [],
       "actors": [],
@@ -61597,11 +61625,14 @@
     "editorial_issue_type": "",
     "canonical_file": "",
     "production_title": "Unforgettable: The Life and Mystique of Nat King Cole",
+    "book_author": "Leslie Gourse",
+    "publisher": "McClelland & Stewart",
     "company": "",
     "venue": "",
     "city": "",
     "coordinates": [],
     "people": [
+      "Leslie Gourse",
       "Nat King Cole"
     ],
     "roles": {
@@ -61625,15 +61656,14 @@
       "costume_designer": [],
       "lighting_designer": [],
       "sound_designer": [],
-      "musicians": [
-        "Nat King Cole"
-      ],
+      "musicians": [],
       "performers": [],
       "artists": []
     },
     "production_groups": [],
     "media": [],
-    "word_count": 864
+    "word_count": 864,
+    "subject_people": "Nat King Cole"
   },
   {
     "slug": "1991-07-28-five-go-up-down-and-round-the-bend",
@@ -61753,7 +61783,7 @@
     "canonical_file": "",
     "production_title": "The Lady from the Sea",
     "company": "",
-    "venue": "Riverside Studios; Open Air Theatre, Regent's Park; Gate Theatre",
+    "venue": "",
     "city": "",
     "coordinates": [],
     "people": [
@@ -61845,6 +61875,8 @@
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
     "production_title": "",
+    "book_author": "John Gielgud; John Miller",
+    "publisher": "Sidgwick",
     "company": "",
     "venue": "",
     "city": "",
@@ -61857,16 +61889,9 @@
       "William Shakespeare"
     ],
     "roles": {
-      "director": [
-        "Peter Brook"
-      ],
-      "actors": [
-        "John Gielgud",
-        "Richard Briers"
-      ],
-      "playwright": [
-        "William Shakespeare"
-      ],
+      "director": [],
+      "actors": [],
+      "playwright": [],
       "composer_lyricist": [],
       "musical_director": [],
       "choreographer": [],
@@ -61886,14 +61911,12 @@
       "sound_designer": [],
       "musicians": [],
       "performers": [],
-      "artists": [
-        "John Miller",
-        "Richard Briers"
-      ]
+      "artists": []
     },
     "production_groups": [],
     "media": [],
-    "word_count": 460
+    "word_count": 460,
+    "subject_people": "Peter Brook; Richard Briers; William Shakespeare"
   },
   {
     "slug": "1992-01-16-the-fever",
@@ -62566,6 +62589,7 @@
     "editorial_issue_type": "",
     "canonical_file": "",
     "production_title": "Young Shakespeare; Shakespeare: The Later Years",
+    "book_author": "Russell Fraser",
     "company": "",
     "venue": "",
     "city": "",
@@ -62576,9 +62600,7 @@
     "roles": {
       "director": [],
       "actors": [],
-      "playwright": [
-        "Russell Fraser"
-      ],
+      "playwright": [],
       "composer_lyricist": [],
       "musical_director": [],
       "choreographer": [],
@@ -62621,11 +62643,15 @@
     "editorial_issue_type": "",
     "canonical_file": "",
     "production_title": "Shakespeare: The Later Years",
+    "book_author": "Russell Fraser",
+    "publisher": "Columbia University Press",
     "company": "",
     "venue": "",
     "city": "",
     "coordinates": [],
-    "people": [],
+    "people": [
+      "Russell Fraser"
+    ],
     "roles": {
       "director": [],
       "actors": [],
@@ -62798,6 +62824,8 @@
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
     "production_title": "Jazz Singing: America's Great Voices from Bessie Smith to Bebop and Beyond",
+    "book_author": "Will Friedwald",
+    "publisher": "Quartet",
     "company": "",
     "venue": "",
     "city": "",
@@ -62844,32 +62872,13 @@
       "lighting_designer": [],
       "sound_designer": [],
       "musicians": [],
-      "performers": [
-        "Barbara Lea",
-        "Fred Astaire",
-        "Oscar Peterson",
-        "Frank Sinatra",
-        "Bing Crosby",
-        "Louis Armstrong",
-        "Peggy Lee",
-        "Rosemary Clooney",
-        "Billie Holiday",
-        "Bobby Darin",
-        "Sammy Davis",
-        "Al Jolson",
-        "Bobby McFerrin",
-        "Blossom Dearie",
-        "Jeri Southern",
-        "Pearl Bailey",
-        "Judy Garland"
-      ],
-      "artists": [
-        "Will Friedwald"
-      ]
+      "performers": [],
+      "artists": []
     },
     "production_groups": [],
     "media": [],
-    "word_count": 765
+    "word_count": 765,
+    "subject_people": "Barbara Lea; Fred Astaire; Oscar Peterson; Frank Sinatra; Bing Crosby; Louis Armstrong; Peggy Lee; Rosemary Clooney; Billie Holiday; Bobby Darin; Sammy Davis; Al Jolson; Bobby McFerrin; Blossom Dearie; Jeri Southern; Pearl Bailey; Judy Garland"
   },
   {
     "slug": "1992-06-24-cross-current-theatre-sees-kiss-of-the-spider-woman-as-a-rare-serious-musical",
@@ -63943,11 +63952,14 @@
     "editorial_issue_type": "",
     "canonical_file": "",
     "production_title": "Rodgers and Hammerstein by Ethan Mordden",
+    "book_author": "Ethan Mordden",
+    "publisher": "Abrams",
     "company": "",
     "venue": "",
     "city": "",
     "coordinates": [],
     "people": [
+      "Ethan Mordden",
       "Lorenz Hart",
       "Oscar Hammerstein",
       "Richard Rodgers"
@@ -63956,11 +63968,7 @@
       "director": [],
       "actors": [],
       "playwright": [],
-      "composer_lyricist": [
-        "Richard Rodgers",
-        "Oscar Hammerstein",
-        "Lorenz Hart"
-      ],
+      "composer_lyricist": [],
       "musical_director": [],
       "choreographer": [],
       "orchestrator": [],
@@ -63983,7 +63991,8 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 1068
+    "word_count": 1068,
+    "subject_people": "Richard Rodgers; Oscar Hammerstein; Lorenz Hart"
   },
   {
     "slug": "1993-02-28-book-review-not-the-very-model-of-a-major-life-in-general-gilbert",
@@ -64001,6 +64010,7 @@
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
     "production_title": "",
+    "book_author": "Michael Ffinch",
     "company": "",
     "venue": "",
     "city": "",
@@ -64013,12 +64023,8 @@
     "roles": {
       "director": [],
       "actors": [],
-      "playwright": [
-        "W. S. Gilbert"
-      ],
-      "composer_lyricist": [
-        "Arthur Sullivan"
-      ],
+      "playwright": [],
+      "composer_lyricist": [],
       "musical_director": [],
       "choreographer": [],
       "orchestrator": [],
@@ -64037,13 +64043,12 @@
       "sound_designer": [],
       "musicians": [],
       "performers": [],
-      "artists": [
-        "Michael Ffinch"
-      ]
+      "artists": []
     },
     "production_groups": [],
     "media": [],
-    "word_count": 542
+    "word_count": 542,
+    "subject_people": "W. S. Gilbert; Arthur Sullivan"
   },
   {
     "slug": "1993-05-28-theatre-review-saint-joan",
@@ -64947,22 +64952,23 @@
     "editorial_issue_type": "",
     "canonical_file": "",
     "production_title": "THE MEMORY OF ALL THAT: The Life of George Gershwin",
+    "book_author": "Joan Peyser; Edward Jablonski",
+    "publisher": "Simon and Schuster; Amadeus Press",
     "company": "",
     "venue": "",
     "city": "",
     "coordinates": [],
     "people": [
+      "Edward Jablonski",
       "George Gershwin",
-      "Ira Gershwin"
+      "Ira Gershwin",
+      "Joan Peyser"
     ],
     "roles": {
       "director": [],
       "actors": [],
       "playwright": [],
-      "composer_lyricist": [
-        "George Gershwin",
-        "Ira Gershwin"
-      ],
+      "composer_lyricist": [],
       "musical_director": [],
       "choreographer": [],
       "orchestrator": [],
@@ -64979,15 +64985,14 @@
       "costume_designer": [],
       "lighting_designer": [],
       "sound_designer": [],
-      "musicians": [
-        "George Gershwin"
-      ],
+      "musicians": [],
       "performers": [],
       "artists": []
     },
     "production_groups": [],
     "media": [],
-    "word_count": 1235
+    "word_count": 1235,
+    "subject_people": "George Gershwin; Ira Gershwin"
   },
   {
     "slug": "1993-10-02-theatre-review-five-guys-named-moe",
@@ -65260,6 +65265,8 @@
     "editorial_issue_type": "",
     "canonical_file": "",
     "production_title": "Ella Fitzgerald by Stuart Nicholson / The Complete Ella Fitzgerald",
+    "book_author": "Stuart Nicholson",
+    "publisher": "Gollancz",
     "company": "",
     "venue": "",
     "city": "",
@@ -65275,24 +65282,14 @@
       "Jerome Kern",
       "Johnny Mercer",
       "Lorenz Hart",
-      "Richard Rodgers"
+      "Richard Rodgers",
+      "Stuart Nicholson"
     ],
     "roles": {
       "director": [],
       "actors": [],
       "playwright": [],
-      "composer_lyricist": [
-        "Cole Porter",
-        "Richard Rodgers",
-        "Lorenz Hart",
-        "Duke Ellington",
-        "Irving Berlin",
-        "George Gershwin",
-        "Ira Gershwin",
-        "Harold Arlen",
-        "Jerome Kern",
-        "Johnny Mercer"
-      ],
+      "composer_lyricist": [],
       "musical_director": [],
       "choreographer": [],
       "orchestrator": [],
@@ -65309,15 +65306,14 @@
       "costume_designer": [],
       "lighting_designer": [],
       "sound_designer": [],
-      "musicians": [
-        "Ella Fitzgerald"
-      ],
+      "musicians": [],
       "performers": [],
       "artists": []
     },
     "production_groups": [],
     "media": [],
-    "word_count": 1887
+    "word_count": 1887,
+    "subject_people": "Cole Porter; Richard Rodgers; Lorenz Hart; Duke Ellington; Irving Berlin; George Gershwin; Ira Gershwin; Harold Arlen; Jerome Kern; Johnny Mercer; Ella Fitzgerald"
   },
   {
     "slug": "1994-03-12-theatre-s-living-isms",
@@ -66563,11 +66559,15 @@
     "editorial_issue_type": "",
     "canonical_file": "",
     "production_title": "The Western Canon: The Books and School of the Ages",
+    "book_author": "Harold Bloom",
+    "publisher": "Harcourt Brace",
     "company": "",
     "venue": "",
     "city": "",
     "coordinates": [],
-    "people": [],
+    "people": [
+      "Harold Bloom"
+    ],
     "roles": {
       "director": [],
       "actors": [],
@@ -66925,6 +66925,8 @@
     "editorial_issue_type": "",
     "canonical_file": "",
     "production_title": "CATS OF ANY COLOR: Jazz Black and White",
+    "book_author": "Gene Lees",
+    "publisher": "Oxford University Press",
     "company": "",
     "venue": "",
     "city": "",
@@ -66963,25 +66965,14 @@
       "costume_designer": [],
       "lighting_designer": [],
       "sound_designer": [],
-      "musicians": [
-        "Gene Lees",
-        "Louis Armstrong",
-        "Clark Terry",
-        "Wynton Marsalis",
-        "Miles Davis",
-        "Horace Silver",
-        "Red Rodney",
-        "Red Mitchell",
-        "Dave Brubeck",
-        "Oscar Peterson",
-        "Dizzy Gillespie"
-      ],
+      "musicians": [],
       "performers": [],
       "artists": []
     },
     "production_groups": [],
     "media": [],
-    "word_count": 813
+    "word_count": 813,
+    "subject_people": "Louis Armstrong; Clark Terry; Wynton Marsalis; Miles Davis; Horace Silver; Red Rodney; Red Mitchell; Dave Brubeck; Oscar Peterson; Dizzy Gillespie"
   },
   {
     "slug": "1995-03-17-torme-reads-well-on-stage-and-page-music-review-in-his-sing-sing-sing-concert",
@@ -68011,6 +68002,7 @@
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
     "production_title": "",
+    "book_author": "Michael Pennington",
     "company": "English Shakespeare Company",
     "venue": "",
     "city": "",
@@ -68022,16 +68014,9 @@
       "William Shakespeare"
     ],
     "roles": {
-      "director": [
-        "Peter Hall"
-      ],
-      "actors": [
-        "Michael Pennington",
-        "Stephen Dillane"
-      ],
-      "playwright": [
-        "William Shakespeare"
-      ],
+      "director": [],
+      "actors": [],
+      "playwright": [],
       "composer_lyricist": [],
       "musical_director": [],
       "choreographer": [],
@@ -68051,13 +68036,12 @@
       "sound_designer": [],
       "musicians": [],
       "performers": [],
-      "artists": [
-        "Michael Pennington"
-      ]
+      "artists": []
     },
     "production_groups": [],
     "media": [],
-    "word_count": 1710
+    "word_count": 1710,
+    "subject_people": "Peter Hall; Stephen Dillane; William Shakespeare"
   },
   {
     "slug": "1996-02-07-theatre-review-bedtimes-and-bullies",
@@ -68281,6 +68265,8 @@
     "editorial_issue_type": "",
     "canonical_file": "",
     "production_title": "ALAN JAY LERNER: A Biography",
+    "book_author": "Edward Jablonski",
+    "publisher": "Henry Holt",
     "company": "",
     "venue": "",
     "city": "",
@@ -68288,6 +68274,7 @@
     "people": [
       "Alan Jay Lerner",
       "Burton Lane",
+      "Edward Jablonski",
       "Frederick Loewe",
       "Kurt Weill"
     ],
@@ -68295,12 +68282,7 @@
       "director": [],
       "actors": [],
       "playwright": [],
-      "composer_lyricist": [
-        "Alan Jay Lerner",
-        "Frederick Loewe",
-        "Kurt Weill",
-        "Burton Lane"
-      ],
+      "composer_lyricist": [],
       "musical_director": [],
       "choreographer": [],
       "orchestrator": [],
@@ -68323,7 +68305,8 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 1189
+    "word_count": 1189,
+    "subject_people": "Alan Jay Lerner; Frederick Loewe; Kurt Weill; Burton Lane"
   },
   {
     "slug": "1996-04-19-theatre-review-road-movie",
@@ -68804,20 +68787,21 @@
     "editorial_issue_type": "",
     "canonical_file": "",
     "production_title": "NOEL COWARD: A Biography",
+    "book_author": "Philip Hoare",
+    "publisher": "Sinclair-Stevenson",
     "company": "",
     "venue": "",
     "city": "",
     "coordinates": [],
     "people": [
-      "Noël Coward"
+      "Noël Coward",
+      "Philip Hoare"
     ],
     "roles": {
       "director": [],
       "actors": [],
       "playwright": [],
-      "composer_lyricist": [
-        "Noël Coward"
-      ],
+      "composer_lyricist": [],
       "musical_director": [],
       "choreographer": [],
       "orchestrator": [],
@@ -68840,7 +68824,8 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 1901
+    "word_count": 1901,
+    "subject_people": "Noël Coward"
   },
   {
     "slug": "1996-06-21-facts-arguments-lives-lived-ella-fitzgerald",
@@ -69315,11 +69300,14 @@
     "editorial_issue_type": "",
     "canonical_file": "",
     "production_title": "'Great Books: My Adventures with Homer, Rousseau, Woolf and Other",
+    "book_author": "David Denby",
     "company": "",
     "venue": "",
     "city": "",
     "coordinates": [],
-    "people": [],
+    "people": [
+      "David Denby"
+    ],
     "roles": {
       "director": [],
       "actors": [],
@@ -69788,11 +69776,15 @@
     "editorial_issue_type": "",
     "canonical_file": "",
     "production_title": "Forbidden Knowledge: From Prometheus to Pornography",
+    "book_author": "Roger Shattuck",
+    "publisher": "St. Martin's Press",
     "company": "",
     "venue": "",
     "city": "",
     "coordinates": [],
-    "people": [],
+    "people": [
+      "Roger Shattuck"
+    ],
     "roles": {
       "director": [],
       "actors": [],
@@ -71749,11 +71741,14 @@
     "editorial_issue_type": "",
     "canonical_file": "",
     "production_title": "Steven Spielberg: A Biography",
+    "book_author": "Joseph McBride",
     "company": "",
     "venue": "",
     "city": "",
     "coordinates": [],
-    "people": [],
+    "people": [
+      "Joseph McBride"
+    ],
     "roles": {
       "director": [],
       "actors": [],
@@ -71934,11 +71929,16 @@
     "editorial_issue_type": "",
     "canonical_file": "",
     "production_title": "HAPPY ALCHEMY: Writings on the Theatre and Other Lively Arts",
+    "book_author": "Robertson Davies; Jennifer Surridge; Brenda Davies",
     "company": "",
     "venue": "",
     "city": "",
     "coordinates": [],
-    "people": [],
+    "people": [
+      "Brenda Davies",
+      "Jennifer Surridge",
+      "Robertson Davies"
+    ],
     "roles": {
       "director": [],
       "actors": [],
@@ -72036,11 +72036,17 @@
     "editorial_issue_type": "",
     "canonical_file": "",
     "production_title": "Frank Sinatra Biographies",
+    "book_author": "Michael Freedland; John Lahr; Bill Zehme; Donald Clarke",
     "company": "",
     "venue": "",
     "city": "",
     "coordinates": [],
-    "people": [],
+    "people": [
+      "Bill Zehme",
+      "Donald Clarke",
+      "John Lahr",
+      "Michael Freedland"
+    ],
     "roles": {
       "director": [],
       "actors": [],
@@ -81328,6 +81334,7 @@
     "editorial_issue_type": "",
     "canonical_file": "",
     "production_title": "Girl Singer",
+    "book_author": "Rosemary Clooney",
     "company": "",
     "venue": "",
     "city": "",
@@ -81356,9 +81363,7 @@
       "costume_designer": [],
       "lighting_designer": [],
       "sound_designer": [],
-      "musicians": [
-        "Rosemary Clooney"
-      ],
+      "musicians": [],
       "performers": [],
       "artists": []
     },
@@ -93259,11 +93264,16 @@
     "editorial_issue_type": "",
     "canonical_file": "",
     "production_title": "Reading Lyrics",
-    "company": "Random House",
+    "book_author": "Robert Gottlieb; Robert Kimball",
+    "publisher": "Random House",
+    "company": "",
     "venue": "",
     "city": "",
     "coordinates": [],
-    "people": [],
+    "people": [
+      "Robert Gottlieb",
+      "Robert Kimball"
+    ],
     "roles": {
       "director": [],
       "actors": [],
@@ -95315,11 +95325,15 @@
     "editorial_issue_type": "",
     "canonical_file": "",
     "production_title": "Lillian Gish: Her Legend, Her Life",
+    "book_author": "Charles Affron",
+    "publisher": "Scribner",
     "company": "",
     "venue": "",
     "city": "",
     "coordinates": [],
-    "people": [],
+    "people": [
+      "Charles Affron"
+    ],
     "roles": {
       "director": [],
       "actors": [],
@@ -106989,6 +107003,8 @@
     "editorial_issue_type": "",
     "canonical_file": "",
     "production_title": "The Play Goes On",
+    "book_author": "Neil Simon",
+    "publisher": "Touchstone; Simon & Schuster",
     "company": "",
     "venue": "",
     "city": "",
@@ -106999,9 +107015,7 @@
     "roles": {
       "director": [],
       "actors": [],
-      "playwright": [
-        "Neil Simon"
-      ],
+      "playwright": [],
       "composer_lyricist": [],
       "musical_director": [],
       "choreographer": [],
@@ -139979,11 +139993,15 @@
     "editorial_issue_type": "",
     "canonical_file": "",
     "production_title": "The Closed Circle",
+    "book_author": "Jonathan Coe",
+    "publisher": "Alfred A. Knopf",
     "company": "",
     "venue": "",
     "city": "",
     "coordinates": [],
-    "people": [],
+    "people": [
+      "Jonathan Coe"
+    ],
     "roles": {
       "director": [],
       "actors": [],
@@ -140497,11 +140515,15 @@
     "editorial_issue_type": "",
     "canonical_file": "",
     "production_title": "Sing for Your Supper: The Broadway Musical in the 1930s",
+    "book_author": "Ethan Mordden",
+    "publisher": "Palgrave",
     "company": "",
     "venue": "",
     "city": "",
     "coordinates": [],
-    "people": [],
+    "people": [
+      "Ethan Mordden"
+    ],
     "roles": {
       "director": [],
       "actors": [],
@@ -142175,11 +142197,14 @@
     "editorial_issue_type": "",
     "canonical_file": "",
     "production_title": "Secret Dreams",
+    "book_author": "Alan Strachan",
     "company": "",
     "venue": "",
     "city": "",
     "coordinates": [],
-    "people": [],
+    "people": [
+      "Alan Strachan"
+    ],
     "roles": {
       "director": [],
       "actors": [],
@@ -142414,11 +142439,15 @@
     "editorial_issue_type": "body_restored_from_source",
     "canonical_file": "",
     "production_title": "The People's Act Of Love",
+    "book_author": "James Meek",
+    "publisher": "HarperCollins",
     "company": "",
     "venue": "",
     "city": "",
     "coordinates": [],
-    "people": [],
+    "people": [
+      "James Meek"
+    ],
     "roles": {
       "director": [],
       "actors": [],
@@ -144512,11 +144541,18 @@
     "editorial_issue_type": "",
     "canonical_file": "",
     "production_title": "Classic American Popular Song; The American Songbook",
+    "book_author": "Alec Wilder; David Jenness; Don Velsey; Ken Bloom",
+    "publisher": "Oxford; Routledge",
     "company": "",
     "venue": "",
     "city": "",
     "coordinates": [],
-    "people": [],
+    "people": [
+      "Alec Wilder",
+      "David Jenness",
+      "Don Velsey",
+      "Ken Bloom"
+    ],
     "roles": {
       "director": [],
       "actors": [],
@@ -152691,11 +152727,15 @@
     "editorial_issue_type": "",
     "canonical_file": "",
     "production_title": "George Gershwin: His Life and Work",
+    "book_author": "Howard Pollack",
+    "publisher": "University of California Press",
     "company": "",
     "venue": "",
     "city": "",
     "coordinates": [],
-    "people": [],
+    "people": [
+      "Howard Pollack"
+    ],
     "roles": {
       "director": [],
       "actors": [],
@@ -159965,11 +160005,15 @@
     "editorial_issue_type": "",
     "canonical_file": "",
     "production_title": "Shakespeare the Thinker",
+    "book_author": "A. D. Nuttall",
+    "publisher": "Yale University Press",
     "company": "",
     "venue": "",
     "city": "",
     "coordinates": [],
-    "people": [],
+    "people": [
+      "A. D. Nuttall"
+    ],
     "roles": {
       "director": [],
       "actors": [],
@@ -163501,11 +163545,15 @@
     "editorial_issue_type": "body_restored_from_source",
     "canonical_file": "",
     "production_title": "The Letters of Noel Coward",
-    "company": "Knopf",
+    "book_author": "Barry Day",
+    "publisher": "Knopf",
+    "company": "",
     "venue": "",
     "city": "",
     "coordinates": [],
-    "people": [],
+    "people": [
+      "Barry Day"
+    ],
     "roles": {
       "director": [],
       "actors": [],
@@ -177326,11 +177374,15 @@
     "editorial_issue_type": "",
     "canonical_file": "",
     "production_title": "Shakespeare and Modern Culture",
+    "book_author": "Marjorie Garber",
+    "publisher": "Pantheon",
     "company": "",
     "venue": "",
     "city": "",
     "coordinates": [],
-    "people": [],
+    "people": [
+      "Marjorie Garber"
+    ],
     "roles": {
       "director": [],
       "actors": [],
@@ -180239,11 +180291,15 @@
     "editorial_issue_type": "",
     "canonical_file": "",
     "production_title": "The Cello Suites",
+    "book_author": "Eric Siblin",
+    "publisher": "Anansi",
     "company": "",
     "venue": "",
     "city": "",
     "coordinates": [],
-    "people": [],
+    "people": [
+      "Eric Siblin"
+    ],
     "roles": {
       "director": [],
       "actors": [],
@@ -180673,11 +180729,14 @@
     "editorial_issue_type": "",
     "canonical_file": "",
     "production_title": "The Cello Suites",
+    "book_author": "Eric Siblin",
+    "publisher": "Anansi",
     "company": "",
     "venue": "",
     "city": "",
     "coordinates": [],
     "people": [
+      "Eric Siblin",
       "Johann Sebastian Bach",
       "Pablo Casals"
     ],
@@ -180685,9 +180744,7 @@
       "director": [],
       "actors": [],
       "playwright": [],
-      "composer_lyricist": [
-        "Johann Sebastian Bach"
-      ],
+      "composer_lyricist": [],
       "musical_director": [],
       "choreographer": [],
       "orchestrator": [],
@@ -180704,15 +180761,14 @@
       "costume_designer": [],
       "lighting_designer": [],
       "sound_designer": [],
-      "musicians": [
-        "Pablo Casals"
-      ],
+      "musicians": [],
       "performers": [],
       "artists": []
     },
     "production_groups": [],
     "media": [],
-    "word_count": 1124
+    "word_count": 1124,
+    "subject_people": "Johann Sebastian Bach; Pablo Casals"
   },
   {
     "slug": "2009-05-20-even-if-you-see-it-you-might-not-believe-it",
@@ -195920,6 +195976,7 @@
     "editorial_issue_type": "",
     "canonical_file": "",
     "production_title": "Finishing the Hat / Biographical Guide to the Great Jazz and Pop",
+    "book_author": "Stephen Sondheim; Will Friedwald",
     "company": "",
     "venue": "",
     "city": "",
@@ -195931,10 +195988,7 @@
     "roles": {
       "director": [],
       "actors": [],
-      "playwright": [
-        "Stephen Sondheim",
-        "Will Friedwald"
-      ],
+      "playwright": [],
       "composer_lyricist": [],
       "musical_director": [],
       "choreographer": [],
@@ -200865,19 +200919,20 @@
     "editorial_issue_type": "",
     "canonical_file": "",
     "production_title": "How Shakespeare Changed Everything",
-    "company": "HarperCollins Canada",
+    "book_author": "Stephen Marche",
+    "publisher": "HarperCollins Canada",
+    "company": "",
     "venue": "",
     "city": "",
     "coordinates": [],
     "people": [
+      "Stephen Marche",
       "William Shakespeare"
     ],
     "roles": {
       "director": [],
       "actors": [],
-      "playwright": [
-        "William Shakespeare"
-      ],
+      "playwright": [],
       "composer_lyricist": [],
       "musical_director": [],
       "choreographer": [],
@@ -200901,7 +200956,8 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 1228
+    "word_count": 1228,
+    "subject_people": "William Shakespeare"
   },
   {
     "slug": "2011-05-31-theatre-review-cat-on-a-hot-tin-roof",
@@ -206072,11 +206128,16 @@
     "editorial_issue_type": "",
     "canonical_file": "",
     "production_title": "A Fiery Soul: The Life and Theatrical Times of John Hirsch",
-    "company": "Vehicule Press",
+    "book_author": "Fraidie Martz; Andrew Wilson",
+    "publisher": "Vehicule Press",
+    "company": "",
     "venue": "",
     "city": "",
     "coordinates": [],
-    "people": [],
+    "people": [
+      "Andrew Wilson",
+      "Fraidie Martz"
+    ],
     "roles": {
       "director": [],
       "actors": [],
@@ -237137,11 +237198,15 @@
     "editorial_issue_type": "",
     "canonical_file": "",
     "production_title": "Swing Time",
-    "company": "Hamish Hamilton",
+    "book_author": "Zadie Smith",
+    "publisher": "Hamish Hamilton",
+    "company": "",
     "venue": "",
     "city": "",
     "coordinates": [],
-    "people": [],
+    "people": [
+      "Zadie Smith"
+    ],
     "roles": {
       "director": [],
       "actors": [],

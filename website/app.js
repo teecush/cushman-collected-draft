@@ -1,4 +1,4 @@
-const DATA_URL = new URL("../site_export/data/public_reviews.json?v=85", import.meta.url);
+const DATA_URL = new URL("../site_export/data/public_reviews.json?v=86", import.meta.url);
 const CONTENT_ROOT = new URL("../site_export/content/reviews/", import.meta.url);
 const PAGE_SIZE = 36;
 const SHAKESPEARE_COLLECTION = "The Shakespeare Collection";
@@ -42,7 +42,10 @@ const SECONDARY_COLLECTION_TILES = [
 ];
 const ENTITY_TYPES = [
   { key: "people", label: "People", singular: "Person" },
+  { key: "subjects", label: "Subjects", singular: "Subject" },
   { key: "productions", label: "Productions", singular: "Production" },
+  { key: "book-authors", label: "Book Authors", singular: "Book Author" },
+  { key: "publishers", label: "Publishers", singular: "Publisher" },
   { key: "companies", label: "Companies", singular: "Company" },
   { key: "venues", label: "Venues", singular: "Venue" },
   { key: "cities", label: "Cities", singular: "City" },
@@ -546,8 +549,11 @@ function collectionCount(name) {
 function entityValues(record, type) {
   const role = entityType(type)?.role;
   if (role) return uniqueEntityValues([...splitEntityList(record.roles?.[role] || []), ...groupedRoleValues(record, role)]);
-  if (type === "people") return uniqueEntityValues([...(record.people || []), ...productionGroups(record).flatMap((group) => ENTITY_TYPES.filter((item) => item.role).flatMap((item) => splitEntityList(group[item.role] || [])))]);
+  if (type === "people") return uniqueEntityValues([...(record.people || []), ...splitEntityList(record.book_author), ...splitEntityList(record.subject_people), ...productionGroups(record).flatMap((group) => ENTITY_TYPES.filter((item) => item.role).flatMap((item) => splitEntityList(group[item.role] || [])))]);
+  if (type === "subjects") return uniqueEntityValues(splitEntityList(record.subject_people));
   if (type === "productions") return uniqueEntityValues([...splitEntityList(record.production_title), ...groupedEntityValues(record, "production_title")]);
+  if (type === "book-authors") return uniqueEntityValues(splitEntityList(record.book_author));
+  if (type === "publishers") return uniqueEntityValues(splitEntityList(record.publisher));
   if (type === "companies") return uniqueEntityValues([...splitEntityList(record.company), ...groupedEntityValues(record, "company")]);
   if (type === "venues") return uniqueEntityValues([...splitEntityList(record.venue), ...groupedEntityValues(record, "venue")]);
   if (type === "cities") return uniqueEntityValues([...splitCityList(record.city), ...groupedEntityValues(record, "city", splitCityList)]);
@@ -1380,7 +1386,10 @@ function frontpageSection(section) {
 function indexDescription(type) {
   return {
     people: "Artists, writers, directors, performers, and other named people.",
+    subjects: "People who are the focus of non-production pieces.",
     productions: "Reviewed shows, books, broadcasts, recordings, and subjects.",
+    "book-authors": "Authors and editors of reviewed books.",
+    publishers: "Publishers of reviewed books.",
     companies: "Theatre companies, festivals, broadcasters, and producers.",
     venues: "Theatres and performance spaces.",
     cities: "Places represented in the archive.",
@@ -1389,7 +1398,7 @@ function indexDescription(type) {
     collections: "Editorial collections and special paths.",
     directors: "Directors credited in structured production metadata.",
     actors: "Actors credited in structured production metadata.",
-    playwrights: "Playwrights and source authors.",
+    playwrights: "Playwrights and dramatic source authors.",
     "composers-lyricists": "Composers, lyricists, and musical writers.",
     "musical-directors": "Musical directors.",
     choreographers: "Choreographers.",
@@ -2918,6 +2927,8 @@ function articleEntityLinks(record) {
     ["productions", "Production", valuesExceptGrouped(splitEntityList(record.production_title), groupedProductionValues).slice(0, 4)],
   ].filter(([, , values]) => values.length);
   const contextGroups = [
+    ["book-authors", "Book Author", splitEntityList(record.book_author).slice(0, 4)],
+    ["publishers", "Publisher", splitEntityList(record.publisher).slice(0, 3)],
     ["companies", "Company", valuesExceptGrouped(splitEntityList(record.company), groupedCompanyValues).slice(0, 3)],
     ["venues", "Venue", valuesExceptGrouped(splitEntityList(record.venue), groupedVenueValues).slice(0, 2)],
     ["cities", "City", valuesExceptGrouped(splitCityList(record.city), groupedCityValues).slice(0, 2)],
@@ -2925,6 +2936,7 @@ function articleEntityLinks(record) {
   ].filter(([, , values]) => values.length);
 
   const peopleGroups = [
+    ["subjects", "Subject", splitEntityList(record.subject_people).slice(0, 6)],
     ...ARTICLE_ROLE_GROUPS.map(([type, prefix, role, limit]) => [type, prefix, valuesExceptGrouped(record.roles?.[role] || [], groupedRoleValues(record, role)).slice(0, limit)]),
   ].filter(([, , values]) => values.length);
 
@@ -2959,6 +2971,9 @@ function articleEntityGroup(label, groups, groupType) {
 function inlineLinkEntities(record) {
   const candidates = [
     ...entityValues(record, "productions").map((label) => ({ type: "productions", label, priority: 1 })),
+    ...entityValues(record, "book-authors").map((label) => ({ type: "book-authors", label, priority: 2 })),
+    ...entityValues(record, "subjects").map((label) => ({ type: "subjects", label, priority: 2 })),
+    ...entityValues(record, "publishers").map((label) => ({ type: "publishers", label, priority: 2 })),
     ...entityValues(record, "companies").map((label) => ({ type: "companies", label, priority: 2 })),
     ...entityValues(record, "directors").map((label) => ({ type: "directors", label, priority: 3 })),
     ...entityValues(record, "playwrights").map((label) => ({ type: "playwrights", label, priority: 3 })),

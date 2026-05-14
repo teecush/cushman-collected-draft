@@ -21,8 +21,6 @@ editorial_issue_type: multi_author_short_take
 editorial_notes: Spreadsheet/docview metadata identify this as the April 14, 2005
   National Post T.O. Do guide. Retained archive-only because it is a co-authored short
   listings item rather than a standard single review.
-mentions:
-- Marion J. Caffey
 tags:
 - theatre
 - ain't misbehavin'
