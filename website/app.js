@@ -2886,10 +2886,16 @@ function articleProductionGroups(record) {
   if (!groups.length) return null;
 
   const wrap = document.createElement("div");
-  wrap.className = "article-production-groups";
+  wrap.className = `article-production-groups${groups.length > 5 ? " article-production-groups-long" : ""}`;
   groups.forEach((group, index) => {
     const section = document.createElement("section");
-    section.className = "article-production-group";
+    const chipRows = [
+      ["companies", "Company", splitEntityList(group.company).slice(0, 3)],
+      ["venues", "Venue", splitEntityList(group.venue).slice(0, 2)],
+      ["cities", "City", splitCityList(group.city).slice(0, 2)],
+      ...ARTICLE_ROLE_GROUPS.map(([type, prefix, role, limit]) => [type, prefix, splitEntityList(group[role]).slice(0, limit)]),
+    ].filter(([, , values]) => values.length);
+    section.className = `article-production-group${chipRows.length ? "" : " article-production-group-empty"}`;
     const title = document.createElement("a");
     title.className = "article-production-title-link";
     title.href = `#entity:productions:${entitySlug(group.production_title)}`;
@@ -2897,22 +2903,11 @@ function articleProductionGroups(record) {
     const nav = document.createElement("nav");
     nav.className = "article-entities article-production-group-entities";
     nav.setAttribute("aria-label", `${group.production_title} metadata links`);
-    [
-      ["companies", "Company", splitEntityList(group.company).slice(0, 3)],
-      ["venues", "Venue", splitEntityList(group.venue).slice(0, 2)],
-      ["cities", "City", splitCityList(group.city).slice(0, 2)],
-      ...ARTICLE_ROLE_GROUPS.map(([type, prefix, role, limit]) => [type, prefix, splitEntityList(group[role]).slice(0, limit)]),
-    ].forEach(([type, prefix, values]) => {
+    chipRows.forEach(([type, prefix, values]) => {
       values.forEach((value) => nav.append(entityChip(type, value, prefix, "production")));
     });
     section.replaceChildren(title, nav);
     wrap.append(section);
-    if (index < groups.length - 1) {
-      const spacer = document.createElement("span");
-      spacer.className = "article-production-group-gap";
-      spacer.setAttribute("aria-hidden", "true");
-      wrap.append(spacer);
-    }
   });
   return wrap;
 }

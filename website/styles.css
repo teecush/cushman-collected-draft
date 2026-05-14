@@ -1412,32 +1412,44 @@ h1 {
 
 .article-production-groups {
   display: grid;
+  gap: 11px;
+}
+
+.article-production-groups-long {
   gap: 8px;
 }
 
 .article-production-group {
   display: grid;
-  gap: 7px;
+  gap: 6px;
+  align-content: start;
+}
+
+.article-production-group-empty {
+  gap: 0;
 }
 
 .article-production-title-link {
+  justify-self: start;
+  border: 1px solid var(--chip-border, var(--rule));
+  border-radius: 999px;
+  background: #f3f0e8;
   color: var(--ink);
   font-family: var(--sans);
-  font-size: 14px;
-  font-weight: 750;
+  font-size: 14.5px;
+  font-weight: 680;
   line-height: 1.2;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 3px;
+  padding: 5px 10px;
+  text-decoration: none;
 }
 
 .article-production-title-link:hover {
   color: var(--blue-dark);
+  border-color: var(--blue-dark);
 }
 
-.article-production-group-gap {
-  display: block;
-  height: 2px;
+.article-production-group-empty .article-production-title-link {
+  background: color-mix(in srgb, #f3f0e8 55%, white);
 }
 
 .article-production-group-entities {
