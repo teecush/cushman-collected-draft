@@ -1,4 +1,4 @@
-const DATA_URL = new URL("../site_export/data/public_reviews.json?v=79", import.meta.url);
+const DATA_URL = new URL("../site_export/data/public_reviews.json?v=80", import.meta.url);
 const CONTENT_ROOT = new URL("../site_export/content/reviews/", import.meta.url);
 const PAGE_SIZE = 36;
 const SHAKESPEARE_COLLECTION = "The Shakespeare Collection";
@@ -66,6 +66,107 @@ const ENTITY_TYPES = [
   { key: "dramaturgs", label: "Dramaturgs", singular: "Dramaturg", role: "dramaturg" },
   { key: "fight-directors", label: "Fight Directors", singular: "Fight Director", role: "fight_director" },
 ];
+
+const CITY_COORDINATES = new Map(Object.entries({
+  "toronto": [43.6532, -79.3832],
+  "stratford": [43.3700, -80.9822],
+  "stratford ontario": [43.3700, -80.9822],
+  "niagara on the lake": [43.2540, -79.0773],
+  "london": [51.5072, -0.1276],
+  "london england": [51.5072, -0.1276],
+  "stratford upon avon": [52.1917, -1.7083],
+  "edinburgh": [55.9533, -3.1883],
+  "new york": [40.7128, -74.0060],
+  "paris": [48.8566, 2.3522],
+  "chichester": [50.8365, -0.7792],
+  "manchester": [53.4808, -2.2426],
+  "glasgow": [55.8642, -4.2518],
+  "oxford": [51.7520, -1.2577],
+  "cambridge": [52.2053, 0.1218],
+  "bristol": [51.4545, -2.5879],
+  "nottingham": [52.9548, -1.1581],
+  "scarborough": [54.2831, -0.3998],
+  "sheffield": [53.3811, -1.4701],
+  "leicester": [52.6369, -1.1398],
+  "newcastle": [54.9783, -1.6178],
+  "salisbury": [51.0688, -1.7945],
+  "wimbledon": [51.4214, -0.2064],
+  "greenwich": [51.4826, -0.0077],
+  "woking": [51.3168, -0.5600],
+  "exeter": [50.7184, -3.5339],
+  "hammersmith": [51.4927, -0.2340],
+  "vienna": [48.2082, 16.3738],
+  "los angeles": [34.0522, -118.2437],
+  "croydon": [51.3762, -0.0982],
+  "birmingham": [52.4862, -1.8904],
+  "wavendon": [52.0256, -0.6742],
+  "guildford": [51.2362, -0.5704],
+}));
+
+const VENUE_COORDINATES = new Map(Object.entries({
+  "aldwych theatre": [51.5132, -0.1189],
+  "almeida theatre": [51.5395, -0.1020],
+  "apollo theatre": [51.5118, -0.1320],
+  "arts theatre": [51.5128, -0.1276],
+  "barbican theatre": [51.5201, -0.0935],
+  "bush theatre": [51.5065, -0.2249],
+  "cambridge theatre": [51.5134, -0.1272],
+  "chichester festival theatre": [50.8436, -0.7788],
+  "comedy theatre": [51.5114, -0.1322],
+  "cottesloe theatre": [51.5067, -0.1150],
+  "dorfman theatre": [51.5067, -0.1150],
+  "donmar warehouse": [51.5137, -0.1269],
+  "drury lane theatre": [51.5129, -0.1214],
+  "everyman": [51.9007, -2.0750],
+  "globe theatre": [51.5081, -0.0972],
+  "greenwich theatre": [51.4808, -0.0077],
+  "half moon theatre": [51.5127, -0.0545],
+  "hampstead theatre": [51.5431, -0.1737],
+  "hampstead theatre club": [51.5431, -0.1737],
+  "haymarket theatre": [51.5089, -0.1320],
+  "her majestys theatre": [51.5080, -0.1323],
+  "her majesty s theatre": [51.5080, -0.1323],
+  "ica": [51.5066, -0.1308],
+  "kings head theatre": [51.5374, -0.1027],
+  "lyceum theatre": [51.5116, -0.1198],
+  "lyric hammersmith": [51.4928, -0.2267],
+  "lyric theatre": [51.5118, -0.1335],
+  "lyttelton theatre": [51.5067, -0.1150],
+  "london palladium": [51.5146, -0.1408],
+  "mayfair theatre": [51.5115, -0.1477],
+  "mermaid theatre": [51.5114, -0.1015],
+  "national theatre": [51.5067, -0.1150],
+  "nottingham playhouse": [52.9545, -1.1586],
+  "old vic": [51.5022, -0.1098],
+  "olivier theatre": [51.5067, -0.1150],
+  "open space": [51.5197, -0.1367],
+  "other place": [52.1928, -1.7064],
+  "oxford playhouse": [51.7553, -1.2617],
+  "phoenix theatre": [51.5147, -0.1298],
+  "piccadilly theatre": [51.5101, -0.1343],
+  "prince edward theatre": [51.5134, -0.1310],
+  "prince of wales theatre": [51.5101, -0.1318],
+  "queens theatre": [51.5110, -0.1328],
+  "regents park": [51.5313, -0.1569],
+  "riverside studios": [51.4880, -0.2249],
+  "roundhouse": [51.5432, -0.1519],
+  "royal court theatre": [51.4908, -0.1567],
+  "royal court theatre upstairs": [51.4908, -0.1567],
+  "royal exchange theatre": [53.4828, -2.2448],
+  "royal lyceum theatre": [55.9469, -3.2046],
+  "royal shakespeare theatre": [52.1909, -1.7046],
+  "shaftesbury theatre": [51.5163, -0.1263],
+  "shaw theatre": [51.5293, -0.1258],
+  "stephen joseph theatre in the round": [54.2806, -0.4058],
+  "the other place": [52.1928, -1.7064],
+  "the place": [51.5283, -0.1289],
+  "traverse theatre": [55.9476, -3.2054],
+  "vaudeville theatre": [51.5111, -0.1229],
+  "warehouse theatre": [51.3727, -0.0987],
+  "westminster theatre": [51.4989, -0.1366],
+  "wyndhams theatre": [51.5118, -0.1271],
+  "young vic": [51.5033, -0.1077],
+}));
 
 const TYPE_GROUPS = [
   {
@@ -467,6 +568,55 @@ function normalizeCityName(value) {
   return map[city] || city;
 }
 
+function coordinateKey(value) {
+  return String(value || "")
+    .normalize("NFKD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/&/g, " and ")
+    .replace(/['’]/g, "")
+    .replace(/[^a-z0-9]+/gi, " ")
+    .trim()
+    .toLowerCase();
+}
+
+function coordinatesForCity(city) {
+  return CITY_COORDINATES.get(coordinateKey(normalizeCityName(city))) || CITY_COORDINATES.get(coordinateKey(city));
+}
+
+function coordinatesForVenue(venue) {
+  return VENUE_COORDINATES.get(coordinateKey(venue));
+}
+
+function pointCoordinates(record, city = "", venue = "") {
+  const coordinates = Array.isArray(record.coordinates) ? record.coordinates : [];
+  const lat = Number(coordinates[0]);
+  const lon = Number(coordinates[1]);
+  if (Number.isFinite(lat) && Number.isFinite(lon)) return [lat, lon];
+  if (venue) {
+    const venueCoordinates = coordinatesForVenue(venue);
+    if (venueCoordinates) return venueCoordinates;
+  }
+  if (city) {
+    const cityCoordinates = coordinatesForCity(city);
+    if (cityCoordinates) return cityCoordinates;
+  }
+  return null;
+}
+
+function recordVenueCityPairs(record) {
+  const pairs = [];
+  productionGroups(record).forEach((group) => {
+    const venues = splitEntityList(group.venue);
+    const cities = splitCityList(group.city);
+    venues.forEach((venue, index) => pairs.push({ venue, city: cities[index] || cities[0] || splitCityList(record.city)[0] || "" }));
+  });
+  if (pairs.length) return pairs;
+  const venues = splitEntityList(record.venue);
+  const cities = splitCityList(record.city);
+  venues.forEach((venue, index) => pairs.push({ venue, city: cities[index] || cities[0] || "" }));
+  return pairs;
+}
+
 function entityMap(type) {
   const map = new Map();
   state.records.forEach((record) => {
@@ -489,11 +639,10 @@ function entityMap(type) {
 function cityMapPoints() {
   const map = entityMap("cities");
   state.records.forEach((record) => {
-    const coordinates = Array.isArray(record.coordinates) ? record.coordinates : [];
-    const lat = Number(coordinates[0]);
-    const lon = Number(coordinates[1]);
-    if (!Number.isFinite(lat) || !Number.isFinite(lon)) return;
     splitCityList(record.city).forEach((city) => {
+      const coordinates = pointCoordinates(record, city);
+      if (!coordinates) return;
+      const [lat, lon] = coordinates;
       const slug = entitySlug(city);
       const point = map.get(slug) || {
         slug,
@@ -526,12 +675,10 @@ function cityMapPoints() {
 function venueMapPoints() {
   const map = new Map();
   state.records.forEach((record) => {
-    const coordinates = Array.isArray(record.coordinates) ? record.coordinates : [];
-    const lat = Number(coordinates[0]);
-    const lon = Number(coordinates[1]);
-    if (!Number.isFinite(lat) || !Number.isFinite(lon)) return;
-    const city = splitCityList(record.city)[0] || "";
-    splitEntityList(record.venue).forEach((venue) => {
+    recordVenueCityPairs(record).forEach(({ venue, city }) => {
+      const coordinates = pointCoordinates(record, city, venue);
+      if (!coordinates) return;
+      const [lat, lon] = coordinates;
       const slug = entitySlug(venue);
       const point = map.get(slug) || {
         slug,
@@ -1079,27 +1226,14 @@ function renderFrontpageDirectory() {
     }))
     .filter((item) => item.count)
     .sort((a, b) => b.count - a.count || a.label.localeCompare(b.label));
-  const currentCount = countForTile("Current Collection", "collections");
-  const currentRecords = state.records
-    .filter((record) => collectionNames(record).includes("Current Collection"))
-    .sort((a, b) => String(b.date).localeCompare(String(a.date)));
+  const publicationLinks = [...entityMap("publications").values()]
+    .map((entry) => ({
+      label: entry.label,
+      href: `#entity:publications:${entry.slug}`,
+      count: entry.records.length,
+    }))
+    .sort((a, b) => b.count - a.count || a.label.localeCompare(b.label));
   const sections = [
-    {
-      id: "current",
-      className: "frontpage-section frontpage-current",
-      label: "New writing",
-      title: "Current",
-      titleHref: "#section:current",
-      links: currentCount
-        ? [{ label: "Current Collection", href: "#section:current", count: currentCount }]
-        : [{ label: "Coming after launch", href: "#section:current", count: 0 }],
-      examples: currentRecords.slice(0, 4).map((record) => ({
-        label: record.title,
-        href: `#review:${record.slug}`,
-        date: formatDate(record.date),
-      })),
-      limit: 1,
-    },
     {
       id: "browseStart",
       className: "frontpage-section",
@@ -1127,6 +1261,15 @@ function renderFrontpageDirectory() {
       links: indexLinks,
       limit: 10,
     },
+    {
+      id: "publicationStart",
+      className: "frontpage-section",
+      label: "Sources",
+      title: "Publications",
+      titleHref: "#index:publications",
+      links: publicationLinks,
+      limit: 10,
+    },
   ];
 
   els.frontpageDirectory.replaceChildren(...sections.map(frontpageSection));
@@ -1134,22 +1277,26 @@ function renderFrontpageDirectory() {
 
 function renderCurrentFeature() {
   if (!els.currentFeature) return;
-  const current = state.records
+  const currentRecords = state.records
     .filter((record) => collectionNames(record).includes("Current Collection"))
-    .sort((a, b) => String(b.date).localeCompare(String(a.date)))[0];
+    .sort((a, b) => String(b.date).localeCompare(String(a.date)));
+  const current = currentRecords[0];
   if (!current) {
     els.currentFeature.replaceChildren();
     return;
   }
   const media = current.media?.[0];
-  const link = document.createElement("a");
-  link.className = "current-feature-card";
-  link.href = `#review:${current.slug}`;
+  const card = document.createElement("article");
+  card.className = "current-feature-card";
   if (media?.local_path) {
+    const imageLink = document.createElement("a");
+    imageLink.className = "current-feature-image";
+    imageLink.href = `#review:${current.slug}`;
     const img = document.createElement("img");
     img.src = new URL(`../site_export/content/${media.local_path}`, import.meta.url);
     img.alt = media.alt || media.caption || current.title;
-    link.append(img);
+    imageLink.append(img);
+    card.append(imageLink);
   }
   const copy = document.createElement("div");
   copy.className = "current-feature-copy";
@@ -1160,14 +1307,28 @@ function renderCurrentFeature() {
   title.textContent = current.title;
   const meta = document.createElement("p");
   meta.textContent = [formatDate(current.date), current.production_title, current.company].filter(Boolean).join(" / ");
+  const readLink = document.createElement("a");
+  readLink.className = "current-read-link";
+  readLink.href = `#review:${current.slug}`;
+  readLink.textContent = "Read latest";
   const currentLink = document.createElement("a");
   currentLink.className = "current-page-link";
   currentLink.href = "#section:current";
   currentLink.textContent = "Open Current Collection";
-  currentLink.addEventListener("click", (event) => event.stopPropagation());
-  copy.replaceChildren(kicker, title, meta, currentLink);
-  link.append(copy);
-  els.currentFeature.replaceChildren(link);
+  copy.replaceChildren(kicker, title, meta, readLink, currentLink);
+  const latest = document.createElement("aside");
+  latest.className = "current-feature-latest";
+  const latestTitle = document.createElement("span");
+  latestTitle.textContent = "Newest";
+  latest.append(latestTitle);
+  currentRecords.slice(0, 5).forEach((record) => {
+    const item = document.createElement("a");
+    item.href = `#review:${record.slug}`;
+    item.innerHTML = `<strong>${record.title}</strong><em>${formatDate(record.date)}</em>`;
+    latest.append(item);
+  });
+  card.append(copy, latest);
+  els.currentFeature.replaceChildren(card);
 }
 
 function frontpageSection(section) {
@@ -1537,12 +1698,24 @@ function renderExploreToolV2() {
   intro.textContent = "Choose a path, open a branch, and keep narrowing until the article list feels manageable.";
   const tool = document.createElement("div");
   tool.className = "explore-tool explore-pill-tool";
+  const controls = document.createElement("div");
+  controls.className = "explore-navigation";
+  const backButton = document.createElement("button");
+  backButton.type = "button";
+  backButton.textContent = "Back";
+  const forwardButton = document.createElement("button");
+  forwardButton.type = "button";
+  forwardButton.textContent = "Forward";
+  const collapseButton = document.createElement("button");
+  collapseButton.type = "button";
+  collapseButton.textContent = "Collapse search";
+  controls.replaceChildren(backButton, forwardButton, collapseButton);
   const scroller = document.createElement("div");
   scroller.className = "explore-pill-scroller";
   const columns = document.createElement("div");
   columns.className = "explore-pill-columns";
   scroller.append(columns);
-  tool.append(scroller);
+  tool.append(controls, scroller);
 
   const path = [];
   const branches = [
@@ -1556,6 +1729,27 @@ function renderExploreToolV2() {
   const branchMeta = new Map(branches.map((branch, index) => [branch.key, { ...branch, color: index }]));
   let openBranch = "type";
   let pendingScroll = null;
+  const history = [{ path: [], openBranch }];
+  let historyIndex = 0;
+
+  const snapshot = () => ({ path: path.map((step) => ({ ...step })), openBranch });
+  const sameSnapshot = (a, b) => JSON.stringify(a.path.map((step) => [step.branch, step.label])) === JSON.stringify(b.path.map((step) => [step.branch, step.label])) && a.openBranch === b.openBranch;
+  const pushHistory = () => {
+    const next = snapshot();
+    if (sameSnapshot(history[historyIndex], next)) return;
+    history.splice(historyIndex + 1);
+    history.push(next);
+    historyIndex = history.length - 1;
+  };
+  const restoreHistory = (index) => {
+    const entry = history[index];
+    if (!entry) return;
+    path.splice(0, path.length, ...entry.path.map((step) => ({ ...step })));
+    openBranch = entry.openBranch;
+    historyIndex = index;
+    pendingScroll = "options";
+    renderTree();
+  };
 
   const filteredRecords = () => path.reduce((records, step) => records.filter((record) => step.test(record)), state.records);
   const valuesForBranch = (records, branch) => {
@@ -1661,12 +1855,14 @@ function renderExploreToolV2() {
     startColumn.append(makePill({ label: "All articles", count: state.records.length }, () => {
       path.splice(0);
       openBranch = "type";
+      pushHistory();
       renderTree();
     }, { color: 0, active: !path.length }));
     branches.forEach((branch, index) => {
       startColumn.append(makePill({ label: branch.label, count: state.records.length }, () => {
         openBranch = branch.key;
         pendingScroll = "options";
+        pushHistory();
         renderTree();
       }, { color: index, active: !path.length && openBranch === branch.key }));
     });
@@ -1685,6 +1881,7 @@ function renderExploreToolV2() {
           openBranch = step.next;
         }
         pendingScroll = "options";
+        pushHistory();
         renderTree();
       }, { color: meta?.color ?? 0, active: true }));
       columns.append(column);
@@ -1699,6 +1896,7 @@ function renderExploreToolV2() {
         path.push(item);
         openBranch = item.next;
         pendingScroll = "end";
+        pushHistory();
         renderTree();
       }, { color: activeMeta?.color ?? 0 }));
     });
@@ -1710,7 +1908,19 @@ function renderExploreToolV2() {
       pendingScroll = null;
       scrollToColumn(optionsColumn);
     }
+    backButton.disabled = historyIndex <= 0;
+    forwardButton.disabled = historyIndex >= history.length - 1;
+    collapseButton.disabled = !path.length && openBranch === "type";
   };
+  backButton.addEventListener("click", () => restoreHistory(historyIndex - 1));
+  forwardButton.addEventListener("click", () => restoreHistory(historyIndex + 1));
+  collapseButton.addEventListener("click", () => {
+    path.splice(0);
+    openBranch = "type";
+    pendingScroll = null;
+    pushHistory();
+    renderTree();
+  });
   renderTree();
   els.indexContent.replaceChildren(title, intro, tool);
 }
@@ -1960,9 +2170,10 @@ function renderMapView() {
       venues,
       maxVenues: 80,
       maxVenueLabels: 14,
-      initialCenter: [43.6515, -79.3835],
-      initialZoom: 14,
+      initialCenter: [25, 0],
+      initialZoom: 2,
       searchControl: true,
+      jumpControl: true,
       onSearch: filterMapList,
       onZoom: (zoom) => shell.classList.toggle("is-venue-zoom", zoom >= 11),
     });
@@ -1979,9 +2190,10 @@ function renderHomeMap() {
     venues: venueMapPoints(),
     maxVenues: 60,
     maxVenueLabels: 6,
-    initialCenter: [43.6515, -79.3835],
-    initialZoom: 14,
+    initialCenter: [25, 0],
+    initialZoom: 2,
     searchControl: true,
+    jumpControl: true,
   });
 }
 
@@ -2049,6 +2261,24 @@ function renderLeafletMap(container, points, options = {}) {
     map.setView(options.initialCenter, options.initialZoom || 8);
   } else if (bounds.length) {
     map.fitBounds(bounds, { padding: [30, 30] });
+  }
+  if (options.jumpControl) {
+    const jump = L.DomUtil.create("div", "leaflet-jump-control");
+    const jumps = [
+      ["World", [25, 0], 2],
+      ["Toronto", [43.6532, -79.3832], 11],
+      ["London", [51.5072, -0.1276], 11],
+    ];
+    jumps.forEach(([label, center, zoom]) => {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.textContent = label;
+      button.addEventListener("click", () => map.setView(center, zoom));
+      jump.append(button);
+    });
+    L.DomEvent.disableClickPropagation(jump);
+    L.DomEvent.disableScrollPropagation(jump);
+    map.getContainer().append(jump);
   }
   if (options.searchControl) {
     const control = L.DomUtil.create("label", "leaflet-search-control");
