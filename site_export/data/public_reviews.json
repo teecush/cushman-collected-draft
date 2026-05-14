@@ -234,7 +234,7 @@
     "canonical_file": "",
     "production_title": "",
     "company": "",
-    "venue": "Ronnie Scott''s; Wavendon",
+    "venue": "Ronnie Scott's; Wavendon",
     "city": "London, England; Wavendon",
     "coordinates": [],
     "people": [
@@ -246,7 +246,7 @@
       "Joni Mitchell",
       "Lorenz Hart",
       "Michel Legrand",
-      "Noel Coward",
+      "Noël Coward",
       "Ronnie Scott"
     ],
     "roles": {
@@ -258,7 +258,7 @@
         "Alan Jay Lerner",
         "Cole Porter",
         "Lorenz Hart",
-        "Noel Coward",
+        "Noël Coward",
         "Joni Mitchell",
         "Michel Legrand"
       ],
@@ -310,7 +310,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "Richard III; Two Gentlemen of Verona; Misalliance; Captain Oates'' Left Sock",
+    "production_title": "Richard III; The Two Gentlemen of Verona; Misalliance; Captain Oates' Left Sock",
     "company": "Comedie Francaise; Royal Shakespeare Company",
     "venue": "Phoenix Theatre; Royal Court Theatre Upstairs",
     "city": "London, England",
@@ -431,7 +431,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "Two Gentlemen of Verona",
+    "production_title": "The Two Gentlemen of Verona",
     "company": "",
     "venue": "Phoenix Theatre",
     "city": "London, England",
@@ -546,7 +546,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "Umewaka Noh Troupe; As You Like It; The Malcontent; The Provok''d Wife",
+    "production_title": "Umewaka Noh Troupe; As You Like It; The Malcontent; The Provok'd Wife",
     "company": "Umewaka Noh Troupe; National Theatre",
     "venue": "Aldwych Theatre",
     "city": "London, England",
@@ -822,7 +822,7 @@
       "Bertolt Brecht",
       "C. P. Taylor",
       "David Giles",
-      "Georg Buchner",
+      "Georg Büchner",
       "Ian McKellen",
       "John Woodvine",
       "Michael Almaz",
@@ -848,7 +848,7 @@
       ],
       "playwright": [
         "Anton Chekhov",
-        "Georg Buchner",
+        "Georg Büchner",
         "Bertolt Brecht",
         "C. P. Taylor",
         "Michael Almaz",
@@ -912,7 +912,7 @@
           "Radu Penciulescu"
         ],
         "playwright": [
-          "Georg Buchner"
+          "Georg Büchner"
         ]
       },
       {
@@ -1925,7 +1925,7 @@
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
     "production_title": "A Lesson in Blood and Roses; Elizabeth I; The Merry-Go-Round; Economic Necessity",
-    "company": "Royal Court Young People''s Theatre Scheme; Royal Court Theatre",
+    "company": "Royal Court Young People's Theatre Scheme; Royal Court Theatre",
     "venue": "Royal Court Theatre Upstairs; Royal Court Theatre; Haymarket Theatre, Leicester",
     "city": "London, England",
     "coordinates": [],
@@ -2056,7 +2056,7 @@
       "Jerzy Grotowski",
       "Jorge Lavelli",
       "Marivaux",
-      "Patrice Chereau",
+      "Patrice Chéreau",
       "Peter Nichols",
       "Roger Planchon",
       "Ryszard Cieslak"
@@ -2066,7 +2066,7 @@
         "Jerzy Grotowski",
         "Jorge Lavelli",
         "Roger Planchon",
-        "Patrice Chereau",
+        "Patrice Chéreau",
         "Jean Mercure"
       ],
       "actors": [
@@ -2133,7 +2133,7 @@
       "Nicky Henson",
       "Nicola Pagett",
       "Nigel Hawthorne",
-      "Noel Coward",
+      "Noël Coward",
       "Olivia Mundy",
       "Peter Bayliss",
       "Peter Handke",
@@ -2160,7 +2160,7 @@
       ],
       "playwright": [
         "Peter Handke",
-        "Noel Coward",
+        "Noël Coward",
         "Tina Brown",
         "James Saunders",
         "Steve Gooch"
@@ -2311,7 +2311,7 @@
       "Judi Dench",
       "Judy Parfitt",
       "Leo McKern",
-      "Noel Coward",
+      "Noël Coward",
       "Peggy Ann Wood",
       "Peter O'Toole",
       "Roger Gartland",
@@ -2337,7 +2337,7 @@
         "Ferenc Molnar",
         "Georges Courteline",
         "Georges Feydeau",
-        "Noel Coward",
+        "Noël Coward",
         "George Bernard Shaw",
         "John Downie"
       ],
@@ -2397,7 +2397,7 @@
       "Jerome Kern",
       "Lionel Blair",
       "Max Wall",
-      "Noel Coward",
+      "Noël Coward",
       "Peter Rice",
       "Peter Saunders",
       "Ray Cooney",
@@ -2420,7 +2420,7 @@
         "Gene Stone"
       ],
       "composer_lyricist": [
-        "Noel Coward",
+        "Noël Coward",
         "Cole Porter",
         "Rodgers and Hart",
         "Jerome Kern",
@@ -3614,8 +3614,8 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "Flowers; Royalty Follies; King Lear; Tis Pity She''s a Whore",
-    "company": "Lindsay Kemp''s troupe; Actors' Company",
+    "production_title": "Flowers; Royalty Follies; King Lear; 'Tis Pity She's a Whore",
+    "company": "Lindsay Kemp's troupe; Actors' Company",
     "venue": "Regent Theatre",
     "city": "London, England",
     "coordinates": [],
@@ -3726,7 +3726,7 @@
       },
       {
         "order": "4",
-        "production_title": "Tis Pity She's a Whore",
+        "production_title": "'Tis Pity She's a Whore",
         "company": [
           "Actors' Company"
         ],
@@ -4899,7 +4899,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "The Golden Pathway Annual; The Sack Race; Sherlock''s Last Case",
+    "production_title": "The Golden Pathway Annual; The Sack Race; Sherlock's Last Case",
     "company": "",
     "venue": "Mayfair Theatre",
     "city": "London, England",
@@ -5246,7 +5246,7 @@
       "Edward Petherbridge",
       "Geoffrey Scott",
       "Jeananne Crowley",
-      "Moliere",
+      "Molière",
       "Paola Dionisotti",
       "Peter James",
       "Robert Eddison",
@@ -5274,7 +5274,7 @@
         "Jeananne Crowley"
       ],
       "playwright": [
-        "Moliere",
+        "Molière",
         "Sean McCarthy"
       ],
       "composer_lyricist": [],
@@ -5320,7 +5320,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "Saturday Sunday Monday",
+    "production_title": "Saturday, Sunday, Monday",
     "company": "National Theatre",
     "venue": "Queen's Theatre",
     "city": "London, England",
@@ -5409,7 +5409,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "Macbeth; Kennedy''s Children",
+    "production_title": "Macbeth; Kennedy's Children",
     "company": "",
     "venue": "King's Head Theatre",
     "city": "Stratford-upon-Avon; London, England",
@@ -6644,7 +6644,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "Macbeth; Don''s Party; Romeo and Jeanette",
+    "production_title": "Macbeth; Don's Party; Romeo and Jeanette",
     "company": "",
     "venue": "Aldwych Theatre",
     "city": "London, England; Guildford",
@@ -7413,7 +7413,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "No Man''s Land; The Doctor''s Dilemma",
+    "production_title": "No Man's Land; The Doctor's Dilemma",
     "company": "",
     "venue": "Old Vic; Mermaid Theatre",
     "city": "London, England",
@@ -7546,7 +7546,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "Fanshen; The Clandestine Marriage; Love''s Labour''s Lost; Henry IV, Part One",
+    "production_title": "Fanshen; The Clandestine Marriage; Love's Labour's Lost; Henry IV, Part One",
     "company": "Royal Shakespeare Company",
     "venue": "Savoy Theatre; Aldwych Theatre",
     "city": "London, England; Stratford-upon-Avon",
@@ -7675,7 +7675,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "Measure for Measure; A Midsummer Night''s Dream; Ashes; The Phantom of the Opera",
+    "production_title": "Measure for Measure; A Midsummer Night's Dream; Ashes; The Phantom of the Opera",
     "company": "Open Space; Yale School of Drama; Young Vic; Actors' Company",
     "venue": "Open Space; Yale School of Drama; Young Vic; Wimbledon Theatre",
     "city": "London, England; New Haven; Wimbledon",
@@ -7990,7 +7990,7 @@
       "Emrys James",
       "Leonard Jenkin",
       "Maureen Pryor",
-      "Moliere",
+      "Molière",
       "Oliver Ford-Davies",
       "Philip Sayer",
       "Sydney Bromley",
@@ -8022,7 +8022,7 @@
       ],
       "playwright": [
         "William Shakespeare",
-        "Moliere",
+        "Molière",
         "Leonard Jenkin"
       ],
       "composer_lyricist": [],
@@ -8691,7 +8691,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "Teeth ''n'' Smiles; As You Like It; The Dead of Night; Gynt; Semmelweiss; Gypsy; Dames at Sea",
+    "production_title": "Teeth 'n' Smiles; As You Like It; The Dead of Night; Gynt; Semmelweiss; Gypsy; Dames at Sea",
     "company": "Royal Court Theatre; Traverse Theatre; Oxford Theatre Group; University of Southern California; of Southern California",
     "venue": "Royal Court Theatre; Lyceum Theatre; Traverse Theatre",
     "city": "London, England",
@@ -9049,7 +9049,7 @@
       "George Ryga",
       "James Roose-Evans",
       "Jonathan Miller",
-      "Noel Coward",
+      "Noël Coward",
       "Timothy Dalton",
       "Toby Robins",
       "Vivien Merchant"
@@ -9096,7 +9096,7 @@
           "Gabrielle Drake"
         ],
         "playwright": [
-          "Noel Coward"
+          "Noël Coward"
         ]
       },
       {
@@ -9243,7 +9243,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "Old Flames; Charles Pierce; Aneurin Bevan: Struggles Against The Iron Heel; When We Dead Awaken; A Man''s A Man",
+    "production_title": "Old Flames; Charles Pierce; Aneurin Bevan: Struggles Against The Iron Heel; When We Dead Awaken; A Man's A Man",
     "company": "",
     "venue": "Fortune Theatre; Haymarket Theatre, Leicester; Hampstead Theatre",
     "city": "Bristol; Cardiff; Leicester; London, England",
@@ -9415,7 +9415,7 @@
       "John Normington",
       "Joyce Grant",
       "Judy Parfitt",
-      "Noel Coward",
+      "Noël Coward",
       "Peter Gill",
       "Terry Palmer",
       "Tom Courtenay",
@@ -9441,7 +9441,7 @@
         "David Edgar",
         "Jean Anouilh",
         "William Shakespeare",
-        "Noel Coward"
+        "Noël Coward"
       ],
       "composer_lyricist": [],
       "musical_director": [],
@@ -9619,9 +9619,9 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "Queen Danniella; Artaud at Rodez; Catch",
+    "production_title": "Queen Danniella; Artaud at Rodez; The Catch",
     "company": "",
-    "venue": "London Casino; Open Space; Quaglino''s",
+    "venue": "London Casino; Open Space; Quaglino's",
     "city": "London, England",
     "coordinates": [],
     "people": [
@@ -9698,7 +9698,7 @@
       },
       {
         "order": "3",
-        "production_title": "Catch",
+        "production_title": "The Catch",
         "venue": [
           "Quaglino's"
         ],
@@ -9858,7 +9858,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "The Browning Version; Carol''s Christmas",
+    "production_title": "The Browning Version; Carol's Christmas",
     "company": "",
     "venue": "King's Head Theatre",
     "city": "London, England",
@@ -10022,7 +10022,7 @@
     "slug": "1976-01-25-oh-no-you-don-t",
     "route": "/reviews/1976-01-25-oh-no-you-don-t/",
     "source_file": "1976.01.25.The_Observer.Oh_No_You_Don_t.md",
-    "title": "Oh No You Don''t!",
+    "title": "Oh No You Don't!",
     "date": "1976-01-25",
     "year": "1976",
     "publication": "The Observer",
@@ -10170,7 +10170,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "Henry IV Part I; Henry IV Part II; Henry V; Comedians; Love''s Old Sweet Song; The Ginger Man",
+    "production_title": "Henry IV Part I; Henry IV Part II; Henry V; Comedians; Love's Old Sweet Song; The Ginger Man",
     "company": "Royal Shakespeare Company; National Theatre",
     "venue": "Aldwych Theatre",
     "city": "London, England",
@@ -10316,7 +10316,7 @@
     "coordinates": [],
     "people": [
       "Albert Finney",
-      "Andre Van Gyseghem",
+      "Andre van Gyseghem",
       "Beetles and Buckman",
       "Ben Kingsley",
       "Bob Peck",
@@ -10341,7 +10341,7 @@
         "Albert Finney",
         "George Baker",
         "Griffith Jones",
-        "Andre Van Gyseghem",
+        "Andre van Gyseghem",
         "Charles Dance",
         "Bob Peck",
         "Jane Asher",
@@ -10407,7 +10407,7 @@
           "Albert Finney",
           "George Baker",
           "Griffith Jones",
-          "Andre Van Gyseghem",
+          "Andre van Gyseghem",
           "Bob Peck",
           "Jane Asher",
           "James Bolam",
@@ -10619,8 +10619,8 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "Watch It Come Down; You''ll Never Be Michel Angelo; The Gay Gorbals; The Changeling; Mirandolina",
-    "company": "National Theatre; Glasgow Citizens'' Theatre",
+    "production_title": "Watch It Come Down; You'll Never Be Michel Angelo; The Gay Gorbals; The Changeling; Mirandolina",
+    "company": "National Theatre; Glasgow Citizens' Theatre",
     "venue": "Old Vic",
     "city": "London, England; Glasgow",
     "coordinates": [],
@@ -11013,7 +11013,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "Housewife-Superstar; 13 Rue de L''Amour; Mardi Gras; Parcel Post; The Sons of Light; The Chairman",
+    "production_title": "Housewife-Superstar; 13 Rue de L'Amour; Mardi Gras; Parcel Post; The Sons of Light; The Chairman",
     "company": "",
     "venue": "Apollo Theatre",
     "city": "London, England; Newcastle",
@@ -11039,7 +11039,7 @@
       "Marsha Hunt",
       "Melvyn Bragg",
       "Nicky Henson",
-      "Noel Coward",
+      "Noël Coward",
       "Peter Blythe",
       "Peter Dews",
       "Tony Britton",
@@ -11094,7 +11094,7 @@
         ],
         "playwright": [
           "Georges Feydeau",
-          "Noel Coward",
+          "Noël Coward",
           "Frederick Lonsdale",
           "Ben Travers"
         ]
@@ -11322,7 +11322,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "Romeo and Juliet; The Merry Wives of Windsor; Evening Light; Once Upon A Time; Widowers'' Houses",
+    "production_title": "Romeo and Juliet; The Merry Wives of Windsor; Evening Light; Once Upon A Time; Widowers' Houses",
     "company": "Royal Shakespeare Company; Bristol Old Vic; Actors' Company",
     "venue": "",
     "city": "Stratford-upon-Avon; London, England; Bristol; Wimbledon",
@@ -11544,7 +11544,7 @@
     "canonical_file": "",
     "production_title": "Salad Days; Lenz; The Country Wife",
     "company": "",
-    "venue": "Duke of York''s Theatre; Hampstead Theatre; Cambridge Arts Theatre",
+    "venue": "Duke of York's Theatre; Hampstead Theatre; Cambridge Arts Theatre",
     "city": "London, England; Cambridge",
     "coordinates": [],
     "people": [
@@ -11646,7 +11646,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "Yesterday''s News; Geisterbahn; Bus Stop; Cabaret",
+    "production_title": "Yesterday's News; Geisterbahn; Bus Stop; Cabaret",
     "company": "Joint Stock",
     "venue": "Royal Court Theatre Upstairs",
     "city": "London, England",
@@ -11827,7 +11827,7 @@
       "Gordon Jackson",
       "James Cossins",
       "John Alderton",
-      "Moliere",
+      "Molière",
       "Patrick Magee",
       "Pauline Collins",
       "Samuel Beckett",
@@ -11854,7 +11854,7 @@
         "Samuel Beckett",
         "Alan Ayckbourn",
         "Andre Obey",
-        "Moliere"
+        "Molière"
       ],
       "composer_lyricist": [],
       "musical_director": [],
@@ -11930,7 +11930,7 @@
           "Tom Conti"
         ],
         "playwright": [
-          "Moliere"
+          "Molière"
         ]
       }
     ],
@@ -11952,7 +11952,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "Teeth ''n'' Smiles; Dimetos",
+    "production_title": "Teeth 'n' Smiles; Dimetos",
     "company": "",
     "venue": "Wyndham's Theatre; Royal Court Theatre; Comedy Theatre",
     "city": "London, England",
@@ -12046,7 +12046,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "Romeo and Juliet; Twelfth Night; The Winter''s Tale; Gin Trap",
+    "production_title": "Romeo and Juliet; Twelfth Night; The Winter's Tale; Gin Trap",
     "company": "St Georges Theatre",
     "venue": "St Georges Theatre",
     "city": "London, England; Chichester",
@@ -12187,7 +12187,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "The Family Dance; A Voyage Round My Father; Heaven and Hell; The Winter''s Tale; Othello; Liza of Lambeth; Leave Him to Heaven",
+    "production_title": "The Family Dance; A Voyage Round My Father; Heaven and Hell; The Winter's Tale; Othello; Liza of Lambeth; Leave Him to Heaven",
     "company": "Royal Shakespeare Company",
     "venue": "Criterion Theatre",
     "city": "London, England; Stratford-upon-Avon",
@@ -12341,7 +12341,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "",
     "canonical_file": "",
-    "production_title": "Troilus And Cressida",
+    "production_title": "Troilus and Cressida",
     "company": "National Theatre",
     "venue": "National Theatre",
     "city": "London, England",
@@ -12485,8 +12485,8 @@
       "Kenneth Cranham",
       "Maria Aitken",
       "Nigel Davenport",
-      "Noel Coward",
       "Norman Rodway",
+      "Noël Coward",
       "Patrick Stewart",
       "Richard Johnson",
       "Richard Simpson",
@@ -12525,7 +12525,7 @@
       "playwright": [
         "Eugene O'Neill",
         "Anton Chekhov",
-        "Noel Coward",
+        "Noël Coward",
         "Georges Feydeau"
       ],
       "composer_lyricist": [],
@@ -12607,7 +12607,7 @@
           "Richard Johnson"
         ],
         "playwright": [
-          "Noel Coward"
+          "Noël Coward"
         ]
       },
       {
@@ -12980,7 +12980,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "Weapons of Happiness; The White Devil; The Devil''s Disciple; Some of My Best Friends Are Husbands; Donkey''s Years",
+    "production_title": "Weapons of Happiness; The White Devil; The Devil's Disciple; Some of My Best Friends Are Husbands; Donkey's Years",
     "company": "Royal Shakespeare Company",
     "venue": "Lyttelton Theatre; Aldwych Theatre; Mermaid Theatre; Globe Theatre",
     "city": "London, England",
@@ -13136,7 +13136,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "A Chorus Line; The Circle; Banana Ridge; Donkeys'' Years",
+    "production_title": "A Chorus Line; The Circle; Banana Ridge; Donkeys' Years",
     "company": "Royal Shakespeare Company",
     "venue": "Drury Lane Theatre; Savoy Theatre; Globe Theatre",
     "city": "London, England; Chichester",
@@ -13266,7 +13266,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "Bridget''s House; The Canning Town Cowboy; The Only Way Out; Side by Side by Sondheim",
+    "production_title": "Bridget's House; The Canning Town Cowboy; The Only Way Out; Side by Side by Sondheim",
     "company": "Hull Truck Company",
     "venue": "Young Vic",
     "city": "London, England",
@@ -13389,7 +13389,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "M Perrichon''s Travels; Crocodiles In Cream; Juvenalia",
+    "production_title": "M Perrichon's Travels; Crocodiles In Cream; Juvenalia",
     "company": "",
     "venue": "Mermaid Theatre; Bush Theatre",
     "city": "London, England",
@@ -14663,7 +14663,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "Dear Daddy; An'' Me Wi'' A Bad Leg Tae; Antony and Cleopatra; The Showman",
+    "production_title": "Dear Daddy; An' Me Wi' A Bad Leg Tae; Antony and Cleopatra; The Showman",
     "company": "",
     "venue": "Royal Court Theatre Upstairs",
     "city": "London, England; Stratford, Ontario",
@@ -15343,7 +15343,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "King Lear; In The Boom-Boom Room; The Real Inspector Hound; If You''re Glad I''ll Be Frank",
+    "production_title": "King Lear; In The Boom-Boom Room; The Real Inspector Hound; If You're Glad I'll Be Frank",
     "company": "Young Vic",
     "venue": "Royal Shakespeare Theatre; Young Vic",
     "city": "Stratford-upon-Avon; London, England",
@@ -15898,7 +15898,7 @@
       "Elizabeth Spriggs",
       "Kate Nelligan",
       "Maximilian Schell",
-      "Odon von Horvath",
+      "Odön von Horváth",
       "Stephen Rea",
       "Warren Clarke"
     ],
@@ -15915,7 +15915,7 @@
         "Christopher Godwin"
       ],
       "playwright": [
-        "Odon von Horvath",
+        "Odön von Horváth",
         "Alan Ayckbourn",
         "Caryl Churchill"
       ],
@@ -16304,7 +16304,7 @@
       "Simon Jones",
       "Tim Wylton",
       "Tom Kempinski",
-      "Tony Bicat",
+      "Tony Bicât",
       "Tunde Ikoli"
     ],
     "roles": {
@@ -16330,7 +16330,7 @@
       "playwright": [
         "Peter Nichols",
         "Tunde Ikoli",
-        "Tony Bicat",
+        "Tony Bicât",
         "Roger Smith",
         "Tom Kempinski"
       ],
@@ -16701,7 +16701,7 @@
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
     "production_title": "Fire Angel; Julius Caesar; Stevie; The Amazons",
-    "company": "Her Majesty''s; National Theatre; Actors' Company",
+    "company": "Her Majesty's; National Theatre; Actors' Company",
     "venue": "Her Majesty's Theatre",
     "city": "London, England",
     "coordinates": [],
@@ -16858,11 +16858,11 @@
       "Michael Bogdanov",
       "Michael Feast",
       "Nicholas Renton",
-      "Noel Coward",
       "Norman Rossington",
+      "Noël Coward",
       "Robert William",
       "Ronald Lewis",
-      "William Douglas Home"
+      "William Douglas-Home"
     ],
     "roles": {
       "director": [
@@ -16885,10 +16885,10 @@
       "playwright": [
         "John Osborne",
         "Arthur Wing Pinero",
-        "William Douglas Home",
+        "William Douglas-Home",
         "James Kirkup",
         "Robert William",
-        "Noel Coward"
+        "Noël Coward"
       ],
       "composer_lyricist": [],
       "musical_director": [],
@@ -17313,7 +17313,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "A Midsummer Night''s Dream; Destiny; Rolls Hyphen Royce; Waters of the Moon",
+    "production_title": "A Midsummer Night's Dream; Destiny; Rolls Hyphen Royce; Waters of the Moon",
     "company": "Royal Shakespeare Company",
     "venue": "Aldwych Theatre; Shaftesbury Theatre",
     "city": "Stratford-upon-Avon",
@@ -17341,7 +17341,7 @@
       "Ron Daniels",
       "Wendy Hiller",
       "Wilfrid Hyde White",
-      "William Douglas Home",
+      "William Douglas-Home",
       "William Shakespeare"
     ],
     "roles": {
@@ -17419,7 +17419,7 @@
           "Alfred Marks"
         ],
         "playwright": [
-          "William Douglas Home"
+          "William Douglas-Home"
         ]
       },
       {
@@ -17908,7 +17908,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "Richard III; All''s Well That Ends Well; A Midsummer Night''s Dream; Widowers'' Houses; Thark; Romeo and Juliet; Miss Julie; Ghosts; The Guardsman",
+    "production_title": "Richard III; All's Well That Ends Well; A Midsummer Night's Dream; Widowers' Houses; Thark; Romeo and Juliet; Miss Julie; Ghosts; The Guardsman",
     "company": "Stratford Festival",
     "venue": "Stratford Festival Theatre; Avon Theatre",
     "city": "Stratford, Ontario",
@@ -18366,7 +18366,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "The Lorenzaccio Story; ''Tis Pity She''s a Whore; Da; Leaping Ginger; East; Kemp''s Jig",
+    "production_title": "The Lorenzaccio Story; 'Tis Pity She's a Whore; Da; Leaping Ginger; East; Kemp's Jig",
     "company": "Royal Shakespeare Company Theatre",
     "venue": "The Other Place",
     "city": "Stratford-upon-Avon; Manchester; London, England",
@@ -18871,7 +18871,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "In Praise of Love; Sudlow''s Dawn; For the West; Schweyk in the Second World War",
+    "production_title": "In Praise of Love; Sudlow's Dawn; For the West; Schweyk in the Second World War",
     "company": "Royal Court Theatre",
     "venue": "Churchill Theatre",
     "city": "London, England; Bromley",
@@ -18995,7 +18995,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "Antony and Cleopatra; All for Love; Writers'' Cramp; Richard III Part II; Mary; A & R",
+    "production_title": "Antony and Cleopatra; All for Love; Writers' Cramp; Richard III Part II; Mary; A & R",
     "company": "",
     "venue": "Carlton Studios; Traverse Theatre; Little Lyceum",
     "city": "Edinburgh",
@@ -19158,7 +19158,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "Touched; White Suit Blues; Walter; The Player King; Writer''s Cramp; Dean",
+    "production_title": "Touched; White Suit Blues; Walter; The Player King; Writer's Cramp; Dean",
     "company": "Nottingham Playhouse",
     "venue": "Edinburgh Festival",
     "city": "Edinburgh; London, England",
@@ -19688,7 +19688,7 @@
     "slug": "1977-10-02-after-all-it-s-not-gomorrah",
     "route": "/reviews/1977-10-02-after-all-it-s-not-gomorrah/",
     "source_file": "1977.10.02.The_Observer.After_All_It_S_Not_Gomorrah.md",
-    "title": "After All, It''S Not Gomorrah",
+    "title": "After All, It's Not Gomorrah",
     "date": "1977-10-02",
     "year": "1977",
     "publication": "The Observer",
@@ -20101,7 +20101,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "Rosmersholm; Coriolanus; The Lady from Maxim''s; Suicide in B Flat",
+    "production_title": "Rosmersholm; Coriolanus; The Lady from Maxim's; Suicide in B Flat",
     "company": "Royal Shakespeare Company",
     "venue": "Haymarket Theatre; Lyttelton Theatre",
     "city": "Stratford-upon-Avon",
@@ -20256,7 +20256,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "Filumena; Saturday Sunday Monday; Equus",
+    "production_title": "Filumena; Saturday, Sunday, Monday; Equus",
     "company": "National Theatre",
     "venue": "Lyric Theatre",
     "city": "London, England",
@@ -20264,7 +20264,7 @@
     "people": [
       "Ben Travers",
       "Colin Blakely",
-      "Eduardo De Filippo",
+      "Eduardo de Filippo",
       "Franco Zeffirelli",
       "Joan Plowright",
       "Peter Firth",
@@ -20282,7 +20282,7 @@
         "Peter Firth"
       ],
       "playwright": [
-        "Eduardo De Filippo",
+        "Eduardo de Filippo",
         "Peter Shaffer",
         "Ben Travers"
       ],
@@ -20314,7 +20314,7 @@
       },
       {
         "order": "2",
-        "production_title": "Saturday Sunday Monday"
+        "production_title": "Saturday, Sunday, Monday"
       },
       {
         "order": "3",
@@ -20890,7 +20890,7 @@
       "Colin Blakely",
       "David Edgar",
       "David Mamet",
-      "Eduardo De Filippo",
+      "Eduardo de Filippo",
       "Franco Zeffirelli",
       "Howard Barker",
       "Howard Brenton",
@@ -20908,7 +20908,7 @@
       "Ted Whitehead",
       "Terence Rattigan",
       "Tom Stoppard",
-      "William Douglas Home"
+      "William Douglas-Home"
     ],
     "roles": {
       "director": [],
@@ -20921,7 +20921,7 @@
         "Howard Barker",
         "Ted Whitehead",
         "Robert Bolt",
-        "William Douglas Home",
+        "William Douglas-Home",
         "Stephen Poliakoff",
         "Alan Ayckbourn",
         "David Edgar",
@@ -21017,7 +21017,7 @@
         ],
         "playwright": [
           "David Mamet",
-          "Eduardo De Filippo"
+          "Eduardo de Filippo"
         ]
       }
     ],
@@ -22001,7 +22001,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "Kings and Clowns; Outside the Whale; Half Life",
+    "production_title": "Kings and Clowns; Outside the Whale; Half-Life",
     "company": "",
     "venue": "Phoenix Theatre",
     "city": "London, England",
@@ -22114,7 +22114,7 @@
       },
       {
         "order": "3",
-        "production_title": "Half Life",
+        "production_title": "Half-Life",
         "actors": [
           "John Gielgud",
           "Lockwood West",
@@ -22143,8 +22143,8 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "Whose Life is it Anyway?; Don Juan; No Orchids for Miss Blandish",
-    "company": "Mermaid Theatre; Greenwich Theatre; Glasgow Citizens'' Theatre",
+    "production_title": "Whose Life Is It Anyway?; Don Juan; No Orchids for Miss Blandish",
+    "company": "Mermaid Theatre; Greenwich Theatre; Glasgow Citizens' Theatre",
     "venue": "Mermaid Theatre",
     "city": "London, England",
     "coordinates": [],
@@ -22154,7 +22154,7 @@
       "Frank Barrie",
       "James Hadley Chase",
       "Jane Asher",
-      "Moliere",
+      "Molière",
       "Peter O'Farrell",
       "Peter Rice",
       "Richard Leech",
@@ -22167,7 +22167,7 @@
         "Tom Conti"
       ],
       "playwright": [
-        "Moliere"
+        "Molière"
       ],
       "composer_lyricist": [],
       "musical_director": [],
@@ -22193,7 +22193,7 @@
     "production_groups": [
       {
         "order": "1",
-        "production_title": "Whose Life is it Anyway?",
+        "production_title": "Whose Life Is It Anyway?",
         "actors": [
           "Richard Leech",
           "Jane Asher"
@@ -22213,7 +22213,7 @@
           "Peter O'Farrell"
         ],
         "playwright": [
-          "Moliere"
+          "Molière"
         ],
         "set_designer": [
           "Peter Rice"
@@ -22650,7 +22650,7 @@
     "people": [
       "Brian Clark",
       "Colin Blakely",
-      "Eduardo De Filippo",
+      "Eduardo de Filippo",
       "Franco Zeffirelli",
       "Gordon Chater",
       "Ian McKellen",
@@ -22726,7 +22726,7 @@
           "Colin Blakely"
         ],
         "playwright": [
-          "Eduardo De Filippo"
+          "Eduardo de Filippo"
         ]
       },
       {
@@ -23147,7 +23147,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "Don Juan Comes Back from the War; Arms and the Man; Henry 6; St Mark''''s Gospel",
+    "production_title": "Don Juan Comes Back from the War; Arms and the Man; Henry 6; St Mark's Gospel",
     "company": "National Theatre",
     "venue": "Cottesloe Theatre",
     "city": "London, England",
@@ -23167,7 +23167,7 @@
       "Janet Whiteside",
       "Julian Glover",
       "Lewis Fiander",
-      "Odon von Horvath",
+      "Odön von Horváth",
       "Polly Adams",
       "Robert Chetwyn",
       "Stewart Trotter",
@@ -23203,7 +23203,7 @@
         "Alec McCowen"
       ],
       "playwright": [
-        "Odon von Horvath",
+        "Odön von Horváth",
         "George Bernard Shaw",
         "William Shakespeare"
       ],
@@ -23253,7 +23253,7 @@
           "Janet Whiteside"
         ],
         "playwright": [
-          "Odon von Horvath"
+          "Odön von Horváth"
         ]
       },
       {
@@ -23292,7 +23292,7 @@
       },
       {
         "order": "4",
-        "production_title": "St Mark''s Gospel",
+        "production_title": "St Mark's Gospel",
         "actors": [
           "Alec McCowen"
         ]
@@ -23436,7 +23436,7 @@
       "Thomas Meehan",
       "Timothy West",
       "William Shakespeare",
-      "Zoe Wanamaker"
+      "Zoë Wanamaker"
     ],
     "roles": {
       "director": [
@@ -23449,7 +23449,7 @@
         "Michael Hordern",
         "Ian Charleson",
         "David Suchet",
-        "Zoe Wanamaker"
+        "Zoë Wanamaker"
       ],
       "playwright": [
         "William Shakespeare"
@@ -23683,7 +23683,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "As You Like It; Iphigenia in Tauris; Prince of Homburg; Ghosts; Kabale und Liebe; Trilogy des Wiedersehens",
+    "production_title": "As You Like It; Iphigenia in Tauris; The Prince of Homburg; Ghosts; Kabale und Liebe; Trilogy des Wiedersehens",
     "company": "",
     "venue": "",
     "city": "West Berlin",
@@ -23758,7 +23758,7 @@
       },
       {
         "order": "3",
-        "production_title": "Prince of Homburg",
+        "production_title": "The Prince of Homburg",
         "playwright": [
           "Heinrich von Kleist"
         ]
@@ -24127,7 +24127,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "Every Good Boy Deserves Favour; I''m Talking About Jerusalem; The Dance of Death; L''Heureux Stratageme; The Inconstant Couple",
+    "production_title": "Every Good Boy Deserves Favour; I'm Talking About Jerusalem; The Dance of Death; L'Heureux Stratageme; The Inconstant Couple",
     "company": "Royal Shakespeare Company",
     "venue": "Mermaid Theatre",
     "city": "London, England; Chichester",
@@ -24343,7 +24343,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "The Lady''''s Not for Burning; A Family; Savage Amusement; Hindle Wakes; The Merchant of Venice",
+    "production_title": "The Lady's Not for Burning; A Family; Savage Amusement; Hindle Wakes; The Merchant of Venice",
     "company": "Royal Shakespeare Company",
     "venue": "Old Vic",
     "city": "London, England",
@@ -24443,7 +24443,7 @@
     "production_groups": [
       {
         "order": "1",
-        "production_title": "The Lady''s Not for Burning",
+        "production_title": "The Lady's Not for Burning",
         "venue": [
           "Old Vic"
         ],
@@ -24550,9 +24550,9 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "Bartholomew Fair; Coriolanus; Every Good Boy Deserves Favour; Evita; Flying Blind; Plunder; St Mark''s Gospel; The Travelling Music Show",
+    "production_title": "Bartholomew Fair; Coriolanus; Every Good Boy Deserves Favour; Evita; Flying Blind; Plunder; St Mark's Gospel; The Travelling Music Show",
     "company": "Royal Shakespeare Company",
-    "venue": "Aldwych Theatre; Mermaid Theatre; Prince Edward Theatre; Royal Court Theatre; Lyttelton Theatre; Comedy Theatre; Her Majesty''s",
+    "venue": "Aldwych Theatre; Mermaid Theatre; Prince Edward Theatre; Royal Court Theatre; Lyttelton Theatre; Comedy Theatre; Her Majesty's",
     "city": "London, England",
     "coordinates": [],
     "people": [
@@ -25000,7 +25000,7 @@
       "Janet Suzman",
       "Kenneth Haigh",
       "Nigel Stock",
-      "Noel Coward",
+      "Noël Coward",
       "Philip Magdalen",
       "Phillip Hayes Dean",
       "Thomas Baptiste",
@@ -25023,7 +25023,7 @@
       ],
       "playwright": [
         "Phillip Hayes Dean",
-        "Noel Coward",
+        "Noël Coward",
         "Georges Feydeau",
         "Philip Magdalen"
       ],
@@ -25070,7 +25070,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "Vieux Carré; Love''s Labour''s Lost; The Great Caper; Alterations",
+    "production_title": "Vieux Carré; Love's Labour's Lost; The Great Caper; Alterations",
     "company": "Royal Shakespeare Company",
     "venue": "Piccadilly Theatre",
     "city": "London, England; Stratford-upon-Avon",
@@ -25222,7 +25222,7 @@
     "canonical_file": "",
     "production_title": "The Marriage; A Month in the Country; Three Sisters; Twelfth Night; Rooting",
     "company": "Malaya Bronnaya Company; Royal Shakespeare Company; Traverse Theatre",
-    "venue": "Lyceum Theatre; Daniel Stewart''s and Melville College; Traverse Theatre",
+    "venue": "Lyceum Theatre; Daniel Stewart's and Melville College; Traverse Theatre",
     "city": "Edinburgh; Moscow",
     "coordinates": [],
     "people": [
@@ -25548,7 +25548,7 @@
       "Lynn Farleigh",
       "Michael Hastings",
       "Michael Rudman",
-      "Oliver Ford Davies",
+      "Oliver Ford-Davies",
       "Oscar James",
       "Stephen Poliakoff",
       "Trevor Nunn",
@@ -25565,7 +25565,7 @@
         "Dave Hill",
         "Lynn Farleigh",
         "Gwyneth Strong",
-        "Oliver Ford Davies",
+        "Oliver Ford-Davies",
         "Jeffery Dench",
         "Alan David",
         "Emerys James",
@@ -25651,7 +25651,7 @@
           "Trevor Nunn"
         ],
         "actors": [
-          "Oliver Ford Davies",
+          "Oliver Ford-Davies",
           "Jeffery Dench",
           "Charlotte Cornwell",
           "Cherie Lunghi",
@@ -25766,7 +25766,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "The Lady From The Sea",
+    "production_title": "The Lady from the Sea",
     "company": "Royal Exchange Theatre",
     "venue": "Royal Exchange Theatre",
     "city": "Manchester",
@@ -25886,7 +25886,7 @@
       "Sally Jacobs",
       "Sara Bowes",
       "William Shakespeare",
-      "Zoe Wanamaker"
+      "Zoë Wanamaker"
     ],
     "roles": {
       "director": [
@@ -25908,7 +25908,7 @@
         "Raymond Westwell",
         "Marjorie Bland",
         "Jane Lapotaire",
-        "Zoe Wanamaker",
+        "Zoë Wanamaker",
         "Ian Charleson",
         "Allan Hendrick",
         "Pamela Stephenson",
@@ -26430,7 +26430,7 @@
     "slug": "1978-11-26-brook-s-mesure-pour-mesure",
     "route": "/reviews/1978-11-26-brook-s-mesure-pour-mesure/",
     "source_file": "1978.11.26.Cushman_Collected.Brook_s_Mesure_pour_Mesure.md",
-    "title": "Brook''S ''Mesure Pour Mesure''",
+    "title": "Brook's 'Mesure Pour Mesure'",
     "date": "1978-11-26",
     "year": "1978",
     "publication": "The Observer",
@@ -26633,7 +26633,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "On the 20th Century",
+    "production_title": "On the Twentieth Century",
     "company": "Public Theater",
     "venue": "Broadway",
     "city": "New York; Toronto",
@@ -26951,7 +26951,7 @@
     "slug": "1979-01-07-england-s-a-prison",
     "route": "/reviews/1979-01-07-england-s-a-prison/",
     "source_file": "1979.01.07.The_Observer.England_S_A_Prison.md",
-    "title": "England''''S A Prison?",
+    "title": "England's A Prison?",
     "date": "1979-01-07",
     "year": "1979",
     "publication": "The Observer",
@@ -27892,7 +27892,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "Ain''t Misbehavin''; The Crucifer of Blood; One for the Road; Beowulf",
+    "production_title": "Ain't Misbehavin'; The Crucifer of Blood; One for the Road; Beowulf",
     "company": "",
     "venue": "Her Majesty's Theatre; Haymarket Theatre",
     "city": "London, England",
@@ -29005,7 +29005,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "The Play''s the Thing; The Lady from the Sea; The Devil''s Disciple; Landscape of Exiles; Miss Leasing Lady; A Bold Stroke for a Wife",
+    "production_title": "The Play's the Thing; The Lady from the Sea; The Devil's Disciple; Landscape of Exiles; Miss Leasing Lady; A Bold Stroke for a Wife",
     "company": "Salisbury Playhouse",
     "venue": "Greenwich Theatre",
     "city": "London, England",
@@ -29140,7 +29140,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "The White Guard; Can You Hear Me at the Back?; Whose Life Is It Anyway?; Telford''s Change; The Eagle Has Two Heads; Orpheus; Archy and Mehitabel",
+    "production_title": "The White Guard; Can You Hear Me at the Back?; Whose Life Is It Anyway?; Telford's Change; The Eagle Has Two Heads; Orpheus; Archy and Mehitabel",
     "company": "Royal Shakespeare Company; American Repertory Theatre",
     "venue": "Aldwych Theatre; Piccadilly Theatre; Chichester Festival Theatre; Tottenham Court Road",
     "city": "London, England; Chichester",
@@ -29636,14 +29636,14 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "The Family Reunion; The Lady from the Sea; The Ordeal of Gilbert Pinfold; Danton''s Death; Brand; As You Like It; Peer Gynt; The Playboy of the Western World",
+    "production_title": "The Family Reunion; The Lady from the Sea; The Ordeal of Gilbert Pinfold; Danton's Death; Brand; As You Like It; Peer Gynt; The Playboy of the Western World",
     "company": "Royal Exchange Theatre; 59 Theatre Company; 69 Theatre Company; Royal Shakespeare Company; National Theatre; Royal Court Theatre",
     "venue": "Royal Exchange Theatre",
     "city": "Manchester; London, England; Stratford-upon-Avon",
     "coordinates": [],
     "people": [
       "Casper Wrede",
-      "Georg Buchner",
+      "Georg Büchner",
       "Henrik Ibsen",
       "John Millington Synge",
       "Michael Elliott",
@@ -29667,7 +29667,7 @@
       ],
       "playwright": [
         "T. S. Eliot",
-        "Georg Buchner",
+        "Georg Büchner",
         "Henrik Ibsen",
         "William Shakespeare",
         "John Millington Synge"
@@ -29869,7 +29869,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "Six Characters in Search of an Author; The Three Musketeers; Toads; The Secret Policeman''s Ball",
+    "production_title": "Six Characters in Search of an Author; The Three Musketeers; Toads; The Secret Policeman's Ball",
     "company": "Greenwich Theatre",
     "venue": "Greenwich Theatre",
     "city": "London, England; Manchester; Nottingham",
@@ -30017,7 +30017,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "Peking Opera programme; Wild Oats; Faust; I Can''t Get Started",
+    "production_title": "Peking Opera programme; Wild Oats; Faust; I Can't Get Started",
     "company": "",
     "venue": "Aldwych Theatre",
     "city": "London, England",
@@ -30034,7 +30034,7 @@
       "Morgana King",
       "Norman Rodway",
       "Raymond Westwell",
-      "Zoe Wanamaker"
+      "Zoë Wanamaker"
     ],
     "roles": {
       "director": [],
@@ -30082,7 +30082,7 @@
           "Alan Howard",
           "Norman Rodway",
           "Raymond Westwell",
-          "Zoe Wanamaker"
+          "Zoë Wanamaker"
         ],
         "playwright": [
           "Clifford Williams"
@@ -30402,7 +30402,7 @@
       "John Normington",
       "Ludvig Holberg",
       "Michael Bryant",
-      "Moliere",
+      "Molière",
       "Nicholas Selby",
       "Peter J. Hall",
       "Sara Kestelman",
@@ -30427,7 +30427,7 @@
       "playwright": [
         "William Shakespeare",
         "D. L. Coburn",
-        "Moliere",
+        "Molière",
         "Ludvig Holberg"
       ],
       "composer_lyricist": [],
@@ -30550,7 +30550,7 @@
       "Trevor Laird",
       "Trevor Nunn",
       "William Gaskill",
-      "Zoe Wanamaker"
+      "Zoë Wanamaker"
     ],
     "roles": {
       "director": [],
@@ -30591,7 +30591,7 @@
         ],
         "actors": [
           "Peter McEnery",
-          "Zoe Wanamaker",
+          "Zoë Wanamaker",
           "Richard Griffiths",
           "David Suchet",
           "Paul Brooke",
@@ -30899,7 +30899,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "Bells are Ringing; Talley''s Folly; The Fifth of July; Apocalypse Now; The Chicago Conspiracy Trial",
+    "production_title": "Bells are Ringing; Talley's Folly; The Fifth of July; Apocalypse Now; The Chicago Conspiracy Trial",
     "company": "Civic Light Opera",
     "venue": "Dorothy Chandler Pavilion; Mark Taper Forum; Odyssey Theatre",
     "city": "Los Angeles; Santa Monica; New York; London, England",
@@ -31219,7 +31219,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "Three Sisters; Richard III; The Padlock; Miss in Her Teens; Adam''s Apple",
+    "production_title": "Three Sisters; Richard III; The Padlock; Miss in Her Teens; Adam's Apple",
     "company": "Royal Shakespeare Company; Old Vic",
     "venue": "The Other Place; Olivier Theatre; Old Vic; New End Theatre",
     "city": "Stratford-upon-Avon; London, England",
@@ -32785,9 +32785,9 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "The Loud Boy''s Life; Trial Run; Thee and Me; Rose",
+    "production_title": "The Loud Boy's Life; Trial Run; Thee and Me; Rose",
     "company": "",
-    "venue": "Warehouse Theatre; Lyttelton Theatre; Duke of York''s Theatre",
+    "venue": "Warehouse Theatre; Lyttelton Theatre; Duke of York's Theatre",
     "city": "London, England",
     "coordinates": [],
     "people": [
@@ -32897,9 +32897,9 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "On the Twentieth Century; Twentieth Century; The Front Page; Singin'' in the Rain; On the Town; Bells are Ringing; The Band Wagon; Billion Dollar Baby; Good News; Wonderful Town",
+    "production_title": "On the Twentieth Century; Twentieth Century; The Front Page; Singin' in the Rain; On the Town; Bells are Ringing; The Band Wagon; Billion Dollar Baby; Good News; Wonderful Town",
     "company": "",
-    "venue": "Her Majesty's Theatre; Village Vanguard; Michael''s Pub",
+    "venue": "Her Majesty's Theatre; Village Vanguard; Michael's Pub",
     "city": "London, England; New York",
     "coordinates": [],
     "people": [
@@ -33449,7 +33449,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "The Winter''s Tale; Johnny on the Spot; Scrambled Feet; Betrayal; Whose Life Is It Anyway?; Peter Pan; Sugar Babies; Strider; Talley''s Folly",
+    "production_title": "The Winter's Tale; Johnny on the Spot; Scrambled Feet; Betrayal; Whose Life Is It Anyway?; Peter Pan; Sugar Babies; Strider; Talley's Folly",
     "company": "",
     "venue": "Brooklyn Academy of Music; Broadway",
     "city": "New York; Brooklyn; London, England",
@@ -33631,8 +33631,8 @@
       "Mark Twain",
       "Michael Jayston",
       "Mike Alfreds",
-      "Noel Coward",
       "Norman Tyrrell",
+      "Noël Coward",
       "Pam Ferris",
       "Raad Rawi",
       "Ruth Seglow",
@@ -33667,7 +33667,7 @@
       ],
       "playwright": [
         "William Shakespeare",
-        "Noel Coward",
+        "Noël Coward",
         "Mark Twain",
         "Frank Stockton",
         "Jules Feiffer",
@@ -33936,7 +33936,7 @@
       "Michael Elliott",
       "Moray Watson",
       "Nick Stringer",
-      "Noel Coward",
+      "Noël Coward",
       "Polly Adams",
       "Ronald Harwood",
       "Tom Courtenay"
@@ -33967,7 +33967,7 @@
         "Harold Pinter",
         "Ronald Harwood",
         "Gerard McLarnon",
-        "Noel Coward"
+        "Noël Coward"
       ],
       "composer_lyricist": [],
       "musical_director": [],
@@ -34055,7 +34055,7 @@
           "Mary Griffiths"
         ],
         "playwright": [
-          "Noel Coward"
+          "Noël Coward"
         ]
       }
     ],
@@ -34459,7 +34459,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "John Bull''s Other Island; Livingstone and Sechele; Johannes Faustus",
+    "production_title": "John Bull's Other Island; Livingstone and Sechele; Johannes Faustus",
     "company": "Theatermanufaktur Berlin",
     "venue": "Greenwich Theatre",
     "city": "London, England",
@@ -34599,7 +34599,7 @@
       "Andrew Cruickshank",
       "Anna Carteret",
       "Christopher Morahan",
-      "Georg Buchner",
+      "Georg Büchner",
       "Gillian Lynne",
       "Michael Bryant",
       "Michael Gambon",
@@ -34685,7 +34685,7 @@
           "Stuart Fox"
         ],
         "playwright": [
-          "Georg Buchner"
+          "Georg Büchner"
         ]
       }
     ],
@@ -34707,9 +34707,9 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "Travelling North; York Mystery Plays; The Devil''s Law-Case; She''s So Modern",
+    "production_title": "Travelling North; York Mystery Plays; The Devil's Law-Case; She's So Modern",
     "company": "Theatre Royal, York Rep",
-    "venue": "Lyric Hammersmith; St Mary''s Abbey; Theatre Royal, York; Queen''s, Hornchurch",
+    "venue": "Lyric Hammersmith; St Mary's Abbey; Theatre Royal, York; Queen's, Hornchurch",
     "city": "London, England; York; Hornchurch",
     "coordinates": [],
     "people": [
@@ -34856,17 +34856,17 @@
       "Julie Walters",
       "Mark Kingston",
       "Mike Ockrent",
-      "Noel Coward",
+      "Noël Coward",
       "Willy Russell"
     ],
     "roles": {
       "director": [],
       "actors": [],
       "playwright": [
-        "Noel Coward"
+        "Noël Coward"
       ],
       "composer_lyricist": [
-        "Noel Coward"
+        "Noël Coward"
       ],
       "musical_director": [],
       "choreographer": [],
@@ -35719,9 +35719,9 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "Wielopole Wielopole; Woyzeck; A Dream Play; Henry IV, Parts 1 and 2; Three Men in a Boat; The Third Nam; Here''s a Funny Thing; Snapshots",
+    "production_title": "Wielopole Wielopole; Woyzeck; A Dream Play; Henry IV, Parts 1 and 2; Three Men in a Boat; The Third Nam; Here's a Funny Thing; Snapshots",
     "company": "National Arts Centre; Royal Shakespeare Company",
-    "venue": "Moray House Gymnasium; Buster Brown''s; Heriot-Watt Theatre; Viewforth Centre; Traverse Theatre",
+    "venue": "Moray House Gymnasium; Buster Brown's; Heriot-Watt Theatre; Viewforth Centre; Traverse Theatre",
     "city": "Edinburgh; London, England",
     "coordinates": [],
     "people": [
@@ -35733,7 +35733,7 @@
       "Bill Stair",
       "David Rintoul",
       "David Shaw-Parker",
-      "Georg Buchner",
+      "Georg Büchner",
       "Janene Possell",
       "Jeremy Nicholas",
       "John Anderson",
@@ -35760,7 +35760,7 @@
         "John Bardon"
       ],
       "playwright": [
-        "Georg Buchner",
+        "Georg Büchner",
         "August Strindberg",
         "William Shakespeare",
         "Bill Stair"
@@ -36138,7 +36138,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "Watch on the Rhine; Oklahoma; The Dynasts",
+    "production_title": "Watch on the Rhine; Oklahoma!; The Dynasts",
     "company": "",
     "venue": "Lyttelton Theatre",
     "city": "London, England; Exeter",
@@ -36210,7 +36210,7 @@
       },
       {
         "order": "2",
-        "production_title": "Oklahoma",
+        "production_title": "Oklahoma!",
         "actors": [
           "John Diedrich",
           "Rosamund Shelley",
@@ -36354,7 +36354,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "They''re Playing Our Song; Funny Turns; Jeeves Takes Charge; Protest; The Licence; Playthings",
+    "production_title": "They're Playing Our Song; Funny Turns; Jeeves Takes Charge; Protest; The Licence; Playthings",
     "company": "",
     "venue": "Shaftesbury Theatre",
     "city": "London, England",
@@ -36622,7 +36622,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "The Romans in Britain; Sugar and Spice; Enjoy; Season''s Greetings",
+    "production_title": "The Romans in Britain; Sugar and Spice; Enjoy; Season's Greetings",
     "company": "National Theatre; Royal Court Theatre",
     "venue": "Olivier Theatre; Royal Court Theatre; Vaudeville Theatre; Roundhouse",
     "city": "London, England",
@@ -36888,7 +36888,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "The Provok''d Wife; The Crucible; Hansel and Gretel",
+    "production_title": "The Provok'd Wife; The Crucible; Hansel and Gretel",
     "company": "National Theatre; Royal Shakespeare Company",
     "venue": "Lyttelton Theatre; Cottesloe Theatre; The Other Place",
     "city": "London, England; Stratford-upon-Avon",
@@ -37444,8 +37444,8 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "The Irish Play; Act of Union; New Year''s Eve; A Man of Feeling; The Biograph Girl",
-    "company": "Soho Poly; King''s Head Theatre; Phoenix Company",
+    "production_title": "The Irish Play; Act of Union; New Year's Eve; A Man of Feeling; The Biograph Girl",
+    "company": "Soho Poly; King's Head Theatre; Phoenix Company",
     "venue": "Warehouse Theatre",
     "city": "London, England",
     "coordinates": [],
@@ -37884,8 +37884,8 @@
       "Lynne Miller",
       "Malcolm Mudie",
       "Nichola McAuliffe",
-      "Noel Coward",
       "Norman Coates",
+      "Noël Coward",
       "Olivier Pierre",
       "Oz Clarke",
       "Peter Stevenson",
@@ -37920,7 +37920,7 @@
       "playwright": [
         "Stephen Oliver",
         "Arthur Schnitzler",
-        "Noel Coward",
+        "Noël Coward",
         "Arthur Wing Pinero",
         "Villiers de L'Isle Adam"
       ],
@@ -37972,7 +37972,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "Sweeney Todd; The Elephant Man; Nicholas Nickleby; The Streets of London; The Ticket-of-Leave Man; Bleak House; The Greeks; Cymbeline; The Duchess of Malfi; The Maid''s Tragedy; The Wild Duck; Hamlet; Educating Rita; On the Twentieth Century; Make and Break; Julius Caesar; The Browning Version; The Romans in Britain; The Irish Play; Not Quite Jerusalem",
+    "production_title": "Sweeney Todd; The Elephant Man; Nicholas Nickleby; The Streets of London; The Ticket-of-Leave Man; Bleak House; The Greeks; Cymbeline; The Duchess of Malfi; The Maid's Tragedy; The Wild Duck; Hamlet; Educating Rita; On the Twentieth Century; Make and Break; Julius Caesar; The Browning Version; The Romans in Britain; The Irish Play; Not Quite Jerusalem",
     "company": "Royal Shakespeare Company",
     "venue": "",
     "city": "London, England; New York",
@@ -38590,7 +38590,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "The Massacre at Paris; Say Your Prayers; The Suicide; Suburban Strains; Hobson''s Choice",
+    "production_title": "The Massacre at Paris; Say Your Prayers; The Suicide; Suburban Strains; Hobson's Choice",
     "company": "Glasgow Citizens' Theatre",
     "venue": "Citizens' Theatre",
     "city": "Glasgow; London, England",
@@ -39210,7 +39210,7 @@
       "Julian Fellowes",
       "Kenneth Williams",
       "Maurice Hennequin",
-      "Noel Coward",
+      "Noël Coward",
       "Peter James",
       "Ronnie Stevens",
       "Saul Radomsky"
@@ -39261,7 +39261,7 @@
           "Colin Spaull"
         ],
         "playwright": [
-          "Noel Coward"
+          "Noël Coward"
         ]
       },
       {
@@ -39327,7 +39327,7 @@
     "canonical_file": "",
     "production_title": "Having a Ball; I A Mongrel; Let Wives Tak Tent",
     "company": "Scottish Theatre Company",
-    "venue": "Coliseum, Oldham; Hemingford Arms; Theatre Royal, Glasgow; King''s Theatre, Edinburgh",
+    "venue": "Coliseum, Oldham; Hemingford Arms; Theatre Royal, Glasgow; King's Theatre, Edinburgh",
     "city": "Oldham; London, England; Glasgow; Edinburgh",
     "coordinates": [],
     "people": [
@@ -39335,7 +39335,7 @@
       "David Ross",
       "Ernie Dalton",
       "Kenneth Alan Taylor",
-      "Moliere",
+      "Molière",
       "Rikki Fulton",
       "Robert Kemp"
     ],
@@ -39351,7 +39351,7 @@
       "playwright": [
         "Alan Bleasdale",
         "Robert Kemp",
-        "Moliere"
+        "Molière"
       ],
       "composer_lyricist": [],
       "musical_director": [],
@@ -39424,7 +39424,7 @@
         ],
         "playwright": [
           "Robert Kemp",
-          "Moliere"
+          "Molière"
         ]
       }
     ],
@@ -39447,7 +39447,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "The Duchess of Malfi; The Merchant of Venice; I''m Getting My Act Together and Taking It On the Road; Balconville; The Cherry Orchard",
+    "production_title": "The Duchess of Malfi; The Merchant of Venice; I'm Getting My Act Together and Taking It On the Road; Balconville; The Cherry Orchard",
     "company": "Royal Exchange Theatre; Shared Experience; Centaur Company",
     "venue": "",
     "city": "London, England; Paris",
@@ -39620,7 +39620,7 @@
       "Ian Sinclair",
       "June Barrie",
       "Max Stafford-Clark",
-      "Moliere",
+      "Molière",
       "Nigel Terry",
       "Peter Copley",
       "Peter Gill",
@@ -39654,7 +39654,7 @@
       "playwright": [
         "Anton Chekhov",
         "Thomas Kilroy",
-        "Moliere",
+        "Molière",
         "Ian Sinclair",
         "Brian Jeffries"
       ],
@@ -39712,7 +39712,7 @@
           "Ron Pember"
         ],
         "playwright": [
-          "Moliere"
+          "Molière"
         ]
       },
       {
@@ -39777,8 +39777,8 @@
       "Margaret Courtenay",
       "Michael Bogdanov",
       "Michael Rudman",
-      "Noel Coward",
       "Norman Beaton",
+      "Noël Coward",
       "Oscar James",
       "Peter Straker",
       "Peter Whelan",
@@ -39821,7 +39821,7 @@
         "William Shakespeare",
         "Francis Beaumont",
         "Peter Whelan",
-        "Noel Coward"
+        "Noël Coward"
       ],
       "composer_lyricist": [
         "Tammy Eytle"
@@ -40442,7 +40442,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "Serjeant Musgrave''s Dance; The Caretaker; Britannicus; Tamara",
+    "production_title": "Serjeant Musgrave's Dance; The Caretaker; Britannicus; Tamara",
     "company": "",
     "venue": "Cottesloe Theatre; Lyttelton Theatre",
     "city": "London, England; Hammersmith; Toronto",
@@ -40865,8 +40865,8 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "The Shoemakers'' Holiday; Room; Minnie''s Boys; Wonderland; Tap Dance on a Telephone Wire",
-    "company": "That''s Not It; Oklahoma! cast",
+    "production_title": "The Shoemakers' Holiday; Room; Minnie's Boys; Wonderland; Tap Dance on a Telephone Wire",
+    "company": "That's Not It; Oklahoma! cast",
     "venue": "Olivier Theatre",
     "city": "London, England",
     "coordinates": [],
@@ -41012,7 +41012,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "The Twin Rivals; The Winter''s Tale; Thirteenth Night; The Skin Game; The Misanthrope; One Woman Plays",
+    "production_title": "The Twin Rivals; The Winter's Tale; Thirteenth Night; The Skin Game; The Misanthrope; One Woman Plays",
     "company": "Royal Shakespeare Company",
     "venue": "The Other Place",
     "city": "Stratford-upon-Avon; London, England; Croydon",
@@ -41035,7 +41035,7 @@
       "Mike Gwilym",
       "Miles Anderson",
       "Miriam Karlin",
-      "Moliere",
+      "Molière",
       "Nicholas Amer",
       "Patrick Stewart",
       "Paul Shelley",
@@ -41080,7 +41080,7 @@
         "William Shakespeare",
         "Howard Brenton",
         "John Galsworthy",
-        "Moliere",
+        "Molière",
         "Dario Fo",
         "Franca Rame"
       ],
@@ -41193,7 +41193,7 @@
           "Tom Courtenay"
         ],
         "playwright": [
-          "Moliere"
+          "Molière"
         ]
       },
       {
@@ -41288,7 +41288,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "Troilus and Cressida; A Doll''s House; Eastward Ho!; War with the Newts",
+    "production_title": "Troilus and Cressida; A Doll's House; Eastward Ho!; War with the Newts",
     "company": "Royal Shakespeare Company; Mermaid Theatre",
     "venue": "Aldwych Theatre; The Other Place; Mermaid Theatre",
     "city": "London, England; Stratford-upon-Avon",
@@ -41452,7 +41452,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "One Mo'' Time; A Midsummer Night''s Dream; Pleasure and Repentance; The Merchant of Venice; Goose Pimples",
+    "production_title": "One Mo' Time; A Midsummer Night's Dream; Pleasure and Repentance; The Merchant of Venice; Goose-Pimples",
     "company": "Royal Shakespeare Company",
     "venue": "Cambridge Theatre",
     "city": "London, England",
@@ -41617,7 +41617,7 @@
       },
       {
         "order": "5",
-        "production_title": "Goose Pimples"
+        "production_title": "Goose-Pimples"
       }
     ],
     "media": [],
@@ -41639,7 +41639,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "Restoration; Can''''t Pay? Won''''t Pay!; To Come Home To This; As You Like It",
+    "production_title": "Restoration; Can't Pay? Won't Pay!; To Come Home To This; As You Like It",
     "company": "Royal Shakespeare Company",
     "venue": "Royal Court Theatre",
     "city": "Stratford-upon-Avon",
@@ -41708,7 +41708,7 @@
       },
       {
         "order": "2",
-        "production_title": "Can''''t Pay? Won''''t Pay!",
+        "production_title": "Can't Pay? Won't Pay!",
         "actors": [
           "Alfred Molina"
         ],
@@ -41864,7 +41864,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "Who''s Afraid of Virginia Woolf?; Loose Ends; Chapter Two; Children of a Lesser God",
+    "production_title": "Who's Afraid of Virginia Woolf?; Loose Ends; Chapter Two; Children of a Lesser God",
     "company": "",
     "venue": "Lyttelton Theatre",
     "city": "London, England",
@@ -41930,7 +41930,7 @@
     "production_groups": [
       {
         "order": "1",
-        "production_title": "Who''s Afraid of Virginia Woolf?",
+        "production_title": "Who's Afraid of Virginia Woolf?",
         "city": [
           "London, England"
         ],
@@ -42013,7 +42013,7 @@
       "Jean Gascon",
       "John Barton",
       "Len Cariou",
-      "Moliere",
+      "Molière",
       "P. G. Wodehouse",
       "Patrick Stewart",
       "Peter Dews",
@@ -42041,7 +42041,7 @@
       "playwright": [
         "William Shakespeare",
         "Friedrich Durrenmatt",
-        "Moliere",
+        "Molière",
         "P. G. Wodehouse"
       ],
       "composer_lyricist": [],
@@ -42085,7 +42085,7 @@
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
     "production_title": "The Love-Girl and the Innocent; Good; A Waste of Time; Heaven and Hell",
-    "company": "Royal Shakespeare Company; Glasgow Citizens'' Theatre; Royal Court Theatre",
+    "company": "Royal Shakespeare Company; Glasgow Citizens' Theatre; Royal Court Theatre",
     "venue": "Aldwych Theatre; Warehouse Theatre; Royal Court Theatre",
     "city": "London, England; Glasgow",
     "coordinates": [],
@@ -42600,7 +42600,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "The Shoemakers'' Holiday; Romeo and Juliet; Hansel and Gretel; Peter Pan; Pygmalion; Happy Days; The Merry Wives of Windsor; Back to Methuselah",
+    "production_title": "The Shoemakers' Holiday; Romeo and Juliet; Hansel and Gretel; Peter Pan; Pygmalion; Happy Days; The Merry Wives of Windsor; Back to Methuselah",
     "company": "National Theatre",
     "venue": "National Theatre",
     "city": "London, England",
@@ -42796,7 +42796,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "Roll On Four O''Clock; Caritas; The Mitford Girls; Let''s Do It; The Learned Ladies",
+    "production_title": "Roll On Four O'Clock; Caritas; The Mitford Girls; Let's Do It; The Learned Ladies",
     "company": "High Command Theatre Company",
     "venue": "Cottesloe Theatre; Globe Theatre; Pentameters",
     "city": "London, England",
@@ -42809,7 +42809,7 @@
       "Frederick Treves",
       "Glyn Owen",
       "John Madden",
-      "Moliere",
+      "Molière",
       "Patti Love",
       "Windsor Davies"
     ],
@@ -42817,7 +42817,7 @@
       "director": [],
       "actors": [],
       "playwright": [
-        "Moliere"
+        "Molière"
       ],
       "composer_lyricist": [
         "Cole Porter"
@@ -43091,7 +43091,7 @@
     "slug": "1981-10-25-moli-re-s-dying-fall",
     "route": "/reviews/1981-10-25-moli-re-s-dying-fall/",
     "source_file": "1981.10.25.The_Observer.Moli_Re_s_Dying_Fall.md",
-    "title": "MolièRe''s Dying Fall",
+    "title": "MolièRe's Dying Fall",
     "date": "1981-10-25",
     "year": "1981",
     "publication": "The Observer",
@@ -43640,7 +43640,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "All''s Well That Ends Well; Money; The Dog Beneath the Skin; The Last Elephant",
+    "production_title": "All's Well That Ends Well; Money; The Dog Beneath the Skin; The Last Elephant",
     "company": "",
     "venue": "",
     "city": "Stratford, Ontario; London, England",
@@ -45011,7 +45011,7 @@
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
     "production_title": "Not in Front of the Audience",
-    "company": "Not the Nine O''Clock News; Tyne Wear Company; Shared Experience; Royal Shakespeare Company",
+    "company": "Not the Nine O'Clock News; Tyne Wear Company; Shared Experience; Royal Shakespeare Company",
     "venue": "Drury Lane Theatre",
     "city": "London, England",
     "coordinates": [],
@@ -45427,7 +45427,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "The Pirates of Penzance; The Jeweller''''s Shop; Berenice; Queen Christina",
+    "production_title": "The Pirates of Penzance; The Jeweller's Shop; Berenice; Queen Christina",
     "company": "New York Shakespeare Festival",
     "venue": "Drury Lane Theatre",
     "city": "London, England",
@@ -45522,7 +45522,7 @@
       },
       {
         "order": "2",
-        "production_title": "The Jeweller''s Shop",
+        "production_title": "The Jeweller's Shop",
         "playwright": [
           "Karol Wojtyla"
         ]
@@ -45761,7 +45761,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "Peer Gynt; A Midsummer Night''s Dream; Dreyfus",
+    "production_title": "Peer Gynt; A Midsummer Night's Dream; Dreyfus",
     "company": "",
     "venue": "The Other Place",
     "city": "Stratford-upon-Avon; London, England",
@@ -45997,7 +45997,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "King Lear; Lear; The Beggar''s Opera; Private Dick",
+    "production_title": "King Lear; Lear; The Beggar's Opera; Private Dick",
     "company": "Royal Shakespeare Company; National Theatre",
     "venue": "Cottesloe Theatre; Whitehall Theatre",
     "city": "Stratford-upon-Avon; London, England",
@@ -46277,7 +46277,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "Danton''s Death; Windy City; The Admirable Bashville; The Dark Lady of the Sonnets",
+    "production_title": "Danton's Death; Windy City; The Admirable Bashville; The Dark Lady of the Sonnets",
     "company": "National Theatre",
     "venue": "Olivier Theatre",
     "city": "London, England",
@@ -46410,7 +46410,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "The Winter''s Tale; All''s Well That Ends Well; The Twin Rivals",
+    "production_title": "The Winter's Tale; All's Well That Ends Well; The Twin Rivals",
     "company": "Royal Shakespeare Company",
     "venue": "Barbican Theatre",
     "city": "London, England",
@@ -46587,7 +46587,7 @@
       "Lorenz Hart",
       "Louise Page",
       "Maria Aitken",
-      "Noel Coward",
+      "Noël Coward",
       "Patti Love",
       "Peter Needham",
       "Richard Butler",
@@ -46602,7 +46602,7 @@
       "actors": [],
       "playwright": [
         "Anton Chekhov",
-        "Noel Coward",
+        "Noël Coward",
         "Bertolt Brecht"
       ],
       "composer_lyricist": [
@@ -46992,7 +46992,7 @@
       "Mbongeni Ngema",
       "Metastasio",
       "Miles Davis",
-      "Moliere",
+      "Molière",
       "Percy Mtwa",
       "Sandro Sequi",
       "Thomas Darrah",
@@ -47013,7 +47013,7 @@
         "Mbongeni Ngema"
       ],
       "playwright": [
-        "Moliere",
+        "Molière",
         "Albert Bermel",
         "Metastasio",
         "Ena Lamont Stewart"
@@ -47312,13 +47312,13 @@
       "Judi Dench",
       "Martin Jarvis",
       "Nigel Havers",
-      "Noel Coward",
+      "Noël Coward",
       "Oscar Wilde",
       "Paul Rogers",
       "Peter Hall",
       "Pina Bausch",
       "Richard Muenz",
-      "Zoe Wanamaker"
+      "Zoë Wanamaker"
     ],
     "roles": {
       "director": [
@@ -47332,7 +47332,7 @@
         "Brian Kent",
         "Martin Jarvis",
         "Nigel Havers",
-        "Zoe Wanamaker",
+        "Zoë Wanamaker",
         "Elizabeth Garvie",
         "Richard Muenz",
         "Jill Martin",
@@ -47341,10 +47341,10 @@
       "playwright": [
         "Arthur Pinero",
         "Oscar Wilde",
-        "Noel Coward"
+        "Noël Coward"
       ],
       "composer_lyricist": [
-        "Noel Coward"
+        "Noël Coward"
       ],
       "musical_director": [],
       "choreographer": [
@@ -47467,7 +47467,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "Schweyk in the Second World War; The Spanish Tragedy; Miss Margarida''''s Way",
+    "production_title": "Schweyk in the Second World War; The Spanish Tragedy; Miss Margarida's Way",
     "company": "National Theatre",
     "venue": "Olivier Theatre",
     "city": "London, England",
@@ -47585,7 +47585,7 @@
       },
       {
         "order": "3",
-        "production_title": "Miss Margarida''s Way",
+        "production_title": "Miss Margarida's Way",
         "actors": [
           "Estelle Parsons"
         ],
@@ -47836,7 +47836,7 @@
       "Ella Fitzgerald",
       "Frank Sinatra",
       "Mabel Mercer",
-      "Noel Coward",
+      "Noël Coward",
       "Stephen Sondheim",
       "Steve Ross"
     ],
@@ -47872,7 +47872,7 @@
       ],
       "artists": [
         "Cole Porter",
-        "Noel Coward",
+        "Noël Coward",
         "Stephen Sondheim"
       ]
     },
@@ -48237,7 +48237,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "A Midsummer Night''s Dream; Camelot; Waiting",
+    "production_title": "A Midsummer Night's Dream; Camelot; Waiting",
     "company": "",
     "venue": "National Theatre",
     "city": "London, England",
@@ -48618,7 +48618,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "Peter Pan; Clay; A View of Kabul; Me, Myself and I; The Night They Raided Minsky''s",
+    "production_title": "Peter Pan; Clay; A View of Kabul; Me, Myself and I; The Night They Raided Minsky's",
     "company": "Royal Shakespeare Company; New Vic",
     "venue": "Barbican Theatre",
     "city": "London, England; Bath",
@@ -48798,7 +48798,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "Cats; Snoopy; The Little Shop of Horrors; Nine",
+    "production_title": "Cats; Snoopy; Little Shop of Horrors; Nine",
     "company": "",
     "venue": "Broadway",
     "city": "New York",
@@ -48864,7 +48864,7 @@
       },
       {
         "order": "3",
-        "production_title": "The Little Shop of Horrors",
+        "production_title": "Little Shop of Horrors",
         "actors": [
           "Ellen Geer"
         ]
@@ -49163,7 +49163,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "Charley''''s Aunt; Welcome Home; Secret Gardens; Red Magic; Top Girls",
+    "production_title": "Charley's Aunt; Welcome Home; Secret Gardens; Red Magic; Top Girls",
     "company": "",
     "venue": "Lyric Hammersmith",
     "city": "London, England",
@@ -49175,7 +49175,7 @@
       "Caryl Churchill",
       "David Ross",
       "Geraldine Pilgrim",
-      "Griff Rhys Jones",
+      "Griff Rhys-Jones",
       "Ian Spink",
       "Jeremy Blake",
       "Mark Payton",
@@ -49196,7 +49196,7 @@
         "Ian Spink"
       ],
       "actors": [
-        "Griff Rhys Jones",
+        "Griff Rhys-Jones",
         "David Ross",
         "Mark Payton",
         "Terence Longdon",
@@ -49233,7 +49233,7 @@
     "production_groups": [
       {
         "order": "1",
-        "production_title": "Charley''s Aunt",
+        "production_title": "Charley's Aunt",
         "venue": [
           "Lyric Hammersmith"
         ],
@@ -49242,7 +49242,7 @@
           "Peter Wilson"
         ],
         "actors": [
-          "Griff Rhys Jones",
+          "Griff Rhys-Jones",
           "David Ross",
           "Mark Payton",
           "Terence Longdon",
@@ -49322,7 +49322,7 @@
       "Jennie Stoller",
       "Kenneth Cranham",
       "Michael Boyd",
-      "Moliere",
+      "Molière",
       "Peter Gill",
       "Siobhan Redmond",
       "Tirso de Molina"
@@ -49342,7 +49342,7 @@
       "playwright": [
         "Caryl Churchill",
         "Peter Gill",
-        "Moliere",
+        "Molière",
         "Tirso de Molina",
         "Flann O'Brien"
       ],
@@ -49412,7 +49412,7 @@
           "Siobhan Redmond"
         ],
         "playwright": [
-          "Moliere",
+          "Molière",
           "Tirso de Molina"
         ]
       },
@@ -50138,7 +50138,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "Julius Caesar; The Time Of Your Life",
+    "production_title": "Julius Caesar; The Time of Your Life",
     "company": "Royal Shakespeare Company",
     "venue": "",
     "city": "Stratford-upon-Avon",
@@ -50169,7 +50169,7 @@
       "Ron Daniels",
       "William Saroyan",
       "William Shakespeare",
-      "Zoe Wanamaker"
+      "Zoë Wanamaker"
     ],
     "roles": {
       "director": [
@@ -50229,11 +50229,11 @@
       },
       {
         "order": "2",
-        "production_title": "The Time Of Your Life",
+        "production_title": "The Time of Your Life",
         "actors": [
           "Daniel Massey",
           "John Thaw",
-          "Zoe Wanamaker",
+          "Zoë Wanamaker",
           "Paul Greenwood",
           "Henry Goodman",
           "Christopher Neame",
@@ -50357,7 +50357,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "The Rivals; A Midsummer Night''s Dream; Antony and Cleopatra; Blood Brothers",
+    "production_title": "The Rivals; A Midsummer Night's Dream; Antony and Cleopatra; Blood Brothers",
     "company": "National Theatre; Royal Shakespeare Company",
     "venue": "Olivier Theatre",
     "city": "London, England",
@@ -50634,7 +50634,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "The Communication Cord; West; The Body; The Adventures of Jasper Ridley; Brighton Beach Memoirs; Night, Mother; You Can''t Take It With You; On Your Toes; Porgy and Bess",
+    "production_title": "The Communication Cord; West; The Body; The Adventures of Jasper Ridley; Brighton Beach Memoirs; 'Night, Mother; You Can't Take It With You; On Your Toes; Porgy and Bess",
     "company": "",
     "venue": "Hampstead Theatre; Warehouse Theatre; The Pit; Half Moon Theatre; Broadway",
     "city": "London, England; New York",
@@ -50764,7 +50764,7 @@
       },
       {
         "order": "6",
-        "production_title": "Night, Mother",
+        "production_title": "'Night, Mother",
         "playwright": [
           "Marsha Norman"
         ]
@@ -50922,7 +50922,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "Beethoven''s Tenth; The Love of Four Colonels; Crimes of the Heart; Liza Minnelli; Macbeth",
+    "production_title": "Beethoven's Tenth; The Love of Four Colonels; Crimes of the Heart; Liza Minnelli; Macbeth",
     "company": "",
     "venue": "Vaudeville Theatre",
     "city": "London, England",
@@ -51828,7 +51828,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "Singin'' in the Rain; Y; Escorial; The Love of Don Perlimplin and Belisa in the Garden; Suddenly Last Summer",
+    "production_title": "Singin' in the Rain; Y; Escorial; The Love of Don Perlimplin and Belisa in the Garden; Suddenly Last Summer",
     "company": "",
     "venue": "London Palladium",
     "city": "London, England",
@@ -51837,7 +51837,7 @@
       "Arthur Freed",
       "Arturo Brachetti",
       "Danielle Carson",
-      "Federico Garcia Lorca",
+      "Federico García Lorca",
       "Harold Fielding",
       "Michael Batz",
       "Michel de Ghelderode",
@@ -51862,7 +51862,7 @@
       ],
       "playwright": [
         "Michel de Ghelderode",
-        "Federico Garcia Lorca",
+        "Federico García Lorca",
         "Tennessee Williams"
       ],
       "composer_lyricist": [
@@ -51925,7 +51925,7 @@
           "Michael Batz"
         ],
         "playwright": [
-          "Federico Garcia Lorca"
+          "Federico García Lorca"
         ]
       },
       {
@@ -52429,7 +52429,7 @@
       "Janet Suzman",
       "John Hirsch",
       "Nigel Hess",
-      "Noel Coward",
+      "Noël Coward",
       "Richard O'Callaghan",
       "Roberta Maxwell",
       "Ron Hutchinson",
@@ -52460,7 +52460,7 @@
         "Ron Hutchinson",
         "Angela Hewins",
         "Sean Mathias",
-        "Noel Coward"
+        "Noël Coward"
       ],
       "composer_lyricist": [],
       "musical_director": [
@@ -52540,7 +52540,7 @@
         ],
         "playwright": [
           "Sean Mathias",
-          "Noel Coward"
+          "Noël Coward"
         ]
       }
     ],
@@ -53155,8 +53155,8 @@
       "Karl Johnson",
       "Martin Shaw",
       "Michael Perceval",
-      "Noel Coward",
       "Noni Hazlehurst",
+      "Noël Coward",
       "Robin Lefevre",
       "Robyn Archer",
       "Thomas Murphy",
@@ -53184,7 +53184,7 @@
         "David Mamet"
       ],
       "composer_lyricist": [
-        "Noel Coward",
+        "Noël Coward",
         "E. Y. Harburg",
         "Harold Arlen"
       ],
@@ -53251,7 +53251,7 @@
           "Robyn Archer"
         ],
         "composer_lyricist": [
-          "Noel Coward",
+          "Noël Coward",
           "E. Y. Harburg",
           "Harold Arlen"
         ]
@@ -53789,7 +53789,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "Lucky Bag; Pericles; The Grass Widow; The Actor''s Nightmare; Sister Mary Ignatius Explains It All For You; Antigone",
+    "production_title": "Lucky Bag; Pericles; The Grass Widow; The Actor's Nightmare; Sister Mary Ignatius Explains It All For You; Antigone",
     "company": "Royal Shakespeare Company; Theatre of Comedy",
     "venue": "King's Head Theatre",
     "city": "London, England",
@@ -54125,7 +54125,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "False Admissions; Successful Strategies; Dancin''; Outlaw",
+    "production_title": "False Admissions; Successful Strategies; Dancin'; Outlaw",
     "company": "Shared Experience",
     "venue": "Lyric Studio, Hammersmith; Drury Lane Theatre; Arts Theatre",
     "city": "London, England",
@@ -54942,7 +54942,7 @@
       "Jonathan Pryce",
       "Kate Burton",
       "Nicol Williamson",
-      "Noel Coward",
+      "Noël Coward",
       "Peter O'Toole",
       "Peter Shaffer",
       "Richard Burton",
@@ -54969,7 +54969,7 @@
       ],
       "playwright": [
         "Dylan Thomas",
-        "Noel Coward",
+        "Noël Coward",
         "Peter Shaffer",
         "Edward Albee",
         "John le Carre",
@@ -55277,7 +55277,7 @@
       "Liza Minnelli",
       "Mabel Mercer",
       "Michael Feinstein",
-      "Noel Coward",
+      "Noël Coward",
       "Oscar Levant",
       "Steve Ross"
     ],
@@ -55289,7 +55289,7 @@
         "George Gershwin",
         "Ira Gershwin",
         "Cole Porter",
-        "Noel Coward",
+        "Noël Coward",
         "Oscar Levant",
         "Kurt Weill"
       ],
@@ -55670,7 +55670,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "Twelfth Night; Richard III; All''s Well That Ends Well; The Taming of the Shrew; Murder in the Cathedral; My Fair Lady",
+    "production_title": "Twelfth Night; Richard III; All's Well That Ends Well; The Taming of the Shrew; Murder in the Cathedral; My Fair Lady",
     "company": "Stratford Festival",
     "venue": "Third Stage; Avon Theatre",
     "city": "Stratford, Ontario",
@@ -56364,7 +56364,7 @@
     "slug": "1989-07-05-book-review-prince-of-the-great-white-way-a-stagestruck-showman-s-story",
     "route": "/reviews/1989-07-05-book-review-prince-of-the-great-white-way-a-stagestruck-showman-s-story/",
     "source_file": "1989.07.05.The_Globe_and_Mail.Book_Review_Prince_Of_The_Great_White_Way_A_Stagestruck_ShowmanS_Story.md",
-    "title": "Book Review Prince Of The Great White Way: A Stagestruck Showman''s Story",
+    "title": "Book Review Prince Of The Great White Way: A Stagestruck Showman's Story",
     "date": "1989-07-05",
     "year": "1989",
     "publication": "The Globe and Mail",
@@ -56908,7 +56908,7 @@
     "slug": "1989-10-28-spectacle-it-is-but-thrilling-it-s-not-skydome-s-aida-opera-of-a-phantom",
     "route": "/reviews/1989-10-28-spectacle-it-is-but-thrilling-it-s-not-skydome-s-aida-opera-of-a-phantom/",
     "source_file": "1989.10.28.The_Globe_and_Mail.Spectacle_It_Is_But_Thrilling_ItS_Not_SkydomeS_Aida_Opera_Of_A_Phantom.md",
-    "title": "Spectacle it is, but thrilling it''s not SkyDome''s Aida: opera of a phantom",
+    "title": "Spectacle it is, but thrilling it's not SkyDome's Aida: opera of a phantom",
     "date": "1989-10-28",
     "year": "1989",
     "publication": "The Globe and Mail",
@@ -57891,7 +57891,7 @@
     "slug": "1990-05-18-sammy-davis-jr-s-early-career-will-be-remembered-with-affection-a-black",
     "route": "/reviews/1990-05-18-sammy-davis-jr-s-early-career-will-be-remembered-with-affection-a-black/",
     "source_file": "1990.05.18.The_Globe_and_Mail.Sammy_Davis_Jr.S_Early_Career_Will_Be_Remembered_With_Affection_A_Blac.md",
-    "title": "'Sammy Davis Jr.''s Early Career Will Be Remembered With Affection: A Black",
+    "title": "'Sammy Davis Jr.'s Early Career Will Be Remembered With Affection: A Black",
     "date": "1990-05-18",
     "year": "1990",
     "publication": "The Globe and Mail",
@@ -58275,7 +58275,7 @@
       "George Dawson",
       "Graham Harley",
       "Irene Hogan",
-      "J.B. Priestley",
+      "J. B. Priestley",
       "Jack Medley",
       "John C. Dinning",
       "Mary Haney",
@@ -58297,7 +58297,7 @@
         "Mary Haney"
       ],
       "playwright": [
-        "J.B. Priestley"
+        "J. B. Priestley"
       ],
       "composer_lyricist": [],
       "musical_director": [],
@@ -58545,7 +58545,7 @@
     "canonical_file": "",
     "production_title": "Sheila's Day",
     "company": "Crossroads Theatre Co",
-    "venue": "Harbourfront Premiere Dance Theatre",
+    "venue": "Premiere Dance Theatre",
     "city": "Toronto",
     "coordinates": [
       "43.6387",
@@ -60165,7 +60165,7 @@
     "slug": "1990-12-22-recordings-performances-of-cole-porter-s-work-are-going-in-opposing-directions",
     "route": "/reviews/1990-12-22-recordings-performances-of-cole-porter-s-work-are-going-in-opposing-directions/",
     "source_file": "1990.12.22.The_Globe_and_Mail.RecordingsPerformances_Of_Cole_PorterS_Work_Are_Going_In_Opposing_Dire.md",
-    "title": "'Recordings: Performances Of Cole Porter''s Work Are Going In Opposing Directions:",
+    "title": "'Recordings: Performances Of Cole Porter's Work Are Going In Opposing Directions:",
     "date": "1990-12-22",
     "year": "1990",
     "publication": "The Globe and Mail",
@@ -63012,7 +63012,7 @@
     "slug": "1992-07-11-tribute-exudes-a-certain-sweetness-music-theatre-jackie-richardson-s-salute",
     "route": "/reviews/1992-07-11-tribute-exudes-a-certain-sweetness-music-theatre-jackie-richardson-s-salute/",
     "source_file": "1992.07.11.The_Globe_and_Mail.Tribute_Exudes_A_Certain_Sweetness_Music_TheatreJackie_RichardsonS_Sal.md",
-    "title": "'Tribute Exudes A Certain Sweetness: Music Theatre - Jackie Richardson''s Salute",
+    "title": "'Tribute Exudes A Certain Sweetness: Music Theatre - Jackie Richardson's Salute",
     "date": "1992-07-11",
     "year": "1992",
     "publication": "The Globe and Mail",
@@ -63032,8 +63032,8 @@
       "Alec Wilder",
       "Jackie Richardson",
       "Jimmy Lyon",
-      "Noel Coward",
       "Norman Amadio",
+      "Noël Coward",
       "Richard Ouzounian"
     ],
     "roles": {
@@ -63045,7 +63045,7 @@
       ],
       "playwright": [],
       "composer_lyricist": [
-        "Noel Coward",
+        "Noël Coward",
         "Alec Wilder",
         "Jimmy Lyon"
       ],
@@ -63244,7 +63244,7 @@
       "Christopher Newton",
       "David Schurmann",
       "Fiona Reid",
-      "Noel Coward",
+      "Noël Coward",
       "Robert Persichini",
       "Simon Bradbury",
       "Tony van Bridge",
@@ -63262,7 +63262,7 @@
         "Tony van Bridge"
       ],
       "playwright": [
-        "Noel Coward"
+        "Noël Coward"
       ],
       "composer_lyricist": [],
       "musical_director": [],
@@ -63727,7 +63727,7 @@
       "Hazel Desbarats",
       "Marti Maraden",
       "Nicu Branzea",
-      "Noel Coward",
+      "Noël Coward",
       "Richard Binsley",
       "Rosemary Dunsmore"
     ],
@@ -63743,7 +63743,7 @@
         "Nicu Branzea"
       ],
       "playwright": [
-        "Noel Coward"
+        "Noël Coward"
       ],
       "composer_lyricist": [],
       "musical_director": [],
@@ -64745,7 +64745,7 @@
       "Diane D'Aquila",
       "Jennifer Phipps",
       "Mary Haney",
-      "Noel Coward",
+      "Noël Coward",
       "Richard Farrell",
       "Sarah Orenstein",
       "Susan Cox"
@@ -64764,7 +64764,7 @@
         "Deborah Lambie"
       ],
       "playwright": [
-        "Noel Coward"
+        "Noël Coward"
       ],
       "composer_lyricist": [],
       "musical_director": [],
@@ -65529,9 +65529,9 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "Passion",
+    "production_title": "The Passion",
     "company": "",
-    "venue": "Plymouth Theater",
+    "venue": "Plymouth Theatre",
     "city": "New York",
     "coordinates": [],
     "people": [
@@ -66075,7 +66075,7 @@
       "Liam de Staic",
       "Lindsay Posner",
       "Matilde Ziegler",
-      "Noel Coward",
+      "Noël Coward",
       "Oscar Wilde",
       "Pat Kirkwood",
       "Paul Higgins",
@@ -66122,12 +66122,12 @@
         "Oscar Wilde",
         "Henrik Ibsen",
         "Pierre Corneille",
-        "Noel Coward",
+        "Noël Coward",
         "Cole Porter"
       ],
       "composer_lyricist": [
         "Peter Greenwell",
-        "Noel Coward",
+        "Noël Coward",
         "Cole Porter"
       ],
       "musical_director": [],
@@ -67220,7 +67220,7 @@
       "Lee MacDougall",
       "Pamela Gerrand",
       "Susan Benson",
-      "W.S. Gilbert"
+      "W. S. Gilbert"
     ],
     "roles": {
       "director": [
@@ -67239,11 +67239,11 @@
         "Karen K. Edissi"
       ],
       "playwright": [
-        "W.S. Gilbert",
+        "W. S. Gilbert",
         "Arthur Sullivan"
       ],
       "composer_lyricist": [
-        "W.S. Gilbert",
+        "W. S. Gilbert",
         "Arthur Sullivan"
       ],
       "musical_director": [],
@@ -68269,7 +68269,7 @@
     "slug": "1996-04-13-writer-looks-too-lightly-at-lerner-s-life-biography-the-lyricist-s-complexities",
     "route": "/reviews/1996-04-13-writer-looks-too-lightly-at-lerner-s-life-biography-the-lyricist-s-complexities/",
     "source_file": "1996.04.13.The_Globe_and_Mail.Writer_looks_too_lightly_at_Lerners_life_BIOGRAPHY_The_lyricists_complexities_require_more_exploration_than_this_ALAN_JAY_LERNER_A_Biography.md",
-    "title": "'Writer looks too lightly at Lerner''s life BIOGRAPHY / The lyricist''s complexities",
+    "title": "'Writer looks too lightly at Lerner's life BIOGRAPHY / The lyricist's complexities",
     "date": "1996-04-13",
     "year": "1996",
     "publication": "The Globe and Mail",
@@ -68809,14 +68809,14 @@
     "city": "",
     "coordinates": [],
     "people": [
-      "Noel Coward"
+      "Noël Coward"
     ],
     "roles": {
       "director": [],
       "actors": [],
       "playwright": [],
       "composer_lyricist": [
-        "Noel Coward"
+        "Noël Coward"
       ],
       "musical_director": [],
       "choreographer": [],
@@ -68961,7 +68961,7 @@
     "slug": "1996-07-08-theatre-review-a-midsummer-night-s-dream",
     "route": "/reviews/1996-07-08-theatre-review-a-midsummer-night-s-dream/",
     "source_file": "1996.07.08.The_Globe_and_Mail.Theatre_Review_A_Midsummer_NightS_Dream.md",
-    "title": "Theatre Review: A Midsummer Night''S Dream",
+    "title": "Theatre Review: A Midsummer Night's Dream",
     "date": "1996-07-08",
     "year": "1996",
     "publication": "The Globe and Mail",
@@ -69040,7 +69040,7 @@
     "slug": "1996-07-27-spectator-from-what-complex-well-does-shylock-s-vitality-spring",
     "route": "/reviews/1996-07-27-spectator-from-what-complex-well-does-shylock-s-vitality-spring/",
     "source_file": "1996.07.27.The_Globe_and_Mail.Spectator_From_What_Complex_Well_Does_ShylockS_Vitality_Spring.md",
-    "title": "Spectator: From What Complex Well Does Shylock''s Vitality Spring?",
+    "title": "Spectator: From What Complex Well Does Shylock's Vitality Spring?",
     "date": "1996-07-27",
     "year": "1996",
     "publication": "The Globe and Mail",
@@ -69720,7 +69720,7 @@
     "slug": "1996-12-14-megamusicals-cannot-live-by-song-alone-belting-it-out-toronto-s-two-new",
     "route": "/reviews/1996-12-14-megamusicals-cannot-live-by-song-alone-belting-it-out-toronto-s-two-new/",
     "source_file": "1996.12.14.The_Globe_and_Mail.Megamusicals_Cannot_Live_By_Song_Alone_Belting_It_Out_TorontoS_Two_New.md",
-    "title": "'Megamusicals Cannot Live By Song Alone: Belting It Out / Toronto''s Two New",
+    "title": "'Megamusicals Cannot Live By Song Alone: Belting It Out / Toronto's Two New",
     "date": "1996-12-14",
     "year": "1996",
     "publication": "The Globe and Mail",
@@ -69902,7 +69902,7 @@
       "Alan Bergman",
       "Alan Jay Lerner",
       "Burton Lane",
-      "E.Y. Harburg",
+      "E. Y. Harburg",
       "Frank Loesser",
       "George Gershwin",
       "Gerald Marks",
@@ -69917,7 +69917,7 @@
       "playwright": [],
       "composer_lyricist": [
         "Burton Lane",
-        "E.Y. Harburg",
+        "E. Y. Harburg",
         "Frank Loesser",
         "Ralph Freed",
         "Alan Jay Lerner",
@@ -70858,7 +70858,7 @@
     "slug": "1997-04-07-theatre-review-fool-s-paradise",
     "route": "/reviews/1997-04-07-theatre-review-fool-s-paradise/",
     "source_file": "1997.04.07.The_Globe_and_Mail.Theatre_Review_FoolS_Paradise.md",
-    "title": "Theatre Review: Fool''s Paradise",
+    "title": "Theatre Review: Fool's Paradise",
     "date": "1997-04-07",
     "year": "1997",
     "publication": "The Globe and Mail",
@@ -71262,7 +71262,7 @@
     "coordinates": [],
     "people": [
       "Andrea Martin",
-      "Andree De Shields",
+      "Andree de Shields",
       "Ann Reinking",
       "Bebe Neuwirth",
       "Bob Fosse",
@@ -71305,7 +71305,7 @@
         "Linda Eder",
         "Tonya Pinkins",
         "Cheryl Freeman",
-        "Andree De Shields",
+        "Andree de Shields",
         "Jim Dale",
         "Andrea Martin",
         "Bebe Neuwirth",
@@ -71922,7 +71922,7 @@
     "slug": "1997-11-22-davies-our-best-theatre-critic-too-when-robertson-davies-s-diaries-are-finally",
     "route": "/reviews/1997-11-22-davies-our-best-theatre-critic-too-when-robertson-davies-s-diaries-are-finally/",
     "source_file": "1997.11.22.The_Globe_and_Mail.Davies_our_best_theatre_critic_too_When_Robertson_Daviess_diaries_are_finally_published_we_will_have_a_stylish_invaluable_history_of_the_Canadian_stage_But_for_now_Happy.md",
-    "title": "'Davies our best theatre critic, too When Robertson Davies''s diaries are finally",
+    "title": "'Davies our best theatre critic, too When Robertson Davies's diaries are finally",
     "date": "1997-11-22",
     "year": "1997",
     "publication": "The Globe and Mail",
@@ -73520,7 +73520,7 @@
     "slug": "1999-02-08-sweet-home-chicago-for-chita-rivera-it-s-a-different-decade-and-a-different",
     "route": "/reviews/1999-02-08-sweet-home-chicago-for-chita-rivera-it-s-a-different-decade-and-a-different/",
     "source_file": "1999.02.08.National_Post.Sweet_Home_Chicago_For_Chita_Rivera_ItS_A_Different_Decade_And_A_Different_.md",
-    "title": "'Sweet Home, Chicago: For Chita Rivera, It''s A Different Decade And A Different",
+    "title": "'Sweet Home, Chicago: For Chita Rivera, It's A Different Decade And A Different",
     "date": "1999-02-08",
     "year": "1999",
     "publication": "National Post",
@@ -73736,7 +73736,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "",
     "canonical_file": "",
-    "production_title": "Henry IV Part One",
+    "production_title": "Henry IV, Part One",
     "company": "Royals and Rebels",
     "venue": "Annex Theatre",
     "city": "Toronto",
@@ -73870,7 +73870,7 @@
     "canonical_file": "",
     "production_title": "The Roar of the Greasepaint, the Smell of the Crowd",
     "company": "Reprise",
-    "venue": "Jane Mallet Theatre",
+    "venue": "Jane Mallett Theatre",
     "city": "Toronto",
     "coordinates": [
       "43.6474",
@@ -74083,7 +74083,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "",
     "canonical_file": "",
-    "production_title": "Stratford Festival Conservatory for Classical Theatre Training;",
+    "production_title": "Stratford Festival Conservatory for Classical Theatre Training",
     "company": "Stratford Festival; Soulpepper Theatre Company",
     "venue": "Stratford Festival",
     "city": "Stratford, Ontario",
@@ -75624,7 +75624,7 @@
       "Andrew Lloyd Webber",
       "Anthony Newley",
       "Lionel Bart",
-      "Noel Coward",
+      "Noël Coward",
       "Sandy Wilson"
     ],
     "roles": {
@@ -75636,7 +75636,7 @@
         "Anthony Newley",
         "Sandy Wilson",
         "Andrew Lloyd Webber",
-        "Noel Coward"
+        "Noël Coward"
       ],
       "musical_director": [],
       "choreographer": [],
@@ -75869,7 +75869,7 @@
     "slug": "1999-05-15-mr-newton-s-profession-as-artistic-director-christopher-newton-gave-the",
     "route": "/reviews/1999-05-15-mr-newton-s-profession-as-artistic-director-christopher-newton-gave-the/",
     "source_file": "1999.05.15.National_Post.Mr._NewtonS_Profession_As_Artistic_Director_Christopher_Newton_Gave_The_Sha.md",
-    "title": "'Mr. Newton''s Profession: As Artistic Director, Christopher Newton Gave The",
+    "title": "'Mr. Newton's Profession: As Artistic Director, Christopher Newton Gave The",
     "date": "1999-05-15",
     "year": "1999",
     "publication": "National Post",
@@ -75949,7 +75949,7 @@
       "Guy Bolton",
       "Howard Lindsay",
       "John Weidman",
-      "P.G. Wodehouse",
+      "P. G. Wodehouse",
       "Russel Crouse",
       "Scott Walker",
       "Timothy Crouse"
@@ -75965,7 +75965,7 @@
       ],
       "playwright": [
         "Guy Bolton",
-        "P.G. Wodehouse",
+        "P. G. Wodehouse",
         "Howard Lindsay",
         "Russel Crouse",
         "John Weidman",
@@ -78033,7 +78033,7 @@
       "Goldie Semple",
       "Kelli Fox",
       "Kevin Bundy",
-      "Noel Coward",
+      "Noël Coward",
       "Patricia Hamilton",
       "William Schmuck"
     ],
@@ -78052,7 +78052,7 @@
         "David Schurmann"
       ],
       "playwright": [
-        "Noel Coward"
+        "Noël Coward"
       ],
       "composer_lyricist": [],
       "musical_director": [],
@@ -80416,7 +80416,7 @@
     "canonical_file": "",
     "production_title": "Alien Creature: A Visitation From Gwendolyn Macewan",
     "company": "",
-    "venue": "Theatre Passe Muraille Backstage",
+    "venue": "Theatre Passe Muraille Backspace",
     "city": "Toronto",
     "coordinates": [
       "43.6486",
@@ -81318,7 +81318,7 @@
     "slug": "1999-12-20-clooney-the-queen-of-american-song-the-great-artist-s-autobiography-carries",
     "route": "/reviews/1999-12-20-clooney-the-queen-of-american-song-the-great-artist-s-autobiography-carries/",
     "source_file": "1999.12.20.National Post.Girl_Singer.md",
-    "title": "'Clooney -- The Queen Of American Song: The Great Artist''s Autobiography Carries",
+    "title": "'Clooney -- The Queen Of American Song: The Great Artist's Autobiography Carries",
     "date": "1999-12-20",
     "year": "1999",
     "publication": "National Post",
@@ -81624,7 +81624,7 @@
     "slug": "2000-01-12-the-play-s-the-film-one-of-cinema-s-oldest-genres-the-backstage-drama",
     "route": "/reviews/2000-01-12-the-play-s-the-film-one-of-cinema-s-oldest-genres-the-backstage-drama/",
     "source_file": "2000.01.12.National_Post.The_PlayS_The_Film_One_Of_CinemaS_Oldest_Genres_The_Backstage_Drama_Is_Enjo.md",
-    "title": "'The Play''s The Film: One Of Cinema''s Oldest Genres, The Backstage Drama,",
+    "title": "'The Play's The Film: One Of Cinema's Oldest Genres, The Backstage Drama,",
     "date": "2000-01-12",
     "year": "2000",
     "publication": "National Post",
@@ -84161,7 +84161,7 @@
     "slug": "2000-03-28-knows-what-she-s-got-joni-mitchell-makes-good-use-of-her-eroded-voice-on",
     "route": "/reviews/2000-03-28-knows-what-she-s-got-joni-mitchell-makes-good-use-of-her-eroded-voice-on/",
     "source_file": "2000.03.28.National_Post.Knows_What_SheS_Got_Joni_Mitchell_Makes_Good_Use_Of_Her_Eroded_Voice_On_An_.md",
-    "title": "'Knows What She''s Got: Joni Mitchell Makes Good Use Of Her Eroded Voice On",
+    "title": "'Knows What She's Got: Joni Mitchell Makes Good Use Of Her Eroded Voice On",
     "date": "2000-03-28",
     "year": "2000",
     "publication": "National Post",
@@ -84844,7 +84844,7 @@
     "canonical_file": "",
     "production_title": "The Mill on the Floss",
     "company": "Soulpepper Theatre Company",
-    "venue": "Premier Dance Theatre",
+    "venue": "Premiere Dance Theatre",
     "city": "Toronto",
     "coordinates": [
       "43.6385",
@@ -85245,7 +85245,7 @@
     "canonical_file": "",
     "production_title": "Nixon's Nixon",
     "company": "World Stage",
-    "venue": "Jane Mallet Theatre",
+    "venue": "Jane Mallett Theatre",
     "city": "Toronto",
     "coordinates": [
       "43.6487",
@@ -86436,7 +86436,7 @@
     "slug": "2000-05-22-a-song-in-their-hearts-tonight-s-season-finale-of-ally-mcbeal-ends-on-a",
     "route": "/reviews/2000-05-22-a-song-in-their-hearts-tonight-s-season-finale-of-ally-mcbeal-ends-on-a/",
     "source_file": "2000.05.22.National_Post.A_Song_In_Their_Hearts_TonightS_Season_Finale_Of_Ally_Mcbeal_Ends_On_A_High.md",
-    "title": "'A Song In Their Hearts: Tonight''s Season Finale Of Ally McBeal Ends On A",
+    "title": "'A Song In Their Hearts: Tonight's Season Finale Of Ally McBeal Ends On A",
     "date": "2000-05-22",
     "year": "2000",
     "publication": "National Post",
@@ -86961,7 +86961,7 @@
       "David Schurmann",
       "Goldie Semple",
       "Kelli Fox",
-      "Noel Coward",
+      "Noël Coward",
       "Patricia Hamilton"
     ],
     "roles": {
@@ -86976,7 +86976,7 @@
         "Kelli Fox"
       ],
       "playwright": [
-        "Noel Coward"
+        "Noël Coward"
       ],
       "composer_lyricist": [],
       "musical_director": [],
@@ -87029,7 +87029,7 @@
     "people": [
       "Brian Perchaluk",
       "Bruce Davies",
-      "J.B. Priestley",
+      "J. B. Priestley",
       "Jan Alexandra Smith",
       "Jane Perry",
       "Jenny L. Wright",
@@ -87054,7 +87054,7 @@
         "Bruce Davies"
       ],
       "playwright": [
-        "J.B. Priestley"
+        "J. B. Priestley"
       ],
       "composer_lyricist": [],
       "musical_director": [],
@@ -87319,7 +87319,7 @@
     "slug": "2000-06-03-swords-swords-swords-stratford-s-the-three-musketeers-is-breakneck",
     "route": "/reviews/2000-06-03-swords-swords-swords-stratford-s-the-three-musketeers-is-breakneck/",
     "source_file": "2000.06.03.National_Post.Swords_Swords_Swords_StratfordS_The_Three_Musketeers_Is_Breakneck_Leave-Not.md",
-    "title": "'Swords! Swords! Swords!: Stratford''''S The Three Musketeers Is Breakneck,",
+    "title": "'Swords! Swords! Swords!: Stratford''S The Three Musketeers Is Breakneck,",
     "date": "2000-06-03",
     "year": "2000",
     "publication": "National Post",
@@ -88656,7 +88656,7 @@
       "Mike Shara",
       "Neil Munro",
       "Nigel Williams",
-      "Noel Coward",
+      "Noël Coward",
       "Pamela Rabe",
       "Pete Treadwell",
       "Peter Millard",
@@ -88689,7 +88689,7 @@
       ],
       "playwright": [
         "George Bernard Shaw",
-        "Noel Coward",
+        "Noël Coward",
         "Nigel Williams",
         "William Golding"
       ],
@@ -89091,7 +89091,7 @@
       "Christina Gordon",
       "George Masswohl",
       "Theresa Tova",
-      "W.S. Gilbert"
+      "W. S. Gilbert"
     ],
     "roles": {
       "director": [
@@ -89106,10 +89106,10 @@
         "Theresa Tova"
       ],
       "playwright": [
-        "W.S. Gilbert"
+        "W. S. Gilbert"
       ],
       "composer_lyricist": [
-        "W.S. Gilbert",
+        "W. S. Gilbert",
         "Arthur Sullivan"
       ],
       "musical_director": [
@@ -89142,7 +89142,7 @@
     "slug": "2000-08-01-manilow-s-passing-fashion-three-minute-storyline-plays-itself-out-until",
     "route": "/reviews/2000-08-01-manilow-s-passing-fashion-three-minute-storyline-plays-itself-out-until/",
     "source_file": "2000.08.01.National_Post.ManilowS_Passing_Fashion_Three-Minute_Storyline_Plays_Itself_Out_Until_Crim.md",
-    "title": "'Manilow''S Passing Fashion: Three-Minute Storyline Plays Itself Out Until",
+    "title": "'Manilow's Passing Fashion: Three-Minute Storyline Plays Itself Out Until",
     "date": "2000-08-01",
     "year": "2000",
     "publication": "National Post",
@@ -89362,7 +89362,7 @@
     "slug": "2000-08-08-a-great-talent-a-modest-man-he-was-counted-among-the-finest-of-the-century-s",
     "route": "/reviews/2000-08-08-a-great-talent-a-modest-man-he-was-counted-among-the-finest-of-the-century-s/",
     "source_file": "2000.08.08.National_Post.A_Great_Talent_A_Modest_Man_He_Was_Counted_Among_The_Finest_Of_The_CenturyS.md",
-    "title": "'A Great Talent; A Modest Man: He Was Counted Among The Finest Of The Century''s",
+    "title": "'A Great Talent; A Modest Man: He Was Counted Among The Finest Of The Century's",
     "date": "2000-08-08",
     "year": "2000",
     "publication": "National Post",
@@ -89437,7 +89437,7 @@
       "Laszlo Marton",
       "Liisa Repo-Martell",
       "Matthew Edison",
-      "Moliere",
+      "Molière",
       "Raoul Bhaneja",
       "Robert Persichini",
       "William Webster"
@@ -89457,7 +89457,7 @@
         "William Webster"
       ],
       "playwright": [
-        "Moliere"
+        "Molière"
       ],
       "composer_lyricist": [],
       "musical_director": [],
@@ -89571,7 +89571,7 @@
       "James Blendick",
       "Keith Dinicol",
       "Lucy Peacock",
-      "Moliere",
+      "Molière",
       "Richard Monette",
       "Seana McKenna",
       "Tanya Moiseiwitsch"
@@ -89588,7 +89588,7 @@
         "Keith Dinicol"
       ],
       "playwright": [
-        "Moliere"
+        "Molière"
       ],
       "composer_lyricist": [],
       "musical_director": [],
@@ -89961,7 +89961,7 @@
       "Jean Gascon",
       "John Hirsch",
       "Michael Langham",
-      "Moliere",
+      "Molière",
       "Richard Monette",
       "Tanya Moiseiwitsch",
       "Tyrone Guthrie",
@@ -89980,7 +89980,7 @@
         "Brian Bedford"
       ],
       "playwright": [
-        "Moliere",
+        "Molière",
         "William Shakespeare",
         "Ben Jonson"
       ],
@@ -91976,7 +91976,7 @@
     "canonical_file": "",
     "production_title": "Jitters",
     "company": "",
-    "venue": "Toronto Centre for the Performing Arts Studio Theatre",
+    "venue": "Toronto Centre for the Arts Studio Theatre",
     "city": "Toronto",
     "coordinates": [
       "43.7615",
@@ -93142,7 +93142,7 @@
     ],
     "people": [
       "Glen Kotyk",
-      "J.M. Barrie",
+      "J. M. Barrie",
       "Jayne Lewis",
       "Ross Petty",
       "Sharmaine Ryan",
@@ -93159,7 +93159,7 @@
         "Jayne Lewis"
       ],
       "playwright": [
-        "J.M. Barrie"
+        "J. M. Barrie"
       ],
       "composer_lyricist": [],
       "musical_director": [],
@@ -93370,7 +93370,7 @@
     "slug": "2000-12-27-it-s-not-easy-being-mean-theatre-people-give-newspapers-power-then-complain",
     "route": "/reviews/2000-12-27-it-s-not-easy-being-mean-theatre-people-give-newspapers-power-then-complain/",
     "source_file": "2000.12.27.National_Post.ItS_Not_Easy_Being_Mean_Theatre_People_Give_Newspapers_Power_Then_Complain_.md",
-    "title": "'It''S Not Easy Being Mean: Theatre People Give Newspapers Power, Then Complain",
+    "title": "'It's Not Easy Being Mean: Theatre People Give Newspapers Power, Then Complain",
     "date": "2000-12-27",
     "year": "2000",
     "publication": "National Post",
@@ -94605,7 +94605,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "",
     "canonical_file": "",
-    "production_title": "Ken Campbell''s History Of Comedy (Part One: Ventriloquism)",
+    "production_title": "Ken Campbell's History Of Comedy (Part One: Ventriloquism)",
     "company": "",
     "venue": "Theatre Passe Muraille Backspace",
     "city": "Toronto",
@@ -96739,7 +96739,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "",
     "canonical_file": "",
-    "production_title": "Ghost Train",
+    "production_title": "The Ghost Train",
     "company": "Young People's Theatre",
     "venue": "Young People's Theatre",
     "city": "Toronto",
@@ -97798,7 +97798,7 @@
       "Christopher Newton",
       "Dylan Trowbridge",
       "Fiona Byrne",
-      "J.M. Barrie",
+      "J. M. Barrie",
       "Jim Mezon",
       "Kevin Lamotte",
       "Neil Barclay",
@@ -97816,7 +97816,7 @@
         "Neil Barclay"
       ],
       "playwright": [
-        "J.M. Barrie"
+        "J. M. Barrie"
       ],
       "composer_lyricist": [],
       "musical_director": [],
@@ -97960,7 +97960,7 @@
       "Jane Greenwood",
       "John Lee Beatty",
       "Kim Horsman",
-      "Noel Coward",
+      "Noël Coward",
       "Sarah Dodd",
       "Seana McKenna",
       "Wayne Best"
@@ -97977,7 +97977,7 @@
         "Kim Horsman"
       ],
       "playwright": [
-        "Noel Coward"
+        "Noël Coward"
       ],
       "composer_lyricist": [],
       "musical_director": [],
@@ -98168,7 +98168,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "",
     "canonical_file": "",
-    "production_title": "Henry IV Part One; Henry V",
+    "production_title": "Henry IV, Part One; Henry V",
     "company": "Stratford Festival",
     "venue": "Tom Patterson Theatre; Avon Theatre",
     "city": "Stratford, Ontario",
@@ -98669,12 +98669,12 @@
       "Matt Loehr",
       "Ralph Burns",
       "Reva Rice",
-      "Richard Maltby Jr",
+      "Richard Maltby Jr.",
       "Santo Loquasto"
     ],
     "roles": {
       "director": [
-        "Richard Maltby Jr"
+        "Richard Maltby Jr."
       ],
       "actors": [
         "Reva Rice",
@@ -99030,7 +99030,7 @@
       "Michael Hanraham",
       "Nancy Palk",
       "Neil Foster",
-      "Noel Coward",
+      "Noël Coward",
       "Patricia Fagan",
       "Rick Miller"
     ],
@@ -99050,7 +99050,7 @@
         "Neil Foster"
       ],
       "playwright": [
-        "Noel Coward"
+        "Noël Coward"
       ],
       "composer_lyricist": [],
       "musical_director": [],
@@ -99164,7 +99164,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "",
     "canonical_file": "",
-    "production_title": "Fanny''s First Play",
+    "production_title": "Fanny's First Play",
     "company": "Shaw Festival",
     "venue": "Court House Theatre",
     "city": "Niagara-on-the-Lake",
@@ -99353,7 +99353,7 @@
       "Jillian Cook",
       "Judith Bowden",
       "Karen Wood",
-      "Noel Coward",
+      "Noël Coward",
       "Patrick R. Brown",
       "Patty Jamieson",
       "William Orlowski"
@@ -99371,7 +99371,7 @@
         "Blythe Wilson"
       ],
       "playwright": [
-        "Noel Coward"
+        "Noël Coward"
       ],
       "composer_lyricist": [],
       "musical_director": [],
@@ -99430,7 +99430,7 @@
       "Hilary Corbett",
       "Laurence Follows",
       "Megan Follows",
-      "Noel Coward",
+      "Noël Coward",
       "Robin Craig",
       "Samantha Follows",
       "Sean O'Bryan",
@@ -99453,7 +99453,7 @@
         "Robin Craig"
       ],
       "playwright": [
-        "Noel Coward"
+        "Noël Coward"
       ],
       "composer_lyricist": [],
       "musical_director": [],
@@ -101848,7 +101848,7 @@
     "slug": "2001-11-12-i-am-not-canadian-but-i-won-t-be-accused-of-being-anti-canadian",
     "route": "/reviews/2001-11-12-i-am-not-canadian-but-i-won-t-be-accused-of-being-anti-canadian/",
     "source_file": "2001.11.12.National_Post.I_Am_Not_Canadian_But_I_WonT_Be_Accused_Of_Being_Anti-Canadian_National_Edi.md",
-    "title": "I Am Not Canadian: But I Won''T Be Accused Of Being Anti-Canadian",
+    "title": "I Am Not Canadian: But I Won't Be Accused Of Being Anti-Canadian",
     "date": "2001-11-12",
     "year": "2001",
     "publication": "National Post",
@@ -102516,7 +102516,7 @@
     "slug": "2002-01-02-a-well-deserved-ovation-for-01-season-the-giant-musicals-were-what-you-d",
     "route": "/reviews/2002-01-02-a-well-deserved-ovation-for-01-season-the-giant-musicals-were-what-you-d/",
     "source_file": "2002.01.02.National_Post.A_Well-Deserved_Ovation_For_01_Season_The_Giant_Musicals_Were_What_YouD_Exp.md",
-    "title": "'A Well-Deserved Ovation For 01 Season: The Giant Musicals Were What You''d",
+    "title": "'A Well-Deserved Ovation For 01 Season: The Giant Musicals Were What You'd",
     "date": "2002-01-02",
     "year": "2002",
     "publication": "National Post",
@@ -104399,7 +104399,7 @@
     "canonical_file": "",
     "production_title": "Medea; Inertia [Phase Two]",
     "company": "Theatre Babel",
-    "venue": "Premier Dance Theatre; Theatre Centre",
+    "venue": "Premiere Dance Theatre; Theatre Centre",
     "city": "Toronto",
     "coordinates": [],
     "people": [
@@ -106100,7 +106100,7 @@
     "slug": "2002-06-05-all-s-well-that-starts-well-the-stratford-festival-began-in-1953-under-the",
     "route": "/reviews/2002-06-05-all-s-well-that-starts-well-the-stratford-festival-began-in-1953-under-the/",
     "source_file": "2002.06.05.Cushman_Collected.All_s_Well_That_Starts_Well_The_Stratford_Festival_Began_in_1953_Under_the_Stewardship_of_Tyron_Guthrie_He_Proved_to_be_the_Right_Man_in_the_Right_Place_for_Canada_s_Nascent_Theatre_Scene.md",
-    "title": "'All''s Well That Starts Well: The Stratford Festival Began in 1953 Under the",
+    "title": "'All's Well That Starts Well: The Stratford Festival Began in 1953 Under the",
     "date": "2002-06-05",
     "year": "2002",
     "publication": "National Post",
@@ -106184,7 +106184,7 @@
     "slug": "2002-06-05-all-s-well-that-starts-well-stratford-festival-began-in-1953-under-the",
     "route": "/reviews/2002-06-05-all-s-well-that-starts-well-stratford-festival-began-in-1953-under-the/",
     "source_file": "2002.06.05.National_Post.AllS_Well_That_Starts_Well_The_Stratford_Festival_Began_In_1953_Under_The_S.md",
-    "title": "'All''s Well That Starts Well: Stratford Festival Began In 1953 Under The",
+    "title": "'All's Well That Starts Well: Stratford Festival Began In 1953 Under The",
     "date": "2002-06-05",
     "year": "2002",
     "publication": "National Post",
@@ -106687,7 +106687,7 @@
     "slug": "2002-06-21-everyone-s-a-winner-at-this-year-s-doras-a-record-number-of-ties-means",
     "route": "/reviews/2002-06-21-everyone-s-a-winner-at-this-year-s-doras-a-record-number-of-ties-means/",
     "source_file": "2002.06.21.National_Post.EveryoneS_A_Winner_At_This_YearS_Doras_A_Record_Number_Of_Ties_Means_A_Lot_.md",
-    "title": "'Everyone''s A Winner: At This Year''s Doras, A Record Number Of Ties Means",
+    "title": "'Everyone's A Winner: At This Year's Doras, A Record Number Of Ties Means",
     "date": "2002-06-21",
     "year": "2002",
     "publication": "National Post",
@@ -106920,7 +106920,7 @@
     "slug": "2002-06-29-a-man-of-the-theatre-findley-as-playwright-author-s-final-play-to-be-presented",
     "route": "/reviews/2002-06-29-a-man-of-the-theatre-findley-as-playwright-author-s-final-play-to-be-presented/",
     "source_file": "2002.06.29.National_Post.A_Man_Of_The_Theatre_Findley_As_Playwright_AuthorS_Final_Play_To_Be_Present.md",
-    "title": "'A Man Of The Theatre: Findley As Playwright: Author''s Final Play To Be Presented",
+    "title": "'A Man Of The Theatre: Findley As Playwright: Author's Final Play To Be Presented",
     "date": "2002-06-29",
     "year": "2002",
     "publication": "National Post",
@@ -108413,7 +108413,7 @@
       "Mary Haney",
       "Michael Ball",
       "Mike Shara",
-      "Noel Coward",
+      "Noël Coward",
       "Severn Thompson",
       "William Schmuck"
     ],
@@ -108433,7 +108433,7 @@
         "Mary Haney"
       ],
       "playwright": [
-        "Noel Coward"
+        "Noël Coward"
       ],
       "composer_lyricist": [],
       "musical_director": [],
@@ -108487,7 +108487,7 @@
     ],
     "people": [
       "Donna Belleville",
-      "J.M. Barrie",
+      "J. M. Barrie",
       "Jennifer Phipps",
       "Maria Vacratsis",
       "Pete Treadwell",
@@ -108506,7 +108506,7 @@
         "Donna Belleville"
       ],
       "playwright": [
-        "J.M. Barrie"
+        "J. M. Barrie"
       ],
       "composer_lyricist": [],
       "musical_director": [],
@@ -109077,7 +109077,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "",
     "canonical_file": "",
-    "production_title": "Frankie And Johnny In The Clair De Lune",
+    "production_title": "Frankie & Johnny in the Clair-de-Lune",
     "company": "",
     "venue": "Belasco Theatre",
     "city": "New York",
@@ -113101,7 +113101,7 @@
     "canonical_file": "",
     "production_title": "George Evans",
     "company": "",
-    "venue": "Top of the Senator",
+    "venue": "Top O' the Senator",
     "city": "Toronto",
     "coordinates": [
       "43.6552",
@@ -113449,7 +113449,7 @@
     "canonical_file": "",
     "production_title": "Stormy Weather: The Music Of Harold Arlen",
     "company": "CBC",
-    "venue": "CBC-TV",
+    "venue": "CBC Television",
     "city": "Toronto",
     "coordinates": [],
     "people": [
@@ -115931,7 +115931,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "",
     "canonical_file": "",
-    "production_title": "On The Twentieth Century",
+    "production_title": "On the Twentieth Century",
     "company": "Shaw Festival",
     "venue": "Royal George Theatre",
     "city": "Niagara-on-the-Lake",
@@ -117418,7 +117418,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "",
     "canonical_file": "",
-    "production_title": "The Plough And The Stars",
+    "production_title": "The Plough and the Stars",
     "company": "Shaw Festival",
     "venue": "Court House Theatre",
     "city": "Niagara-on-the-Lake",
@@ -118032,7 +118032,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "body_restored_from_source",
     "canonical_file": "",
-    "production_title": "Troilus And Cressida",
+    "production_title": "Troilus and Cressida",
     "company": "Stratford Festival",
     "venue": "Tom Patterson Theatre",
     "city": "Stratford, Ontario",
@@ -120056,7 +120056,7 @@
     "slug": "2003-12-01-but-baby-it-s-cold-outside-trip-to-the-antarctic-no-worse-than-a-brisk",
     "route": "/reviews/2003-12-01-but-baby-it-s-cold-outside-trip-to-the-antarctic-no-worse-than-a-brisk/",
     "source_file": "2003.12.01.National_Post.But_Baby_ItS_Cold_Outside_Trip_To_The_Antarctic_No_Worse_Than_A_Brisk_Day_I.md",
-    "title": "'But Baby, It''s Cold Outside: Trip To The Antarctic No Worse Than A Brisk",
+    "title": "'But Baby, It's Cold Outside: Trip To The Antarctic No Worse Than A Brisk",
     "date": "2003-12-01",
     "year": "2003",
     "publication": "National Post",
@@ -120135,7 +120135,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "",
     "canonical_file": "",
-    "production_title": "Slings and Arrows",
+    "production_title": "Slings & Arrows",
     "company": "",
     "venue": "",
     "city": "",
@@ -120545,7 +120545,7 @@
     "slug": "2004-01-02-dramaturgical-resolutions-look-both-ways-but-especially-forward-to-2004-s",
     "route": "/reviews/2004-01-02-dramaturgical-resolutions-look-both-ways-but-especially-forward-to-2004-s/",
     "source_file": "2004.01.02.National_Post.Dramaturgical_Resolutions_Look_Both_Ways_But_Especially_Forward_To_2004S_Th.md",
-    "title": "'Dramaturgical Resolutions: Look Both Ways, But Especially Forward To 2004''s",
+    "title": "'Dramaturgical Resolutions: Look Both Ways, But Especially Forward To 2004's",
     "date": "2004-01-02",
     "year": "2004",
     "publication": "National Post",
@@ -121102,7 +121102,7 @@
     "canonical_file": "",
     "production_title": "Ray Jessel",
     "company": "",
-    "venue": "Top of the Senator",
+    "venue": "Top O' the Senator",
     "city": "Toronto",
     "coordinates": [],
     "people": [
@@ -121361,7 +121361,7 @@
     "slug": "2004-02-02-everything-going-for-it-except-god-royal-shakespeare-company-has-made",
     "route": "/reviews/2004-02-02-everything-going-for-it-except-god-royal-shakespeare-company-has-made/",
     "source_file": "2004.02.02.Cushman_Collected.Everything_Going_for_It_Except_God_Royal_Shakespeare_Company_Has_Made_an_Indelible_Mark.md",
-    "title": "'''Everything Going for It Except God'': Royal Shakespeare Company Has Made",
+    "title": "''Everything Going for It Except God': Royal Shakespeare Company Has Made",
     "date": "2004-02-02",
     "year": "2004",
     "publication": "National Post",
@@ -121502,7 +121502,7 @@
     "slug": "2004-02-04-old-mind-and-young-soul-the-hamlet-we-ve-been-waiting-for",
     "route": "/reviews/2004-02-04-old-mind-and-young-soul-the-hamlet-we-ve-been-waiting-for/",
     "source_file": "2004.02.04.National_Post.Old_Mind_And_Young_Soul_The_Hamlet_WeVe_Been_Waiting_For_National_Edition.md",
-    "title": "Old Mind And Young Soul: The Hamlet We''ve Been Waiting For",
+    "title": "Old Mind And Young Soul: The Hamlet We've Been Waiting For",
     "date": "2004-02-04",
     "year": "2004",
     "publication": "National Post",
@@ -124475,7 +124475,7 @@
     "slug": "2004-05-15-the-producers-if-you-ve-got-it-flaunt-it",
     "route": "/reviews/2004-05-15-the-producers-if-you-ve-got-it-flaunt-it/",
     "source_file": "2004.05.15.National_Post.The_Producers_If_YouVe_Got_It_Flaunt_It_Toronto_Edition.md",
-    "title": "The Producers: ''If You''ve Got It, Flaunt It''",
+    "title": "The Producers: 'If You've Got It, Flaunt It'",
     "date": "2004-05-15",
     "year": "2004",
     "publication": "National Post",
@@ -126384,7 +126384,7 @@
       "Guy Bolton",
       "Howard Lindsay",
       "John Weidman",
-      "P.G. Wodehouse",
+      "P. G. Wodehouse",
       "Patrick Clark",
       "Russel Crouse",
       "Timothy Crouse"
@@ -126395,7 +126395,7 @@
       ],
       "actors": [],
       "playwright": [
-        "P.G. Wodehouse",
+        "P. G. Wodehouse",
         "Guy Bolton",
         "Howard Lindsay",
         "Russel Crouse",
@@ -130119,7 +130119,7 @@
       "Cole Porter",
       "Cynthia Dale",
       "Guy Bolton",
-      "P.G. Wodehouse"
+      "P. G. Wodehouse"
     ],
     "roles": {
       "director": [],
@@ -130128,7 +130128,7 @@
       ],
       "playwright": [
         "Guy Bolton",
-        "P.G. Wodehouse"
+        "P. G. Wodehouse"
       ],
       "composer_lyricist": [
         "Cole Porter"
@@ -132315,7 +132315,7 @@
     "slug": "2004-10-04-let-s-hear-it-from-the-boys-compilation-showcases-canadian-crooners",
     "route": "/reviews/2004-10-04-let-s-hear-it-from-the-boys-compilation-showcases-canadian-crooners/",
     "source_file": "2004.10.04.National_Post.LetS_Hear_It_From_The_Boys_Compilation_Showcases_Canadian_Crooners_Toronto_.md",
-    "title": "Let''s Hear It From The Boys: Compilation Showcases Canadian Crooners",
+    "title": "Let's Hear It From The Boys: Compilation Showcases Canadian Crooners",
     "date": "2004-10-04",
     "year": "2004",
     "publication": "National Post",
@@ -133099,7 +133099,7 @@
     "slug": "2004-10-27-documentary-spans-the-stages-pbs-s-broadway-offers-a-worthy-crash-course",
     "route": "/reviews/2004-10-27-documentary-spans-the-stages-pbs-s-broadway-offers-a-worthy-crash-course/",
     "source_file": "2004.10.27.National_Post.Documentary_Spans_The_Stages_PbsS_Broadway_Offers_A_Worthy_Crash_Course_In_.md",
-    "title": "'Documentary Spans The Stages: PBS''s Broadway Offers A Worthy Crash Course",
+    "title": "'Documentary Spans The Stages: PBS's Broadway Offers A Worthy Crash Course",
     "date": "2004-10-27",
     "year": "2004",
     "publication": "National Post",
@@ -133289,7 +133289,7 @@
     ],
     "people": [
       "Charles Dickens",
-      "D.H. Lawrence",
+      "D. H. Lawrence",
       "Edith Wharton",
       "Gene Franklin Smith",
       "Henry James",
@@ -133304,7 +133304,7 @@
         "Gene Franklin Smith",
         "Charles Dickens",
         "Henry James",
-        "D.H. Lawrence",
+        "D. H. Lawrence",
         "Edith Wharton"
       ],
       "composer_lyricist": [],
@@ -134666,7 +134666,7 @@
     "slug": "2004-12-13-the-bard-s-not-so-holiday-play-this-winter-s-tale-is-a-seasonal-offering",
     "route": "/reviews/2004-12-13-the-bard-s-not-so-holiday-play-this-winter-s-tale-is-a-seasonal-offering/",
     "source_file": "2004.12.13.National Post.The_Winters_Tale.md",
-    "title": "'The Bard''s Not-So-Holiday Play: This Winter''s Tale Is A Seasonal Offering",
+    "title": "'The Bard's Not-So-Holiday Play: This Winter's Tale Is A Seasonal Offering",
     "date": "2004-12-13",
     "year": "2004",
     "publication": "National Post",
@@ -134922,7 +134922,7 @@
     "slug": "2004-12-20-broadway-s-last-real-jazzman-musical-composer-second-only-to-stephen-sondheim",
     "route": "/reviews/2004-12-20-broadway-s-last-real-jazzman-musical-composer-second-only-to-stephen-sondheim/",
     "source_file": "2004.12.20.National_Post.BroadwayS_Last_Real_Jazzman_Musical_Composer_Second_Only_To_Stephen_Sondhei.md",
-    "title": "Broadway''s Last Real Jazzman: Musical Composer Second Only To Stephen Sondheim",
+    "title": "Broadway's Last Real Jazzman: Musical Composer Second Only To Stephen Sondheim",
     "date": "2004-12-20",
     "year": "2004",
     "publication": "National Post",
@@ -135246,7 +135246,7 @@
     "slug": "2005-01-10-one-fine-day-canadian-writer-s-trout-stanley-stands-out-from-the-crowd",
     "route": "/reviews/2005-01-10-one-fine-day-canadian-writer-s-trout-stanley-stands-out-from-the-crowd/",
     "source_file": "2005.01.10.National_Post.One_Fine_Dey_Canadian_WriterS_Trout_Stanley_Stands_Out_From_The_Crowd_Natio.md",
-    "title": "One Fine Day: Canadian Writer''s Trout Stanley Stands Out From The Crowd",
+    "title": "One Fine Day: Canadian Writer's Trout Stanley Stands Out From The Crowd",
     "date": "2005-01-10",
     "year": "2005",
     "publication": "National Post",
@@ -136195,7 +136195,7 @@
     "slug": "2005-02-05-making-sense-of-the-merchant-radford-s-film-goes-beyond-shakespeare",
     "route": "/reviews/2005-02-05-making-sense-of-the-merchant-radford-s-film-goes-beyond-shakespeare/",
     "source_file": "2005.02.05.National_Post.Making_Sense_Of_The_Merchant_RadfordS_Film_Goes_Beyond_Shakespeare_Toronto_.md",
-    "title": "Making Sense Of The Merchant: Radford''s Film Goes Beyond Shakespeare",
+    "title": "Making Sense Of The Merchant: Radford's Film Goes Beyond Shakespeare",
     "date": "2005-02-05",
     "year": "2005",
     "publication": "National Post",
@@ -137101,7 +137101,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "",
     "canonical_file": "",
-    "production_title": "Half Life; A Suicide-Site Guide to the City",
+    "production_title": "Half-Life; A Suicide-Site Guide to the City",
     "company": "Tarragon Theatre; Buddies in Bad Times Theatre",
     "venue": "Tarragon Theatre; Buddies in Bad Times Theatre",
     "city": "Toronto",
@@ -137284,7 +137284,7 @@
     "slug": "2005-03-19-writerly-muscle-in-my-mother-s-feet-fine-acting-directing-can-t-overcome",
     "route": "/reviews/2005-03-19-writerly-muscle-in-my-mother-s-feet-fine-acting-directing-can-t-overcome/",
     "source_file": "2005.03.19.National_Post.Writerly_Muscle_In_My_MotherS_Feet_Fine_Acting_Directing_CanT_Overcome_Narr.md",
-    "title": "'Writerly Muscle In My Mother''s Feet: Fine Acting, Directing Can''t Overcome",
+    "title": "'Writerly Muscle In My Mother's Feet: Fine Acting, Directing Can't Overcome",
     "date": "2005-03-19",
     "year": "2005",
     "publication": "National Post",
@@ -137480,7 +137480,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "",
     "canonical_file": "",
-    "production_title": "Half Life",
+    "production_title": "Half-Life",
     "company": "Tarragon Theatre",
     "venue": "Tarragon Theatre",
     "city": "Toronto",
@@ -137922,7 +137922,7 @@
     "slug": "2005-04-16-nightclub-acts-to-a-higher-power-aint-misbehavin-a-welcome-chance-to-hear",
     "route": "/reviews/2005-04-16-nightclub-acts-to-a-higher-power-aint-misbehavin-a-welcome-chance-to-hear/",
     "source_file": "2005.04.16.National_Post.Nightclub_Acts_To_A_Higher_Power_AinT_Misbehavin_A_Welcome_Chance_To_Hear_R.md",
-    "title": "'Nightclub Acts To A Higher Power: AinT Misbehavin'' A Welcome Chance To Hear",
+    "title": "'Nightclub Acts To A Higher Power: AinT Misbehavin' A Welcome Chance To Hear",
     "date": "2005-04-16",
     "year": "2005",
     "publication": "National Post",
@@ -138123,7 +138123,7 @@
     "slug": "2005-04-23-seven-days-of-quirky-despair-worthy-laughs-in-frechette-s-play-despite-forced",
     "route": "/reviews/2005-04-23-seven-days-of-quirky-despair-worthy-laughs-in-frechette-s-play-despite-forced/",
     "source_file": "2005.04.23.National_Post.Seven_Days_Of_Quirky_Despair_Worthy_Laughs_In_FrechetteS_Play_Despite_Force.md",
-    "title": "'Seven Days Of Quirky Despair: Worthy Laughs In Frechette''s Play Despite Forced",
+    "title": "'Seven Days Of Quirky Despair: Worthy Laughs In Frechette's Play Despite Forced",
     "date": "2005-04-23",
     "year": "2005",
     "publication": "National Post",
@@ -138445,7 +138445,7 @@
       "Laurie Anderson",
       "Marie-Helene Fontaine",
       "Mark Jenkins",
-      "Moliere",
+      "Molière",
       "Paul Essiembre",
       "Sarah Balleux",
       "Tim Crouch"
@@ -138468,7 +138468,7 @@
         "Tim Crouch",
         "Joanna Murray-Smith",
         "Mark Jenkins",
-        "Moliere"
+        "Molière"
       ],
       "composer_lyricist": [],
       "musical_director": [],
@@ -139917,7 +139917,7 @@
       "Douglas Beattie",
       "Joyce Campion",
       "Lucy Peacock",
-      "Noel Coward",
+      "Noël Coward",
       "Rod Beattie",
       "Seana McKenna",
       "Susan Benson"
@@ -139935,7 +139935,7 @@
         "Seana McKenna"
       ],
       "playwright": [
-        "Noel Coward",
+        "Noël Coward",
         "Dan Needles"
       ],
       "composer_lyricist": [],
@@ -140181,7 +140181,7 @@
     "slug": "2005-06-18-therapy-s-the-thing-hard-questions-mushy-answers-in-metatheatrical-play",
     "route": "/reviews/2005-06-18-therapy-s-the-thing-hard-questions-mushy-answers-in-metatheatrical-play/",
     "source_file": "2005.06.18.National_Post.TherapyS_The_Thing_Hard_Questions_Mushy_Answers_In_Metatheatrical_Play_Toro.md",
-    "title": "Therapy''s The Thing: Hard Questions, Mushy Answers In Metatheatrical Play",
+    "title": "Therapy's The Thing: Hard Questions, Mushy Answers In Metatheatrical Play",
     "date": "2005-06-18",
     "year": "2005",
     "publication": "National Post",
@@ -140485,7 +140485,7 @@
     "slug": "2005-07-02-the-musical-s-decline-greatly-exaggerated-angry-author-still-finds-a-lot",
     "route": "/reviews/2005-07-02-the-musical-s-decline-greatly-exaggerated-angry-author-still-finds-a-lot/",
     "source_file": "2005.07.02.National_Post.The_MusicalS_Decline_Greatly_Exaggerated_Angry_Author_Still_Finds_A_Lot_To_.md",
-    "title": "'The Musical''s Decline Greatly Exaggerated: Angry Author Still Finds A Lot",
+    "title": "'The Musical's Decline Greatly Exaggerated: Angry Author Still Finds A Lot",
     "date": "2005-07-02",
     "year": "2005",
     "publication": "National Post",
@@ -141329,7 +141329,7 @@
     "slug": "2005-08-06-this-merchant-is-an-easy-sell-despite-shylock-s-surprising-sex-change",
     "route": "/reviews/2005-08-06-this-merchant-is-an-easy-sell-despite-shylock-s-surprising-sex-change/",
     "source_file": "2005.08.06.Cushman_Collected.This_Merchant_is_an_Easy_Sell_Despite_Shylock_s_Surprising_Sex_Change.md",
-    "title": "This Merchant is an Easy Sell: Despite Shylock''s Surprising Sex Change",
+    "title": "This Merchant is an Easy Sell: Despite Shylock's Surprising Sex Change",
     "date": "2005-08-06",
     "year": "2005",
     "publication": "National Post",
@@ -141815,7 +141815,7 @@
     "slug": "2005-08-26-defile-it-under-r-for-raunchy-national-edition",
     "route": "/reviews/2005-08-26-defile-it-under-r-for-raunchy-national-edition/",
     "source_file": "2005.08.26.National_Post.Defile_It_Under_R_For_Raunchy_National_Edition.md",
-    "title": "Defile it under ''R'' for raunchy: [National Edition]",
+    "title": "Defile it under 'R' for raunchy: [National Edition]",
     "date": "2005-08-26",
     "year": "2005",
     "publication": "National Post",
@@ -141871,7 +141871,7 @@
     "slug": "2005-08-27-fresh-prince-of-soulpepper-schultz-plumbs-hamlet-s-depths",
     "route": "/reviews/2005-08-27-fresh-prince-of-soulpepper-schultz-plumbs-hamlet-s-depths/",
     "source_file": "2005.08.27.National_Post.Fresh_Prince_Of_Soulpepper_Schultz_Plumbs_HamletS_Depths_Toronto_Edition.md",
-    "title": "Fresh Prince Of Soulpepper: Schultz Plumbs Hamlet''s Depths",
+    "title": "Fresh Prince Of Soulpepper: Schultz Plumbs Hamlet's Depths",
     "date": "2005-08-27",
     "year": "2005",
     "publication": "National Post",
@@ -141884,7 +141884,7 @@
     "canonical_file": "",
     "production_title": "Hamlet",
     "company": "Soulpepper Theatre Company",
-    "venue": "Premier Dance Theatre",
+    "venue": "Premiere Dance Theatre",
     "city": "Toronto",
     "coordinates": [
       "43.6385",
@@ -142452,7 +142452,7 @@
     "slug": "2005-09-24-soulpepper-s-cryptic-triptych-steinbeck-s-characters-dwell-in-solitude",
     "route": "/reviews/2005-09-24-soulpepper-s-cryptic-triptych-steinbeck-s-characters-dwell-in-solitude/",
     "source_file": "2005.09.24.National_Post.SoulpepperS_Cryptic_Triptych_SteinbeckS_Characters_Dwell_In_Solitude_And_Is.md",
-    "title": "'Soulpepper''s Cryptic Triptych: Steinbeck''s Characters Dwell In Solitude",
+    "title": "'Soulpepper's Cryptic Triptych: Steinbeck's Characters Dwell In Solitude",
     "date": "2005-09-24",
     "year": "2005",
     "publication": "National Post",
@@ -142874,7 +142874,7 @@
     "slug": "2005-10-15-tales-from-the-hood-powerful-urban-double-bills",
     "route": "/reviews/2005-10-15-tales-from-the-hood-powerful-urban-double-bills/",
     "source_file": "2005.10.15.National_Post.Tales_From_The_Hood_Powerful_Urban_Double_Bills_Toronto_Edition.md",
-    "title": "Tales From The ''Hood: Powerful Urban Double Bills",
+    "title": "Tales From The 'Hood: Powerful Urban Double Bills",
     "date": "2005-10-15",
     "year": "2005",
     "publication": "National Post",
@@ -143263,7 +143263,7 @@
     "slug": "2005-11-05-dame-s-vengeance-not-so-sweet-material-lacks-richness-of-old-days",
     "route": "/reviews/2005-11-05-dame-s-vengeance-not-so-sweet-material-lacks-richness-of-old-days/",
     "source_file": "2005.11.05.National_Post.DameS_Vengeance_Not_So_Sweet_Material_Lacks_Richness_Of_Old_Days_Toronto_Ed.md",
-    "title": "Dame''s Vengeance Not So Sweet: Material Lacks Richness Of Old Days",
+    "title": "Dame's Vengeance Not So Sweet: Material Lacks Richness Of Old Days",
     "date": "2005-11-05",
     "year": "2005",
     "publication": "National Post",
@@ -143513,7 +143513,7 @@
     "slug": "2005-11-19-london-theatres-inspire-deja-vu-same-musicals-as-toronto-and-then-there-s",
     "route": "/reviews/2005-11-19-london-theatres-inspire-deja-vu-same-musicals-as-toronto-and-then-there-s/",
     "source_file": "2005.11.19.National Post.London_Theatres_Inspire_Deja_Vu.md",
-    "title": "'London Theatres Inspire Deja Vu: Same Musicals As Toronto -- And Then There''s",
+    "title": "'London Theatres Inspire Deja Vu: Same Musicals As Toronto -- And Then There's",
     "date": "2005-11-19",
     "year": "2005",
     "publication": "National Post",
@@ -143641,7 +143641,7 @@
     "slug": "2005-11-26-kitchen-sink-drama-doesn-t-quite-wash-solid-acting-let-down-by-large-doses",
     "route": "/reviews/2005-11-26-kitchen-sink-drama-doesn-t-quite-wash-solid-acting-let-down-by-large-doses/",
     "source_file": "2005.11.26.National_Post.Kitchen-Sink_Drama_DoesnT_Quite_Wash_Solid_Acting_Let_Down_By_Large_Doses_O.md",
-    "title": "'Kitchen-Sink Drama Doesn''t Quite Wash: Solid Acting Let Down By Large Doses",
+    "title": "'Kitchen-Sink Drama Doesn't Quite Wash: Solid Acting Let Down By Large Doses",
     "date": "2005-11-26",
     "year": "2005",
     "publication": "National Post",
@@ -145010,7 +145010,7 @@
     "canonical_file": "",
     "production_title": "Letters from Lehrer",
     "company": "",
-    "venue": "Berkeley Downstairs Theatre",
+    "venue": "Berkeley Street Theatre Downstairs",
     "city": "Toronto",
     "coordinates": [
       "43.6506",
@@ -146779,7 +146779,7 @@
     "slug": "2006-04-08-american-buffalo-lacks-exuberance-lucid-but-not-up-to-company-s-standards",
     "route": "/reviews/2006-04-08-american-buffalo-lacks-exuberance-lucid-but-not-up-to-company-s-standards/",
     "source_file": "2006.04.08.National_Post.American_Buffalo_Lacks_Exuberance_Lucid_But_Not_Up_To_CompanyS_Standards_To.md",
-    "title": "American Buffalo Lacks Exuberance: Lucid, But Not Up To Company''s Standards",
+    "title": "American Buffalo Lacks Exuberance: Lucid, But Not Up To Company's Standards",
     "date": "2006-04-08",
     "year": "2006",
     "publication": "National Post",
@@ -147109,7 +147109,7 @@
     "slug": "2006-04-29-the-gulf-between-accuracy-and-truth-the-issues-are-real-but-aren-t-fresh",
     "route": "/reviews/2006-04-29-the-gulf-between-accuracy-and-truth-the-issues-are-real-but-aren-t-fresh/",
     "source_file": "2006.04.29.National_Post.The_Gulf_Between_Accuracy_And_Truth_The_Issues_Are_Real_But_ArenT_Fresh_Tor.md",
-    "title": "The Gulf Between Accuracy And Truth: The Issues Are Real, But Aren''t Fresh",
+    "title": "The Gulf Between Accuracy And Truth: The Issues Are Real, But Aren't Fresh",
     "date": "2006-04-29",
     "year": "2006",
     "publication": "National Post",
@@ -147524,7 +147524,7 @@
     "slug": "2006-05-09-i-m-going-for-broke-william-hutt-plays-his-fourth-prospero-at-stratford",
     "route": "/reviews/2006-05-09-i-m-going-for-broke-william-hutt-plays-his-fourth-prospero-at-stratford/",
     "source_file": "2006.05.09.Cushman_Collected.I_m_Going_For_Broke_William_Hutt_Plays_his_Fourth_Prospero_at_Stratford.md",
-    "title": "''I''m Going For Broke'': William Hutt Plays his Fourth Prospero at Stratford",
+    "title": "'I'm Going For Broke': William Hutt Plays his Fourth Prospero at Stratford",
     "date": "2006-05-09",
     "year": "2006",
     "publication": "National Post",
@@ -147666,7 +147666,7 @@
     "slug": "2006-05-18-the-dummy-s-a-metaphor-dummy-toronto-edition",
     "route": "/reviews/2006-05-18-the-dummy-s-a-metaphor-dummy-toronto-edition/",
     "source_file": "2006.05.18.National_Post.The_DummyS_A_Metaphor_Dummy_Toronto_Edition.md",
-    "title": "The Dummy''s A Metaphor, Dummy!: [Toronto Edition]",
+    "title": "The Dummy's A Metaphor, Dummy!: [Toronto Edition]",
     "date": "2006-05-18",
     "year": "2006",
     "publication": "National Post",
@@ -148327,7 +148327,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "",
     "canonical_file": "",
-    "production_title": "Henry IV Part One",
+    "production_title": "Henry IV, Part One",
     "company": "Stratford Festival",
     "venue": "Tom Patterson Theatre",
     "city": "Stratford, Ontario",
@@ -148997,7 +148997,7 @@
     "slug": "2006-06-17-endings-droop-in-the-dust-soulpepper-s-earnest-is-rhythm-deaf",
     "route": "/reviews/2006-06-17-endings-droop-in-the-dust-soulpepper-s-earnest-is-rhythm-deaf/",
     "source_file": "2006.06.17.National_Post.Endings_Droop_In_The_Dust_SoulpepperS_Earnest_Is_Rhythm-Deaf_Toronto_Editio.md",
-    "title": "Endings Droop In The Dust: Soulpepper''s Earnest Is Rhythm-Deaf",
+    "title": "Endings Droop In The Dust: Soulpepper's Earnest Is Rhythm-Deaf",
     "date": "2006-06-17",
     "year": "2006",
     "publication": "National Post",
@@ -150189,7 +150189,7 @@
       "Lorne Kennedy",
       "Morris Panych",
       "Nicole Underhay",
-      "Noel Coward"
+      "Noël Coward"
     ],
     "roles": {
       "director": [
@@ -150203,7 +150203,7 @@
         "Harry Judge"
       ],
       "playwright": [
-        "Noel Coward"
+        "Noël Coward"
       ],
       "composer_lyricist": [],
       "musical_director": [],
@@ -151665,7 +151665,7 @@
       "Gareth Potter",
       "Jean-Louis Roux",
       "Lorraine Pintal",
-      "Moliere"
+      "Molière"
     ],
     "roles": {
       "director": [
@@ -151679,7 +151679,7 @@
         "Christopher Plummer"
       ],
       "playwright": [
-        "Moliere"
+        "Molière"
       ],
       "composer_lyricist": [],
       "musical_director": [],
@@ -152489,7 +152489,7 @@
     "slug": "2006-12-16-can-t-get-away-from-christmas-not-even-in-a-brilliantly-executed-piece-of",
     "route": "/reviews/2006-12-16-can-t-get-away-from-christmas-not-even-in-a-brilliantly-executed-piece-of/",
     "source_file": "2006.12.16.National_Post.Cant_get_away_from_Christmas_Not_even_in_a_Brilliantly_Executed_Piece_Of_Theatre_Toronto_Edition.md",
-    "title": "'Can''t Get Away From Christmas: Not Even In A Brilliantly Executed Piece Of",
+    "title": "'Can't Get Away From Christmas: Not Even In A Brilliantly Executed Piece Of",
     "date": "2006-12-16",
     "year": "2006",
     "publication": "National Post",
@@ -152564,7 +152564,7 @@
     "slug": "2006-12-23-frank-sinatra-is-total-theatre-ol-blue-eyes-shows-his-prowess-in-sinatra",
     "route": "/reviews/2006-12-23-frank-sinatra-is-total-theatre-ol-blue-eyes-shows-his-prowess-in-sinatra/",
     "source_file": "2006.12.23.National_Post.Frank_Sinatra_Is_Total_Theatre_Ol_Blue_Eyes_Shows_His_Prowess_In_Sinatra_Ve.md",
-    "title": "'Frank Sinatra Is Total Theatre: Ol'' Blue Eyes Shows His Prowess In Sinatra",
+    "title": "'Frank Sinatra Is Total Theatre: Ol' Blue Eyes Shows His Prowess In Sinatra",
     "date": "2006-12-23",
     "year": "2006",
     "publication": "National Post",
@@ -152681,7 +152681,7 @@
     "slug": "2007-01-06-a-short-life-makes-for-a-long-book-george-gershwin-s-life-and-work-in",
     "route": "/reviews/2007-01-06-a-short-life-makes-for-a-long-book-george-gershwin-s-life-and-work-in/",
     "source_file": "2007.01.06.National_Post.A_Short_Life_Makes_For_A_Long_Book_George_GershwinS_Life_And_Work_In_900_Pa.md",
-    "title": "'A Short Life Makes For A Long Book: George Gershwin''''s Life And Work In",
+    "title": "'A Short Life Makes For A Long Book: George Gershwin''s Life And Work In",
     "date": "2007-01-06",
     "year": "2007",
     "publication": "National Post",
@@ -152929,7 +152929,7 @@
     "slug": "2007-01-13-play-has-mediocrity-in-its-genes-wendy-lill-s-chimera-is-unbelievable",
     "route": "/reviews/2007-01-13-play-has-mediocrity-in-its-genes-wendy-lill-s-chimera-is-unbelievable/",
     "source_file": "2007.01.13.National_Post.Play_Has_Mediocrity_In_Its_Genes_Wendy_LillS_Chimera_Is_Unbelievable_Toront.md",
-    "title": "Play Has Mediocrity In Its Genes: Wendy Lill''s Chimera Is Unbelievable",
+    "title": "Play Has Mediocrity In Its Genes: Wendy Lill's Chimera Is Unbelievable",
     "date": "2007-01-13",
     "year": "2007",
     "publication": "National Post",
@@ -153811,7 +153811,7 @@
     "slug": "2007-02-24-actors-lurch-across-the-stage-where-s-jonahs-big-blue-friend-when-you-need",
     "route": "/reviews/2007-02-24-actors-lurch-across-the-stage-where-s-jonahs-big-blue-friend-when-you-need/",
     "source_file": "2007.02.24.National_Post.Actors_Lurch_Across_The_Stage_WhereS_JonahS_Big_Blue_Friend_When_You_Need_H.md",
-    "title": "'Actors Lurch Across The Stage: Where''S JonahS Big Blue Friend When You Need",
+    "title": "'Actors Lurch Across The Stage: Where's JonahS Big Blue Friend When You Need",
     "date": "2007-02-24",
     "year": "2007",
     "publication": "National Post",
@@ -154026,7 +154026,7 @@
     "slug": "2007-03-03-devastation-all-around-there-s-a-certain-spark-missing-in-wajdi-mouawad-s",
     "route": "/reviews/2007-03-03-devastation-all-around-there-s-a-certain-spark-missing-in-wajdi-mouawad-s/",
     "source_file": "2007.03.03.National_Post.Devastation_All_Around_ThereS_A_Certain_Spark_Missing_In_Wajdi_MouawadS_Sco.md",
-    "title": "'Devastation All Around: There''S A Certain Spark Missing In Wajdi Mouawad''S",
+    "title": "'Devastation All Around: There's A Certain Spark Missing In Wajdi Mouawad's",
     "date": "2007-03-03",
     "year": "2007",
     "publication": "National Post",
@@ -154238,7 +154238,7 @@
     "slug": "2007-03-10-cartoon-history-of-canada-outstanding-acting-in-videocabaret-s-seventh",
     "route": "/reviews/2007-03-10-cartoon-history-of-canada-outstanding-acting-in-videocabaret-s-seventh/",
     "source_file": "2007.03.10.National_Post.Cartoon_History_Of_Canada_Outstanding_Acting_In_Video_CabaretS_Seventh_Inst.md",
-    "title": "'Cartoon History Of Canada: Outstanding Acting In VideoCabaret''S Seventh",
+    "title": "'Cartoon History Of Canada: Outstanding Acting In VideoCabaret's Seventh",
     "date": "2007-03-10",
     "year": "2007",
     "publication": "National Post",
@@ -156020,7 +156020,7 @@
     "slug": "2007-05-15-requiem-for-the-newly-departed-spoiler-alert-it-s-important-to-wear-your",
     "route": "/reviews/2007-05-15-requiem-for-the-newly-departed-spoiler-alert-it-s-important-to-wear-your/",
     "source_file": "2007.05.15.National_Post.Requiem_For_The_Newly_Departed_Spoiler_Alert_ItS_Important_To_Wear_Your_Sea.md",
-    "title": "'Requiem For The Newly Departed; Spoiler Alert: It''s Important To Wear Your",
+    "title": "'Requiem For The Newly Departed; Spoiler Alert: It's Important To Wear Your",
     "date": "2007-05-15",
     "year": "2007",
     "publication": "National Post",
@@ -158537,7 +158537,7 @@
     "slug": "2007-07-14-dreams-come-true-against-all-odds-soulpepper-s-the-time-of-your-life-is-one",
     "route": "/reviews/2007-07-14-dreams-come-true-against-all-odds-soulpepper-s-the-time-of-your-life-is-one/",
     "source_file": "2007.07.14.National_Post.Dreams_Come_True_Against_All_Odds_SoulpepperS_The_Time_Of_Your_Life_Is_One_.md",
-    "title": "Dreams Come True Against All Odds; Soulpepper''S The Time Of Your Life Is One",
+    "title": "Dreams Come True Against All Odds; Soulpepper's The Time Of Your Life Is One",
     "date": "2007-07-14",
     "year": "2007",
     "publication": "National Post",
@@ -159090,7 +159090,7 @@
     "slug": "2007-08-04-a-stitch-in-time-makes-nine-soulpepper-s-move-helped-the-company-but-it-s",
     "route": "/reviews/2007-08-04-a-stitch-in-time-makes-nine-soulpepper-s-move-helped-the-company-but-it-s/",
     "source_file": "2007.08.04.National_Post.A_Stitch_In_Time_Makes_Nine_SoulpepperS_Move_Helped_The_Company_But_ItS_The.md",
-    "title": "A Stitch In Time Makes Nine; Soulpepper''s Move Helped The Company, But It''s",
+    "title": "A Stitch In Time Makes Nine; Soulpepper's Move Helped The Company, But It's",
     "date": "2007-08-04",
     "year": "2007",
     "publication": "National Post",
@@ -159541,7 +159541,7 @@
     "slug": "2007-08-23-tis-true-we-have-seen-better-plays-tv-review",
     "route": "/reviews/2007-08-23-tis-true-we-have-seen-better-plays-tv-review/",
     "source_file": "2007.08.23.Cushman_Collected.Tis_True_We_Have_Seen_Better_Plays_TV_Review.md",
-    "title": "''Tis True, We Have Seen Better Plays; TV Review",
+    "title": "'Tis True, We Have Seen Better Plays; TV Review",
     "date": "2007-08-23",
     "year": "2007",
     "publication": "National Post",
@@ -161246,8 +161246,8 @@
     "publication_status": "publish",
     "editorial_issue_type": "",
     "canonical_file": "",
-    "production_title": "''da Kink in My Hair",
-    "company": "Global Television",
+    "production_title": "'da Kink in My Hair",
+    "company": "Global",
     "venue": "Global Television",
     "city": "Toronto",
     "coordinates": [
@@ -161878,7 +161878,7 @@
     "slug": "2007-11-08-the-dragon-awakens-in-more-ways-than-one-a-documentary-on-china-s-warp",
     "route": "/reviews/2007-11-08-the-dragon-awakens-in-more-ways-than-one-a-documentary-on-china-s-warp/",
     "source_file": "2007.11.08.National_Post.The_Dragon_Awakens_In_More_Ways_Than_One_A_Documentary_On_ChinaS_Warp_Speed.md",
-    "title": "The Dragon Awakens, In More Ways Than One; A Documentary On China''S ''Warp",
+    "title": "The Dragon Awakens, In More Ways Than One; A Documentary On China's 'Warp",
     "date": "2007-11-08",
     "year": "2007",
     "publication": "National Post",
@@ -162158,7 +162158,7 @@
       "Melody A. Johnson",
       "Morris Panych",
       "Nancy Palk",
-      "Noel Coward"
+      "Noël Coward"
     ],
     "roles": {
       "director": [
@@ -162172,7 +162172,7 @@
         "Melody A. Johnson"
       ],
       "playwright": [
-        "Noel Coward"
+        "Noël Coward"
       ],
       "composer_lyricist": [],
       "musical_director": [],
@@ -162412,7 +162412,7 @@
     "slug": "2007-11-23-my-ventilator-is-playing-god-dignity-of-death-in-euthanasia-documentary",
     "route": "/reviews/2007-11-23-my-ventilator-is-playing-god-dignity-of-death-in-euthanasia-documentary/",
     "source_file": "2007.11.23.National_Post.My_Ventilator_Is_Playing_God_Dignity_Of_Death_In_Euthanasia_Documentary_Nat.md",
-    "title": "My Ventilator Is Playing God''; Dignity Of Death In Euthanasia Documentary",
+    "title": "My Ventilator Is Playing God'; Dignity Of Death In Euthanasia Documentary",
     "date": "2007-11-23",
     "year": "2007",
     "publication": "National Post",
@@ -162488,7 +162488,7 @@
     ],
     "people": [
       "Allen MacInnis",
-      "E.Y. Harburg",
+      "E. Y. Harburg",
       "George Masswohl",
       "Harold Arlen",
       "L. Frank Baum",
@@ -162521,7 +162521,7 @@
       ],
       "composer_lyricist": [
         "Harold Arlen",
-        "E.Y. Harburg"
+        "E. Y. Harburg"
       ],
       "musical_director": [],
       "choreographer": [],
@@ -162909,13 +162909,13 @@
       "-79.3793"
     ],
     "people": [
-      "J.M. Barrie"
+      "J. M. Barrie"
     ],
     "roles": {
       "director": [],
       "actors": [],
       "playwright": [
-        "J.M. Barrie"
+        "J. M. Barrie"
       ],
       "composer_lyricist": [],
       "musical_director": [],
@@ -164339,7 +164339,7 @@
     "slug": "2008-01-26-it-all-comes-out-in-the-wash-five-friends-try-to-find-happiness-in-lynn-nottage-s",
     "route": "/reviews/2008-01-26-it-all-comes-out-in-the-wash-five-friends-try-to-find-happiness-in-lynn-nottage-s/",
     "source_file": "2008.01.26.National_Post.It_All_Comes_Out_In_The_Wash_Five_Friends_Try_To_Find_Happiness_In_Lynn_Not.md",
-    "title": "It All Comes Out In The Wash; Five Friends Try To Find Happiness In Lynn Nottage''S",
+    "title": "It All Comes Out In The Wash; Five Friends Try To Find Happiness In Lynn Nottage's",
     "date": "2008-01-26",
     "year": "2008",
     "publication": "National Post",
@@ -168093,7 +168093,7 @@
     "slug": "2008-05-12-narcissism-cubed-the-hills-is-just-like-reality-which-is-why-it-s-easier",
     "route": "/reviews/2008-05-12-narcissism-cubed-the-hills-is-just-like-reality-which-is-why-it-s-easier/",
     "source_file": "2008.05.12.National_Post.Narcissism_Cubed_The_Hills_Is_Just_Like_Reality_Which_Is_Why_ItS_Easier_To_.md",
-    "title": "'Narcissism Cubed: The Hills Is Just Like Reality, Which Is Why It''s Easier",
+    "title": "'Narcissism Cubed: The Hills Is Just Like Reality, Which Is Why It's Easier",
     "date": "2008-05-12",
     "year": "2008",
     "publication": "National Post",
@@ -168169,7 +168169,7 @@
     "canonical_file": "",
     "production_title": "My Fair Lady",
     "company": "Dancap Productions",
-    "venue": "Toronto Centre for the Performing Arts",
+    "venue": "Toronto Centre for the Arts",
     "city": "Toronto",
     "coordinates": [
       "43.7615",
@@ -168380,7 +168380,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "",
     "canonical_file": "",
-    "production_title": "''Night, Mother",
+    "production_title": "'Night, Mother",
     "company": "Soulpepper Theatre Company",
     "venue": "Young Centre for the Performing Arts",
     "city": "Toronto",
@@ -168693,7 +168693,7 @@
       "Andrew Bunker",
       "Benedict Campbell",
       "Graeme Somerville",
-      "J.B. Priestley",
+      "J. B. Priestley",
       "Jim Mezon",
       "Mary Haney",
       "Moya O'Connell",
@@ -168712,7 +168712,7 @@
         "Peter Hutt"
       ],
       "playwright": [
-        "J.B. Priestley"
+        "J. B. Priestley"
       ],
       "composer_lyricist": [],
       "musical_director": [],
@@ -171942,7 +171942,7 @@
     "slug": "2008-08-07-we-ll-always-have-freebooting-torchwood-is-stronger-on-style-than-story",
     "route": "/reviews/2008-08-07-we-ll-always-have-freebooting-torchwood-is-stronger-on-style-than-story/",
     "source_file": "2008.08.07.National_Post.WeLl_Always_Have_Freebooting_Torchwood_Is_Stronger_On_Style_Than_Story.md",
-    "title": "We''ll Always Have Freebooting: Torchwood Is Stronger On Style Than Story",
+    "title": "We'll Always Have Freebooting: Torchwood Is Stronger On Style Than Story",
     "date": "2008-08-07",
     "year": "2008",
     "publication": "National Post",
@@ -173190,7 +173190,7 @@
     "slug": "2008-09-16-he-s-a-bad-man-with-a-good-accent-house-is-believable-as-an-american-but",
     "route": "/reviews/2008-09-16-he-s-a-bad-man-with-a-good-accent-house-is-believable-as-an-american-but/",
     "source_file": "2008.09.16.National_Post.HeS_A_Bad_Man_With_A_Good_Accent_House_Is_Believable_As_An_American_But_Not.md",
-    "title": "He''S A Bad Man With A Good Accent; House Is Believable As An American, But",
+    "title": "He's A Bad Man With A Good Accent; House Is Believable As An American, But",
     "date": "2008-09-16",
     "year": "2008",
     "publication": "National Post",
@@ -173201,7 +173201,7 @@
     "canonical_file": "",
     "production_title": "House",
     "company": "Fox",
-    "venue": "Global TV",
+    "venue": "Global Television",
     "city": "New Jersey",
     "coordinates": [],
     "people": [],
@@ -173289,7 +173289,7 @@
     "slug": "2008-09-20-mournful-mythic-and-middling-obsidian-theatre-company-s-double-bill-has",
     "route": "/reviews/2008-09-20-mournful-mythic-and-middling-obsidian-theatre-company-s-double-bill-has/",
     "source_file": "2008.09.20.National_Post.Mournful_Mythic_And_Middling_Obsidian_Theatre_CompanyS_Double_Bill_Has_Nobl.md",
-    "title": "Mournful, Mythic And Middling; Obsidian Theatre Company''S Double Bill Has",
+    "title": "Mournful, Mythic And Middling; Obsidian Theatre Company's Double Bill Has",
     "date": "2008-09-20",
     "year": "2008",
     "publication": "National Post",
@@ -179334,7 +179334,7 @@
     "slug": "2009-03-27-it-s-always-sunny-in-rural-botswana-the-no-1-ladies-detective-agency-cozy",
     "route": "/reviews/2009-03-27-it-s-always-sunny-in-rural-botswana-the-no-1-ladies-detective-agency-cozy/",
     "source_file": "2009.03.27.National_Post.Its_Always_Sunny_In_Rural_Botswana_The_No_1_Ladies_Detective_Agency_cozy_humour.md",
-    "title": "'It''s Always Sunny In Rural Botswana; The No. 1 Ladies Detective Agency: cozy",
+    "title": "'It's Always Sunny In Rural Botswana; The No. 1 Ladies Detective Agency: cozy",
     "date": "2009-03-27",
     "year": "2009",
     "publication": "National Post",
@@ -179814,7 +179814,7 @@
       "Kat Letwin",
       "Mairin Smit",
       "Marcel Dragonieri",
-      "Moliere",
+      "Molière",
       "Reid Linforth",
       "Simon Rainville",
       "Spencer Evoy",
@@ -179836,7 +179836,7 @@
         "Mairin Smit"
       ],
       "playwright": [
-        "Moliere",
+        "Molière",
         "Tony Harrison"
       ],
       "composer_lyricist": [],
@@ -180798,7 +180798,7 @@
       "Goldie Semple",
       "Jackie Maxwell",
       "Michael Ball",
-      "Noel Coward",
+      "Noël Coward",
       "Patrick Galligan",
       "Thom Marriott",
       "William Schmuck"
@@ -180816,7 +180816,7 @@
         "Goldie Semple"
       ],
       "playwright": [
-        "Noel Coward"
+        "Noël Coward"
       ],
       "composer_lyricist": [],
       "musical_director": [],
@@ -182791,7 +182791,7 @@
       "Lee Wilson",
       "Lindsey Frazier",
       "Michael Rubenfeld",
-      "Moliere",
+      "Molière",
       "Sarah Joy Bennett",
       "Seann Gallagher",
       "Trish Lindstrom"
@@ -182812,7 +182812,7 @@
         "James Cade"
       ],
       "playwright": [
-        "Moliere",
+        "Molière",
         "Kevin McGarry",
         "Brendan Gall",
         "Erin Shields",
@@ -183116,7 +183116,7 @@
       "Jenny L. Wright",
       "Kate Lynch",
       "Neil Barclay",
-      "Noel Coward",
+      "Noël Coward",
       "Peter Krantz",
       "Sharry Flett"
     ],
@@ -183134,7 +183134,7 @@
         "Peter Krantz"
       ],
       "playwright": [
-        "Noel Coward"
+        "Noël Coward"
       ],
       "composer_lyricist": [],
       "musical_director": [],
@@ -183189,7 +183189,7 @@
       "Christopher Newton",
       "Jay Turvey",
       "Julie Martell",
-      "Noel Coward",
+      "Noël Coward",
       "Patty Jamieson",
       "Robin Evan Willis",
       "Steven Sutcliffe",
@@ -183208,7 +183208,7 @@
         "Julie Martell"
       ],
       "playwright": [
-        "Noel Coward"
+        "Noël Coward"
       ],
       "composer_lyricist": [],
       "musical_director": [],
@@ -183480,7 +183480,7 @@
       "Jenny Young",
       "Laurie Paton",
       "Michael Ball",
-      "Noel Coward",
+      "Noël Coward",
       "Patrick McManus",
       "Sue LePage"
     ],
@@ -183497,7 +183497,7 @@
         "Patrick McManus"
       ],
       "playwright": [
-        "Noel Coward"
+        "Noël Coward"
       ],
       "composer_lyricist": [],
       "musical_director": [],
@@ -184373,7 +184373,7 @@
     "slug": "2009-09-12-the-finest-guardsman-i-ve-ever-seen-on-patrol-soulpepper-s-staging-of-hungarian",
     "route": "/reviews/2009-09-12-the-finest-guardsman-i-ve-ever-seen-on-patrol-soulpepper-s-staging-of-hungarian/",
     "source_file": "2009.09.12.National_Post.The_Finest_Guardsman_IVe_Ever_Seen_On_Patrol_SoulpepperS_Staging_Of_Hungari.md",
-    "title": "'The Finest Guardsman I''ve Ever Seen On Patrol: Soulpepper''s Staging Of Hungarian",
+    "title": "'The Finest Guardsman I've Ever Seen On Patrol: Soulpepper's Staging Of Hungarian",
     "date": "2009-09-12",
     "year": "2009",
     "publication": "National Post",
@@ -185524,7 +185524,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "",
     "canonical_file": "",
-    "production_title": "Monty Python: Almost the Truth (The Lawyer''s Cut)",
+    "production_title": "Monty Python: Almost the Truth (The Lawyer's Cut)",
     "company": "Bravo!",
     "venue": "",
     "city": "",
@@ -188032,7 +188032,7 @@
       "-79.3886"
     ],
     "people": [
-      "Michael Buble"
+      "Michael Bublé"
     ],
     "roles": {
       "director": [],
@@ -188056,7 +188056,7 @@
       "lighting_designer": [],
       "sound_designer": [],
       "musicians": [
-        "Michael Buble"
+        "Michael Bublé"
       ],
       "performers": [],
       "artists": []
@@ -188341,7 +188341,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "",
     "canonical_file": "",
-    "production_title": "An Evening With Patti LuPone & Mandy Patinkin",
+    "production_title": "An Evening with Patti LuPone & Mandy Patinkin",
     "company": "Mirvish Productions",
     "venue": "Royal Alexandra Theatre",
     "city": "Toronto",
@@ -188484,7 +188484,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "",
     "canonical_file": "",
-    "production_title": "An Evening with Patti LuPone and Mandy Patinkin",
+    "production_title": "An Evening with Patti LuPone & Mandy Patinkin",
     "company": "Mirvish Productions",
     "venue": "Princess of Wales Theatre",
     "city": "Toronto",
@@ -188873,7 +188873,7 @@
     "slug": "2010-03-01-the-return-of-dog-river-s-finest-hiccups-dan-for-mayor-bring-the-cancon",
     "route": "/reviews/2010-03-01-the-return-of-dog-river-s-finest-hiccups-dan-for-mayor-bring-the-cancon/",
     "source_file": "2010.03.01.National_Post.The_Return_Of_Dog_RiverS_Finest_Hiccups_Dan_For_Mayor_Bring_The_Cancon.md",
-    "title": "The Return Of Dog River''s Finest: Hiccups & Dan For Mayor Bring The Cancon",
+    "title": "The Return Of Dog River's Finest: Hiccups & Dan For Mayor Bring The Cancon",
     "date": "2010-03-01",
     "year": "2010",
     "publication": "National Post",
@@ -189082,7 +189082,7 @@
     "slug": "2010-03-09-academy-rewards-film-s-biggest-night-actually-had-something-to-do-with-film",
     "route": "/reviews/2010-03-09-academy-rewards-film-s-biggest-night-actually-had-something-to-do-with-film/",
     "source_file": "2010.03.09.National_Post.Academy_Rewards_FilmS_Biggest_Night_Actually_Had_Something_To_Do_With_Film.md",
-    "title": "Academy Rewards: Film''s Biggest Night Actually Had Something To Do With Film",
+    "title": "Academy Rewards: Film's Biggest Night Actually Had Something To Do With Film",
     "date": "2010-03-09",
     "year": "2010",
     "publication": "National Post",
@@ -189658,7 +189658,7 @@
     "canonical_file": "",
     "production_title": "Birnam Wood / The Woods",
     "company": "Theatre Rusticle; The Mill",
-    "venue": "Theatre Passe Muraille; Young Centre Tank House",
+    "venue": "Theatre Passe Muraille; Young Centre for the Performing Arts",
     "city": "Toronto",
     "coordinates": [],
     "people": [
@@ -192067,7 +192067,7 @@
       "Chilina Kennedy",
       "Eric Blau",
       "Gary Griffin",
-      "J.M. Barrie",
+      "J. M. Barrie",
       "Jacques Brel",
       "Jewelle Blackman",
       "Josh Young",
@@ -192110,7 +192110,7 @@
         "Mike Nadajewski"
       ],
       "playwright": [
-        "J.M. Barrie",
+        "J. M. Barrie",
         "Andrew Lloyd Webber",
         "Tim Rice",
         "Jacques Brel"
@@ -192622,7 +192622,7 @@
       "George Bernard Shaw",
       "Gina Wilkinson",
       "Gord Rand",
-      "J.M. Barrie",
+      "J. M. Barrie",
       "Jonathan Gould",
       "Ken MacDonald",
       "Krista Colosimo",
@@ -192654,7 +192654,7 @@
       ],
       "playwright": [
         "George Bernard Shaw",
-        "J.M. Barrie"
+        "J. M. Barrie"
       ],
       "composer_lyricist": [],
       "musical_director": [],
@@ -194409,7 +194409,7 @@
     "canonical_file": "",
     "production_title": "ID",
     "company": "Cirque Eloize",
-    "venue": "Sony Centre",
+    "venue": "Sony Centre for the Performing Arts",
     "city": "Toronto",
     "coordinates": [
       "43.6474",
@@ -194461,7 +194461,7 @@
     "slug": "2010-10-09-it-s-mind-over-meta-hard-times-ali-ali-the-deportation-hearings-and",
     "route": "/reviews/2010-10-09-it-s-mind-over-meta-hard-times-ali-ali-the-deportation-hearings-and/",
     "source_file": "2010.10.09.National_Post.Its_mind_over_meta_Hard_Times_Ali_Ali_The_Deportation_Hearings_and_title_of_show.md",
-    "title": "'It''s mind over meta; Hard Times, Ali & Ali: The Deportation Hearings and",
+    "title": "'It's mind over meta; Hard Times, Ali & Ali: The Deportation Hearings and",
     "date": "2010-10-09",
     "year": "2010",
     "publication": "National Post",
@@ -195793,7 +195793,7 @@
       "John C. Dinning",
       "Kelli Fox",
       "Marti Maraden",
-      "Noel Coward"
+      "Noël Coward"
     ],
     "roles": {
       "director": [
@@ -195807,7 +195807,7 @@
         "Diana Donnelly"
       ],
       "playwright": [
-        "Noel Coward"
+        "Noël Coward"
       ],
       "composer_lyricist": [],
       "musical_director": [],
@@ -196349,7 +196349,7 @@
     "canonical_file": "",
     "production_title": "How The Grinch Stole Christmas! The Musical",
     "company": "",
-    "venue": "Sony Centre",
+    "venue": "Sony Centre for the Performing Arts",
     "city": "Toronto",
     "coordinates": [
       "43.6474",
@@ -198385,7 +198385,7 @@
     "canonical_file": "",
     "production_title": "A Midsummer Night's Dream",
     "company": "Soulpepper Theatre Company",
-    "venue": "Young Centre for the Arts",
+    "venue": "Young Centre for the Performing Arts",
     "city": "Toronto",
     "coordinates": [
       "43.6503",
@@ -202309,7 +202309,7 @@
     "people": [
       "Billy Lake",
       "David Schuurman",
-      "J.M. Barrie",
+      "J. M. Barrie",
       "Ken MacDonald",
       "Morris Panych",
       "Nicole Underhay",
@@ -202326,7 +202326,7 @@
         "Nicole Underhay"
       ],
       "playwright": [
-        "J.M. Barrie"
+        "J. M. Barrie"
       ],
       "composer_lyricist": [],
       "musical_director": [],
@@ -204143,7 +204143,7 @@
       "Anna Madeley",
       "Caroline Lena Olsson",
       "Kim Cattrall",
-      "Noel Coward",
+      "Noël Coward",
       "Paul Gross",
       "Richard Eyre",
       "Rob Howell",
@@ -204161,7 +204161,7 @@
         "Caroline Lena Olsson"
       ],
       "playwright": [
-        "Noel Coward"
+        "Noël Coward"
       ],
       "composer_lyricist": [],
       "musical_director": [],
@@ -209781,7 +209781,7 @@
       "Julia Course",
       "Mary Haney",
       "Moya O'Connell",
-      "Noel Coward",
+      "Noël Coward",
       "Patrick McManus",
       "Steven Sutcliffe",
       "William Schmuck"
@@ -209804,7 +209804,7 @@
         "Jennifer Phipps"
       ],
       "playwright": [
-        "Noel Coward"
+        "Noël Coward"
       ],
       "composer_lyricist": [],
       "musical_director": [],
@@ -210659,7 +210659,7 @@
       "Sean Arbuckle",
       "Stephen Patterson",
       "Steve Ross",
-      "W.S. Gilbert"
+      "W. S. Gilbert"
     ],
     "roles": {
       "director": [
@@ -210681,13 +210681,13 @@
       ],
       "playwright": [
         "Clark Gesner",
-        "W.S. Gilbert"
+        "W. S. Gilbert"
       ],
       "composer_lyricist": [
         "Clark Gesner",
         "Andrew Lippa",
         "Arthur Sullivan",
-        "W.S. Gilbert"
+        "W. S. Gilbert"
       ],
       "musical_director": [],
       "choreographer": [],
@@ -211611,7 +211611,7 @@
     "slug": "2012-07-28-between-two-states-stratford-s-hirsch-is-at-once-too-much-and-not-enough",
     "route": "/reviews/2012-07-28-between-two-states-stratford-s-hirsch-is-at-once-too-much-and-not-enough/",
     "source_file": "2012.07.28.National_Post.Between_Two_States_StrafordS_Hirsch_Is_At_Once_Too_Much_And_Not_Enough.md",
-    "title": "Between Two States: Stratford''s Hirsch Is At Once Too Much And Not Enough",
+    "title": "Between Two States: Stratford's Hirsch Is At Once Too Much And Not Enough",
     "date": "2012-07-28",
     "year": "2012",
     "publication": "National Post",
@@ -214034,7 +214034,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "",
     "canonical_file": "",
-    "production_title": "Fare Game: Life in Toronto''s Taxis",
+    "production_title": "Fare Game: Life in Toronto's Taxis",
     "company": "Theatre Passe Muraille",
     "venue": "Theatre Passe Muraille",
     "city": "Toronto",
@@ -214316,7 +214316,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "",
     "canonical_file": "",
-    "production_title": "Dickens'' Women",
+    "production_title": "Dickens' Women",
     "company": "",
     "venue": "Young Centre for the Performing Arts",
     "city": "Toronto",
@@ -214502,7 +214502,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "",
     "canonical_file": "",
-    "production_title": "Dickens'' Women",
+    "production_title": "Dickens' Women",
     "company": "",
     "venue": "Young Centre for the Performing Arts",
     "city": "Toronto",
@@ -214967,7 +214967,7 @@
       "Cedric Smith",
       "Charlotte Moore",
       "Danielle Wade",
-      "E.Y. Harburg",
+      "E. Y. Harburg",
       "Harold Arlen",
       "Jamie McKnight",
       "Jeremy Sams",
@@ -215001,7 +215001,7 @@
       ],
       "composer_lyricist": [
         "Harold Arlen",
-        "E.Y. Harburg",
+        "E. Y. Harburg",
         "Andrew Lloyd Webber",
         "Tim Rice"
       ],
@@ -217403,7 +217403,7 @@
       "Michelle Giroux",
       "Mike Shara",
       "Miles Potter",
-      "Noel Coward",
+      "Noël Coward",
       "Paul Nolan",
       "Pete Townshend",
       "Peter Raby",
@@ -217439,7 +217439,7 @@
         "Pete Townshend",
         "Peter Raby",
         "Alexandre Dumas",
-        "Noel Coward"
+        "Noël Coward"
       ],
       "composer_lyricist": [
         "Pete Townshend"
@@ -218096,7 +218096,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "",
     "canonical_file": "",
-    "production_title": "Entertaining Mr. Sloane",
+    "production_title": "Entertaining Mr Sloane",
     "company": "Soulpepper Theatre Company",
     "venue": "Young Centre for the Performing Arts",
     "city": "Toronto",
@@ -219905,7 +219905,7 @@
       "Arthur Miller",
       "Athol Fugard",
       "David S. Young",
-      "Moliere",
+      "Molière",
       "Reginald Rose",
       "Robert E. Sherwood",
       "Tom Murphy",
@@ -219927,7 +219927,7 @@
         "David S. Young",
         "Vern Thiessen",
         "W. Somerset Maugham",
-        "Moliere"
+        "Molière"
       ],
       "composer_lyricist": [],
       "musical_director": [],
@@ -223575,7 +223575,7 @@
       "Claire Jullien",
       "Dennis Garnhum",
       "Gray Powell",
-      "J.B. Priestley",
+      "J. B. Priestley",
       "Jennifer Dzialoszynski",
       "Joseph Ziegler",
       "Kate Hennig",
@@ -223605,7 +223605,7 @@
         "Patrick Galligan"
       ],
       "playwright": [
-        "J.B. Priestley",
+        "J. B. Priestley",
         "Philip Barry"
       ],
       "composer_lyricist": [],
@@ -223806,7 +223806,7 @@
       "Ijeoma Emesowum",
       "Kevin Bundy",
       "Lucy Peacock",
-      "Noel Coward",
+      "Noël Coward",
       "Ruby Joy",
       "Sanjay Talwar",
       "Sarah Orenstein",
@@ -223828,7 +223828,7 @@
         "Sarah Orenstein"
       ],
       "playwright": [
-        "Noel Coward"
+        "Noël Coward"
       ],
       "composer_lyricist": [],
       "musical_director": [],
@@ -224491,7 +224491,7 @@
       "Laszlo Marton",
       "Lorenzo Savoini",
       "Mikaela Davies",
-      "Moliere",
+      "Molière",
       "Oliver Dennis",
       "Oyin Oladejo",
       "Raquel Duffy",
@@ -224516,7 +224516,7 @@
         "Frank Cox-O'Connell"
       ],
       "playwright": [
-        "Moliere"
+        "Molière"
       ],
       "composer_lyricist": [],
       "musical_director": [],
@@ -226692,7 +226692,7 @@
     "editorial_issue_type": "",
     "canonical_file": "",
     "production_title": "Waiting Room / Boom / Small Axe",
-    "company": "Tarragon Theatre; Project Humanity",
+    "company": "Tarragon Theatre; Project: Humanity",
     "venue": "Tarragon Theatre; Panasonic Theatre; Theatre Centre",
     "city": "Toronto",
     "coordinates": [],
@@ -226845,7 +226845,7 @@
       "-79.6903"
     ],
     "people": [
-      "Heinrich Von Kleist",
+      "Heinrich von Kleist",
       "James Kudelka",
       "Jean Yoon",
       "Katherine Cullen",
@@ -226863,7 +226863,7 @@
         "Luca Ragogna"
       ],
       "playwright": [
-        "Heinrich Von Kleist"
+        "Heinrich von Kleist"
       ],
       "composer_lyricist": [],
       "musical_director": [],
@@ -227134,7 +227134,7 @@
       "Jemima Rooper",
       "Joseph Ziegler",
       "Michael Blakemore",
-      "Noel Coward",
+      "Noël Coward",
       "Sarah Wilson",
       "Susan Louise O'Connor"
     ],
@@ -227157,7 +227157,7 @@
         "Diego Matamoros"
       ],
       "playwright": [
-        "Noel Coward",
+        "Noël Coward",
         "A.R. Gurney"
       ],
       "composer_lyricist": [],
@@ -227762,7 +227762,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "",
     "canonical_file": "",
-    "production_title": "Dame Edna''s Glorious Goodbye: The Farewell Tour",
+    "production_title": "Dame Edna's Glorious Goodbye: The Farewell Tour",
     "company": "Mirvish Productions",
     "venue": "Princess of Wales Theatre",
     "city": "Toronto",
@@ -228529,7 +228529,7 @@
       "Dave Barry",
       "Erin Shields",
       "Henrik Ibsen",
-      "J.M. Barrie",
+      "J. M. Barrie",
       "Jackie Maxwell",
       "Jacqueline Thair",
       "Kate Besworth",
@@ -228566,7 +228566,7 @@
         "Dave Barry",
         "Erin Shields",
         "Henrik Ibsen",
-        "J.M. Barrie",
+        "J. M. Barrie",
         "Rick Elice",
         "Ridley Pearson"
       ],
@@ -229671,7 +229671,7 @@
     ],
     "people": [
       "Harveen Sandhu",
-      "J.M. Barrie",
+      "J. M. Barrie",
       "Kate Besworth",
       "Lezlie Wade",
       "Moya O'Connell",
@@ -229690,7 +229690,7 @@
         "Harveen Sandhu"
       ],
       "playwright": [
-        "J.M. Barrie"
+        "J. M. Barrie"
       ],
       "composer_lyricist": [],
       "musical_director": [],
@@ -232380,7 +232380,7 @@
       "Chris Earle",
       "Dan Chameroy",
       "Eddie Glen",
-      "J.M. Barrie",
+      "J. M. Barrie",
       "Jessica Holmes",
       "Lewis Carroll",
       "Marc Kimmelman",
@@ -232401,7 +232401,7 @@
       ],
       "playwright": [
         "Chris Earle",
-        "J.M. Barrie",
+        "J. M. Barrie",
         "Lewis Carroll"
       ],
       "composer_lyricist": [],
@@ -232774,8 +232774,8 @@
       "John Gielgud",
       "Maggie Smith",
       "Michael Healey",
-      "Moliere",
-      "Noel Coward",
+      "Molière",
+      "Noël Coward",
       "Paul Gross",
       "Peter Brook",
       "Peter Shaffer",
@@ -232803,8 +232803,8 @@
       ],
       "playwright": [
         "William Shakespeare",
-        "Noel Coward",
-        "Moliere",
+        "Noël Coward",
+        "Molière",
         "Peter Shaffer",
         "Michael Healey"
       ],
@@ -235111,7 +235111,7 @@
       "Nicole Underhay",
       "Patrick Galligan",
       "Shawn Wright",
-      "W.S. Gilbert",
+      "W. S. Gilbert",
       "William Schmuck"
     ],
     "roles": {
@@ -235132,7 +235132,7 @@
       ],
       "playwright": [
         "August Strindberg",
-        "W.S. Gilbert",
+        "W. S. Gilbert",
         "Conor McPherson"
       ],
       "composer_lyricist": [],
@@ -235233,7 +235233,7 @@
     "slug": "2016-08-03-simply-the-best-this-version-of-sweeney-todd-feels-like-a-masterpiece",
     "route": "/reviews/2016-08-03-simply-the-best-this-version-of-sweeney-todd-feels-like-a-masterpiece/",
     "source_file": "2016.08.03.National_Post.Simply_The_Best_This_Version_Of_Sweeney_Todd_Feels_Like_A_Masterpiece.md",
-    "title": "Simply The Best: This Version Of Sweeney Todd ''Feels Like A Masterpiece''",
+    "title": "Simply The Best: This Version Of Sweeney Todd 'Feels Like A Masterpiece'",
     "date": "2016-08-03",
     "year": "2016",
     "publication": "National Post",
@@ -237037,7 +237037,7 @@
     "slug": "2016-12-14-wideawake-you-can-t-say-anything-goes-in-sleeping-beauty-but-most-things",
     "route": "/reviews/2016-12-14-wideawake-you-can-t-say-anything-goes-in-sleeping-beauty-but-most-things/",
     "source_file": "2016.12.14.National_Post.Wideawake_You_CanT_Say_Anything_Goes_In_Sleeping_Beauty_But_Most_Things_Do.md",
-    "title": "'Wideawake: You Can''t Say Anything Goes In Sleeping Beauty, But Most Things",
+    "title": "'Wideawake: You Can't Say Anything Goes In Sleeping Beauty, But Most Things",
     "date": "2016-12-14",
     "year": "2016",
     "publication": "National Post",
@@ -238613,7 +238613,7 @@
       "Judy Kaye",
       "Lebo M",
       "Montego Glover",
-      "Richard Maltby Jr",
+      "Richard Maltby Jr.",
       "Ryan Allen",
       "Victoria Clark"
     ],
@@ -238633,7 +238633,7 @@
         "Bernice Rubens"
       ],
       "composer_lyricist": [
-        "Richard Maltby Jr",
+        "Richard Maltby Jr.",
         "David Shire",
         "Lebo M"
       ],
@@ -239638,7 +239638,7 @@
       "Lezlie Wade",
       "Mark Uhre",
       "Steve Ross",
-      "W.S. Gilbert"
+      "W. S. Gilbert"
     ],
     "roles": {
       "director": [
@@ -239653,11 +239653,11 @@
         "Glynis Ranney"
       ],
       "playwright": [
-        "W.S. Gilbert",
+        "W. S. Gilbert",
         "Arthur Sullivan"
       ],
       "composer_lyricist": [
-        "W.S. Gilbert",
+        "W. S. Gilbert",
         "Arthur Sullivan"
       ],
       "musical_director": [],
@@ -242703,7 +242703,7 @@
     "people": [
       "Alexander Crowther",
       "Hallie Seline",
-      "Odon von Horvath",
+      "Odön von Horváth",
       "Paolo Santalucia"
     ],
     "roles": {
@@ -242715,7 +242715,7 @@
         "Hallie Seline"
       ],
       "playwright": [
-        "Odon von Horvath"
+        "Odön von Horváth"
       ],
       "composer_lyricist": [],
       "musical_director": [],
@@ -242994,7 +242994,7 @@
     "slug": "2021-10-23-martha-henry-s-final-bow-the-beloved-first-lady-of-canadian-theatre-was",
     "route": "/reviews/2021-10-23-martha-henry-s-final-bow-the-beloved-first-lady-of-canadian-theatre-was/",
     "source_file": "2021.10.23.National_Post.Martha_HenryS_Final_Bow_The_Beloved_First_Lady_Of_Canadian_Theatre_Was_A_Gr.md",
-    "title": "'Martha Henry''s Final Bow: The Beloved First Lady Of Canadian Theatre Was",
+    "title": "'Martha Henry's Final Bow: The Beloved First Lady Of Canadian Theatre Was",
     "date": "2021-10-23",
     "year": "2021",
     "publication": "National Post",

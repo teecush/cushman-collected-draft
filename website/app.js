@@ -1,4 +1,4 @@
-const DATA_URL = new URL("../site_export/data/public_reviews.json?v=82", import.meta.url);
+const DATA_URL = new URL("../site_export/data/public_reviews.json?v=83", import.meta.url);
 const CONTENT_ROOT = new URL("../site_export/content/reviews/", import.meta.url);
 const PAGE_SIZE = 36;
 const SHAKESPEARE_COLLECTION = "The Shakespeare Collection";
@@ -537,6 +537,10 @@ function collectionNames(record) {
     return [...names, SHAKESPEARE_COLLECTION];
   }
   return names;
+}
+
+function collectionCount(name) {
+  return state.records.filter((record) => collectionNames(record).includes(name)).length;
 }
 
 function entityValues(record, type) {
@@ -1211,11 +1215,10 @@ function renderFrontpageDirectory() {
 
   const collectionLinks = [
     { label: "Shakespeare Collection", href: "#section:shakespeare", count: countForTile("Shakespeare"), featured: true },
-    ...SECONDARY_COLLECTION_TILES.map((title) => ({
-      label: title.replace(/^The\s+/, ""),
-      href: archiveHrefForTile(title, "collections"),
-      count: countForTile(title, "collections"),
-    })),
+    { label: "Canadian Collection", href: "#collection:canadian", count: collectionCount("The Canadian Collection") },
+    { label: "UK Collection", href: "#collection:uk", count: collectionCount("UK Collection") },
+    { label: "Stratford Collection", href: "#collection:stratford", count: collectionCount("The Stratford Collection") },
+    { label: "Shaw Collection", href: "#collection:shaw", count: collectionCount("The Shaw Collection") },
   ];
 
   const indexLinks = ENTITY_TYPES
