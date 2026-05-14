@@ -146749,7 +146749,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "",
     "canonical_file": "",
-    "production_title": "Jukebox Ella; Bop for Miles; Love Locked Out; In My Life; This Love",
+    "production_title": "Jukebox Ella; Bop for Miles; Love Locked Out; In My Life; This Love of Mine",
     "company": "",
     "venue": "",
     "city": "",
@@ -146783,18 +146783,48 @@
       "costume_designer": [],
       "lighting_designer": [],
       "sound_designer": [],
-      "musicians": [
-        "Ella Fitzgerald",
-        "Mark Murphy",
-        "Patti Wicks",
-        "Wesla Whitfield",
-        "Freddy Cole",
-        "Mike Greensill"
-      ],
+      "musicians": [],
       "performers": [],
       "artists": []
     },
-    "production_groups": [],
+    "production_groups": [
+      {
+        "order": "1",
+        "production_title": "Jukebox Ella",
+        "musicians": [
+          "Ella Fitzgerald"
+        ]
+      },
+      {
+        "order": "2",
+        "production_title": "Bop for Miles",
+        "musicians": [
+          "Mark Murphy"
+        ]
+      },
+      {
+        "order": "3",
+        "production_title": "Love Locked Out",
+        "musicians": [
+          "Patti Wicks"
+        ]
+      },
+      {
+        "order": "4",
+        "production_title": "In My Life",
+        "musicians": [
+          "Wesla Whitfield",
+          "Mike Greensill"
+        ]
+      },
+      {
+        "order": "5",
+        "production_title": "This Love of Mine",
+        "musicians": [
+          "Freddy Cole"
+        ]
+      }
+    ],
     "media": [],
     "word_count": 1353
   },
@@ -171701,10 +171731,10 @@
     "word_count": 1070
   },
   {
-    "slug": "2007-05-26-in-the-distillery-it-takes-two-villages-marion-bridge-brings-cape-breton",
-    "route": "/reviews/2007-05-26-in-the-distillery-it-takes-two-villages-marion-bridge-brings-cape-breton/",
+    "slug": "2007-05-26-in-the-distillery-it-takes-two-villages-marion-bridge-brings-cape-breton-to-the-stage-third-time-s-the-charm-for-our-town",
+    "route": "/reviews/2007-05-26-in-the-distillery-it-takes-two-villages-marion-bridge-brings-cape-breton-to-the-stage-third-time-s-the-charm-for-our-town/",
     "source_file": "2007.05.26.National_Post.In_The_Distillery_It_Takes_Two_Villages_Marion_Bridge_Brings_Cape_Breton_To.md",
-    "title": "In The Distillery, It Takes Two Villages; Marion Bridge Brings Cape Breton",
+    "title": "In The Distillery, It Takes Two Villages; Marion Bridge Brings Cape Breton To The Stage; Third Time's The Charm For Our Town",
     "date": "2007-05-26",
     "year": "2007",
     "publication": "National Post",
@@ -200182,10 +200212,10 @@
     "word_count": 798
   },
   {
-    "slug": "2009-08-01-daylight-come-and-we-want-another-song-the-harder-they-come-delivers-with",
-    "route": "/reviews/2009-08-01-daylight-come-and-we-want-another-song-the-harder-they-come-delivers-with/",
+    "slug": "2009-08-01-daylight-come-and-we-want-another-song-the-harder-they-come-delivers-with-both-song-and-story",
+    "route": "/reviews/2009-08-01-daylight-come-and-we-want-another-song-the-harder-they-come-delivers-with-both-song-and-story/",
     "source_file": "2009.08.01.National_Post.Daylight_Come_And_We_Want_Another_Song_The_Harder_They_Come_Delivers_With_B.md",
-    "title": "Daylight Come And We Want Another Song; The Harder They Come Delivers With",
+    "title": "Daylight Come And We Want Another Song; The Harder They Come Delivers With Both Song And Story",
     "date": "2009-08-01",
     "year": "2009",
     "publication": "National Post",
@@ -200194,9 +200224,9 @@
       "The Musical Collection"
     ],
     "publication_status": "publish",
-    "editorial_issue_type": "body_restored_from_source",
+    "editorial_issue_type": "body_mismatch_repaired",
     "canonical_file": "",
-    "production_title": "The Harder They Come",
+    "production_title": "The Harder They Come; The Menaechmus Twins",
     "company": "",
     "venue": "Canon Theatre",
     "city": "Toronto",
@@ -200205,35 +200235,30 @@
       "-79.3793"
     ],
     "people": [
+      "Adrian Proszowski",
       "Dawn Reid",
       "Jackie Guy",
+      "Jeffrey R. Smith",
       "Jimmy Cliff",
       "Jo Joelson",
       "Kerry Michael",
       "Lain Gray",
+      "Melee Hutton",
       "Perry Henzell",
+      "Plautus",
       "Rolan Bell",
-      "Ultz"
+      "Ryan Hollyman",
+      "Sarah Evans",
+      "Ultz",
+      "Wayne Ward"
     ],
     "roles": {
-      "director": [
-        "Dawn Reid",
-        "Kerry Michael"
-      ],
-      "actors": [
-        "Rolan Bell",
-        "Lain Gray"
-      ],
-      "playwright": [
-        "Perry Henzell"
-      ],
-      "composer_lyricist": [
-        "Jimmy Cliff"
-      ],
+      "director": [],
+      "actors": [],
+      "playwright": [],
+      "composer_lyricist": [],
       "musical_director": [],
-      "choreographer": [
-        "Jackie Guy"
-      ],
+      "choreographer": [],
       "orchestrator": [],
       "arranger": [],
       "assistant_director": [],
@@ -200244,21 +200269,74 @@
       "fight_director": [],
       "dramaturg": [],
       "producer": [],
-      "set_designer": [
-        "Ultz"
-      ],
+      "set_designer": [],
       "costume_designer": [],
-      "lighting_designer": [
-        "Jo Joelson"
-      ],
+      "lighting_designer": [],
       "sound_designer": [],
       "musicians": [],
       "performers": [],
       "artists": []
     },
-    "production_groups": [],
+    "production_groups": [
+      {
+        "order": "1",
+        "production_title": "The Harder They Come",
+        "venue": [
+          "Canon Theatre"
+        ],
+        "city": [
+          "Toronto"
+        ],
+        "director": [
+          "Dawn Reid",
+          "Kerry Michael"
+        ],
+        "actors": [
+          "Rolan Bell",
+          "Lain Gray"
+        ],
+        "playwright": [
+          "Perry Henzell"
+        ],
+        "composer_lyricist": [
+          "Jimmy Cliff"
+        ],
+        "choreographer": [
+          "Jackie Guy"
+        ],
+        "set_designer": [
+          "Ultz"
+        ],
+        "lighting_designer": [
+          "Jo Joelson"
+        ]
+      },
+      {
+        "order": "2",
+        "production_title": "The Menaechmus Twins",
+        "venue": [
+          "Withrow Park"
+        ],
+        "city": [
+          "Toronto"
+        ],
+        "director": [
+          "Melee Hutton"
+        ],
+        "actors": [
+          "Wayne Ward",
+          "Sarah Evans",
+          "Ryan Hollyman",
+          "Adrian Proszowski",
+          "Jeffrey R. Smith"
+        ],
+        "playwright": [
+          "Plautus"
+        ]
+      }
+    ],
     "media": [],
-    "word_count": 1268
+    "word_count": 973
   },
   {
     "slug": "2009-08-08-to-love-is-to-hate-and-to-hate-is-to-love-so-go-the-affairs-in-noel-coward-s",
