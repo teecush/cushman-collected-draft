@@ -2016,9 +2016,49 @@
         "route": "/reviews/1996-05-21-theatre-review-night-light/",
         "venue": "Harbourfront Centre",
         "city": "Toronto",
-        "production_title": "Night Light; The Cashore Marionettes; A Child's Portrait of Shakespeare and Macbeth",
+        "production_title": "Night Light",
         "article_category": "Theatre Review",
-        "group_order": null
+        "group_order": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.3819,
+          43.6385
+        ]
+      },
+      "properties": {
+        "title": "Theatre Review: Night Light",
+        "date": "1996-05-21",
+        "route": "/reviews/1996-05-21-theatre-review-night-light/",
+        "venue": "Harbourfront Centre",
+        "city": "Toronto",
+        "production_title": "The Cashore Marionettes",
+        "article_category": "Theatre Review",
+        "group_order": "2"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.3819,
+          43.6385
+        ]
+      },
+      "properties": {
+        "title": "Theatre Review: Night Light",
+        "date": "1996-05-21",
+        "route": "/reviews/1996-05-21-theatre-review-night-light/",
+        "venue": "Harbourfront Centre",
+        "city": "Toronto",
+        "production_title": "A Child's Portrait of Shakespeare and Macbeth",
+        "article_category": "Theatre Review",
+        "group_order": "3"
       }
     },
     {
@@ -3306,26 +3346,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -79.0711,
-          43.2532
-        ]
-      },
-      "properties": {
-        "title": "'Mr. Newton's Profession: As Artistic Director, Christopher Newton Gave The",
-        "date": "1999-05-15",
-        "route": "/reviews/1999-05-15-mr-newton-s-profession-as-artistic-director-christopher-newton-gave-the/",
-        "venue": "",
-        "city": "Niagara-on-the-Lake",
-        "production_title": "Christopher Newton",
-        "article_category": "Profile",
-        "group_order": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -79.3774,
           43.6486
         ]
@@ -3916,7 +3936,7 @@
         "route": "/reviews/1999-09-03-they-ll-give-you-a-good-talking-to/",
         "venue": "Factory Theatre Studio",
         "city": "Toronto",
-        "production_title": "Wild Abandon and See Bob Run",
+        "production_title": "Wild Abandon; See Bob Run",
         "article_category": "Theatre Review",
         "group_order": null
       }
@@ -4936,7 +4956,7 @@
         "route": "/reviews/2000-03-06-you-can-teach-young-dogs-new-tricks-in-montreal-bill-glassco-has-a-troupe/",
         "venue": "Saidye Bronfman Centre",
         "city": "Montreal",
-        "production_title": "",
+        "production_title": "Measure for Measure; The Possibilities",
         "article_category": "Profile",
         "group_order": null
       }
@@ -6276,7 +6296,7 @@
         "route": "/reviews/2000-10-05-it-s-a-wonderful-life-singer-rosemary-clooney-brings-her-show-to-roy-thomson-hall/",
         "venue": "Roy Thomson Hall",
         "city": "Toronto",
-        "production_title": "Rosemary Clooney",
+        "production_title": "",
         "article_category": "Profile",
         "group_order": null
       }
@@ -6537,7 +6557,7 @@
         "venue": "Pantages Theatre",
         "city": "Toronto",
         "production_title": "Dame Edna: The Royal Tour",
-        "article_category": "Theatre Review",
+        "article_category": "Theatre Interview",
         "group_order": null
       }
     },
@@ -9538,7 +9558,7 @@
         "city": "Niagara-on-the-Lake",
         "production_title": "Merrily We Roll Along",
         "article_category": "Musical Review",
-        "group_order": null
+        "group_order": "1"
       }
     },
     {
@@ -10014,8 +10034,8 @@
         "title": "Shakespeare-Inspired Characters, Meet Gord",
         "date": "2002-07-18",
         "route": "/reviews/2002-07-18-shakespeare-inspired-characters-meet-gord/",
-        "venue": "",
-        "city": "",
+        "venue": "Studio Theatre",
+        "city": "Stratford, Ontario",
         "production_title": "High Gravel Blind; Eternal Hydra",
         "article_category": "Theatre Review",
         "group_order": null
@@ -10614,7 +10634,7 @@
         "title": "Down On The Farm",
         "date": "2002-10-10",
         "route": "/reviews/2002-10-10-down-on-the-farm/",
-        "venue": "Times Theatre",
+        "venue": "Buddies in Bad Times Theatre",
         "city": "Toronto",
         "production_title": "Homage",
         "article_category": "Theatre Review",
@@ -10654,6 +10674,26 @@
         "title": "A Kinetic Richard II Worth Raving About",
         "date": "2002-10-16",
         "route": "/reviews/2002-10-16-a-kinetic-richard-ii-worth-raving-about/",
+        "venue": "Theatre Passe Muraille Backspace",
+        "city": "Toronto",
+        "production_title": "richardthesecond",
+        "article_category": "Theatre Review",
+        "group_order": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.4026,
+          43.6486
+        ]
+      },
+      "properties": {
+        "title": "A Kinetic Richard II Worth Raving About",
+        "date": "2002-10-16",
+        "route": "/reviews/2002-10-16-a-kinetic-richard-ii-worth-raving-about-2/",
         "venue": "Theatre Passe Muraille Backspace",
         "city": "Toronto",
         "production_title": "richardthesecond",
@@ -11636,7 +11676,7 @@
         "route": "/reviews/2003-04-05-a-revisionist-history-two-days-later/",
         "venue": "du Maurier Theatre Centre",
         "city": "Toronto",
-        "production_title": "Proof",
+        "production_title": "The Proof",
         "article_category": "Theatre Review",
         "group_order": null
       }
@@ -11926,26 +11966,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -80.9686,
-          43.3744
-        ]
-      },
-      "properties": {
-        "title": "Stratford's Year Of Living Adventurously",
-        "date": "2003-05-24",
-        "route": "/reviews/2003-05-24-stratford-s-year-of-living-adventurously/",
-        "venue": "Stratford Festival",
-        "city": "Stratford, Ontario",
-        "production_title": "Stratford Festival Season",
-        "article_category": "Theatre Preview",
-        "group_order": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -79.0732,
           43.2563
         ]
@@ -12157,7 +12177,7 @@
         "venue": "Elgin Theatre",
         "city": "Toronto",
         "production_title": "Elaine Stritch at Liberty",
-        "article_category": "Theatre Review",
+        "article_category": "Profile",
         "group_order": null
       }
     },
@@ -13075,7 +13095,7 @@
         "date": "2004-01-28",
         "route": "/reviews/2004-01-28-two-plays-four-actors/",
         "venue": "Theatre Passe Muraille Mainspace; Theatre Passe Muraille Backspace",
-        "city": "",
+        "city": "Toronto",
         "production_title": "One Good Marriage; Blood",
         "article_category": "Theatre Review",
         "group_order": null
@@ -13656,7 +13676,7 @@
         "route": "/reviews/2004-05-08-jason-robert-brown-s-the-last-five-years/",
         "venue": "Berkeley Street Theatre",
         "city": "Toronto",
-        "production_title": "The Last Five Years",
+        "production_title": "The Last 5 Years",
         "article_category": "Musical Review",
         "group_order": null
       }
@@ -13818,6 +13838,26 @@
         "city": "Toronto",
         "production_title": "The Producers",
         "article_category": "Musical Review",
+        "group_order": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.4006,
+          43.6448
+        ]
+      },
+      "properties": {
+        "title": "All The King's Horses",
+        "date": "2004-05-20",
+        "route": "/reviews/2004-05-20-all-the-king-s-horses/",
+        "venue": "Artword Theatre",
+        "city": "Toronto",
+        "production_title": "Death And The King's Horseman",
+        "article_category": "Theatre Review",
         "group_order": null
       }
     },
@@ -14518,26 +14558,6 @@
         "city": "Niagara-on-the-Lake",
         "production_title": "Rutherford and Son",
         "article_category": "Theatre Review",
-        "group_order": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -79.383186,
-          43.653225
-        ]
-      },
-      "properties": {
-        "title": "The Doras: And The Winner Is ...: Odd Nominees Make Predictions Difficult",
-        "date": "2004-06-26",
-        "route": "/reviews/2004-06-26-the-doras-and-the-winner-is-odd-nominees-make-predictions-difficult/",
-        "venue": "",
-        "city": "Toronto",
-        "production_title": "",
-        "article_category": "Awards Coverage",
         "group_order": null
       }
     },
@@ -15431,6 +15451,26 @@
         ]
       },
       "properties": {
+        "title": "A Good Year at Stratford Gets Better",
+        "date": "2004-08-26",
+        "route": "/reviews/2004-08-26-a-good-year-at-stratford-gets-better/",
+        "venue": "Festival Theatre",
+        "city": "Stratford, Ontario",
+        "production_title": "King Henry VIII (All Is True)",
+        "article_category": "Theatre Review",
+        "group_order": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.9686,
+          43.3744
+        ]
+      },
+      "properties": {
         "title": "A Good Year For Stratford Gets Better",
         "date": "2004-08-26",
         "route": "/reviews/2004-08-26-a-good-year-for-stratford-gets-better/",
@@ -15734,9 +15774,9 @@
         "title": "Remembering Glassco",
         "date": "2004-09-20",
         "route": "/reviews/2004-09-20-remembering-glassco/",
-        "venue": "Tarragon Theatre",
+        "venue": "",
         "city": "Toronto",
-        "production_title": "Bill Glassco",
+        "production_title": "",
         "article_category": "Obituary",
         "group_order": null
       }
@@ -15851,9 +15891,9 @@
         ]
       },
       "properties": {
-        "title": "Talented Writing, Excellent Acting Make for Best New Buddies Piece in Recent",
+        "title": "Talented Writing, Excellent Acting Make for Best New Buddies Piece in Recent Memory",
         "date": "2004-10-02",
-        "route": "/reviews/2004-10-02-talented-writing-excellent-acting-make-for-best-new-buddies-piece-in-recent/",
+        "route": "/reviews/2004-10-02-talented-writing-excellent-acting-make-for-best-new-buddies-piece-in-recent-memory/",
         "venue": "Buddies in Bad Times Theatre",
         "city": "Toronto",
         "production_title": "Snowman",
@@ -16334,7 +16374,7 @@
         "title": "Juliet Has Her Say In Production Strong On Relationships",
         "date": "2004-12-04",
         "route": "/reviews/2004-12-04-juliet-has-her-say-in-production-strong-on-relationships/",
-        "venue": "Lorraine Kimsa Theatre",
+        "venue": "Lorraine Kimsa Theatre for Young People",
         "city": "Toronto",
         "production_title": "Juliet (and Romeo)",
         "article_category": "Theatre Review",
@@ -16471,9 +16511,9 @@
         ]
       },
       "properties": {
-        "title": "Ross Petty Rubs The Lamp And Out Pops A Magically Comic, Funky Production Of",
+        "title": "Ross Petty Rubs The Lamp And Out Pops A Magically Comic, Funky Production Of Aladdin",
         "date": "2004-12-31",
-        "route": "/reviews/2004-12-31-ross-petty-rubs-the-lamp-and-out-pops-a-magically-comic-funky-production-of/",
+        "route": "/reviews/2004-12-31-ross-petty-rubs-the-lamp-and-out-pops-a-magically-comic-funky-production-of-aladdin/",
         "venue": "Elgin Theatre",
         "city": "Toronto",
         "production_title": "Aladdin",
@@ -16674,9 +16714,9 @@
         "title": "'From Steam to Shakespeare: Tom Patterson Put Stratford, Ont., Back on the",
         "date": "2005-02-25",
         "route": "/reviews/2005-02-25-from-steam-to-shakespeare-tom-patterson-put-stratford-ont-back-on-the/",
-        "venue": "Stratford Festival",
+        "venue": "",
         "city": "Stratford, Ontario",
-        "production_title": "Tom Patterson",
+        "production_title": "",
         "article_category": "Obituary",
         "group_order": null
       }
@@ -16718,7 +16758,7 @@
         "city": "Toronto",
         "production_title": "Unless",
         "article_category": "Theatre Review",
-        "group_order": null
+        "group_order": "1"
       }
     },
     {
@@ -16866,26 +16906,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -79.3752,
-          43.6474
-        ]
-      },
-      "properties": {
-        "title": "T.O. Do: A Discriminating Guide To Toronto Today",
-        "date": "2005-04-08",
-        "route": "/reviews/2005-04-08-t-o-do-a-discriminating-guide-to-toronto-today/",
-        "venue": "",
-        "city": "Toronto",
-        "production_title": "Ain't Misbehavin'",
-        "article_category": "Musical Review",
-        "group_order": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -79.3976,
           43.6486
         ]
@@ -16946,8 +16966,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -79.3641,
-          43.6506
+          -79.3752,
+          43.6474
         ]
       },
       "properties": {
@@ -16974,11 +16994,11 @@
         "title": "'Worldstage Makes Virtue Of Necessity: CrouchS My Arm Shows Potential Of One-Person",
         "date": "2005-04-30",
         "route": "/reviews/2005-04-30-worldstage-makes-virtue-of-necessity-crouchs-my-arm-shows-potential-of-one-person/",
-        "venue": "Harbourfront Centre; Berkeley Street Theatre Upstairs",
+        "venue": "Harbourfront Centre",
         "city": "Toronto",
-        "production_title": "My Arm; The End of the Moon; Bombshells; Rosebud; Le Bourgeois Gentilhomme",
+        "production_title": "My Arm",
         "article_category": "Theatre Review",
-        "group_order": null
+        "group_order": "1"
       }
     },
     {
@@ -16986,19 +17006,59 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -79.4129,
-          43.675
+          -79.3819,
+          43.6385
         ]
       },
       "properties": {
-        "title": "Two Sides Of Alice DonT Quite Mesh: Main Character Lacks Plausibility",
-        "date": "2005-05-07",
-        "route": "/reviews/2005-05-07-two-sides-of-alice-dont-quite-mesh-main-character-lacks-plausibility/",
-        "venue": "Tarragon Theatre; Berkeley Street Theatre; Buddies in Bad Times Theatre; Factory",
+        "title": "'Worldstage Makes Virtue Of Necessity: CrouchS My Arm Shows Potential Of One-Person",
+        "date": "2005-04-30",
+        "route": "/reviews/2005-04-30-worldstage-makes-virtue-of-necessity-crouchs-my-arm-shows-potential-of-one-person/",
+        "venue": "Harbourfront Centre",
         "city": "Toronto",
-        "production_title": "Alice''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''s Affair; Trying; Rope Enough; Chekhov''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''s Heartache",
+        "production_title": "The End of the Moon",
         "article_category": "Theatre Review",
-        "group_order": null
+        "group_order": "2"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.3819,
+          43.6385
+        ]
+      },
+      "properties": {
+        "title": "'Worldstage Makes Virtue Of Necessity: CrouchS My Arm Shows Potential Of One-Person",
+        "date": "2005-04-30",
+        "route": "/reviews/2005-04-30-worldstage-makes-virtue-of-necessity-crouchs-my-arm-shows-potential-of-one-person/",
+        "venue": "Harbourfront Centre",
+        "city": "Toronto",
+        "production_title": "Bombshells",
+        "article_category": "Theatre Review",
+        "group_order": "3"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.3819,
+          43.6385
+        ]
+      },
+      "properties": {
+        "title": "'Worldstage Makes Virtue Of Necessity: CrouchS My Arm Shows Potential Of One-Person",
+        "date": "2005-04-30",
+        "route": "/reviews/2005-04-30-worldstage-makes-virtue-of-necessity-crouchs-my-arm-shows-potential-of-one-person/",
+        "venue": "Harbourfront Centre",
+        "city": "Toronto",
+        "production_title": "Rosebud",
+        "article_category": "Theatre Review",
+        "group_order": "4"
       }
     },
     {
@@ -17017,7 +17077,7 @@
         "venue": "Festival Theatre",
         "city": "Stratford, Ontario",
         "production_title": "The Tempest",
-        "article_category": "Theatre Review",
+        "article_category": "Theatre Interview",
         "group_order": null
       }
     },
@@ -17037,26 +17097,6 @@
         "venue": "Factory Theatre Studio",
         "city": "Toronto",
         "production_title": "Peasants and Peasant Women",
-        "article_category": "Theatre Review",
-        "group_order": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -79.4028,
-          43.6455
-        ]
-      },
-      "properties": {
-        "title": "Walker Revival Full Of Surprises",
-        "date": "2005-05-21",
-        "route": "/reviews/2005-05-21-walker-revival-full-of-surprises/",
-        "venue": "Factory Theatre; Theatre Passe Muraille",
-        "city": "Toronto",
-        "production_title": "Adult Entertainment; The Anger in Ernest and Ernestine",
         "article_category": "Theatre Review",
         "group_order": null
       }
@@ -17086,26 +17126,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -79.4028,
-          43.6455
-        ]
-      },
-      "properties": {
-        "title": "Crazy Nights At The Walkerland Motel: A Bleak, Funny And Timely Revival",
-        "date": "2005-05-28",
-        "route": "/reviews/2005-05-28-crazy-nights-at-the-walkerland-motel-a-bleak-funny-and-timely-revival/",
-        "venue": "Factory Theatre; Princess of Wales Theatre",
-        "city": "",
-        "production_title": "End of Civilization; Evita",
-        "article_category": "Theatre Review",
-        "group_order": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -79.3641,
           43.6506
         ]
@@ -17117,26 +17137,6 @@
         "venue": "Berkeley Street Theatre",
         "city": "Toronto",
         "production_title": "Trying",
-        "article_category": "Theatre Review",
-        "group_order": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -79.0677,
-          43.252
-        ]
-      },
-      "properties": {
-        "title": "Both These Ends Justify The Means",
-        "date": "2005-06-01",
-        "route": "/reviews/2005-06-01-both-these-ends-justify-the-means/",
-        "venue": "Court House Theatre; Royal George Theatre",
-        "city": "Niagara-on-the-Lake",
-        "production_title": "Journey''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''s End; Happy End",
         "article_category": "Theatre Review",
         "group_order": null
       }
@@ -17418,7 +17418,7 @@
         "city": "Oakville",
         "production_title": "A Midsummer Night's Dream",
         "article_category": "Theatre Review",
-        "group_order": null
+        "group_order": "1"
       }
     },
     {
@@ -17495,10 +17495,10 @@
         "date": "2005-08-13",
         "route": "/reviews/2005-08-13-pitres-annie-goes-great-guns-but-good-songs-cant-save-second-act/",
         "venue": "Massey Hall",
-        "city": "Toronto",
+        "city": "",
         "production_title": "Annie Get Your Gun",
         "article_category": "Musical Review",
-        "group_order": null
+        "group_order": "1"
       }
     },
     {
@@ -17726,26 +17726,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -79.4026,
-          43.6486
-        ]
-      },
-      "properties": {
-        "title": "Tales From The 'Hood: Powerful Urban Double Bills",
-        "date": "2005-10-15",
-        "route": "/reviews/2005-10-15-tales-from-the-hood-powerful-urban-double-bills/",
-        "venue": "",
-        "city": "",
-        "production_title": "Born Ready; Pusha Man; Better Parts; Fish Eyes",
-        "article_category": "Theatre Review",
-        "group_order": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -79.4129,
           43.675
         ]
@@ -17837,26 +17817,6 @@
         "venue": "Factory Theatre",
         "city": "Toronto",
         "production_title": "Tideline",
-        "article_category": "Theatre Review",
-        "group_order": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -79.4129,
-          43.675
-        ]
-      },
-      "properties": {
-        "title": "'Kitchen-Sink Drama Doesn't Quite Wash: Solid Acting Let Down By Large Doses",
-        "date": "2005-11-26",
-        "route": "/reviews/2005-11-26-kitchen-sink-drama-doesn-t-quite-wash-solid-acting-let-down-by-large-doses/",
-        "venue": "Tarragon Theatre",
-        "city": "Toronto",
-        "production_title": "The Dishwashers",
         "article_category": "Theatre Review",
         "group_order": null
       }
@@ -18286,26 +18246,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -79.4026,
-          43.6486
-        ]
-      },
-      "properties": {
-        "title": "Troupe of marionettes have no complexity: VideoCabaret's show monotonous",
-        "date": "2006-03-25",
-        "route": "/reviews/2006-03-25-troupe-of-marionettes-have-no-complexity-videocabaret-s-show-monotonous/",
-        "venue": "Cameron House; Buddies in Bad Times Theatre; Sandra Faire and Ivan Fecan Theatre",
-        "city": "Toronto",
-        "production_title": "Canadian Pacific Scandal; Clean Irene and Dirty Maxine; Accolade Project",
-        "article_category": "Theatre Review",
-        "group_order": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -79.4028,
           43.6455
         ]
@@ -18511,9 +18451,9 @@
         ]
       },
       "properties": {
-        "title": "Where ThereS A Will, ThereS A Betrayer",
+        "title": "Where There's A Will, There's A Betrayer",
         "date": "2006-05-08",
-        "route": "/reviews/2006-05-08-where-theres-a-will-theres-a-betrayer/",
+        "route": "/reviews/2006-05-08-where-there-s-a-will-there-s-a-betrayer/",
         "venue": "Royal George Theatre",
         "city": "Niagara-on-the-Lake",
         "production_title": "The Heiress",
@@ -18531,9 +18471,9 @@
         ]
       },
       "properties": {
-        "title": "Great American Songboook, Bad American Play",
+        "title": "Great American Songbook, Bad American Play",
         "date": "2006-05-09",
-        "route": "/reviews/2006-05-09-great-american-songboook-bad-american-play/",
+        "route": "/reviews/2006-05-09-great-american-songbook-bad-american-play/",
         "venue": "Shaw Festival Theatre",
         "city": "Niagara-on-the-Lake",
         "production_title": "High Society",
@@ -18551,9 +18491,9 @@
         ]
       },
       "properties": {
-        "title": "The Dummy's A Metaphor, Dummy!: [Toronto Edition]",
+        "title": "The Dummy's A Metaphor, Dummy!",
         "date": "2006-05-18",
-        "route": "/reviews/2006-05-18-the-dummy-s-a-metaphor-dummy-toronto-edition/",
+        "route": "/reviews/2006-05-18-the-dummy-s-a-metaphor-dummy/",
         "venue": "Factory Theatre Studio",
         "city": "Toronto",
         "production_title": "The Ventriloquist",
@@ -18617,7 +18557,7 @@
         "venue": "Festival Theatre",
         "city": "Stratford, Ontario",
         "production_title": "Coriolanus",
-        "article_category": "Theatre Review",
+        "article_category": "Opinion Piece",
         "group_order": null
       }
     },
@@ -18671,9 +18611,9 @@
         ]
       },
       "properties": {
-        "title": "Separating the Men from the Boyish Human War Machines: [Toronto Edition]",
+        "title": "Separating the Men from the Boyish Human War Machines",
         "date": "2006-06-01",
-        "route": "/reviews/2006-06-01-separating-the-men-from-the-boyish-human-war-machines-toronto-edition/",
+        "route": "/reviews/2006-06-01-separating-the-men-from-the-boyish-human-war-machines/",
         "venue": "Festival Theatre",
         "city": "Stratford, Ontario",
         "production_title": "Coriolanus",
@@ -18695,10 +18635,10 @@
         "date": "2006-06-02",
         "route": "/reviews/2006-06-02-a-hinton-what-s-to-come-in-theatre/",
         "venue": "Tom Patterson Theatre",
-        "city": "Stratford, Ontario",
-        "production_title": "Peter Hinton; The Duchess of Malfi; Fanny Kemble",
+        "city": "",
+        "production_title": "The Duchess of Malfi",
         "article_category": "Profile",
-        "group_order": null
+        "group_order": "1"
       }
     },
     {
@@ -19476,7 +19416,7 @@
         "route": "/reviews/2006-11-21-mum-s-not-the-word-with-theatre-genie-s-pantomimes/",
         "venue": "Royal Alexandra Theatre",
         "city": "Toronto",
-        "production_title": "Ross Petty; Aladdin",
+        "production_title": "Aladdin",
         "article_category": "Profile",
         "group_order": null
       }
@@ -19535,10 +19475,10 @@
         "date": "2006-12-16",
         "route": "/reviews/2006-12-16-can-t-get-away-from-christmas-not-even-in-a-brilliantly-executed-piece-of/",
         "venue": "Harbourfront Studio",
-        "city": "",
-        "production_title": "The Stronger Variations; Two Letters",
+        "city": "Toronto",
+        "production_title": "The Stronger Variations",
         "article_category": "Theatre Review",
-        "group_order": null
+        "group_order": "1"
       }
     },
     {
@@ -19636,9 +19576,89 @@
         "route": "/reviews/2007-01-23-apartheid-little-men-and-two-people-in-one-chair/",
         "venue": "Harbourfront Centre",
         "city": "Toronto",
-        "production_title": "New World Stage International Performance Season",
+        "production_title": "Dollhouse",
         "article_category": "Theatre Preview",
-        "group_order": null
+        "group_order": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.3819,
+          43.6385
+        ]
+      },
+      "properties": {
+        "title": "Apartheid, Little Men And Two People In One Chair",
+        "date": "2007-01-23",
+        "route": "/reviews/2007-01-23-apartheid-little-men-and-two-people-in-one-chair/",
+        "venue": "Harbourfront Centre",
+        "city": "Toronto",
+        "production_title": "Revisited",
+        "article_category": "Theatre Preview",
+        "group_order": "2"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.3819,
+          43.6385
+        ]
+      },
+      "properties": {
+        "title": "Apartheid, Little Men And Two People In One Chair",
+        "date": "2007-01-23",
+        "route": "/reviews/2007-01-23-apartheid-little-men-and-two-people-in-one-chair/",
+        "venue": "Harbourfront Centre",
+        "city": "Toronto",
+        "production_title": "Sizwe Bansi is Dead",
+        "article_category": "Theatre Preview",
+        "group_order": "3"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.3819,
+          43.6385
+        ]
+      },
+      "properties": {
+        "title": "Apartheid, Little Men And Two People In One Chair",
+        "date": "2007-01-23",
+        "route": "/reviews/2007-01-23-apartheid-little-men-and-two-people-in-one-chair/",
+        "venue": "Harbourfront Centre",
+        "city": "Toronto",
+        "production_title": "Aalst - a True Story",
+        "article_category": "Theatre Preview",
+        "group_order": "4"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.3819,
+          43.6385
+        ]
+      },
+      "properties": {
+        "title": "Apartheid, Little Men And Two People In One Chair",
+        "date": "2007-01-23",
+        "route": "/reviews/2007-01-23-apartheid-little-men-and-two-people-in-one-chair/",
+        "venue": "Harbourfront Centre",
+        "city": "Toronto",
+        "production_title": "Particularly in the Heartland",
+        "article_category": "Theatre Preview",
+        "group_order": "5"
       }
     },
     {
@@ -19671,9 +19691,9 @@
         ]
       },
       "properties": {
-        "title": "'Waiting For The Major: Three Men Dance On Edge Of Despair In What Lies Before",
+        "title": "Waiting For The Major: Three Men Dance On Edge Of Despair In What Lies Before Us",
         "date": "2007-01-27",
-        "route": "/reviews/2007-01-27-waiting-for-the-major-three-men-dance-on-edge-of-despair-in-what-lies-before/",
+        "route": "/reviews/2007-01-27-waiting-for-the-major-three-men-dance-on-edge-of-despair-in-what-lies-before-us/",
         "venue": "Berkeley Street Theatre",
         "city": "Toronto",
         "production_title": "What Lies Before Us",
@@ -19791,9 +19811,9 @@
         ]
       },
       "properties": {
-        "title": "'Actors Lurch Across The Stage: Where's JonahS Big Blue Friend When You Need",
+        "title": "Actors Lurch Across The Stage: Where's Jonah's Big Blue Friend When You Need Him?",
         "date": "2007-02-24",
-        "route": "/reviews/2007-02-24-actors-lurch-across-the-stage-where-s-jonahs-big-blue-friend-when-you-need/",
+        "route": "/reviews/2007-02-24-actors-lurch-across-the-stage-where-s-jonah-s-big-blue-friend-when-you-need-him/",
         "venue": "Theatre Passe Muraille",
         "city": "Toronto",
         "production_title": "The Sheep and the Whale",
@@ -19851,9 +19871,9 @@
         ]
       },
       "properties": {
-        "title": "'Devastation All Around: There's A Certain Spark Missing In Wajdi Mouawad's",
+        "title": "Devastation All Around: There's A Certain Spark Missing In Wajdi Mouawad's Scorched",
         "date": "2007-03-03",
-        "route": "/reviews/2007-03-03-devastation-all-around-there-s-a-certain-spark-missing-in-wajdi-mouawad-s/",
+        "route": "/reviews/2007-03-03-devastation-all-around-there-s-a-certain-spark-missing-in-wajdi-mouawad-s-scorched/",
         "venue": "Tarragon Theatre",
         "city": "Toronto",
         "production_title": "Scorched",
@@ -19911,9 +19931,9 @@
         ]
       },
       "properties": {
-        "title": "'Cartoon History Of Canada: Outstanding Acting In VideoCabaret's Seventh",
+        "title": "Cartoon History Of Canada: Outstanding Acting In VideoCabaret's Seventh Instalment",
         "date": "2007-03-10",
-        "route": "/reviews/2007-03-10-cartoon-history-of-canada-outstanding-acting-in-videocabaret-s-seventh/",
+        "route": "/reviews/2007-03-10-cartoon-history-of-canada-outstanding-acting-in-videocabaret-s-seventh-instalment/",
         "venue": "Cameron House",
         "city": "Toronto",
         "production_title": "The Saskatchewan Rebellion",
@@ -20256,7 +20276,7 @@
         "route": "/reviews/2007-05-26-in-the-distillery-it-takes-two-villages-marion-bridge-brings-cape-breton/",
         "venue": "Young Centre for the Performing Arts",
         "city": "Toronto",
-        "production_title": "Marion Bridge / Our Town",
+        "production_title": "Marion Bridge; Our Town",
         "article_category": "Theatre Review",
         "group_order": null
       }
@@ -20351,9 +20371,9 @@
         ]
       },
       "properties": {
-        "title": "'In Search Of A Homebody: Tony KushnerS Production Is A Monologue With A Play",
+        "title": "In Search Of A Homebody: Tony Kushner's Production Is A Monologue With A Play Attached",
         "date": "2007-06-02",
-        "route": "/reviews/2007-06-02-in-search-of-a-homebody-tony-kushners-production-is-a-monologue-with-a-play/",
+        "route": "/reviews/2007-06-02-in-search-of-a-homebody-tony-kushner-s-production-is-a-monologue-with-a-play-attached/",
         "venue": "Berkeley Street Theatre",
         "city": "Toronto",
         "production_title": "Homebody/Kabul",
@@ -20451,6 +20471,26 @@
         ]
       },
       "properties": {
+        "title": "Much Sharper Than a Serpent's Tooth",
+        "date": "2007-06-13",
+        "route": "/reviews/2007-06-13-much-sharper-than-a-serpent-s-tooth/",
+        "venue": "Festival Theatre",
+        "city": "Stratford, Ontario",
+        "production_title": "The Merchant of Venice",
+        "article_category": "Theatre Review",
+        "group_order": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.9686,
+          43.3744
+        ]
+      },
+      "properties": {
         "title": "Much Sharper Than a Serpents Tooth",
         "date": "2007-06-13",
         "route": "/reviews/2007-06-13-much-sharper-than-a-serpents-tooth/",
@@ -20491,12 +20531,12 @@
         ]
       },
       "properties": {
-        "title": "No Gentrification In Walkerville; George F. WalkerS Run-Down Toronto Continues",
+        "title": "No Gentrification In Walkerville; George F. Walker's Run-Down Toronto Continues",
         "date": "2007-06-16",
-        "route": "/reviews/2007-06-16-no-gentrification-in-walkerville-george-f-walkers-run-down-toronto-continues/",
+        "route": "/reviews/2007-06-16-no-gentrification-in-walkerville-george-f-walker-s-run-down-toronto-continues/",
         "venue": "Factory Theatre; Factory Theatre Studio",
-        "city": "",
-        "production_title": "Better Living / Tough!",
+        "city": "Toronto",
+        "production_title": "Better Living; Tough!",
         "article_category": "Theatre Review",
         "group_order": null
       }
@@ -21026,26 +21066,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -79.3832,
-          43.6532
-        ]
-      },
-      "properties": {
-        "title": "The King And I And Many More; The Tudors Makes Royals Into History's Celebs",
-        "date": "2007-10-02",
-        "route": "/reviews/2007-10-02-the-king-and-i-and-many-more-the-tudors-makes-royals-into-history-s-celebs/",
-        "venue": "",
-        "city": "Toronto",
-        "production_title": "The Tudors",
-        "article_category": "Television Review",
-        "group_order": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -75.6939,
           45.4233
         ]
@@ -21091,9 +21111,9 @@
         ]
       },
       "properties": {
-        "title": "What's the Thing Again?; Oh right, the play! Why Not Theatre remembers this well",
+        "title": "What's the Thing Again? Oh Right, the Play!",
         "date": "2007-10-13",
-        "route": "/reviews/2007-10-13-what-s-the-thing-again-oh-right-the-play-why-not-theatre-remembers-this-well/",
+        "route": "/reviews/2007-10-13-what-s-the-thing-again-oh-right-the-play/",
         "venue": "Winchester Street Theatre",
         "city": "Toronto",
         "production_title": "The Prince Hamlet",
@@ -21106,38 +21126,18 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -79.3832,
-          43.6532
+          -79.3668,
+          43.666
         ]
       },
       "properties": {
-        "title": "Even Drug Dealers Can Use A Laugh Track; Weeds Arrives At A Crossroads Between",
-        "date": "2007-10-17",
-        "route": "/reviews/2007-10-17-even-drug-dealers-can-use-a-laugh-track-weeds-arrives-at-a-crossroads-between/",
-        "venue": "",
+        "title": "What's the Thing Again?; Oh right, the play! Why Not Theatre remembers this well",
+        "date": "2007-10-13",
+        "route": "/reviews/2007-10-13-what-s-the-thing-again-oh-right-the-play-why-not-theatre-remembers-this-well/",
+        "venue": "Winchester Street Theatre",
         "city": "Toronto",
-        "production_title": "Weeds",
-        "article_category": "Television Review",
-        "group_order": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -79.4163,
-          43.7001
-        ]
-      },
-      "properties": {
-        "title": "Tinkering With Tv Gums Up Their Flair; Da Kink In My Hair Struggles To Adapt",
-        "date": "2007-10-19",
-        "route": "/reviews/2007-10-19-tinkering-with-tv-gums-up-their-flair-da-kink-in-my-hair-struggles-to-adapt/",
-        "venue": "",
-        "city": "Toronto",
-        "production_title": "'da Kink in My Hair",
-        "article_category": "Television Review",
+        "production_title": "The Prince Hamlet",
+        "article_category": "Theatre Review",
         "group_order": null
       }
     },
@@ -21218,26 +21218,6 @@
         "city": "Toronto",
         "production_title": "The Drawer Boy",
         "article_category": "Theatre Review",
-        "group_order": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -79.3832,
-          43.6532
-        ]
-      },
-      "properties": {
-        "title": "It's Time To Lose That 1950s Mentality; Series All About TV Snobs",
-        "date": "2007-11-07",
-        "route": "/reviews/2007-11-07-it-s-time-to-lose-that-1950s-mentality-series-all-about-tv-snobs/",
-        "venue": "",
-        "city": "Toronto",
-        "production_title": "All About TV Snobs",
-        "article_category": "Opinion Piece",
         "group_order": null
       }
     },
@@ -21478,26 +21458,6 @@
         "city": "Toronto",
         "production_title": "It's a Wonderful Death!",
         "article_category": "Theatre Review",
-        "group_order": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -79.3832,
-          43.6532
-        ]
-      },
-      "properties": {
-        "title": "Plots That Dare Not Show Reality? Fuhgedaboutem; From The Sopranos To The Coen",
-        "date": "2007-12-31",
-        "route": "/reviews/2007-12-31-plots-that-dare-not-show-reality-fuhgedaboutem-from-the-sopranos-to-the-coen/",
-        "venue": "",
-        "city": "Toronto",
-        "production_title": "2007 Pop Culture Year in Review",
-        "article_category": "Opinion Piece",
         "group_order": null
       }
     },
@@ -21814,7 +21774,7 @@
         "title": "Do As She Does And As She Says",
         "date": "2008-02-27",
         "route": "/reviews/2008-02-27-do-as-she-does-and-as-she-says/",
-        "venue": "Stratford Festival",
+        "venue": "",
         "city": "Stratford, Ontario",
         "production_title": "Birmingham Conservatory for Classical Training",
         "article_category": "Profile",
@@ -22286,26 +22246,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -118.2437,
-          34.0522
-        ]
-      },
-      "properties": {
-        "title": "'Narcissism Cubed: The Hills Is Just Like Reality, Which Is Why It's Easier",
-        "date": "2008-05-12",
-        "route": "/reviews/2008-05-12-narcissism-cubed-the-hills-is-just-like-reality-which-is-why-it-s-easier/",
-        "venue": "",
-        "city": "Los Angeles",
-        "production_title": "The Hills",
-        "article_category": "Television Review",
-        "group_order": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -79.4111,
           43.7615
         ]
@@ -22378,26 +22318,6 @@
         "city": "Toronto",
         "production_title": "'Night, Mother",
         "article_category": "Theatre Review",
-        "group_order": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -80.9686,
-          43.3744
-        ]
-      },
-      "properties": {
-        "title": "It's Bigger. It's Bolder. It's Possibly The Best Ever; Stratford Fest; Actors",
-        "date": "2008-05-26",
-        "route": "/reviews/2008-05-26-it-s-bigger-it-s-bolder-it-s-possibly-the-best-ever-stratford-fest-actors-2/",
-        "venue": "",
-        "city": "Stratford, Ontario",
-        "production_title": "",
-        "article_category": "Theatre Preview",
         "group_order": null
       }
     },
@@ -22746,26 +22666,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -79.3832,
-          43.6532
-        ]
-      },
-      "properties": {
-        "title": "As Long As No One Knows Do-Re-Mi, It's A Fair Fight; The Search For Canada's",
-        "date": "2008-06-23",
-        "route": "/reviews/2008-06-23-as-long-as-no-one-knows-do-re-mi-it-s-a-fair-fight-the-search-for-canada-s/",
-        "venue": "",
-        "city": "Toronto",
-        "production_title": "How Do You Solve a Problem Like Maria?",
-        "article_category": "Television Review",
-        "group_order": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -79.4937,
           43.6514
         ]
@@ -22854,7 +22754,7 @@
         "title": "A Life Of Rhyme; Simon Callow Is Bringing To Stratford The Closest Thing Shakespeare",
         "date": "2008-07-10",
         "route": "/reviews/2008-07-10-a-life-of-rhyme-simon-callow-is-bringing-to-stratford-the-closest-thing-shakespeare-2/",
-        "venue": "Festival Theatre",
+        "venue": "",
         "city": "Stratford, Ontario",
         "production_title": "There Reigns Love",
         "article_category": "Theatre Preview",
@@ -23026,26 +22926,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -74.006,
-          40.7128
-        ]
-      },
-      "properties": {
-        "title": "Sparing The Glamour, Serving The Dirt; Being One Of The Mad Men Is Just Another",
-        "date": "2008-08-01",
-        "route": "/reviews/2008-08-01-sparing-the-glamour-serving-the-dirt-being-one-of-the-mad-men-is-just-another/",
-        "venue": "",
-        "city": "New York",
-        "production_title": "Mad Men",
-        "article_category": "Television Review",
-        "group_order": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -79.3793,
           43.653
         ]
@@ -23058,26 +22938,6 @@
         "city": "Toronto",
         "production_title": "Avenue Q",
         "article_category": "Musical Review",
-        "group_order": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -3.1791,
-          51.4816
-        ]
-      },
-      "properties": {
-        "title": "We'll Always Have Freebooting: Torchwood Is Stronger On Style Than Story",
-        "date": "2008-08-07",
-        "route": "/reviews/2008-08-07-we-ll-always-have-freebooting-torchwood-is-stronger-on-style-than-story/",
-        "venue": "",
-        "city": "Cardiff",
-        "production_title": "Torchwood",
-        "article_category": "Television Review",
         "group_order": null
       }
     },
@@ -23117,26 +22977,6 @@
         "venue": "Cameron House",
         "city": "Toronto",
         "production_title": "The Pastor Phelps Project",
-        "article_category": "Theatre Review",
-        "group_order": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -79.4026,
-          43.6486
-        ]
-      },
-      "properties": {
-        "title": "Three Plays, One Night; Summerworks Ends Tomorrow, So This Is Your Last Chance",
-        "date": "2008-08-16",
-        "route": "/reviews/2008-08-16-three-plays-one-night-summerworks-ends-tomorrow-so-this-is-your-last-chance/",
-        "venue": "Theatre Passe Muraille Mainspace",
-        "city": "Toronto",
-        "production_title": "SummerWorks Festival",
         "article_category": "Theatre Review",
         "group_order": null
       }
@@ -23266,26 +23106,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -118.2437,
-          34.0522
-        ]
-      },
-      "properties": {
-        "title": "Why Less Can Be More; The Debut Of Fringe Has It All, Literally",
-        "date": "2008-09-09",
-        "route": "/reviews/2008-09-09-why-less-can-be-more-the-debut-of-fringe-has-it-all-literally/",
-        "venue": "",
-        "city": "Los Angeles",
-        "production_title": "Fringe",
-        "article_category": "Television Review",
-        "group_order": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -79.4129,
           43.675
         ]
@@ -23336,28 +23156,8 @@
         "route": "/reviews/2008-09-20-mournful-mythic-and-middling-obsidian-theatre-company-s-double-bill-has/",
         "venue": "Berkeley Street Theatre Upstairs",
         "city": "Toronto",
-        "production_title": "Late and Black Medea",
+        "production_title": "Late; Black Medea",
         "article_category": "Theatre Review",
-        "group_order": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -0.1278,
-          51.5074
-        ]
-      },
-      "properties": {
-        "title": "Fighting The Good, Clean Fight: Drama Turns The Lens On A Crusade For Censorship",
-        "date": "2008-09-26",
-        "route": "/reviews/2008-09-26-fighting-the-good-clean-fight-drama-turns-the-lens-on-a-crusade-for-censorship/",
-        "venue": "",
-        "city": "London, England",
-        "production_title": "Filth: The Mary Whitehouse Story",
-        "article_category": "Television Review",
         "group_order": null
       }
     },
@@ -23398,26 +23198,6 @@
         "city": "Toronto",
         "production_title": "The Crackwalker",
         "article_category": "Theatre Review",
-        "group_order": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -79.3832,
-          43.6532
-        ]
-      },
-      "properties": {
-        "title": "Assimilation",
-        "date": "2008-10-01",
-        "route": "/reviews/2008-10-01-assimilation/",
-        "venue": "",
-        "city": "Toronto",
-        "production_title": "Little Mosque on the Prairie",
-        "article_category": "Television Review",
         "group_order": null
       }
     },
@@ -23746,26 +23526,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -118.2437,
-          34.0522
-        ]
-      },
-      "properties": {
-        "title": "Agent Of Change; Jack Bauer Will Still Be A Lethal Weapon In His Much-Hyped",
-        "date": "2008-11-22",
-        "route": "/reviews/2008-11-22-agent-of-change-jack-bauer-will-still-be-a-lethal-weapon-in-his-much-hyped/",
-        "venue": "",
-        "city": "Los Angeles",
-        "production_title": "24: Redemption",
-        "article_category": "Television Review",
-        "group_order": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -79.3641,
           43.6506
         ]
@@ -23777,26 +23537,6 @@
         "venue": "Berkeley Street Theatre",
         "city": "Toronto",
         "production_title": "Festen",
-        "article_category": "Theatre Review",
-        "group_order": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -79.4026,
-          43.6486
-        ]
-      },
-      "properties": {
-        "title": "The Relationships Worth Remembering; Trudeau Stories And Legoland Both Deserve",
-        "date": "2008-11-29",
-        "route": "/reviews/2008-11-29-the-relationships-worth-remembering-trudeau-stories-and-legoland-both-deserve/",
-        "venue": "Theatre Passe Muraille; Theatre Passe Muraille Backspace",
-        "city": "Toronto",
-        "production_title": "Trudeau Stories / Legoland",
         "article_category": "Theatre Review",
         "group_order": null
       }
@@ -24674,9 +24414,9 @@
         "title": "Back To The Future; Stratford's General Director Has High Hopes For A 400-Year-Old",
         "date": "2009-05-30",
         "route": "/reviews/2009-05-30-back-to-the-future-stratford-s-general-director-has-high-hopes-for-a-400-year-old/",
-        "venue": "Festival Theatre",
+        "venue": "",
         "city": "Stratford, Ontario",
-        "production_title": "Opening Week At A Glance",
+        "production_title": "",
         "article_category": "Profile",
         "group_order": null
       }
@@ -24946,26 +24686,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -83.0458,
-          42.3314
-        ]
-      },
-      "properties": {
-        "title": "Movin' On Up; HBO Proves Itself Recession-Ready With Hung, A Tale Of Economic",
-        "date": "2009-07-09",
-        "route": "/reviews/2009-07-09-movin-on-up-hbo-proves-itself-recession-ready-with-hung-a-tale-of-economic/",
-        "venue": "",
-        "city": "Detroit",
-        "production_title": "Hung",
-        "article_category": "Television Review",
-        "group_order": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -79.0711,
           43.2557
         ]
@@ -25196,7 +24916,7 @@
         "route": "/reviews/2009-09-03-everything-old-is-new-again/",
         "venue": "Studio Theatre",
         "city": "Stratford, Ontario",
-        "production_title": "The Trespassers, Rice Boy And Zastrozzi",
+        "production_title": "The Trespassers; Rice Boy; Zastrozzi",
         "article_category": "Theatre Review",
         "group_order": null
       }
@@ -25414,8 +25134,8 @@
         "title": "A Mama''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''s Boy Stares Down His Problems In That Face; While Yellowman, On Prejudice",
         "date": "2009-11-07",
         "route": "/reviews/2009-11-07-a-mama-s-boy-stares-down-his-problems-in-that-face-while-yellowman-on-prejudice/",
-        "venue": "",
-        "city": "",
+        "venue": "Berkeley Street Theatre",
+        "city": "Toronto",
         "production_title": "That Face / Yellowman",
         "article_category": "Theatre Review",
         "group_order": null
@@ -25551,13 +25271,13 @@
         ]
       },
       "properties": {
-        "title": "Mothers, Maids And Melodies",
-        "date": "2009-11-26",
-        "route": "/reviews/2009-11-26-mothers-maids-and-melodies/",
-        "venue": "Panasonic Theatre; Lorraine Kimsa Theatre for Young People",
+        "title": "In The Company Of The World's Most Powerful Men",
+        "date": "2009-11-27",
+        "route": "/reviews/2009-11-27-in-the-company-of-the-world-s-most-powerful-men/",
+        "venue": "Royal Alexandra Theatre",
         "city": "Toronto",
-        "production_title": "My Mother's Lesbian Jewish Wiccan Wedding / The Princess and the",
-        "article_category": "Musical Review",
+        "production_title": "Stuff Happens",
+        "article_category": "Theatre Review",
         "group_order": null
       }
     },
@@ -25566,17 +25286,17 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -79.3876,
-          43.6474
+          -79.3819,
+          43.6385
         ]
       },
       "properties": {
-        "title": "In The Company Of The World's Most Powerful Men",
-        "date": "2009-11-27",
-        "route": "/reviews/2009-11-27-in-the-company-of-the-world-s-most-powerful-men/",
-        "venue": "Royal Alexandra Theatre",
+        "title": "We'd Go Mad Too if We Were Involved with Him; Gord Rand is so Tortured, He's",
+        "date": "2009-11-28",
+        "route": "/reviews/2009-11-28-we-d-go-mad-too-if-we-were-involved-with-him-gord-rand-is-so-tortured-he-s/",
+        "venue": "Enwave Theatre",
         "city": "Toronto",
-        "production_title": "Stuff Happens",
+        "production_title": "Hamlet",
         "article_category": "Theatre Review",
         "group_order": null
       }
@@ -25694,7 +25414,7 @@
         "title": "Connecting The Dots In This Plea For Tolerance; With Courageous And East Of",
         "date": "2010-01-09",
         "route": "/reviews/2010-01-09-connecting-the-dots-in-this-plea-for-tolerance-with-courageous-and-east-of/",
-        "venue": "Tarragon Theatre; Tarragon Theatre Extra Space",
+        "venue": "Tarragon Theatre",
         "city": "Toronto",
         "production_title": "Courageous",
         "article_category": "Theatre Review",
@@ -25878,7 +25598,7 @@
         "city": "Toronto",
         "production_title": "Hush",
         "article_category": "Theatre Review",
-        "group_order": null
+        "group_order": "1"
       }
     },
     {
@@ -26094,7 +25814,7 @@
         "title": "Jazz Baptism; After His Elegy For Baltimore, One Would Expect David Simon's Treme To Be A Lament For New Orleans. Happily, It's A Celebration",
         "date": "2010-04-10",
         "route": "/reviews/2010-04-10-jazz-baptism-after-his-elegy-for-baltimore-one-would-expect-david-simon-s-treme-to-be-a-lament-for-new-orleans-happily-it-s-a-celebration/",
-        "venue": "New Orleans",
+        "venue": "",
         "city": "New Orleans",
         "production_title": "Treme",
         "article_category": "Television Review",
@@ -26134,8 +25854,8 @@
         "title": "Some Serious Comedy",
         "date": "2010-04-16",
         "route": "/reviews/2010-04-16-some-serious-comedy/",
-        "venue": "",
-        "city": "",
+        "venue": "Young Centre for the Performing Arts",
+        "city": "Toronto",
         "production_title": "Clerambard; Cock-A-Doodle Dandy",
         "article_category": "Theatre Review",
         "group_order": null
@@ -26218,26 +25938,6 @@
         "city": "Toronto",
         "production_title": "Faith Healer",
         "article_category": "Theatre Review",
-        "group_order": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -73.9845,
-          40.759
-        ]
-      },
-      "properties": {
-        "title": "A City Besotted With Sondheim; At 80, Songman Remains The Talk Of The Town",
-        "date": "2010-05-08",
-        "route": "/reviews/2010-05-08-a-city-besotted-with-sondheim-at-80-songman-remains-the-talk-of-the-town/",
-        "venue": "",
-        "city": "New York",
-        "production_title": "A Little Night Music / Sondheim on Sondheim / Next to Normal",
-        "article_category": "Music Review",
         "group_order": null
       }
     },
@@ -26597,26 +26297,6 @@
         "venue": "Panasonic Theatre",
         "city": "Toronto",
         "production_title": "Love, Loss, and What I Wore",
-        "article_category": "Theatre Review",
-        "group_order": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -79.4028,
-          43.6455
-        ]
-      },
-      "properties": {
-        "title": "Selves, Evolved",
-        "date": "2010-08-12",
-        "route": "/reviews/2010-08-12-selves-evolved/",
-        "venue": "Factory Theatre",
-        "city": "Toronto",
-        "production_title": "Iphigenia at Aulis / Or / Redheaded Stepchild / Miss Caledonia",
         "article_category": "Theatre Review",
         "group_order": null
       }
@@ -27337,7 +27017,7 @@
         "venue": "Studio Theatre",
         "city": "Stratford, Ontario",
         "production_title": "Barrymore",
-        "article_category": "Theatre Review",
+        "article_category": "Theatre Interview",
         "group_order": null
       }
     },
@@ -27476,7 +27156,7 @@
         "route": "/reviews/2011-01-22-memories-of-former-lives-and-loves-the-final-instalment-of-the-mill-keeps/",
         "venue": "Young Centre for the Performing Arts",
         "city": "Toronto",
-        "production_title": "Ash / The Mill",
+        "production_title": "Ash",
         "article_category": "Theatre Review",
         "group_order": null
       }
@@ -31196,7 +30876,7 @@
         "route": "/reviews/2013-03-02-chekhov-s-fun-a-curious-case-of-foreshadowing-plus-a-musical-diversion-into/",
         "venue": "Tarragon Theatre",
         "city": "Toronto",
-        "production_title": "And Slowly Beauty...",
+        "production_title": "And Slowly Beauty... / Do You Want What I Have Got?: A Craigslist Cantata",
         "article_category": "Theatre Review",
         "group_order": null
       }
@@ -31634,9 +31314,9 @@
         "title": "The Actor's Revenge; Venus In Furs Reverses Roles To Find A Masochist Waiting",
         "date": "2013-10-12",
         "route": "/reviews/2013-10-12-the-actor-s-revenge-venus-in-furs-reverses-roles-to-find-a-masochist-waiting/",
-        "venue": "Bluma Appel Theatre",
+        "venue": "Bluma Appel Theatre; Toronto Centre for the Arts Studio Theatre",
         "city": "Toronto",
-        "production_title": "Venus in Fur",
+        "production_title": "Venus in Fur / ...And Stockings for the Ladies",
         "article_category": "Theatre Review",
         "group_order": null
       }
@@ -33454,8 +33134,8 @@
         "title": "Meta Memory Lane; Soulpepper Returns To The Show That Defined It, Self-Referential",
         "date": "2015-09-19",
         "route": "/reviews/2015-09-19-meta-memory-lane-soulpepper-returns-to-the-show-that-defined-it-self-referential/",
-        "venue": "",
-        "city": "",
+        "venue": "Young Centre for the Performing Arts",
+        "city": "Toronto",
         "production_title": "The Play's the Thing / Happy Place",
         "article_category": "Theatre Review",
         "group_order": null
@@ -33654,9 +33334,9 @@
         "title": "He Made Me Believe; Remembering Stage Actor Brian Bedford",
         "date": "2016-01-26",
         "route": "/reviews/2016-01-26-he-made-me-believe-remembering-stage-actor-brian-bedford/",
-        "venue": "Stratford Festival",
+        "venue": "",
         "city": "Stratford, Ontario",
-        "production_title": "Brian Bedford",
+        "production_title": "",
         "article_category": "Obituary",
         "group_order": null
       }
@@ -35194,8 +34874,8 @@
         "title": "Mixed Bag; Rolling The Dice With TorontoS SummerWorks Festival",
         "date": "2017-08-09",
         "route": "/reviews/2017-08-09-mixed-bag-rolling-the-dice-with-torontos-summerworks-festival/",
-        "venue": "",
-        "city": "",
+        "venue": "Factory Theatre",
+        "city": "Toronto",
         "production_title": "Reality Theatre / These Violent Delights",
         "article_category": "Theatre Review",
         "group_order": null
