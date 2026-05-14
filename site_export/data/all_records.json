@@ -54278,9 +54278,9 @@
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
     "production_title": "False Admissions; Successful Strategies; Dancin'; Outlaw",
-    "company": "Shared Experience",
-    "venue": "Lyric Studio, Hammersmith; Drury Lane Theatre; Arts Theatre",
-    "city": "London, England",
+    "company": "",
+    "venue": "",
+    "city": "",
     "coordinates": [],
     "people": [
       "Bob Fosse",
@@ -54302,20 +54302,9 @@
       "Timberlake Wertenbaker"
     ],
     "roles": {
-      "director": [
-        "Mike Alfreds"
-      ],
-      "actors": [
-        "Maggie Wells",
-        "Holly Wilson",
-        "Philip Voss",
-        "James Smith",
-        "Sam Dale"
-      ],
-      "playwright": [
-        "Marivaux",
-        "Timberlake Wertenbaker"
-      ],
+      "director": [],
+      "actors": [],
+      "playwright": [],
       "composer_lyricist": [],
       "musical_director": [],
       "choreographer": [],
@@ -54329,15 +54318,9 @@
       "fight_director": [],
       "dramaturg": [],
       "producer": [],
-      "set_designer": [
-        "Paul Dart"
-      ],
-      "costume_designer": [
-        "Paul Dart"
-      ],
-      "lighting_designer": [
-        "Paul Dart"
-      ],
+      "set_designer": [],
+      "costume_designer": [],
+      "lighting_designer": [],
       "sound_designer": [],
       "musicians": [],
       "performers": [],
@@ -54346,15 +54329,86 @@
     "production_groups": [
       {
         "order": "1",
-        "production_title": "False Admissions"
+        "production_title": "False Admissions",
+        "company": [
+          "Shared Experience"
+        ],
+        "venue": [
+          "Lyric Studio, Hammersmith"
+        ],
+        "city": [
+          "London, England"
+        ],
+        "director": [
+          "Mike Alfreds"
+        ],
+        "actors": [
+          "Maggie Wells",
+          "Holly Wilson",
+          "Philip Voss"
+        ],
+        "playwright": [
+          "Marivaux"
+        ],
+        "set_designer": [
+          "Paul Dart"
+        ],
+        "costume_designer": [
+          "Paul Dart"
+        ],
+        "lighting_designer": [
+          "Paul Dart"
+        ],
+        "artists": [
+          "Timberlake Wertenbaker"
+        ]
       },
       {
         "order": "2",
-        "production_title": "Successful Strategies"
+        "production_title": "Successful Strategies",
+        "company": [
+          "Shared Experience"
+        ],
+        "venue": [
+          "Lyric Studio, Hammersmith"
+        ],
+        "city": [
+          "London, England"
+        ],
+        "director": [
+          "Mike Alfreds"
+        ],
+        "actors": [
+          "Holly Wilson",
+          "Philip Voss",
+          "James Smith",
+          "Sam Dale"
+        ],
+        "playwright": [
+          "Marivaux"
+        ],
+        "set_designer": [
+          "Paul Dart"
+        ],
+        "costume_designer": [
+          "Paul Dart"
+        ],
+        "lighting_designer": [
+          "Paul Dart"
+        ],
+        "artists": [
+          "Timberlake Wertenbaker"
+        ]
       },
       {
         "order": "3",
         "production_title": "Dancin'",
+        "venue": [
+          "Drury Lane Theatre"
+        ],
+        "city": [
+          "London, England"
+        ],
         "director": [
           "Bob Fosse"
         ],
@@ -54369,6 +54423,12 @@
       {
         "order": "4",
         "production_title": "Outlaw",
+        "venue": [
+          "Arts Theatre"
+        ],
+        "city": [
+          "London, England"
+        ],
         "director": [
           "Robert Gillespie"
         ],
