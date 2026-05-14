@@ -18,7 +18,6 @@ venue: Young Centre for the Performing Arts; Hummingbird Centre; Bluma Appel The
 city: Toronto
 coordinates: []
 editorial_status: done
-mentions: []
 tags: []
 automatic_tags:
 - Theater

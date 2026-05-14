@@ -1,4 +1,4 @@
-const DATA_URL = new URL("../site_export/data/public_reviews.json?v=84", import.meta.url);
+const DATA_URL = new URL("../site_export/data/public_reviews.json?v=85", import.meta.url);
 const CONTENT_ROOT = new URL("../site_export/content/reviews/", import.meta.url);
 const PAGE_SIZE = 36;
 const SHAKESPEARE_COLLECTION = "The Shakespeare Collection";
@@ -2910,23 +2910,6 @@ function articleProductionGroups(record) {
 
 function articleEntityLinks(record) {
   const grouped = articleProductionGroups(record);
-  const roleValues = [
-    ...(record.roles?.director || []),
-    ...(record.roles?.playwright || []),
-    ...(record.roles?.actors || []),
-    ...(record.roles?.composer_lyricist || []),
-    ...(record.roles?.musical_director || []),
-    ...(record.roles?.choreographer || []),
-    ...(record.roles?.set_designer || []),
-    ...(record.roles?.costume_designer || []),
-    ...(record.roles?.lighting_designer || []),
-    ...(record.roles?.sound_designer || []),
-    ...(record.roles?.performers || []),
-    ...(record.roles?.musicians || []),
-    ...(record.roles?.artists || []),
-  ];
-  const roleSlugs = new Set(roleValues.map(entitySlug));
-  const mentionedPeople = (record.people || []).filter((name) => !roleSlugs.has(entitySlug(name)));
   const groupedProductionValues = groupedEntityValues(record, "production_title");
   const groupedCompanyValues = groupedEntityValues(record, "company");
   const groupedVenueValues = groupedEntityValues(record, "venue");
@@ -2943,7 +2926,6 @@ function articleEntityLinks(record) {
 
   const peopleGroups = [
     ...ARTICLE_ROLE_GROUPS.map(([type, prefix, role, limit]) => [type, prefix, valuesExceptGrouped(record.roles?.[role] || [], groupedRoleValues(record, role)).slice(0, limit)]),
-    ["people", "Mentioned", mentionedPeople.slice(0, 8)],
   ].filter(([, , values]) => values.length);
 
   if (!grouped && !productionGroups.length && !contextGroups.length && !peopleGroups.length) return null;
@@ -2955,12 +2937,6 @@ function articleEntityLinks(record) {
   if (contextGroups.length) wrap.append(articleEntityGroup(grouped ? "Shared Context" : "Work", contextGroups, "context"));
   if (peopleGroups.length) wrap.append(articleEntityGroup("People", peopleGroups, "people"));
 
-  if (mentionedPeople.length > 8) {
-    const more = document.createElement("span");
-    more.className = "entity-more";
-    more.textContent = `+${mentionedPeople.length - 8} mentioned`;
-    wrap.querySelector(".article-entities:last-child")?.append(more);
-  }
   return wrap;
 }
 

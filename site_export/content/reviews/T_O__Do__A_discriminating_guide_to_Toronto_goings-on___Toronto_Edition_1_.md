@@ -16,7 +16,6 @@ venue: Berkeley Street Theatre Upstairs; The Grange Room at AGO; Factory Theatre
 city: Toronto
 coordinates: []
 editorial_status: done
-mentions: []
 tags: []
 automatic_tags:
 - Actors
