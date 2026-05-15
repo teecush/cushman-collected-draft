@@ -49,6 +49,32 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 3225
+    "word_count": 3225,
+    "display_schema": {
+      "work_type": "books",
+      "work_label": "Book",
+      "company_label": "Publisher",
+      "primary_browse": "books",
+      "secondary_browse": "book-authors"
+    },
+    "browse_entities": {
+      "books": [
+        "Romancing The Bard",
+        "Stratford Gold",
+        "Fifty Seasons at Stratford"
+      ],
+      "productions": [
+        "Fifty Seasons at Stratford",
+        "Romancing The Bard",
+        "Stratford Gold"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [],
+      "venues": [],
+      "cities": [],
+      "people": []
+    }
   }
 ]

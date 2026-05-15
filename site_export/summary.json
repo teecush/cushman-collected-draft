@@ -72,7 +72,38 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 928
+    "word_count": 928,
+    "display_schema": {
+      "work_type": "subjects",
+      "work_label": "Subject",
+      "company_label": "Company",
+      "primary_browse": "subjects",
+      "secondary_browse": "productions"
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Oedipus"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "National Theatre / Young Vic"
+      ],
+      "venues": [
+        "Young Vic"
+      ],
+      "cities": [
+        "London, England"
+      ],
+      "people": [
+        "Annabel Leventon",
+        "Roland Joffe",
+        "Ronald Pickup",
+        "Sophocles"
+      ]
+    }
   },
   "duplicate_canonical_links": 40
 }

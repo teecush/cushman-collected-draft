@@ -63,7 +63,38 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 941
+    "word_count": 941,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "John Barton",
+        "Much Ado About Nothing"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Royal Shakespeare Company"
+      ],
+      "venues": [],
+      "cities": [
+        "Stratford-upon-Avon"
+      ],
+      "people": [
+        "Donald Sinden",
+        "John Barton",
+        "John Woodvine",
+        "Judi Dench",
+        "William Shakespeare"
+      ]
+    }
   },
   {
     "slug": "1977-05-15-ten-years-of-stratford",
@@ -125,7 +156,37 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 1073
+    "word_count": 1073,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "John Barton",
+        "Peter Brook",
+        "The Other Place"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Royal Shakespeare Company"
+      ],
+      "venues": [],
+      "cities": [
+        "Stratford-upon-Avon"
+      ],
+      "people": [
+        "John Barton",
+        "Peter Brook",
+        "Peter Hall"
+      ]
+    }
   },
   {
     "slug": "1983-06-19-stratford-s-henry-viii",
@@ -187,7 +248,37 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 546
+    "word_count": 546,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Henry VIII",
+        "Richard Griffiths"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Royal Shakespeare Company"
+      ],
+      "venues": [],
+      "cities": [
+        "Stratford-upon-Avon"
+      ],
+      "people": [
+        "Gemma Jones",
+        "John Fletcher",
+        "Richard Griffiths",
+        "William Shakespeare"
+      ]
+    }
   },
   {
     "slug": "1990-11-03-theatre-reviews-among-london-s-many-offerings-are-the-flawless-ensemble",
@@ -240,7 +331,31 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 1199
+    "word_count": 1199,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Various London Theatres"
+      ],
+      "venues": [
+        "Various London Venues"
+      ],
+      "cities": [
+        "London, England"
+      ],
+      "people": []
+    }
   },
   {
     "slug": "1992-04-09-theatre-review-the-cost-of-living",
@@ -297,7 +412,36 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 527
+    "word_count": 527,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "The Cost of Living"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Green Thumb Theatre"
+      ],
+      "venues": [
+        "Young People's Theatre"
+      ],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "Morris Panych",
+        "Tim Battle"
+      ]
+    }
   },
   {
     "slug": "1993-01-19-call-him-irrepressible-too-appreciation-sammy-cahn-the-prolific-lyricist",
@@ -365,7 +509,35 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 745
+    "word_count": 745,
+    "display_schema": {
+      "work_type": "subjects",
+      "work_label": "Subject",
+      "company_label": "Company",
+      "primary_browse": "subjects",
+      "secondary_browse": "productions"
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Sammy Cahn"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [],
+      "venues": [],
+      "cities": [],
+      "people": [
+        "Frank Sinatra",
+        "Ira Gershwin",
+        "Jimmie Lunceford",
+        "Jimmy Van Heusen",
+        "Jule Styne",
+        "Sammy Cahn",
+        "Yip Harburg"
+      ]
+    }
   },
   {
     "slug": "1996-05-01-musicals-much-contrary-to-rumours-of-their-demise-megamusicals-are-here",
@@ -421,7 +593,30 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 2171
+    "word_count": 2171,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Megamusicals"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [],
+      "venues": [],
+      "cities": [],
+      "people": [
+        "Cameron Mackintosh",
+        "Garth Drabinsky"
+      ]
+    }
   },
   {
     "slug": "1997-09-06-classics-buoy-atlantic-festival",
@@ -474,7 +669,33 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 1346
+    "word_count": 1346,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Tartuffe, The Importance of Being Earnest, Uncle Vanya"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Atlantic Theatre Festival"
+      ],
+      "venues": [
+        "Atlantic Theatre Festival"
+      ],
+      "cities": [
+        "Wolfville"
+      ],
+      "people": []
+    }
   },
   {
     "slug": "1999-02-06-selected-listings",
@@ -522,7 +743,25 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 1876
+    "word_count": 1876,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [],
+      "venues": [],
+      "cities": [],
+      "people": []
+    }
   },
   {
     "slug": "1999-03-02-shakespeare-as-it-was-meant-to-be-performed-whatever-that-means",
@@ -577,7 +816,33 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 1220
+    "word_count": 1220,
+    "display_schema": {
+      "work_type": "subjects",
+      "work_label": "Subject",
+      "company_label": "Company",
+      "primary_browse": "subjects",
+      "secondary_browse": "productions"
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Stratford Festival Conservatory for Classical Theatre Training"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Stratford Festival"
+      ],
+      "venues": [
+        "Stratford Festival"
+      ],
+      "cities": [
+        "Stratford, Ontario"
+      ],
+      "people": []
+    }
   },
   {
     "slug": "1999-05-18-there-s-no-way-the-performers-can-dance-their-way-out-of-this-one-2",
@@ -657,7 +922,45 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 767
+    "word_count": 767,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Anything Goes"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Reprise"
+      ],
+      "venues": [
+        "Jane Mallett Theatre"
+      ],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "Anne Wootten",
+        "Barbara Barsky",
+        "Brian Hill",
+        "Cole Porter",
+        "Guy Bolton",
+        "Howard Lindsay",
+        "John Weidman",
+        "P. G. Wodehouse",
+        "Russel Crouse",
+        "Scott Walker",
+        "Timothy Crouse"
+      ]
+    }
   },
   {
     "slug": "1999-06-03-moments-of-magic-among-the-prose",
@@ -733,7 +1036,43 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 826
+    "word_count": 826,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "A Midsummer Night's Dream"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Stratford Festival"
+      ],
+      "venues": [
+        "Festival Theatre"
+      ],
+      "cities": [
+        "Stratford, Ontario"
+      ],
+      "people": [
+        "Brian Bedford",
+        "Jonathan Goad",
+        "Juan Chioran",
+        "Keith Dinicol",
+        "Michelle Giroux",
+        "Richard Monette",
+        "Seana McKenna",
+        "Steven Sutcliffe",
+        "William Shakespeare"
+      ]
+    }
   },
   {
     "slug": "1999-06-22-the-drawer-boy-gets-load-of-doras-but-soulpepper-s-don-carlos-is-overlooked-2",
@@ -783,7 +1122,27 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 854
+    "word_count": 854,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Dora Mavor Moore Awards 1999"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [],
+      "venues": [],
+      "cities": [],
+      "people": []
+    }
   },
   {
     "slug": "1999-07-22-delightful-lunchtime-wooing-follows-shaw-s-formula-from-a-to-z-2",
@@ -853,7 +1212,40 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 706
+    "word_count": 706,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Village Wooing"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Shaw Festival"
+      ],
+      "venues": [
+        "Royal George Theatre"
+      ],
+      "cities": [
+        "Niagara-on-the-Lake"
+      ],
+      "people": [
+        "Barbara Gordon",
+        "Camille James",
+        "Duncan Stewart",
+        "George Bernard Shaw",
+        "Neil Barclay",
+        "Nikki Lundmark"
+      ]
+    }
   },
   {
     "slug": "2000-02-04-the-day-dr-jekyll-had-to-look-after-ms-hyde-s-baby-2",
@@ -912,7 +1304,36 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 824
+    "word_count": 824,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Jekyll"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Les Vaches"
+      ],
+      "venues": [
+        "Canadia dell'Arte Studio Theatre"
+      ],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "Erika Hennebury",
+        "Ruth Madoc-Jones"
+      ]
+    }
   },
   {
     "slug": "2001-03-03-t-o-do-selected-listings",
@@ -960,7 +1381,29 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 2207
+    "word_count": 2207,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Selected Listings"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [],
+      "venues": [],
+      "cities": [
+        "Toronto"
+      ],
+      "people": []
+    }
   },
   {
     "slug": "2002-11-08-the-return-of-the-king-actor-christopher-plummer-in-town-to-receive-an-honorary-2",
@@ -1027,7 +1470,38 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 1685
+    "word_count": 1685,
+    "display_schema": {
+      "work_type": "subjects",
+      "work_label": "Subject",
+      "company_label": "Company",
+      "primary_browse": "subjects",
+      "secondary_browse": "productions"
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Christopher Plummer Profile"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Stratford Festival"
+      ],
+      "venues": [
+        "Stratford Festival"
+      ],
+      "cities": [
+        "Stratford, Ontario"
+      ],
+      "people": [
+        "Christopher Plummer",
+        "Domini Blythe",
+        "Jonathan Miller",
+        "William Shakespeare"
+      ]
+    }
   },
   {
     "slug": "2003-05-26-stratford-s-year-of-living-adventurously",
@@ -1082,7 +1556,33 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 1275
+    "word_count": 1275,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Stratford Festival Season"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Stratford Festival"
+      ],
+      "venues": [
+        "Stratford Festival"
+      ],
+      "cities": [
+        "Stratford, Ontario"
+      ],
+      "people": []
+    }
   },
   {
     "slug": "2003-07-21-new-releases",
@@ -1138,7 +1638,31 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 622
+    "word_count": 622,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Recording",
+      "company_label": "Label",
+      "primary_browse": "productions",
+      "secondary_browse": "musicians"
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Shade"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [],
+      "venues": [],
+      "cities": [],
+      "people": [
+        "Aaron Davis",
+        "David Piltch",
+        "Holly Cole"
+      ]
+    }
   },
   {
     "slug": "2004-03-30-the-musical-brat-pack-jamie-cullum-joins-crop-of-jazz-singers-reinventing",
@@ -1194,7 +1718,35 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 1155
+    "word_count": 1155,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Concert",
+      "company_label": "Presenter",
+      "primary_browse": "productions",
+      "secondary_browse": "musicians"
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Jamie Cullum Concert"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [],
+      "venues": [
+        "Top O' the Senator"
+      ],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "Geoff Gascoyne",
+        "Jamie Cullum",
+        "Sebastian DeKrom"
+      ]
+    }
   },
   {
     "slug": "2004-04-08-weekend-agenda-our-critics-guide-to-the-best-of-toronto",
@@ -1242,7 +1794,29 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 1141
+    "word_count": 1141,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Weekend Agenda"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [],
+      "venues": [],
+      "cities": [
+        "Toronto"
+      ],
+      "people": []
+    }
   },
   {
     "slug": "2004-07-26-two-shots-of-jazzy-matt-dusk-and-david-mahogany-cast-themselves-in-the-moulds",
@@ -1296,7 +1870,32 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 1488
+    "word_count": 1488,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Recording",
+      "company_label": "Label",
+      "primary_browse": "productions",
+      "secondary_browse": "musicians"
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Two Shots / To Johnny Hartman / Big Band"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [],
+      "venues": [],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "Kevin Mahogany",
+        "Matt Dusk"
+      ]
+    }
   },
   {
     "slug": "2004-09-01-stage-satire-second-only-to-acclaimed-noises-off",
@@ -1369,7 +1968,42 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 997
+    "word_count": 997,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Harlequinade"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Shaw Festival"
+      ],
+      "venues": [
+        "Royal George Theatre"
+      ],
+      "cities": [
+        "Niagara-on-the-Lake"
+      ],
+      "people": [
+        "Diana Donnelly",
+        "Goldie Semple",
+        "Graeme Somerville",
+        "Kevin Bundy",
+        "Mark Adrians",
+        "Neil Munro",
+        "Peter Hutt",
+        "Terence Rattigan"
+      ]
+    }
   },
   {
     "slug": "2004-11-11-fiddling-with-family-history",
@@ -1438,7 +2072,40 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 661
+    "word_count": 661,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "No Great Mischief"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Tarragon Theatre"
+      ],
+      "venues": [
+        "Tarragon Theatre"
+      ],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "David Fox",
+        "David S. Young",
+        "Jody Richardson",
+        "Nancy Palk",
+        "R.H. Thomson",
+        "Richard Rose"
+      ]
+    }
   },
   {
     "slug": "2005-01-29-dey-s-masterwork-is-joyously-written-and-unimprovably-acted",
@@ -1502,7 +2169,38 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 71
+    "word_count": 71,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Trout Stanley"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Factory Theatre"
+      ],
+      "venues": [
+        "Factory Theatre"
+      ],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "Claudia Dey",
+        "Gord Rand",
+        "Melody A. Johnson",
+        "Michelle Giroux"
+      ]
+    }
   },
   {
     "slug": "2005-02-05-a-whistle-in-the-dark",
@@ -1571,7 +2269,40 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 94
+    "word_count": 94,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "A Whistle in the Dark"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "The Company Theatre"
+      ],
+      "venues": [
+        "Berkeley Street Theatre Upstairs"
+      ],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "Allan Hawco",
+        "Jason Byrne",
+        "Jonathan Goad",
+        "Joseph Ziegler",
+        "Philip Riccio",
+        "Tom Murphy"
+      ]
+    }
   },
   {
     "slug": "2005-02-05-trout-stanley",
@@ -1638,7 +2369,39 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 93
+    "word_count": 93,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Trout Stanley"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Factory Theatre"
+      ],
+      "venues": [
+        "Factory Theatre"
+      ],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "Claudia Dey",
+        "Eda Holmes",
+        "Gord Rand",
+        "Melody A. Johnson",
+        "Michelle Giroux"
+      ]
+    }
   },
   {
     "slug": "2005-02-12-the-glass-menagerie",
@@ -1701,7 +2464,35 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 82
+    "word_count": 82,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "The Glass Menagerie"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [],
+      "venues": [
+        "Berkeley Street Theatre Downstairs"
+      ],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "Chris Abraham",
+        "Rosemary Dunsmore",
+        "Tennessee Williams"
+      ]
+    }
   },
   {
     "slug": "2005-03-19-dream-machine",
@@ -1765,7 +2556,36 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 86
+    "word_count": 86,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Dream Machine"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "One Yellow Rabbit"
+      ],
+      "venues": [
+        "Theatre Passe Muraille"
+      ],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "Blake Brooker",
+        "David Rhymer"
+      ]
+    }
   },
   {
     "slug": "2005-04-02-da-kink-in-my-hair",
@@ -1824,7 +2644,35 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 80
+    "word_count": 80,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "'da Kink in My Hair"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Mirvish Productions"
+      ],
+      "venues": [
+        "Princess of Wales Theatre"
+      ],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "Trey Anthony"
+      ]
+    }
   },
   {
     "slug": "2005-04-08-t-o-do-a-discriminating-guide-to-toronto-today-2",
@@ -1887,7 +2735,37 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 247
+    "word_count": 247,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Ain't Misbehavin'"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Canadian Stage"
+      ],
+      "venues": [
+        "CanStage"
+      ],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "Fats Waller",
+        "Jackie Richardson",
+        "Marion J. Caffey"
+      ]
+    }
   },
   {
     "slug": "2005-06-08-theres-plenty-to-like-in-melodrama-on-a-hot-tin-roof",
@@ -1963,7 +2841,43 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 853
+    "word_count": 853,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Cat on a Hot Tin Roof"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Stratford Festival"
+      ],
+      "venues": [
+        "Avon Theatre"
+      ],
+      "cities": [
+        "Stratford, Ontario"
+      ],
+      "people": [
+        "Brigit Wilson",
+        "Cynthia Dale",
+        "David Snelgrove",
+        "James Blendick",
+        "Lally Cadeau",
+        "Lorenzo Savoini",
+        "Richard Monette",
+        "Tennessee Williams",
+        "Thom Marriott"
+      ]
+    }
   },
   {
     "slug": "2005-06-09-a-nice-family-murder-story",
@@ -2040,7 +2954,44 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 522
+    "word_count": 522,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "The Brothers Karamazov"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Stratford Festival"
+      ],
+      "venues": [
+        "Tom Patterson Theatre"
+      ],
+      "cities": [
+        "Stratford, Ontario"
+      ],
+      "people": [
+        "Dana Green",
+        "Dixie Seatle",
+        "Jason Sherman",
+        "Jonathan Goad",
+        "Michelle Giroux",
+        "Peter van Gestel",
+        "Richard Rose",
+        "Ron Kennell",
+        "Scott Wentworth",
+        "Shane Carty"
+      ]
+    }
   },
   {
     "slug": "2005-06-09-fest-blessed-by-arguably-one-of-sondheim-s-best",
@@ -2131,7 +3082,49 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 1163
+    "word_count": 1163,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Into the Woods"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Stratford Festival"
+      ],
+      "venues": [
+        "Avon Theatre"
+      ],
+      "cities": [
+        "Stratford, Ontario"
+      ],
+      "people": [
+        "Barbara Dunn-Prosser",
+        "Bethold Carriere",
+        "Bruce Dow",
+        "Dany Lyne",
+        "Dayna Tekatch",
+        "James Lapine",
+        "Jennifer Waiser",
+        "Kyle Blair",
+        "Laird Mackintosh",
+        "Mary-Ellen Mahoney",
+        "Peter Donaldson",
+        "Peter Hinton",
+        "Stephen Sondheim",
+        "Susan Gilmour",
+        "Thom Allison"
+      ]
+    }
   },
   {
     "slug": "2005-06-18-the-brothers-karamazov",
@@ -2194,7 +3187,37 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 79
+    "word_count": 79,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "The Brothers Karamazov"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Stratford Festival"
+      ],
+      "venues": [
+        "Tom Patterson Theatre"
+      ],
+      "cities": [
+        "Stratford, Ontario"
+      ],
+      "people": [
+        "Fyodor Dostoevsky",
+        "Jason Sherman",
+        "Richard Rose"
+      ]
+    }
   },
   {
     "slug": "2005-06-18-wingfield-s-inferno",
@@ -2253,7 +3276,35 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 70
+    "word_count": 70,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Wingfield's Inferno"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Stratford Festival"
+      ],
+      "venues": [
+        "Tom Patterson Theatre"
+      ],
+      "cities": [
+        "Stratford, Ontario"
+      ],
+      "people": [
+        "Rod Beattie"
+      ]
+    }
   },
   {
     "slug": "2005-06-18-into-the-woods",
@@ -2318,7 +3369,37 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 68
+    "word_count": 68,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Into the Woods"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Stratford Festival"
+      ],
+      "venues": [
+        "Avon Theatre"
+      ],
+      "cities": [
+        "Stratford, Ontario"
+      ],
+      "people": [
+        "James Lapine",
+        "Peter Hinton",
+        "Stephen Sondheim"
+      ]
+    }
   },
   {
     "slug": "2005-07-02-blue-man-group",
@@ -2375,7 +3456,35 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 77
+    "word_count": 77,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Blue Man Group"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Blue Man Group"
+      ],
+      "venues": [
+        "Panasonic Theatre"
+      ],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "Blue Man Group"
+      ]
+    }
   },
   {
     "slug": "2005-07-02-fallen-angels",
@@ -2443,7 +3552,39 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 69
+    "word_count": 69,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Fallen Angels"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Stratford Festival"
+      ],
+      "venues": [
+        "Avon Theatre"
+      ],
+      "cities": [
+        "Stratford, Ontario"
+      ],
+      "people": [
+        "Brian Bedford",
+        "Joyce Campion",
+        "Lucy Peacock",
+        "Noël Coward",
+        "Seana McKenna"
+      ]
+    }
   },
   {
     "slug": "2005-07-02-gypsy-festival-theatre-niagara-on-the-lake-1-800-511-7429-toronto-edition",
@@ -2505,7 +3646,36 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 86
+    "word_count": 86,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Gypsy"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Shaw Festival"
+      ],
+      "venues": [
+        "Festival Theatre, Niagara-on-the-Lake"
+      ],
+      "cities": [
+        "Niagara-on-the-Lake"
+      ],
+      "people": [
+        "Jackie Maxwell",
+        "Nora McLellan"
+      ]
+    }
   },
   {
     "slug": "2005-07-02-the-donnellys-sticks-and-stones",
@@ -2569,7 +3739,37 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 88
+    "word_count": 88,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "The Donnellys: Sticks and Stones"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Stratford Festival"
+      ],
+      "venues": [
+        "Studio Theatre"
+      ],
+      "cities": [
+        "Stratford, Ontario"
+      ],
+      "people": [
+        "Diane D'Aquila",
+        "James Reaney",
+        "Robert King"
+      ]
+    }
   },
   {
     "slug": "2005-07-21-you-get-what-you-need-from-1950s-classic",
@@ -2647,7 +3847,44 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 731
+    "word_count": 731,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Bus Stop"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Shaw Festival"
+      ],
+      "venues": [
+        "Royal George Theatre"
+      ],
+      "cities": [
+        "Niagara-on-the-Lake"
+      ],
+      "people": [
+        "Diana Donnelly",
+        "Jackie Maxwell",
+        "Martin Happer",
+        "Mary Haney",
+        "Michael Ball",
+        "Nicole Underhay",
+        "Norman Browning",
+        "Peter Krantz",
+        "Sue LePage",
+        "William Inge"
+      ]
+    }
   },
   {
     "slug": "2005-07-23-the-measure-of-love",
@@ -2715,7 +3952,39 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 86
+    "word_count": 86,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "The Measure Of Love"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Stratford Festival"
+      ],
+      "venues": [
+        "Studio Theatre"
+      ],
+      "cities": [
+        "Stratford, Ontario"
+      ],
+      "people": [
+        "Diana Leblanc",
+        "Fiona Reid",
+        "Lally Cadeau",
+        "Nicolas Billon",
+        "Ruth Draper"
+      ]
+    }
   },
   {
     "slug": "2005-07-23-the-taming-of-the-shrew",
@@ -2782,7 +4051,40 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 73
+    "word_count": 73,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "The Taming of the Shrew"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "ShakespeareWorks"
+      ],
+      "venues": [
+        "Ashbridges Bay"
+      ],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "Christopher Morris",
+        "David Ferry",
+        "Dylan Roberts",
+        "Elizabeth Saunders",
+        "Paulino Nunes",
+        "William Shakespeare"
+      ]
+    }
   },
   {
     "slug": "2005-08-06-bus-stop",
@@ -2848,7 +4150,38 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 66
+    "word_count": 66,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Bus Stop"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Shaw Festival"
+      ],
+      "venues": [
+        "Royal George Theatre"
+      ],
+      "cities": [
+        "Niagara-on-the-Lake"
+      ],
+      "people": [
+        "Martin Happer",
+        "Nicole Underhay",
+        "Sue LePage",
+        "William Inge"
+      ]
+    }
   },
   {
     "slug": "2005-08-06-the-wild-duck",
@@ -2915,7 +4248,39 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 61
+    "word_count": 61,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "The Wild Duck"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Soulpepper Theatre Company"
+      ],
+      "venues": [
+        "Harbourfront Centre"
+      ],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "Brent Carver",
+        "Diego Matamoros",
+        "Henrik Ibsen",
+        "Laszlo Marton",
+        "Maggie MacIsaac"
+      ]
+    }
   },
   {
     "slug": "2005-08-06-olympia",
@@ -2980,7 +4345,38 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 66
+    "word_count": 66,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Olympia"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Soulpepper Theatre Company"
+      ],
+      "venues": [
+        "Premiere Dance Theatre"
+      ],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "Albert Schultz",
+        "Ferenc Molnar",
+        "Nancy Palk",
+        "Oliver Dennis"
+      ]
+    }
   },
   {
     "slug": "2005-08-13-belle-moral",
@@ -3039,7 +4435,35 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 64
+    "word_count": 64,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Belle Moral"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Shaw Festival"
+      ],
+      "venues": [
+        "Court House Theatre"
+      ],
+      "cities": [
+        "Niagara-on-the-Lake"
+      ],
+      "people": [
+        "Ann-Marie MacDonald"
+      ]
+    }
   },
   {
     "slug": "2005-08-13-the-merchant-of-venice",
@@ -3103,7 +4527,37 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 80
+    "word_count": 80,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "The Merchant of Venice"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Shakespeare in the Rough"
+      ],
+      "venues": [
+        "Withrow Park"
+      ],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "Carly Street",
+        "Sanjay Talwar",
+        "William Shakespeare"
+      ]
+    }
   },
   {
     "slug": "2005-08-24-queer-eye-for-the-elizabethan-guy",
@@ -3180,7 +4634,44 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 1020
+    "word_count": 1020,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Edward II"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Stratford Festival"
+      ],
+      "venues": [
+        "Studio Theatre"
+      ],
+      "cities": [
+        "Stratford, Ontario"
+      ],
+      "people": [
+        "Christopher Marlowe",
+        "David Snelgrove",
+        "James Blendick",
+        "Jamie Robinson",
+        "Michelle Giroux",
+        "Nicolas van Burek",
+        "Richard Monette",
+        "Ron Kennell",
+        "Scott Wentworth",
+        "Walter Borden"
+      ]
+    }
   },
   {
     "slug": "2005-08-26-defile-it-under-r-for-raunchy-toronto-edition",
@@ -3236,7 +4727,31 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 1023
+    "word_count": 1023,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Film",
+      "company_label": "Studio",
+      "primary_browse": "productions",
+      "secondary_browse": "directors"
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "The 40 Year-Old Virgin"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [],
+      "venues": [],
+      "cities": [],
+      "people": [
+        "Catherine Keener",
+        "Paul Rudd",
+        "Steve Carell"
+      ]
+    }
   },
   {
     "slug": "2005-08-27-edward-ii",
@@ -3305,7 +4820,40 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 68
+    "word_count": 68,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Edward II"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Stratford Festival"
+      ],
+      "venues": [
+        "Studio Theatre"
+      ],
+      "cities": [
+        "Stratford, Ontario"
+      ],
+      "people": [
+        "Christopher Marlowe",
+        "David Snelgrove",
+        "Jamie Robinson",
+        "Michelle Giroux",
+        "Richard Monette",
+        "Scott Wentworth"
+      ]
+    }
   },
   {
     "slug": "2005-08-27-the-comedy-of-errors",
@@ -3366,7 +4914,36 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 82
+    "word_count": 82,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "The Comedy of Errors"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Theatre by the Bay"
+      ],
+      "venues": [
+        "Heritage Park"
+      ],
+      "cities": [
+        "Barrie"
+      ],
+      "people": [
+        "Richard Rose",
+        "William Shakespeare"
+      ]
+    }
   },
   {
     "slug": "2005-08-27-the-lark",
@@ -3435,7 +5012,40 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 75
+    "word_count": 75,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "The Lark"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Stratford Festival"
+      ],
+      "venues": [
+        "Festival Theatre"
+      ],
+      "cities": [
+        "Stratford, Ontario"
+      ],
+      "people": [
+        "Amanda Plummer",
+        "Graham Abbey",
+        "Jean Anouilh",
+        "Martha Henry",
+        "Michael Lindsay-Hogg",
+        "Steven Sutcliffe"
+      ]
+    }
   },
   {
     "slug": "2005-09-03-the-wild-duck",
@@ -3502,7 +5112,39 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 66
+    "word_count": 66,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "The Wild Duck"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Soulpepper Theatre Company"
+      ],
+      "venues": [
+        "Harbourfront Centre"
+      ],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "Brent Carver",
+        "Diego Matamoros",
+        "Henrik Ibsen",
+        "Laszlo Marton",
+        "Maggie MacIsaac"
+      ]
+    }
   },
   {
     "slug": "2005-09-10-eleanor-of-aquitaine",
@@ -3563,7 +5205,34 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 78
+    "word_count": 78,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Eleanor of Aquitaine: Mother of the Pride"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [],
+      "venues": [
+        "Berkeley Street Theatre"
+      ],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "Catherine Muschamp",
+        "Chapelle Jaffe"
+      ]
+    }
   },
   {
     "slug": "2005-09-10-olympia",
@@ -3628,7 +5297,38 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 75
+    "word_count": 75,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Olympia"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Soulpepper Theatre Company"
+      ],
+      "venues": [
+        "Premiere Dance Theatre"
+      ],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "Albert Schultz",
+        "Ferenc Molnar",
+        "Nancy Palk",
+        "Oliver Dennis"
+      ]
+    }
   },
   {
     "slug": "2005-09-17-edward-ii",
@@ -3697,7 +5397,40 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 64
+    "word_count": 64,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Edward II"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Stratford Festival"
+      ],
+      "venues": [
+        "Studio Theatre"
+      ],
+      "cities": [
+        "Stratford, Ontario"
+      ],
+      "people": [
+        "Christopher Marlowe",
+        "David Snelgrove",
+        "Jamie Robinson",
+        "Michelle Giroux",
+        "Richard Monette",
+        "Scott Wentworth"
+      ]
+    }
   },
   {
     "slug": "2005-09-17-fool-for-love",
@@ -3759,7 +5492,37 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 65
+    "word_count": 65,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Fool For Love"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Soulpepper Theatre Company"
+      ],
+      "venues": [
+        "Harbourfront Centre"
+      ],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "Megan Follows",
+        "Sam Shepard",
+        "Stuart Hughes"
+      ]
+    }
   },
   {
     "slug": "2005-09-17-olympia",
@@ -3824,7 +5587,38 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 64
+    "word_count": 64,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Olympia"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Soulpepper Theatre Company"
+      ],
+      "venues": [
+        "Premiere Dance Theatre"
+      ],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "Albert Schultz",
+        "Ferenc Molnar",
+        "Nancy Palk",
+        "Oliver Dennis"
+      ]
+    }
   },
   {
     "slug": "2005-09-17-hamlet",
@@ -3891,7 +5685,39 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 66
+    "word_count": 66,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Hamlet"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Soulpepper Theatre Company"
+      ],
+      "venues": [
+        "Premiere Dance Theatre"
+      ],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "Albert Schultz",
+        "Joseph Ziegler",
+        "Patricia Fagan",
+        "William Shakespeare",
+        "William Webster"
+      ]
+    }
   },
   {
     "slug": "2005-09-24-fool-for-love",
@@ -3953,7 +5779,37 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 73
+    "word_count": 73,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Fool for Love"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Soulpepper Theatre Company"
+      ],
+      "venues": [
+        "Harbourfront Centre"
+      ],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "Megan Follows",
+        "Sam Shepard",
+        "Stuart Hughes"
+      ]
+    }
   },
   {
     "slug": "2005-09-24-hamlet",
@@ -4020,7 +5876,39 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 74
+    "word_count": 74,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Hamlet"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Soulpepper Theatre Company"
+      ],
+      "venues": [
+        "Premiere Dance Theatre"
+      ],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "Albert Schultz",
+        "Joseph Ziegler",
+        "Patricia Fagan",
+        "William Shakespeare",
+        "William Webster"
+      ]
+    }
   },
   {
     "slug": "2005-09-24-orpheus-descending",
@@ -4085,7 +5973,38 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 65
+    "word_count": 65,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Orpheus Descending"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Stratford Festival"
+      ],
+      "venues": [
+        "Tom Patterson Theatre"
+      ],
+      "cities": [
+        "Stratford, Ontario"
+      ],
+      "people": [
+        "Jonathan Goad",
+        "Miles Potter",
+        "Seana McKenna",
+        "Tennessee Williams"
+      ]
+    }
   },
   {
     "slug": "2005-10-01-as-you-like-it",
@@ -4158,7 +6077,41 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 76
+    "word_count": 76,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "As You Like It"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Stratford Festival"
+      ],
+      "venues": [
+        "Festival Theatre"
+      ],
+      "cities": [
+        "Stratford, Ontario"
+      ],
+      "people": [
+        "Antoni Cimolino",
+        "Dion Johnstone",
+        "Graham Abbey",
+        "Sara Topham",
+        "Sophie Goulet",
+        "Stephen Ouimette",
+        "William Shakespeare"
+      ]
+    }
   },
   {
     "slug": "2005-10-01-into-the-woods",
@@ -4223,7 +6176,37 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 74
+    "word_count": 74,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Into the Woods"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Stratford Festival"
+      ],
+      "venues": [
+        "Avon Theatre"
+      ],
+      "cities": [
+        "Stratford, Ontario"
+      ],
+      "people": [
+        "James Lapine",
+        "Peter Hinton",
+        "Stephen Sondheim"
+      ]
+    }
   },
   {
     "slug": "2005-10-07-the-critics-are-divided",
@@ -4287,7 +6270,34 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 1144
+    "word_count": 1144,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Film",
+      "company_label": "Studio",
+      "primary_browse": "productions",
+      "secondary_browse": "directors"
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Proof"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [],
+      "venues": [],
+      "cities": [],
+      "people": [
+        "Anthony Hopkins",
+        "David Auburn",
+        "Gwyneth Paltrow",
+        "Hope Davis",
+        "Jake Gyllenhaal",
+        "John Madden"
+      ]
+    }
   },
   {
     "slug": "2005-10-08-700-sundays",
@@ -4346,7 +6356,35 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 62
+    "word_count": 62,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "700 Sundays"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Mirvish Productions"
+      ],
+      "venues": [
+        "Canon Theatre"
+      ],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "Billy Crystal"
+      ]
+    }
   },
   {
     "slug": "2005-10-15-banana-boys",
@@ -4415,7 +6453,40 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 65
+    "word_count": 65,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Banana Boys"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Factory Theatre"
+      ],
+      "venues": [
+        "Factory Theatre Studio"
+      ],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "Dale Yim",
+        "David Yee",
+        "Derek Kwan",
+        "In-Surp Choi",
+        "Leon Aureus",
+        "Richard Lee"
+      ]
+    }
   },
   {
     "slug": "2005-10-22-reviews",
@@ -4474,7 +6545,34 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 311
+    "word_count": 311,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Better Parts/Fish Eyes, Les Miserables, The Optimists, Blue Man"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [],
+      "venues": [
+        "Theatre Passe Muraille Backspace, Princess of Wales Theatre, Tarragon Theatre,"
+      ],
+      "cities": [
+        "Toronto, Niagara-on-the-Lake"
+      ],
+      "people": [
+        "Morwyn Brebner",
+        "William Inge"
+      ]
+    }
   },
   {
     "slug": "2005-10-29-better-parts-fish-eyes",
@@ -4537,7 +6635,36 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 71
+    "word_count": 71,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Better Parts / Fish Eyes"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Theatre Passe Muraille"
+      ],
+      "venues": [
+        "Theatre Passe Muraille Backspace"
+      ],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "Anita Majumdar",
+        "Nicole Stamp"
+      ]
+    }
   },
   {
     "slug": "2005-10-29-gypsy",
@@ -4599,7 +6726,36 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 71
+    "word_count": 71,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Gypsy"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Shaw Festival"
+      ],
+      "venues": [
+        "Festival Theatre"
+      ],
+      "cities": [
+        "Niagara-on-the-Lake"
+      ],
+      "people": [
+        "Jackie Maxwell",
+        "Nora McLellan"
+      ]
+    }
   },
   {
     "slug": "2005-11-05-francesca-mathilda-and-tea",
@@ -4662,7 +6818,36 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 71
+    "word_count": 71,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Francesca, Mathilda And Tea"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Theatre Passe Muraille"
+      ],
+      "venues": [
+        "Theatre Passe Muraille"
+      ],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "Anna Chatterton",
+        "Evalyn Parry"
+      ]
+    }
   },
   {
     "slug": "2005-11-05-habeas-corpus",
@@ -4729,7 +6914,39 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 73
+    "word_count": 73,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Habeas Corpus"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Canadian Stage"
+      ],
+      "venues": [
+        "Bluma Appel Theatre"
+      ],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "Alan Bennett",
+        "Fiona Reid",
+        "Joseph Ziegler",
+        "Melody A. Johnson",
+        "Morris Panych"
+      ]
+    }
   },
   {
     "slug": "2005-11-05-les-miserables",
@@ -4787,7 +7004,35 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 75
+    "word_count": 75,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Les Miserables"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Mirvish Productions"
+      ],
+      "venues": [
+        "Princess of Wales Theatre"
+      ],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "Claude-Michel Schoenberg"
+      ]
+    }
   },
   {
     "slug": "2005-11-26-bus-stop",
@@ -4853,7 +7098,38 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 72
+    "word_count": 72,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Bus Stop"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Shaw Festival"
+      ],
+      "venues": [
+        "Royal George Theatre"
+      ],
+      "cities": [
+        "Niagara-on-the-Lake"
+      ],
+      "people": [
+        "Martin Happer",
+        "Nicole Underhay",
+        "Sue LePage",
+        "William Inge"
+      ]
+    }
   },
   {
     "slug": "2005-11-26-goodness",
@@ -4914,7 +7190,36 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 67
+    "word_count": 67,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Goodness"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Volcano Theatre"
+      ],
+      "venues": [
+        "Tarragon Theatre Extra Space"
+      ],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "Jordan Pettle",
+        "Michael Redhill"
+      ]
+    }
   },
   {
     "slug": "2005-12-03-crowns",
@@ -4973,7 +7278,35 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 62
+    "word_count": 62,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Crowns"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Canadian Stage"
+      ],
+      "venues": [
+        "Bluma Appel Theatre"
+      ],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "Jackie Richardson"
+      ]
+    }
   },
   {
     "slug": "2005-12-03-the-dishwashers",
@@ -5040,7 +7373,39 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 61
+    "word_count": 61,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "The Dishwashers"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Tarragon Theatre"
+      ],
+      "venues": [
+        "Tarragon Theatre"
+      ],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "Eric Peterson",
+        "Jonathan Crombie",
+        "Ken MacDonald",
+        "Morris Panych",
+        "Randy Hughson"
+      ]
+    }
   },
   {
     "slug": "2005-12-03-tideline",
@@ -5097,7 +7462,35 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 64
+    "word_count": 64,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Tideline"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Factory Theatre"
+      ],
+      "venues": [
+        "Factory Theatre"
+      ],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "Wajdi Mouawad"
+      ]
+    }
   },
   {
     "slug": "2005-12-10-the-goat-or-who-is-sylvia",
@@ -5160,7 +7553,35 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 59
+    "word_count": 59,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "The Goat, or Who Is Sylvia?"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [],
+      "venues": [
+        "Berkeley Street Theatre"
+      ],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "Edward Albee",
+        "Judith Bowden",
+        "R.H. Thomson"
+      ]
+    }
   },
   {
     "slug": "2005-12-17-jimmy",
@@ -5221,7 +7642,35 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 61
+    "word_count": 61,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Jimmy"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Buddies in Bad Times Theatre"
+      ],
+      "venues": [
+        "Buddies in Bad Times Theatre"
+      ],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "Marie Brassard"
+      ]
+    }
   },
   {
     "slug": "2005-12-24-movin-out",
@@ -5283,7 +7732,34 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 78
+    "word_count": 78,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Movin' Out"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [],
+      "venues": [
+        "Canon Theatre"
+      ],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "Billy Joel",
+        "Twyla Tharp"
+      ]
+    }
   },
   {
     "slug": "2006-01-07-snow-white-and-the-group-of-seven",
@@ -5346,7 +7822,35 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 68
+    "word_count": 68,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Snow White And The Group Of Seven"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [],
+      "venues": [
+        "Elgin Theatre"
+      ],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "Elena Juatco",
+        "Jamie McKnight",
+        "Ross Petty"
+      ]
+    }
   },
   {
     "slug": "2006-01-14-hamlet-solo",
@@ -5409,7 +7913,37 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 69
+    "word_count": 69,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Hamlet Solo"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Theatre Passe Muraille"
+      ],
+      "venues": [
+        "Theatre Passe Muraille Backspace"
+      ],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "Raoul Bhaneja",
+        "Robert Ross Parker",
+        "William Shakespeare"
+      ]
+    }
   },
   {
     "slug": "2006-01-18-he-is-his-own-trickiest-role",
@@ -5457,7 +7991,27 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 666
+    "word_count": 666,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Woody Allen Retrospective"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [],
+      "venues": [],
+      "cities": [],
+      "people": []
+    }
   },
   {
     "slug": "2006-01-21-bombay-black",
@@ -5524,7 +8078,39 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 67
+    "word_count": 67,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Bombay Black"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "The Theatre Centre"
+      ],
+      "venues": [
+        "Theatre Centre"
+      ],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "Anita Majumdar",
+        "Anosh Irani",
+        "Brian Quirt",
+        "Deena Aziz",
+        "Sanjay Talwar"
+      ]
+    }
   },
   {
     "slug": "2006-01-21-homechild",
@@ -5590,7 +8176,38 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 70
+    "word_count": 70,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Homechild"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Canadian Stage"
+      ],
+      "venues": [
+        "Bluma Appel Theatre"
+      ],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "Astrid Janson",
+        "Eric Peterson",
+        "Joan MacLeod",
+        "Martha Henry"
+      ]
+    }
   },
   {
     "slug": "2006-01-21-humble-boy",
@@ -5656,7 +8273,38 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 69
+    "word_count": 69,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Humble Boy"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Tarragon Theatre"
+      ],
+      "venues": [
+        "Tarragon Theatre"
+      ],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "Charlotte Jones",
+        "Dean Paul Gibson",
+        "Fiona Reid",
+        "Richard Rose"
+      ]
+    }
   },
   {
     "slug": "2006-01-27-woody-s-in-love-again-and-london-s-his-lady",
@@ -5719,7 +8367,39 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 1028
+    "word_count": 1028,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Film",
+      "company_label": "Studio",
+      "primary_browse": "productions",
+      "secondary_browse": "directors"
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Match Point"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "DreamWorks Pictures"
+      ],
+      "venues": [
+        "Various theatres"
+      ],
+      "cities": [
+        "Various cities"
+      ],
+      "people": [
+        "Emily Mortimer",
+        "Jonathan Rhys-Meyers",
+        "Matthew Goode",
+        "Scarlett Johansson",
+        "Woody Allen"
+      ]
+    }
   },
   {
     "slug": "2006-01-28-return-the-sarajevo-project",
@@ -5793,7 +8473,42 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 64
+    "word_count": 64,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Return (The Sarajevo Project)"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Theatrefront"
+      ],
+      "venues": [
+        "Tarragon Theatre Extra Space"
+      ],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "Alana Dzebo",
+        "Christopher Morris",
+        "Daryl Cloran",
+        "Dylan Trowbridge",
+        "Holly Lewis",
+        "Sue Balint",
+        "Tanja Smoje",
+        "Theatrefront"
+      ]
+    }
   },
   {
     "slug": "2006-01-28-the-boy-friend",
@@ -5864,7 +8579,39 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 52
+    "word_count": 52,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "The Boy Friend"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Mirvish Productions"
+      ],
+      "venues": [
+        "Royal Alexandra Theatre"
+      ],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "Andrea Chamberlain",
+        "John DeLuca",
+        "Julie Andrews",
+        "Sandy Wilson",
+        "Tony Walton"
+      ]
+    }
   },
   {
     "slug": "2006-02-04-a-number",
@@ -5929,7 +8676,36 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 71
+    "word_count": 71,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "A Number"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [],
+      "venues": [
+        "Berkeley Upstairs Theatre"
+      ],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "Caryl Churchill",
+        "David Storch",
+        "Gary Reineke",
+        "Shawn Doyle"
+      ]
+    }
   },
   {
     "slug": "2006-02-04-letters-from-lehrer",
@@ -5995,7 +8771,34 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 64
+    "word_count": 64,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Letters from Lehrer"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [],
+      "venues": [
+        "Berkeley Street Theatre"
+      ],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "Richard Greenblatt",
+        "Tom Lehrer"
+      ]
+    }
   },
   {
     "slug": "2006-02-04-humble-boy",
@@ -6061,7 +8864,38 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 69
+    "word_count": 69,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Humble Boy"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Tarragon Theatre"
+      ],
+      "venues": [
+        "Tarragon Theatre"
+      ],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "Charlotte Jones",
+        "Dean Paul Gibson",
+        "Fiona Reid",
+        "Richard Rose"
+      ]
+    }
   },
   {
     "slug": "2006-02-11-john-and-jen",
@@ -6129,7 +8963,37 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 50
+    "word_count": 50,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "John and Jen"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [],
+      "venues": [
+        "Walmer Centre Theatre"
+      ],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "Andrew Lippa",
+        "Kyle Blair",
+        "Michael Jones",
+        "Stephanie Roth",
+        "Tom Greenwald"
+      ]
+    }
   },
   {
     "slug": "2006-02-11-our-town",
@@ -6194,7 +9058,38 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 53
+    "word_count": 53,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Our Town"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Soulpepper Theatre Company"
+      ],
+      "venues": [
+        "Marilyn and Charles Baillie Theatre"
+      ],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "Albert Schultz",
+        "Joseph Ziegler",
+        "Martha MacIsaac",
+        "Thornton Wilder"
+      ]
+    }
   },
   {
     "slug": "2006-02-11-the-government-inspector",
@@ -6257,7 +9152,37 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 50
+    "word_count": 50,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "The Government Inspector"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Soulpepper Theatre Company"
+      ],
+      "venues": [
+        "Marilyn and Charles Baillie Theatre"
+      ],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "Diego Matamoros",
+        "Morris Panych",
+        "Nikolai Gogol"
+      ]
+    }
   },
   {
     "slug": "2006-02-11-a-number",
@@ -6320,7 +9245,37 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 59
+    "word_count": 59,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "A Number"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Canadian Stage"
+      ],
+      "venues": [
+        "Berkeley Upstairs Theatre"
+      ],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "Caryl Churchill",
+        "David Storch",
+        "Shawn Doyle"
+      ]
+    }
   },
   {
     "slug": "2006-02-18-the-gambler",
@@ -6385,7 +9340,36 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 61
+    "word_count": 61,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "The Gambler"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [],
+      "venues": [
+        "Artword Theatre"
+      ],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "David Ferry",
+        "Irene Poole",
+        "Molly Thom",
+        "Ronald Weihs"
+      ]
+    }
   },
   {
     "slug": "2006-02-24-bits-of-wit-from-brit-lit-are-a-hit",
@@ -6452,7 +9436,35 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 1411
+    "word_count": 1411,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Film",
+      "company_label": "Studio",
+      "primary_browse": "productions",
+      "secondary_browse": "directors"
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Tristram Shandy: A Cock & Bull Story"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [],
+      "venues": [],
+      "cities": [],
+      "people": [
+        "Gillian Anderson",
+        "Keeley Hawes",
+        "Michael Winterbottom",
+        "Ricky Gervais",
+        "Rob Brydon",
+        "Stephen Merchant",
+        "Steve Coogan"
+      ]
+    }
   },
   {
     "slug": "2006-02-25-i-am-my-own-wife",
@@ -6515,7 +9527,35 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 70
+    "word_count": 70,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "I Am My Own Wife"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [],
+      "venues": [
+        "Bluma Appel Theatre"
+      ],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "Doug Wright",
+        "Robin Phillips",
+        "Stephen Ouimette"
+      ]
+    }
   },
   {
     "slug": "2006-02-25-the-real-mccoy",
@@ -6577,7 +9617,36 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 60
+    "word_count": 60,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "The Real McCoy"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Factory Theatre"
+      ],
+      "venues": [
+        "Factory Theatre"
+      ],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "Andrew Moodie",
+        "Maurice Dean Wint"
+      ]
+    }
   },
   {
     "slug": "2006-03-04-our-town",
@@ -6642,7 +9711,38 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 60
+    "word_count": 60,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Our Town"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Soulpepper Theatre Company"
+      ],
+      "venues": [
+        "Marilyn and Charles Baillie Theatre"
+      ],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "Albert Schultz",
+        "Joseph Ziegler",
+        "Martha MacIsaac",
+        "Thornton Wilder"
+      ]
+    }
   },
   {
     "slug": "2006-03-04-the-government-inspector",
@@ -6705,7 +9805,37 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 59
+    "word_count": 59,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "The Government Inspector"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Soulpepper Theatre Company"
+      ],
+      "venues": [
+        "Marilyn and Charles Baillie Theatre"
+      ],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "Diego Matamoros",
+        "Morris Panych",
+        "Nikolai Gogol"
+      ]
+    }
   },
   {
     "slug": "2006-03-04-three-squares-a-day",
@@ -6775,7 +9905,40 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 60
+    "word_count": 60,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Three Squares A Day"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Theatre Passe Muraille"
+      ],
+      "venues": [
+        "Backspace"
+      ],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "David Jansen",
+        "Jordan Pettle",
+        "Kate Lynch",
+        "Kelly Wolf",
+        "Patricia Fagan",
+        "Tom Walmsley"
+      ]
+    }
   },
   {
     "slug": "2006-03-08-when-s-check-out-time",
@@ -6826,7 +9989,29 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 708
+    "word_count": 708,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Show",
+      "company_label": "Network",
+      "primary_browse": "productions",
+      "secondary_browse": "actors"
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "At the Hotel"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "CBC"
+      ],
+      "venues": [],
+      "cities": [],
+      "people": []
+    }
   },
   {
     "slug": "2006-03-15-this-hotel-may-just-be-a-tad-too-accommodating",
@@ -6877,7 +10062,29 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 856
+    "word_count": 856,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Show",
+      "company_label": "Network",
+      "primary_browse": "productions",
+      "secondary_browse": "actors"
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "At The Hotel"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "CBC"
+      ],
+      "venues": [],
+      "cities": [],
+      "people": []
+    }
   },
   {
     "slug": "2006-03-24-imaginatively-its-a-marvel-the-multilevel-stage-is-a-spectacle-in-itself",
@@ -6948,7 +10155,40 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 1028
+    "word_count": 1028,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "The Lord of the Rings"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Mirvish Productions"
+      ],
+      "venues": [
+        "Princess of Wales Theatre"
+      ],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "James Loye",
+        "Matthew Warchus",
+        "Paul Pyant",
+        "Peter Howe",
+        "Rob Howell",
+        "Shaun McKenna"
+      ]
+    }
   },
   {
     "slug": "2006-03-29-its-like-melrose-place-meets-my-two-dads",
@@ -7006,7 +10246,32 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 791
+    "word_count": 791,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Show",
+      "company_label": "Network",
+      "primary_browse": "productions",
+      "secondary_browse": "actors"
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "At the Hotel"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "CBC"
+      ],
+      "venues": [],
+      "cities": [],
+      "people": [
+        "Don McKellar",
+        "Ken Finkleman"
+      ]
+    }
   },
   {
     "slug": "2006-03-29-its-like-melrose-place-meets-my-two-dads-2",
@@ -7070,7 +10335,35 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 835
+    "word_count": 835,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Show",
+      "company_label": "Network",
+      "primary_browse": "productions",
+      "secondary_browse": "actors"
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "At The Hotel"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "CBC"
+      ],
+      "venues": [],
+      "cities": [],
+      "people": [
+        "Don McKellar",
+        "Hrant Alianak",
+        "Ken Finkleman",
+        "Martha Henry",
+        "Sarah Cornell"
+      ]
+    }
   },
   {
     "slug": "2006-04-01-canadian-pacific-scandal",
@@ -7142,7 +10435,41 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 56
+    "word_count": 56,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Canadian Pacific Scandal"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "VideoCabaret"
+      ],
+      "venues": [
+        "Cameron House"
+      ],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "Greg Campbell",
+        "Jim Jones",
+        "Kerry Ann Doherty",
+        "Linda Prystawska",
+        "Michael Hollingsworth",
+        "Paul Braunstein",
+        "Richard Alan Campbell"
+      ]
+    }
   },
   {
     "slug": "2006-04-01-clean-irene-and-dirty-maxine",
@@ -7204,7 +10531,36 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 57
+    "word_count": 57,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Clean Irene and Dirty Maxine"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Buddies in Bad Times Theatre"
+      ],
+      "venues": [
+        "Buddies in Bad Times Theatre"
+      ],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "Anna Chatterton",
+        "Evalyn Parry"
+      ]
+    }
   },
   {
     "slug": "2006-04-05-canadian-hbo-you-re-kidding-aren-t-you",
@@ -7259,7 +10615,31 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 1051
+    "word_count": 1051,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Show",
+      "company_label": "Network",
+      "primary_browse": "productions",
+      "secondary_browse": "actors"
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "At the Hotel"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "CBC"
+      ],
+      "venues": [],
+      "cities": [],
+      "people": [
+        "Ken Finkleman"
+      ]
+    }
   },
   {
     "slug": "2006-04-05-this-is-canadian-hbo-youre-kidding-right",
@@ -7314,7 +10694,31 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 1050
+    "word_count": 1050,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Show",
+      "company_label": "Network",
+      "primary_browse": "productions",
+      "secondary_browse": "actors"
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "At the Hotel"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "CBC"
+      ],
+      "venues": [],
+      "cities": [],
+      "people": [
+        "Ken Finkleman"
+      ]
+    }
   },
   {
     "slug": "2006-04-12-it-s-getting-hot-in-here-so-take-off-all-these-shows",
@@ -7369,7 +10773,31 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 1157
+    "word_count": 1157,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Show",
+      "company_label": "Network",
+      "primary_browse": "productions",
+      "secondary_browse": "actors"
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "At the Hotel"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "CBC"
+      ],
+      "venues": [],
+      "cities": [],
+      "people": [
+        "Ken Finkleman"
+      ]
+    }
   },
   {
     "slug": "2006-04-19-did-you-enjoy-your-stay",
@@ -7427,7 +10855,34 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 1188
+    "word_count": 1188,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Show",
+      "company_label": "Network",
+      "primary_browse": "productions",
+      "secondary_browse": "actors"
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "At the Hotel"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "CBC"
+      ],
+      "venues": [],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "Carlo Rota",
+        "Ken Finkleman"
+      ]
+    }
   },
   {
     "slug": "2006-04-19-slinky-plotlines-left-in-knots",
@@ -7485,7 +10940,32 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 1222
+    "word_count": 1222,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Show",
+      "company_label": "Network",
+      "primary_browse": "productions",
+      "secondary_browse": "actors"
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "At the Hotel"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "CBC"
+      ],
+      "venues": [],
+      "cities": [],
+      "people": [
+        "Carlo Rota",
+        "Ken Finkleman"
+      ]
+    }
   },
   {
     "slug": "2006-04-22-hair",
@@ -7558,7 +11038,41 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 68
+    "word_count": 68,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Hair"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Canadian Stage"
+      ],
+      "venues": [
+        "Bluma Appel Theatre"
+      ],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "Craig Burtanowski",
+        "Galt MacDermot",
+        "Gerome Ragni",
+        "James Rado",
+        "Jamie McKnight",
+        "Matthew Boden",
+        "Robert A. Prior"
+      ]
+    }
   },
   {
     "slug": "2006-04-29-10-days-on-earth",
@@ -7620,7 +11134,35 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 56
+    "word_count": 56,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "10 Days on Earth"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Canadian Stage"
+      ],
+      "venues": [
+        "Berkeley Street Theatre"
+      ],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "Ronnie Burkett"
+      ]
+    }
   },
   {
     "slug": "2006-04-29-american-buffalo",
@@ -7685,7 +11227,38 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 62
+    "word_count": 62,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "American Buffalo"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Soulpepper Theatre Company"
+      ],
+      "venues": [
+        "Young Centre for the Performing Arts"
+      ],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "David Mamet",
+        "Michael Hanrahan",
+        "Stuart Hughes",
+        "Ted Dykstra"
+      ]
+    }
   },
   {
     "slug": "2006-05-06-boygroove",
@@ -7763,7 +11336,42 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 59
+    "word_count": 59,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Boygroove"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Diesel Playhouse"
+      ],
+      "venues": [
+        "Diesel Playhouse"
+      ],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "Aaron Machri",
+        "Andrew Bursey",
+        "Chris Craddock",
+        "Jon Paterson",
+        "Kay Grigar",
+        "Kenneth Brown",
+        "Matt Alden",
+        "Scott Walters"
+      ]
+    }
   },
   {
     "slug": "2006-05-06-care",
@@ -7829,7 +11437,37 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 66
+    "word_count": 66,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Care"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Tarragon Theatre"
+      ],
+      "venues": [
+        "Tarragon Theatre"
+      ],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "Diane Flacks",
+        "Eda Holmes",
+        "Richard Greenblatt"
+      ]
+    }
   },
   {
     "slug": "2006-05-06-escape-from-happiness",
@@ -7895,7 +11533,38 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 73
+    "word_count": 73,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Escape From Happiness"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Factory Theatre"
+      ],
+      "venues": [
+        "Factory Theatre"
+      ],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "Clare Coulter",
+        "George F. Walker",
+        "Irene Poole",
+        "Ken Gass"
+      ]
+    }
   },
   {
     "slug": "2006-05-06-last-will-and-videotape",
@@ -7952,7 +11621,35 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 55
+    "word_count": 55,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Last Will and Videotape"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Mysteriously Yours"
+      ],
+      "venues": [
+        "Mysteriously Yours"
+      ],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "Jean Daigle"
+      ]
+    }
   },
   {
     "slug": "2006-05-06-sparta",
@@ -8022,7 +11719,40 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 60
+    "word_count": 60,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Sparta"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Theatre Passe Muraille"
+      ],
+      "venues": [
+        "Theatre Passe Muraille"
+      ],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "Bob Collins",
+        "Hilary Fennell",
+        "Laura Wilson",
+        "Layne Coleman",
+        "Ryan Hollyman",
+        "Sarah Martyn"
+      ]
+    }
   },
   {
     "slug": "2006-05-06-the-lord-of-the-rings",
@@ -8090,7 +11820,39 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 47
+    "word_count": 47,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "The Lord of the Rings"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Mirvish Productions"
+      ],
+      "venues": [
+        "Princess of Wales Theatre"
+      ],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "A.R. Rahman",
+        "Christopher Nightingale",
+        "Matthew Warchus",
+        "Shaun McKenna",
+        "Varttina"
+      ]
+    }
   },
   {
     "slug": "2006-05-09-great-american-songs-do-not-a-musical-make",
@@ -8170,7 +11932,44 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 999
+    "word_count": 999,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "High Society"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Shaw Festival"
+      ],
+      "venues": [
+        "Festival Theatre"
+      ],
+      "cities": [
+        "Niagara-on-the-Lake"
+      ],
+      "people": [
+        "Arthur Kopit",
+        "Camilla Scott",
+        "Cole Porter",
+        "Dan Chameroy",
+        "David Leyshon",
+        "Jay Turvey",
+        "Kelly Robinson",
+        "Lorne Kennedy",
+        "Patty Jamieson",
+        "William Schmuck"
+      ]
+    }
   },
   {
     "slug": "2006-05-13-evelyn-wins-hearts-rex-injures-tendon-opening-night-for-song-and-dance",
@@ -8251,7 +12050,58 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 1488
+    "word_count": 1488,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "10",
+        "Boygroove",
+        "Care",
+        "Song and Dance",
+        "Sparta",
+        "Wingfield's Inferno"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Danforth Music Hall",
+        "Diesel Playhouse",
+        "Tarragon Theatre",
+        "Theatre Passe Muraille"
+      ],
+      "venues": [
+        "Danforth Music Hall",
+        "Diesel Playhouse",
+        "Tarragon Theatre",
+        "Theatre Passe Muraille"
+      ],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "Andrew Lloyd Webber",
+        "Don Black",
+        "Eric Robertson",
+        "Evelyn Hart",
+        "Jessica Dawson",
+        "Julia Juhas",
+        "Kimberly O'Neil",
+        "Louise Pitre",
+        "Mikeal Knight",
+        "Rex Harrington",
+        "Ryan Foley",
+        "Trudy Moffatt",
+        "Wayne Sleep"
+      ]
+    }
   },
   {
     "slug": "2006-05-20-the-final-production-of-da-da-kamera-something-between-love-and-friendship",
@@ -8312,7 +12162,46 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 1699
+    "word_count": 1699,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "A Beautiful View",
+        "Arms and the Man",
+        "High",
+        "Mathilde",
+        "The Heiress"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Da Da Kamera",
+        "Danforth Music Hall",
+        "Nightwood Theatre",
+        "Shaw Festival",
+        "Tarragon"
+      ],
+      "venues": [
+        "Buddies in Bad Times Theatre",
+        "Young Centre for the Performing Arts"
+      ],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "Caroline Gillis",
+        "Daniel MacIvor",
+        "Tracy Wright"
+      ]
+    }
   },
   {
     "slug": "2006-05-26-a-blasphemy-from-the-past",
@@ -8373,7 +12262,32 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 997
+    "word_count": 997,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Film",
+      "company_label": "Studio",
+      "primary_browse": "productions",
+      "secondary_browse": "directors"
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "The Da Vinci Code"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [],
+      "venues": [],
+      "cities": [],
+      "people": [
+        "Audrey Tautou",
+        "Ian McKellen",
+        "Ron Howard",
+        "Tom Hanks"
+      ]
+    }
   },
   {
     "slug": "2006-05-27-inspiring-story-of-woman-and-country-but-play-doesn-t-contain-complexity",
@@ -8451,7 +12365,57 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 1613
+    "word_count": 1613,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "'Golda's Balcony",
+        "Boygroove",
+        "Care",
+        "Mathilde",
+        "Wingfield's Inferno"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Elgin Theatre",
+        "Mirvish Productions",
+        "Nightwood Theatre",
+        "Tarragon Theatre"
+      ],
+      "venues": [
+        "Elgin Theatre",
+        "Royal",
+        "Tarragon Theatre",
+        "Young Centre for the Performing Arts"
+      ],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "Anand Rajaram",
+        "Dan Chameroy",
+        "Diane Flacks",
+        "Evan Buliung",
+        "Kelly Thornton",
+        "Louise Pitre",
+        "Martha Burns",
+        "Matt Baram",
+        "Mike Shara",
+        "Scott Schwartz",
+        "Tara Rosling",
+        "Veronique Olmi",
+        "William Gibson"
+      ]
+    }
   },
   {
     "slug": "2006-06-03-musical-recharges-murder-mystery-cast-provides-solid-comic-support-and-pleasant",
@@ -8529,7 +12493,42 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 1567
+    "word_count": 1567,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Dead Air!"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Mysteriously Yours Dinner Theatre"
+      ],
+      "venues": [
+        "Mysteriously Yours Dinner Theatre"
+      ],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "Barb Scheffler",
+        "Blaine Parker",
+        "Brian Caws",
+        "Jean Daigle",
+        "Mark Candler",
+        "Rachelle Boudreau",
+        "Randy Vancourt",
+        "Scotty Watson"
+      ]
+    }
   },
   {
     "slug": "2006-06-24-some-nods-are-inexplicable-a-desperate-season-a-desperate-slate-of-dora",
@@ -8579,7 +12578,25 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 2188
+    "word_count": 2188,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [],
+      "venues": [],
+      "cities": [],
+      "people": []
+    }
   },
   {
     "slug": "2006-06-29-a-witch-hunt-to-remember",
@@ -8650,7 +12667,41 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 733
+    "word_count": 733,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "The Crucible"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Shaw Festival"
+      ],
+      "venues": [
+        "Festival Theatre"
+      ],
+      "cities": [
+        "Niagara-on-the-Lake"
+      ],
+      "people": [
+        "Arthur Miller",
+        "Benedict Campbell",
+        "Jim Mezon",
+        "Kelli Fox",
+        "Mary Haney",
+        "Norman Browning",
+        "Tadeusz Bradecki"
+      ]
+    }
   },
   {
     "slug": "2006-06-29-the-17th-century-parallel",
@@ -8732,7 +12783,46 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 942
+    "word_count": 942,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "The Crucible"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Shaw Festival"
+      ],
+      "venues": [
+        "Festival Theatre"
+      ],
+      "cities": [
+        "Niagara-on-the-Lake"
+      ],
+      "people": [
+        "Arthur Miller",
+        "Benedict Campbell",
+        "Charlotte Gowdy",
+        "Jim Mezon",
+        "Kelli Fox",
+        "Mary Haney",
+        "Norman Browning",
+        "Peter Hartwell",
+        "Peter Krantz",
+        "Ric Reid",
+        "Tadeusz Bradecki",
+        "Trish Lindstrom"
+      ]
+    }
   },
   {
     "slug": "2006-07-01-shakespearean-play-is-a-dream-realized-inventive-disciplined-physical-production-2",
@@ -8819,7 +12909,49 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 1733
+    "word_count": 1733,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "A Midsummer Night's Dream"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Resurgence Theatre Company"
+      ],
+      "venues": [
+        "Coronation Park"
+      ],
+      "cities": [
+        "Newmarket"
+      ],
+      "people": [
+        "Alon Nashman",
+        "Art Hindle",
+        "Brendan Gall",
+        "Cara Ricketts",
+        "Christopher Morris",
+        "David Ferry",
+        "Don Allison",
+        "Irene Poole",
+        "Jamie Robinson",
+        "Lisa Codrington",
+        "Maev Beaty",
+        "Robert Dunsmore-Van Wart",
+        "Stuart Wilber",
+        "Tim Campbell",
+        "William Shakespeare"
+      ]
+    }
   },
   {
     "slug": "2006-07-19-in-love-things-are-bound-to-get-hairy",
@@ -8885,7 +13017,38 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 845
+    "word_count": 845,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "The Blonde, the Brunette and the Vengeful Redhead"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Stratford Festival"
+      ],
+      "venues": [
+        "Studio Theatre"
+      ],
+      "cities": [
+        "Stratford, Ontario"
+      ],
+      "people": [
+        "Geordie Johnson",
+        "Lucy Peacock",
+        "Michael Gianfrancesco",
+        "Robert Hewett"
+      ]
+    }
   },
   {
     "slug": "2006-07-22-the-chairs",
@@ -8956,7 +13119,41 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 195
+    "word_count": 195,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "The Chairs"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Soulpepper Theatre Company"
+      ],
+      "venues": [
+        "Young Centre for the Performing Arts"
+      ],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "Djanet Sears",
+        "Eugene Ionesco",
+        "Jim Warren",
+        "Karen Robinson",
+        "Kristen Thomson",
+        "Nigel Shawn Williams",
+        "Oliver Dennis"
+      ]
+    }
   },
   {
     "slug": "2006-08-12-a-doomed-love-story-whats-better-six-plays-to-see-at-summerworks",
@@ -9031,7 +13228,49 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 1189
+    "word_count": 1189,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "4:48 Psychosis",
+        "Go Forth and Multiply",
+        "Hip-Hop: Who Stole the Soul",
+        "The Review",
+        "The Russian Play",
+        "Whistle Me Home"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "SummerWorks Festival"
+      ],
+      "venues": [
+        "Factory Mainspace",
+        "Theatre Passe Muraille Backspace"
+      ],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "Adam Pettle",
+        "Allana Harkin",
+        "Camellia Koo",
+        "Gina Wilkinson",
+        "Hannah Moscovitch",
+        "Joseph Jomo Pierre",
+        "Kate Lynch",
+        "Natasha Mytnowych",
+        "Sarah Kane"
+      ]
+    }
   },
   {
     "slug": "2006-08-19-theatre",
@@ -9150,7 +13389,62 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 920
+    "word_count": 920,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "The Blonde, The Brunette And The Vengeful Redhead, Monty Python's"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [],
+      "venues": [
+        "Studio Theatre, Canon Theatre, Dream in High Park, Royal George Theatre,"
+      ],
+      "cities": [
+        "Stratford, Toronto, Niagara-on-the-Lake"
+      ],
+      "people": [
+        "Anton Chekhov",
+        "Blair Williams",
+        "Cynthia Dale",
+        "David Jansen",
+        "Diana Donnelly",
+        "Djanet Sears",
+        "Eda Holmes",
+        "Eugene Ionesco",
+        "Evan Buliung",
+        "Graeme Somerville",
+        "Jennifer Phipps",
+        "Jim Warren",
+        "Karen Robinson",
+        "Kristen Thomson",
+        "Lillian Groag",
+        "Lorne Kennedy",
+        "Lucy Peacock",
+        "Michael Ball",
+        "Michael Lichtefeld",
+        "Michael Therriault",
+        "Morris Panych",
+        "Nicole Underhay",
+        "Nigel Shawn Williams",
+        "Noël Coward",
+        "Oliver Dennis",
+        "Oscar Hammerstein II",
+        "Peter Donaldson",
+        "Ric Reid",
+        "Richard Rodgers",
+        "William Shakespeare"
+      ]
+    }
   },
   {
     "slug": "2006-09-15-the-affleck-affect",
@@ -9208,7 +13502,32 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 1097
+    "word_count": 1097,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Film",
+      "company_label": "Studio",
+      "primary_browse": "productions",
+      "secondary_browse": "directors"
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Hollywoodland"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [],
+      "venues": [],
+      "cities": [],
+      "people": [
+        "Adrien Brody",
+        "Ben Affleck",
+        "Bob Hoskins",
+        "Diane Lane"
+      ]
+    }
   },
   {
     "slug": "2006-09-16-the-triumph-of-dbi-young-at-29-she-exerts-complete-command",
@@ -9280,7 +13599,42 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 1835
+    "word_count": 1835,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Menopause Out Loud",
+        "blood.claat"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [],
+      "venues": [
+        "Capitol Event Theatre",
+        "Theatre Passe Muraille"
+      ],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "Alana Bridgewater",
+        "Amina Alfred",
+        "Jayne Lewis",
+        "Jeanie Linders",
+        "Nicole Robert",
+        "Rose Ryan",
+        "Weyni Mengesha",
+        "dbi young"
+      ]
+    }
   },
   {
     "slug": "2006-09-30-king-lear",
@@ -9344,7 +13698,37 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 85
+    "word_count": 85,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "King Lear"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Soulpepper Theatre Company"
+      ],
+      "venues": [
+        "Young Centre for the Performing Arts"
+      ],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "Joseph Ziegler",
+        "William Shakespeare",
+        "William Webster"
+      ]
+    }
   },
   {
     "slug": "2006-09-30-menopause-out-loud",
@@ -9398,7 +13782,31 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 72
+    "word_count": 72,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Menopause Out Loud"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [],
+      "venues": [
+        "Capitol Event Theatre"
+      ],
+      "cities": [
+        "Toronto"
+      ],
+      "people": []
+    }
   },
   {
     "slug": "2006-09-30-much-ado-about-nothing",
@@ -9467,7 +13875,39 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 85
+    "word_count": 85,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Much Ado About Nothing"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Stratford Festival"
+      ],
+      "venues": [
+        "Festival Theatre"
+      ],
+      "cities": [
+        "Stratford, Ontario"
+      ],
+      "people": [
+        "Lucy Peacock",
+        "Marti Maraden",
+        "Peter Donaldson",
+        "Stephen Ouimette",
+        "William Shakespeare"
+      ]
+    }
   },
   {
     "slug": "2006-09-30-rosmersholm",
@@ -9535,7 +13975,39 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 77
+    "word_count": 77,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Rosmersholm"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Shaw Festival"
+      ],
+      "venues": [
+        "Court House Theatre"
+      ],
+      "cities": [
+        "Niagara-on-the-Lake"
+      ],
+      "people": [
+        "Henrik Ibsen",
+        "Neil Munro",
+        "Patrick Galligan",
+        "Peter Hutt",
+        "Waneta Storms"
+      ]
+    }
   },
   {
     "slug": "2006-09-30-the-crucible",
@@ -9603,7 +14075,39 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 74
+    "word_count": 74,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "The Crucible"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Shaw Festival"
+      ],
+      "venues": [
+        "Festival Theatre"
+      ],
+      "cities": [
+        "Niagara-on-the-Lake"
+      ],
+      "people": [
+        "Arthur Miller",
+        "Benedict Campbell",
+        "Jim Mezon",
+        "Kelli Fox",
+        "Tadeusz Bradecki"
+      ]
+    }
   },
   {
     "slug": "2006-09-30-the-magic-fire",
@@ -9668,7 +14172,38 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 90
+    "word_count": 90,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "The Magic Fire"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Shaw Festival"
+      ],
+      "venues": [
+        "Court House Theatre"
+      ],
+      "cities": [
+        "Niagara-on-the-Lake"
+      ],
+      "people": [
+        "Jennifer Phipps",
+        "Lillian Groag",
+        "Michael Ball",
+        "Ric Reid"
+      ]
+    }
   },
   {
     "slug": "2006-09-30-twelfth-night",
@@ -9743,7 +14278,42 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 115
+    "word_count": 115,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Twelfth Night"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Stratford Festival"
+      ],
+      "venues": [
+        "Festival Theatre"
+      ],
+      "cities": [
+        "Stratford, Ontario"
+      ],
+      "people": [
+        "Brian Bedford",
+        "Dana Green",
+        "Diane D'Aquila",
+        "Don Carrier",
+        "Leon Rubin",
+        "Seana McKenna",
+        "Thom Marriott",
+        "William Shakespeare"
+      ]
+    }
   },
   {
     "slug": "2006-10-07-theatre-short-takes",
@@ -9856,7 +14426,58 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 834
+    "word_count": 834,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Multiple Theatre Productions Review"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [],
+      "venues": [],
+      "cities": [
+        "Toronto/Niagara-on-the-Lake/Stratford"
+      ],
+      "people": [
+        "Arthur Miller",
+        "Benedict Campbell",
+        "Christina Poddubiuk",
+        "Cole Porter",
+        "Cynthia Dale",
+        "Dan Chameroy",
+        "Daniel MacIvor",
+        "David Jansen",
+        "Graeme Somerville",
+        "Henry James",
+        "Jean Daigle",
+        "Jennifer Phipps",
+        "Jim Mezon",
+        "Kelli Fox",
+        "Laura Rickards",
+        "Lillian Groag",
+        "Lorne Kennedy",
+        "Lucy Peacock",
+        "Michael Ball",
+        "Michael Lichtefeld",
+        "Mike Shara",
+        "Nicole Underhay",
+        "Noël Coward",
+        "Peter Donaldson",
+        "Ric Reid",
+        "Rodgers and Hammerstein",
+        "Tara Rosling",
+        "Trey Anthony"
+      ]
+    }
   },
   {
     "slug": "2006-10-14-william-webster-can-t-escape-king-lear-plays-him-straight-and-with-a-twist-2",
@@ -9904,7 +14525,39 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 2117
+    "word_count": 2117,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Chekhov's Heartache",
+        "Ever Thus",
+        "King Leir"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Moonhorse Dance Theatre",
+        "Shakespeare and the Queen's Men",
+        "Theatre Smith-Gilmour"
+      ],
+      "venues": [
+        "Factory Theatre Studio",
+        "Glen Morris Studio",
+        "Young Centre for the Performing Arts"
+      ],
+      "cities": [
+        "Toronto"
+      ],
+      "people": []
+    }
   },
   {
     "slug": "2006-10-19-there-s-still-no-rain-falling-on-her-parade",
@@ -9961,7 +14614,34 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 824
+    "word_count": 824,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Concert",
+      "company_label": "Presenter",
+      "primary_browse": "productions",
+      "secondary_browse": "musicians"
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Barbra Streisand"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [],
+      "venues": [
+        "Air Canada Centre"
+      ],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "Barbra Streisand",
+        "Il Divo"
+      ]
+    }
   },
   {
     "slug": "2006-10-28-the-difficulties-of-love-times-three-factory-theatre-s-apple-is-very-fine",
@@ -10034,7 +14714,48 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 2223
+    "word_count": 2223,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Apple",
+        "Cosi fan tutte",
+        "Friar Bacon and Friar Bungay"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Canadian Opera Company",
+        "Factory Theatre",
+        "Shakespeare and the Queen's Men"
+      ],
+      "venues": [
+        "Arts and Letters Club of Toronto",
+        "Factory Theatre",
+        "Four Seasons Centre"
+      ],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "Fiona Reid",
+        "Graeme Somerville",
+        "Ken Gass",
+        "Kimberly Purtell",
+        "Marian Wihak",
+        "Nicole Underhay",
+        "Vern Thiessen",
+        "Wayne Kelso"
+      ]
+    }
   },
   {
     "slug": "2006-11-04-design-for-living",
@@ -10104,7 +14825,40 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 595
+    "word_count": 595,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Design For Living"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Shaw Festival"
+      ],
+      "venues": [
+        "Royal George Theatre"
+      ],
+      "cities": [
+        "Niagara-on-the-Lake"
+      ],
+      "people": [
+        "David Jansen",
+        "Graeme Somerville",
+        "Lorne Kennedy",
+        "Morris Panych",
+        "Nicole Underhay",
+        "Noël Coward"
+      ]
+    }
   },
   {
     "slug": "2006-11-11-wicked",
@@ -10158,7 +14912,33 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 762
+    "word_count": 762,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Wicked"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Mirvish Productions"
+      ],
+      "venues": [
+        "Canon Theatre"
+      ],
+      "cities": [
+        "Toronto"
+      ],
+      "people": []
+    }
   },
   {
     "slug": "2006-11-24-back-in-theatre-school",
@@ -10219,7 +14999,37 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 503
+    "word_count": 503,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "The History Boys"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "London's National Theatre"
+      ],
+      "venues": [
+        "Broadhurst Theatre"
+      ],
+      "cities": [
+        "New York"
+      ],
+      "people": [
+        "Alan Bennett",
+        "Nicholas Hytner",
+        "Richard Griffiths"
+      ]
+    }
   },
   {
     "slug": "2006-11-24-james-bond-the-man-of-real",
@@ -10279,7 +15089,33 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 1184
+    "word_count": 1184,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Film",
+      "company_label": "Studio",
+      "primary_browse": "productions",
+      "secondary_browse": "directors"
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Casino Royale"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [],
+      "venues": [],
+      "cities": [],
+      "people": [
+        "Daniel Craig",
+        "Eva Green",
+        "Jeffrey Wright",
+        "Judi Dench",
+        "Mads Mikkelsen"
+      ]
+    }
   },
   {
     "slug": "2006-11-25-horton-heard-a-negative-review-seussical-not-on-level-of-songs-for-a-new",
@@ -10357,7 +15193,51 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 2136
+    "word_count": 2136,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Seussical",
+        "Songs for a New World",
+        "Thom Pain"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Lorraine Kimsa Theatre for Young People",
+        "Tarragon Theatre",
+        "Young Centre for the Performing Arts"
+      ],
+      "venues": [
+        "Lorraine Kimsa Theatre for Young People",
+        "Tarragon Theatre Extra Space",
+        "Young Centre for the Performing Arts"
+      ],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "Allen MacInnis",
+        "Corinne Koslo",
+        "Dan Chameroy",
+        "George Masswohl",
+        "Lynn Ahrens",
+        "Michelle Giroux",
+        "Nicola Pantin",
+        "Philip Clarkson",
+        "Stephen Flaherty",
+        "Thom Allison",
+        "Tracy Michalidis"
+      ]
+    }
   },
   {
     "slug": "2006-12-16-theatre-listings",
@@ -10407,7 +15287,31 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 934
+    "word_count": 934,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "A Christmas Carol",
+        "Head-Smashed-In",
+        "Radio City Christmas Spectacular"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [],
+      "venues": [],
+      "cities": [
+        "Toronto"
+      ],
+      "people": []
+    }
   },
   {
     "slug": "2006-12-23-theatre-listings",
@@ -10492,7 +15396,44 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 706
+    "word_count": 706,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Multiple Theatre Productions Listings"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [],
+      "venues": [],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "Bret Hart",
+        "Charles Dickens",
+        "Corinne Koslo",
+        "George Masswohl",
+        "Jamie McKnight",
+        "Jean Daigle",
+        "Jennifer Dale",
+        "Joseph Ziegler",
+        "Lynn Ahrens",
+        "Michael Shamata",
+        "Naomi Snieckus",
+        "Oliver Dennis",
+        "Ross Petty",
+        "Stephen Flaherty"
+      ]
+    }
   },
   {
     "slug": "2006-12-30-a-year-of-people-and-places",
@@ -10632,7 +15573,68 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 2120
+    "word_count": 2120,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "2006 Toronto Theatre Year in Review"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [],
+      "venues": [],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "Adrianne Pieczonka",
+        "Alan Bennett",
+        "Albert Schultz",
+        "Alex Poch-Goldin",
+        "Allen Cole",
+        "Bob Martin",
+        "Chris Abraham",
+        "Corinne Koslo",
+        "D'bi young",
+        "Daniel Brooks",
+        "Daniel MacIvor",
+        "Daryl Cloran",
+        "Diego Matamoros",
+        "Domini Blythe",
+        "Fiona Reid",
+        "George Masswohl",
+        "Hannah Moscovitch",
+        "Jean Daigle",
+        "Jordan Pettle",
+        "Joseph Ziegler",
+        "Lucy Peacock",
+        "Lynn Ahrens",
+        "Martha Henry",
+        "Michael Healey",
+        "Michael Levine",
+        "Naomi Snieckus",
+        "Nicole Underhay",
+        "Oliver Dennis",
+        "Patrick Stewart",
+        "Peter Hinton",
+        "Peter Hutt",
+        "Richard Rose",
+        "Rosa Laborde",
+        "Scott Wentworth",
+        "Sky Gilbert",
+        "Stephen Flaherty",
+        "Vern Thiessen",
+        "William Webster"
+      ]
+    }
   },
   {
     "slug": "2007-04-14-queen-s-soulless-show-for-a-narcissistic-generation-few-songs-work-in-contrived",
@@ -10711,7 +15713,43 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 969
+    "word_count": 969,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "We Will Rock You"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Mirvish Productions"
+      ],
+      "venues": [
+        "Canon Theatre"
+      ],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "Alanna Bridgewater",
+        "Arlene Phillips",
+        "Ben Elton",
+        "Erica Peck",
+        "Evan Buliung",
+        "Jack Langeduk",
+        "Queen",
+        "Rick Fox",
+        "Yvan Pedneault"
+      ]
+    }
   },
   {
     "slug": "2007-05-04-a-chorus-of-kudos-playwright-robert-lepage-is-feted-by-europes-thespians",
@@ -10761,7 +15799,25 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 769
+    "word_count": 769,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [],
+      "venues": [],
+      "cities": [],
+      "people": []
+    }
   },
   {
     "slug": "2007-05-31-waving-wheat-can-sure-smell-sweet-sometimes",
@@ -10847,7 +15903,46 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 969
+    "word_count": 969,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Oklahoma!"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Stratford Festival"
+      ],
+      "venues": [
+        "Festival Theatre"
+      ],
+      "cities": [
+        "Stratford, Ontario"
+      ],
+      "people": [
+        "Berthold Carriere",
+        "Blythe Wilson",
+        "Dan Chameroy",
+        "David Keeley",
+        "Donna Feore",
+        "Jonathan Ellul",
+        "Kyle Blair",
+        "Lindsay Thomas",
+        "Nora McLellan",
+        "Oscar Hammerstein",
+        "Patrick Clark",
+        "Richard Rodgers"
+      ]
+    }
   },
   {
     "slug": "2007-06-09-killings-up-as-sopranos-nears-end-series-mimicked-other-gangster-dramas-in",
@@ -10897,7 +15992,29 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 948
+    "word_count": 948,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Show",
+      "company_label": "Network",
+      "primary_browse": "productions",
+      "secondary_browse": "actors"
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "The Sopranos"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "HBO"
+      ],
+      "venues": [],
+      "cities": [],
+      "people": []
+    }
   },
   {
     "slug": "2007-06-12-with-a-bada-whimper-sopranos-finale-couldnt-meet-its-own-expectations",
@@ -10947,7 +16064,29 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 1296
+    "word_count": 1296,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Show",
+      "company_label": "Network",
+      "primary_browse": "productions",
+      "secondary_browse": "actors"
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "The Sopranos"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "HBO"
+      ],
+      "venues": [],
+      "cities": [],
+      "people": []
+    }
   },
   {
     "slug": "2007-07-23-genesis-of-blanche-dubois-summer-and-smoke-2",
@@ -11016,7 +16155,40 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 781
+    "word_count": 781,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Summer and Smoke"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Shaw Festival"
+      ],
+      "venues": [
+        "Royal George Theatre"
+      ],
+      "cities": [
+        "Niagara-on-the-Lake"
+      ],
+      "people": [
+        "Jeff Meadows",
+        "Jonathan Gould",
+        "Neil Munro",
+        "Nicole Underhay",
+        "Sharry Flett",
+        "Tennessee Williams"
+      ]
+    }
   },
   {
     "slug": "2007-12-05-it-don-t-mean-a-thing-if-it-ain-t-got-that-bing",
@@ -11093,7 +16265,44 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 867
+    "word_count": 867,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Irving Berlin's White Christmas"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Sony Centre for the Performing Arts"
+      ],
+      "venues": [
+        "Sony Centre for the Performing Arts"
+      ],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "David Ives",
+        "Graham Rowat",
+        "Jennifer Stewart",
+        "Kate Baldwin",
+        "Kate Hennig",
+        "Paul Blake",
+        "Paula Wolfson",
+        "Shannon O'Bryan",
+        "Tony Yazbeck",
+        "Walter Bobbie"
+      ]
+    }
   },
   {
     "slug": "2007-12-06-not-so-festive-festivities",
@@ -11149,7 +16358,33 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 957
+    "word_count": 957,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Show",
+      "company_label": "Network",
+      "primary_browse": "productions",
+      "secondary_browse": "actors"
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "ER / The Pagan Christ"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "CBC",
+        "CTV"
+      ],
+      "venues": [],
+      "cities": [],
+      "people": [
+        "Peter Fonda",
+        "Reiko Aylesworth"
+      ]
+    }
   },
   {
     "slug": "2007-12-06-what-would-jesus-watch-the-pagan-christ-and-er-raise-big-questions",
@@ -11205,7 +16440,33 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 990
+    "word_count": 990,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Show",
+      "company_label": "Network",
+      "primary_browse": "productions",
+      "secondary_browse": "actors"
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "ER / The Pagan Christ"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "CBC",
+        "CTV"
+      ],
+      "venues": [],
+      "cities": [],
+      "people": [
+        "Peter Fonda",
+        "Reiko Aylesworth"
+      ]
+    }
   },
   {
     "slug": "2008-06-26-lemon-zesty-jazz-is-in-the-family",
@@ -11262,7 +16523,34 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 558
+    "word_count": 558,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Concert",
+      "company_label": "Presenter",
+      "primary_browse": "productions",
+      "secondary_browse": "musicians"
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Sandy Stewart and Bill Charlap"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [],
+      "venues": [
+        "The Old Mill"
+      ],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "Bill Charlap",
+        "Sandy Stewart"
+      ]
+    }
   },
   {
     "slug": "2009-07-15-a-diabolical-morality",
@@ -11336,7 +16624,42 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 881
+    "word_count": 881,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "The Devil's Disciple"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Shaw Festival"
+      ],
+      "venues": [
+        "Festival Theatre"
+      ],
+      "cities": [
+        "Niagara-on-the-Lake"
+      ],
+      "people": [
+        "Donna Belleville",
+        "Evan Buliung",
+        "Fiona Byrne",
+        "George Bernard Shaw",
+        "Jim Mezon",
+        "Peter Hartwell",
+        "Peter Krantz",
+        "Tadeusz Bradecki"
+      ]
+    }
   },
   {
     "slug": "2010-07-14-legally-blonde-the-musical-overrules-my-objection-production-delights-with",
@@ -11406,7 +16729,41 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 740
+    "word_count": 740,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Legally Blonde The Musical"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Mirvish Productions"
+      ],
+      "venues": [
+        "Princess of Wales Theatre"
+      ],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "Becky Gulsvig",
+        "D.B Bonds",
+        "Jeff McLean",
+        "Laurence O'Keefe",
+        "Michael Rupert",
+        "Natalie Jay Johnson",
+        "Nell Benjamin"
+      ]
+    }
   },
   {
     "slug": "2010-12-27-2010-s-curtain-call-leah-sandals-on-12-months-of-theatre-visual-arts",
@@ -11456,7 +16813,27 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 83
+    "word_count": 83,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "2010 Cultural Year in Review"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [],
+      "venues": [],
+      "cities": [],
+      "people": []
+    }
   },
   {
     "slug": "2011-06-04-shaw-festival-s-cat-on-a-hot-tin-roof-a-blast",
@@ -11529,7 +16906,42 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 874
+    "word_count": 874,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Cat on a Hot Tin Roof"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Shaw Festival"
+      ],
+      "venues": [
+        "Festival Theatre"
+      ],
+      "cities": [
+        "Niagara-on-the-Lake"
+      ],
+      "people": [
+        "Corrine Koslo",
+        "Eda Holmes",
+        "Gray Powell",
+        "Jim Mezon",
+        "Moya O'Connell",
+        "Nicole Underhay",
+        "Patrick McManus",
+        "Tennessee Williams"
+      ]
+    }
   },
   {
     "slug": "2011-06-06-stratford-theatre-review-camelot",
@@ -11620,7 +17032,48 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 937
+    "word_count": 937,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Camelot"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Stratford Festival"
+      ],
+      "venues": [
+        "Festival Theatre"
+      ],
+      "cities": [
+        "Stratford, Ontario"
+      ],
+      "people": [
+        "Alan Jay Lerner",
+        "Brent Carver",
+        "Debra Hanson",
+        "Frederick Loewe",
+        "Gary Griffin",
+        "Geraint Wyn-Davies",
+        "Jonathan Winsby",
+        "Kaylee Harwood",
+        "Lucy Peacock",
+        "Maria Blumenfeld",
+        "Mike Nadajewski",
+        "T.H. White",
+        "Thomas Malory",
+        "Warren Carlyle"
+      ]
+    }
   },
   {
     "slug": "2011-06-06-theatre-review-the-merry-wives-of-windsor",
@@ -11703,7 +17156,46 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 919
+    "word_count": 919,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "The Merry Wives of Windsor"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Stratford Festival"
+      ],
+      "venues": [
+        "Festival Theatre"
+      ],
+      "cities": [
+        "Stratford, Ontario"
+      ],
+      "people": [
+        "Andrew Gillies",
+        "Christopher Prentice",
+        "Frank Galati",
+        "Geraint Wyn-Davies",
+        "James Blendick",
+        "Laura Condlln",
+        "Lucy Peacock",
+        "Nigel Bennett",
+        "Robert Perdziola",
+        "Tom McCamus",
+        "Tom Rooney",
+        "William Shakespeare"
+      ]
+    }
   },
   {
     "slug": "2011-11-22-tribute-to-the-man-with-the-golden-voice-remembering-john-neville",
@@ -11757,7 +17249,29 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 765
+    "word_count": 765,
+    "display_schema": {
+      "work_type": "subjects",
+      "work_label": "Subject",
+      "company_label": "Company",
+      "primary_browse": "subjects",
+      "secondary_browse": "productions"
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "John Neville Obituary"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [],
+      "venues": [],
+      "cities": [],
+      "people": [
+        "John Neville"
+      ]
+    }
   },
   {
     "slug": "2011-11-22-actor-took-stratford-out-of-the-red-performed-hamlet-opposite-judi-dench",
@@ -11811,7 +17325,29 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 1080
+    "word_count": 1080,
+    "display_schema": {
+      "work_type": "subjects",
+      "work_label": "Subject",
+      "company_label": "Company",
+      "primary_browse": "subjects",
+      "secondary_browse": "productions"
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "John Neville Obituary"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [],
+      "venues": [],
+      "cities": [],
+      "people": [
+        "John Neville"
+      ]
+    }
   },
   {
     "slug": "2012-11-14-having-their-pie-and-eating-it-too",
@@ -11889,7 +17425,40 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 702
+    "word_count": 702,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Alligator Pie"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Soulpepper Theatre Company"
+      ],
+      "venues": [
+        "Young Centre for the Performing Arts"
+      ],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "Dennis Lee",
+        "Gregory Prest",
+        "Ins Choi",
+        "Ken MacKenzie",
+        "Mike Ross",
+        "Raquel Duffy"
+      ]
+    }
   },
   {
     "slug": "2013-01-19-witch-you-were-here-a-great-visit-to-oz",
@@ -11985,7 +17554,51 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 1103
+    "word_count": 1103,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "The Wizard of Oz"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Mirvish Productions"
+      ],
+      "venues": [
+        "Ed Mirvish Theatre"
+      ],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "Andrew Lloyd Webber",
+        "Arlene Phillips",
+        "Cedric Smith",
+        "Charlotte Moore",
+        "Danielle Wade",
+        "E. Y. Harburg",
+        "Harold Arlen",
+        "Jamie McKnight",
+        "Jeremy Sams",
+        "L. Frank Baum",
+        "Larry Mannell",
+        "Lee MacDougall",
+        "Lisa Horner",
+        "Mike Jackson",
+        "Robert Jones",
+        "Robin Evan Willis",
+        "Tim Rice"
+      ]
+    }
   },
   {
     "slug": "2014-04-10-pecking-order-it-s-fight-and-flight-onstage-but-from-which-lover-in",
@@ -12052,7 +17665,39 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 1100
+    "word_count": 1100,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Cock"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Studio 180 Theatre"
+      ],
+      "venues": [],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "Andrew Kushnir",
+        "Ian D. Clark",
+        "Jeff Miller",
+        "Jessica Greenberg",
+        "Joel Greenberg",
+        "John Thompson",
+        "Mike Bartlett"
+      ]
+    }
   },
   {
     "slug": "2014-09-27-baddest-guy-ben-kingsley-plays-another-villain-in-the-boxtrolls-and-as-usual",
@@ -12109,7 +17754,33 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 427
+    "word_count": 427,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Film",
+      "company_label": "Studio",
+      "primary_browse": "productions",
+      "secondary_browse": "directors"
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "The Boxtrolls"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Laika Studio"
+      ],
+      "venues": [],
+      "cities": [],
+      "people": [
+        "Alan Snow",
+        "Ben Kingsley",
+        "Elle Fanning"
+      ]
+    }
   },
   {
     "slug": "2014-12-27-columnist-s-best-picks",
@@ -12157,7 +17828,25 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 147
+    "word_count": 147,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [],
+      "venues": [],
+      "cities": [],
+      "people": []
+    }
   },
   {
     "slug": "2015-05-09-organ-grinder-creditors-and-liver-prove-that-our-hearts-will-always-be-grist",
@@ -12237,7 +17926,47 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 1046
+    "word_count": 1046,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Creditors / Liver"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Coal Mine Theatre",
+        "Storefront Theatre"
+      ],
+      "venues": [
+        "Coal Mine Theatre",
+        "Storefront Theatre"
+      ],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "August Strindberg",
+        "Claire Armstrong",
+        "Hardee T. Lineham",
+        "Kat Sandler",
+        "Katelyn McCulloch",
+        "Liisa Repo-Martell",
+        "Michael Musi",
+        "Noah Reid",
+        "Rae Ellen Bodie",
+        "Sean Sullivan",
+        "Shaun Benson"
+      ]
+    }
   },
   {
     "slug": "2016-12-05-away-we-go",
@@ -12334,7 +18063,51 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 1135
+    "word_count": 1135,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Come From Away"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Mirvish Productions"
+      ],
+      "venues": [
+        "Royal Alexandra Theatre"
+      ],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "Astrid Van Wieren",
+        "Beowulf Boritt",
+        "Caesar Samayoa",
+        "Chad Kimball",
+        "Christopher Ashley",
+        "David Hein",
+        "Geno Carr",
+        "Howell Binkley",
+        "Irene Sankoff",
+        "Jenn Colella",
+        "Joel Hatch",
+        "Kendra Kassebaum",
+        "Lee MacDougall",
+        "Petrina Bromley",
+        "Q. Smith",
+        "Rodney Hicks",
+        "Sharon Wheatley"
+      ]
+    }
   },
   {
     "slug": "2017-03-29-the-great-encompass-the-more-ground-it-attempts-to-cover-the-more-it-loses-2",
@@ -12417,7 +18190,44 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 988
+    "word_count": 988,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Sousatzka"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [],
+      "venues": [
+        "Elgin Theatre"
+      ],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "Adrian Noble",
+        "Bernice Rubens",
+        "Craig Lucas",
+        "David Shire",
+        "Garth Drabinsky",
+        "Jordan Barrow",
+        "Judy Kaye",
+        "Lebo M",
+        "Montego Glover",
+        "Richard Maltby Jr.",
+        "Ryan Allen",
+        "Victoria Clark"
+      ]
+    }
   },
   {
     "slug": "2017-05-03-a-love-story-in-the-great-tradition",
@@ -12482,7 +18292,39 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 825
+    "word_count": 825,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Midsummer"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Tarragon Theatre"
+      ],
+      "venues": [
+        "Tarragon Theatre"
+      ],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "Brandon McGibbon",
+        "Carly Street",
+        "David Greig",
+        "Gordon McIntyre",
+        "Tamara Bernier Evans"
+      ]
+    }
   },
   {
     "slug": "2021-10-22-martha-henry-a-great-tragedienne-and-comedienne-was-always-good-at-endings",
@@ -12533,7 +18375,29 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 1488
+    "word_count": 1488,
+    "display_schema": {
+      "work_type": "subjects",
+      "work_label": "Subject",
+      "company_label": "Company",
+      "primary_browse": "subjects",
+      "secondary_browse": "productions"
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Martha Henry Career Overview"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Stratford Festival"
+      ],
+      "venues": [],
+      "cities": [],
+      "people": []
+    }
   },
   {
     "slug": "2021-12-01-my-50-year-friendship-with-stephen-sondheim",
@@ -12583,7 +18447,27 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 1926
+    "word_count": 1926,
+    "display_schema": {
+      "work_type": "subjects",
+      "work_label": "Subject",
+      "company_label": "Company",
+      "primary_browse": "subjects",
+      "secondary_browse": "productions"
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Stephen Sondheim"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [],
+      "venues": [],
+      "cities": [],
+      "people": []
+    }
   },
   {
     "slug": "2024-09-30-even-before-she-was-famous-i-knew-maggie-smith-was-a-treasure",
@@ -12633,7 +18517,30 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 1212
+    "word_count": 1212,
+    "display_schema": {
+      "work_type": "subjects",
+      "work_label": "Subject",
+      "company_label": "Company",
+      "primary_browse": "subjects",
+      "secondary_browse": "productions"
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Maggie Smith"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "National Theatre",
+        "Stratford Festival"
+      ],
+      "venues": [],
+      "cities": [],
+      "people": []
+    }
   },
   {
     "slug": "2008-02-16-condos-are-a-sham-and-other-funny-true-revelations-from-second-city-s-latest",
@@ -12704,7 +18611,41 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 767
+    "word_count": 767,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Tazed and Confused"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Second City"
+      ],
+      "venues": [
+        "Second City"
+      ],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "Ashley Botting",
+        "Darryl Hinds",
+        "Doug Morency",
+        "Jim Annan",
+        "Karen Parker",
+        "Leslie Seiler",
+        "Marty Adams"
+      ]
+    }
   },
   {
     "slug": "2005-04-14-t-o-do-a-discriminating-guide-to-toronto-today",
@@ -12762,6 +18703,33 @@
     },
     "production_groups": [],
     "media": [],
-    "word_count": 239
+    "word_count": 239,
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Ain't Misbehavin'"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Canadian Stage"
+      ],
+      "venues": [],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "Fats Waller",
+        "Jackie Richardson"
+      ]
+    }
   }
 ]

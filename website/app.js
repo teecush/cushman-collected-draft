@@ -1,4 +1,4 @@
-const DATA_URL = new URL("../site_export/data/public_reviews.json?v=93", import.meta.url);
+const DATA_URL = new URL("../site_export/data/public_reviews.json?v=94", import.meta.url);
 const CONTENT_ROOT = new URL("../site_export/content/reviews/", import.meta.url);
 const PAGE_SIZE = 36;
 const SHAKESPEARE_COLLECTION = "The Shakespeare Collection";
@@ -256,6 +256,23 @@ const TYPE_BY_CATEGORY = new Map(
 const TYPE_VALUE_BY_LABEL = new Map(TYPE_GROUPS.map((group) => [group.label, group.value]));
 const OTHER_ARTS_VALUES = ["comedy", "opera", "film", "dance", "circus"];
 const BOOKS_ESSAYS_VALUES = ["book-reviews", "essays-opinion", "year-in-review"];
+const CATEGORY_BROWSE_PROFILES = {
+  theatre: { groupLabel: "Productions", entityType: "productions", emptyLabel: "Articles without a production", intro: "Browse theatre reviews by production first, then open the linked production index for all related articles." },
+  "musical-theatre": { groupLabel: "Productions", entityType: "productions", emptyLabel: "Articles without a production", intro: "Browse musical-theatre writing by show title, then drill into the articles for that show." },
+  television: { groupLabel: "Shows", entityType: "productions", emptyLabel: "Articles without a show title", intro: "Television writing is grouped by show or program title so recurring coverage reads as a clear path." },
+  "book-reviews": { groupLabel: "Books", entityType: "books", secondaryEntityType: "book-authors", secondaryLabel: "Authors", emptyLabel: "Articles without a book title", intro: "Book reviews are grouped by reviewed book, with a secondary author index for broader reading paths." },
+  "music-concerts": { groupLabel: "Albums, Concerts, And Performances", entityType: "productions", secondaryEntityType: "musicians", secondaryLabel: "Artists And Musicians", emptyLabel: "Articles without a work title", intro: "Music and concert writing is grouped by recording, concert, or performance title, with artist paths where the metadata supports them." },
+  opera: { groupLabel: "Productions", entityType: "productions", emptyLabel: "Articles without a production", intro: "Opera reviews are grouped by production title and can also be filtered by company, venue, and city." },
+  comedy: { groupLabel: "Shows", entityType: "productions", secondaryEntityType: "performers", secondaryLabel: "Performers", emptyLabel: "Articles without a show title", intro: "Comedy coverage is grouped by show where possible, with performer paths for stand-up, revue, and solo work." },
+  film: { groupLabel: "Films", entityType: "productions", secondaryEntityType: "directors", secondaryLabel: "Directors", emptyLabel: "Articles without a film title", intro: "Film reviews are grouped by film title first, with director and cast indexes still available through chips." },
+  dance: { groupLabel: "Dance Works", entityType: "productions", secondaryEntityType: "choreographers", secondaryLabel: "Choreographers", emptyLabel: "Articles without a work title", intro: "Dance reviews are grouped by work or program title, with choreographer paths where available." },
+  circus: { groupLabel: "Shows", entityType: "productions", emptyLabel: "Articles without a show title", intro: "Circus reviews are grouped by show title." },
+  profiles: { groupLabel: "Subjects", entityType: "subjects", secondaryEntityType: "productions", secondaryLabel: "Current Work Context", emptyLabel: "Profiles without a subject", intro: "Profiles are grouped by subject rather than by incidental productions mentioned in career context." },
+  obituaries: { groupLabel: "Subjects", entityType: "subjects", secondaryEntityType: "productions", secondaryLabel: "Notable Works", emptyLabel: "Obituaries without a subject", intro: "Obituaries are grouped by the person being remembered, with notable works kept secondary." },
+  "essays-opinion": { groupLabel: "Topics And Works", entityType: "productions", secondaryEntityType: "subjects", secondaryLabel: "People", emptyLabel: "Ungrouped essays", intro: "Opinion pieces are grouped by the concrete work or subject where one is present; broad essays remain chronological." },
+  "year-in-review": { groupLabel: "Topics And Works", entityType: "productions", emptyLabel: "Season summaries", intro: "Year-in-review pieces usually work best chronologically, with work links only where the article has a clear structured focus." },
+  "site-notes": { groupLabel: "Correction Targets", entityType: "productions", emptyLabel: "General notes", intro: "Corrections and site notes are kept compact and chronological." },
+};
 const SHAKESPEARE_PLAY_GROUPS = [
   {
     label: "Comedies",
@@ -545,6 +562,74 @@ function collectionNames(record) {
     return [...names, SHAKESPEARE_COLLECTION];
   }
   return names;
+}
+
+function displaySchema(record) {
+  const category = String(record.article_category || "");
+  if (category === "Book Review") {
+    return {
+      workType: "books",
+      workLabel: "Book",
+      groupWorkLabel: "Book",
+      companyLabel: "Publisher",
+      venueLabel: "Context",
+      cityLabel: "Place",
+      roleLabels: { actors: "People", playwright: "Author", artists: "Artists" },
+    };
+  }
+  if (category === "Television Review") {
+    return {
+      workType: "productions",
+      workLabel: "Show",
+      groupWorkLabel: "Show",
+      companyLabel: "Network",
+      venueLabel: "Venue",
+      cityLabel: "Place",
+      roleLabels: { actors: "Cast", playwright: "Writer", director: "Director", artists: "Creators", performers: "Performers" },
+    };
+  }
+  if (category === "Film Review") {
+    return {
+      workType: "productions",
+      workLabel: "Film",
+      groupWorkLabel: "Film",
+      companyLabel: "Studio",
+      venueLabel: "Venue",
+      cityLabel: "Place",
+      roleLabels: { actors: "Cast", playwright: "Screenwriter", director: "Director", composer_lyricist: "Music" },
+    };
+  }
+  if (category === "Music Review" || category === "Concert Review") {
+    return {
+      workType: "productions",
+      workLabel: category === "Concert Review" ? "Concert" : "Recording",
+      groupWorkLabel: category === "Concert Review" ? "Concert" : "Recording",
+      companyLabel: "Label",
+      venueLabel: "Venue",
+      cityLabel: "City",
+      roleLabels: { musicians: "Artist", performers: "Performer", composer_lyricist: "Composer/Lyricist", musical_director: "Music Director" },
+    };
+  }
+  if (category === "Obituary" || category === "Profile" || category === "Theatre Interview") {
+    return {
+      workType: "productions",
+      workLabel: "Current Work",
+      groupWorkLabel: "Work",
+      companyLabel: "Company",
+      venueLabel: "Venue",
+      cityLabel: "Place",
+      roleLabels: { actors: "Performer", artists: "Artist" },
+    };
+  }
+  return {
+    workType: "productions",
+    workLabel: "Production",
+    groupWorkLabel: "Production",
+    companyLabel: "Company",
+    venueLabel: "Venue",
+    cityLabel: "City",
+    roleLabels: {},
+  };
 }
 
 function collectionCount(name) {
@@ -1002,6 +1087,159 @@ function countForOtherArts() {
   return OTHER_ARTS_VALUES.reduce((sum, value) => sum + countForTypeValue(value), 0);
 }
 
+function categoryBrowseProfile(typeValue, records = []) {
+  if (CATEGORY_BROWSE_PROFILES[typeValue]) return CATEGORY_BROWSE_PROFILES[typeValue];
+  const counts = new Map();
+  records.forEach((record) => {
+    const group = typeGroup(record).value;
+    counts.set(group, (counts.get(group) || 0) + 1);
+  });
+  const dominant = [...counts.entries()].sort((a, b) => b[1] - a[1])[0]?.[0];
+  return CATEGORY_BROWSE_PROFILES[dominant] || {
+    groupLabel: "Works And Subjects",
+    entityType: "productions",
+    secondaryEntityType: "subjects",
+    secondaryLabel: "Subjects",
+    emptyLabel: "Ungrouped Articles",
+    intro: "This path groups articles by the strongest available work or subject metadata, then leaves the remaining records in chronological order.",
+  };
+}
+
+function recordsForCollectionSlug(slug) {
+  const collection = collectionFromSlug(slug);
+  return collection ? state.records.filter((record) => collectionNames(record).includes(collection)) : [];
+}
+
+function groupedBrowseEntries(records, entityTypeKey) {
+  const grouped = new Map();
+  const ungrouped = [];
+  records.forEach((record) => {
+    const values = entityValues(record, entityTypeKey);
+    const labels = new Map();
+    values.forEach((value) => {
+      const label = String(value || "").trim();
+      if (label) labels.set(entitySlug(label), label);
+    });
+    if (!labels.size) {
+      ungrouped.push(record);
+      return;
+    }
+    labels.forEach((label, slug) => {
+      const entry = grouped.get(slug) || { slug, label, records: [] };
+      entry.records.push(record);
+      grouped.set(slug, entry);
+    });
+  });
+  return {
+    entries: [...grouped.values()].sort((a, b) => b.records.length - a.records.length || indexSortText(a.label).localeCompare(indexSortText(b.label))),
+    ungrouped: sortRecords(ungrouped),
+  };
+}
+
+function groupedBrowseCard(entry, entityTypeKey) {
+  const link = document.createElement("a");
+  link.className = "browse-group-card";
+  link.href = `#entity:${entityTypeKey}:${entry.slug}`;
+  const title = document.createElement("strong");
+  title.textContent = indexDisplayLabel(entityTypeKey, entry.label);
+  const count = document.createElement("em");
+  count.textContent = `${entry.records.length.toLocaleString()} ${entry.records.length === 1 ? "article" : "articles"}`;
+  const examples = document.createElement("span");
+  examples.textContent = sortRecords(entry.records)
+    .slice(0, 3)
+    .map((record) => [record.date ? String(record.date).slice(0, 4) : "", record.title].filter(Boolean).join(" "))
+    .join(" / ");
+  link.replaceChildren(title, count, examples);
+  return link;
+}
+
+function renderGroupedBrowsePage({ title, countLabel, intro, records, profile, backHref = "#section:browse" }) {
+  const heading = document.createElement("h1");
+  heading.textContent = title;
+  const count = document.createElement("p");
+  count.className = "index-count";
+  count.textContent = countLabel || `${records.length.toLocaleString()} ${records.length === 1 ? "article" : "articles"}`;
+  const copy = document.createElement("p");
+  copy.className = "landing-intro";
+  copy.textContent = intro || profile.intro || "";
+  const back = document.createElement("a");
+  back.className = "index-back";
+  back.href = backHref;
+  back.textContent = "Back to browse";
+
+  const primary = groupedBrowseEntries(records, profile.entityType);
+  const sections = [heading, count, copy, back];
+  const primarySection = document.createElement("section");
+  primarySection.className = "grouped-browse-section";
+  const primaryTitle = document.createElement("h2");
+  primaryTitle.textContent = profile.groupLabel;
+  const primaryGrid = document.createElement("div");
+  primaryGrid.className = "browse-group-grid";
+  primaryGrid.replaceChildren(...primary.entries.map((entry) => groupedBrowseCard(entry, profile.entityType)));
+  primarySection.replaceChildren(primaryTitle, primaryGrid);
+  sections.push(primarySection);
+
+  if (profile.secondaryEntityType) {
+    const secondary = groupedBrowseEntries(records, profile.secondaryEntityType);
+    if (secondary.entries.length) {
+      const secondarySection = document.createElement("section");
+      secondarySection.className = "grouped-browse-section grouped-browse-section-secondary";
+      const secondaryTitle = document.createElement("h2");
+      secondaryTitle.textContent = profile.secondaryLabel || entityType(profile.secondaryEntityType)?.label || "Related Index";
+      const secondaryGrid = document.createElement("div");
+      secondaryGrid.className = "browse-group-grid browse-group-grid-compact";
+      secondaryGrid.replaceChildren(...secondary.entries.slice(0, 48).map((entry) => groupedBrowseCard(entry, profile.secondaryEntityType)));
+      secondarySection.replaceChildren(secondaryTitle, secondaryGrid);
+      sections.push(secondarySection);
+    }
+  }
+
+  if (primary.ungrouped.length) {
+    const ungrouped = document.createElement("section");
+    ungrouped.className = "grouped-browse-section";
+    const ungroupedTitle = document.createElement("h2");
+    ungroupedTitle.textContent = profile.emptyLabel || "Ungrouped Articles";
+    const list = document.createElement("div");
+    list.className = "results entity-results";
+    list.replaceChildren(...primary.ungrouped.slice(0, 36).map((record) => resultCard(record)));
+    ungrouped.replaceChildren(ungroupedTitle, list);
+    sections.push(ungrouped);
+  }
+
+  els.indexContent.replaceChildren(...sections);
+}
+
+function renderCategoryBrowsePage(typeValue) {
+  const group = TYPE_GROUPS.find((item) => item.value === typeValue);
+  if (!group) return;
+  const records = recordsForTypeValue(typeValue);
+  renderGroupedBrowsePage({
+    title: group.label,
+    countLabel: `${records.length.toLocaleString()} ${records.length === 1 ? "article" : "articles"}`,
+    intro: categoryBrowseProfile(typeValue, records).intro,
+    records,
+    profile: categoryBrowseProfile(typeValue, records),
+    backHref: "#section:browse",
+  });
+}
+
+function renderCollectionBrowsePage(slug) {
+  const collection = collectionFromSlug(slug);
+  if (!collection) return;
+  const records = recordsForCollectionSlug(slug);
+  const profile = slug === "shakespeare"
+    ? { ...CATEGORY_BROWSE_PROFILES.theatre, intro: "Shakespeare collection articles are grouped by play or adapted work first, then remain available chronologically through search." }
+    : categoryBrowseProfile("", records);
+  renderGroupedBrowsePage({
+    title: collection.replace(/^The\s+/, ""),
+    countLabel: `${records.length.toLocaleString()} ${records.length === 1 ? "article" : "articles"}`,
+    intro: profile.intro,
+    records,
+    profile,
+    backHref: "#section:collections",
+  });
+}
+
 function landingItems(kind) {
   if (kind === "browse") {
     return [
@@ -1022,9 +1260,9 @@ function landingItems(kind) {
         "circus",
       ].map((value) => {
         const group = TYPE_GROUPS.find((item) => item.value === value);
-        return landingItem(group.label, `#archive?type=${value}`, countForTypeValue(value), tileDescription(group.label), recordsForTypeValue(value));
+        return landingItem(group.label, `#browse-group:${value}`, countForTypeValue(value), tileDescription(group.label), recordsForTypeValue(value));
       }),
-      landingItem("Site Notes", "#archive?type=site-notes", countForTypeValue("site-notes"), tileDescription("Site Notes"), recordsForTypeValue("site-notes")),
+      landingItem("Site Notes", "#browse-group:site-notes", countForTypeValue("site-notes"), tileDescription("Site Notes"), recordsForTypeValue("site-notes")),
     ];
   }
 
@@ -1040,7 +1278,7 @@ function landingItems(kind) {
       landingItem("Shakespeare", "#section:shakespeare", countForTile("Shakespeare"), tileDescription("Shakespeare"), state.records.filter((record) => collectionNames(record).includes(SHAKESPEARE_COLLECTION))),
       ...SECONDARY_COLLECTION_TILES.map((title) => {
         const collection = collectionFromSlug(slugForCollection(title));
-        return landingItem(title.replace(/^The\s+/, ""), archiveHrefForTile(title, "collections"), countForTile(title, "collections"), tileDescription(title), state.records.filter((record) => collectionNames(record).includes(collection)));
+        return landingItem(title.replace(/^The\s+/, ""), `#browse-collection:${slugForCollection(title)}`, countForTile(title, "collections"), tileDescription(title), state.records.filter((record) => collectionNames(record).includes(collection)));
       }),
     ];
   }
@@ -1054,7 +1292,7 @@ function landingItems(kind) {
 
   if (kind === "shakespeare") {
     return SHAKESPEARE_GROUPS.map((group) => {
-      const href = group.value ? `#collection:shakespeare?group=${group.value}` : "#collection:shakespeare";
+      const href = group.value ? `#collection:shakespeare?group=${group.value}` : "#browse-collection:shakespeare";
       const records = state.records.filter((record) => collectionNames(record).includes(SHAKESPEARE_COLLECTION) && (!group.value || shakespeareGroup(record) === group.value));
       return landingItem(group.label, href, records.length, group.description, records);
     });
@@ -1237,18 +1475,18 @@ function renderFrontpageDirectory() {
   const browseLinks = TYPE_GROUPS
     .map((type) => ({
       label: type.label,
-      href: `#archive?type=${type.value}`,
+      href: `#browse-group:${type.value}`,
       count: state.records.filter((record) => typeGroup(record).value === type.value).length,
     }))
     .filter((item) => item.count)
     .sort((a, b) => b.count - a.count || a.label.localeCompare(b.label));
 
   const collectionLinks = [
-    { label: "Shakespeare Collection", href: "#section:shakespeare", count: countForTile("Shakespeare"), featured: true },
-    { label: "Canadian Collection", href: "#collection:canadian", count: collectionCount("The Canadian Collection") },
-    { label: "UK Collection", href: "#collection:uk", count: collectionCount("UK Collection") },
-    { label: "Stratford Collection", href: "#collection:stratford", count: collectionCount("The Stratford Collection") },
-    { label: "Shaw Collection", href: "#collection:shaw", count: collectionCount("The Shaw Collection") },
+    { label: "Shakespeare Collection", href: "#browse-collection:shakespeare", count: countForTile("Shakespeare"), featured: true },
+    { label: "Canadian Collection", href: "#browse-collection:canadian", count: collectionCount("The Canadian Collection") },
+    { label: "UK Collection", href: "#browse-collection:uk", count: collectionCount("UK Collection") },
+    { label: "Stratford Collection", href: "#browse-collection:stratford", count: collectionCount("The Stratford Collection") },
+    { label: "Shaw Collection", href: "#browse-collection:shaw", count: collectionCount("The Shaw Collection") },
   ];
 
   const indexLinks = ENTITY_TYPES
@@ -2909,16 +3147,17 @@ const ARTICLE_ROLE_GROUPS = [
 function articleProductionGroups(record) {
   const groups = productionGroups(record);
   if (!groups.length) return null;
+  const schema = displaySchema(record);
 
   const wrap = document.createElement("div");
   wrap.className = `article-production-groups${groups.length > 5 ? " article-production-groups-long" : ""}`;
   groups.forEach((group, index) => {
     const section = document.createElement("section");
     const chipRows = [
-      ["companies", "Company", splitEntityList(group.company).slice(0, 3)],
-      ["venues", "Venue", splitEntityList(group.venue).slice(0, 2)],
-      ["cities", "City", splitCityList(group.city).slice(0, 2)],
-      ...ARTICLE_ROLE_GROUPS.map(([type, prefix, role, limit]) => [type, prefix, splitEntityList(group[role]).slice(0, limit)]),
+      ["companies", schema.companyLabel, splitEntityList(group.company).slice(0, 3)],
+      ["venues", schema.venueLabel, splitEntityList(group.venue).slice(0, 2)],
+      ["cities", schema.cityLabel, splitCityList(group.city).slice(0, 2)],
+      ...ARTICLE_ROLE_GROUPS.map(([type, prefix, role, limit]) => [type, schema.roleLabels[role] || prefix, splitEntityList(group[role]).slice(0, limit)]),
     ].filter(([, , values]) => values.length);
     section.className = `article-production-group${chipRows.length ? "" : " article-production-group-empty"}`;
     const title = document.createElement("a");
@@ -2940,25 +3179,26 @@ function articleProductionGroups(record) {
 function articleEntityLinks(record) {
   const grouped = articleProductionGroups(record);
   const bookReview = isBookReview(record);
+  const schema = displaySchema(record);
   const groupedProductionValues = groupedEntityValues(record, "production_title");
   const groupedCompanyValues = groupedEntityValues(record, "company");
   const groupedVenueValues = groupedEntityValues(record, "venue");
   const groupedCityValues = groupedEntityValues(record, "city", splitCityList);
   const productionGroups = [
-    [bookReview ? "books" : "productions", bookReview ? "Book" : "Production", valuesExceptGrouped(splitEntityList(record.production_title), groupedProductionValues).slice(0, 4)],
+    [schema.workType, schema.workLabel, valuesExceptGrouped(splitEntityList(record.production_title), groupedProductionValues).slice(0, 4)],
   ].filter(([, , values]) => values.length);
   const contextGroups = [
     ["book-authors", "Book Author", splitEntityList(record.book_author).slice(0, 4)],
     ["publishers", "Publisher", splitEntityList(record.publisher).slice(0, 3)],
-    ["companies", "Company", valuesExceptGrouped(splitEntityList(record.company), groupedCompanyValues).slice(0, 3)],
-    ["venues", "Venue", valuesExceptGrouped(splitEntityList(record.venue), groupedVenueValues).slice(0, 2)],
-    ["cities", "City", valuesExceptGrouped(splitCityList(record.city), groupedCityValues).slice(0, 2)],
+    ["companies", schema.companyLabel, valuesExceptGrouped(splitEntityList(record.company), groupedCompanyValues).slice(0, 3)],
+    ["venues", schema.venueLabel, valuesExceptGrouped(splitEntityList(record.venue), groupedVenueValues).slice(0, 2)],
+    ["cities", schema.cityLabel, valuesExceptGrouped(splitCityList(record.city), groupedCityValues).slice(0, 2)],
     ["collections", "Series", collectionNames(record).filter((name) => name === "Short Takes")],
   ].filter(([, , values]) => values.length);
 
   const peopleGroups = [
     ["subjects", "Subject", splitEntityList(record.subject_people).slice(0, 6)],
-    ...ARTICLE_ROLE_GROUPS.map(([type, prefix, role, limit]) => [type, prefix, valuesExceptGrouped(record.roles?.[role] || [], groupedRoleValues(record, role)).slice(0, limit)]),
+    ...ARTICLE_ROLE_GROUPS.map(([type, prefix, role, limit]) => [type, schema.roleLabels[role] || prefix, valuesExceptGrouped(record.roles?.[role] || [], groupedRoleValues(record, role)).slice(0, limit)]),
   ].filter(([, , values]) => values.length);
 
   if (!grouped && !productionGroups.length && !contextGroups.length && !peopleGroups.length) return null;
@@ -2966,7 +3206,7 @@ function articleEntityLinks(record) {
   wrap.className = "article-entity-groups";
 
   if (grouped) wrap.append(grouped);
-  if (productionGroups.length) wrap.append(articleEntityGroup(bookReview ? "Book" : "Production", productionGroups, "production"));
+  if (productionGroups.length) wrap.append(articleEntityGroup(schema.workLabel, productionGroups, "production"));
   if (contextGroups.length) wrap.append(articleEntityGroup(grouped ? "Shared Context" : "Work", contextGroups, "context"));
   if (peopleGroups.length) wrap.append(articleEntityGroup("People", peopleGroups, "people"));
 
@@ -3140,6 +3380,28 @@ function route() {
     renderLandingPage(section);
     els.indexView.hidden = false;
     els.indexView.scrollIntoView({ behavior: "auto", block: "start" });
+    return;
+  }
+
+  if (hash.startsWith("#browse-group:")) {
+    const typeValue = hash.replace("#browse-group:", "");
+    if (TYPE_GROUPS.some((group) => group.value === typeValue)) {
+      document.body.classList.add("index-open");
+      renderCategoryBrowsePage(typeValue);
+      els.indexView.hidden = false;
+      els.indexView.scrollIntoView({ behavior: "auto", block: "start" });
+    }
+    return;
+  }
+
+  if (hash.startsWith("#browse-collection:")) {
+    const slug = hash.replace("#browse-collection:", "");
+    if (collectionFromSlug(slug)) {
+      document.body.classList.add("index-open");
+      renderCollectionBrowsePage(slug);
+      els.indexView.hidden = false;
+      els.indexView.scrollIntoView({ behavior: "auto", block: "start" });
+    }
     return;
   }
 
