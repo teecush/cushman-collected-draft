@@ -763,6 +763,22 @@ function collectionCount(name) {
   return state.records.filter((record) => collectionNames(record).includes(name)).length;
 }
 
+function countBadgeText(count) {
+  const value = Number(count || 0);
+  return value > 1 ? value.toLocaleString() : "";
+}
+
+function countUnitText(count, singular = "record", plural = `${singular}s`) {
+  const value = Number(count || 0);
+  if (value > 1) return `${value.toLocaleString()} ${plural}`;
+  return "";
+}
+
+function optionLabelWithCount(label, count) {
+  const value = Number(count || 0);
+  return value > 1 ? `${label} (${value.toLocaleString()})` : label;
+}
+
 function entityValues(record, type) {
   const role = entityType(type)?.role;
   if (role) return uniqueEntityValues([...splitEntityList(record.roles?.[role] || []), ...groupedRoleValues(record, role), ...subjectRolesFor(record, role)]);
@@ -1121,12 +1137,12 @@ function populateFilters() {
   els.collectionFilter.replaceChildren(makeOption("All collections", ""));
   PUBLIC_COLLECTION_FILTERS
     .filter((name) => collections.has(name))
-    .forEach((name) => els.collectionFilter.append(makeOption(`${name} (${collections.get(name)})`, name)));
+    .forEach((name) => els.collectionFilter.append(makeOption(optionLabelWithCount(name, collections.get(name)), name)));
 
   els.typeFilter.replaceChildren(makeOption("All types", ""));
   [...types.values()]
     .filter((group) => group.count)
-    .forEach((group) => els.typeFilter.append(makeOption(`${group.label} (${group.count})`, group.value)));
+    .forEach((group) => els.typeFilter.append(makeOption(optionLabelWithCount(group.label, group.count), group.value)));
 }
 
 function shakespeareGroup(record) {
@@ -1156,7 +1172,8 @@ function renderShakespeareNav() {
     button.type = "button";
     button.dataset.shakespeareGroup = group.value;
     button.className = group.value === state.shakespeareGroup ? "is-active" : "";
-    button.innerHTML = `<strong>${group.label}</strong><span>${shakespeareGroupCount(group.value).toLocaleString()} records</span><em>${group.description}</em>`;
+    const groupCount = shakespeareGroupCount(group.value);
+    button.innerHTML = `<strong>${group.label}</strong>${groupCount > 1 ? `<span>${groupCount.toLocaleString()} records</span>` : ""}<em>${group.description}</em>`;
     button.addEventListener("click", () => {
       state.shakespeareGroup = group.value;
       applyFilters();
@@ -1184,7 +1201,7 @@ function renderTiles(key = "types") {
       heading.textContent = title;
       const count = countForTile(title, key);
       const meta = document.createElement("span");
-      meta.textContent = count ? `${count.toLocaleString()} records` : "Browse";
+      meta.textContent = count > 1 ? `${count.toLocaleString()} records` : "Browse";
       const description = document.createElement("p");
       description.textContent = tileDescription(title);
       link.replaceChildren(heading, meta, description);
@@ -1203,7 +1220,7 @@ function renderSecondaryCollections() {
     heading.textContent = title.replace(/^The\s+/, "");
     const count = countForTile(title, "collections");
     const meta = document.createElement("span");
-    meta.textContent = count ? `${count.toLocaleString()} records` : "Browse";
+    meta.textContent = count > 1 ? `${count.toLocaleString()} records` : "Browse";
     const description = document.createElement("p");
     description.textContent = tileDescription(title);
     link.replaceChildren(heading, meta, description);
@@ -1233,7 +1250,7 @@ function renderIndexTiles() {
     const heading = document.createElement("strong");
     heading.textContent = type.label;
     const meta = document.createElement("span");
-    meta.textContent = `${entries.size.toLocaleString()} entries`;
+    meta.textContent = entries.size > 1 ? `${entries.size.toLocaleString()} entries` : "Browse";
     const description = document.createElement("p");
     description.textContent = indexDescription(type.key);
     link.replaceChildren(heading, meta, description);
@@ -1314,7 +1331,7 @@ function groupedBrowseCard(entry, entityTypeKey) {
   const title = document.createElement("strong");
   title.textContent = indexDisplayLabel(entityTypeKey, entry.label);
   const count = document.createElement("em");
-  count.textContent = `${entry.records.length.toLocaleString()} ${entry.records.length === 1 ? "article" : "articles"}`;
+  count.textContent = entry.records.length > 1 ? `${entry.records.length.toLocaleString()} articles` : "";
   const examples = document.createElement("span");
   examples.textContent = sortRecords(entry.records)
     .slice(0, 3)
@@ -1329,7 +1346,7 @@ function renderGroupedBrowsePage({ title, countLabel, intro, records, profile, b
   heading.textContent = title;
   const count = document.createElement("p");
   count.className = "index-count";
-  count.textContent = countLabel || `${records.length.toLocaleString()} ${records.length === 1 ? "article" : "articles"}`;
+  count.textContent = countLabel || countUnitText(records.length, "article", "articles");
   const copy = document.createElement("p");
   copy.className = "landing-intro";
   copy.textContent = intro || profile.intro || "";
@@ -1386,7 +1403,7 @@ function renderCategoryBrowsePage(typeValue) {
   const records = recordsForTypeValue(typeValue);
   renderGroupedBrowsePage({
     title: group.label,
-    countLabel: `${records.length.toLocaleString()} ${records.length === 1 ? "article" : "articles"}`,
+    countLabel: countUnitText(records.length, "article", "articles"),
     intro: categoryBrowseProfile(typeValue, records).intro,
     records,
     profile: categoryBrowseProfile(typeValue, records),
@@ -1403,7 +1420,7 @@ function renderCollectionBrowsePage(slug) {
     : categoryBrowseProfile("", records);
   renderGroupedBrowsePage({
     title: collection.replace(/^The\s+/, ""),
-    countLabel: `${records.length.toLocaleString()} ${records.length === 1 ? "article" : "articles"}`,
+    countLabel: countUnitText(records.length, "article", "articles"),
     intro: profile.intro,
     records,
     profile,
@@ -1627,8 +1644,7 @@ function landingCard(item) {
   const title = document.createElement("strong");
   title.textContent = item.title;
   const count = document.createElement("span");
-  const singularUnit = item.unit.replace(/s$/, "");
-  count.textContent = item.count ? `${item.count.toLocaleString()} ${item.count === 1 ? singularUnit : item.unit}` : "Not yet published";
+  count.textContent = item.count > 1 ? `${item.count.toLocaleString()} ${item.unit}` : item.count ? "Browse" : "Not yet published";
   const description = document.createElement("p");
   description.textContent = item.description || "";
   const examples = document.createElement("div");
@@ -1801,7 +1817,7 @@ function frontpageSection(section) {
     const label = document.createElement("span");
     label.textContent = item.label;
     const count = document.createElement("em");
-    count.textContent = item.count ? item.count.toLocaleString() : "";
+    count.textContent = countBadgeText(item.count);
     link.replaceChildren(label, count);
     list.append(link);
   });
@@ -1916,7 +1932,7 @@ function alphaListForGroups(groups, typeKey, idPrefix) {
       const label = document.createElement("span");
       label.textContent = indexDisplayLabel(entryTypeKey, entry.label);
       const count = document.createElement("em");
-      count.textContent = entry.records.length.toLocaleString();
+      count.textContent = countBadgeText(entry.records.length);
       link.replaceChildren(label, count);
       links.append(link);
     });
@@ -1938,7 +1954,7 @@ function renderEntityIndex(typeKey) {
   title.textContent = type.label;
   const count = document.createElement("p");
   count.className = "index-count";
-  count.textContent = `${entries.length.toLocaleString()} ${entries.length === 1 ? "entry" : "entries"}`;
+  count.textContent = countUnitText(entries.length, "entry", "entries");
   const nav = alphaNavForGroups(groups, typeKey, type.label);
   const list = alphaListForGroups(groups, typeKey, typeKey);
   els.indexContent.replaceChildren(title, count, nav, list);
@@ -1997,7 +2013,7 @@ function masterIndexButton(filter, activeKey) {
   const label = document.createElement("span");
   label.textContent = filter.label;
   const count = document.createElement("em");
-  count.textContent = masterIndexEntries(filter).length.toLocaleString();
+  count.textContent = countBadgeText(masterIndexEntries(filter).length);
   link.replaceChildren(label, count);
   return link;
 }
@@ -2050,7 +2066,7 @@ function renderEntityPage(typeKey, slug) {
   title.textContent = entry.label;
   const count = document.createElement("p");
   count.className = "index-count";
-  count.textContent = `${type.singular} index / ${entry.records.length.toLocaleString()} ${entry.records.length === 1 ? "article" : "articles"}`;
+  count.textContent = entry.records.length > 1 ? `${type.singular} index / ${entry.records.length.toLocaleString()} articles` : `${type.singular} index`;
   const back = document.createElement("a");
   back.className = "index-back";
   back.href = `#index:${typeKey}`;
@@ -2130,7 +2146,7 @@ function renderExploreTool() {
     button.style.setProperty("--bubble-y", `${options.y}%`);
     button.style.setProperty("--bubble-size", `${options.size || Math.min(150, 78 + Math.sqrt(item.count || 1) * 2)}px`);
     button.style.setProperty("--node-color", item.color || options.color || colors[0]);
-    button.innerHTML = `<span>${item.label}</span><em>${item.count.toLocaleString()}</em>`;
+    button.innerHTML = `<span>${item.label}</span><em>${countBadgeText(item.count)}</em>`;
     button.addEventListener("click", () => {
       if (item.chooseBranch) {
         currentBranch = item.key;
@@ -2252,7 +2268,7 @@ function renderTimelineTool() {
     button.className = "timeline-year";
     button.dataset.year = year;
     button.style.minHeight = `${58 + (records.length / max) * 90}px`;
-    button.innerHTML = `<strong>${year}</strong><span>${records.length.toLocaleString()}</span>`;
+    button.innerHTML = `<strong>${year}</strong><span>${countBadgeText(records.length)}</span>`;
     button.addEventListener("click", () => showYear(year));
     yearButtons.append(button);
   });
@@ -2375,7 +2391,7 @@ function renderExploreToolV2() {
     const label = document.createElement("span");
     label.textContent = item.label;
     const count = document.createElement("em");
-    count.textContent = item.count.toLocaleString();
+    count.textContent = countBadgeText(item.count);
     button.append(label, count);
     button.addEventListener("click", onClick);
     return button;
@@ -2707,7 +2723,7 @@ function renderMapView() {
     const link = document.createElement("a");
     link.dataset.mapLabel = `${point.label} city`;
     link.href = `#entity:cities:${point.slug}`;
-    link.innerHTML = `<span>${point.label}</span><em>${point.count.toLocaleString()}</em>`;
+    link.innerHTML = `<span>${point.label}</span><em>${countBadgeText(point.count)}</em>`;
     links.append(link);
   });
   const venueTitle = document.createElement("h2");
@@ -2718,7 +2734,7 @@ function renderMapView() {
     const link = document.createElement("a");
     link.dataset.mapLabel = `${point.label} ${point.city || ""} venue`;
     link.href = `#entity:venues:${point.slug}`;
-    link.innerHTML = `<span>${point.label}${point.city ? `<small>${point.city}</small>` : ""}</span><em>${point.count.toLocaleString()}</em>`;
+    link.innerHTML = `<span>${point.label}${point.city ? `<small>${point.city}</small>` : ""}</span><em>${countBadgeText(point.count)}</em>`;
     venueLinks.append(link);
   });
   const hint = document.createElement("p");
