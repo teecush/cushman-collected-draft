@@ -96,7 +96,7 @@
         "route": "/reviews/1988-05-07-crawford-is-one-fantastic-phantom/",
         "venue": "Majestic Theatre",
         "city": "New York",
-        "production_title": "Michael Crawford",
+        "production_title": "",
         "article_category": "Profile",
         "group_order": null
       }
@@ -156,7 +156,7 @@
         "route": "/reviews/1989-08-01-broadway-star-brings-impressive-repertoire-to-toronto-the-songs-of-bernadette/",
         "venue": "Roy Thomson Hall",
         "city": "Toronto",
-        "production_title": "Bernadette Peters",
+        "production_title": "",
         "article_category": "Profile",
         "group_order": null
       }

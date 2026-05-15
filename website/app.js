@@ -1,4 +1,4 @@
-const DATA_URL = new URL("../site_export/data/public_reviews.json?v=109", import.meta.url);
+const DATA_URL = new URL("../site_export/data/public_reviews.json?v=110", import.meta.url);
 const CONTENT_ROOT = new URL("../site_export/content/reviews/", import.meta.url);
 const PAGE_SIZE = 36;
 const SHAKESPEARE_COLLECTION = "The Shakespeare Collection";
@@ -47,6 +47,9 @@ const ENTITY_TYPES = [
   { key: "productions", label: "Productions", singular: "Production" },
   { key: "book-authors", label: "Book Authors", singular: "Book Author" },
   { key: "publishers", label: "Publishers", singular: "Publisher" },
+  { key: "topics", label: "Topics", singular: "Topic" },
+  { key: "events", label: "Events", singular: "Event" },
+  { key: "networks", label: "Networks & Platforms", singular: "Network/Platform" },
   { key: "companies", label: "Companies", singular: "Company" },
   { key: "venues", label: "Venues", singular: "Venue" },
   { key: "cities", label: "Cities", singular: "City" },
@@ -288,7 +291,7 @@ const BOOKS_ESSAYS_VALUES = ["book-reviews", "essays-opinion", "year-in-review"]
 const CATEGORY_BROWSE_PROFILES = {
   theatre: { groupLabel: "Productions", entityType: "productions", emptyLabel: "Articles without a production", intro: "Browse theatre reviews by production first, then open the linked production index for all related articles." },
   "musical-theatre": { groupLabel: "Productions", entityType: "productions", emptyLabel: "Articles without a production", intro: "Browse musical-theatre writing by show title, then drill into the articles for that show." },
-  television: { groupLabel: "Shows", entityType: "productions", secondaryEntityType: "companies", secondaryLabel: "Networks And Platforms", emptyLabel: "Articles without a show title", intro: "Television writing is grouped by show or program title so recurring coverage reads as a clear path." },
+  television: { groupLabel: "Shows", entityType: "productions", secondaryEntityType: "networks", secondaryLabel: "Networks And Platforms", emptyLabel: "Articles without a show title", intro: "Television writing is grouped by show or program title so recurring coverage reads as a clear path." },
   "book-reviews": { groupLabel: "Books", entityType: "books", secondaryEntityType: "book-authors", secondaryLabel: "Authors", emptyLabel: "Articles without a book title", intro: "Book reviews are grouped by reviewed book, with a secondary author index for broader reading paths." },
   "music-concerts": { groupLabel: "Artists And Musicians", entityType: "musicians", secondaryEntityType: "productions", secondaryLabel: "Recordings, Concerts, And Performances", emptyLabel: "Articles without an artist", intro: "Music and concert writing is grouped by artist first, with reviewed recordings and performances available as the secondary path." },
   opera: { groupLabel: "Productions", entityType: "productions", emptyLabel: "Articles without a production", intro: "Opera reviews are grouped by production title and can also be filtered by company, venue, and city." },
@@ -298,9 +301,9 @@ const CATEGORY_BROWSE_PROFILES = {
   circus: { groupLabel: "Shows", entityType: "productions", emptyLabel: "Articles without a show title", intro: "Circus reviews are grouped by show title." },
   profiles: { groupLabel: "Subjects", entityType: "subjects", secondaryEntityType: "productions", secondaryLabel: "Current Work Context", emptyLabel: "Profiles without a subject", intro: "Profiles are grouped by subject rather than by incidental productions mentioned in career context." },
   obituaries: { groupLabel: "Subjects", entityType: "subjects", secondaryEntityType: "productions", secondaryLabel: "Notable Works", emptyLabel: "Obituaries without a subject", intro: "Obituaries are grouped by the person being remembered, with notable works kept secondary." },
-  "essays-opinion": { groupLabel: "Topics And Works", entityType: "productions", secondaryEntityType: "subjects", secondaryLabel: "People", emptyLabel: "Ungrouped essays", intro: "Opinion pieces are grouped by the concrete work or subject where one is present; broad essays remain chronological." },
-  "year-in-review": { groupLabel: "Topics And Works", entityType: "productions", emptyLabel: "Season summaries", intro: "Year-in-review pieces usually work best chronologically, with work links only where the article has a clear structured focus." },
-  "site-notes": { groupLabel: "Correction Targets", entityType: "productions", emptyLabel: "General notes", intro: "Corrections and site notes are kept compact and chronological." },
+  "essays-opinion": { groupLabel: "Topics", entityType: "topics", secondaryEntityType: "productions", secondaryLabel: "Related Works", emptyLabel: "Ungrouped essays", intro: "Opinion pieces are grouped by topic first, with concrete works kept as secondary links when they are central." },
+  "year-in-review": { groupLabel: "Seasons And Topics", entityType: "topics", secondaryEntityType: "productions", secondaryLabel: "Referenced Works", emptyLabel: "Season summaries", intro: "Year-in-review pieces are topic-led, with work links only where the article has a clear structured focus." },
+  "site-notes": { groupLabel: "Correction Targets", entityType: "topics", emptyLabel: "General notes", intro: "Corrections and site notes are kept compact and chronological." },
 };
 const SHAKESPEARE_PLAY_GROUPS = [
   {
@@ -549,6 +552,51 @@ function uniqueEntityValues(values, transform = (value) => value) {
   return result;
 }
 
+const SUBJECT_ROLE_ENTITY = {
+  director: { type: "directors", label: "Director" },
+  actors: { type: "actors", label: "Actor" },
+  playwright: { type: "playwrights", label: "Playwright" },
+  composer_lyricist: { type: "composers-lyricists", label: "Composer/Lyricist" },
+  musical_director: { type: "musical-directors", label: "Musical Director" },
+  choreographer: { type: "choreographers", label: "Choreographer" },
+  producer: { type: "producers", label: "Producer" },
+  set_designer: { type: "set-designers", label: "Set Designer" },
+  costume_designer: { type: "costume-designers", label: "Costume Designer" },
+  lighting_designer: { type: "lighting-designers", label: "Lighting Designer" },
+  sound_designer: { type: "sound-designers", label: "Sound Designer" },
+  musicians: { type: "musicians", label: "Musician" },
+  performers: { type: "performers", label: "Performer" },
+  artists: { type: "artists", label: "Artist" },
+  dramaturg: { type: "dramaturgs", label: "Dramaturg" },
+  fight_director: { type: "fight-directors", label: "Fight Director" },
+};
+
+function subjectRoleMap(record) {
+  return Array.isArray(record.subject_role_map)
+    ? record.subject_role_map.filter((entry) => entry && typeof entry === "object" && entry.person)
+    : [];
+}
+
+function subjectRoleEntry(record, person) {
+  const personSlug = entitySlug(person);
+  return subjectRoleMap(record).find((entry) => entitySlug(entry.person) === personSlug) || null;
+}
+
+function subjectRolesFor(record, role) {
+  return subjectRoleMap(record)
+    .filter((entry) => Array.isArray(entry.roles) && entry.roles.includes(role))
+    .map((entry) => entry.person);
+}
+
+function subjectChipInfo(record, person) {
+  const entry = subjectRoleEntry(record, person);
+  const roles = Array.isArray(entry?.roles) ? entry.roles.filter((role) => SUBJECT_ROLE_ENTITY[role]) : [];
+  if (!roles.length) return { type: "subjects", prefix: "Subject" };
+  const first = SUBJECT_ROLE_ENTITY[roles[0]];
+  const prefix = roles.slice(0, 2).map((role) => SUBJECT_ROLE_ENTITY[role].label).join(" / ");
+  return { type: first.type, prefix };
+}
+
 function productionGroups(record) {
   return Array.isArray(record.production_groups)
     ? record.production_groups.filter((group) => group && typeof group === "object" && group.production_title && !isNonWorkProductionLabel(group.production_title))
@@ -667,6 +715,28 @@ function displaySchema(record) {
       roleLabels: { actors: "Performer", artists: "Artist" },
     };
   }
+  if (category === "Opinion Piece" || category === "Year in Review" || category === "Correction") {
+    return {
+      workType: "topics",
+      workLabel: category === "Correction" ? "Correction" : "Topic",
+      groupWorkLabel: category === "Correction" ? "Correction" : "Topic",
+      companyLabel: "Organization",
+      venueLabel: "Venue",
+      cityLabel: "Place",
+      roleLabels: {},
+    };
+  }
+  if (category === "Awards Coverage" || category === "Events Listing") {
+    return {
+      workType: "events",
+      workLabel: "Event",
+      groupWorkLabel: "Event",
+      companyLabel: "Organization",
+      venueLabel: "Venue",
+      cityLabel: "Place",
+      roleLabels: {},
+    };
+  }
   if (category === "Theatre Interview") {
     return {
       workType: "productions",
@@ -695,13 +765,16 @@ function collectionCount(name) {
 
 function entityValues(record, type) {
   const role = entityType(type)?.role;
-  if (role) return uniqueEntityValues([...splitEntityList(record.roles?.[role] || []), ...groupedRoleValues(record, role)]);
+  if (role) return uniqueEntityValues([...splitEntityList(record.roles?.[role] || []), ...groupedRoleValues(record, role), ...subjectRolesFor(record, role)]);
   if (type === "people") return uniqueEntityValues([...(record.people || []), ...splitEntityList(record.book_author), ...splitEntityList(record.subject_people), ...productionGroups(record).flatMap((group) => ENTITY_TYPES.filter((item) => item.role).flatMap((item) => splitEntityList(group[item.role] || [])))]);
   if (type === "subjects") return uniqueEntityValues(splitEntityList(record.subject_people));
-  if (type === "books") return isBookReview(record) ? uniqueEntityValues([...splitEntityList(record.production_title), ...groupedEntityValues(record, "production_title")]) : [];
+  if (type === "books") return isBookReview(record) ? uniqueEntityValues([...splitEntityList(record.book_title || record.production_title), ...groupedEntityValues(record, "production_title")]) : [];
   if (type === "productions") return isBookReview(record) ? [] : uniqueEntityValues([...productionLabelValues(record.production_title), ...groupedProductionLabelValues(record)]);
   if (type === "book-authors") return uniqueEntityValues(splitEntityList(record.book_author));
   if (type === "publishers") return uniqueEntityValues(splitEntityList(record.publisher));
+  if (type === "topics") return uniqueEntityValues(splitEntityList(record.topic || record.correction_target));
+  if (type === "events") return uniqueEntityValues(splitEntityList(record.event_name));
+  if (type === "networks") return uniqueEntityValues(splitEntityList(record.network_or_platform || (record.article_category === "Television Review" ? record.company : "")));
   if (type === "companies") return uniqueEntityValues([...splitEntityList(record.company), ...groupedEntityValues(record, "company")]);
   if (type === "venues") return uniqueEntityValues([...splitEntityList(record.venue), ...groupedEntityValues(record, "venue")]);
   if (type === "cities") return uniqueEntityValues([...splitCityList(record.city), ...groupedEntityValues(record, "city", splitCityList)]);
@@ -940,10 +1013,14 @@ function articlePublicationLabel(record) {
 }
 
 function articleWorkValues(record) {
+  const schema = displaySchema(record);
   if (["Obituary", "Profile", "Theatre Interview"].includes(String(record.article_category || ""))) {
     const subjects = splitEntityList(record.subject_people);
     if (subjects.length) return uniqueEntityValues(subjects);
   }
+  if (schema.workType === "topics") return uniqueEntityValues(splitEntityList(record.topic || record.correction_target));
+  if (schema.workType === "events") return uniqueEntityValues(splitEntityList(record.event_name));
+  if (schema.workType === "books") return uniqueEntityValues(splitEntityList(record.book_title || record.production_title));
   const values = uniqueEntityValues([
     ...productionLabelValues(record.production_title),
     ...groupedProductionLabelValues(record),
@@ -1752,6 +1829,9 @@ function indexDescription(type) {
     productions: "Reviewed shows, broadcasts, recordings, and staged works.",
     "book-authors": "Authors and editors of reviewed books.",
     publishers: "Publishers of reviewed books.",
+    topics: "Topic-led essays, year-end pieces, and corrections.",
+    events: "Awards, listings, and other event-led articles.",
+    networks: "Television networks and platforms.",
     companies: "Theatre companies, festivals, broadcasters, and producers.",
     venues: "Theatres and performance spaces.",
     cities: "Places represented in the archive.",
@@ -3530,13 +3610,19 @@ function articleEntityLinks(record) {
   const singleProductionValues = singleGroup ? productionLabelValues(singleGroup.production_title) : [];
   const singleRoleValues = (role) => singleGroup ? splitEntityList(singleGroup[role]) : [];
   const workValues = articleWorkValues(record);
+  const subjectWorkValues = schema.workType === "subjects" ? valuesExceptGrouped(workValues, []) : [];
   const productionChipGroups = [
-    [schema.workType, schema.workLabel, valuesExceptGrouped([...workValues, ...singleProductionValues], groupedProductionValues).slice(0, 4)],
+    [schema.workType, schema.workLabel, schema.workType === "subjects" ? [] : valuesExceptGrouped([...workValues, ...singleProductionValues], groupedProductionValues).slice(0, 4)],
   ].filter(([, , values]) => values.length);
+  const relatedProductionValues = schema.workType !== "productions" && schema.workType !== "books"
+    ? valuesExceptGrouped([...productionLabelValues(record.production_title), ...singleProductionValues], groupedProductionValues).slice(0, 4)
+    : [];
   const contextGroups = [
     ["book-authors", "Book Author", splitEntityList(record.book_author).slice(0, 4)],
     ["publishers", "Publisher", splitEntityList(record.publisher).slice(0, 3)],
-    ["companies", schema.companyLabel, valuesExceptGrouped([...splitEntityList(record.company), ...singleValues("company")], groupedCompanyValues).slice(0, 3)],
+    ["networks", "Network", splitEntityList(record.network_or_platform).slice(0, 3)],
+    ["productions", "Related Work", relatedProductionValues],
+    ["companies", schema.companyLabel, record.article_category === "Television Review" ? [] : valuesExceptGrouped([...splitEntityList(record.company), ...singleValues("company")], groupedCompanyValues).slice(0, 3)],
     ["venues", schema.venueLabel, valuesExceptGrouped([...splitEntityList(record.venue), ...singleValues("venue")], groupedVenueValues).slice(0, 2)],
     ["cities", schema.cityLabel, valuesExceptGrouped([...splitCityList(record.city), ...singleValues("city", splitCityList)], groupedCityValues).slice(0, 2)],
     ["collections", "Series", collectionNames(record).filter((name) => name === "Short Takes")],
@@ -3552,11 +3638,29 @@ function articleEntityLinks(record) {
   wrap.className = `article-entity-groups${grouped ? " article-entity-groups-multiple" : ""}`;
 
   if (grouped) wrap.append(grouped);
+  if (subjectWorkValues.length) wrap.append(articleSubjectEntityGroup(record, schema.workLabel, subjectWorkValues));
   if (productionChipGroups.length) wrap.append(articleEntityGroup(schema.workLabel, productionChipGroups, "production"));
   if (contextGroups.length) wrap.append(articleEntityGroup(grouped ? "Shared Context" : "Work", contextGroups, "context"));
   if (peopleGroups.length) wrap.append(articleEntityGroup("People", peopleGroups, "people"));
 
   return wrap;
+}
+
+function articleSubjectEntityGroup(record, label, values) {
+  const section = document.createElement("section");
+  section.className = "article-entity-section article-entity-section-subjects";
+  const heading = document.createElement("span");
+  heading.className = "article-entity-label";
+  heading.textContent = label;
+  const nav = document.createElement("nav");
+  nav.className = "article-entities";
+  nav.setAttribute("aria-label", `${label} metadata links`);
+  values.forEach((value) => {
+    const info = subjectChipInfo(record, value);
+    nav.append(entityChip(info.type, value, info.prefix, "people"));
+  });
+  section.replaceChildren(heading, nav);
+  return section;
 }
 
 function articleEntityGroup(label, groups, groupType) {
@@ -3582,6 +3686,9 @@ function inlineLinkEntities(record) {
     ...entityValues(record, "book-authors").map((label) => ({ type: "book-authors", label, priority: 2 })),
     ...entityValues(record, "subjects").map((label) => ({ type: "subjects", label, priority: 2 })),
     ...entityValues(record, "publishers").map((label) => ({ type: "publishers", label, priority: 2 })),
+    ...entityValues(record, "topics").map((label) => ({ type: "topics", label, priority: 2 })),
+    ...entityValues(record, "events").map((label) => ({ type: "events", label, priority: 2 })),
+    ...entityValues(record, "networks").map((label) => ({ type: "networks", label, priority: 2 })),
     ...entityValues(record, "companies").map((label) => ({ type: "companies", label, priority: 2 })),
     ...entityValues(record, "directors").map((label) => ({ type: "directors", label, priority: 3 })),
     ...entityValues(record, "playwrights").map((label) => ({ type: "playwrights", label, priority: 3 })),

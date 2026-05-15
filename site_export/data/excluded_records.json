@@ -64,6 +64,7 @@
     ],
     "media": [],
     "word_count": 3225,
+    "book_title": "Romancing The Bard; Stratford Gold; Fifty Seasons at Stratford",
     "coordinate_points": [],
     "display_schema": {
       "work_type": "books",
@@ -78,14 +79,13 @@
         "Stratford Gold",
         "Fifty Seasons at Stratford"
       ],
-      "productions": [
-        "Fifty Seasons at Stratford",
-        "Romancing The Bard",
-        "Stratford Gold"
-      ],
+      "productions": [],
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [],
       "venues": [],
       "cities": [],

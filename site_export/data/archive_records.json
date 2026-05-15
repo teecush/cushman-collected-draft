@@ -103,6 +103,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Royal Shakespeare Company"
       ],
@@ -212,13 +215,14 @@
     ],
     "media": [],
     "word_count": 1073,
+    "topic": "Ten Years of Stratford",
     "coordinate_points": [],
     "display_schema": {
-      "work_type": "productions",
-      "work_label": "Production",
+      "work_type": "topics",
+      "work_label": "Topic",
       "company_label": "Company",
-      "primary_browse": "productions",
-      "secondary_browse": ""
+      "primary_browse": "topics",
+      "secondary_browse": "productions"
     },
     "browse_entities": {
       "books": [],
@@ -230,6 +234,11 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [
+        "Ten Years of Stratford"
+      ],
+      "events": [],
+      "networks": [],
       "companies": [
         "Royal Shakespeare Company"
       ],
@@ -344,6 +353,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Royal Shakespeare Company"
       ],
@@ -435,6 +447,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Various London Theatres"
       ],
@@ -520,6 +535,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Green Thumb Theatre"
       ],
@@ -551,7 +569,7 @@
     "publication_status": "duplicate_variant",
     "editorial_issue_type": "",
     "canonical_file": "1993.01.17.The_Independent.Obituary_The_Man_Who_Defined_Sinatra_Twice_Sammy_Cahn_Died_On.md",
-    "production_title": "Sammy Cahn",
+    "production_title": "",
     "company": "",
     "venue": "",
     "city": "",
@@ -603,6 +621,20 @@
     "production_groups": [],
     "media": [],
     "word_count": 745,
+    "subject_role_map": [
+      {
+        "person": "Sammy Cahn",
+        "roles": [
+          "composer_lyricist",
+          "musicians"
+        ],
+        "labels": [
+          "Composer/Lyricist",
+          "Musician"
+        ]
+      }
+    ],
+    "subject_people": "Sammy Cahn",
     "coordinate_points": [],
     "display_schema": {
       "work_type": "subjects",
@@ -613,12 +645,15 @@
     },
     "browse_entities": {
       "books": [],
-      "productions": [
+      "productions": [],
+      "subjects": [
         "Sammy Cahn"
       ],
-      "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [],
       "venues": [],
       "cities": [],
@@ -689,13 +724,14 @@
     "production_groups": [],
     "media": [],
     "word_count": 2171,
+    "topic": "'Musicals Much: Contrary To Rumours Of Their Demise, Megamusicals Are Here",
     "coordinate_points": [],
     "display_schema": {
-      "work_type": "productions",
-      "work_label": "Production",
+      "work_type": "topics",
+      "work_label": "Topic",
       "company_label": "Company",
-      "primary_browse": "productions",
-      "secondary_browse": ""
+      "primary_browse": "topics",
+      "secondary_browse": "productions"
     },
     "browse_entities": {
       "books": [],
@@ -705,6 +741,11 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [
+        "'Musicals Much: Contrary To Rumours Of Their Demise, Megamusicals Are Here"
+      ],
+      "events": [],
+      "networks": [],
       "companies": [],
       "venues": [],
       "cities": [],
@@ -792,6 +833,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Atlantic Theatre Festival"
       ],
@@ -852,13 +896,15 @@
     "production_groups": [],
     "media": [],
     "word_count": 1876,
+    "event_name": "Selected Listings",
+    "event_year": "1999",
     "coordinate_points": [],
     "display_schema": {
-      "work_type": "productions",
-      "work_label": "Production",
-      "company_label": "Company",
-      "primary_browse": "productions",
-      "secondary_browse": ""
+      "work_type": "events",
+      "work_label": "Event",
+      "company_label": "Organization",
+      "primary_browse": "events",
+      "secondary_browse": "productions"
     },
     "browse_entities": {
       "books": [],
@@ -866,6 +912,11 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [
+        "Selected Listings"
+      ],
+      "networks": [],
       "companies": [],
       "venues": [],
       "cities": [],
@@ -952,6 +1003,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Stratford Festival"
       ],
@@ -1069,6 +1123,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Reprise"
       ],
@@ -1194,6 +1251,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Stratford Festival"
       ],
@@ -1282,6 +1342,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [],
       "venues": [],
       "cities": [],
@@ -1383,6 +1446,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Shaw Festival"
       ],
@@ -1477,6 +1543,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Les Vaches"
       ],
@@ -1582,6 +1651,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "du Maurier World Stage"
       ],
@@ -1668,6 +1740,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [],
       "venues": [],
       "cities": [
@@ -1766,6 +1841,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Theatre Passe Muraille"
       ],
@@ -1849,6 +1927,18 @@
     "production_groups": [],
     "media": [],
     "word_count": 1685,
+    "subject_role_map": [
+      {
+        "person": "Christopher Plummer",
+        "roles": [
+          "actors"
+        ],
+        "labels": [
+          "Actor"
+        ]
+      }
+    ],
+    "subject_people": "Christopher Plummer",
     "coordinate_points": [
       {
         "label": "Stratford Festival",
@@ -1871,9 +1961,14 @@
       "productions": [
         "Christopher Plummer Profile"
       ],
-      "subjects": [],
+      "subjects": [
+        "Christopher Plummer"
+      ],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Stratford Festival"
       ],
@@ -1971,6 +2066,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Stratford Festival"
       ],
@@ -2039,6 +2137,8 @@
     "production_groups": [],
     "media": [],
     "word_count": 622,
+    "recording_title": "Shade",
+    "featured_artists": "Holly Cole; Aaron Davis; David Piltch",
     "coordinate_points": [],
     "display_schema": {
       "work_type": "productions",
@@ -2055,6 +2155,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [],
       "venues": [],
       "cities": [],
@@ -2121,6 +2224,20 @@
     "production_groups": [],
     "media": [],
     "word_count": 1155,
+    "concert_title": "Jamie Cullum Concert",
+    "featured_artists": "Jamie Cullum; Geoff Gascoyne; Sebastian DeKrom",
+    "subject_role_map": [
+      {
+        "person": "Jamie Cullum",
+        "roles": [
+          "musicians"
+        ],
+        "labels": [
+          "Musician"
+        ]
+      }
+    ],
+    "subject_people": "Jamie Cullum",
     "coordinate_points": [],
     "display_schema": {
       "work_type": "productions",
@@ -2134,9 +2251,14 @@
       "productions": [
         "Jamie Cullum Concert"
       ],
-      "subjects": [],
+      "subjects": [
+        "Jamie Cullum"
+      ],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [],
       "venues": [
         "Top O' the Senator"
@@ -2199,13 +2321,15 @@
     "production_groups": [],
     "media": [],
     "word_count": 1141,
+    "event_name": "Weekend Agenda",
+    "event_year": "2004",
     "coordinate_points": [],
     "display_schema": {
-      "work_type": "productions",
-      "work_label": "Production",
-      "company_label": "Company",
-      "primary_browse": "productions",
-      "secondary_browse": ""
+      "work_type": "events",
+      "work_label": "Event",
+      "company_label": "Organization",
+      "primary_browse": "events",
+      "secondary_browse": "productions"
     },
     "browse_entities": {
       "books": [],
@@ -2215,6 +2339,11 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [
+        "Weekend Agenda"
+      ],
+      "networks": [],
       "companies": [],
       "venues": [],
       "cities": [
@@ -2277,6 +2406,20 @@
     "production_groups": [],
     "media": [],
     "word_count": 1488,
+    "recording_title": "Two Shots / To Johnny Hartman / Big Band",
+    "featured_artists": "Matt Dusk; Kevin Mahogany",
+    "subject_role_map": [
+      {
+        "person": "Matt Dusk",
+        "roles": [
+          "musicians"
+        ],
+        "labels": [
+          "Musician"
+        ]
+      }
+    ],
+    "subject_people": "Matt Dusk",
     "coordinate_points": [],
     "display_schema": {
       "work_type": "productions",
@@ -2290,9 +2433,14 @@
       "productions": [
         "Two Shots / To Johnny Hartman / Big Band"
       ],
-      "subjects": [],
+      "subjects": [
+        "Matt Dusk"
+      ],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [],
       "venues": [],
       "cities": [
@@ -2402,6 +2550,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Shaw Festival"
       ],
@@ -2517,6 +2668,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Tarragon Theatre"
       ],
@@ -2625,6 +2779,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Factory Theatre"
       ],
@@ -2736,6 +2893,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "The Company Theatre"
       ],
@@ -2847,6 +3007,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Factory Theatre"
       ],
@@ -2953,6 +3116,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [],
       "venues": [
         "Berkeley Street Theatre Downstairs"
@@ -3056,6 +3222,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "One Yellow Rabbit"
       ],
@@ -3155,6 +3324,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Mirvish Productions"
       ],
@@ -3257,6 +3429,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Canadian Stage"
       ],
@@ -3374,6 +3549,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Stratford Festival"
       ],
@@ -3498,6 +3676,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Stratford Festival"
       ],
@@ -3637,6 +3818,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Stratford Festival"
       ],
@@ -3753,6 +3937,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Stratford Festival"
       ],
@@ -3853,6 +4040,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Stratford Festival"
       ],
@@ -3957,6 +4147,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Stratford Festival"
       ],
@@ -4030,6 +4223,18 @@
     "production_groups": [],
     "media": [],
     "word_count": 77,
+    "subject_role_map": [
+      {
+        "person": "Blue Man Group",
+        "roles": [
+          "performers"
+        ],
+        "labels": [
+          "Performer"
+        ]
+      }
+    ],
+    "subject_people": "Blue Man Group",
     "coordinate_points": [
       {
         "label": "Panasonic Theatre",
@@ -4052,9 +4257,14 @@
       "productions": [
         "Blue Man Group"
       ],
-      "subjects": [],
+      "subjects": [
+        "Blue Man Group"
+      ],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Blue Man Group"
       ],
@@ -4162,6 +4372,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Stratford Festival"
       ],
@@ -4267,6 +4480,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Shaw Festival"
       ],
@@ -4371,6 +4587,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Stratford Festival"
       ],
@@ -4490,6 +4709,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Shaw Festival"
       ],
@@ -4606,6 +4828,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Stratford Festival"
       ],
@@ -4707,6 +4932,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "ShakespeareWorks"
       ],
@@ -4807,6 +5035,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Shakespeare in the Rough"
       ],
@@ -4916,6 +5147,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Shaw Festival"
       ],
@@ -5025,6 +5259,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Soulpepper Theatre Company"
       ],
@@ -5133,6 +5370,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Soulpepper Theatre Company"
       ],
@@ -5234,6 +5474,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Shaw Festival"
       ],
@@ -5337,6 +5580,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Shakespeare in the Rough"
       ],
@@ -5455,6 +5701,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Stratford Festival"
       ],
@@ -5534,6 +5783,7 @@
     "production_groups": [],
     "media": [],
     "word_count": 1023,
+    "film_title": "The 40 Year-Old Virgin",
     "coordinate_points": [],
     "display_schema": {
       "work_type": "productions",
@@ -5550,6 +5800,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [],
       "venues": [],
       "cities": [],
@@ -5654,6 +5907,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Stratford Festival"
       ],
@@ -5759,6 +6015,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Theatre by the Bay"
       ],
@@ -5868,6 +6127,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Stratford Festival"
       ],
@@ -5979,6 +6241,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Soulpepper Theatre Company"
       ],
@@ -6083,6 +6348,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [],
       "venues": [
         "Berkeley Street Theatre"
@@ -6186,6 +6454,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Soulpepper Theatre Company"
       ],
@@ -6297,6 +6568,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Stratford Festival"
       ],
@@ -6403,6 +6677,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Soulpepper Theatre Company"
       ],
@@ -6509,6 +6786,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Soulpepper Theatre Company"
       ],
@@ -6618,6 +6898,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Soulpepper Theatre Company"
       ],
@@ -6723,6 +7006,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Soulpepper Theatre Company"
       ],
@@ -6831,6 +7117,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Soulpepper Theatre Company"
       ],
@@ -6939,6 +7228,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Stratford Festival"
       ],
@@ -7054,6 +7346,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Stratford Festival"
       ],
@@ -7164,6 +7459,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Stratford Festival"
       ],
@@ -7244,6 +7542,7 @@
     "production_groups": [],
     "media": [],
     "word_count": 1144,
+    "film_title": "Proof",
     "coordinate_points": [],
     "display_schema": {
       "work_type": "productions",
@@ -7260,6 +7559,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [],
       "venues": [],
       "cities": [],
@@ -7357,6 +7659,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Mirvish Productions"
       ],
@@ -7465,6 +7770,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Factory Theatre"
       ],
@@ -7559,6 +7867,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [],
       "venues": [
         "Theatre Passe Muraille Backspace, Princess of Wales Theatre, Tarragon Theatre,"
@@ -7660,6 +7971,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Theatre Passe Muraille"
       ],
@@ -7762,6 +8076,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Shaw Festival"
       ],
@@ -7865,6 +8182,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Theatre Passe Muraille"
       ],
@@ -7972,6 +8292,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Canadian Stage"
       ],
@@ -8073,6 +8396,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Mirvish Productions"
       ],
@@ -8178,6 +8504,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Shaw Festival"
       ],
@@ -8281,6 +8610,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Volcano Theatre"
       ],
@@ -8380,6 +8712,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Canadian Stage"
       ],
@@ -8486,6 +8821,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Tarragon Theatre"
       ],
@@ -8586,6 +8924,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Factory Theatre"
       ],
@@ -8688,6 +9029,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [],
       "venues": [
         "Berkeley Street Theatre"
@@ -8788,6 +9132,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Buddies in Bad Times Theatre"
       ],
@@ -8889,6 +9236,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [],
       "venues": [
         "Canon Theatre"
@@ -8990,6 +9340,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [],
       "venues": [
         "Elgin Theatre"
@@ -9092,6 +9445,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Theatre Passe Muraille"
       ],
@@ -9156,13 +9512,14 @@
     "production_groups": [],
     "media": [],
     "word_count": 666,
+    "topic": "He Is His Own Trickiest Role",
     "coordinate_points": [],
     "display_schema": {
-      "work_type": "productions",
-      "work_label": "Production",
+      "work_type": "topics",
+      "work_label": "Topic",
       "company_label": "Company",
-      "primary_browse": "productions",
-      "secondary_browse": ""
+      "primary_browse": "topics",
+      "secondary_browse": "productions"
     },
     "browse_entities": {
       "books": [],
@@ -9172,6 +9529,11 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [
+        "He Is His Own Trickiest Role"
+      ],
+      "events": [],
+      "networks": [],
       "companies": [],
       "venues": [],
       "cities": [],
@@ -9270,6 +9632,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "The Theatre Centre"
       ],
@@ -9379,6 +9744,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Canadian Stage"
       ],
@@ -9487,6 +9855,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Tarragon Theatre"
       ],
@@ -9567,6 +9938,8 @@
     "production_groups": [],
     "media": [],
     "word_count": 1028,
+    "film_title": "Match Point",
+    "studio_or_distributor": "DreamWorks Pictures",
     "coordinate_points": [],
     "display_schema": {
       "work_type": "productions",
@@ -9583,6 +9956,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "DreamWorks Pictures"
       ],
@@ -9700,6 +10076,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Theatrefront"
       ],
@@ -9817,6 +10196,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Mirvish Productions"
       ],
@@ -9925,6 +10307,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [],
       "venues": [
         "Berkeley Upstairs Theatre"
@@ -10031,6 +10416,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [],
       "venues": [
         "Berkeley Street Theatre"
@@ -10135,6 +10523,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Tarragon Theatre"
       ],
@@ -10236,6 +10627,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [],
       "venues": [
         "Walmer Centre Theatre"
@@ -10342,6 +10736,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Soulpepper Theatre Company"
       ],
@@ -10447,6 +10844,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Soulpepper Theatre Company"
       ],
@@ -10551,6 +10951,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Canadian Stage"
       ],
@@ -10657,6 +11060,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [],
       "venues": [
         "Artword Theatre"
@@ -10739,6 +11145,7 @@
     "production_groups": [],
     "media": [],
     "word_count": 1411,
+    "film_title": "Tristram Shandy: A Cock & Bull Story",
     "coordinate_points": [],
     "display_schema": {
       "work_type": "productions",
@@ -10755,6 +11162,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [],
       "venues": [],
       "cities": [],
@@ -10857,6 +11267,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [],
       "venues": [
         "Bluma Appel Theatre"
@@ -10958,6 +11371,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Factory Theatre"
       ],
@@ -11063,6 +11479,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Soulpepper Theatre Company"
       ],
@@ -11168,6 +11587,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Soulpepper Theatre Company"
       ],
@@ -11279,6 +11701,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Theatre Passe Muraille"
       ],
@@ -11349,13 +11774,15 @@
     "production_groups": [],
     "media": [],
     "word_count": 708,
+    "show_title": "At the Hotel",
+    "network_or_platform": "CBC",
     "coordinate_points": [],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Show",
       "company_label": "Network",
       "primary_browse": "productions",
-      "secondary_browse": "companies"
+      "secondary_browse": "networks"
     },
     "browse_entities": {
       "books": [],
@@ -11365,6 +11792,11 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [
+        "CBC"
+      ],
       "companies": [
         "CBC"
       ],
@@ -11424,13 +11856,15 @@
     "production_groups": [],
     "media": [],
     "word_count": 856,
+    "show_title": "At The Hotel",
+    "network_or_platform": "CBC",
     "coordinate_points": [],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Show",
       "company_label": "Network",
       "primary_browse": "productions",
-      "secondary_browse": "companies"
+      "secondary_browse": "networks"
     },
     "browse_entities": {
       "books": [],
@@ -11440,6 +11874,11 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [
+        "CBC"
+      ],
       "companies": [
         "CBC"
       ],
@@ -11544,6 +11983,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Mirvish Productions"
       ],
@@ -11621,13 +12063,15 @@
     "production_groups": [],
     "media": [],
     "word_count": 791,
+    "show_title": "At the Hotel",
+    "network_or_platform": "CBC",
     "coordinate_points": [],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Show",
       "company_label": "Network",
       "primary_browse": "productions",
-      "secondary_browse": "companies"
+      "secondary_browse": "networks"
     },
     "browse_entities": {
       "books": [],
@@ -11637,6 +12081,11 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [
+        "CBC"
+      ],
       "companies": [
         "CBC"
       ],
@@ -11712,13 +12161,15 @@
     "production_groups": [],
     "media": [],
     "word_count": 835,
+    "show_title": "At The Hotel",
+    "network_or_platform": "CBC",
     "coordinate_points": [],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Show",
       "company_label": "Network",
       "primary_browse": "productions",
-      "secondary_browse": "companies"
+      "secondary_browse": "networks"
     },
     "browse_entities": {
       "books": [],
@@ -11728,6 +12179,11 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [
+        "CBC"
+      ],
       "companies": [
         "CBC"
       ],
@@ -11839,6 +12295,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "VideoCabaret"
       ],
@@ -11946,6 +12405,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Buddies in Bad Times Theatre"
       ],
@@ -12016,13 +12478,15 @@
     "production_groups": [],
     "media": [],
     "word_count": 1051,
+    "show_title": "At the Hotel",
+    "network_or_platform": "CBC",
     "coordinate_points": [],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Show",
       "company_label": "Network",
       "primary_browse": "productions",
-      "secondary_browse": "companies"
+      "secondary_browse": "networks"
     },
     "browse_entities": {
       "books": [],
@@ -12032,6 +12496,11 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [
+        "CBC"
+      ],
       "companies": [
         "CBC"
       ],
@@ -12097,13 +12566,15 @@
     "production_groups": [],
     "media": [],
     "word_count": 1050,
+    "show_title": "At the Hotel",
+    "network_or_platform": "CBC",
     "coordinate_points": [],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Show",
       "company_label": "Network",
       "primary_browse": "productions",
-      "secondary_browse": "companies"
+      "secondary_browse": "networks"
     },
     "browse_entities": {
       "books": [],
@@ -12113,6 +12584,11 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [
+        "CBC"
+      ],
       "companies": [
         "CBC"
       ],
@@ -12178,13 +12654,15 @@
     "production_groups": [],
     "media": [],
     "word_count": 1157,
+    "show_title": "At the Hotel",
+    "network_or_platform": "CBC",
     "coordinate_points": [],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Show",
       "company_label": "Network",
       "primary_browse": "productions",
-      "secondary_browse": "companies"
+      "secondary_browse": "networks"
     },
     "browse_entities": {
       "books": [],
@@ -12194,6 +12672,11 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [
+        "CBC"
+      ],
       "companies": [
         "CBC"
       ],
@@ -12262,13 +12745,15 @@
     "production_groups": [],
     "media": [],
     "word_count": 1188,
+    "show_title": "At the Hotel",
+    "network_or_platform": "CBC",
     "coordinate_points": [],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Show",
       "company_label": "Network",
       "primary_browse": "productions",
-      "secondary_browse": "companies"
+      "secondary_browse": "networks"
     },
     "browse_entities": {
       "books": [],
@@ -12278,6 +12763,11 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [
+        "CBC"
+      ],
       "companies": [
         "CBC"
       ],
@@ -12349,13 +12839,15 @@
     "production_groups": [],
     "media": [],
     "word_count": 1222,
+    "show_title": "At the Hotel",
+    "network_or_platform": "CBC",
     "coordinate_points": [],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Show",
       "company_label": "Network",
       "primary_browse": "productions",
-      "secondary_browse": "companies"
+      "secondary_browse": "networks"
     },
     "browse_entities": {
       "books": [],
@@ -12365,6 +12857,11 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [
+        "CBC"
+      ],
       "companies": [
         "CBC"
       ],
@@ -12474,6 +12971,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Canadian Stage"
       ],
@@ -12581,6 +13081,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Canadian Stage"
       ],
@@ -12685,6 +13188,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Soulpepper Theatre Company"
       ],
@@ -12805,6 +13311,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Diesel Playhouse"
       ],
@@ -12917,6 +13426,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Tarragon Theatre"
       ],
@@ -13024,6 +13536,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Factory Theatre"
       ],
@@ -13123,6 +13638,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Mysteriously Yours"
       ],
@@ -13232,6 +13750,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Theatre Passe Muraille"
       ],
@@ -13344,6 +13865,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Mirvish Productions"
       ],
@@ -13467,6 +13991,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Shaw Festival"
       ],
@@ -13635,6 +14162,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [],
       "venues": [],
       "cities": [
@@ -13789,6 +14319,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Da Da Kamera",
         "Danforth Music Hall",
@@ -13868,6 +14401,7 @@
     "production_groups": [],
     "media": [],
     "word_count": 997,
+    "film_title": "The Da Vinci Code",
     "coordinate_points": [],
     "display_schema": {
       "work_type": "productions",
@@ -13884,6 +14418,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [],
       "venues": [],
       "cities": [],
@@ -14029,6 +14566,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [],
       "venues": [],
       "cities": [
@@ -14154,6 +14694,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Mysteriously Yours Dinner Theatre"
       ],
@@ -14225,13 +14768,14 @@
     "production_groups": [],
     "media": [],
     "word_count": 2188,
+    "topic": "'Some Nods Are Inexplicable: A Desperate Season, A Desperate Slate Of Dora",
     "coordinate_points": [],
     "display_schema": {
-      "work_type": "productions",
-      "work_label": "Production",
+      "work_type": "topics",
+      "work_label": "Topic",
       "company_label": "Company",
-      "primary_browse": "productions",
-      "secondary_browse": ""
+      "primary_browse": "topics",
+      "secondary_browse": "productions"
     },
     "browse_entities": {
       "books": [],
@@ -14239,6 +14783,11 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [
+        "'Some Nods Are Inexplicable: A Desperate Season, A Desperate Slate Of Dora"
+      ],
+      "events": [],
+      "networks": [],
       "companies": [],
       "venues": [],
       "cities": [],
@@ -14341,6 +14890,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Shaw Festival"
       ],
@@ -14468,6 +15020,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Shaw Festival"
       ],
@@ -14605,6 +15160,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Resurgence Theatre Company"
       ],
@@ -14724,6 +15282,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Stratford Festival"
       ],
@@ -14837,6 +15398,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Soulpepper Theatre Company"
       ],
@@ -15014,6 +15578,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "SummerWorks Festival"
       ],
@@ -15169,6 +15736,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [],
       "venues": [
         "Studio Theatre, Canon Theatre, Dream in High Park, Royal George Theatre,"
@@ -15268,6 +15838,7 @@
     "production_groups": [],
     "media": [],
     "word_count": 1097,
+    "film_title": "Hollywoodland",
     "coordinate_points": [],
     "display_schema": {
       "work_type": "productions",
@@ -15284,6 +15855,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [],
       "venues": [],
       "cities": [],
@@ -15388,6 +15962,20 @@
     ],
     "media": [],
     "word_count": 1835,
+    "subject_role_map": [
+      {
+        "person": "dbi young",
+        "roles": [
+          "actors",
+          "playwright"
+        ],
+        "labels": [
+          "Actor",
+          "Playwright"
+        ]
+      }
+    ],
+    "subject_people": "dbi young",
     "coordinate_points": [],
     "display_schema": {
       "work_type": "productions",
@@ -15402,9 +15990,14 @@
         "Menopause Out Loud",
         "blood.claat"
       ],
-      "subjects": [],
+      "subjects": [
+        "dbi young"
+      ],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [],
       "venues": [
         "Capitol Event Theatre",
@@ -15514,6 +16107,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Soulpepper Theatre Company"
       ],
@@ -15609,6 +16205,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [],
       "venues": [
         "Capitol Event Theatre"
@@ -15713,6 +16312,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Stratford Festival"
       ],
@@ -15824,6 +16426,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Shaw Festival"
       ],
@@ -15935,6 +16540,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Shaw Festival"
       ],
@@ -16043,6 +16651,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Shaw Festival"
       ],
@@ -16160,6 +16771,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Stratford Festival"
       ],
@@ -16310,6 +16924,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [],
       "venues": [],
       "cities": [
@@ -16453,6 +17070,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Moonhorse Dance Theatre",
         "Shakespeare and the Queen's Men",
@@ -16526,6 +17146,8 @@
     "production_groups": [],
     "media": [],
     "word_count": 824,
+    "concert_title": "Barbra Streisand",
+    "featured_artists": "Barbra Streisand; Il Divo",
     "coordinate_points": [
       {
         "label": "Air Canada Centre",
@@ -16551,6 +17173,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [],
       "venues": [
         "Air Canada Centre"
@@ -16695,6 +17320,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Canadian Opera Company",
         "Factory Theatre",
@@ -16815,6 +17443,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Shaw Festival"
       ],
@@ -16913,6 +17544,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Mirvish Productions"
       ],
@@ -17011,6 +17645,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "London's National Theatre"
       ],
@@ -17087,6 +17724,7 @@
     "production_groups": [],
     "media": [],
     "word_count": 1184,
+    "film_title": "Casino Royale",
     "coordinate_points": [],
     "display_schema": {
       "work_type": "productions",
@@ -17103,6 +17741,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [],
       "venues": [],
       "cities": [],
@@ -17251,6 +17892,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Lorraine Kimsa Theatre for Young People",
         "Tarragon Theatre",
@@ -17351,13 +17995,15 @@
     ],
     "media": [],
     "word_count": 934,
+    "event_name": "A Christmas Carol; Radio City Christmas Spectacular; Head-Smashed-In",
+    "event_year": "2006",
     "coordinate_points": [],
     "display_schema": {
-      "work_type": "productions",
-      "work_label": "Production",
-      "company_label": "Company",
-      "primary_browse": "productions",
-      "secondary_browse": ""
+      "work_type": "events",
+      "work_label": "Event",
+      "company_label": "Organization",
+      "primary_browse": "events",
+      "secondary_browse": "productions"
     },
     "browse_entities": {
       "books": [],
@@ -17369,6 +18015,11 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [
+        "A Christmas Carol; Radio City Christmas Spectacular; Head-Smashed-In"
+      ],
+      "networks": [],
       "companies": [],
       "venues": [],
       "cities": [
@@ -17462,13 +18113,15 @@
     "production_groups": [],
     "media": [],
     "word_count": 706,
+    "event_name": "Multiple Theatre Productions Listings",
+    "event_year": "2006",
     "coordinate_points": [],
     "display_schema": {
-      "work_type": "productions",
-      "work_label": "Production",
-      "company_label": "Company",
-      "primary_browse": "productions",
-      "secondary_browse": ""
+      "work_type": "events",
+      "work_label": "Event",
+      "company_label": "Organization",
+      "primary_browse": "events",
+      "secondary_browse": "productions"
     },
     "browse_entities": {
       "books": [],
@@ -17478,6 +18131,11 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [
+        "Multiple Theatre Productions Listings"
+      ],
+      "networks": [],
       "companies": [],
       "venues": [],
       "cities": [
@@ -17641,13 +18299,14 @@
     "production_groups": [],
     "media": [],
     "word_count": 2120,
+    "topic": "2006 Theatre Year in Review",
     "coordinate_points": [],
     "display_schema": {
-      "work_type": "productions",
-      "work_label": "Production",
+      "work_type": "topics",
+      "work_label": "Topic",
       "company_label": "Company",
-      "primary_browse": "productions",
-      "secondary_browse": ""
+      "primary_browse": "topics",
+      "secondary_browse": "productions"
     },
     "browse_entities": {
       "books": [],
@@ -17657,6 +18316,11 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [
+        "2006 Theatre Year in Review"
+      ],
+      "events": [],
+      "networks": [],
       "companies": [],
       "venues": [],
       "cities": [
@@ -17783,6 +18447,18 @@
     "production_groups": [],
     "media": [],
     "word_count": 969,
+    "subject_role_map": [
+      {
+        "person": "Queen",
+        "roles": [
+          "composer_lyricist"
+        ],
+        "labels": [
+          "Composer/Lyricist"
+        ]
+      }
+    ],
+    "subject_people": "Queen",
     "coordinate_points": [
       {
         "label": "Canon Theatre",
@@ -17805,9 +18481,14 @@
       "productions": [
         "We Will Rock You"
       ],
-      "subjects": [],
+      "subjects": [
+        "Queen"
+      ],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Mirvish Productions"
       ],
@@ -17880,13 +18561,14 @@
     "production_groups": [],
     "media": [],
     "word_count": 769,
+    "topic": "A Chorus Of Kudos; Playwright Robert Lepage Is Feted By Europe's Thespians",
     "coordinate_points": [],
     "display_schema": {
-      "work_type": "productions",
-      "work_label": "Production",
+      "work_type": "topics",
+      "work_label": "Topic",
       "company_label": "Company",
-      "primary_browse": "productions",
-      "secondary_browse": ""
+      "primary_browse": "topics",
+      "secondary_browse": "productions"
     },
     "browse_entities": {
       "books": [],
@@ -17894,6 +18576,11 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [
+        "A Chorus Of Kudos; Playwright Robert Lepage Is Feted By Europe's Thespians"
+      ],
+      "events": [],
+      "networks": [],
       "companies": [],
       "venues": [],
       "cities": [],
@@ -18011,6 +18698,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Stratford Festival"
       ],
@@ -18086,13 +18776,15 @@
     "production_groups": [],
     "media": [],
     "word_count": 948,
+    "show_title": "The Sopranos",
+    "network_or_platform": "HBO",
     "coordinate_points": [],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Show",
       "company_label": "Network",
       "primary_browse": "productions",
-      "secondary_browse": "companies"
+      "secondary_browse": "networks"
     },
     "browse_entities": {
       "books": [],
@@ -18102,6 +18794,11 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [
+        "HBO"
+      ],
       "companies": [
         "HBO"
       ],
@@ -18160,13 +18857,15 @@
     "production_groups": [],
     "media": [],
     "word_count": 1296,
+    "show_title": "The Sopranos",
+    "network_or_platform": "HBO",
     "coordinate_points": [],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Show",
       "company_label": "Network",
       "primary_browse": "productions",
-      "secondary_browse": "companies"
+      "secondary_browse": "networks"
     },
     "browse_entities": {
       "books": [],
@@ -18176,6 +18875,11 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [
+        "HBO"
+      ],
       "companies": [
         "HBO"
       ],
@@ -18297,6 +19001,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Stratford Festival"
       ],
@@ -18419,6 +19126,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Canadian Stage",
         "Shakespeare in High Park"
@@ -18539,6 +19249,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Shaw Festival"
       ],
@@ -18612,6 +19325,12 @@
     "production_groups": [],
     "media": [],
     "word_count": 1016,
+    "book_title": "Shakespeare the Thinker",
+    "subject_role_map": [
+      {
+        "person": "William Shakespeare"
+      }
+    ],
     "book_author": "A. D. Nuttall",
     "publisher": "Yale University Press",
     "subject_people": "William Shakespeare",
@@ -18627,9 +19346,7 @@
       "books": [
         "Shakespeare the Thinker"
       ],
-      "productions": [
-        "Shakespeare the Thinker"
-      ],
+      "productions": [],
       "subjects": [
         "William Shakespeare"
       ],
@@ -18639,6 +19356,9 @@
       "publishers": [
         "Yale University Press"
       ],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [],
       "venues": [],
       "cities": [],
@@ -18750,6 +19470,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Sony Centre for the Performing Arts"
       ],
@@ -18829,13 +19552,15 @@
     "production_groups": [],
     "media": [],
     "word_count": 957,
+    "show_title": "ER / The Pagan Christ",
+    "network_or_platform": "CTV; CBC",
     "coordinate_points": [],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Show",
       "company_label": "Network",
       "primary_browse": "productions",
-      "secondary_browse": "companies"
+      "secondary_browse": "networks"
     },
     "browse_entities": {
       "books": [],
@@ -18845,6 +19570,12 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [
+        "CTV",
+        "CBC"
+      ],
       "companies": [
         "CBC",
         "CTV"
@@ -18913,13 +19644,15 @@
     "production_groups": [],
     "media": [],
     "word_count": 990,
+    "show_title": "ER / The Pagan Christ",
+    "network_or_platform": "CTV; CBC",
     "coordinate_points": [],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Show",
       "company_label": "Network",
       "primary_browse": "productions",
-      "secondary_browse": "companies"
+      "secondary_browse": "networks"
     },
     "browse_entities": {
       "books": [],
@@ -18929,6 +19662,12 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [
+        "CTV",
+        "CBC"
+      ],
       "companies": [
         "CBC",
         "CTV"
@@ -19007,6 +19746,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Stratford Festival"
       ],
@@ -19074,6 +19816,8 @@
     "production_groups": [],
     "media": [],
     "word_count": 558,
+    "concert_title": "Sandy Stewart and Bill Charlap",
+    "featured_artists": "Sandy Stewart; Bill Charlap",
     "coordinate_points": [
       {
         "label": "The Old Mill",
@@ -19099,6 +19843,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [],
       "venues": [
         "The Old Mill"
@@ -19174,6 +19921,18 @@
     "production_groups": [],
     "media": [],
     "word_count": 1011,
+    "subject_role_map": [
+      {
+        "person": "Simon Callow",
+        "roles": [
+          "actors"
+        ],
+        "labels": [
+          "Actor"
+        ]
+      }
+    ],
+    "subject_people": "Simon Callow",
     "coordinate_points": [],
     "display_schema": {
       "work_type": "productions",
@@ -19187,9 +19946,14 @@
       "productions": [
         "There Reigns Love"
       ],
-      "subjects": [],
+      "subjects": [
+        "Simon Callow"
+      ],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Stratford Festival"
       ],
@@ -19283,6 +20047,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Stratford Festival"
       ],
@@ -19396,6 +20163,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Stratford Festival"
       ],
@@ -19513,6 +20283,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Shaw Festival"
       ],
@@ -19615,6 +20388,18 @@
     "production_groups": [],
     "media": [],
     "word_count": 861,
+    "subject_role_map": [
+      {
+        "person": "Gord Rand",
+        "roles": [
+          "actors"
+        ],
+        "labels": [
+          "Actor"
+        ]
+      }
+    ],
+    "subject_people": "Gord Rand",
     "coordinate_points": [
       {
         "label": "Enwave Theatre",
@@ -19637,9 +20422,14 @@
       "productions": [
         "Hamlet"
       ],
-      "subjects": [],
+      "subjects": [
+        "Gord Rand"
+      ],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Necessary Angel Theatre Company"
       ],
@@ -19759,6 +20549,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Mirvish Productions"
       ],
@@ -19829,13 +20622,14 @@
     "production_groups": [],
     "media": [],
     "word_count": 83,
+    "topic": "2010 Theatre Year in Review",
     "coordinate_points": [],
     "display_schema": {
-      "work_type": "productions",
-      "work_label": "Production",
+      "work_type": "topics",
+      "work_label": "Topic",
       "company_label": "Company",
-      "primary_browse": "productions",
-      "secondary_browse": ""
+      "primary_browse": "topics",
+      "secondary_browse": "productions"
     },
     "browse_entities": {
       "books": [],
@@ -19845,6 +20639,11 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [
+        "2010 Theatre Year in Review"
+      ],
+      "events": [],
+      "networks": [],
       "companies": [],
       "venues": [],
       "cities": [],
@@ -19949,6 +20748,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Shaw Festival"
       ],
@@ -20086,6 +20888,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Stratford Festival"
       ],
@@ -20221,6 +21026,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Stratford Festival"
       ],
@@ -20300,6 +21108,18 @@
     "production_groups": [],
     "media": [],
     "word_count": 765,
+    "subject_role_map": [
+      {
+        "person": "John Neville",
+        "roles": [
+          "actors"
+        ],
+        "labels": [
+          "Actor"
+        ]
+      }
+    ],
+    "subject_people": "John Neville",
     "coordinate_points": [],
     "display_schema": {
       "work_type": "subjects",
@@ -20313,9 +21133,14 @@
       "productions": [
         "John Neville Obituary"
       ],
-      "subjects": [],
+      "subjects": [
+        "John Neville"
+      ],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [],
       "venues": [],
       "cities": [],
@@ -20340,13 +21165,14 @@
     "publication_status": "archive_only",
     "editorial_issue_type": "duplicate_edition_variant",
     "canonical_file": "",
-    "production_title": "John Neville Obituary",
+    "production_title": "",
     "company": "",
     "venue": "",
     "city": "",
     "coordinates": [],
     "people": [
-      "John Neville"
+      "John Neville",
+      "John Neville Obituary"
     ],
     "roles": {
       "director": [],
@@ -20378,6 +21204,18 @@
     "production_groups": [],
     "media": [],
     "word_count": 1080,
+    "subject_role_map": [
+      {
+        "person": "John Neville Obituary",
+        "roles": [
+          "actors"
+        ],
+        "labels": [
+          "Actor"
+        ]
+      }
+    ],
+    "subject_people": "John Neville Obituary",
     "coordinate_points": [],
     "display_schema": {
       "work_type": "subjects",
@@ -20388,17 +21226,21 @@
     },
     "browse_entities": {
       "books": [],
-      "productions": [
+      "productions": [],
+      "subjects": [
         "John Neville Obituary"
       ],
-      "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [],
       "venues": [],
       "cities": [],
       "people": [
-        "John Neville"
+        "John Neville",
+        "John Neville Obituary"
       ]
     }
   },
@@ -20505,6 +21347,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Soulpepper Theatre Company"
       ],
@@ -20645,6 +21490,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Mirvish Productions"
       ],
@@ -20783,6 +21631,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Stratford Festival"
       ],
@@ -20895,6 +21746,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Studio 180 Theatre"
       ],
@@ -21052,6 +21906,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Soulpepper Theatre Company"
       ],
@@ -21133,6 +21990,20 @@
     "production_groups": [],
     "media": [],
     "word_count": 427,
+    "film_title": "The Boxtrolls",
+    "studio_or_distributor": "Laika Studio",
+    "subject_role_map": [
+      {
+        "person": "Ben Kingsley",
+        "roles": [
+          "actors"
+        ],
+        "labels": [
+          "Actor"
+        ]
+      }
+    ],
+    "subject_people": "Ben Kingsley",
     "coordinate_points": [],
     "display_schema": {
       "work_type": "productions",
@@ -21146,9 +22017,14 @@
       "productions": [
         "The Boxtrolls"
       ],
-      "subjects": [],
+      "subjects": [
+        "Ben Kingsley"
+      ],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Laika Studio"
       ],
@@ -21209,13 +22085,14 @@
     "production_groups": [],
     "media": [],
     "word_count": 147,
+    "topic": "Columnist's Best Picks",
     "coordinate_points": [],
     "display_schema": {
-      "work_type": "productions",
-      "work_label": "Production",
+      "work_type": "topics",
+      "work_label": "Topic",
       "company_label": "Company",
-      "primary_browse": "productions",
-      "secondary_browse": ""
+      "primary_browse": "topics",
+      "secondary_browse": "productions"
     },
     "browse_entities": {
       "books": [],
@@ -21223,6 +22100,11 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [
+        "Columnist's Best Picks"
+      ],
+      "events": [],
+      "networks": [],
       "companies": [],
       "venues": [],
       "cities": [],
@@ -21334,6 +22216,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Coal Mine Theatre",
         "Storefront Theatre"
@@ -21482,6 +22367,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Mirvish Productions"
       ],
@@ -21620,6 +22508,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [],
       "venues": [
         "Elgin Theatre"
@@ -21733,6 +22624,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Tarragon Theatre"
       ],
@@ -21768,12 +22662,14 @@
     "publication_status": "publish",
     "editorial_issue_type": "duplicate_edition_variant",
     "canonical_file": "2021.10.23.National_Post.Martha_HenryS_Final_Bow_The_Beloved_First_Lady_Of_Canadian_Theatre_Was_A_Gr.md",
-    "production_title": "Martha Henry Career Overview",
+    "production_title": "",
     "company": "Stratford Festival",
     "venue": "",
     "city": "",
     "coordinates": [],
-    "people": [],
+    "people": [
+      "Martha Henry Career Overview"
+    ],
     "roles": {
       "director": [],
       "actors": [],
@@ -21802,6 +22698,18 @@
     "production_groups": [],
     "media": [],
     "word_count": 1488,
+    "subject_role_map": [
+      {
+        "person": "Martha Henry Career Overview",
+        "roles": [
+          "director"
+        ],
+        "labels": [
+          "Director"
+        ]
+      }
+    ],
+    "subject_people": "Martha Henry Career Overview",
     "coordinate_points": [],
     "display_schema": {
       "work_type": "subjects",
@@ -21812,18 +22720,23 @@
     },
     "browse_entities": {
       "books": [],
-      "productions": [
+      "productions": [],
+      "subjects": [
         "Martha Henry Career Overview"
       ],
-      "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Stratford Festival"
       ],
       "venues": [],
       "cities": [],
-      "people": []
+      "people": [
+        "Martha Henry Career Overview"
+      ]
     }
   },
   {
@@ -21842,12 +22755,14 @@
     "publication_status": "publish",
     "editorial_issue_type": "duplicate_edition_variant",
     "canonical_file": "2021.12.02.National_Post.A_Giant_Of_Musical_Theatre_My_50-Year_Friendship_With_Stephen_Sondheim.md",
-    "production_title": "Stephen Sondheim",
+    "production_title": "",
     "company": "",
     "venue": "",
     "city": "",
     "coordinates": [],
-    "people": [],
+    "people": [
+      "Stephen Sondheim"
+    ],
     "roles": {
       "director": [],
       "actors": [],
@@ -21876,6 +22791,12 @@
     "production_groups": [],
     "media": [],
     "word_count": 1926,
+    "subject_role_map": [
+      {
+        "person": "Stephen Sondheim"
+      }
+    ],
+    "subject_people": "Stephen Sondheim",
     "coordinate_points": [],
     "display_schema": {
       "work_type": "subjects",
@@ -21886,16 +22807,21 @@
     },
     "browse_entities": {
       "books": [],
-      "productions": [
+      "productions": [],
+      "subjects": [
         "Stephen Sondheim"
       ],
-      "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [],
       "venues": [],
       "cities": [],
-      "people": []
+      "people": [
+        "Stephen Sondheim"
+      ]
     }
   },
   {
@@ -21914,12 +22840,14 @@
     "publication_status": "publish",
     "editorial_issue_type": "duplicate_edition_variant",
     "canonical_file": "2024.10.05.The_Globe_and_Mail.I_Knew_Early_On_That_Maggie_Smith_Was_A_Treasure_On_Stage_The_Actor_De.md",
-    "production_title": "Maggie Smith",
+    "production_title": "",
     "company": "National Theatre; Stratford Festival",
     "venue": "",
     "city": "",
     "coordinates": [],
-    "people": [],
+    "people": [
+      "Maggie Smith"
+    ],
     "roles": {
       "director": [],
       "actors": [],
@@ -21948,6 +22876,12 @@
     "production_groups": [],
     "media": [],
     "word_count": 1212,
+    "subject_role_map": [
+      {
+        "person": "Maggie Smith"
+      }
+    ],
+    "subject_people": "Maggie Smith",
     "coordinate_points": [],
     "display_schema": {
       "work_type": "subjects",
@@ -21958,19 +22892,24 @@
     },
     "browse_entities": {
       "books": [],
-      "productions": [
+      "productions": [],
+      "subjects": [
         "Maggie Smith"
       ],
-      "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "National Theatre",
         "Stratford Festival"
       ],
       "venues": [],
       "cities": [],
-      "people": []
+      "people": [
+        "Maggie Smith"
+      ]
     }
   },
   {
@@ -22069,6 +23008,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Second City"
       ],
@@ -22163,6 +23105,9 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
       "companies": [
         "Canadian Stage"
       ],
