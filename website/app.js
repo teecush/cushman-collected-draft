@@ -1,4 +1,4 @@
-const DATA_URL = new URL("../site_export/data/public_reviews.json?v=102", import.meta.url);
+const DATA_URL = new URL("../site_export/data/public_reviews.json?v=103", import.meta.url);
 const CONTENT_ROOT = new URL("../site_export/content/reviews/", import.meta.url);
 const PAGE_SIZE = 36;
 const SHAKESPEARE_COLLECTION = "The Shakespeare Collection";
@@ -72,8 +72,8 @@ const ENTITY_TYPES = [
 ];
 
 const MASTER_INDEX_WORK_FILTERS = [
-  { key: "plays", label: "Plays", typeKeys: ["productions"], predicate: (record) => typeGroup(record).value === "theatre" },
   { key: "all-works", label: "All Works", typeKeys: ["productions", "books"] },
+  { key: "plays", label: "Plays", typeKeys: ["productions"], predicate: (record) => typeGroup(record).value === "theatre" },
   { key: "musicals", label: "Musicals", typeKeys: ["productions"], predicate: (record) => typeGroup(record).value === "musical-theatre" },
   { key: "books", label: "Books", typeKeys: ["books"], predicate: (record) => isBookReview(record) },
   { key: "albums", label: "Albums", typeKeys: ["productions"], predicate: (record) => record.article_category === "Music Review" },
