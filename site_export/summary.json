@@ -3,15 +3,15 @@
   "source_dir": "/Users/openclaw/Codex Projects/Cushman CODEXted/repaired_structural_v2",
   "counts": {
     "total": 3367,
-    "publish": 3172,
+    "publish": 3192,
     "archive_only": 154,
-    "duplicate_variant": 40,
+    "duplicate_variant": 20,
     "exclude_from_publication": 1
   },
-  "public_reviews": 3172,
-  "archive_records": 194,
+  "public_reviews": 3159,
+  "archive_records": 207,
   "excluded_records": 1,
-  "map_points": 1754,
+  "map_points": 1750,
   "sample_public_record": {
     "slug": "1970-10-02-inside-the-shell-of-technique",
     "route": "/reviews/1970-10-02-inside-the-shell-of-technique/",
@@ -20,6 +20,7 @@
     "date": "1970-10-02",
     "year": "1970",
     "publication": "The Guardian",
+    "source_publication": "The Guardian",
     "article_category": "Theatre Interview",
     "collections": [
       "UK Collection"
@@ -73,6 +74,7 @@
     "production_groups": [],
     "media": [],
     "word_count": 928,
+    "coordinate_points": [],
     "display_schema": {
       "work_type": "subjects",
       "work_label": "Subject",
@@ -105,5 +107,5 @@
       ]
     }
   },
-  "duplicate_canonical_links": 40
+  "duplicate_canonical_links": 53
 }

@@ -1,4 +1,4 @@
-const DATA_URL = new URL("../site_export/data/public_reviews.json?v=96", import.meta.url);
+const DATA_URL = new URL("../site_export/data/public_reviews.json?v=97", import.meta.url);
 const CONTENT_ROOT = new URL("../site_export/content/reviews/", import.meta.url);
 const PAGE_SIZE = 36;
 const SHAKESPEARE_COLLECTION = "The Shakespeare Collection";
@@ -259,7 +259,7 @@ const BOOKS_ESSAYS_VALUES = ["book-reviews", "essays-opinion", "year-in-review"]
 const CATEGORY_BROWSE_PROFILES = {
   theatre: { groupLabel: "Productions", entityType: "productions", emptyLabel: "Articles without a production", intro: "Browse theatre reviews by production first, then open the linked production index for all related articles." },
   "musical-theatre": { groupLabel: "Productions", entityType: "productions", emptyLabel: "Articles without a production", intro: "Browse musical-theatre writing by show title, then drill into the articles for that show." },
-  television: { groupLabel: "Shows", entityType: "productions", emptyLabel: "Articles without a show title", intro: "Television writing is grouped by show or program title so recurring coverage reads as a clear path." },
+  television: { groupLabel: "Shows", entityType: "productions", secondaryEntityType: "companies", secondaryLabel: "Networks And Platforms", emptyLabel: "Articles without a show title", intro: "Television writing is grouped by show or program title so recurring coverage reads as a clear path." },
   "book-reviews": { groupLabel: "Books", entityType: "books", secondaryEntityType: "book-authors", secondaryLabel: "Authors", emptyLabel: "Articles without a book title", intro: "Book reviews are grouped by reviewed book, with a secondary author index for broader reading paths." },
   "music-concerts": { groupLabel: "Artists And Musicians", entityType: "musicians", secondaryEntityType: "productions", secondaryLabel: "Recordings, Concerts, And Performances", emptyLabel: "Articles without an artist", intro: "Music and concert writing is grouped by artist first, with reviewed recordings and performances available as the secondary path." },
   opera: { groupLabel: "Productions", entityType: "productions", emptyLabel: "Articles without a production", intro: "Opera reviews are grouped by production title and can also be filtered by company, venue, and city." },
@@ -689,6 +689,11 @@ function coordinatesForVenue(venue) {
 }
 
 function normalizePointCoordinates(coordinates) {
+  if (coordinates && typeof coordinates === "object" && !Array.isArray(coordinates)) {
+    const lat = Number(coordinates.lat);
+    const lon = Number(coordinates.lon);
+    if (Number.isFinite(lat) && Number.isFinite(lon)) return [lat, lon];
+  }
   if (!Array.isArray(coordinates)) return null;
   const lat = Number(coordinates[0]);
   const lon = Number(coordinates[1]);
@@ -1393,7 +1398,7 @@ function renderCurrentLanding() {
     const heading = document.createElement("strong");
     heading.textContent = record.title;
     const meta = document.createElement("p");
-    meta.textContent = [record.production_title, record.company].filter(Boolean).join(" / ");
+    meta.textContent = productionParts(record).join(" / ");
     copy.replaceChildren(date, heading, meta);
     link.append(copy);
     grid.append(link);
@@ -1581,7 +1586,7 @@ function renderCurrentFeature() {
   const title = document.createElement("h2");
   title.textContent = current.title;
   const meta = document.createElement("p");
-  meta.textContent = [formatDate(current.date), current.production_title, current.company].filter(Boolean).join(" / ");
+  meta.textContent = [formatDate(current.date), ...productionParts(current)].filter(Boolean).join(" / ");
   const readLink = document.createElement("a");
   readLink.className = "current-read-link";
   readLink.href = `#review:${current.slug}`;
@@ -1806,9 +1811,9 @@ function renderExploreTool() {
       if (branch === "type") values = [typeLabel(record)];
       if (branch === "era") values = [record.year ? `${String(record.year).slice(0, 3)}0s` : ""];
       if (branch === "collection") values = collectionNames(record);
-      if (branch === "company") values = splitEntityList(record.company);
-      if (branch === "city") values = splitCityList(record.city);
-      if (branch === "production") values = splitEntityList(record.production_title);
+      if (branch === "company") values = entityValues(record, "companies");
+      if (branch === "city") values = entityValues(record, "cities");
+      if (branch === "production") values = entityValues(record, "productions");
       values.filter(Boolean).forEach((value) => counts.set(value, (counts.get(value) || 0) + 1));
     });
     return [...counts.entries()]
@@ -1821,9 +1826,9 @@ function renderExploreTool() {
           if (branch === "type") return typeLabel(record) === label;
           if (branch === "era") return record.year && `${String(record.year).slice(0, 3)}0s` === label;
           if (branch === "collection") return collectionNames(record).includes(label);
-          if (branch === "company") return splitEntityList(record.company).includes(label);
-          if (branch === "city") return splitCityList(record.city).includes(label);
-          if (branch === "production") return splitEntityList(record.production_title).includes(label);
+          if (branch === "company") return entityValues(record, "companies").includes(label);
+          if (branch === "city") return entityValues(record, "cities").includes(label);
+          if (branch === "production") return entityValues(record, "productions").includes(label);
           return true;
         },
       }))
@@ -2038,9 +2043,9 @@ function renderExploreToolV2() {
       if (branch === "type") values = [typeLabel(record)];
       if (branch === "era") values = [record.year ? `${String(record.year).slice(0, 3)}0s` : ""];
       if (branch === "collection") values = collectionNames(record);
-      if (branch === "company") values = splitEntityList(record.company);
-      if (branch === "city") values = splitCityList(record.city);
-      if (branch === "production") values = splitEntityList(record.production_title);
+      if (branch === "company") values = entityValues(record, "companies");
+      if (branch === "city") values = entityValues(record, "cities");
+      if (branch === "production") values = entityValues(record, "productions");
       values.filter(Boolean).forEach((value) => counts.set(value, (counts.get(value) || 0) + 1));
     });
     return [...counts.entries()]
@@ -2053,9 +2058,9 @@ function renderExploreToolV2() {
           if (branch === "type") return typeLabel(record) === label;
           if (branch === "era") return record.year && `${String(record.year).slice(0, 3)}0s` === label;
           if (branch === "collection") return collectionNames(record).includes(label);
-          if (branch === "company") return splitEntityList(record.company).includes(label);
-          if (branch === "city") return splitCityList(record.city).includes(label);
-          if (branch === "production") return splitEntityList(record.production_title).includes(label);
+          if (branch === "company") return entityValues(record, "companies").includes(label);
+          if (branch === "city") return entityValues(record, "cities").includes(label);
+          if (branch === "production") return entityValues(record, "productions").includes(label);
           return true;
         },
       }))
@@ -2945,7 +2950,15 @@ function compactParts(parts) {
 
 function productionParts(record) {
   const title = String(record.title || "").trim().toLowerCase();
-  const parts = compactParts([record.production_title, record.company, record.city]);
+  const groups = productionGroups(record);
+  const parts = compactParts([
+    record.production_title,
+    ...groups.flatMap((group) => splitEntityList(group.production_title)),
+    record.company,
+    ...groups.flatMap((group) => splitEntityList(group.company)),
+    record.city,
+    ...groups.flatMap((group) => splitCityList(group.city)),
+  ]);
   return parts
     .filter((part) => part.toLowerCase() !== title)
     .slice(0, 3);

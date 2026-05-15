@@ -7,6 +7,7 @@
     "date": "2002-10-01",
     "year": "2002",
     "publication": "Books in Canada",
+    "source_publication": "Books in Canada",
     "article_category": "Book Review",
     "collections": [
       "The Canadian Collection",
@@ -50,6 +51,7 @@
     "production_groups": [],
     "media": [],
     "word_count": 3225,
+    "coordinate_points": [],
     "display_schema": {
       "work_type": "books",
       "work_label": "Book",

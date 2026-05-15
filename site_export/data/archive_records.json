@@ -7,6 +7,7 @@
     "date": "1976-04-11",
     "year": "1976",
     "publication": "The Observer",
+    "source_publication": "The Observer",
     "article_category": "Theatre Review",
     "collections": [
       "The Shakespeare Collection",
@@ -64,6 +65,7 @@
     "production_groups": [],
     "media": [],
     "word_count": 941,
+    "coordinate_points": [],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -104,6 +106,7 @@
     "date": "1977-05-15",
     "year": "1977",
     "publication": "The Observer",
+    "source_publication": "The Observer",
     "article_category": "Opinion Piece",
     "collections": [
       "Thoughts on Shakespeare",
@@ -157,6 +160,7 @@
     "production_groups": [],
     "media": [],
     "word_count": 1073,
+    "coordinate_points": [],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -196,6 +200,7 @@
     "date": "1983-06-19",
     "year": "1983",
     "publication": "The Observer",
+    "source_publication": "The Observer",
     "article_category": "Theatre Review",
     "collections": [
       "The Shakespeare Collection",
@@ -249,6 +254,7 @@
     "production_groups": [],
     "media": [],
     "word_count": 546,
+    "coordinate_points": [],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -288,6 +294,7 @@
     "date": "1990-11-03",
     "year": "1990",
     "publication": "The Globe and Mail",
+    "source_publication": "The Globe and Mail",
     "article_category": "Theatre Review",
     "collections": [
       "The Canadian Collection"
@@ -332,6 +339,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 1199,
+    "coordinate_points": [
+      {
+        "label": "Various London Venues",
+        "lat": 51.5074,
+        "lon": -0.1278,
+        "venue": "Various London Venues",
+        "city": "London, England",
+        "production_title": ""
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -365,6 +382,7 @@
     "date": "1992-04-09",
     "year": "1992",
     "publication": "The Globe and Mail",
+    "source_publication": "The Globe and Mail",
     "article_category": "Theatre Review",
     "collections": [
       "The Canadian Collection"
@@ -413,6 +431,7 @@
     "production_groups": [],
     "media": [],
     "word_count": 527,
+    "coordinate_points": [],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -451,6 +470,7 @@
     "date": "1993-01-19",
     "year": "1993",
     "publication": "The Globe and Mail",
+    "source_publication": "The Globe and Mail",
     "article_category": "Obituary",
     "collections": [
       "The Musical Collection"
@@ -510,6 +530,7 @@
     "production_groups": [],
     "media": [],
     "word_count": 745,
+    "coordinate_points": [],
     "display_schema": {
       "work_type": "subjects",
       "work_label": "Subject",
@@ -547,6 +568,7 @@
     "date": "1996-05-01",
     "year": "1996",
     "publication": "Saturday Night",
+    "source_publication": "Saturday Night",
     "article_category": "Opinion Piece",
     "collections": [
       "The Musical Collection"
@@ -594,6 +616,7 @@
     "production_groups": [],
     "media": [],
     "word_count": 2171,
+    "coordinate_points": [],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -626,6 +649,7 @@
     "date": "1997-09-06",
     "year": "1997",
     "publication": "The Globe and Mail",
+    "source_publication": "The Globe and Mail",
     "article_category": "Theatre Review",
     "collections": [
       "The Canadian Collection"
@@ -670,6 +694,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 1346,
+    "coordinate_points": [
+      {
+        "label": "Atlantic Theatre Festival",
+        "lat": 45.0917,
+        "lon": -64.3647,
+        "venue": "Atlantic Theatre Festival",
+        "city": "Wolfville",
+        "production_title": "Tartuffe, The Importance of Being Earnest, Uncle Vanya"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -705,6 +739,7 @@
     "date": "1999-02-06",
     "year": "1999",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Events Listing",
     "collections": [],
     "publication_status": "archive_only",
@@ -744,6 +779,7 @@
     "production_groups": [],
     "media": [],
     "word_count": 1876,
+    "coordinate_points": [],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -771,6 +807,7 @@
     "date": "1999-03-02",
     "year": "1999",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Profile",
     "collections": [
       "The Stratford Collection",
@@ -817,6 +854,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 1220,
+    "coordinate_points": [
+      {
+        "label": "Stratford Festival",
+        "lat": 43.37,
+        "lon": -80.9829,
+        "venue": "Stratford Festival",
+        "city": "Stratford, Ontario",
+        "production_title": "Stratford Festival Conservatory for Classical Theatre Training"
+      }
+    ],
     "display_schema": {
       "work_type": "subjects",
       "work_label": "Subject",
@@ -852,6 +899,7 @@
     "date": "1999-05-18",
     "year": "1999",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Musical Review",
     "collections": [
       "The Musical Collection"
@@ -923,6 +971,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 767,
+    "coordinate_points": [
+      {
+        "label": "Jane Mallett Theatre",
+        "lat": 43.6486,
+        "lon": -79.3774,
+        "venue": "Jane Mallett Theatre",
+        "city": "Toronto",
+        "production_title": "Anything Goes"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -970,6 +1028,7 @@
     "date": "1999-06-03",
     "year": "1999",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [
       "The Stratford Collection",
@@ -1037,6 +1096,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 826,
+    "coordinate_points": [
+      {
+        "label": "Festival Theatre",
+        "lat": 43.3744,
+        "lon": -80.9686,
+        "venue": "Festival Theatre",
+        "city": "Stratford, Ontario",
+        "production_title": "A Midsummer Night's Dream"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -1082,6 +1151,7 @@
     "date": "1999-06-22",
     "year": "1999",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre News",
     "collections": [
       "The Canadian Collection"
@@ -1123,6 +1193,7 @@
     "production_groups": [],
     "media": [],
     "word_count": 854,
+    "coordinate_points": [],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -1152,6 +1223,7 @@
     "date": "1999-07-22",
     "year": "1999",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [
       "The Shaw Collection"
@@ -1213,6 +1285,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 706,
+    "coordinate_points": [
+      {
+        "label": "Royal George Theatre",
+        "lat": 43.2563435,
+        "lon": -79.0731515,
+        "venue": "Royal George Theatre",
+        "city": "Niagara-on-the-Lake",
+        "production_title": "Village Wooing"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -1255,6 +1337,7 @@
     "date": "2000-02-04",
     "year": "2000",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [
       "The Canadian Collection"
@@ -1305,6 +1388,7 @@
     "production_groups": [],
     "media": [],
     "word_count": 824,
+    "coordinate_points": [],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -1336,6 +1420,118 @@
     }
   },
   {
+    "slug": "2000-04-24-peeking-at-the-narrator-s-diary",
+    "route": "/reviews/2000-04-24-peeking-at-the-narrator-s-diary/",
+    "source_file": "2000.04.24.Cushman_Collected.Peeking_at_the_Narrator_s_Diary.md",
+    "title": "Peeking at the Narrator's Diary",
+    "date": "2000-04-24",
+    "year": "2000",
+    "publication": "National Post",
+    "source_publication": "National Post",
+    "article_category": "Theatre Review",
+    "collections": [
+      "Riffs on Shakespeare",
+      "The Shakespeare Collection"
+    ],
+    "publication_status": "duplicate_variant",
+    "editorial_issue_type": "",
+    "canonical_file": "2000.04.24.National_Post.Peeking_At_The_NarratorS_Diary_National_Edition.md",
+    "production_title": "Shakespearean Gala",
+    "company": "du Maurier World Stage",
+    "venue": "Winter Garden Theatre",
+    "city": "Toronto",
+    "coordinates": [],
+    "people": [
+      "Christopher Plummer",
+      "Claire Bloom",
+      "Colm Feore",
+      "Helen Schlesinger",
+      "Ian McKellen",
+      "John Neville",
+      "Measha Brueggergosman",
+      "Simon Russell Beale",
+      "William Shakespeare"
+    ],
+    "roles": {
+      "director": [],
+      "actors": [
+        "Ian McKellen",
+        "John Neville",
+        "Claire Bloom",
+        "Christopher Plummer",
+        "Measha Brueggergosman",
+        "Colm Feore",
+        "Simon Russell Beale",
+        "Helen Schlesinger"
+      ],
+      "playwright": [
+        "William Shakespeare"
+      ],
+      "composer_lyricist": [],
+      "musical_director": [],
+      "choreographer": [],
+      "orchestrator": [],
+      "arranger": [],
+      "assistant_director": [],
+      "stage_manager": [],
+      "assistant_musical_director": [],
+      "vocal_director": [],
+      "dance_captain": [],
+      "fight_director": [],
+      "dramaturg": [],
+      "producer": [],
+      "set_designer": [],
+      "costume_designer": [],
+      "lighting_designer": [],
+      "sound_designer": [],
+      "musicians": [
+        "Measha Brueggergosman"
+      ],
+      "performers": [],
+      "artists": []
+    },
+    "production_groups": [],
+    "media": [],
+    "word_count": 413,
+    "coordinate_points": [],
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Shakespearean Gala"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "du Maurier World Stage"
+      ],
+      "venues": [
+        "Winter Garden Theatre"
+      ],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "Christopher Plummer",
+        "Claire Bloom",
+        "Colm Feore",
+        "Helen Schlesinger",
+        "Ian McKellen",
+        "John Neville",
+        "Measha Brueggergosman",
+        "Simon Russell Beale",
+        "William Shakespeare"
+      ]
+    }
+  },
+  {
     "slug": "2001-03-03-t-o-do-selected-listings",
     "route": "/reviews/2001-03-03-t-o-do-selected-listings/",
     "source_file": "2001.03.03.National_Post.T.O._Do_Selected_Listings_Toronto_Edition.md",
@@ -1343,6 +1539,7 @@
     "date": "2001-03-03",
     "year": "2001",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [],
     "publication_status": "archive_only",
@@ -1382,6 +1579,7 @@
     "production_groups": [],
     "media": [],
     "word_count": 2207,
+    "coordinate_points": [],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -1406,6 +1604,112 @@
     }
   },
   {
+    "slug": "2002-10-16-a-kinetic-richard-ii-worth-raving-about",
+    "route": "/reviews/2002-10-16-a-kinetic-richard-ii-worth-raving-about/",
+    "source_file": "2002.10.16.Cushman_Collected.A_Kenetic_Richard_II_Worth_Raving_About.md",
+    "title": "A Kinetic Richard II Worth Raving About",
+    "date": "2002-10-16",
+    "year": "2002",
+    "publication": "National Post",
+    "source_publication": "National Post",
+    "article_category": "Theatre Review",
+    "collections": [
+      "The Shakespeare Collection",
+      "Riffs on Shakespeare"
+    ],
+    "publication_status": "duplicate_variant",
+    "editorial_issue_type": "",
+    "canonical_file": "2002.10.16.National_Post.A_Kenetic_Richard_Ii_Worth_Raving_About_Toronto_Edition.md",
+    "production_title": "richardthesecond",
+    "company": "Theatre Passe Muraille",
+    "venue": "Theatre Passe Muraille Backspace",
+    "city": "Toronto",
+    "coordinates": [
+      "43.6486",
+      "-79.4026"
+    ],
+    "people": [
+      "David Francis",
+      "Matthew MacFadzean",
+      "Rebecca Brown"
+    ],
+    "roles": {
+      "director": [
+        "Rebecca Brown"
+      ],
+      "actors": [
+        "Matthew MacFadzean",
+        "David Francis"
+      ],
+      "playwright": [
+        "Matthew MacFadzean"
+      ],
+      "composer_lyricist": [],
+      "musical_director": [],
+      "choreographer": [],
+      "orchestrator": [],
+      "arranger": [],
+      "assistant_director": [],
+      "stage_manager": [],
+      "assistant_musical_director": [],
+      "vocal_director": [],
+      "dance_captain": [],
+      "fight_director": [],
+      "dramaturg": [],
+      "producer": [],
+      "set_designer": [],
+      "costume_designer": [],
+      "lighting_designer": [],
+      "sound_designer": [],
+      "musicians": [],
+      "performers": [],
+      "artists": []
+    },
+    "production_groups": [],
+    "media": [],
+    "word_count": 585,
+    "coordinate_points": [
+      {
+        "label": "Theatre Passe Muraille Backspace",
+        "lat": 43.6486,
+        "lon": -79.4026,
+        "venue": "Theatre Passe Muraille Backspace",
+        "city": "Toronto",
+        "production_title": "richardthesecond"
+      }
+    ],
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "richardthesecond"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Theatre Passe Muraille"
+      ],
+      "venues": [
+        "Theatre Passe Muraille Backspace"
+      ],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "David Francis",
+        "Matthew MacFadzean",
+        "Rebecca Brown"
+      ]
+    }
+  },
+  {
     "slug": "2002-11-08-the-return-of-the-king-actor-christopher-plummer-in-town-to-receive-an-honorary-2",
     "route": "/reviews/2002-11-08-the-return-of-the-king-actor-christopher-plummer-in-town-to-receive-an-honorary-2/",
     "source_file": "2002.11.08.National_Post.The_return_of_the_king_Actor_Christopher_Plummer_in_town_to_receive_an_honorary_doctorate_from_Ryerson_University_left_Toronto_for_stardom_on_the_classical_stage_and_on_the_b.md",
@@ -1413,6 +1717,7 @@
     "date": "2002-11-08",
     "year": "2002",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Profile",
     "collections": [
       "The Canadian Collection",
@@ -1471,6 +1776,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 1685,
+    "coordinate_points": [
+      {
+        "label": "Stratford Festival",
+        "lat": 43.3744,
+        "lon": -80.9686,
+        "venue": "Stratford Festival",
+        "city": "Stratford, Ontario",
+        "production_title": "Christopher Plummer Profile"
+      }
+    ],
     "display_schema": {
       "work_type": "subjects",
       "work_label": "Subject",
@@ -1511,6 +1826,7 @@
     "date": "2003-05-26",
     "year": "2003",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [
       "The Stratford Collection",
@@ -1557,6 +1873,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 1275,
+    "coordinate_points": [
+      {
+        "label": "Stratford Festival",
+        "lat": 43.37,
+        "lon": -80.9829,
+        "venue": "Stratford Festival",
+        "city": "Stratford, Ontario",
+        "production_title": "Stratford Festival Season"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -1592,6 +1918,7 @@
     "date": "2003-07-21",
     "year": "2003",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Music Review",
     "collections": [],
     "publication_status": "archive_only",
@@ -1639,12 +1966,13 @@
     "production_groups": [],
     "media": [],
     "word_count": 622,
+    "coordinate_points": [],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Recording",
       "company_label": "Label",
-      "primary_browse": "productions",
-      "secondary_browse": "musicians"
+      "primary_browse": "musicians",
+      "secondary_browse": "productions"
     },
     "browse_entities": {
       "books": [],
@@ -1672,6 +2000,7 @@
     "date": "2004-03-30",
     "year": "2004",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Concert Review",
     "collections": [],
     "publication_status": "archive_only",
@@ -1719,12 +2048,13 @@
     "production_groups": [],
     "media": [],
     "word_count": 1155,
+    "coordinate_points": [],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Concert",
       "company_label": "Presenter",
-      "primary_browse": "productions",
-      "secondary_browse": "musicians"
+      "primary_browse": "musicians",
+      "secondary_browse": "productions"
     },
     "browse_entities": {
       "books": [],
@@ -1756,6 +2086,7 @@
     "date": "2004-04-08",
     "year": "2004",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Events Listing",
     "collections": [],
     "publication_status": "archive_only",
@@ -1795,6 +2126,7 @@
     "production_groups": [],
     "media": [],
     "word_count": 1141,
+    "coordinate_points": [],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -1826,6 +2158,7 @@
     "date": "2004-07-26",
     "year": "2004",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Music Review",
     "collections": [],
     "publication_status": "archive_only",
@@ -1871,12 +2204,13 @@
     "production_groups": [],
     "media": [],
     "word_count": 1488,
+    "coordinate_points": [],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Recording",
       "company_label": "Label",
-      "primary_browse": "productions",
-      "secondary_browse": "musicians"
+      "primary_browse": "musicians",
+      "secondary_browse": "productions"
     },
     "browse_entities": {
       "books": [],
@@ -1905,6 +2239,7 @@
     "date": "2004-09-01",
     "year": "2004",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [
       "The Shaw Collection"
@@ -1969,6 +2304,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 997,
+    "coordinate_points": [
+      {
+        "label": "Royal George Theatre",
+        "lat": 43.2557,
+        "lon": -79.0732,
+        "venue": "Royal George Theatre",
+        "city": "Niagara-on-the-Lake",
+        "production_title": "Harlequinade"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -2013,6 +2358,7 @@
     "date": "2004-11-11",
     "year": "2004",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [
       "The Canadian Collection"
@@ -2073,6 +2419,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 661,
+    "coordinate_points": [
+      {
+        "label": "Tarragon Theatre",
+        "lat": 43.675,
+        "lon": -79.4129,
+        "venue": "Tarragon Theatre",
+        "city": "Toronto",
+        "production_title": "No Great Mischief"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -2115,6 +2471,7 @@
     "date": "2005-01-29",
     "year": "2005",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [
       "The Canadian Collection"
@@ -2170,6 +2527,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 71,
+    "coordinate_points": [
+      {
+        "label": "Factory Theatre",
+        "lat": 43.6455,
+        "lon": -79.4028,
+        "venue": "Factory Theatre",
+        "city": "Toronto",
+        "production_title": "Trout Stanley"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -2210,6 +2577,7 @@
     "date": "2005-02-05",
     "year": "2005",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [
       "Short Takes"
@@ -2270,6 +2638,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 94,
+    "coordinate_points": [
+      {
+        "label": "Berkeley Street Theatre Upstairs",
+        "lat": 43.6506,
+        "lon": -79.3641,
+        "venue": "Berkeley Street Theatre Upstairs",
+        "city": "Toronto",
+        "production_title": "A Whistle in the Dark"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -2312,6 +2690,7 @@
     "date": "2005-02-05",
     "year": "2005",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [
       "The Canadian Collection"
@@ -2370,6 +2749,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 93,
+    "coordinate_points": [
+      {
+        "label": "Factory Theatre",
+        "lat": 43.6455,
+        "lon": -79.4028,
+        "venue": "Factory Theatre",
+        "city": "Toronto",
+        "production_title": "Trout Stanley"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -2411,6 +2800,7 @@
     "date": "2005-02-12",
     "year": "2005",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [
       "Short Takes"
@@ -2465,6 +2855,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 82,
+    "coordinate_points": [
+      {
+        "label": "Berkeley Street Theatre Downstairs",
+        "lat": 43.6506,
+        "lon": -79.3641,
+        "venue": "Berkeley Street Theatre Downstairs",
+        "city": "Toronto",
+        "production_title": "The Glass Menagerie"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -2502,6 +2902,7 @@
     "date": "2005-03-19",
     "year": "2005",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Musical Review",
     "collections": [
       "The Canadian Collection",
@@ -2557,6 +2958,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 86,
+    "coordinate_points": [
+      {
+        "label": "Theatre Passe Muraille",
+        "lat": 43.6486,
+        "lon": -79.4026,
+        "venue": "Theatre Passe Muraille",
+        "city": "Toronto",
+        "production_title": "Dream Machine"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -2595,6 +3006,7 @@
     "date": "2005-04-02",
     "year": "2005",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Musical Review",
     "collections": [
       "The Canadian Collection",
@@ -2645,6 +3057,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 80,
+    "coordinate_points": [
+      {
+        "label": "Princess of Wales Theatre",
+        "lat": 43.647,
+        "lon": -79.3892,
+        "venue": "Princess of Wales Theatre",
+        "city": "Toronto",
+        "production_title": "'da Kink in My Hair"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -2682,6 +3104,7 @@
     "date": "2005-04-08",
     "year": "2005",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Musical Review",
     "collections": [
       "The Musical Collection"
@@ -2736,6 +3159,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 247,
+    "coordinate_points": [
+      {
+        "label": "CanStage",
+        "lat": 43.6474,
+        "lon": -79.3752,
+        "venue": "CanStage",
+        "city": "Toronto",
+        "production_title": "Ain't Misbehavin'"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -2775,6 +3208,7 @@
     "date": "2005-06-08",
     "year": "2005",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [
       "The Stratford Collection"
@@ -2842,6 +3276,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 853,
+    "coordinate_points": [
+      {
+        "label": "Avon Theatre",
+        "lat": 43.3692,
+        "lon": -80.9811,
+        "venue": "Avon Theatre",
+        "city": "Stratford, Ontario",
+        "production_title": "Cat on a Hot Tin Roof"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -2887,6 +3331,7 @@
     "date": "2005-06-09",
     "year": "2005",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [
       "The Stratford Collection"
@@ -2955,6 +3400,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 522,
+    "coordinate_points": [
+      {
+        "label": "Tom Patterson Theatre",
+        "lat": 43.3736,
+        "lon": -80.9781,
+        "venue": "Tom Patterson Theatre",
+        "city": "Stratford, Ontario",
+        "production_title": "The Brothers Karamazov"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -3001,6 +3456,7 @@
     "date": "2005-06-09",
     "year": "2005",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Musical Review",
     "collections": [
       "The Stratford Collection",
@@ -3083,6 +3539,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 1163,
+    "coordinate_points": [
+      {
+        "label": "Avon Theatre",
+        "lat": 43.3692,
+        "lon": -80.9811,
+        "venue": "Avon Theatre",
+        "city": "Stratford, Ontario",
+        "production_title": "Into the Woods"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -3134,6 +3600,7 @@
     "date": "2005-06-18",
     "year": "2005",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [
       "The Stratford Collection",
@@ -3188,6 +3655,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 79,
+    "coordinate_points": [
+      {
+        "label": "Tom Patterson Theatre",
+        "lat": 43.3736,
+        "lon": -80.9781,
+        "venue": "Tom Patterson Theatre",
+        "city": "Stratford, Ontario",
+        "production_title": "The Brothers Karamazov"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -3227,6 +3704,7 @@
     "date": "2005-06-18",
     "year": "2005",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [
       "The Stratford Collection",
@@ -3277,6 +3755,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 70,
+    "coordinate_points": [
+      {
+        "label": "Tom Patterson Theatre",
+        "lat": 43.3736,
+        "lon": -80.9781,
+        "venue": "Tom Patterson Theatre",
+        "city": "Stratford, Ontario",
+        "production_title": "Wingfield's Inferno"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -3314,6 +3802,7 @@
     "date": "2005-06-18",
     "year": "2005",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Musical Review",
     "collections": [
       "The Stratford Collection",
@@ -3370,6 +3859,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 68,
+    "coordinate_points": [
+      {
+        "label": "Avon Theatre",
+        "lat": 43.3692,
+        "lon": -80.9811,
+        "venue": "Avon Theatre",
+        "city": "Stratford, Ontario",
+        "production_title": "Into the Woods"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -3409,6 +3908,7 @@
     "date": "2005-07-02",
     "year": "2005",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [
       "Short Takes"
@@ -3457,6 +3957,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 77,
+    "coordinate_points": [
+      {
+        "label": "Panasonic Theatre",
+        "lat": 43.6654,
+        "lon": -79.3839,
+        "venue": "Panasonic Theatre",
+        "city": "Toronto",
+        "production_title": "Blue Man Group"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -3494,6 +4004,7 @@
     "date": "2005-07-02",
     "year": "2005",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [
       "The Stratford Collection",
@@ -3553,6 +4064,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 69,
+    "coordinate_points": [
+      {
+        "label": "Avon Theatre",
+        "lat": 43.3692,
+        "lon": -80.9811,
+        "venue": "Avon Theatre",
+        "city": "Stratford, Ontario",
+        "production_title": "Fallen Angels"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -3594,6 +4115,7 @@
     "date": "2005-07-02",
     "year": "2005",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Musical Review",
     "collections": [
       "The Shaw Collection",
@@ -3647,6 +4169,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 86,
+    "coordinate_points": [
+      {
+        "label": "Festival Theatre, Niagara-on-the-Lake",
+        "lat": 43.252,
+        "lon": -79.0677,
+        "venue": "Festival Theatre, Niagara-on-the-Lake",
+        "city": "Niagara-on-the-Lake",
+        "production_title": "Gypsy"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -3685,6 +4217,7 @@
     "date": "2005-07-02",
     "year": "2005",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [
       "The Stratford Collection",
@@ -3740,6 +4273,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 88,
+    "coordinate_points": [
+      {
+        "label": "Studio Theatre",
+        "lat": 43.3695,
+        "lon": -80.9801,
+        "venue": "Studio Theatre",
+        "city": "Stratford, Ontario",
+        "production_title": "The Donnellys: Sticks and Stones"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -3775,10 +4318,11 @@
     "slug": "2005-07-21-you-get-what-you-need-from-1950s-classic",
     "route": "/reviews/2005-07-21-you-get-what-you-need-from-1950s-classic/",
     "source_file": "2005.07.21.National_Post.You_Get_What_You_Need_From_1950S_Classic_Toronto_Edition.md",
-    "title": "You Get What You Need From 1950S Classic",
+    "title": "You Get What You Need From 1950s Classic",
     "date": "2005-07-21",
     "year": "2005",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [
       "The Shaw Collection"
@@ -3848,6 +4392,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 731,
+    "coordinate_points": [
+      {
+        "label": "Royal George Theatre",
+        "lat": 43.2557,
+        "lon": -79.0719,
+        "venue": "Royal George Theatre",
+        "city": "Niagara-on-the-Lake",
+        "production_title": "Bus Stop"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -3894,6 +4448,7 @@
     "date": "2005-07-23",
     "year": "2005",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [
       "The Stratford Collection",
@@ -3953,6 +4508,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 86,
+    "coordinate_points": [
+      {
+        "label": "Studio Theatre",
+        "lat": 43.3695,
+        "lon": -80.9801,
+        "venue": "Studio Theatre",
+        "city": "Stratford, Ontario",
+        "production_title": "The Measure Of Love"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -3994,6 +4559,7 @@
     "date": "2005-07-23",
     "year": "2005",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [
       "The Shakespeare Collection",
@@ -4052,6 +4618,7 @@
     "production_groups": [],
     "media": [],
     "word_count": 73,
+    "coordinate_points": [],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -4087,6 +4654,105 @@
     }
   },
   {
+    "slug": "2005-08-06-this-merchant-is-an-easy-sell-despite-shylock-s-surprising-sex-change",
+    "route": "/reviews/2005-08-06-this-merchant-is-an-easy-sell-despite-shylock-s-surprising-sex-change/",
+    "source_file": "2005.08.06.Cushman_Collected.This_Merchant_is_an_Easy_Sell_Despite_Shylock_s_Surprising_Sex_Change.md",
+    "title": "This Merchant is an Easy Sell: Despite Shylock's Surprising Sex Change",
+    "date": "2005-08-06",
+    "year": "2005",
+    "publication": "National Post",
+    "source_publication": "National Post",
+    "article_category": "Theatre Review",
+    "collections": [
+      "The Shakespeare Collection"
+    ],
+    "publication_status": "duplicate_variant",
+    "editorial_issue_type": "",
+    "canonical_file": "2005.08.06.National_Post.This_Merchant_Is_An_Easy_Sell_Despite_ShylockS_Surprising_Sex_Change_Toront.md",
+    "production_title": "The Merchant of Venice",
+    "company": "Shakespeare in the Rough",
+    "venue": "Withrow Park",
+    "city": "Toronto",
+    "coordinates": [],
+    "people": [
+      "Carly Street",
+      "Jani Lauzon",
+      "Michael Blake",
+      "Sanjay Talwar",
+      "William Shakespeare"
+    ],
+    "roles": {
+      "director": [
+        "Sanjay Talwar"
+      ],
+      "actors": [
+        "Jani Lauzon",
+        "Sanjay Talwar",
+        "Michael Blake",
+        "Carly Street"
+      ],
+      "playwright": [
+        "William Shakespeare"
+      ],
+      "composer_lyricist": [],
+      "musical_director": [],
+      "choreographer": [],
+      "orchestrator": [],
+      "arranger": [],
+      "assistant_director": [],
+      "stage_manager": [],
+      "assistant_musical_director": [],
+      "vocal_director": [],
+      "dance_captain": [],
+      "fight_director": [],
+      "dramaturg": [],
+      "producer": [],
+      "set_designer": [],
+      "costume_designer": [],
+      "lighting_designer": [],
+      "sound_designer": [],
+      "musicians": [],
+      "performers": [],
+      "artists": []
+    },
+    "production_groups": [],
+    "media": [],
+    "word_count": 615,
+    "coordinate_points": [],
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "The Merchant of Venice"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Shakespeare in the Rough"
+      ],
+      "venues": [
+        "Withrow Park"
+      ],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "Carly Street",
+        "Jani Lauzon",
+        "Michael Blake",
+        "Sanjay Talwar",
+        "William Shakespeare"
+      ]
+    }
+  },
+  {
     "slug": "2005-08-06-bus-stop",
     "route": "/reviews/2005-08-06-bus-stop/",
     "source_file": "2005.08.06.National Post.Bus_Stop.md",
@@ -4094,6 +4760,7 @@
     "date": "2005-08-06",
     "year": "2005",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [
       "The Shaw Collection",
@@ -4151,6 +4818,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 66,
+    "coordinate_points": [
+      {
+        "label": "Royal George Theatre",
+        "lat": 43.2557,
+        "lon": -79.0719,
+        "venue": "Royal George Theatre",
+        "city": "Niagara-on-the-Lake",
+        "production_title": "Bus Stop"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -4191,6 +4868,7 @@
     "date": "2005-08-06",
     "year": "2005",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [
       "Short Takes"
@@ -4249,6 +4927,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 61,
+    "coordinate_points": [
+      {
+        "label": "Harbourfront Centre",
+        "lat": 43.6385,
+        "lon": -79.3819,
+        "venue": "Harbourfront Centre",
+        "city": "Toronto",
+        "production_title": "The Wild Duck"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -4290,6 +4978,7 @@
     "date": "2005-08-06",
     "year": "2005",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [
       "Short Takes"
@@ -4346,6 +5035,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 66,
+    "coordinate_points": [
+      {
+        "label": "Premiere Dance Theatre",
+        "lat": 43.6486,
+        "lon": -79.4026,
+        "venue": "Premiere Dance Theatre",
+        "city": "Toronto",
+        "production_title": "Olympia"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -4386,6 +5085,7 @@
     "date": "2005-08-13",
     "year": "2005",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [
       "The Shaw Collection",
@@ -4436,6 +5136,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 64,
+    "coordinate_points": [
+      {
+        "label": "Court House Theatre",
+        "lat": 43.2557,
+        "lon": -79.0719,
+        "venue": "Court House Theatre",
+        "city": "Niagara-on-the-Lake",
+        "production_title": "Belle Moral"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -4473,6 +5183,7 @@
     "date": "2005-08-13",
     "year": "2005",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [
       "The Shakespeare Collection",
@@ -4528,6 +5239,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 80,
+    "coordinate_points": [
+      {
+        "label": "Withrow Park",
+        "lat": 43.6725,
+        "lon": -79.3472,
+        "venue": "Withrow Park",
+        "city": "Toronto",
+        "production_title": "The Merchant of Venice"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -4567,6 +5288,7 @@
     "date": "2005-08-24",
     "year": "2005",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [
       "The Stratford Collection"
@@ -4635,6 +5357,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 1020,
+    "coordinate_points": [
+      {
+        "label": "Studio Theatre",
+        "lat": 43.3695,
+        "lon": -80.9801,
+        "venue": "Studio Theatre",
+        "city": "Stratford, Ontario",
+        "production_title": "Edward II"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -4681,6 +5413,7 @@
     "date": "2005-08-26",
     "year": "2005",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Film Review",
     "collections": [],
     "publication_status": "publish",
@@ -4728,6 +5461,7 @@
     "production_groups": [],
     "media": [],
     "word_count": 1023,
+    "coordinate_points": [],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Film",
@@ -4761,6 +5495,7 @@
     "date": "2005-08-27",
     "year": "2005",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [
       "The Stratford Collection"
@@ -4821,6 +5556,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 68,
+    "coordinate_points": [
+      {
+        "label": "Studio Theatre",
+        "lat": 43.3695,
+        "lon": -80.9801,
+        "venue": "Studio Theatre",
+        "city": "Stratford, Ontario",
+        "production_title": "Edward II"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -4863,6 +5608,7 @@
     "date": "2005-08-27",
     "year": "2005",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [
       "The Shakespeare Collection",
@@ -4915,6 +5661,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 82,
+    "coordinate_points": [
+      {
+        "label": "Heritage Park",
+        "lat": 44.3894,
+        "lon": -79.6903,
+        "venue": "Heritage Park",
+        "city": "Barrie",
+        "production_title": "The Comedy of Errors"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -4953,6 +5709,7 @@
     "date": "2005-08-27",
     "year": "2005",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [
       "The Stratford Collection"
@@ -5013,6 +5770,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 75,
+    "coordinate_points": [
+      {
+        "label": "Festival Theatre",
+        "lat": 43.3743517,
+        "lon": -80.9685714,
+        "venue": "Festival Theatre",
+        "city": "Stratford, Ontario",
+        "production_title": "The Lark"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -5055,6 +5822,7 @@
     "date": "2005-09-03",
     "year": "2005",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [
       "Short Takes"
@@ -5113,6 +5881,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 66,
+    "coordinate_points": [
+      {
+        "label": "Harbourfront Centre",
+        "lat": 43.6385,
+        "lon": -79.3819,
+        "venue": "Harbourfront Centre",
+        "city": "Toronto",
+        "production_title": "The Wild Duck"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -5154,6 +5932,7 @@
     "date": "2005-09-10",
     "year": "2005",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [
       "The Canadian Collection",
@@ -5206,6 +5985,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 78,
+    "coordinate_points": [
+      {
+        "label": "Berkeley Street Theatre",
+        "lat": 43.6545,
+        "lon": -79.3663,
+        "venue": "Berkeley Street Theatre",
+        "city": "Toronto",
+        "production_title": "Eleanor of Aquitaine: Mother of the Pride"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -5242,6 +6031,7 @@
     "date": "2005-09-10",
     "year": "2005",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [
       "Short Takes"
@@ -5298,6 +6088,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 75,
+    "coordinate_points": [
+      {
+        "label": "Premiere Dance Theatre",
+        "lat": 43.6401,
+        "lon": -79.3856,
+        "venue": "Premiere Dance Theatre",
+        "city": "Toronto",
+        "production_title": "Olympia"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -5338,6 +6138,7 @@
     "date": "2005-09-17",
     "year": "2005",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [
       "The Stratford Collection"
@@ -5398,6 +6199,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 64,
+    "coordinate_points": [
+      {
+        "label": "Studio Theatre",
+        "lat": 43.3695,
+        "lon": -80.9801,
+        "venue": "Studio Theatre",
+        "city": "Stratford, Ontario",
+        "production_title": "Edward II"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -5440,6 +6251,7 @@
     "date": "2005-09-17",
     "year": "2005",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [
       "Short Takes"
@@ -5493,6 +6305,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 65,
+    "coordinate_points": [
+      {
+        "label": "Harbourfront Centre",
+        "lat": 43.6385,
+        "lon": -79.3819,
+        "venue": "Harbourfront Centre",
+        "city": "Toronto",
+        "production_title": "Fool For Love"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -5532,6 +6354,7 @@
     "date": "2005-09-17",
     "year": "2005",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [
       "Short Takes"
@@ -5588,6 +6411,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 64,
+    "coordinate_points": [
+      {
+        "label": "Premiere Dance Theatre",
+        "lat": 43.6401,
+        "lon": -79.3856,
+        "venue": "Premiere Dance Theatre",
+        "city": "Toronto",
+        "production_title": "Olympia"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -5628,6 +6461,7 @@
     "date": "2005-09-17",
     "year": "2005",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [
       "The Shakespeare Collection"
@@ -5686,6 +6520,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 66,
+    "coordinate_points": [
+      {
+        "label": "Premiere Dance Theatre",
+        "lat": 43.6385,
+        "lon": -79.3819,
+        "venue": "Premiere Dance Theatre",
+        "city": "Toronto",
+        "production_title": "Hamlet"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -5727,6 +6571,7 @@
     "date": "2005-09-24",
     "year": "2005",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [
       "Short Takes"
@@ -5780,6 +6625,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 73,
+    "coordinate_points": [
+      {
+        "label": "Harbourfront Centre",
+        "lat": 43.6379,
+        "lon": -79.3782,
+        "venue": "Harbourfront Centre",
+        "city": "Toronto",
+        "production_title": "Fool for Love"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -5819,6 +6674,7 @@
     "date": "2005-09-24",
     "year": "2005",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [
       "The Shakespeare Collection"
@@ -5877,6 +6733,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 74,
+    "coordinate_points": [
+      {
+        "label": "Premiere Dance Theatre",
+        "lat": 43.6385,
+        "lon": -79.3819,
+        "venue": "Premiere Dance Theatre",
+        "city": "Toronto",
+        "production_title": "Hamlet"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -5918,6 +6784,7 @@
     "date": "2005-09-24",
     "year": "2005",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [
       "The Stratford Collection"
@@ -5974,6 +6841,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 65,
+    "coordinate_points": [
+      {
+        "label": "Tom Patterson Theatre",
+        "lat": 43.3736,
+        "lon": -80.9781,
+        "venue": "Tom Patterson Theatre",
+        "city": "Stratford, Ontario",
+        "production_title": "Orpheus Descending"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -6014,6 +6891,7 @@
     "date": "2005-10-01",
     "year": "2005",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [
       "The Stratford Collection",
@@ -6078,6 +6956,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 76,
+    "coordinate_points": [
+      {
+        "label": "Festival Theatre",
+        "lat": 43.3744,
+        "lon": -80.9686,
+        "venue": "Festival Theatre",
+        "city": "Stratford, Ontario",
+        "production_title": "As You Like It"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -6121,6 +7009,7 @@
     "date": "2005-10-01",
     "year": "2005",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Musical Review",
     "collections": [
       "The Stratford Collection",
@@ -6177,6 +7066,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 74,
+    "coordinate_points": [
+      {
+        "label": "Avon Theatre",
+        "lat": 43.3692425,
+        "lon": -80.9811428,
+        "venue": "Avon Theatre",
+        "city": "Stratford, Ontario",
+        "production_title": "Into the Woods"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -6216,6 +7115,7 @@
     "date": "2005-10-07",
     "year": "2005",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Film Review",
     "collections": [],
     "publication_status": "publish",
@@ -6271,6 +7171,7 @@
     "production_groups": [],
     "media": [],
     "word_count": 1144,
+    "coordinate_points": [],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Film",
@@ -6307,6 +7208,7 @@
     "date": "2005-10-08",
     "year": "2005",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [
       "Short Takes"
@@ -6357,6 +7259,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 62,
+    "coordinate_points": [
+      {
+        "label": "Canon Theatre",
+        "lat": 43.6543,
+        "lon": -79.3791,
+        "venue": "Canon Theatre",
+        "city": "Toronto",
+        "production_title": "700 Sundays"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -6394,6 +7306,7 @@
     "date": "2005-10-15",
     "year": "2005",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [
       "The Canadian Collection",
@@ -6454,6 +7367,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 65,
+    "coordinate_points": [
+      {
+        "label": "Factory Theatre Studio",
+        "lat": 43.6455029,
+        "lon": -79.4028205,
+        "venue": "Factory Theatre Studio",
+        "city": "Toronto",
+        "production_title": "Banana Boys"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -6496,6 +7419,7 @@
     "date": "2005-10-22",
     "year": "2005",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [
       "The Canadian Collection",
@@ -6546,6 +7470,7 @@
     "production_groups": [],
     "media": [],
     "word_count": 311,
+    "coordinate_points": [],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -6582,6 +7507,7 @@
     "date": "2005-10-29",
     "year": "2005",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [
       "The Canadian Collection",
@@ -6636,6 +7562,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 71,
+    "coordinate_points": [
+      {
+        "label": "Theatre Passe Muraille Backspace",
+        "lat": 43.6486,
+        "lon": -79.4026,
+        "venue": "Theatre Passe Muraille Backspace",
+        "city": "Toronto",
+        "production_title": "Better Parts / Fish Eyes"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -6674,6 +7610,7 @@
     "date": "2005-10-29",
     "year": "2005",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Musical Review",
     "collections": [
       "The Shaw Collection",
@@ -6727,6 +7664,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 71,
+    "coordinate_points": [
+      {
+        "label": "Festival Theatre",
+        "lat": 43.252,
+        "lon": -79.0677,
+        "venue": "Festival Theatre",
+        "city": "Niagara-on-the-Lake",
+        "production_title": "Gypsy"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -6765,6 +7712,7 @@
     "date": "2005-11-05",
     "year": "2005",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [
       "The Canadian Collection",
@@ -6819,6 +7767,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 71,
+    "coordinate_points": [
+      {
+        "label": "Theatre Passe Muraille",
+        "lat": 43.6486,
+        "lon": -79.4026,
+        "venue": "Theatre Passe Muraille",
+        "city": "Toronto",
+        "production_title": "Francesca, Mathilda And Tea"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -6857,6 +7815,7 @@
     "date": "2005-11-05",
     "year": "2005",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [
       "Short Takes"
@@ -6915,6 +7874,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 73,
+    "coordinate_points": [
+      {
+        "label": "Bluma Appel Theatre",
+        "lat": 43.6474,
+        "lon": -79.3752,
+        "venue": "Bluma Appel Theatre",
+        "city": "Toronto",
+        "production_title": "Habeas Corpus"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -6956,6 +7925,7 @@
     "date": "2005-11-05",
     "year": "2005",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Musical Review",
     "collections": [
       "The Musical Collection",
@@ -7005,6 +7975,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 75,
+    "coordinate_points": [
+      {
+        "label": "Princess of Wales Theatre",
+        "lat": 43.647,
+        "lon": -79.3892,
+        "venue": "Princess of Wales Theatre",
+        "city": "Toronto",
+        "production_title": "Les Miserables"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -7042,6 +8022,7 @@
     "date": "2005-11-26",
     "year": "2005",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [
       "The Shaw Collection",
@@ -7099,6 +8080,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 72,
+    "coordinate_points": [
+      {
+        "label": "Royal George Theatre",
+        "lat": 43.2563,
+        "lon": -79.0732,
+        "venue": "Royal George Theatre",
+        "city": "Niagara-on-the-Lake",
+        "production_title": "Bus Stop"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -7139,6 +8130,7 @@
     "date": "2005-11-26",
     "year": "2005",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [
       "The Canadian Collection",
@@ -7191,6 +8183,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 67,
+    "coordinate_points": [
+      {
+        "label": "Tarragon Theatre Extra Space",
+        "lat": 43.675,
+        "lon": -79.4129,
+        "venue": "Tarragon Theatre Extra Space",
+        "city": "Toronto",
+        "production_title": "Goodness"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -7229,6 +8231,7 @@
     "date": "2005-12-03",
     "year": "2005",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Musical Review",
     "collections": [
       "Short Takes"
@@ -7279,6 +8282,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 62,
+    "coordinate_points": [
+      {
+        "label": "Bluma Appel Theatre",
+        "lat": 43.6474,
+        "lon": -79.3752,
+        "venue": "Bluma Appel Theatre",
+        "city": "Toronto",
+        "production_title": "Crowns"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -7316,6 +8329,7 @@
     "date": "2005-12-03",
     "year": "2005",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [
       "The Canadian Collection"
@@ -7374,6 +8388,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 61,
+    "coordinate_points": [
+      {
+        "label": "Tarragon Theatre",
+        "lat": 43.675,
+        "lon": -79.4129,
+        "venue": "Tarragon Theatre",
+        "city": "Toronto",
+        "production_title": "The Dishwashers"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -7415,6 +8439,7 @@
     "date": "2005-12-03",
     "year": "2005",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [
       "The Canadian Collection"
@@ -7463,6 +8488,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 64,
+    "coordinate_points": [
+      {
+        "label": "Factory Theatre",
+        "lat": 43.6455,
+        "lon": -79.4028,
+        "venue": "Factory Theatre",
+        "city": "Toronto",
+        "production_title": "Tideline"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -7500,6 +8535,7 @@
     "date": "2005-12-10",
     "year": "2005",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [
       "Short Takes"
@@ -7554,6 +8590,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 59,
+    "coordinate_points": [
+      {
+        "label": "Berkeley Street Theatre",
+        "lat": 43.6506,
+        "lon": -79.3641,
+        "venue": "Berkeley Street Theatre",
+        "city": "Toronto",
+        "production_title": "The Goat, or Who Is Sylvia?"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -7591,6 +8637,7 @@
     "date": "2005-12-17",
     "year": "2005",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [
       "The Canadian Collection"
@@ -7643,6 +8690,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 61,
+    "coordinate_points": [
+      {
+        "label": "Buddies in Bad Times Theatre",
+        "lat": 43.6632,
+        "lon": -79.383,
+        "venue": "Buddies in Bad Times Theatre",
+        "city": "Toronto",
+        "production_title": "Jimmy"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -7680,6 +8737,7 @@
     "date": "2005-12-24",
     "year": "2005",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Musical Review",
     "collections": [
       "The Musical Collection"
@@ -7733,6 +8791,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 78,
+    "coordinate_points": [
+      {
+        "label": "Canon Theatre",
+        "lat": 43.6547,
+        "lon": -79.3791,
+        "venue": "Canon Theatre",
+        "city": "Toronto",
+        "production_title": "Movin' Out"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -7769,6 +8837,7 @@
     "date": "2006-01-07",
     "year": "2006",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Musical Review",
     "collections": [
       "The Musical Collection",
@@ -7823,6 +8892,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 68,
+    "coordinate_points": [
+      {
+        "label": "Elgin Theatre",
+        "lat": 43.653,
+        "lon": -79.3793,
+        "venue": "Elgin Theatre",
+        "city": "Toronto",
+        "production_title": "Snow White And The Group Of Seven"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -7860,6 +8939,7 @@
     "date": "2006-01-14",
     "year": "2006",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [
       "The Shakespeare Collection"
@@ -7914,6 +8994,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 69,
+    "coordinate_points": [
+      {
+        "label": "Theatre Passe Muraille Backspace",
+        "lat": 43.6486,
+        "lon": -79.4026,
+        "venue": "Theatre Passe Muraille Backspace",
+        "city": "Toronto",
+        "production_title": "Hamlet Solo"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -7953,6 +9043,7 @@
     "date": "2006-01-18",
     "year": "2006",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Opinion Piece",
     "collections": [],
     "publication_status": "archive_only",
@@ -7992,6 +9083,7 @@
     "production_groups": [],
     "media": [],
     "word_count": 666,
+    "coordinate_points": [],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -8021,6 +9113,7 @@
     "date": "2006-01-21",
     "year": "2006",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [
       "The Canadian Collection"
@@ -8079,6 +9172,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 67,
+    "coordinate_points": [
+      {
+        "label": "Theatre Centre",
+        "lat": 43.6431,
+        "lon": -79.4236,
+        "venue": "Theatre Centre",
+        "city": "Toronto",
+        "production_title": "Bombay Black"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -8120,6 +9223,7 @@
     "date": "2006-01-21",
     "year": "2006",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [
       "The Canadian Collection"
@@ -8177,6 +9281,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 70,
+    "coordinate_points": [
+      {
+        "label": "Bluma Appel Theatre",
+        "lat": 43.6717129,
+        "lon": -79.3861135,
+        "venue": "Bluma Appel Theatre",
+        "city": "Toronto",
+        "production_title": "Homechild"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -8217,6 +9331,7 @@
     "date": "2006-01-21",
     "year": "2006",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [
       "Riffs on Shakespeare",
@@ -8274,6 +9389,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 69,
+    "coordinate_points": [
+      {
+        "label": "Tarragon Theatre",
+        "lat": 43.675,
+        "lon": -79.4129,
+        "venue": "Tarragon Theatre",
+        "city": "Toronto",
+        "production_title": "Humble Boy"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -8314,6 +9439,7 @@
     "date": "2006-01-27",
     "year": "2006",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Film Review",
     "collections": [
       "The Film Collection"
@@ -8368,6 +9494,7 @@
     "production_groups": [],
     "media": [],
     "word_count": 1028,
+    "coordinate_points": [],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Film",
@@ -8409,6 +9536,7 @@
     "date": "2006-01-28",
     "year": "2006",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [
       "The Canadian Collection"
@@ -8474,6 +9602,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 64,
+    "coordinate_points": [
+      {
+        "label": "Tarragon Theatre Extra Space",
+        "lat": 43.675,
+        "lon": -79.4129,
+        "venue": "Tarragon Theatre Extra Space",
+        "city": "Toronto",
+        "production_title": "Return (The Sarajevo Project)"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -8518,6 +9656,7 @@
     "date": "2006-01-28",
     "year": "2006",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Musical Review",
     "collections": [
       "The Musical Collection"
@@ -8580,6 +9719,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 52,
+    "coordinate_points": [
+      {
+        "label": "Royal Alexandra Theatre",
+        "lat": 43.6474,
+        "lon": -79.3876,
+        "venue": "Royal Alexandra Theatre",
+        "city": "Toronto",
+        "production_title": "The Boy Friend"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -8621,6 +9770,7 @@
     "date": "2006-02-04",
     "year": "2006",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [
       "Short Takes"
@@ -8677,6 +9827,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 71,
+    "coordinate_points": [
+      {
+        "label": "Berkeley Upstairs Theatre",
+        "lat": 43.6506,
+        "lon": -79.3641,
+        "venue": "Berkeley Upstairs Theatre",
+        "city": "Toronto",
+        "production_title": "A Number"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -8715,6 +9875,7 @@
     "date": "2006-02-04",
     "year": "2006",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [
       "The Canadian Collection",
@@ -8772,6 +9933,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 64,
+    "coordinate_points": [
+      {
+        "label": "Berkeley Street Theatre",
+        "lat": 43.6506,
+        "lon": -79.3641,
+        "venue": "Berkeley Street Theatre",
+        "city": "Toronto",
+        "production_title": "Letters from Lehrer"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -8808,6 +9979,7 @@
     "date": "2006-02-04",
     "year": "2006",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [
       "Riffs on Shakespeare",
@@ -8865,6 +10037,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 69,
+    "coordinate_points": [
+      {
+        "label": "Tarragon Theatre",
+        "lat": 43.675,
+        "lon": -79.4129,
+        "venue": "Tarragon Theatre",
+        "city": "Toronto",
+        "production_title": "Humble Boy"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -8905,6 +10087,7 @@
     "date": "2006-02-11",
     "year": "2006",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Musical Review",
     "collections": [
       "The Musical Collection",
@@ -8964,6 +10147,7 @@
     "production_groups": [],
     "media": [],
     "word_count": 50,
+    "coordinate_points": [],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -9003,6 +10187,7 @@
     "date": "2006-02-11",
     "year": "2006",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [
       "Short Takes"
@@ -9059,6 +10244,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 53,
+    "coordinate_points": [
+      {
+        "label": "Marilyn and Charles Baillie Theatre",
+        "lat": 43.6487,
+        "lon": -79.3774,
+        "venue": "Marilyn and Charles Baillie Theatre",
+        "city": "Toronto",
+        "production_title": "Our Town"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -9099,6 +10294,7 @@
     "date": "2006-02-11",
     "year": "2006",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [
       "Short Takes"
@@ -9153,6 +10349,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 50,
+    "coordinate_points": [
+      {
+        "label": "Marilyn and Charles Baillie Theatre",
+        "lat": 43.6503,
+        "lon": -79.3595,
+        "venue": "Marilyn and Charles Baillie Theatre",
+        "city": "Toronto",
+        "production_title": "The Government Inspector"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -9192,6 +10398,7 @@
     "date": "2006-02-11",
     "year": "2006",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [
       "Short Takes"
@@ -9246,6 +10453,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 59,
+    "coordinate_points": [
+      {
+        "label": "Berkeley Upstairs Theatre",
+        "lat": 43.6506,
+        "lon": -79.3641,
+        "venue": "Berkeley Upstairs Theatre",
+        "city": "Toronto",
+        "production_title": "A Number"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -9285,6 +10502,7 @@
     "date": "2006-02-18",
     "year": "2006",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [
       "Short Takes"
@@ -9341,6 +10559,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 61,
+    "coordinate_points": [
+      {
+        "label": "Artword Theatre",
+        "lat": 43.6441,
+        "lon": -79.4003,
+        "venue": "Artword Theatre",
+        "city": "Toronto",
+        "production_title": "The Gambler"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -9379,6 +10607,7 @@
     "date": "2006-02-24",
     "year": "2006",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Film Review",
     "collections": [
       "The Film Collection"
@@ -9437,6 +10666,7 @@
     "production_groups": [],
     "media": [],
     "word_count": 1411,
+    "coordinate_points": [],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Film",
@@ -9474,6 +10704,7 @@
     "date": "2006-02-25",
     "year": "2006",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [
       "Short Takes"
@@ -9528,6 +10759,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 70,
+    "coordinate_points": [
+      {
+        "label": "Bluma Appel Theatre",
+        "lat": 43.6717,
+        "lon": -79.3861,
+        "venue": "Bluma Appel Theatre",
+        "city": "Toronto",
+        "production_title": "I Am My Own Wife"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -9565,6 +10806,7 @@
     "date": "2006-02-25",
     "year": "2006",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [
       "The Canadian Collection"
@@ -9618,6 +10860,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 60,
+    "coordinate_points": [
+      {
+        "label": "Factory Theatre",
+        "lat": 43.6455,
+        "lon": -79.4028,
+        "venue": "Factory Theatre",
+        "city": "Toronto",
+        "production_title": "The Real McCoy"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -9656,6 +10908,7 @@
     "date": "2006-03-04",
     "year": "2006",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [
       "Short Takes"
@@ -9712,6 +10965,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 60,
+    "coordinate_points": [
+      {
+        "label": "Marilyn and Charles Baillie Theatre",
+        "lat": 43.6503,
+        "lon": -79.3595,
+        "venue": "Marilyn and Charles Baillie Theatre",
+        "city": "Toronto",
+        "production_title": "Our Town"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -9752,6 +11015,7 @@
     "date": "2006-03-04",
     "year": "2006",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [
       "Short Takes"
@@ -9806,6 +11070,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 59,
+    "coordinate_points": [
+      {
+        "label": "Marilyn and Charles Baillie Theatre",
+        "lat": 43.6503,
+        "lon": -79.3595,
+        "venue": "Marilyn and Charles Baillie Theatre",
+        "city": "Toronto",
+        "production_title": "The Government Inspector"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -9845,6 +11119,7 @@
     "date": "2006-03-04",
     "year": "2006",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [
       "The Canadian Collection"
@@ -9906,6 +11181,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 60,
+    "coordinate_points": [
+      {
+        "label": "Backspace",
+        "lat": 43.6486,
+        "lon": -79.4026,
+        "venue": "Backspace",
+        "city": "Toronto",
+        "production_title": "Three Squares A Day"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -9948,6 +11233,7 @@
     "date": "2006-03-08",
     "year": "2006",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Television Review",
     "collections": [
       "The Television Collection",
@@ -9990,12 +11276,13 @@
     "production_groups": [],
     "media": [],
     "word_count": 708,
+    "coordinate_points": [],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Show",
       "company_label": "Network",
       "primary_browse": "productions",
-      "secondary_browse": "actors"
+      "secondary_browse": "companies"
     },
     "browse_entities": {
       "books": [],
@@ -10021,6 +11308,7 @@
     "date": "2006-03-15",
     "year": "2006",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Television Review",
     "collections": [
       "The Television Collection",
@@ -10063,12 +11351,13 @@
     "production_groups": [],
     "media": [],
     "word_count": 856,
+    "coordinate_points": [],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Show",
       "company_label": "Network",
       "primary_browse": "productions",
-      "secondary_browse": "actors"
+      "secondary_browse": "companies"
     },
     "browse_entities": {
       "books": [],
@@ -10090,10 +11379,11 @@
     "slug": "2006-03-24-imaginatively-its-a-marvel-the-multilevel-stage-is-a-spectacle-in-itself",
     "route": "/reviews/2006-03-24-imaginatively-its-a-marvel-the-multilevel-stage-is-a-spectacle-in-itself/",
     "source_file": "2006.03.24.National_Post.Imaginatively_ItS_A_Marvel_The_Multilevel_Stage_Is_A_Spectacle_In_Itself_Al.md",
-    "title": "Imaginatively, ItS A Marvel: The Multilevel Stage Is A Spectacle In Itself",
+    "title": "Imaginatively, It's A Marvel: The Multilevel Stage Is A Spectacle In Itself",
     "date": "2006-03-24",
     "year": "2006",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Musical Review",
     "collections": [
       "The Musical Collection"
@@ -10156,6 +11446,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 1028,
+    "coordinate_points": [
+      {
+        "label": "Princess of Wales Theatre",
+        "lat": 43.6470405,
+        "lon": -79.3892399,
+        "venue": "Princess of Wales Theatre",
+        "city": "Toronto",
+        "production_title": "The Lord of the Rings"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -10194,10 +11494,11 @@
     "slug": "2006-03-29-its-like-melrose-place-meets-my-two-dads",
     "route": "/reviews/2006-03-29-its-like-melrose-place-meets-my-two-dads/",
     "source_file": "2006.03.29.National_Post.ItS_Like_Melrose_Place_Meets_My_Two_Dads_All_But_Toronto_Edition.md",
-    "title": "ItS Like Melrose Place Meets My Two Dads",
+    "title": "It's Like Melrose Place Meets My Two Dads",
     "date": "2006-03-29",
     "year": "2006",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Television Review",
     "collections": [
       "The Television Collection",
@@ -10247,12 +11548,13 @@
     "production_groups": [],
     "media": [],
     "word_count": 791,
+    "coordinate_points": [],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Show",
       "company_label": "Network",
       "primary_browse": "productions",
-      "secondary_browse": "actors"
+      "secondary_browse": "companies"
     },
     "browse_entities": {
       "books": [],
@@ -10277,10 +11579,11 @@
     "slug": "2006-03-29-its-like-melrose-place-meets-my-two-dads-2",
     "route": "/reviews/2006-03-29-its-like-melrose-place-meets-my-two-dads-2/",
     "source_file": "2006.03.29.National_Post.ItS_Like_Melrose_Place_Meets_My_Two_Dads_Toronto_Edition.md",
-    "title": "ItS Like Melrose Place Meets My Two Dads",
+    "title": "It's Like Melrose Place Meets My Two Dads",
     "date": "2006-03-29",
     "year": "2006",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Television Review",
     "collections": [
       "The Television Collection",
@@ -10336,12 +11639,13 @@
     "production_groups": [],
     "media": [],
     "word_count": 835,
+    "coordinate_points": [],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Show",
       "company_label": "Network",
       "primary_browse": "productions",
-      "secondary_browse": "actors"
+      "secondary_browse": "companies"
     },
     "browse_entities": {
       "books": [],
@@ -10373,6 +11677,7 @@
     "date": "2006-04-01",
     "year": "2006",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [
       "The Canadian Collection"
@@ -10436,6 +11741,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 56,
+    "coordinate_points": [
+      {
+        "label": "Cameron House",
+        "lat": 43.6486,
+        "lon": -79.3976,
+        "venue": "Cameron House",
+        "city": "Toronto",
+        "production_title": "Canadian Pacific Scandal"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -10479,6 +11794,7 @@
     "date": "2006-04-01",
     "year": "2006",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [
       "The Canadian Collection"
@@ -10532,6 +11848,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 57,
+    "coordinate_points": [
+      {
+        "label": "Buddies in Bad Times Theatre",
+        "lat": 43.6632,
+        "lon": -79.383,
+        "venue": "Buddies in Bad Times Theatre",
+        "city": "Toronto",
+        "production_title": "Clean Irene and Dirty Maxine"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -10570,6 +11896,7 @@
     "date": "2006-04-05",
     "year": "2006",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Television Review",
     "collections": [
       "The Television Collection",
@@ -10616,12 +11943,13 @@
     "production_groups": [],
     "media": [],
     "word_count": 1051,
+    "coordinate_points": [],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Show",
       "company_label": "Network",
       "primary_browse": "productions",
-      "secondary_browse": "actors"
+      "secondary_browse": "companies"
     },
     "browse_entities": {
       "books": [],
@@ -10645,10 +11973,11 @@
     "slug": "2006-04-05-this-is-canadian-hbo-youre-kidding-right",
     "route": "/reviews/2006-04-05-this-is-canadian-hbo-youre-kidding-right/",
     "source_file": "2006.04.05.National_Post.This_Is_Canadian_Hbo_YouRe_Kidding_Right_Toronto_Edition.md",
-    "title": "This Is Canadian Hbo? YouRe Kidding, Right?",
+    "title": "This Is Canadian Hbo? You're Kidding, Right?",
     "date": "2006-04-05",
     "year": "2006",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Television Review",
     "collections": [
       "The Television Collection",
@@ -10695,12 +12024,13 @@
     "production_groups": [],
     "media": [],
     "word_count": 1050,
+    "coordinate_points": [],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Show",
       "company_label": "Network",
       "primary_browse": "productions",
-      "secondary_browse": "actors"
+      "secondary_browse": "companies"
     },
     "browse_entities": {
       "books": [],
@@ -10728,6 +12058,7 @@
     "date": "2006-04-12",
     "year": "2006",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Television Review",
     "collections": [
       "The Television Collection",
@@ -10774,12 +12105,13 @@
     "production_groups": [],
     "media": [],
     "word_count": 1157,
+    "coordinate_points": [],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Show",
       "company_label": "Network",
       "primary_browse": "productions",
-      "secondary_browse": "actors"
+      "secondary_browse": "companies"
     },
     "browse_entities": {
       "books": [],
@@ -10807,6 +12139,7 @@
     "date": "2006-04-19",
     "year": "2006",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Television Review",
     "collections": [
       "The Television Collection",
@@ -10856,12 +12189,13 @@
     "production_groups": [],
     "media": [],
     "word_count": 1188,
+    "coordinate_points": [],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Show",
       "company_label": "Network",
       "primary_browse": "productions",
-      "secondary_browse": "actors"
+      "secondary_browse": "companies"
     },
     "browse_entities": {
       "books": [],
@@ -10892,6 +12226,7 @@
     "date": "2006-04-19",
     "year": "2006",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Television Review",
     "collections": [
       "The Television Collection",
@@ -10941,12 +12276,13 @@
     "production_groups": [],
     "media": [],
     "word_count": 1222,
+    "coordinate_points": [],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Show",
       "company_label": "Network",
       "primary_browse": "productions",
-      "secondary_browse": "actors"
+      "secondary_browse": "companies"
     },
     "browse_entities": {
       "books": [],
@@ -10975,6 +12311,7 @@
     "date": "2006-04-22",
     "year": "2006",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Musical Review",
     "collections": [
       "The Musical Collection",
@@ -11039,6 +12376,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 68,
+    "coordinate_points": [
+      {
+        "label": "Bluma Appel Theatre",
+        "lat": 43.6474,
+        "lon": -79.3752,
+        "venue": "Bluma Appel Theatre",
+        "city": "Toronto",
+        "production_title": "Hair"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -11082,6 +12429,7 @@
     "date": "2006-04-29",
     "year": "2006",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [
       "The Canadian Collection",
@@ -11135,6 +12483,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 56,
+    "coordinate_points": [
+      {
+        "label": "Berkeley Street Theatre",
+        "lat": 43.6506,
+        "lon": -79.3641,
+        "venue": "Berkeley Street Theatre",
+        "city": "Toronto",
+        "production_title": "10 Days on Earth"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -11172,6 +12530,7 @@
     "date": "2006-04-29",
     "year": "2006",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [
       "Short Takes"
@@ -11228,6 +12587,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 62,
+    "coordinate_points": [
+      {
+        "label": "Young Centre for the Performing Arts",
+        "lat": 43.6503,
+        "lon": -79.3595,
+        "venue": "Young Centre for the Performing Arts",
+        "city": "Toronto",
+        "production_title": "American Buffalo"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -11268,6 +12637,7 @@
     "date": "2006-05-06",
     "year": "2006",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Musical Review",
     "collections": [
       "The Musical Collection",
@@ -11337,6 +12707,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 59,
+    "coordinate_points": [
+      {
+        "label": "Diesel Playhouse",
+        "lat": 43.6448,
+        "lon": -79.3876,
+        "venue": "Diesel Playhouse",
+        "city": "Toronto",
+        "production_title": "Boygroove"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -11381,6 +12761,7 @@
     "date": "2006-05-06",
     "year": "2006",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [
       "The Canadian Collection",
@@ -11438,6 +12819,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 66,
+    "coordinate_points": [
+      {
+        "label": "Tarragon Theatre",
+        "lat": 43.6749863,
+        "lon": -79.4129407,
+        "venue": "Tarragon Theatre",
+        "city": "Toronto",
+        "production_title": "Care"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -11477,6 +12868,7 @@
     "date": "2006-05-06",
     "year": "2006",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [
       "The Canadian Collection",
@@ -11534,6 +12926,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 73,
+    "coordinate_points": [
+      {
+        "label": "Factory Theatre",
+        "lat": 43.6455,
+        "lon": -79.4028,
+        "venue": "Factory Theatre",
+        "city": "Toronto",
+        "production_title": "Escape From Happiness"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -11574,6 +12976,7 @@
     "date": "2006-05-06",
     "year": "2006",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [
       "Short Takes"
@@ -11622,6 +13025,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 55,
+    "coordinate_points": [
+      {
+        "label": "Mysteriously Yours",
+        "lat": 43.7014,
+        "lon": -79.3973,
+        "venue": "Mysteriously Yours",
+        "city": "Toronto",
+        "production_title": "Last Will and Videotape"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -11659,6 +13072,7 @@
     "date": "2006-05-06",
     "year": "2006",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [
       "The Canadian Collection",
@@ -11720,6 +13134,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 60,
+    "coordinate_points": [
+      {
+        "label": "Theatre Passe Muraille",
+        "lat": 43.6486,
+        "lon": -79.4026,
+        "venue": "Theatre Passe Muraille",
+        "city": "Toronto",
+        "production_title": "Sparta"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -11762,6 +13186,7 @@
     "date": "2006-05-06",
     "year": "2006",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Musical Review",
     "collections": [
       "The Musical Collection",
@@ -11821,6 +13246,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 47,
+    "coordinate_points": [
+      {
+        "label": "Princess of Wales Theatre",
+        "lat": 43.6470405,
+        "lon": -79.3892399,
+        "venue": "Princess of Wales Theatre",
+        "city": "Toronto",
+        "production_title": "The Lord of the Rings"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -11862,6 +13297,7 @@
     "date": "2006-05-09",
     "year": "2006",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Musical Review",
     "collections": [
       "The Shaw Collection",
@@ -11933,6 +13369,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 999,
+    "coordinate_points": [
+      {
+        "label": "Festival Theatre",
+        "lat": 43.252,
+        "lon": -79.0677,
+        "venue": "Festival Theatre",
+        "city": "Niagara-on-the-Lake",
+        "production_title": "High Society"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -11979,6 +13425,7 @@
     "date": "2006-05-13",
     "year": "2006",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Musical Review",
     "collections": [
       "The Musical Collection"
@@ -12051,6 +13498,7 @@
     "production_groups": [],
     "media": [],
     "word_count": 1488,
+    "coordinate_points": [],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -12111,6 +13559,7 @@
     "date": "2006-05-20",
     "year": "2006",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [
       "The Canadian Collection"
@@ -12163,6 +13612,7 @@
     "production_groups": [],
     "media": [],
     "word_count": 1699,
+    "coordinate_points": [],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -12211,6 +13661,7 @@
     "date": "2006-05-26",
     "year": "2006",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Film Review",
     "collections": [
       "The Film Collection"
@@ -12263,6 +13714,7 @@
     "production_groups": [],
     "media": [],
     "word_count": 997,
+    "coordinate_points": [],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Film",
@@ -12297,6 +13749,7 @@
     "date": "2006-05-27",
     "year": "2006",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [],
     "publication_status": "archive_only",
@@ -12366,6 +13819,7 @@
     "production_groups": [],
     "media": [],
     "word_count": 1613,
+    "coordinate_points": [],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -12425,6 +13879,7 @@
     "date": "2006-06-03",
     "year": "2006",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Musical Review",
     "collections": [
       "The Canadian Collection"
@@ -12494,6 +13949,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 1567,
+    "coordinate_points": [
+      {
+        "label": "Mysteriously Yours Dinner Theatre",
+        "lat": 43.7014,
+        "lon": -79.3973,
+        "venue": "Mysteriously Yours Dinner Theatre",
+        "city": "Toronto",
+        "production_title": "Dead Air!"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -12538,6 +14003,7 @@
     "date": "2006-06-24",
     "year": "",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Opinion Piece",
     "collections": [
       "The Canadian Collection"
@@ -12579,6 +14045,7 @@
     "production_groups": [],
     "media": [],
     "word_count": 2188,
+    "coordinate_points": [],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -12606,6 +14073,7 @@
     "date": "2006-06-29",
     "year": "2006",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [
       "The Shaw Collection"
@@ -12668,6 +14136,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 733,
+    "coordinate_points": [
+      {
+        "label": "Festival Theatre",
+        "lat": 43.252,
+        "lon": -79.0677,
+        "venue": "Festival Theatre",
+        "city": "Niagara-on-the-Lake",
+        "production_title": "The Crucible"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -12711,6 +14189,7 @@
     "date": "2006-06-29",
     "year": "2006",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [
       "The Shaw Collection"
@@ -12784,6 +14263,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 942,
+    "coordinate_points": [
+      {
+        "label": "Festival Theatre",
+        "lat": 43.252,
+        "lon": -79.0677,
+        "venue": "Festival Theatre",
+        "city": "Niagara-on-the-Lake",
+        "production_title": "The Crucible"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -12832,6 +14321,7 @@
     "date": "2006-07-01",
     "year": "2006",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [
       "The Shakespeare Collection"
@@ -12910,6 +14400,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 1733,
+    "coordinate_points": [
+      {
+        "label": "Coronation Park",
+        "lat": 44.0501,
+        "lon": -79.4594,
+        "venue": "Coronation Park",
+        "city": "Newmarket",
+        "production_title": "A Midsummer Night's Dream"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -12961,6 +14461,7 @@
     "date": "2006-07-19",
     "year": "2006",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [
       "The Stratford Collection"
@@ -13018,6 +14519,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 845,
+    "coordinate_points": [
+      {
+        "label": "Studio Theatre",
+        "lat": 43.3695,
+        "lon": -80.9801,
+        "venue": "Studio Theatre",
+        "city": "Stratford, Ontario",
+        "production_title": "The Blonde, the Brunette and the Vengeful Redhead"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -13058,6 +14569,7 @@
     "date": "2006-07-22",
     "year": "2006",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [
       "Short Takes"
@@ -13120,6 +14632,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 195,
+    "coordinate_points": [
+      {
+        "label": "Young Centre for the Performing Arts",
+        "lat": 43.6503,
+        "lon": -79.3595,
+        "venue": "Young Centre for the Performing Arts",
+        "city": "Toronto",
+        "production_title": "The Chairs"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -13159,10 +14681,11 @@
     "slug": "2006-08-12-a-doomed-love-story-whats-better-six-plays-to-see-at-summerworks",
     "route": "/reviews/2006-08-12-a-doomed-love-story-whats-better-six-plays-to-see-at-summerworks/",
     "source_file": "2006.08.12.National_Post.A_Doomed_Love_Story_WhatS_Better_Six_Plays_To_See_At_Summerworks_Toronto_Ed.md",
-    "title": "A Doomed Love Story, WhatS Better: Six Plays To See At Summerworks",
+    "title": "A Doomed Love Story, What's Better: Six Plays To See At Summerworks",
     "date": "2006-08-12",
     "year": "2006",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [
       "The Canadian Collection"
@@ -13229,6 +14752,7 @@
     "production_groups": [],
     "media": [],
     "word_count": 1189,
+    "coordinate_points": [],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -13280,6 +14804,7 @@
     "date": "2006-08-19",
     "year": "2006",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [
       "Short Takes"
@@ -13390,6 +14915,7 @@
     "production_groups": [],
     "media": [],
     "word_count": 920,
+    "coordinate_points": [],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -13454,6 +14980,7 @@
     "date": "2006-09-15",
     "year": "2006",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Film Review",
     "collections": [],
     "publication_status": "archive_only",
@@ -13503,6 +15030,7 @@
     "production_groups": [],
     "media": [],
     "word_count": 1097,
+    "coordinate_points": [],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Film",
@@ -13537,6 +15065,7 @@
     "date": "2006-09-16",
     "year": "2006",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [
       "The Canadian Collection"
@@ -13600,6 +15129,7 @@
     "production_groups": [],
     "media": [],
     "word_count": 1835,
+    "coordinate_points": [],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -13644,6 +15174,7 @@
     "date": "2006-09-30",
     "year": "2006",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [
       "The Shakespeare Collection",
@@ -13699,6 +15230,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 85,
+    "coordinate_points": [
+      {
+        "label": "Young Centre for the Performing Arts",
+        "lat": 43.6503,
+        "lon": -79.3595,
+        "venue": "Young Centre for the Performing Arts",
+        "city": "Toronto",
+        "production_title": "King Lear"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -13738,6 +15279,7 @@
     "date": "2006-09-30",
     "year": "2006",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Musical Review",
     "collections": [
       "The Musical Collection",
@@ -13783,6 +15325,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 72,
+    "coordinate_points": [
+      {
+        "label": "Capitol Event Theatre",
+        "lat": 43.7076,
+        "lon": -79.3987,
+        "venue": "Capitol Event Theatre",
+        "city": "Toronto",
+        "production_title": "Menopause Out Loud"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -13816,6 +15368,7 @@
     "date": "2006-09-30",
     "year": "2006",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [
       "The Stratford Collection",
@@ -13876,6 +15429,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 85,
+    "coordinate_points": [
+      {
+        "label": "Festival Theatre",
+        "lat": 43.3744,
+        "lon": -80.9686,
+        "venue": "Festival Theatre",
+        "city": "Stratford, Ontario",
+        "production_title": "Much Ado About Nothing"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -13917,6 +15480,7 @@
     "date": "2006-09-30",
     "year": "2006",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [
       "The Shaw Collection",
@@ -13976,6 +15540,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 77,
+    "coordinate_points": [
+      {
+        "label": "Court House Theatre",
+        "lat": 43.2557,
+        "lon": -79.0719,
+        "venue": "Court House Theatre",
+        "city": "Niagara-on-the-Lake",
+        "production_title": "Rosmersholm"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -14017,6 +15591,7 @@
     "date": "2006-09-30",
     "year": "2006",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [
       "The Shaw Collection",
@@ -14076,6 +15651,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 74,
+    "coordinate_points": [
+      {
+        "label": "Festival Theatre",
+        "lat": 43.252,
+        "lon": -79.0677,
+        "venue": "Festival Theatre",
+        "city": "Niagara-on-the-Lake",
+        "production_title": "The Crucible"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -14117,6 +15702,7 @@
     "date": "2006-09-30",
     "year": "2006",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [
       "The Shaw Collection",
@@ -14173,6 +15759,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 90,
+    "coordinate_points": [
+      {
+        "label": "Court House Theatre",
+        "lat": 43.2557,
+        "lon": -79.0719,
+        "venue": "Court House Theatre",
+        "city": "Niagara-on-the-Lake",
+        "production_title": "The Magic Fire"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -14213,6 +15809,7 @@
     "date": "2006-09-30",
     "year": "2006",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [
       "The Stratford Collection",
@@ -14279,6 +15876,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 115,
+    "coordinate_points": [
+      {
+        "label": "Festival Theatre",
+        "lat": 43.3744,
+        "lon": -80.9686,
+        "venue": "Festival Theatre",
+        "city": "Stratford, Ontario",
+        "production_title": "Twelfth Night"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -14323,6 +15930,7 @@
     "date": "2006-10-07",
     "year": "2006",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [
       "Short Takes"
@@ -14427,6 +16035,7 @@
     "production_groups": [],
     "media": [],
     "word_count": 834,
+    "coordinate_points": [],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -14487,6 +16096,7 @@
     "date": "2006-10-14",
     "year": "2006",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Preview",
     "collections": [],
     "publication_status": "archive_only",
@@ -14526,6 +16136,7 @@
     "production_groups": [],
     "media": [],
     "word_count": 2117,
+    "coordinate_points": [],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -14567,6 +16178,7 @@
     "date": "2006-10-19",
     "year": "2006",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Concert Review",
     "collections": [],
     "publication_status": "publish",
@@ -14615,12 +16227,22 @@
     "production_groups": [],
     "media": [],
     "word_count": 824,
+    "coordinate_points": [
+      {
+        "label": "Air Canada Centre",
+        "lat": 43.643466,
+        "lon": -79.379064,
+        "venue": "Air Canada Centre",
+        "city": "Toronto",
+        "production_title": "Barbra Streisand"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Concert",
       "company_label": "Presenter",
-      "primary_browse": "productions",
-      "secondary_browse": "musicians"
+      "primary_browse": "musicians",
+      "secondary_browse": "productions"
     },
     "browse_entities": {
       "books": [],
@@ -14651,6 +16273,7 @@
     "date": "2006-10-28",
     "year": "2006",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [
       "The Canadian Collection"
@@ -14715,6 +16338,7 @@
     "production_groups": [],
     "media": [],
     "word_count": 2223,
+    "coordinate_points": [],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -14765,6 +16389,7 @@
     "date": "2006-11-04",
     "year": "2006",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [
       "The Shaw Collection",
@@ -14826,6 +16451,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 595,
+    "coordinate_points": [
+      {
+        "label": "Royal George Theatre",
+        "lat": 43.2563,
+        "lon": -79.0732,
+        "venue": "Royal George Theatre",
+        "city": "Niagara-on-the-Lake",
+        "production_title": "Design For Living"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -14868,6 +16503,7 @@
     "date": "2006-11-11",
     "year": "2006",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Musical Review",
     "collections": [
       "The Musical Collection",
@@ -14913,6 +16549,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 762,
+    "coordinate_points": [
+      {
+        "label": "Canon Theatre",
+        "lat": 43.653,
+        "lon": -79.3793,
+        "venue": "Canon Theatre",
+        "city": "Toronto",
+        "production_title": "Wicked"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -14948,6 +16594,7 @@
     "date": "2006-11-24",
     "year": "2006",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [],
     "publication_status": "archive_only",
@@ -15000,6 +16647,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 503,
+    "coordinate_points": [
+      {
+        "label": "Broadhurst Theatre",
+        "lat": 40.758,
+        "lon": -73.9865,
+        "venue": "Broadhurst Theatre",
+        "city": "New York",
+        "production_title": "The History Boys"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -15039,6 +16696,7 @@
     "date": "2006-11-24",
     "year": "2006",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Film Review",
     "collections": [],
     "publication_status": "archive_only",
@@ -15090,6 +16748,7 @@
     "production_groups": [],
     "media": [],
     "word_count": 1184,
+    "coordinate_points": [],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Film",
@@ -15125,6 +16784,7 @@
     "date": "2006-11-25",
     "year": "2006",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Musical Review",
     "collections": [
       "The Musical Collection"
@@ -15194,6 +16854,7 @@
     "production_groups": [],
     "media": [],
     "word_count": 2136,
+    "coordinate_points": [],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -15247,6 +16908,7 @@
     "date": "2006-12-16",
     "year": "2006",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Events Listing",
     "collections": [
       "Short Takes"
@@ -15288,6 +16950,7 @@
     "production_groups": [],
     "media": [],
     "word_count": 934,
+    "coordinate_points": [],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -15321,6 +16984,7 @@
     "date": "2006-12-23",
     "year": "2006",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Events Listing",
     "collections": [
       "Short Takes"
@@ -15397,6 +17061,7 @@
     "production_groups": [],
     "media": [],
     "word_count": 706,
+    "coordinate_points": [],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -15443,6 +17108,7 @@
     "date": "2006-12-30",
     "year": "2006",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Year in Review",
     "collections": [
       "The Canadian Collection"
@@ -15574,6 +17240,7 @@
     "production_groups": [],
     "media": [],
     "word_count": 2120,
+    "coordinate_points": [],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -15644,6 +17311,7 @@
     "date": "2007-04-14",
     "year": "2007",
     "publication": "The Ottawa Citizen",
+    "source_publication": "The Ottawa Citizen",
     "article_category": "Musical Review",
     "collections": [
       "The Musical Collection"
@@ -15714,6 +17382,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 969,
+    "coordinate_points": [
+      {
+        "label": "Canon Theatre",
+        "lat": 43.6543,
+        "lon": -79.3791,
+        "venue": "Canon Theatre",
+        "city": "Toronto",
+        "production_title": "We Will Rock You"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -15755,10 +17433,11 @@
     "slug": "2007-05-04-a-chorus-of-kudos-playwright-robert-lepage-is-feted-by-europes-thespians",
     "route": "/reviews/2007-05-04-a-chorus-of-kudos-playwright-robert-lepage-is-feted-by-europes-thespians/",
     "source_file": "2007.05.04.National_Post.A_Chorus_Of_Kudos_Playwright_Robert_Lepage_Is_Feted_By_EuropeS_Thespians_Na.md",
-    "title": "A Chorus Of Kudos; Playwright Robert Lepage Is Feted By EuropeS Thespians",
+    "title": "A Chorus Of Kudos; Playwright Robert Lepage Is Feted By Europe's Thespians",
     "date": "2007-05-04",
     "year": "2007",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Opinion Piece",
     "collections": [
       "The Canadian Collection"
@@ -15800,6 +17479,7 @@
     "production_groups": [],
     "media": [],
     "word_count": 769,
+    "coordinate_points": [],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -15827,6 +17507,7 @@
     "date": "2007-05-31",
     "year": "2007",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Musical Review",
     "collections": [
       "The Stratford Collection",
@@ -15904,6 +17585,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 969,
+    "coordinate_points": [
+      {
+        "label": "Festival Theatre",
+        "lat": 43.3744,
+        "lon": -80.9686,
+        "venue": "Festival Theatre",
+        "city": "Stratford, Ontario",
+        "production_title": "Oklahoma!"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -15952,6 +17643,7 @@
     "date": "2007-06-09",
     "year": "2007",
     "publication": "The Ottawa Citizen",
+    "source_publication": "The Ottawa Citizen",
     "article_category": "Television Review",
     "collections": [
       "The Television Collection"
@@ -15993,12 +17685,13 @@
     "production_groups": [],
     "media": [],
     "word_count": 948,
+    "coordinate_points": [],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Show",
       "company_label": "Network",
       "primary_browse": "productions",
-      "secondary_browse": "actors"
+      "secondary_browse": "companies"
     },
     "browse_entities": {
       "books": [],
@@ -16020,10 +17713,11 @@
     "slug": "2007-06-12-with-a-bada-whimper-sopranos-finale-couldnt-meet-its-own-expectations",
     "route": "/reviews/2007-06-12-with-a-bada-whimper-sopranos-finale-couldnt-meet-its-own-expectations/",
     "source_file": "2007.06.12.National_Post.With_A_Bada_Whimper_Sopranos_Finale_CouldnT_Meet_Its_Own_Expectations_Natio.md",
-    "title": "With A Bada Whimper; Sopranos Finale CouldnT Meet Its Own Expectations",
+    "title": "With A Bada Whimper; Sopranos Finale Couldn't Meet Its Own Expectations",
     "date": "2007-06-12",
     "year": "2007",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Television Review",
     "collections": [
       "The Television Collection"
@@ -16065,12 +17759,13 @@
     "production_groups": [],
     "media": [],
     "word_count": 1296,
+    "coordinate_points": [],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Show",
       "company_label": "Network",
       "primary_browse": "productions",
-      "secondary_browse": "actors"
+      "secondary_browse": "companies"
     },
     "browse_entities": {
       "books": [],
@@ -16089,6 +17784,267 @@
     }
   },
   {
+    "slug": "2007-06-13-much-sharper-than-a-serpent-s-tooth",
+    "route": "/reviews/2007-06-13-much-sharper-than-a-serpent-s-tooth/",
+    "source_file": "2007.06.13.Cushman_Collected.Much_Sharper_Than_a_Serpent_s_Tooth.md",
+    "title": "Much Sharper Than a Serpent's Tooth",
+    "date": "2007-06-13",
+    "year": "2007",
+    "publication": "National Post",
+    "source_publication": "National Post",
+    "article_category": "Theatre Review",
+    "collections": [
+      "The Shakespeare Collection",
+      "The Stratford Collection"
+    ],
+    "publication_status": "duplicate_variant",
+    "editorial_issue_type": "",
+    "canonical_file": "2007.06.13.National_Post.Much_Sharper_Than_A_SerpentS_Tooth_National_Edition.md",
+    "production_title": "The Merchant of Venice",
+    "company": "Stratford Festival",
+    "venue": "Festival Theatre",
+    "city": "Stratford, Ontario",
+    "coordinates": [
+      "43.3744",
+      "-80.9686"
+    ],
+    "people": [
+      "Bernard Hopkins",
+      "Bruce Dow",
+      "Gareth Potter",
+      "Graham Greene",
+      "Jamie Robinson",
+      "Jean-Michel LeGal",
+      "Raquel Duffy",
+      "Richard Rose",
+      "Ron Kennell",
+      "Sara Topham",
+      "Scott Wentworth",
+      "Sean Arbuckle",
+      "Severn Thompson",
+      "Tim MacDonald",
+      "William Shakespeare"
+    ],
+    "roles": {
+      "director": [
+        "Richard Rose"
+      ],
+      "actors": [
+        "Bruce Dow",
+        "Scott Wentworth",
+        "Ron Kennell",
+        "Bernard Hopkins",
+        "Gareth Potter",
+        "Jean-Michel LeGal",
+        "Jamie Robinson",
+        "Tim MacDonald",
+        "Graham Greene",
+        "Severn Thompson",
+        "Sean Arbuckle",
+        "Raquel Duffy",
+        "Sara Topham"
+      ],
+      "playwright": [
+        "William Shakespeare"
+      ],
+      "composer_lyricist": [],
+      "musical_director": [],
+      "choreographer": [],
+      "orchestrator": [],
+      "arranger": [],
+      "assistant_director": [],
+      "stage_manager": [],
+      "assistant_musical_director": [],
+      "vocal_director": [],
+      "dance_captain": [],
+      "fight_director": [],
+      "dramaturg": [],
+      "producer": [],
+      "set_designer": [],
+      "costume_designer": [],
+      "lighting_designer": [],
+      "sound_designer": [],
+      "musicians": [],
+      "performers": [],
+      "artists": []
+    },
+    "production_groups": [],
+    "media": [],
+    "word_count": 805,
+    "coordinate_points": [
+      {
+        "label": "Festival Theatre",
+        "lat": 43.3744,
+        "lon": -80.9686,
+        "venue": "Festival Theatre",
+        "city": "Stratford, Ontario",
+        "production_title": "The Merchant of Venice"
+      }
+    ],
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "The Merchant of Venice"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Stratford Festival"
+      ],
+      "venues": [
+        "Festival Theatre"
+      ],
+      "cities": [
+        "Stratford, Ontario"
+      ],
+      "people": [
+        "Bernard Hopkins",
+        "Bruce Dow",
+        "Gareth Potter",
+        "Graham Greene",
+        "Jamie Robinson",
+        "Jean-Michel LeGal",
+        "Raquel Duffy",
+        "Richard Rose",
+        "Ron Kennell",
+        "Sara Topham",
+        "Scott Wentworth",
+        "Sean Arbuckle",
+        "Severn Thompson",
+        "Tim MacDonald",
+        "William Shakespeare"
+      ]
+    }
+  },
+  {
+    "slug": "2007-07-21-a-hip-hop-catfight-in-high-park-the-lone-open-air-dose-of-shakespeare-is-a",
+    "route": "/reviews/2007-07-21-a-hip-hop-catfight-in-high-park-the-lone-open-air-dose-of-shakespeare-is-a/",
+    "source_file": "2007.07.21.Cushman_Collected.A_Hip_Hop_Catfight_in_High_Park_The_Lone_Open_Air_Dose_of_Shakespeare_is_a_Slapdash_Midsummer_Night_s_Dream.md",
+    "title": "A Hip-Hop Catfight in High Park; The Lone Open-Air Dose of Shakespeare is a",
+    "date": "2007-07-21",
+    "year": "2007",
+    "publication": "National Post",
+    "source_publication": "National Post",
+    "article_category": "Theatre Review",
+    "collections": [
+      "The Shakespeare Collection"
+    ],
+    "publication_status": "duplicate_variant",
+    "editorial_issue_type": "",
+    "canonical_file": "2007.07.21.National Post.A_Midsummer_Nights_Dream.md",
+    "production_title": "A Midsummer Night's Dream",
+    "company": "Canadian Stage; Shakespeare in High Park",
+    "venue": "High Park Amphitheatre",
+    "city": "Toronto",
+    "coordinates": [],
+    "people": [
+      "Antonio Cayonne",
+      "Colin Heath",
+      "Holly Lewis",
+      "Karen Robinson",
+      "Kevin Hanchard",
+      "Maev Beaty",
+      "Matthew Kabwe",
+      "Richard Harte",
+      "Sarah Dodd",
+      "Steven Gallagher",
+      "William Shakespeare",
+      "ahdri zhina mandela"
+    ],
+    "roles": {
+      "director": [
+        "ahdri zhina mandela"
+      ],
+      "actors": [
+        "Maev Beaty",
+        "Holly Lewis",
+        "Richard Harte",
+        "Antonio Cayonne",
+        "Kevin Hanchard",
+        "Karen Robinson",
+        "Steven Gallagher",
+        "Matthew Kabwe",
+        "Sarah Dodd",
+        "Colin Heath"
+      ],
+      "playwright": [
+        "William Shakespeare"
+      ],
+      "composer_lyricist": [],
+      "musical_director": [],
+      "choreographer": [],
+      "orchestrator": [],
+      "arranger": [],
+      "assistant_director": [],
+      "stage_manager": [],
+      "assistant_musical_director": [],
+      "vocal_director": [],
+      "dance_captain": [],
+      "fight_director": [],
+      "dramaturg": [],
+      "producer": [],
+      "set_designer": [],
+      "costume_designer": [],
+      "lighting_designer": [],
+      "sound_designer": [],
+      "musicians": [],
+      "performers": [],
+      "artists": []
+    },
+    "production_groups": [],
+    "media": [],
+    "word_count": 978,
+    "coordinate_points": [],
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "A Midsummer Night's Dream"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Canadian Stage",
+        "Shakespeare in High Park"
+      ],
+      "venues": [
+        "High Park Amphitheatre"
+      ],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "Antonio Cayonne",
+        "Colin Heath",
+        "Holly Lewis",
+        "Karen Robinson",
+        "Kevin Hanchard",
+        "Maev Beaty",
+        "Matthew Kabwe",
+        "Richard Harte",
+        "Sarah Dodd",
+        "Steven Gallagher",
+        "William Shakespeare",
+        "ahdri zhina mandela"
+      ]
+    }
+  },
+  {
     "slug": "2007-07-23-genesis-of-blanche-dubois-summer-and-smoke-2",
     "route": "/reviews/2007-07-23-genesis-of-blanche-dubois-summer-and-smoke-2/",
     "source_file": "2007.07.23.National_Post.Genesis_Of_Blanche_Dubois_Summer_And_Smoke_All_But_Toronto_Edition.md",
@@ -16096,6 +18052,7 @@
     "date": "2007-07-23",
     "year": "2007",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [
       "The Shaw Collection"
@@ -16156,6 +18113,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 781,
+    "coordinate_points": [
+      {
+        "label": "Royal George Theatre",
+        "lat": 43.2557,
+        "lon": -79.0711,
+        "venue": "Royal George Theatre",
+        "city": "Niagara-on-the-Lake",
+        "production_title": "Summer and Smoke"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -16191,6 +18158,96 @@
     }
   },
   {
+    "slug": "2007-09-01-things-dreamt-of-in-his-philosophy-a-british-scholar-and-critic-traces-shakespeare-s",
+    "route": "/reviews/2007-09-01-things-dreamt-of-in-his-philosophy-a-british-scholar-and-critic-traces-shakespeare-s/",
+    "source_file": "2007.09.01.Cushman_Collected.Things_Dreamt_Of_in_His_Philosophy_A_British_Scholar_and_Critic_Traces_Shakespeare_s_Ideas_From_Play_to_Play.md",
+    "title": "Things Dreamt Of in His Philosophy; A British Scholar and Critic Traces Shakespeare's",
+    "date": "2007-09-01",
+    "year": "2007",
+    "publication": "National Post",
+    "source_publication": "National Post",
+    "article_category": "Book Review",
+    "collections": [
+      "The Shakespeare Collection",
+      "Thoughts on Shakespeare"
+    ],
+    "publication_status": "duplicate_variant",
+    "editorial_issue_type": "",
+    "canonical_file": "2007.09.01.National_Post.Things_Dreamtof_In_His_Philosophy_A_British_Scholar_And_Critic_Traces_Shake.md",
+    "production_title": "Shakespeare the Thinker",
+    "company": "",
+    "venue": "",
+    "city": "",
+    "coordinates": [],
+    "people": [
+      "A. D. Nuttall",
+      "William Shakespeare"
+    ],
+    "roles": {
+      "director": [],
+      "actors": [],
+      "playwright": [],
+      "composer_lyricist": [],
+      "musical_director": [],
+      "choreographer": [],
+      "orchestrator": [],
+      "arranger": [],
+      "assistant_director": [],
+      "stage_manager": [],
+      "assistant_musical_director": [],
+      "vocal_director": [],
+      "dance_captain": [],
+      "fight_director": [],
+      "dramaturg": [],
+      "producer": [],
+      "set_designer": [],
+      "costume_designer": [],
+      "lighting_designer": [],
+      "sound_designer": [],
+      "musicians": [],
+      "performers": [],
+      "artists": []
+    },
+    "production_groups": [],
+    "media": [],
+    "word_count": 1016,
+    "book_author": "A. D. Nuttall",
+    "publisher": "Yale University Press",
+    "subject_people": "William Shakespeare",
+    "coordinate_points": [],
+    "display_schema": {
+      "work_type": "books",
+      "work_label": "Book",
+      "company_label": "Publisher",
+      "primary_browse": "books",
+      "secondary_browse": "book-authors"
+    },
+    "browse_entities": {
+      "books": [
+        "Shakespeare the Thinker"
+      ],
+      "productions": [
+        "Shakespeare the Thinker"
+      ],
+      "subjects": [
+        "William Shakespeare"
+      ],
+      "book_authors": [
+        "A. D. Nuttall"
+      ],
+      "publishers": [
+        "Yale University Press"
+      ],
+      "companies": [],
+      "venues": [],
+      "cities": [],
+      "people": [
+        "A. D. Nuttall",
+        "William Shakespeare"
+      ]
+    }
+  },
+  {
     "slug": "2007-12-05-it-don-t-mean-a-thing-if-it-ain-t-got-that-bing",
     "route": "/reviews/2007-12-05-it-don-t-mean-a-thing-if-it-ain-t-got-that-bing/",
     "source_file": "2007.12.05.National_Post.It_Dont_Mean_A_Thing_If_It_Aint_Got_That_Bing_National_Edition.md",
@@ -16198,6 +18255,7 @@
     "date": "2007-12-05",
     "year": "2007",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Musical Review",
     "collections": [
       "The Musical Collection"
@@ -16266,6 +18324,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 867,
+    "coordinate_points": [
+      {
+        "label": "Sony Centre for the Performing Arts",
+        "lat": 43.6456,
+        "lon": -79.3856,
+        "venue": "Sony Centre for the Performing Arts",
+        "city": "Toronto",
+        "production_title": "Irving Berlin's White Christmas"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -16312,6 +18380,7 @@
     "date": "2007-12-06",
     "year": "2007",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Television Review",
     "collections": [
       "The Television Collection"
@@ -16359,12 +18428,13 @@
     "production_groups": [],
     "media": [],
     "word_count": 957,
+    "coordinate_points": [],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Show",
       "company_label": "Network",
       "primary_browse": "productions",
-      "secondary_browse": "actors"
+      "secondary_browse": "companies"
     },
     "browse_entities": {
       "books": [],
@@ -16394,6 +18464,7 @@
     "date": "2007-12-06",
     "year": "2007",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Television Review",
     "collections": [
       "The Television Collection"
@@ -16441,12 +18512,13 @@
     "production_groups": [],
     "media": [],
     "word_count": 990,
+    "coordinate_points": [],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Show",
       "company_label": "Network",
       "primary_browse": "productions",
-      "secondary_browse": "actors"
+      "secondary_browse": "companies"
     },
     "browse_entities": {
       "books": [],
@@ -16469,6 +18541,82 @@
     }
   },
   {
+    "slug": "2008-05-26-it-s-bigger-it-s-bolder-it-s-possibly-the-best-ever-stratford-fest-actors",
+    "route": "/reviews/2008-05-26-it-s-bigger-it-s-bolder-it-s-possibly-the-best-ever-stratford-fest-actors/",
+    "source_file": "2008.05.26.Cushman_Collected.It_s_Bigger_It_s_Bolder_It_s_Possibly_the_Best_Ever_Stratford_Fest_Actors_From_Seasons_Past_Return_to_Stage.md",
+    "title": "It's Bigger. It's Bolder. It's Possibly the Best Ever. Stratford Fest; Actors",
+    "date": "2008-05-26",
+    "year": "2008",
+    "publication": "National Post",
+    "source_publication": "National Post",
+    "article_category": "Theatre Preview",
+    "collections": [
+      "Thoughts on Shakespeare",
+      "The Stratford Collection",
+      "The Shakespeare Collection"
+    ],
+    "publication_status": "duplicate_variant",
+    "editorial_issue_type": "",
+    "canonical_file": "2008.05.26.National_Post.ItS_Bigger._ItS_Bolder._ItS_Possibly_The_Best_Ever_Stratford_Fest_Actors_Fr.md",
+    "production_title": "",
+    "company": "Stratford Festival",
+    "venue": "",
+    "city": "Stratford, Ontario",
+    "coordinates": [],
+    "people": [],
+    "roles": {
+      "director": [],
+      "actors": [],
+      "playwright": [],
+      "composer_lyricist": [],
+      "musical_director": [],
+      "choreographer": [],
+      "orchestrator": [],
+      "arranger": [],
+      "assistant_director": [],
+      "stage_manager": [],
+      "assistant_musical_director": [],
+      "vocal_director": [],
+      "dance_captain": [],
+      "fight_director": [],
+      "dramaturg": [],
+      "producer": [],
+      "set_designer": [],
+      "costume_designer": [],
+      "lighting_designer": [],
+      "sound_designer": [],
+      "musicians": [],
+      "performers": [],
+      "artists": []
+    },
+    "production_groups": [],
+    "media": [],
+    "word_count": 1184,
+    "coordinate_points": [],
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Stratford Festival"
+      ],
+      "venues": [],
+      "cities": [
+        "Stratford, Ontario"
+      ],
+      "people": []
+    }
+  },
+  {
     "slug": "2008-06-26-lemon-zesty-jazz-is-in-the-family",
     "route": "/reviews/2008-06-26-lemon-zesty-jazz-is-in-the-family/",
     "source_file": "2008.06.26.National_Post.Keeping_Lemon-Zesty_Jazz_In_The_Family.md",
@@ -16476,6 +18624,7 @@
     "date": "2008-06-26",
     "year": "2008",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Concert Review",
     "collections": [],
     "publication_status": "publish",
@@ -16524,12 +18673,22 @@
     "production_groups": [],
     "media": [],
     "word_count": 558,
+    "coordinate_points": [
+      {
+        "label": "The Old Mill",
+        "lat": 43.6514,
+        "lon": -79.4937,
+        "venue": "The Old Mill",
+        "city": "Toronto",
+        "production_title": "Sandy Stewart and Bill Charlap"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Concert",
       "company_label": "Presenter",
-      "primary_browse": "productions",
-      "secondary_browse": "musicians"
+      "primary_browse": "musicians",
+      "secondary_browse": "productions"
     },
     "browse_entities": {
       "books": [],
@@ -16553,6 +18712,308 @@
     }
   },
   {
+    "slug": "2008-07-10-a-life-of-rhyme-simon-callow-is-bringing-to-stratford-the-closest-thing-shakespeare",
+    "route": "/reviews/2008-07-10-a-life-of-rhyme-simon-callow-is-bringing-to-stratford-the-closest-thing-shakespeare/",
+    "source_file": "2008.07.10.Cushman_Collected.A_Life_of_Rhyme_Simon_Callow_is_bringing_to_Stratford_the_closest_thing_Shakespeare_had_to_an_autobiography.md",
+    "title": "A Life of Rhyme; Simon Callow is bringing to Stratford the closest thing Shakespeare",
+    "date": "2008-07-10",
+    "year": "2008",
+    "publication": "National Post",
+    "source_publication": "National Post",
+    "article_category": "Theatre Preview",
+    "collections": [
+      "The Stratford Collection",
+      "Riffs on Shakespeare",
+      "The Shakespeare Collection"
+    ],
+    "publication_status": "duplicate_variant",
+    "editorial_issue_type": "",
+    "canonical_file": "2008.07.10.National_Post.A_Life_Of_Rhyme_Simon_Callow_Is_Bringing_To_Stratford_The_Closest_Thing_Sha.md",
+    "production_title": "There Reigns Love",
+    "company": "Stratford Festival",
+    "venue": "",
+    "city": "Stratford, Ontario",
+    "coordinates": [],
+    "people": [
+      "Michael Langham",
+      "Simon Callow",
+      "William Shakespeare"
+    ],
+    "roles": {
+      "director": [
+        "Michael Langham"
+      ],
+      "actors": [
+        "Simon Callow"
+      ],
+      "playwright": [
+        "William Shakespeare"
+      ],
+      "composer_lyricist": [],
+      "musical_director": [],
+      "choreographer": [],
+      "orchestrator": [],
+      "arranger": [],
+      "assistant_director": [],
+      "stage_manager": [],
+      "assistant_musical_director": [],
+      "vocal_director": [],
+      "dance_captain": [],
+      "fight_director": [],
+      "dramaturg": [],
+      "producer": [],
+      "set_designer": [],
+      "costume_designer": [],
+      "lighting_designer": [],
+      "sound_designer": [],
+      "musicians": [],
+      "performers": [],
+      "artists": []
+    },
+    "production_groups": [],
+    "media": [],
+    "word_count": 1011,
+    "coordinate_points": [],
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "There Reigns Love"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Stratford Festival"
+      ],
+      "venues": [],
+      "cities": [
+        "Stratford, Ontario"
+      ],
+      "people": [
+        "Michael Langham",
+        "Simon Callow",
+        "William Shakespeare"
+      ]
+    }
+  },
+  {
+    "slug": "2008-07-30-pieces-of-what-stratford-should-be",
+    "route": "/reviews/2008-07-30-pieces-of-what-stratford-should-be/",
+    "source_file": "2008.07.30.National_Post.Bits_And_Pieces_Of_What_Stratford_Should_Be.md",
+    "title": "Pieces Of What Stratford Should Be",
+    "date": "2008-07-30",
+    "year": "2008",
+    "publication": "National Post",
+    "source_publication": "National Post",
+    "article_category": "Theatre Review",
+    "collections": [],
+    "publication_status": "duplicate_variant",
+    "editorial_issue_type": "",
+    "canonical_file": "2008.07.30.National_Post.Some_Things_Are_Better_Left_Unsaid.md",
+    "production_title": "Shakespeare's Universe (Her Infinite Variety)",
+    "company": "Stratford Festival",
+    "venue": "Festival Pavilion",
+    "city": "Stratford, Ontario",
+    "coordinates": [],
+    "people": [
+      "Dayna Tekatch",
+      "Karen Robinson",
+      "Laura Condlln",
+      "Matthew MacFadzean",
+      "Peter Hinton"
+    ],
+    "roles": {
+      "director": [
+        "Peter Hinton"
+      ],
+      "actors": [
+        "Matthew MacFadzean",
+        "Dayna Tekatch",
+        "Laura Condlln",
+        "Karen Robinson"
+      ],
+      "playwright": [
+        "Peter Hinton"
+      ],
+      "composer_lyricist": [],
+      "musical_director": [],
+      "choreographer": [],
+      "orchestrator": [],
+      "arranger": [],
+      "assistant_director": [],
+      "stage_manager": [],
+      "assistant_musical_director": [],
+      "vocal_director": [],
+      "dance_captain": [],
+      "fight_director": [],
+      "dramaturg": [],
+      "producer": [],
+      "set_designer": [],
+      "costume_designer": [],
+      "lighting_designer": [],
+      "sound_designer": [],
+      "musicians": [],
+      "performers": [],
+      "artists": []
+    },
+    "production_groups": [],
+    "media": [],
+    "word_count": 902,
+    "coordinate_points": [],
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Shakespeare's Universe (Her Infinite Variety)"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Stratford Festival"
+      ],
+      "venues": [
+        "Festival Pavilion"
+      ],
+      "cities": [
+        "Stratford, Ontario"
+      ],
+      "people": [
+        "Dayna Tekatch",
+        "Karen Robinson",
+        "Laura Condlln",
+        "Matthew MacFadzean",
+        "Peter Hinton"
+      ]
+    }
+  },
+  {
+    "slug": "2008-07-30-pieces-of-what-stratford-should-be-2",
+    "route": "/reviews/2008-07-30-pieces-of-what-stratford-should-be-2/",
+    "source_file": "2008.07.30.National_Post.Pieces_Of_What_Stratford_Should_Be.md",
+    "title": "Pieces Of What Stratford Should Be",
+    "date": "2008-07-30",
+    "year": "2008",
+    "publication": "National Post",
+    "source_publication": "National Post",
+    "article_category": "Theatre Review",
+    "collections": [
+      "The Stratford Collection",
+      "The Shakespeare Collection",
+      "The Canadian Collection"
+    ],
+    "publication_status": "duplicate_variant",
+    "editorial_issue_type": "",
+    "canonical_file": "2008.07.30.National_Post.Some_Things_Are_Better_Left_Unsaid.md",
+    "production_title": "Shakespeare's Universe (Her Infinite Variety)",
+    "company": "Stratford Festival",
+    "venue": "Festival Pavilion",
+    "city": "Stratford, Ontario",
+    "coordinates": [
+      "43.3744",
+      "-80.9686"
+    ],
+    "people": [
+      "Dayna Tekatch",
+      "Karen Robinson",
+      "Laura Condlln",
+      "Matthew MacFadzean",
+      "Peter Hinton"
+    ],
+    "roles": {
+      "director": [
+        "Peter Hinton"
+      ],
+      "actors": [
+        "Matthew MacFadzean",
+        "Dayna Tekatch",
+        "Laura Condlln",
+        "Karen Robinson"
+      ],
+      "playwright": [
+        "Peter Hinton"
+      ],
+      "composer_lyricist": [],
+      "musical_director": [],
+      "choreographer": [],
+      "orchestrator": [],
+      "arranger": [],
+      "assistant_director": [],
+      "stage_manager": [],
+      "assistant_musical_director": [],
+      "vocal_director": [],
+      "dance_captain": [],
+      "fight_director": [],
+      "dramaturg": [],
+      "producer": [],
+      "set_designer": [],
+      "costume_designer": [],
+      "lighting_designer": [],
+      "sound_designer": [],
+      "musicians": [],
+      "performers": [],
+      "artists": []
+    },
+    "production_groups": [],
+    "media": [],
+    "word_count": 899,
+    "coordinate_points": [
+      {
+        "label": "Festival Pavilion",
+        "lat": 43.3744,
+        "lon": -80.9686,
+        "venue": "Festival Pavilion",
+        "city": "Stratford, Ontario",
+        "production_title": "Shakespeare's Universe (Her Infinite Variety)"
+      }
+    ],
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Shakespeare's Universe (Her Infinite Variety)"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Stratford Festival"
+      ],
+      "venues": [
+        "Festival Pavilion"
+      ],
+      "cities": [
+        "Stratford, Ontario"
+      ],
+      "people": [
+        "Dayna Tekatch",
+        "Karen Robinson",
+        "Laura Condlln",
+        "Matthew MacFadzean",
+        "Peter Hinton"
+      ]
+    }
+  },
+  {
     "slug": "2009-07-15-a-diabolical-morality",
     "route": "/reviews/2009-07-15-a-diabolical-morality/",
     "source_file": "2009.07.15.National_Post.A_Diabolical_Morality.md",
@@ -16560,6 +19021,7 @@
     "date": "2009-07-15",
     "year": "2009",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [
       "The Shaw Collection"
@@ -16625,6 +19087,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 881,
+    "coordinate_points": [
+      {
+        "label": "Festival Theatre",
+        "lat": 43.252,
+        "lon": -79.0677,
+        "venue": "Festival Theatre",
+        "city": "Niagara-on-the-Lake",
+        "production_title": "The Devil's Disciple"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -16662,6 +19134,136 @@
     }
   },
   {
+    "slug": "2009-11-28-we-d-go-mad-too-if-we-were-involved-with-him-gord-rand-is-so-tortured-he-s",
+    "route": "/reviews/2009-11-28-we-d-go-mad-too-if-we-were-involved-with-him-gord-rand-is-so-tortured-he-s/",
+    "source_file": "2009.11.28.Cushman_Collected.We_d_Go_Mad_Too_if_We_Were_Involved_with_Him_Gord_Rand_is_so_Tortured_He_s_Terrific_as_Hamlet.md",
+    "title": "We'd Go Mad Too if We Were Involved with Him; Gord Rand is so Tortured, He's",
+    "date": "2009-11-28",
+    "year": "2009",
+    "publication": "National Post",
+    "source_publication": "National Post",
+    "article_category": "Theatre Review",
+    "collections": [
+      "The Shakespeare Collection"
+    ],
+    "publication_status": "duplicate_variant",
+    "editorial_issue_type": "",
+    "canonical_file": "2009.11.28.National_Post.WeD_Go_Madtoo_If_We_Were_Involved_With_Him_Gord_Rand_Is_So_Tortured_HeS_Ter.md",
+    "production_title": "Hamlet",
+    "company": "Necessary Angel Theatre Company",
+    "venue": "Enwave Theatre",
+    "city": "Toronto",
+    "coordinates": [
+      "43.6385",
+      "-79.3819"
+    ],
+    "people": [
+      "Benedict Campbell",
+      "Christopher Morris",
+      "Eric Peterson",
+      "Gord Rand",
+      "Graham McLaren",
+      "Gray Powell",
+      "Laura de Carteret",
+      "Robert Persichini",
+      "Steven McCarthy",
+      "Tara Nicodemo",
+      "William Shakespeare"
+    ],
+    "roles": {
+      "director": [
+        "Graham McLaren"
+      ],
+      "actors": [
+        "Gord Rand",
+        "Tara Nicodemo",
+        "Benedict Campbell",
+        "Laura de Carteret",
+        "Eric Peterson",
+        "Steven McCarthy",
+        "Christopher Morris",
+        "Robert Persichini",
+        "Gray Powell"
+      ],
+      "playwright": [
+        "William Shakespeare"
+      ],
+      "composer_lyricist": [],
+      "musical_director": [],
+      "choreographer": [],
+      "orchestrator": [],
+      "arranger": [],
+      "assistant_director": [],
+      "stage_manager": [],
+      "assistant_musical_director": [],
+      "vocal_director": [],
+      "dance_captain": [],
+      "fight_director": [],
+      "dramaturg": [],
+      "producer": [],
+      "set_designer": [
+        "Graham McLaren"
+      ],
+      "costume_designer": [],
+      "lighting_designer": [],
+      "sound_designer": [],
+      "musicians": [],
+      "performers": [],
+      "artists": []
+    },
+    "production_groups": [],
+    "media": [],
+    "word_count": 861,
+    "coordinate_points": [
+      {
+        "label": "Enwave Theatre",
+        "lat": 43.6385,
+        "lon": -79.3819,
+        "venue": "Enwave Theatre",
+        "city": "Toronto",
+        "production_title": "Hamlet"
+      }
+    ],
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Hamlet"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Necessary Angel Theatre Company"
+      ],
+      "venues": [
+        "Enwave Theatre"
+      ],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "Benedict Campbell",
+        "Christopher Morris",
+        "Eric Peterson",
+        "Gord Rand",
+        "Graham McLaren",
+        "Gray Powell",
+        "Laura de Carteret",
+        "Robert Persichini",
+        "Steven McCarthy",
+        "Tara Nicodemo",
+        "William Shakespeare"
+      ]
+    }
+  },
+  {
     "slug": "2010-07-14-legally-blonde-the-musical-overrules-my-objection-production-delights-with",
     "route": "/reviews/2010-07-14-legally-blonde-the-musical-overrules-my-objection-production-delights-with/",
     "source_file": "2010.07.14.The_Ottawa_Citizen.Legally_Blonde_The_Musical_Overrules_My_Objection_Production_Delights_.md",
@@ -16669,6 +19271,7 @@
     "date": "2010-07-14",
     "year": "2010",
     "publication": "The Ottawa Citizen",
+    "source_publication": "The Ottawa Citizen",
     "article_category": "Musical Review",
     "collections": [
       "The Musical Collection"
@@ -16730,6 +19333,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 740,
+    "coordinate_points": [
+      {
+        "label": "Princess of Wales Theatre",
+        "lat": 43.647,
+        "lon": -79.3892,
+        "venue": "Princess of Wales Theatre",
+        "city": "Toronto",
+        "production_title": "Legally Blonde The Musical"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -16773,6 +19386,7 @@
     "date": "2010-12-27",
     "year": "2010",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Year in Review",
     "collections": [
       "The Canadian Collection"
@@ -16814,6 +19428,7 @@
     "production_groups": [],
     "media": [],
     "word_count": 83,
+    "coordinate_points": [],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -16843,6 +19458,7 @@
     "date": "2011-06-04",
     "year": "2011",
     "publication": "The Windsor Star",
+    "source_publication": "The Windsor Star",
     "article_category": "Theatre Review",
     "collections": [
       "The Shaw Collection"
@@ -16907,6 +19523,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 874,
+    "coordinate_points": [
+      {
+        "label": "Festival Theatre",
+        "lat": 43.252,
+        "lon": -79.0677,
+        "venue": "Festival Theatre",
+        "city": "Niagara-on-the-Lake",
+        "production_title": "Cat on a Hot Tin Roof"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -16951,6 +19577,7 @@
     "date": "2011-06-06",
     "year": "2011",
     "publication": "Postmedia News",
+    "source_publication": "Postmedia News",
     "article_category": "Musical Review",
     "collections": [
       "The Stratford Collection",
@@ -17033,6 +19660,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 937,
+    "coordinate_points": [
+      {
+        "label": "Festival Theatre",
+        "lat": 43.3744,
+        "lon": -80.9686,
+        "venue": "Festival Theatre",
+        "city": "Stratford, Ontario",
+        "production_title": "Camelot"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -17083,6 +19720,7 @@
     "date": "2011-06-06",
     "year": "2011",
     "publication": "Postmedia News",
+    "source_publication": "Postmedia News",
     "article_category": "Theatre Review",
     "collections": [
       "The Stratford Collection",
@@ -17157,6 +19795,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 919,
+    "coordinate_points": [
+      {
+        "label": "Festival Theatre",
+        "lat": 43.3744,
+        "lon": -80.9686,
+        "venue": "Festival Theatre",
+        "city": "Stratford, Ontario",
+        "production_title": "The Merry Wives of Windsor"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -17205,6 +19853,7 @@
     "date": "2011-11-22",
     "year": "2011",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Obituary",
     "collections": [
       "The Canadian Collection"
@@ -17250,6 +19899,7 @@
     "production_groups": [],
     "media": [],
     "word_count": 765,
+    "coordinate_points": [],
     "display_schema": {
       "work_type": "subjects",
       "work_label": "Subject",
@@ -17281,6 +19931,7 @@
     "date": "2011-11-22",
     "year": "2011",
     "publication": "The Gazette",
+    "source_publication": "The Gazette",
     "article_category": "Obituary",
     "collections": [
       "The Canadian Collection"
@@ -17326,6 +19977,7 @@
     "production_groups": [],
     "media": [],
     "word_count": 1080,
+    "coordinate_points": [],
     "display_schema": {
       "work_type": "subjects",
       "work_label": "Subject",
@@ -17357,6 +20009,7 @@
     "date": "2012-11-14",
     "year": "2012",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Musical Review",
     "collections": [
       "The Musical Collection",
@@ -17426,6 +20079,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 702,
+    "coordinate_points": [
+      {
+        "label": "Young Centre for the Performing Arts",
+        "lat": 43.6503,
+        "lon": -79.3595,
+        "venue": "Young Centre for the Performing Arts",
+        "city": "Toronto",
+        "production_title": "Alligator Pie"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -17468,6 +20131,7 @@
     "date": "2013-01-19",
     "year": "2013",
     "publication": "The Windsor Star",
+    "source_publication": "The Windsor Star",
     "article_category": "Musical Review",
     "collections": [
       "The Musical Collection"
@@ -17555,6 +20219,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 1103,
+    "coordinate_points": [
+      {
+        "label": "Ed Mirvish Theatre",
+        "lat": 43.653,
+        "lon": -79.3793,
+        "venue": "Ed Mirvish Theatre",
+        "city": "Toronto",
+        "production_title": "The Wizard of Oz"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -17601,6 +20275,143 @@
     }
   },
   {
+    "slug": "2013-06-01-the-duke-abides-stratford-covers-all-the-bases-for-a-riveting-and-perplexing",
+    "route": "/reviews/2013-06-01-the-duke-abides-stratford-covers-all-the-bases-for-a-riveting-and-perplexing/",
+    "source_file": "2013.06.01.Cushman_Collected.The_Duke_Abides_Stratford_covers_all_the_bases_for_a_riveting_and_perplexing_production_of_Measure_for_Measure.md",
+    "title": "'The Duke Abides: Stratford covers all the bases for a riveting and perplexing",
+    "date": "2013-06-01",
+    "year": "2013",
+    "publication": "National Post",
+    "source_publication": "National Post",
+    "article_category": "Theatre Review",
+    "collections": [
+      "The Shakespeare Collection",
+      "The Stratford Collection"
+    ],
+    "publication_status": "duplicate_variant",
+    "editorial_issue_type": "",
+    "canonical_file": "2013.06.01.National_Post.The_Duke_Abides_Stratford_Covers_All_The_Bases_For_A_Riveting_And_Perplexin.md",
+    "production_title": "Measure for Measure",
+    "company": "Stratford Festival",
+    "venue": "Tom Patterson Theatre",
+    "city": "Stratford, Ontario",
+    "coordinates": [],
+    "people": [
+      "Brian Tree",
+      "Carmen Grant",
+      "Christopher Prentice",
+      "E.B. Smith",
+      "Geraint Wyn-Davies",
+      "John Pennoyer",
+      "Martha Henry",
+      "Peter Hutt",
+      "Randy Hughson",
+      "Robert Persichini",
+      "Ruby Joy",
+      "Sarah Afful",
+      "Stephen Ouimette",
+      "Stephen Russell",
+      "Tom Rooney",
+      "William Shakespeare"
+    ],
+    "roles": {
+      "director": [
+        "Martha Henry"
+      ],
+      "actors": [
+        "Martha Henry",
+        "Tom Rooney",
+        "Carmen Grant",
+        "Christopher Prentice",
+        "John Pennoyer",
+        "Geraint Wyn-Davies",
+        "Stephen Ouimette",
+        "Randy Hughson",
+        "Brian Tree",
+        "Peter Hutt",
+        "Stephen Russell",
+        "Robert Persichini",
+        "Ruby Joy",
+        "Sarah Afful",
+        "E.B. Smith"
+      ],
+      "playwright": [
+        "William Shakespeare"
+      ],
+      "composer_lyricist": [],
+      "musical_director": [],
+      "choreographer": [],
+      "orchestrator": [],
+      "arranger": [],
+      "assistant_director": [],
+      "stage_manager": [],
+      "assistant_musical_director": [],
+      "vocal_director": [],
+      "dance_captain": [],
+      "fight_director": [],
+      "dramaturg": [],
+      "producer": [],
+      "set_designer": [
+        "John Pennoyer"
+      ],
+      "costume_designer": [
+        "John Pennoyer"
+      ],
+      "lighting_designer": [],
+      "sound_designer": [],
+      "musicians": [],
+      "performers": [],
+      "artists": []
+    },
+    "production_groups": [],
+    "media": [],
+    "word_count": 786,
+    "coordinate_points": [],
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Measure for Measure"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Stratford Festival"
+      ],
+      "venues": [
+        "Tom Patterson Theatre"
+      ],
+      "cities": [
+        "Stratford, Ontario"
+      ],
+      "people": [
+        "Brian Tree",
+        "Carmen Grant",
+        "Christopher Prentice",
+        "E.B. Smith",
+        "Geraint Wyn-Davies",
+        "John Pennoyer",
+        "Martha Henry",
+        "Peter Hutt",
+        "Randy Hughson",
+        "Robert Persichini",
+        "Ruby Joy",
+        "Sarah Afful",
+        "Stephen Ouimette",
+        "Stephen Russell",
+        "Tom Rooney",
+        "William Shakespeare"
+      ]
+    }
+  },
+  {
     "slug": "2014-04-10-pecking-order-it-s-fight-and-flight-onstage-but-from-which-lover-in",
     "route": "/reviews/2014-04-10-pecking-order-it-s-fight-and-flight-onstage-but-from-which-lover-in/",
     "source_file": "2014.04.10.National Post.Cock.md",
@@ -17608,6 +20419,7 @@
     "date": "2014-04-10",
     "year": "2014",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [],
     "publication_status": "publish",
@@ -17666,6 +20478,7 @@
     "production_groups": [],
     "media": [],
     "word_count": 1100,
+    "coordinate_points": [],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -17700,6 +20513,169 @@
     }
   },
   {
+    "slug": "2014-09-06-legends-never-die-soulpepper-puts-shakespeare-on-shuffle-and-quarters-glenn",
+    "route": "/reviews/2014-09-06-legends-never-die-soulpepper-puts-shakespeare-on-shuffle-and-quarters-glenn/",
+    "source_file": "2014.09.06.Cushman_Collected.Legends_Never_Die_Soulpepper_Puts_Shakespeare_on_Shuffle_and_Quarters_Glenn_Gould_to_Mixed_Results.md",
+    "title": "Legends Never Die; Soulpepper Puts Shakespeare on Shuffle and Quarters Glenn",
+    "date": "2014-09-06",
+    "year": "2014",
+    "publication": "National Post",
+    "source_publication": "National Post",
+    "article_category": "Theatre Review",
+    "collections": [
+      "The Shakespeare Collection"
+    ],
+    "publication_status": "duplicate_variant",
+    "editorial_issue_type": "",
+    "canonical_file": "2014.09.06.National_Post.Legends_Never_Die_Soulpepper_Puts_Shakespeare_On_Shuffle_And_Quarters_Glenn.md",
+    "production_title": "",
+    "company": "",
+    "venue": "",
+    "city": "",
+    "coordinates": [],
+    "people": [
+      "Ben Power",
+      "Brent Carver",
+      "David S. Young",
+      "Diana Leblanc",
+      "Jeff Lillico",
+      "Joseph Ziegler",
+      "Michael Shamata",
+      "Mike Ross",
+      "Nancy Palk",
+      "Steven Sutcliffe",
+      "William Shakespeare"
+    ],
+    "roles": {
+      "director": [
+        "Michael Shamata",
+        "Diana Leblanc"
+      ],
+      "actors": [
+        "Joseph Ziegler",
+        "Nancy Palk"
+      ],
+      "playwright": [
+        "Ben Power",
+        "David S. Young",
+        "William Shakespeare"
+      ],
+      "composer_lyricist": [],
+      "musical_director": [],
+      "choreographer": [],
+      "orchestrator": [],
+      "arranger": [],
+      "assistant_director": [],
+      "stage_manager": [],
+      "assistant_musical_director": [],
+      "vocal_director": [],
+      "dance_captain": [],
+      "fight_director": [],
+      "dramaturg": [],
+      "producer": [],
+      "set_designer": [],
+      "costume_designer": [],
+      "lighting_designer": [],
+      "sound_designer": [],
+      "musicians": [],
+      "performers": [],
+      "artists": []
+    },
+    "production_groups": [
+      {
+        "order": "1",
+        "production_title": "A Tender Thing",
+        "company": [
+          "Soulpepper Theatre Company"
+        ],
+        "venue": [
+          "Young Centre for the Performing Arts"
+        ],
+        "city": [
+          "Toronto"
+        ],
+        "director": [
+          "Michael Shamata"
+        ],
+        "actors": [
+          "Joseph Ziegler",
+          "Nancy Palk"
+        ],
+        "playwright": [
+          "Ben Power",
+          "William Shakespeare"
+        ]
+      },
+      {
+        "order": "2",
+        "production_title": "Glenn",
+        "company": [
+          "Soulpepper Theatre Company"
+        ],
+        "venue": [
+          "Young Centre for the Performing Arts"
+        ],
+        "city": [
+          "Toronto"
+        ],
+        "director": [
+          "Diana Leblanc"
+        ],
+        "actors": [
+          "Jeff Lillico",
+          "Mike Ross",
+          "Brent Carver",
+          "Steven Sutcliffe"
+        ],
+        "playwright": [
+          "David S. Young"
+        ]
+      }
+    ],
+    "media": [],
+    "word_count": 1147,
+    "coordinate_points": [],
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "A Tender Thing",
+        "Glenn"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "companies": [
+        "Soulpepper Theatre Company"
+      ],
+      "venues": [
+        "Young Centre for the Performing Arts"
+      ],
+      "cities": [
+        "Toronto"
+      ],
+      "people": [
+        "Ben Power",
+        "Brent Carver",
+        "David S. Young",
+        "Diana Leblanc",
+        "Jeff Lillico",
+        "Joseph Ziegler",
+        "Michael Shamata",
+        "Mike Ross",
+        "Nancy Palk",
+        "Steven Sutcliffe",
+        "William Shakespeare"
+      ]
+    }
+  },
+  {
     "slug": "2014-09-27-baddest-guy-ben-kingsley-plays-another-villain-in-the-boxtrolls-and-as-usual",
     "route": "/reviews/2014-09-27-baddest-guy-ben-kingsley-plays-another-villain-in-the-boxtrolls-and-as-usual/",
     "source_file": "2014.09.27.National_Post.Baddest_Guy_Ben_Kingsley_Plays_Another_Villain_In_The_Boxtrolls_And_As_Usua.md",
@@ -17707,6 +20683,7 @@
     "date": "2014-09-27",
     "year": "2014",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Film Review",
     "collections": [],
     "publication_status": "archive_only",
@@ -17755,6 +20732,7 @@
     "production_groups": [],
     "media": [],
     "word_count": 427,
+    "coordinate_points": [],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Film",
@@ -17790,6 +20768,7 @@
     "date": "2014-12-27",
     "year": "2014",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Opinion Piece",
     "collections": [],
     "publication_status": "archive_only",
@@ -17829,6 +20808,7 @@
     "production_groups": [],
     "media": [],
     "word_count": 147,
+    "coordinate_points": [],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -17856,6 +20836,7 @@
     "date": "2015-05-09",
     "year": "2015",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [
       "The Canadian Collection"
@@ -17927,6 +20908,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 1046,
+    "coordinate_points": [
+      {
+        "label": "Coal Mine Theatre; Storefront Theatre",
+        "lat": 43.6532,
+        "lon": -79.3832,
+        "venue": "Coal Mine Theatre; Storefront Theatre",
+        "city": "Toronto",
+        "production_title": "Creditors / Liver"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -17976,6 +20967,7 @@
     "date": "2016-12-05",
     "year": "2016",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Musical Review",
     "collections": [
       "The Canadian Collection",
@@ -18064,6 +21056,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 1135,
+    "coordinate_points": [
+      {
+        "label": "Royal Alexandra Theatre",
+        "lat": 43.6474,
+        "lon": -79.3876,
+        "venue": "Royal Alexandra Theatre",
+        "city": "Toronto",
+        "production_title": "Come From Away"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -18117,6 +21119,7 @@
     "date": "2017-03-29",
     "year": "2017",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Musical Review",
     "collections": [
       "The Musical Collection"
@@ -18191,6 +21194,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 988,
+    "coordinate_points": [
+      {
+        "label": "Elgin Theatre",
+        "lat": 43.653,
+        "lon": -79.3793,
+        "venue": "Elgin Theatre",
+        "city": "Toronto",
+        "production_title": "Sousatzka"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -18237,6 +21250,7 @@
     "date": "2017-05-03",
     "year": "2017",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [],
     "publication_status": "publish",
@@ -18293,6 +21307,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 825,
+    "coordinate_points": [
+      {
+        "label": "Tarragon Theatre",
+        "lat": 43.675,
+        "lon": -79.4129,
+        "venue": "Tarragon Theatre",
+        "city": "Toronto",
+        "production_title": "Midsummer"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -18334,6 +21358,7 @@
     "date": "2021-10-22",
     "year": "2021",
     "publication": "National Post (Online)",
+    "source_publication": "National Post (Online)",
     "article_category": "Obituary",
     "collections": [
       "The Canadian Collection",
@@ -18376,6 +21401,7 @@
     "production_groups": [],
     "media": [],
     "word_count": 1488,
+    "coordinate_points": [],
     "display_schema": {
       "work_type": "subjects",
       "work_label": "Subject",
@@ -18407,6 +21433,7 @@
     "date": "2021-12-01",
     "year": "2021",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Obituary",
     "collections": [
       "The Musical Collection"
@@ -18448,6 +21475,7 @@
     "production_groups": [],
     "media": [],
     "word_count": 1926,
+    "coordinate_points": [],
     "display_schema": {
       "work_type": "subjects",
       "work_label": "Subject",
@@ -18477,6 +21505,7 @@
     "date": "2024-09-30",
     "year": "2024",
     "publication": "The Globe and Mail (Online)",
+    "source_publication": "The Globe and Mail (Online)",
     "article_category": "Obituary",
     "collections": [
       "The Stratford Collection"
@@ -18518,6 +21547,7 @@
     "production_groups": [],
     "media": [],
     "word_count": 1212,
+    "coordinate_points": [],
     "display_schema": {
       "work_type": "subjects",
       "work_label": "Subject",
@@ -18550,6 +21580,7 @@
     "date": "2008-02-16",
     "year": "2008",
     "publication": "",
+    "source_publication": "Cushman Collected",
     "article_category": "Comedy Review",
     "collections": [
       "The Canadian Collection",
@@ -18612,6 +21643,16 @@
     "production_groups": [],
     "media": [],
     "word_count": 767,
+    "coordinate_points": [
+      {
+        "label": "Second City",
+        "lat": 43.6452,
+        "lon": -79.3908,
+        "venue": "Second City",
+        "city": "Toronto",
+        "production_title": "Tazed and Confused"
+      }
+    ],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
@@ -18655,6 +21696,7 @@
     "date": "2005-04-14",
     "year": "2005",
     "publication": "National Post",
+    "source_publication": "National Post",
     "article_category": "Musical Review",
     "collections": [
       "The Musical Collection",
@@ -18704,6 +21746,7 @@
     "production_groups": [],
     "media": [],
     "word_count": 239,
+    "coordinate_points": [],
     "display_schema": {
       "work_type": "productions",
       "work_label": "Production",
