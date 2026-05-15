@@ -1924,6 +1924,7 @@ h1 {
   display: inline-flex;
   width: max-content;
   max-width: 100%;
+  justify-self: center;
   align-items: center;
   gap: 8px;
   border: 1px solid rgba(35, 82, 118, 0.26);
