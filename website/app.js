@@ -1,4 +1,4 @@
-const DATA_URL = new URL("../site_export/data/public_reviews.json?v=108", import.meta.url);
+const DATA_URL = new URL("../site_export/data/public_reviews.json?v=109", import.meta.url);
 const CONTENT_ROOT = new URL("../site_export/content/reviews/", import.meta.url);
 const PAGE_SIZE = 36;
 const SHAKESPEARE_COLLECTION = "The Shakespeare Collection";
@@ -551,7 +551,7 @@ function uniqueEntityValues(values, transform = (value) => value) {
 
 function productionGroups(record) {
   return Array.isArray(record.production_groups)
-    ? record.production_groups.filter((group) => group && typeof group === "object" && group.production_title)
+    ? record.production_groups.filter((group) => group && typeof group === "object" && group.production_title && !isNonWorkProductionLabel(group.production_title))
     : [];
 }
 
@@ -572,6 +572,23 @@ function groupedRoleValues(record, role) {
 function valuesExceptGrouped(flatValues, groupedValues) {
   const groupedSlugs = new Set(groupedValues.map(entitySlug));
   return uniqueEntityValues(flatValues).filter((value) => !groupedSlugs.has(entitySlug(value)));
+}
+
+function isNonWorkProductionLabel(value) {
+  const label = String(value || "").trim();
+  if (!/^(19|20)\d{2}\b/.test(label)) return false;
+  return /\b(awards?|nominations?|performances?|previews?|season|year in review)\b/i.test(label);
+}
+
+function productionLabelValues(value) {
+  if (Array.isArray(value)) return value.flatMap((item) => productionLabelValues(item));
+  const raw = String(value || "").trim();
+  if (!raw || isNonWorkProductionLabel(raw)) return [];
+  return splitEntityList(raw).filter((label) => !isNonWorkProductionLabel(label));
+}
+
+function groupedProductionLabelValues(record) {
+  return uniqueEntityValues(productionGroups(record).flatMap((group) => productionLabelValues(group.production_title)));
 }
 
 function sortRecords(records) {
@@ -682,7 +699,7 @@ function entityValues(record, type) {
   if (type === "people") return uniqueEntityValues([...(record.people || []), ...splitEntityList(record.book_author), ...splitEntityList(record.subject_people), ...productionGroups(record).flatMap((group) => ENTITY_TYPES.filter((item) => item.role).flatMap((item) => splitEntityList(group[item.role] || [])))]);
   if (type === "subjects") return uniqueEntityValues(splitEntityList(record.subject_people));
   if (type === "books") return isBookReview(record) ? uniqueEntityValues([...splitEntityList(record.production_title), ...groupedEntityValues(record, "production_title")]) : [];
-  if (type === "productions") return isBookReview(record) ? [] : uniqueEntityValues([...splitEntityList(record.production_title), ...groupedEntityValues(record, "production_title")]);
+  if (type === "productions") return isBookReview(record) ? [] : uniqueEntityValues([...productionLabelValues(record.production_title), ...groupedProductionLabelValues(record)]);
   if (type === "book-authors") return uniqueEntityValues(splitEntityList(record.book_author));
   if (type === "publishers") return uniqueEntityValues(splitEntityList(record.publisher));
   if (type === "companies") return uniqueEntityValues([...splitEntityList(record.company), ...groupedEntityValues(record, "company")]);
@@ -928,8 +945,8 @@ function articleWorkValues(record) {
     if (subjects.length) return uniqueEntityValues(subjects);
   }
   const values = uniqueEntityValues([
-    ...splitEntityList(record.production_title),
-    ...groupedEntityValues(record, "production_title"),
+    ...productionLabelValues(record.production_title),
+    ...groupedProductionLabelValues(record),
   ]);
   if (!isBookReview(record)) return values;
   return uniqueEntityValues(values.flatMap((value) => value.split(/\s+\/\s+/).map((part) => part.trim()).filter(Boolean)));
@@ -3505,15 +3522,16 @@ function articleEntityLinks(record) {
   const schema = displaySchema(record);
   const groups = productionGroups(record);
   const singleGroup = groups.length === 1 ? groups[0] : null;
-  const groupedProductionValues = grouped ? groupedEntityValues(record, "production_title") : [];
+  const groupedProductionValues = grouped ? groupedProductionLabelValues(record) : [];
   const groupedCompanyValues = grouped ? groupedEntityValues(record, "company") : [];
   const groupedVenueValues = grouped ? groupedEntityValues(record, "venue") : [];
   const groupedCityValues = grouped ? groupedEntityValues(record, "city", splitCityList) : [];
   const singleValues = (field, splitter = splitEntityList) => singleGroup ? splitter(singleGroup[field]) : [];
+  const singleProductionValues = singleGroup ? productionLabelValues(singleGroup.production_title) : [];
   const singleRoleValues = (role) => singleGroup ? splitEntityList(singleGroup[role]) : [];
   const workValues = articleWorkValues(record);
   const productionChipGroups = [
-    [schema.workType, schema.workLabel, valuesExceptGrouped([...workValues, ...singleValues("production_title")], groupedProductionValues).slice(0, 4)],
+    [schema.workType, schema.workLabel, valuesExceptGrouped([...workValues, ...singleProductionValues], groupedProductionValues).slice(0, 4)],
   ].filter(([, , values]) => values.length);
   const contextGroups = [
     ["book-authors", "Book Author", splitEntityList(record.book_author).slice(0, 4)],
