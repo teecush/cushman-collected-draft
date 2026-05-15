@@ -1381,6 +1381,10 @@ h1 {
   margin: 20px 0 0;
 }
 
+.article-entity-groups-multiple {
+  gap: 12px;
+}
+
 .article-entity-section {
   display: grid;
   grid-template-columns: 84px 1fr;
@@ -1412,11 +1416,11 @@ h1 {
 
 .article-production-groups {
   display: grid;
-  gap: 11px;
+  gap: 12px;
 }
 
 .article-production-groups-long {
-  gap: 8px;
+  gap: 10px;
 }
 
 .article-production-group {
@@ -1436,10 +1440,10 @@ h1 {
   background: #f3f0e8;
   color: var(--ink);
   font-family: var(--sans);
-  font-size: 14.5px;
+  font-size: 14px;
   font-weight: 680;
   line-height: 1.2;
-  padding: 5px 10px;
+  padding: 6px 11px;
   text-decoration: none !important;
 }
 
@@ -1454,6 +1458,18 @@ h1 {
 
 .article-production-group-entities {
   padding-left: 0;
+}
+
+.article-entity-groups-multiple .article-entity-section-context {
+  margin-top: 2px;
+}
+
+.article-entity-groups-multiple .article-entity-section-context .article-entity-label {
+  color: #777;
+}
+
+.article-entity-groups-multiple .article-entity-section-context .entity-chip {
+  opacity: 0.9;
 }
 
 .entity-chip,

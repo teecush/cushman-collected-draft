@@ -1,4 +1,4 @@
-const DATA_URL = new URL("../site_export/data/public_reviews.json?v=97", import.meta.url);
+const DATA_URL = new URL("../site_export/data/public_reviews.json?v=98", import.meta.url);
 const CONTENT_ROOT = new URL("../site_export/content/reviews/", import.meta.url);
 const PAGE_SIZE = 36;
 const SHAKESPEARE_COLLECTION = "The Shakespeare Collection";
@@ -3163,7 +3163,7 @@ const ARTICLE_ROLE_GROUPS = [
 
 function articleProductionGroups(record) {
   const groups = productionGroups(record);
-  if (!groups.length) return null;
+  if (groups.length < 2) return null;
   const schema = displaySchema(record);
 
   const wrap = document.createElement("div");
@@ -3177,10 +3177,8 @@ function articleProductionGroups(record) {
       ...ARTICLE_ROLE_GROUPS.map(([type, prefix, role, limit]) => [type, schema.roleLabels[role] || prefix, splitEntityList(group[role]).slice(0, limit)]),
     ].filter(([, , values]) => values.length);
     section.className = `article-production-group${chipRows.length ? "" : " article-production-group-empty"}`;
-    const title = document.createElement("a");
-    title.className = "article-production-title-link";
-    title.href = `#entity:productions:${entitySlug(group.production_title)}`;
-    title.textContent = group.production_title;
+    const title = entityChip("productions", group.production_title, "", "production");
+    title.classList.add("article-production-title-link");
     const nav = document.createElement("nav");
     nav.className = "article-entities article-production-group-entities";
     nav.setAttribute("aria-label", `${group.production_title} metadata links`);
@@ -3195,32 +3193,35 @@ function articleProductionGroups(record) {
 
 function articleEntityLinks(record) {
   const grouped = articleProductionGroups(record);
-  const bookReview = isBookReview(record);
   const schema = displaySchema(record);
-  const groupedProductionValues = groupedEntityValues(record, "production_title");
-  const groupedCompanyValues = groupedEntityValues(record, "company");
-  const groupedVenueValues = groupedEntityValues(record, "venue");
-  const groupedCityValues = groupedEntityValues(record, "city", splitCityList);
+  const groups = productionGroups(record);
+  const singleGroup = groups.length === 1 ? groups[0] : null;
+  const groupedProductionValues = grouped ? groupedEntityValues(record, "production_title") : [];
+  const groupedCompanyValues = grouped ? groupedEntityValues(record, "company") : [];
+  const groupedVenueValues = grouped ? groupedEntityValues(record, "venue") : [];
+  const groupedCityValues = grouped ? groupedEntityValues(record, "city", splitCityList) : [];
+  const singleValues = (field, splitter = splitEntityList) => singleGroup ? splitter(singleGroup[field]) : [];
+  const singleRoleValues = (role) => singleGroup ? splitEntityList(singleGroup[role]) : [];
   const productionGroups = [
-    [schema.workType, schema.workLabel, valuesExceptGrouped(splitEntityList(record.production_title), groupedProductionValues).slice(0, 4)],
+    [schema.workType, schema.workLabel, valuesExceptGrouped([...splitEntityList(record.production_title), ...singleValues("production_title")], groupedProductionValues).slice(0, 4)],
   ].filter(([, , values]) => values.length);
   const contextGroups = [
     ["book-authors", "Book Author", splitEntityList(record.book_author).slice(0, 4)],
     ["publishers", "Publisher", splitEntityList(record.publisher).slice(0, 3)],
-    ["companies", schema.companyLabel, valuesExceptGrouped(splitEntityList(record.company), groupedCompanyValues).slice(0, 3)],
-    ["venues", schema.venueLabel, valuesExceptGrouped(splitEntityList(record.venue), groupedVenueValues).slice(0, 2)],
-    ["cities", schema.cityLabel, valuesExceptGrouped(splitCityList(record.city), groupedCityValues).slice(0, 2)],
+    ["companies", schema.companyLabel, valuesExceptGrouped([...splitEntityList(record.company), ...singleValues("company")], groupedCompanyValues).slice(0, 3)],
+    ["venues", schema.venueLabel, valuesExceptGrouped([...splitEntityList(record.venue), ...singleValues("venue")], groupedVenueValues).slice(0, 2)],
+    ["cities", schema.cityLabel, valuesExceptGrouped([...splitCityList(record.city), ...singleValues("city", splitCityList)], groupedCityValues).slice(0, 2)],
     ["collections", "Series", collectionNames(record).filter((name) => name === "Short Takes")],
   ].filter(([, , values]) => values.length);
 
   const peopleGroups = [
     ["subjects", "Subject", splitEntityList(record.subject_people).slice(0, 6)],
-    ...ARTICLE_ROLE_GROUPS.map(([type, prefix, role, limit]) => [type, schema.roleLabels[role] || prefix, valuesExceptGrouped(record.roles?.[role] || [], groupedRoleValues(record, role)).slice(0, limit)]),
+    ...ARTICLE_ROLE_GROUPS.map(([type, prefix, role, limit]) => [type, schema.roleLabels[role] || prefix, valuesExceptGrouped([...(record.roles?.[role] || []), ...singleRoleValues(role)], grouped ? groupedRoleValues(record, role) : []).slice(0, limit)]),
   ].filter(([, , values]) => values.length);
 
   if (!grouped && !productionGroups.length && !contextGroups.length && !peopleGroups.length) return null;
   const wrap = document.createElement("div");
-  wrap.className = "article-entity-groups";
+  wrap.className = `article-entity-groups${grouped ? " article-entity-groups-multiple" : ""}`;
 
   if (grouped) wrap.append(grouped);
   if (productionGroups.length) wrap.append(articleEntityGroup(schema.workLabel, productionGroups, "production"));
