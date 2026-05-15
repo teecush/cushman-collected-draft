@@ -1,4 +1,4 @@
-const DATA_URL = new URL("../site_export/data/public_reviews.json?v=100", import.meta.url);
+const DATA_URL = new URL("../site_export/data/public_reviews.json?v=101", import.meta.url);
 const CONTENT_ROOT = new URL("../site_export/content/reviews/", import.meta.url);
 const PAGE_SIZE = 36;
 const SHAKESPEARE_COLLECTION = "The Shakespeare Collection";
@@ -70,6 +70,37 @@ const ENTITY_TYPES = [
   { key: "dramaturgs", label: "Dramaturgs", singular: "Dramaturg", role: "dramaturg" },
   { key: "fight-directors", label: "Fight Directors", singular: "Fight Director", role: "fight_director" },
 ];
+
+const MASTER_INDEX_WORK_FILTERS = [
+  { key: "plays", label: "Plays", typeKeys: ["productions"], predicate: (record) => typeGroup(record).value === "theatre" },
+  { key: "all-works", label: "All Works", typeKeys: ["productions", "books"] },
+  { key: "musicals", label: "Musicals", typeKeys: ["productions"], predicate: (record) => typeGroup(record).value === "musical-theatre" },
+  { key: "books", label: "Books", typeKeys: ["books"], predicate: (record) => isBookReview(record) },
+  { key: "albums", label: "Albums", typeKeys: ["productions"], predicate: (record) => record.article_category === "Music Review" },
+  { key: "concerts", label: "Concerts", typeKeys: ["productions"], predicate: (record) => record.article_category === "Concert Review" },
+  { key: "television", label: "Television", typeKeys: ["productions"], predicate: (record) => record.article_category === "Television Review" },
+  { key: "films", label: "Films", typeKeys: ["productions"], predicate: (record) => record.article_category === "Film Review" },
+];
+
+const MASTER_INDEX_PEOPLE_FILTERS = [
+  { key: "all-people", label: "All People", typeKeys: ["people"] },
+  { key: "directors", label: "Directors", typeKeys: ["directors"] },
+  { key: "actors", label: "Actors", typeKeys: ["actors"] },
+  { key: "playwrights", label: "Playwrights", typeKeys: ["playwrights"] },
+  { key: "composers-lyricists", label: "Composers & Lyricists", typeKeys: ["composers-lyricists"] },
+  { key: "musical-directors", label: "Musical Directors", typeKeys: ["musical-directors"] },
+  { key: "choreographers", label: "Choreographers", typeKeys: ["choreographers"] },
+  { key: "set-designers", label: "Set Designers", typeKeys: ["set-designers"] },
+  { key: "costume-designers", label: "Costume Designers", typeKeys: ["costume-designers"] },
+  { key: "lighting-designers", label: "Lighting Designers", typeKeys: ["lighting-designers"] },
+  { key: "sound-designers", label: "Sound Designers", typeKeys: ["sound-designers"] },
+  { key: "musicians", label: "Musicians", typeKeys: ["musicians"] },
+  { key: "performers", label: "Performers", typeKeys: ["performers"] },
+  { key: "artists", label: "Artists", typeKeys: ["artists"] },
+];
+
+const MASTER_INDEX_FILTERS = [...MASTER_INDEX_WORK_FILTERS, ...MASTER_INDEX_PEOPLE_FILTERS];
+const DEFAULT_MASTER_INDEX_FILTER = "plays";
 
 const CITY_COORDINATES = new Map(Object.entries({
   "toronto": [43.6532, -79.3832],
@@ -641,7 +672,7 @@ function entityValues(record, type) {
   if (role) return uniqueEntityValues([...splitEntityList(record.roles?.[role] || []), ...groupedRoleValues(record, role)]);
   if (type === "people") return uniqueEntityValues([...(record.people || []), ...splitEntityList(record.book_author), ...splitEntityList(record.subject_people), ...productionGroups(record).flatMap((group) => ENTITY_TYPES.filter((item) => item.role).flatMap((item) => splitEntityList(group[item.role] || [])))]);
   if (type === "subjects") return uniqueEntityValues(splitEntityList(record.subject_people));
-  if (type === "books") return isBookReview(record) ? uniqueEntityValues(splitEntityList(record.production_title)) : [];
+  if (type === "books") return isBookReview(record) ? uniqueEntityValues([...splitEntityList(record.production_title), ...groupedEntityValues(record, "production_title")]) : [];
   if (type === "productions") return isBookReview(record) ? [] : uniqueEntityValues([...splitEntityList(record.production_title), ...groupedEntityValues(record, "production_title")]);
   if (type === "book-authors") return uniqueEntityValues(splitEntityList(record.book_author));
   if (type === "publishers") return uniqueEntityValues(splitEntityList(record.publisher));
@@ -1075,6 +1106,17 @@ function renderSecondaryCollections() {
 }
 
 function renderIndexTiles() {
+  const master = document.createElement("a");
+  master.className = "tile index-tile master-index-tile";
+  master.href = "#master-index";
+  const masterHeading = document.createElement("strong");
+  masterHeading.textContent = "Master Index";
+  const masterMeta = document.createElement("span");
+  masterMeta.textContent = "Works and people";
+  const masterDescription = document.createElement("p");
+  masterDescription.textContent = "One consolidated index with quick filters for plays, works, books, music, and people.";
+  master.replaceChildren(masterHeading, masterMeta, masterDescription);
+
   const tiles = ENTITY_TYPES.map((type) => {
     const entries = entityMap(type.key);
     if (!entries.size) return null;
@@ -1090,7 +1132,7 @@ function renderIndexTiles() {
     link.replaceChildren(heading, meta, description);
     return link;
   }).filter(Boolean);
-  els.indexTiles.replaceChildren(...tiles);
+  els.indexTiles.replaceChildren(master, ...tiles);
 }
 
 function recordsForTypeValue(value) {
@@ -1519,6 +1561,11 @@ function renderFrontpageDirectory() {
     }))
     .filter((item) => item.count)
     .sort((a, b) => b.count - a.count || a.label.localeCompare(b.label));
+  indexLinks.unshift({
+    label: "Master Index",
+    href: "#master-index",
+    count: masterIndexEntries(masterIndexFilter(DEFAULT_MASTER_INDEX_FILTER)).length,
+  });
   const publicationLinks = [...entityMap("publications").values()]
     .map((entry) => ({
       label: entry.label,
@@ -1713,58 +1760,162 @@ function indexGroupLabel(label, typeKey = "") {
   return match ? match[0].toUpperCase() : "#";
 }
 
-function renderEntityIndex(typeKey) {
-  const type = entityType(typeKey);
-  if (!type) return;
-  const entries = [...entityMap(typeKey).values()].sort((a, b) =>
-    indexSortText(a.label, typeKey).localeCompare(indexSortText(b.label, typeKey)) || a.label.localeCompare(b.label)
-  );
+function groupedIndexEntries(entries, displayTypeKey = "") {
   const groups = new Map();
   entries.forEach((entry) => {
-    const letter = indexGroupLabel(entry.label, typeKey);
+    const letter = indexGroupLabel(entry.label, entry.typeKey || displayTypeKey);
     if (!groups.has(letter)) groups.set(letter, []);
     groups.get(letter).push(entry);
   });
+  return groups;
+}
 
-  const title = document.createElement("h1");
-  title.textContent = type.label;
-  const count = document.createElement("p");
-  count.className = "index-count";
-  count.textContent = `${entries.length.toLocaleString()} ${entries.length === 1 ? "entry" : "entries"}`;
+function alphaNavForGroups(groups, idPrefix, label) {
   const nav = document.createElement("nav");
   nav.className = "alpha-nav";
-  nav.setAttribute("aria-label", `${type.label} alphabet`);
+  nav.setAttribute("aria-label", `${label} alphabet`);
   [...groups.keys()].forEach((letter) => {
     const button = document.createElement("button");
     button.type = "button";
     button.textContent = letter;
     button.addEventListener("click", () => {
-      document.querySelector(`#${typeKey}-${entitySlug(letter)}`)?.scrollIntoView({
+      document.querySelector(`#${idPrefix}-${entitySlug(letter)}`)?.scrollIntoView({
         behavior: "smooth",
         block: "start",
       });
     });
     nav.append(button);
   });
+  return nav;
+}
+
+function alphaListForGroups(groups, typeKey, idPrefix) {
   const list = document.createElement("div");
   list.className = "alpha-list";
   [...groups].forEach(([letter, items]) => {
     const section = document.createElement("section");
-    section.id = `${typeKey}-${entitySlug(letter)}`;
+    section.id = `${idPrefix}-${entitySlug(letter)}`;
     const heading = document.createElement("h2");
     heading.textContent = letter;
     const links = document.createElement("div");
     links.className = "alpha-links";
     items.forEach((entry) => {
+      const entryTypeKey = entry.typeKey || typeKey;
       const link = document.createElement("a");
-      link.href = `#entity:${typeKey}:${entry.slug}`;
-      link.innerHTML = `<span>${indexDisplayLabel(typeKey, entry.label)}</span><em>${entry.records.length.toLocaleString()}</em>`;
+      link.href = `#entity:${entryTypeKey}:${entry.slug}`;
+      const label = document.createElement("span");
+      label.textContent = indexDisplayLabel(entryTypeKey, entry.label);
+      const count = document.createElement("em");
+      count.textContent = entry.records.length.toLocaleString();
+      link.replaceChildren(label, count);
       links.append(link);
     });
     section.replaceChildren(heading, links);
     list.append(section);
   });
+  return list;
+}
+
+function renderEntityIndex(typeKey) {
+  const type = entityType(typeKey);
+  if (!type) return;
+  const entries = [...entityMap(typeKey).values()].sort((a, b) =>
+    indexSortText(a.label, typeKey).localeCompare(indexSortText(b.label, typeKey)) || a.label.localeCompare(b.label)
+  );
+  const groups = groupedIndexEntries(entries, typeKey);
+
+  const title = document.createElement("h1");
+  title.textContent = type.label;
+  const count = document.createElement("p");
+  count.className = "index-count";
+  count.textContent = `${entries.length.toLocaleString()} ${entries.length === 1 ? "entry" : "entries"}`;
+  const nav = alphaNavForGroups(groups, typeKey, type.label);
+  const list = alphaListForGroups(groups, typeKey, typeKey);
   els.indexContent.replaceChildren(title, count, nav, list);
+}
+
+function masterIndexFilter(filterKey) {
+  return MASTER_INDEX_FILTERS.find((filter) => filter.key === filterKey) || MASTER_INDEX_FILTERS.find((filter) => filter.key === DEFAULT_MASTER_INDEX_FILTER);
+}
+
+function masterIndexEntries(filter) {
+  const map = new Map();
+  state.records.forEach((record) => {
+    if (filter.predicate && !filter.predicate(record)) return;
+    filter.typeKeys.forEach((typeKey) => {
+      entityValues(record, typeKey).forEach((value) => {
+        const label = String(value || "").trim();
+        if (!label) return;
+        const slug = entitySlug(label);
+        const key = `${typeKey}:${slug}`;
+        const existing = map.get(key) || { slug, label, typeKey, records: [], recordSlugs: new Set() };
+        if (!existing.recordSlugs.has(record.slug)) {
+          existing.records.push(record);
+          existing.recordSlugs.add(record.slug);
+        }
+        map.set(key, existing);
+      });
+    });
+  });
+  return [...map.values()]
+    .map(({ recordSlugs, ...entry }) => entry)
+    .sort((a, b) =>
+      indexSortText(a.label, a.typeKey).localeCompare(indexSortText(b.label, b.typeKey)) ||
+      a.label.localeCompare(b.label) ||
+      a.typeKey.localeCompare(b.typeKey)
+    );
+}
+
+function masterIndexButton(filter, activeKey) {
+  const link = document.createElement("a");
+  link.className = "master-index-filter";
+  link.href = filter.key === DEFAULT_MASTER_INDEX_FILTER ? "#master-index" : `#master-index:${filter.key}`;
+  link.setAttribute("aria-pressed", String(filter.key === activeKey));
+  const label = document.createElement("span");
+  label.textContent = filter.label;
+  const count = document.createElement("em");
+  count.textContent = masterIndexEntries(filter).length.toLocaleString();
+  link.replaceChildren(label, count);
+  return link;
+}
+
+function masterIndexFilterGroup(titleText, filters, activeKey) {
+  const group = document.createElement("section");
+  group.className = "master-index-filter-group";
+  const title = document.createElement("h2");
+  title.textContent = titleText;
+  const controls = document.createElement("div");
+  controls.className = "master-index-filter-row";
+  controls.replaceChildren(...filters.map((filter) => masterIndexButton(filter, activeKey)));
+  group.replaceChildren(title, controls);
+  return group;
+}
+
+function renderMasterIndex(filterKey = DEFAULT_MASTER_INDEX_FILTER) {
+  const filter = masterIndexFilter(filterKey);
+  const activeKey = filter.key;
+  const entries = masterIndexEntries(filter);
+  const groups = groupedIndexEntries(entries);
+
+  const title = document.createElement("h1");
+  title.textContent = "Master Index";
+  const count = document.createElement("p");
+  count.className = "index-count";
+  count.textContent = `${filter.label} / ${entries.length.toLocaleString()} ${entries.length === 1 ? "entry" : "entries"}`;
+
+  const sticky = document.createElement("div");
+  sticky.className = "master-index-sticky";
+  const filters = document.createElement("div");
+  filters.className = "master-index-panel";
+  filters.replaceChildren(
+    masterIndexFilterGroup("Works", MASTER_INDEX_WORK_FILTERS, activeKey),
+    masterIndexFilterGroup("People", MASTER_INDEX_PEOPLE_FILTERS, activeKey)
+  );
+  const nav = alphaNavForGroups(groups, `master-${activeKey}`, filter.label);
+  sticky.replaceChildren(filters, nav);
+
+  const list = alphaListForGroups(groups, filter.typeKeys[0], `master-${activeKey}`);
+  els.indexContent.replaceChildren(title, count, sticky, list);
 }
 
 function renderEntityPage(typeKey, slug) {
@@ -3410,6 +3561,15 @@ function route() {
       els.indexView.hidden = false;
       els.indexView.scrollIntoView({ behavior: "auto", block: "start" });
     }
+    return;
+  }
+
+  if (hash === "#master-index" || hash.startsWith("#master-index:")) {
+    const filterKey = hash.startsWith("#master-index:") ? hash.replace("#master-index:", "") : DEFAULT_MASTER_INDEX_FILTER;
+    document.body.classList.add("index-open");
+    renderMasterIndex(filterKey);
+    els.indexView.hidden = false;
+    els.indexView.scrollIntoView({ behavior: "auto", block: "start" });
     return;
   }
 
