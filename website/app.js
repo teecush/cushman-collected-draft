@@ -1,4 +1,4 @@
-const DATA_URL = new URL("../site_export/data/public_reviews.json?v=94", import.meta.url);
+const DATA_URL = new URL("../site_export/data/public_reviews.json?v=95", import.meta.url);
 const CONTENT_ROOT = new URL("../site_export/content/reviews/", import.meta.url);
 const PAGE_SIZE = 36;
 const SHAKESPEARE_COLLECTION = "The Shakespeare Collection";
@@ -261,7 +261,7 @@ const CATEGORY_BROWSE_PROFILES = {
   "musical-theatre": { groupLabel: "Productions", entityType: "productions", emptyLabel: "Articles without a production", intro: "Browse musical-theatre writing by show title, then drill into the articles for that show." },
   television: { groupLabel: "Shows", entityType: "productions", emptyLabel: "Articles without a show title", intro: "Television writing is grouped by show or program title so recurring coverage reads as a clear path." },
   "book-reviews": { groupLabel: "Books", entityType: "books", secondaryEntityType: "book-authors", secondaryLabel: "Authors", emptyLabel: "Articles without a book title", intro: "Book reviews are grouped by reviewed book, with a secondary author index for broader reading paths." },
-  "music-concerts": { groupLabel: "Albums, Concerts, And Performances", entityType: "productions", secondaryEntityType: "musicians", secondaryLabel: "Artists And Musicians", emptyLabel: "Articles without a work title", intro: "Music and concert writing is grouped by recording, concert, or performance title, with artist paths where the metadata supports them." },
+  "music-concerts": { groupLabel: "Artists And Musicians", entityType: "musicians", secondaryEntityType: "productions", secondaryLabel: "Recordings, Concerts, And Performances", emptyLabel: "Articles without an artist", intro: "Music and concert writing is grouped by artist first, with reviewed recordings and performances available as the secondary path." },
   opera: { groupLabel: "Productions", entityType: "productions", emptyLabel: "Articles without a production", intro: "Opera reviews are grouped by production title and can also be filtered by company, venue, and city." },
   comedy: { groupLabel: "Shows", entityType: "productions", secondaryEntityType: "performers", secondaryLabel: "Performers", emptyLabel: "Articles without a show title", intro: "Comedy coverage is grouped by show where possible, with performer paths for stand-up, revue, and solo work." },
   film: { groupLabel: "Films", entityType: "productions", secondaryEntityType: "directors", secondaryLabel: "Directors", emptyLabel: "Articles without a film title", intro: "Film reviews are grouped by film title first, with director and cast indexes still available through chips." },
