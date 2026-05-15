@@ -1,4 +1,4 @@
-const DATA_URL = new URL("../site_export/data/public_reviews.json?v=103", import.meta.url);
+const DATA_URL = new URL("../site_export/data/public_reviews.json?v=104", import.meta.url);
 const CONTENT_ROOT = new URL("../site_export/content/reviews/", import.meta.url);
 const PAGE_SIZE = 36;
 const SHAKESPEARE_COLLECTION = "The Shakespeare Collection";
@@ -3280,6 +3280,49 @@ function stripFrontmatter(markdown) {
   return markdown.replace(/^---[\s\S]*?\n---\s*/, "").trim();
 }
 
+function safeDecodeHashValue(value) {
+  try {
+    return decodeURIComponent(value);
+  } catch {
+    return value;
+  }
+}
+
+function articleContentUrl(sourceFile) {
+  const safePath = String(sourceFile || "")
+    .split("/")
+    .filter(Boolean)
+    .map((part) => encodeURIComponent(part))
+    .join("/");
+  return new URL(safePath, CONTENT_ROOT);
+}
+
+async function fetchArticleMarkdown(record) {
+  if (!record?.source_file) throw new Error("Article record has no source_file");
+  const response = await fetch(articleContentUrl(record.source_file));
+  if (!response.ok) throw new Error(`Article content request failed (${response.status})`);
+  return response.text();
+}
+
+function articleLoadNotice(message, sourceFile = "") {
+  const notice = document.createElement("p");
+  notice.className = "article-load-notice";
+  notice.textContent = sourceFile ? `${message} Source file: ${sourceFile}` : message;
+  return notice;
+}
+
+function plainParagraphNodes(markdown) {
+  return stripFrontmatter(markdown)
+    .split(/\n{2,}/)
+    .map((block) => block.trim())
+    .filter(Boolean)
+    .map((block) => {
+      const p = document.createElement("p");
+      p.textContent = block.replace(/\s*\n\s*/g, " ");
+      return p;
+    });
+}
+
 function paragraphNodes(markdown, record) {
   const inlineEntities = inlineLinkEntities(record);
   const linkedSlugs = new Set();
@@ -3515,11 +3558,29 @@ function escapeRegExp(value) {
 }
 
 async function showReview(slug) {
-  const record = state.records.find((item) => item.slug === slug);
-  if (!record) return;
+  const normalizedSlug = safeDecodeHashValue(slug);
+  const record = state.records.find((item) => item.slug === normalizedSlug);
+  if (!record) {
+    const title = document.createElement("h1");
+    title.textContent = "Article Unavailable";
+    const notice = articleLoadNotice(`No article record matched this link: ${normalizedSlug}`);
+    els.article.replaceChildren(title, notice);
+    els.articleView.hidden = false;
+    els.articleView.scrollIntoView({ behavior: "auto", block: "start" });
+    return;
+  }
 
-  const response = await fetch(new URL(encodeURIComponent(record.source_file), CONTENT_ROOT));
-  const markdown = response.ok ? await response.text() : "";
+  let markdown = "";
+  let notice = null;
+  try {
+    markdown = await fetchArticleMarkdown(record);
+  } catch (error) {
+    console.error("Could not load article body", record.slug, error);
+    notice = articleLoadNotice(
+      "The article record loaded, but the article body file could not be fetched.",
+      record.source_file
+    );
+  }
 
   const title = document.createElement("h1");
   const titleParts = headlineParts(record.title);
@@ -3537,13 +3598,30 @@ async function showReview(slug) {
 
   const body = document.createElement("div");
   body.className = "article-body";
-  body.replaceChildren(...paragraphNodes(markdown, record));
+  let bodyNodes = [];
+  if (markdown) {
+    try {
+      bodyNodes = paragraphNodes(markdown, record);
+    } catch (error) {
+      console.error("Could not render enhanced article body", record.slug, error);
+      bodyNodes = plainParagraphNodes(markdown);
+      notice = articleLoadNotice(
+        "The article text loaded, but enhanced linking failed. Showing plain article text.",
+        record.source_file
+      );
+    }
+  }
+  if (!bodyNodes.length && !notice) {
+    notice = articleLoadNotice("The article has no body text in the exported source file.", record.source_file);
+  }
+  body.replaceChildren(...bodyNodes);
 
   const articleParts = [date, title];
   if (titleParts.deck) articleParts.push(deck);
   articleParts.push(meta);
   const entityLinks = articleEntityLinks(record);
   if (entityLinks) articleParts.push(entityLinks);
+  if (notice) articleParts.push(notice);
   articleParts.push(body);
   els.article.replaceChildren(...articleParts);
   els.articleView.hidden = false;
@@ -3560,7 +3638,14 @@ function route() {
 
   if (hash.startsWith("#review:")) {
     document.body.classList.add("article-open");
-    showReview(hash.replace("#review:", ""));
+    showReview(hash.replace("#review:", "")).catch((error) => {
+      console.error("Could not render article route", error);
+      const title = document.createElement("h1");
+      title.textContent = "Article Unavailable";
+      const notice = articleLoadNotice("The article link could not be rendered. Refresh the page and try again.");
+      els.article.replaceChildren(title, notice);
+      els.articleView.hidden = false;
+    });
     return;
   }
 
