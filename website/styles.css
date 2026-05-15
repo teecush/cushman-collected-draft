@@ -1903,7 +1903,7 @@ h1 {
 
 .master-index-sticky {
   position: sticky;
-  top: 94px;
+  top: 116px;
   z-index: 15;
   margin: 24px 0 22px;
   border: 1px solid rgba(35, 82, 118, 0.14);
@@ -1915,7 +1915,7 @@ h1 {
 .master-index-panel {
   display: grid;
   gap: 8px;
-  padding: 10px 12px;
+  padding: 16px 12px 10px;
   background: linear-gradient(135deg, #f7faf9, #e9f2f5);
   color: var(--ink);
 }
@@ -3356,7 +3356,7 @@ h1 {
   }
 
   .master-index-sticky {
-    top: 86px;
+    top: 100px;
     margin-inline: -8px;
     margin-top: 20px;
     margin-bottom: 18px;
@@ -3364,7 +3364,7 @@ h1 {
 
   .master-index-panel {
     gap: 7px;
-    padding: 9px 10px;
+    padding: 14px 10px 9px;
   }
 
   .master-index-filter-group {
