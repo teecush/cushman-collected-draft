@@ -1,4 +1,4 @@
-const DATA_URL = new URL("../site_export/data/public_reviews.json?v=95", import.meta.url);
+const DATA_URL = new URL("../site_export/data/public_reviews.json?v=96", import.meta.url);
 const CONTENT_ROOT = new URL("../site_export/content/reviews/", import.meta.url);
 const PAGE_SIZE = 36;
 const SHAKESPEARE_COLLECTION = "The Shakespeare Collection";
@@ -1131,7 +1131,11 @@ function groupedBrowseEntries(records, entityTypeKey) {
     });
   });
   return {
-    entries: [...grouped.values()].sort((a, b) => b.records.length - a.records.length || indexSortText(a.label).localeCompare(indexSortText(b.label))),
+    entries: [...grouped.values()].sort((a, b) =>
+      b.records.length - a.records.length ||
+      indexSortText(a.label, entityTypeKey).localeCompare(indexSortText(b.label, entityTypeKey)) ||
+      a.label.localeCompare(b.label)
+    ),
     ungrouped: sortRecords(ungrouped),
   };
 }
