@@ -1,4 +1,4 @@
-const DATA_URL = new URL("../site_export/data/public_reviews.json?v=104", import.meta.url);
+const DATA_URL = new URL("../site_export/data/public_reviews.json?v=105", import.meta.url);
 const CONTENT_ROOT = new URL("../site_export/content/reviews/", import.meta.url);
 const PAGE_SIZE = 36;
 const SHAKESPEARE_COLLECTION = "The Shakespeare Collection";
@@ -3323,6 +3323,63 @@ function plainParagraphNodes(markdown) {
     });
 }
 
+function articleTitleNodes(record) {
+  const title = document.createElement("h1");
+  const titleParts = headlineParts(record?.title || record?.production_title || "Untitled");
+  title.textContent = titleParts.headline;
+  const deck = document.createElement("p");
+  deck.className = "article-deck";
+  deck.textContent = titleParts.deck;
+  const date = document.createElement("time");
+  date.className = "article-date";
+  date.textContent = formatDate(record?.date);
+  const meta = document.createElement("p");
+  meta.className = "article-meta";
+  meta.textContent = record ? [articlePublicationLabel(record), typeLabel(record)].filter(Boolean).join(" / ") : "";
+  return { date, title, deck, meta, titleParts };
+}
+
+function fallbackArticleBodyNodes(markdown) {
+  const nodes = plainParagraphNodes(markdown);
+  return nodes.length
+    ? nodes
+    : [articleLoadNotice("The article has no readable body text in the exported source file.")];
+}
+
+async function renderEmergencyArticle(slug, error) {
+  console.error("Could not render enhanced article route", error);
+  const normalizedSlug = safeDecodeHashValue(slug);
+  const record = state.records.find((item) => item.slug === normalizedSlug);
+  if (!record) {
+    const title = document.createElement("h1");
+    title.textContent = "Article Unavailable";
+    const notice = articleLoadNotice(`No article record matched this link: ${normalizedSlug}`);
+    els.article.replaceChildren(title, notice);
+    els.articleView.hidden = false;
+    return;
+  }
+
+  let markdown = "";
+  let notice = articleLoadNotice("The enhanced article view failed, so the plain article text is shown here.", record.source_file);
+  try {
+    markdown = await fetchArticleMarkdown(record);
+  } catch (fetchError) {
+    console.error("Could not load article body in emergency renderer", record.slug, fetchError);
+    notice = articleLoadNotice("The article record loaded, but the article body file could not be fetched.", record.source_file);
+  }
+
+  const { date, title, deck, meta, titleParts } = articleTitleNodes(record);
+  const body = document.createElement("div");
+  body.className = "article-body";
+  body.replaceChildren(...fallbackArticleBodyNodes(markdown));
+  const articleParts = [date, title];
+  if (titleParts.deck) articleParts.push(deck);
+  articleParts.push(meta, notice, body);
+  els.article.replaceChildren(...articleParts);
+  els.articleView.hidden = false;
+  els.articleView.scrollIntoView({ behavior: "auto", block: "start" });
+}
+
 function paragraphNodes(markdown, record) {
   const inlineEntities = inlineLinkEntities(record);
   const linkedSlugs = new Set();
@@ -3582,19 +3639,7 @@ async function showReview(slug) {
     );
   }
 
-  const title = document.createElement("h1");
-  const titleParts = headlineParts(record.title);
-  title.textContent = titleParts.headline;
-  const deck = document.createElement("p");
-  deck.className = "article-deck";
-  deck.textContent = titleParts.deck;
-  const date = document.createElement("time");
-  date.className = "article-date";
-  date.textContent = formatDate(record.date);
-
-  const meta = document.createElement("p");
-  meta.className = "article-meta";
-  meta.textContent = [articlePublicationLabel(record), typeLabel(record)].filter(Boolean).join(" / ");
+  const { date, title, deck, meta, titleParts } = articleTitleNodes(record);
 
   const body = document.createElement("div");
   body.className = "article-body";
@@ -3619,8 +3664,13 @@ async function showReview(slug) {
   const articleParts = [date, title];
   if (titleParts.deck) articleParts.push(deck);
   articleParts.push(meta);
-  const entityLinks = articleEntityLinks(record);
-  if (entityLinks) articleParts.push(entityLinks);
+  try {
+    const entityLinks = articleEntityLinks(record);
+    if (entityLinks) articleParts.push(entityLinks);
+  } catch (error) {
+    console.error("Could not render article metadata chips", record.slug, error);
+    notice = articleLoadNotice("Metadata chips could not be rendered for this article. Article text is shown below.", record.source_file);
+  }
   if (notice) articleParts.push(notice);
   articleParts.push(body);
   els.article.replaceChildren(...articleParts);
@@ -3638,14 +3688,8 @@ function route() {
 
   if (hash.startsWith("#review:")) {
     document.body.classList.add("article-open");
-    showReview(hash.replace("#review:", "")).catch((error) => {
-      console.error("Could not render article route", error);
-      const title = document.createElement("h1");
-      title.textContent = "Article Unavailable";
-      const notice = articleLoadNotice("The article link could not be rendered. Refresh the page and try again.");
-      els.article.replaceChildren(title, notice);
-      els.articleView.hidden = false;
-    });
+    const slug = hash.replace("#review:", "");
+    showReview(slug).catch((error) => renderEmergencyArticle(slug, error));
     return;
   }
 
