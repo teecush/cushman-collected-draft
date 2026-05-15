@@ -321423,7 +321423,7 @@
     "year": "2011",
     "publication": "",
     "source_publication": "Cushman Collected",
-    "article_category": "Opinion Piece",
+    "article_category": "Obituary",
     "collections": [
       "The Stratford Collection",
       "Thoughts on Shakespeare",
@@ -321433,9 +321433,9 @@
     "editorial_issue_type": "",
     "canonical_file": "",
     "production_title": "",
-    "company": "",
+    "company": "Old Vic; Nottingham Playhouse; Citadel Theatre; Neptune Theatre; Stratford Festival; National Theatre",
     "venue": "",
-    "city": "",
+    "city": "London, England; Nottingham; Edmonton; Halifax; Stratford, Ontario",
     "coordinates": [],
     "people": [
       "John Hirsch",
@@ -321477,78 +321477,40 @@
       "performers": [],
       "artists": []
     },
-    "production_groups": [
-      {
-        "order": "1",
-        "production_title": "John Neville",
-        "company": [
-          "Stratford Festival"
-        ],
-        "venue": [
-          "Stratford Festival"
-        ],
-        "city": [
-          "Stratford, Ontario"
-        ]
-      },
-      {
-        "order": "2",
-        "production_title": "Hamlet",
-        "company": [
-          "Old Vic"
-        ],
-        "venue": [
-          "Old Vic"
-        ],
-        "city": [
-          "Stratford, Ontario"
-        ]
-      },
-      {
-        "order": "3",
-        "production_title": "As You Like It",
-        "company": [
-          "National Theatre"
-        ],
-        "venue": [
-          "National Theatre"
-        ],
-        "city": [
-          "Stratford, Ontario"
-        ]
-      }
-    ],
+    "production_groups": [],
     "media": [],
     "word_count": 1166,
+    "subject_people": "John Neville",
     "coordinate_points": [],
     "display_schema": {
-      "work_type": "productions",
-      "work_label": "Production",
+      "work_type": "subjects",
+      "work_label": "Subject",
       "company_label": "Company",
-      "primary_browse": "productions",
-      "secondary_browse": ""
+      "primary_browse": "subjects",
+      "secondary_browse": "productions"
     },
     "browse_entities": {
       "books": [],
-      "productions": [
-        "As You Like It",
-        "Hamlet",
+      "productions": [],
+      "subjects": [
         "John Neville"
       ],
-      "subjects": [],
       "book_authors": [],
       "publishers": [],
       "companies": [
+        "Citadel Theatre",
         "National Theatre",
+        "Neptune Theatre",
+        "Nottingham Playhouse",
         "Old Vic",
         "Stratford Festival"
       ],
-      "venues": [
-        "National Theatre",
-        "Old Vic",
-        "Stratford Festival"
-      ],
+      "venues": [],
       "cities": [
+        "Edmonton",
+        "Halifax",
+        "London, England",
+        "Nottingham",
         "Stratford, Ontario"
       ],
       "people": [

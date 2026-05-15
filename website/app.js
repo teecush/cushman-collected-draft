@@ -1,4 +1,4 @@
-const DATA_URL = new URL("../site_export/data/public_reviews.json?v=106", import.meta.url);
+const DATA_URL = new URL("../site_export/data/public_reviews.json?v=108", import.meta.url);
 const CONTENT_ROOT = new URL("../site_export/content/reviews/", import.meta.url);
 const PAGE_SIZE = 36;
 const SHAKESPEARE_COLLECTION = "The Shakespeare Collection";
@@ -639,7 +639,18 @@ function displaySchema(record) {
       roleLabels: { musicians: "Artist", performers: "Performer", composer_lyricist: "Composer/Lyricist", musical_director: "Music Director" },
     };
   }
-  if (category === "Obituary" || category === "Profile" || category === "Theatre Interview") {
+  if (category === "Obituary" || category === "Profile" || (category === "Theatre Interview" && splitEntityList(record.subject_people).length)) {
+    return {
+      workType: "subjects",
+      workLabel: "Subject",
+      groupWorkLabel: "Subject",
+      companyLabel: "Company",
+      venueLabel: "Venue",
+      cityLabel: "Place",
+      roleLabels: { actors: "Performer", artists: "Artist" },
+    };
+  }
+  if (category === "Theatre Interview") {
     return {
       workType: "productions",
       workLabel: "Current Work",
@@ -912,6 +923,10 @@ function articlePublicationLabel(record) {
 }
 
 function articleWorkValues(record) {
+  if (["Obituary", "Profile", "Theatre Interview"].includes(String(record.article_category || ""))) {
+    const subjects = splitEntityList(record.subject_people);
+    if (subjects.length) return uniqueEntityValues(subjects);
+  }
   const values = uniqueEntityValues([
     ...splitEntityList(record.production_title),
     ...groupedEntityValues(record, "production_title"),
@@ -3496,8 +3511,9 @@ function articleEntityLinks(record) {
   const groupedCityValues = grouped ? groupedEntityValues(record, "city", splitCityList) : [];
   const singleValues = (field, splitter = splitEntityList) => singleGroup ? splitter(singleGroup[field]) : [];
   const singleRoleValues = (role) => singleGroup ? splitEntityList(singleGroup[role]) : [];
+  const workValues = articleWorkValues(record);
   const productionChipGroups = [
-    [schema.workType, schema.workLabel, valuesExceptGrouped([...articleWorkValues(record), ...singleValues("production_title")], groupedProductionValues).slice(0, 4)],
+    [schema.workType, schema.workLabel, valuesExceptGrouped([...workValues, ...singleValues("production_title")], groupedProductionValues).slice(0, 4)],
   ].filter(([, , values]) => values.length);
   const contextGroups = [
     ["book-authors", "Book Author", splitEntityList(record.book_author).slice(0, 4)],
@@ -3509,7 +3525,7 @@ function articleEntityLinks(record) {
   ].filter(([, , values]) => values.length);
 
   const peopleGroups = [
-    ["subjects", "Subject", splitEntityList(record.subject_people).slice(0, 6)],
+    ["subjects", "Subject", valuesExceptGrouped(splitEntityList(record.subject_people), schema.workType === "subjects" ? workValues : []).slice(0, 6)],
     ...ARTICLE_ROLE_GROUPS.map(([type, prefix, role, limit]) => [type, schema.roleLabels[role] || prefix, valuesExceptGrouped([...(record.roles?.[role] || []), ...singleRoleValues(role)], grouped ? groupedRoleValues(record, role) : []).slice(0, limit)]),
   ].filter(([, , values]) => values.length);
 
