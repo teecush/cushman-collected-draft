@@ -1,4 +1,4 @@
-const DATA_URL = new URL("../site_export/data/public_reviews.json?v=105", import.meta.url);
+const DATA_URL = new URL("../site_export/data/public_reviews.json?v=106", import.meta.url);
 const CONTENT_ROOT = new URL("../site_export/content/reviews/", import.meta.url);
 const PAGE_SIZE = 36;
 const SHAKESPEARE_COLLECTION = "The Shakespeare Collection";
@@ -3496,7 +3496,7 @@ function articleEntityLinks(record) {
   const groupedCityValues = grouped ? groupedEntityValues(record, "city", splitCityList) : [];
   const singleValues = (field, splitter = splitEntityList) => singleGroup ? splitter(singleGroup[field]) : [];
   const singleRoleValues = (role) => singleGroup ? splitEntityList(singleGroup[role]) : [];
-  const productionGroups = [
+  const productionChipGroups = [
     [schema.workType, schema.workLabel, valuesExceptGrouped([...articleWorkValues(record), ...singleValues("production_title")], groupedProductionValues).slice(0, 4)],
   ].filter(([, , values]) => values.length);
   const contextGroups = [
@@ -3513,12 +3513,12 @@ function articleEntityLinks(record) {
     ...ARTICLE_ROLE_GROUPS.map(([type, prefix, role, limit]) => [type, schema.roleLabels[role] || prefix, valuesExceptGrouped([...(record.roles?.[role] || []), ...singleRoleValues(role)], grouped ? groupedRoleValues(record, role) : []).slice(0, limit)]),
   ].filter(([, , values]) => values.length);
 
-  if (!grouped && !productionGroups.length && !contextGroups.length && !peopleGroups.length) return null;
+  if (!grouped && !productionChipGroups.length && !contextGroups.length && !peopleGroups.length) return null;
   const wrap = document.createElement("div");
   wrap.className = `article-entity-groups${grouped ? " article-entity-groups-multiple" : ""}`;
 
   if (grouped) wrap.append(grouped);
-  if (productionGroups.length) wrap.append(articleEntityGroup(schema.workLabel, productionGroups, "production"));
+  if (productionChipGroups.length) wrap.append(articleEntityGroup(schema.workLabel, productionChipGroups, "production"));
   if (contextGroups.length) wrap.append(articleEntityGroup(grouped ? "Shared Context" : "Work", contextGroups, "context"));
   if (peopleGroups.length) wrap.append(articleEntityGroup("People", peopleGroups, "people"));
 
