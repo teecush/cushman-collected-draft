@@ -2252,7 +2252,17 @@ function renderMasterIndex(filterKey = DEFAULT_MASTER_INDEX_FILTER) {
   sticky.className = "master-index-sticky";
   const filters = document.createElement("div");
   filters.className = "master-index-panel";
+  const current = document.createElement("div");
+  current.className = "master-index-current";
+  const currentLabel = document.createElement("span");
+  currentLabel.textContent = "Viewing";
+  const currentValue = document.createElement("strong");
+  currentValue.textContent = filter.label;
+  const currentCount = document.createElement("em");
+  currentCount.textContent = `${entries.length.toLocaleString()} ${entries.length === 1 ? "entry" : "entries"}`;
+  current.replaceChildren(currentLabel, currentValue, currentCount);
   filters.replaceChildren(
+    current,
     masterIndexFilterGroup("Works", MASTER_INDEX_WORK_FILTERS, activeKey),
     masterIndexFilterGroup("People", orderedMasterPeopleFilters(), activeKey)
   );
