@@ -1,4 +1,4 @@
-const DATA_URL = new URL("../site_export/data/public_reviews.json?v=98", import.meta.url);
+const DATA_URL = new URL("../site_export/data/public_reviews.json?v=99", import.meta.url);
 const CONTENT_ROOT = new URL("../site_export/content/reviews/", import.meta.url);
 const PAGE_SIZE = 36;
 const SHAKESPEARE_COLLECTION = "The Shakespeare Collection";
@@ -876,6 +876,19 @@ function typeGroup(record) {
 
 function typeLabel(record) {
   return typeGroup(record).label;
+}
+
+function articlePublicationLabel(record) {
+  return record.publication || record.source_publication || "";
+}
+
+function articleWorkValues(record) {
+  const values = uniqueEntityValues([
+    ...splitEntityList(record.production_title),
+    ...groupedEntityValues(record, "production_title"),
+  ]);
+  if (!isBookReview(record)) return values;
+  return uniqueEntityValues(values.flatMap((value) => value.split(/\s+\/\s+/).map((part) => part.trim()).filter(Boolean)));
 }
 
 function searchable(record) {
@@ -2586,6 +2599,11 @@ function renderLeafletMap(container, points, options = {}) {
     });
     map.getContainer().append(control);
   }
+  const legend = L.DomUtil.create("div", "leaflet-map-legend");
+  legend.innerHTML = `<span><i class="legend-city"></i>City cluster</span><span><i class="legend-venue"></i>Venue</span>`;
+  L.DomEvent.disableClickPropagation(legend);
+  L.DomEvent.disableScrollPropagation(legend);
+  map.getContainer().append(legend);
   const refreshMapSize = () => {
     map.invalidateSize();
     if (options.initialCenter) map.setView(options.initialCenter, options.initialZoom || 8, { animate: false });
@@ -3168,6 +3186,15 @@ function articleProductionGroups(record) {
 
   const wrap = document.createElement("div");
   wrap.className = `article-production-groups${groups.length > 5 ? " article-production-groups-long" : ""}`;
+  const collapsed = groups.length > 5 ? document.createElement("details") : null;
+  if (collapsed) {
+    collapsed.className = "article-production-more";
+    collapsed.open = !window.matchMedia("(max-width: 760px)").matches;
+    const summary = document.createElement("summary");
+    summary.textContent = `${groups.length - 4} more productions`;
+    collapsed.append(summary);
+  }
+
   groups.forEach((group, index) => {
     const section = document.createElement("section");
     const chipRows = [
@@ -3186,8 +3213,13 @@ function articleProductionGroups(record) {
       values.forEach((value) => nav.append(entityChip(type, value, prefix, "production")));
     });
     section.replaceChildren(title, nav);
-    wrap.append(section);
+    if (collapsed && index >= 4) {
+      collapsed.append(section);
+    } else {
+      wrap.append(section);
+    }
   });
+  if (collapsed) wrap.append(collapsed);
   return wrap;
 }
 
@@ -3203,7 +3235,7 @@ function articleEntityLinks(record) {
   const singleValues = (field, splitter = splitEntityList) => singleGroup ? splitter(singleGroup[field]) : [];
   const singleRoleValues = (role) => singleGroup ? splitEntityList(singleGroup[role]) : [];
   const productionGroups = [
-    [schema.workType, schema.workLabel, valuesExceptGrouped([...splitEntityList(record.production_title), ...singleValues("production_title")], groupedProductionValues).slice(0, 4)],
+    [schema.workType, schema.workLabel, valuesExceptGrouped([...articleWorkValues(record), ...singleValues("production_title")], groupedProductionValues).slice(0, 4)],
   ].filter(([, , values]) => values.length);
   const contextGroups = [
     ["book-authors", "Book Author", splitEntityList(record.book_author).slice(0, 4)],
@@ -3339,7 +3371,7 @@ async function showReview(slug) {
 
   const meta = document.createElement("p");
   meta.className = "article-meta";
-  meta.textContent = [record.publication, typeLabel(record)].filter(Boolean).join(" / ");
+  meta.textContent = [articlePublicationLabel(record), typeLabel(record)].filter(Boolean).join(" / ");
 
   const body = document.createElement("div");
   body.className = "article-body";

@@ -1460,6 +1460,22 @@ h1 {
   padding-left: 0;
 }
 
+.article-production-more {
+  display: grid;
+  gap: 10px;
+}
+
+.article-production-more summary {
+  justify-self: start;
+  cursor: pointer;
+  color: var(--blue-dark);
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
 .article-entity-groups-multiple .article-entity-section-context {
   margin-top: 2px;
 }
@@ -2100,6 +2116,48 @@ h1 {
   color: var(--ink);
   font-family: var(--serif);
   font-size: 17px;
+}
+
+.leaflet-map-legend {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  z-index: 660;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  border: 1px solid rgba(17, 17, 17, 0.16);
+  padding: 7px 9px;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.leaflet-map-legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.leaflet-map-legend i {
+  display: inline-block;
+  border: 2px solid #2d2540;
+  border-radius: 999px;
+  background: #74618e;
+}
+
+.leaflet-map-legend .legend-city {
+  width: 15px;
+  height: 15px;
+}
+
+.leaflet-map-legend .legend-venue {
+  width: 9px;
+  height: 9px;
+  background: #8a6fa8;
 }
 
 .leaflet-popup-content {

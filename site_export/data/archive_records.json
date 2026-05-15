@@ -16,10 +16,10 @@
     "publication_status": "duplicate_variant",
     "editorial_issue_type": "",
     "canonical_file": "1976.04.11.The_Observer.Much_Ado_In_India.md",
-    "production_title": "Much Ado About Nothing; John Barton",
-    "company": "Royal Shakespeare Company",
+    "production_title": "",
+    "company": "",
     "venue": "",
-    "city": "Stratford-upon-Avon",
+    "city": "",
     "coordinates": [],
     "people": [
       "Donald Sinden",
@@ -62,7 +62,28 @@
       "performers": [],
       "artists": []
     },
-    "production_groups": [],
+    "production_groups": [
+      {
+        "order": "1",
+        "production_title": "Much Ado About Nothing",
+        "company": [
+          "Royal Shakespeare Company"
+        ],
+        "city": [
+          "Stratford-upon-Avon"
+        ]
+      },
+      {
+        "order": "2",
+        "production_title": "John Barton",
+        "company": [
+          "Royal Shakespeare Company"
+        ],
+        "city": [
+          "Stratford-upon-Avon"
+        ]
+      }
+    ],
     "media": [],
     "word_count": 941,
     "coordinate_points": [],
@@ -116,10 +137,10 @@
     "publication_status": "duplicate_variant",
     "editorial_issue_type": "",
     "canonical_file": "1977.05.15.The_Observer.Profile_Trevor_Nunn.md",
-    "production_title": "John Barton; Peter Brook; The Other Place",
-    "company": "Royal Shakespeare Company",
+    "production_title": "",
+    "company": "",
     "venue": "",
-    "city": "Stratford-upon-Avon",
+    "city": "",
     "coordinates": [],
     "people": [
       "John Barton",
@@ -157,7 +178,38 @@
       "performers": [],
       "artists": []
     },
-    "production_groups": [],
+    "production_groups": [
+      {
+        "order": "1",
+        "production_title": "John Barton",
+        "company": [
+          "Royal Shakespeare Company"
+        ],
+        "city": [
+          "Stratford-upon-Avon"
+        ]
+      },
+      {
+        "order": "2",
+        "production_title": "Peter Brook",
+        "company": [
+          "Royal Shakespeare Company"
+        ],
+        "city": [
+          "Stratford-upon-Avon"
+        ]
+      },
+      {
+        "order": "3",
+        "production_title": "The Other Place",
+        "company": [
+          "Royal Shakespeare Company"
+        ],
+        "city": [
+          "Stratford-upon-Avon"
+        ]
+      }
+    ],
     "media": [],
     "word_count": 1073,
     "coordinate_points": [],
@@ -209,10 +261,10 @@
     "publication_status": "duplicate_variant",
     "editorial_issue_type": "",
     "canonical_file": "1983.06.19.The_Observer.Sir_Ralph_In_Naples.md",
-    "production_title": "Henry VIII; Richard Griffiths",
-    "company": "Royal Shakespeare Company",
+    "production_title": "",
+    "company": "",
     "venue": "",
-    "city": "Stratford-upon-Avon",
+    "city": "",
     "coordinates": [],
     "people": [
       "Gemma Jones",
@@ -251,7 +303,28 @@
       "performers": [],
       "artists": []
     },
-    "production_groups": [],
+    "production_groups": [
+      {
+        "order": "1",
+        "production_title": "Henry VIII",
+        "company": [
+          "Royal Shakespeare Company"
+        ],
+        "city": [
+          "Stratford-upon-Avon"
+        ]
+      },
+      {
+        "order": "2",
+        "production_title": "Richard Griffiths",
+        "company": [
+          "Royal Shakespeare Company"
+        ],
+        "city": [
+          "Stratford-upon-Avon"
+        ]
+      }
+    ],
     "media": [],
     "word_count": 546,
     "coordinate_points": [],
@@ -13433,10 +13506,10 @@
     "publication_status": "archive_only",
     "editorial_issue_type": "duplicate_digest",
     "canonical_file": "",
-    "production_title": "Song and Dance; Care; Sparta; Boygroove; Wingfield's Inferno; 10",
-    "company": "Danforth Music Hall; Tarragon Theatre; Theatre Passe Muraille; Diesel Playhouse",
-    "venue": "Danforth Music Hall; Tarragon Theatre; Theatre Passe Muraille; Diesel Playhouse",
-    "city": "Toronto",
+    "production_title": "",
+    "company": "",
+    "venue": "",
+    "city": "",
     "coordinates": [],
     "people": [
       "Andrew Lloyd Webber",
@@ -13495,7 +13568,50 @@
       "performers": [],
       "artists": []
     },
-    "production_groups": [],
+    "production_groups": [
+      {
+        "order": "1",
+        "production_title": "Song and Dance",
+        "city": [
+          "Toronto"
+        ]
+      },
+      {
+        "order": "2",
+        "production_title": "Care",
+        "city": [
+          "Toronto"
+        ]
+      },
+      {
+        "order": "3",
+        "production_title": "Sparta",
+        "city": [
+          "Toronto"
+        ]
+      },
+      {
+        "order": "4",
+        "production_title": "Boygroove",
+        "city": [
+          "Toronto"
+        ]
+      },
+      {
+        "order": "5",
+        "production_title": "Wingfield's Inferno",
+        "city": [
+          "Toronto"
+        ]
+      },
+      {
+        "order": "6",
+        "production_title": "10",
+        "city": [
+          "Toronto"
+        ]
+      }
+    ],
     "media": [],
     "word_count": 1488,
     "coordinate_points": [],
@@ -13519,18 +13635,8 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
-      "companies": [
-        "Danforth Music Hall",
-        "Diesel Playhouse",
-        "Tarragon Theatre",
-        "Theatre Passe Muraille"
-      ],
-      "venues": [
-        "Danforth Music Hall",
-        "Diesel Playhouse",
-        "Tarragon Theatre",
-        "Theatre Passe Muraille"
-      ],
+      "companies": [],
+      "venues": [],
       "cities": [
         "Toronto"
       ],
@@ -13567,10 +13673,10 @@
     "publication_status": "archive_only",
     "editorial_issue_type": "duplicate_digest",
     "canonical_file": "",
-    "production_title": "A Beautiful View; Mathilde; Arms and the Man; The Heiress; High",
-    "company": "Da Da Kamera; Nightwood Theatre; Shaw Festival; Danforth Music Hall; Tarragon",
-    "venue": "Buddies in Bad Times Theatre; Young Centre for the Performing Arts",
-    "city": "Toronto",
+    "production_title": "",
+    "company": "",
+    "venue": "",
+    "city": "",
     "coordinates": [],
     "people": [
       "Caroline Gillis",
@@ -13609,7 +13715,58 @@
       "performers": [],
       "artists": []
     },
-    "production_groups": [],
+    "production_groups": [
+      {
+        "order": "1",
+        "production_title": "A Beautiful View",
+        "company": [
+          "Da Da Kamera"
+        ],
+        "city": [
+          "Toronto"
+        ]
+      },
+      {
+        "order": "2",
+        "production_title": "Mathilde",
+        "company": [
+          "Nightwood Theatre"
+        ],
+        "city": [
+          "Toronto"
+        ]
+      },
+      {
+        "order": "3",
+        "production_title": "Arms and the Man",
+        "company": [
+          "Shaw Festival"
+        ],
+        "city": [
+          "Toronto"
+        ]
+      },
+      {
+        "order": "4",
+        "production_title": "The Heiress",
+        "company": [
+          "Danforth Music Hall"
+        ],
+        "city": [
+          "Toronto"
+        ]
+      },
+      {
+        "order": "5",
+        "production_title": "High",
+        "company": [
+          "Tarragon"
+        ],
+        "city": [
+          "Toronto"
+        ]
+      }
+    ],
     "media": [],
     "word_count": 1699,
     "coordinate_points": [],
@@ -13639,10 +13796,7 @@
         "Shaw Festival",
         "Tarragon"
       ],
-      "venues": [
-        "Buddies in Bad Times Theatre",
-        "Young Centre for the Performing Arts"
-      ],
+      "venues": [],
       "cities": [
         "Toronto"
       ],
@@ -13755,10 +13909,10 @@
     "publication_status": "archive_only",
     "editorial_issue_type": "duplicate_digest",
     "canonical_file": "",
-    "production_title": "'Golda's Balcony; Mathilde; Care; Wingfield's Inferno; Boygroove",
-    "company": "Elgin Theatre; Nightwood Theatre; Tarragon Theatre; Mirvish Productions",
-    "venue": "Elgin Theatre; Young Centre for the Performing Arts; Tarragon Theatre; Royal",
-    "city": "Toronto",
+    "production_title": "",
+    "company": "",
+    "venue": "",
+    "city": "",
     "coordinates": [],
     "people": [
       "Anand Rajaram",
@@ -13816,7 +13970,43 @@
       "performers": [],
       "artists": []
     },
-    "production_groups": [],
+    "production_groups": [
+      {
+        "order": "1",
+        "production_title": "'Golda's Balcony",
+        "city": [
+          "Toronto"
+        ]
+      },
+      {
+        "order": "2",
+        "production_title": "Mathilde",
+        "city": [
+          "Toronto"
+        ]
+      },
+      {
+        "order": "3",
+        "production_title": "Care",
+        "city": [
+          "Toronto"
+        ]
+      },
+      {
+        "order": "4",
+        "production_title": "Wingfield's Inferno",
+        "city": [
+          "Toronto"
+        ]
+      },
+      {
+        "order": "5",
+        "production_title": "Boygroove",
+        "city": [
+          "Toronto"
+        ]
+      }
+    ],
     "media": [],
     "word_count": 1613,
     "coordinate_points": [],
@@ -13839,18 +14029,8 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
-      "companies": [
-        "Elgin Theatre",
-        "Mirvish Productions",
-        "Nightwood Theatre",
-        "Tarragon Theatre"
-      ],
-      "venues": [
-        "Elgin Theatre",
-        "Royal",
-        "Tarragon Theatre",
-        "Young Centre for the Performing Arts"
-      ],
+      "companies": [],
+      "venues": [],
       "cities": [
         "Toronto"
       ],
@@ -14693,10 +14873,10 @@
     "publication_status": "archive_only",
     "editorial_issue_type": "duplicate_digest",
     "canonical_file": "",
-    "production_title": "The Russian Play; The Review; 4:48 Psychosis; Hip-Hop: Who Stole the Soul; Go Forth and Multiply; Whistle Me Home",
-    "company": "SummerWorks Festival",
-    "venue": "Theatre Passe Muraille Backspace; Factory Mainspace",
-    "city": "Toronto",
+    "production_title": "",
+    "company": "",
+    "venue": "",
+    "city": "",
     "coordinates": [],
     "people": [
       "Adam Pettle",
@@ -14749,7 +14929,68 @@
       "performers": [],
       "artists": []
     },
-    "production_groups": [],
+    "production_groups": [
+      {
+        "order": "1",
+        "production_title": "The Russian Play",
+        "company": [
+          "SummerWorks Festival"
+        ],
+        "city": [
+          "Toronto"
+        ]
+      },
+      {
+        "order": "2",
+        "production_title": "The Review",
+        "company": [
+          "SummerWorks Festival"
+        ],
+        "city": [
+          "Toronto"
+        ]
+      },
+      {
+        "order": "3",
+        "production_title": "4:48 Psychosis",
+        "company": [
+          "SummerWorks Festival"
+        ],
+        "city": [
+          "Toronto"
+        ]
+      },
+      {
+        "order": "4",
+        "production_title": "Hip-Hop: Who Stole the Soul",
+        "company": [
+          "SummerWorks Festival"
+        ],
+        "city": [
+          "Toronto"
+        ]
+      },
+      {
+        "order": "5",
+        "production_title": "Go Forth and Multiply",
+        "company": [
+          "SummerWorks Festival"
+        ],
+        "city": [
+          "Toronto"
+        ]
+      },
+      {
+        "order": "6",
+        "production_title": "Whistle Me Home",
+        "company": [
+          "SummerWorks Festival"
+        ],
+        "city": [
+          "Toronto"
+        ]
+      }
+    ],
     "media": [],
     "word_count": 1189,
     "coordinate_points": [],
@@ -14776,10 +15017,7 @@
       "companies": [
         "SummerWorks Festival"
       ],
-      "venues": [
-        "Factory Mainspace",
-        "Theatre Passe Muraille Backspace"
-      ],
+      "venues": [],
       "cities": [
         "Toronto"
       ],
@@ -15073,10 +15311,10 @@
     "publication_status": "archive_only",
     "editorial_issue_type": "duplicate_digest",
     "canonical_file": "",
-    "production_title": "blood.claat; Menopause Out Loud",
+    "production_title": "",
     "company": "",
-    "venue": "Theatre Passe Muraille; Capitol Event Theatre",
-    "city": "Toronto",
+    "venue": "",
+    "city": "",
     "coordinates": [],
     "people": [
       "Alana Bridgewater",
@@ -15126,7 +15364,28 @@
       "performers": [],
       "artists": []
     },
-    "production_groups": [],
+    "production_groups": [
+      {
+        "order": "1",
+        "production_title": "blood.claat",
+        "venue": [
+          "Theatre Passe Muraille"
+        ],
+        "city": [
+          "Toronto"
+        ]
+      },
+      {
+        "order": "2",
+        "production_title": "Menopause Out Loud",
+        "venue": [
+          "Capitol Event Theatre"
+        ],
+        "city": [
+          "Toronto"
+        ]
+      }
+    ],
     "media": [],
     "word_count": 1835,
     "coordinate_points": [],
@@ -16102,10 +16361,10 @@
     "publication_status": "archive_only",
     "editorial_issue_type": "duplicate_digest",
     "canonical_file": "",
-    "production_title": "Ever Thus; King Leir; Chekhov's Heartache",
-    "company": "Moonhorse Dance Theatre; Shakespeare and the Queen's Men; Theatre Smith-Gilmour",
-    "venue": "Young Centre for the Performing Arts; Glen Morris Studio; Factory Theatre Studio",
-    "city": "Toronto",
+    "production_title": "",
+    "company": "",
+    "venue": "",
+    "city": "",
     "coordinates": [],
     "people": [],
     "roles": {
@@ -16133,7 +16392,47 @@
       "performers": [],
       "artists": []
     },
-    "production_groups": [],
+    "production_groups": [
+      {
+        "order": "1",
+        "production_title": "Ever Thus",
+        "company": [
+          "Moonhorse Dance Theatre"
+        ],
+        "venue": [
+          "Young Centre for the Performing Arts"
+        ],
+        "city": [
+          "Toronto"
+        ]
+      },
+      {
+        "order": "2",
+        "production_title": "King Leir",
+        "company": [
+          "Shakespeare and the Queen's Men"
+        ],
+        "venue": [
+          "Glen Morris Studio"
+        ],
+        "city": [
+          "Toronto"
+        ]
+      },
+      {
+        "order": "3",
+        "production_title": "Chekhov's Heartache",
+        "company": [
+          "Theatre Smith-Gilmour"
+        ],
+        "venue": [
+          "Factory Theatre Studio"
+        ],
+        "city": [
+          "Toronto"
+        ]
+      }
+    ],
     "media": [],
     "word_count": 2117,
     "coordinate_points": [],
@@ -16281,10 +16580,10 @@
     "publication_status": "archive_only",
     "editorial_issue_type": "duplicate_digest",
     "canonical_file": "",
-    "production_title": "Apple; Cosi fan tutte; Friar Bacon and Friar Bungay",
-    "company": "Factory Theatre; Canadian Opera Company; Shakespeare and the Queen's Men",
-    "venue": "Factory Theatre; Four Seasons Centre; Arts and Letters Club of Toronto",
-    "city": "Toronto",
+    "production_title": "",
+    "company": "",
+    "venue": "",
+    "city": "",
     "coordinates": [],
     "people": [
       "Fiona Reid",
@@ -16335,7 +16634,47 @@
       "performers": [],
       "artists": []
     },
-    "production_groups": [],
+    "production_groups": [
+      {
+        "order": "1",
+        "production_title": "Apple",
+        "company": [
+          "Factory Theatre"
+        ],
+        "venue": [
+          "Factory Theatre"
+        ],
+        "city": [
+          "Toronto"
+        ]
+      },
+      {
+        "order": "2",
+        "production_title": "Cosi fan tutte",
+        "company": [
+          "Canadian Opera Company"
+        ],
+        "venue": [
+          "Four Seasons Centre"
+        ],
+        "city": [
+          "Toronto"
+        ]
+      },
+      {
+        "order": "3",
+        "production_title": "Friar Bacon and Friar Bungay",
+        "company": [
+          "Shakespeare and the Queen's Men"
+        ],
+        "venue": [
+          "Arts and Letters Club of Toronto"
+        ],
+        "city": [
+          "Toronto"
+        ]
+      }
+    ],
     "media": [],
     "word_count": 2223,
     "coordinate_points": [],
@@ -16792,10 +17131,10 @@
     "publication_status": "archive_only",
     "editorial_issue_type": "duplicate_digest",
     "canonical_file": "",
-    "production_title": "Seussical; Songs for a New World; Thom Pain",
-    "company": "Lorraine Kimsa Theatre for Young People; Young Centre for the Performing Arts; Tarragon Theatre",
-    "venue": "Lorraine Kimsa Theatre for Young People; Young Centre for the Performing Arts; Tarragon Theatre Extra Space",
-    "city": "Toronto",
+    "production_title": "",
+    "company": "",
+    "venue": "",
+    "city": "",
     "coordinates": [],
     "people": [
       "Allen MacInnis",
@@ -16851,7 +17190,47 @@
       "performers": [],
       "artists": []
     },
-    "production_groups": [],
+    "production_groups": [
+      {
+        "order": "1",
+        "production_title": "Seussical",
+        "company": [
+          "Lorraine Kimsa Theatre for Young People"
+        ],
+        "venue": [
+          "Lorraine Kimsa Theatre for Young People"
+        ],
+        "city": [
+          "Toronto"
+        ]
+      },
+      {
+        "order": "2",
+        "production_title": "Songs for a New World",
+        "company": [
+          "Young Centre for the Performing Arts"
+        ],
+        "venue": [
+          "Young Centre for the Performing Arts"
+        ],
+        "city": [
+          "Toronto"
+        ]
+      },
+      {
+        "order": "3",
+        "production_title": "Thom Pain",
+        "company": [
+          "Tarragon Theatre"
+        ],
+        "venue": [
+          "Tarragon Theatre Extra Space"
+        ],
+        "city": [
+          "Toronto"
+        ]
+      }
+    ],
     "media": [],
     "word_count": 2136,
     "coordinate_points": [],
@@ -16916,10 +17295,10 @@
     "publication_status": "archive_only",
     "editorial_issue_type": "duplicate_digest",
     "canonical_file": "",
-    "production_title": "A Christmas Carol; Radio City Christmas Spectacular; Head-Smashed-In",
+    "production_title": "",
     "company": "",
     "venue": "",
-    "city": "Toronto",
+    "city": "",
     "coordinates": [],
     "people": [],
     "roles": {
@@ -16947,7 +17326,29 @@
       "performers": [],
       "artists": []
     },
-    "production_groups": [],
+    "production_groups": [
+      {
+        "order": "1",
+        "production_title": "A Christmas Carol",
+        "city": [
+          "Toronto"
+        ]
+      },
+      {
+        "order": "2",
+        "production_title": "Radio City Christmas Spectacular",
+        "city": [
+          "Toronto"
+        ]
+      },
+      {
+        "order": "3",
+        "production_title": "Head-Smashed-In",
+        "city": [
+          "Toronto"
+        ]
+      }
+    ],
     "media": [],
     "word_count": 934,
     "coordinate_points": [],

@@ -74542,7 +74542,10 @@
     },
     "browse_entities": {
       "books": [
-        "The Victorian Fairy Tale Book / The Canadian Children's Treasury / Could You Stop Josephine / The Wildlife ABC"
+        "The Victorian Fairy Tale Book",
+        "The Canadian Children's Treasury",
+        "Could You Stop Josephine",
+        "The Wildlife ABC"
       ],
       "productions": [
         "The Victorian Fairy Tale Book / The Canadian Children's Treasury / Could You Stop Josephine / The Wildlife ABC"
@@ -75650,7 +75653,8 @@
     },
     "browse_entities": {
       "books": [
-        "Zero Mostel: A Biography / Citizen Welles: A Biography of Orson Welles"
+        "Zero Mostel: A Biography",
+        "Citizen Welles: A Biography of Orson Welles"
       ],
       "productions": [
         "Zero Mostel: A Biography / Citizen Welles: A Biography of Orson Welles"
@@ -77578,7 +77582,8 @@
     },
     "browse_entities": {
       "books": [
-        "Broadway Anecdotes / All My Best Friends"
+        "Broadway Anecdotes",
+        "All My Best Friends"
       ],
       "productions": [
         "Broadway Anecdotes / All My Best Friends"
@@ -82299,7 +82304,8 @@
     },
     "browse_entities": {
       "books": [
-        "Inventing Champagne: The Worlds of Lerner and Loewe / All His Jazz: The Life and Death of Bob Fosse"
+        "Inventing Champagne: The Worlds of Lerner and Loewe",
+        "All His Jazz: The Life and Death of Bob Fosse"
       ],
       "productions": [
         "Inventing Champagne: The Worlds of Lerner and Loewe / All His Jazz: The Life and Death of Bob Fosse"
@@ -88887,7 +88893,8 @@
     },
     "browse_entities": {
       "books": [
-        "The Memory of All That: The Life of George Gershwin / Gershwin Remembered"
+        "The Memory of All That: The Life of George Gershwin",
+        "Gershwin Remembered"
       ],
       "productions": [
         "The Memory of All That: The Life of George Gershwin / Gershwin Remembered"
@@ -89354,7 +89361,8 @@
     },
     "browse_entities": {
       "books": [
-        "Ella Fitzgerald / The Complete Ella Fitzgerald Song Books"
+        "Ella Fitzgerald",
+        "The Complete Ella Fitzgerald Song Books"
       ],
       "productions": [
         "Ella Fitzgerald / The Complete Ella Fitzgerald Song Books"
@@ -99936,7 +99944,10 @@
     },
     "browse_entities": {
       "books": [
-        "All the Way: A Biography of Frank Sinatra / Sinatra: The Artist and the Man / The Way You Wear Your Hat: Frank Sinatra and the Lost Art of Livin' / All or Nothing at All: A Life of Frank Sinatra"
+        "All the Way: A Biography of Frank Sinatra",
+        "Sinatra: The Artist and the Man",
+        "The Way You Wear Your Hat: Frank Sinatra and the Lost Art of Livin'",
+        "All or Nothing at All: A Life of Frank Sinatra"
       ],
       "productions": [
         "All the Way: A Biography of Frank Sinatra / Sinatra: The Artist and the Man / The Way You Wear Your Hat: Frank Sinatra and the Lost Art of Livin' / All or Nothing at All: A Life of Frank Sinatra"
@@ -155723,10 +155734,10 @@
     "publication_status": "publish",
     "editorial_issue_type": "",
     "canonical_file": "",
-    "production_title": "Richard III; All's Well That Ends Well",
-    "company": "Stratford Festival",
-    "venue": "Stratford Festival",
-    "city": "Stratford, Ontario",
+    "production_title": "",
+    "company": "",
+    "venue": "",
+    "city": "",
     "coordinates": [],
     "people": [
       "Alec Guinness",
@@ -155787,7 +155798,34 @@
       "performers": [],
       "artists": []
     },
-    "production_groups": [],
+    "production_groups": [
+      {
+        "order": "1",
+        "production_title": "Richard III",
+        "company": [
+          "Stratford Festival"
+        ],
+        "venue": [
+          "Stratford Festival"
+        ],
+        "city": [
+          "Stratford, Ontario"
+        ]
+      },
+      {
+        "order": "2",
+        "production_title": "All's Well That Ends Well",
+        "company": [
+          "Stratford Festival"
+        ],
+        "venue": [
+          "Stratford Festival"
+        ],
+        "city": [
+          "Stratford, Ontario"
+        ]
+      }
+    ],
     "media": [],
     "word_count": 2250,
     "coordinate_points": [],
@@ -222068,7 +222106,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "",
     "canonical_file": "",
-    "production_title": "Classic American Popular Song; The American Songbook",
+    "production_title": "",
     "company": "",
     "venue": "",
     "city": "",
@@ -222104,7 +222142,16 @@
       "performers": [],
       "artists": []
     },
-    "production_groups": [],
+    "production_groups": [
+      {
+        "order": "1",
+        "production_title": "Classic American Popular Song"
+      },
+      {
+        "order": "2",
+        "production_title": "The American Songbook"
+      }
+    ],
     "media": [],
     "word_count": 1447,
     "book_author": "Alec Wilder; David Jenness; Don Velsey; Ken Bloom",
@@ -229266,7 +229313,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "",
     "canonical_file": "",
-    "production_title": "The Drowsy Chaperone; Jersey Boys; The History Boys",
+    "production_title": "",
     "company": "",
     "venue": "",
     "city": "",
@@ -229309,7 +229356,20 @@
       "performers": [],
       "artists": []
     },
-    "production_groups": [],
+    "production_groups": [
+      {
+        "order": "1",
+        "production_title": "The Drowsy Chaperone"
+      },
+      {
+        "order": "2",
+        "production_title": "Jersey Boys"
+      },
+      {
+        "order": "3",
+        "production_title": "The History Boys"
+      }
+    ],
     "media": [],
     "word_count": 578,
     "coordinate_points": [],
@@ -297194,7 +297254,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "",
     "canonical_file": "",
-    "production_title": "24; Lost",
+    "production_title": "",
     "company": "",
     "venue": "",
     "city": "",
@@ -297235,7 +297295,16 @@
       "performers": [],
       "artists": []
     },
-    "production_groups": [],
+    "production_groups": [
+      {
+        "order": "1",
+        "production_title": "24"
+      },
+      {
+        "order": "2",
+        "production_title": "Lost"
+      }
+    ],
     "media": [],
     "word_count": 869,
     "coordinate_points": [],
@@ -305006,7 +305075,8 @@
     },
     "browse_entities": {
       "books": [
-        "Finishing the Hat / Biographical Guide to the Great Jazz and Pop"
+        "Finishing the Hat",
+        "Biographical Guide to the Great Jazz and Pop"
       ],
       "productions": [
         "Finishing the Hat / Biographical Guide to the Great Jazz and Pop"
@@ -313918,10 +313988,10 @@
     "publication_status": "publish",
     "editorial_issue_type": "",
     "canonical_file": "",
-    "production_title": "Richard III; Martha Henry",
-    "company": "Stratford Festival",
-    "venue": "Stratford Festival",
-    "city": "Stratford, Ontario",
+    "production_title": "",
+    "company": "",
+    "venue": "",
+    "city": "",
     "coordinates": [],
     "people": [
       "Bethany Jillard",
@@ -313995,7 +314065,34 @@
       "performers": [],
       "artists": []
     },
-    "production_groups": [],
+    "production_groups": [
+      {
+        "order": "1",
+        "production_title": "Richard III",
+        "company": [
+          "Stratford Festival"
+        ],
+        "venue": [
+          "Stratford Festival"
+        ],
+        "city": [
+          "Stratford, Ontario"
+        ]
+      },
+      {
+        "order": "2",
+        "production_title": "Martha Henry",
+        "company": [
+          "Stratford Festival"
+        ],
+        "venue": [
+          "Stratford Festival"
+        ],
+        "city": [
+          "Stratford, Ontario"
+        ]
+      }
+    ],
     "media": [],
     "word_count": 1015,
     "coordinate_points": [],
@@ -321335,10 +321432,10 @@
     "publication_status": "publish",
     "editorial_issue_type": "",
     "canonical_file": "",
-    "production_title": "John Neville; Hamlet; As You Like It",
-    "company": "Stratford Festival; Old Vic; National Theatre",
-    "venue": "Stratford Festival; Old Vic; National Theatre",
-    "city": "Stratford, Ontario",
+    "production_title": "",
+    "company": "",
+    "venue": "",
+    "city": "",
     "coordinates": [],
     "people": [
       "John Hirsch",
@@ -321380,7 +321477,47 @@
       "performers": [],
       "artists": []
     },
-    "production_groups": [],
+    "production_groups": [
+      {
+        "order": "1",
+        "production_title": "John Neville",
+        "company": [
+          "Stratford Festival"
+        ],
+        "venue": [
+          "Stratford Festival"
+        ],
+        "city": [
+          "Stratford, Ontario"
+        ]
+      },
+      {
+        "order": "2",
+        "production_title": "Hamlet",
+        "company": [
+          "Old Vic"
+        ],
+        "venue": [
+          "Old Vic"
+        ],
+        "city": [
+          "Stratford, Ontario"
+        ]
+      },
+      {
+        "order": "3",
+        "production_title": "As You Like It",
+        "company": [
+          "National Theatre"
+        ],
+        "venue": [
+          "National Theatre"
+        ],
+        "city": [
+          "Stratford, Ontario"
+        ]
+      }
+    ],
     "media": [],
     "word_count": 1166,
     "coordinate_points": [],
@@ -328561,10 +328698,10 @@
     "publication_status": "publish",
     "editorial_issue_type": "",
     "canonical_file": "",
-    "production_title": "Much Ado About Nothing; Christopher Newton",
-    "company": "Stratford Festival",
-    "venue": "Stratford Festival",
-    "city": "Stratford, Ontario",
+    "production_title": "",
+    "company": "",
+    "venue": "",
+    "city": "",
     "coordinates": [],
     "people": [
       "Ben Carlson",
@@ -328634,7 +328771,34 @@
       "performers": [],
       "artists": []
     },
-    "production_groups": [],
+    "production_groups": [
+      {
+        "order": "1",
+        "production_title": "Much Ado About Nothing",
+        "company": [
+          "Stratford Festival"
+        ],
+        "venue": [
+          "Stratford Festival"
+        ],
+        "city": [
+          "Stratford, Ontario"
+        ]
+      },
+      {
+        "order": "2",
+        "production_title": "Christopher Newton",
+        "company": [
+          "Stratford Festival"
+        ],
+        "venue": [
+          "Stratford Festival"
+        ],
+        "city": [
+          "Stratford, Ontario"
+        ]
+      }
+    ],
     "media": [],
     "word_count": 794,
     "coordinate_points": [],
@@ -383594,10 +383758,10 @@
     "publication_status": "publish",
     "editorial_issue_type": "",
     "canonical_file": "",
-    "production_title": "Yaga; The Flick; Girl From the North Country",
-    "company": "Tarragon Theatre; Mirvish Productions",
+    "production_title": "",
+    "company": "",
     "venue": "",
-    "city": "Toronto",
+    "city": "",
     "coordinates": [],
     "people": [
       "Annie Baker",
@@ -383645,7 +383809,29 @@
       "performers": [],
       "artists": []
     },
-    "production_groups": [],
+    "production_groups": [
+      {
+        "order": "1",
+        "production_title": "Yaga",
+        "city": [
+          "Toronto"
+        ]
+      },
+      {
+        "order": "2",
+        "production_title": "The Flick",
+        "city": [
+          "Toronto"
+        ]
+      },
+      {
+        "order": "3",
+        "production_title": "Girl From the North Country",
+        "city": [
+          "Toronto"
+        ]
+      }
+    ],
     "media": [
       {
         "source_url": "https://images.squarespace-cdn.com/content/v1/5b686ff89d5abba58f12a1bd/1579541170876-OWRY330GY6XZ770WSQNT/knife.jpg",
@@ -383685,10 +383871,7 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
-      "companies": [
-        "Mirvish Productions",
-        "Tarragon Theatre"
-      ],
+      "companies": [],
       "venues": [],
       "cities": [
         "Toronto"

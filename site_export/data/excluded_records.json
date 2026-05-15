@@ -17,7 +17,7 @@
     "publication_status": "exclude_from_publication",
     "editorial_issue_type": "non_robert_author",
     "canonical_file": "",
-    "production_title": "Romancing The Bard; Stratford Gold; Fifty Seasons at Stratford",
+    "production_title": "",
     "company": "",
     "venue": "",
     "city": "",
@@ -48,7 +48,20 @@
       "performers": [],
       "artists": []
     },
-    "production_groups": [],
+    "production_groups": [
+      {
+        "order": "1",
+        "production_title": "Romancing The Bard"
+      },
+      {
+        "order": "2",
+        "production_title": "Stratford Gold"
+      },
+      {
+        "order": "3",
+        "production_title": "Fifty Seasons at Stratford"
+      }
+    ],
     "media": [],
     "word_count": 3225,
     "coordinate_points": [],
