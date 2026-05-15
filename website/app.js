@@ -1436,33 +1436,22 @@ function renderSecondaryCollections() {
 }
 
 function renderIndexTiles() {
-  const master = document.createElement("a");
-  master.className = "tile index-tile master-index-tile";
-  master.href = "#master-index";
-  const masterHeading = document.createElement("strong");
-  masterHeading.textContent = "Master Index";
-  const masterMeta = document.createElement("span");
-  masterMeta.textContent = "Works and people";
-  const masterDescription = document.createElement("p");
-  masterDescription.textContent = "One consolidated index with quick filters for plays, works, books, music, and people.";
-  master.replaceChildren(masterHeading, masterMeta, masterDescription);
-
-  const tiles = ENTITY_TYPES.map((type) => {
-    const entries = entityMap(type.key);
-    if (!entries.size) return null;
+  const tiles = MASTER_INDEX_FILTERS.map((filter) => {
+    const count = masterIndexEntryCount(filter);
+    if (!count) return null;
     const link = document.createElement("a");
     link.className = "tile index-tile";
-    link.href = `#index:${type.key}`;
+    link.href = masterIndexHref(filter);
     const heading = document.createElement("strong");
-    heading.textContent = type.label;
+    heading.textContent = filter.label;
     const meta = document.createElement("span");
-    meta.textContent = entries.size > 1 ? `${entries.size.toLocaleString()} entries` : "Browse";
+    meta.textContent = count > 1 ? `${count.toLocaleString()} entries` : "Browse";
     const description = document.createElement("p");
-    description.textContent = indexDescription(type.key);
+    description.textContent = masterIndexDescription(filter.key);
     link.replaceChildren(heading, meta, description);
     return link;
   }).filter(Boolean);
-  els.indexTiles.replaceChildren(master, ...tiles);
+  els.indexTiles.replaceChildren(...tiles);
 }
 
 function recordsForTypeValue(value) {
@@ -1678,9 +1667,9 @@ function landingItems(kind) {
   }
 
   if (kind === "indexes") {
-    return ENTITY_TYPES.map((type) => {
-      const entries = entityMap(type.key);
-      return landingItem(type.label, `#index:${type.key}`, entries.size, indexDescription(type.key), [], "entries");
+    return MASTER_INDEX_FILTERS.map((filter) => {
+      const count = masterIndexEntryCount(filter);
+      return landingItem(filter.label, masterIndexHref(filter), count, masterIndexDescription(filter.key), [], "entries");
     }).filter((item) => item.count);
   }
 
@@ -1882,19 +1871,13 @@ function renderFrontpageDirectory() {
     { label: "Shaw Collection", href: "#browse-collection:shaw", count: collectionCount("The Shaw Collection") },
   ];
 
-  const indexLinks = ENTITY_TYPES
-    .map((type) => ({
-      label: type.label,
-      href: `#index:${type.key}`,
-      count: entityMap(type.key).size,
+  const indexLinks = MASTER_INDEX_FILTERS
+    .map((filter) => ({
+      label: filter.label,
+      href: masterIndexHref(filter),
+      count: masterIndexEntryCount(filter),
     }))
-    .filter((item) => item.count)
-    .sort((a, b) => b.count - a.count || a.label.localeCompare(b.label));
-  indexLinks.unshift({
-    label: "Master Index",
-    href: "#master-index",
-    count: masterIndexEntries(masterIndexFilter(DEFAULT_MASTER_INDEX_FILTER)).length,
-  });
+    .filter((item) => item.count);
   const publicationLinks = [...entityMap("publications").values()]
     .map((entry) => ({
       label: entry.label,
@@ -2211,10 +2194,39 @@ function orderedMasterPeopleFilters() {
   return [allPeople, actors, ...rest].filter(Boolean);
 }
 
+function masterIndexHref(filter) {
+  return filter.key === DEFAULT_MASTER_INDEX_FILTER ? "#master-index" : `#master-index:${filter.key}`;
+}
+
+function masterIndexDescription(filterKey) {
+  return {
+    "all-works": "All indexed works across plays, musicals, books, recordings, television, films, and concerts.",
+    plays: "Stage plays and theatre productions.",
+    musicals: "Musicals, operettas, and musical-theatre productions.",
+    books: "Reviewed books and book-length works.",
+    albums: "Albums and recordings reviewed in the archive.",
+    concerts: "Concerts and live music events.",
+    television: "Television programs, broadcasts, and series.",
+    films: "Films and cinema-related works.",
+    "all-people": "All indexed people across credited and subject roles.",
+    actors: "Actors credited in structured production metadata.",
+    directors: "Directors credited in structured production metadata.",
+    playwrights: "Playwrights and dramatic source authors.",
+    "composers-lyricists": "Composers, lyricists, and musical writers.",
+    "musical-directors": "Musical directors.",
+    choreographers: "Choreographers.",
+    "set-designers": "Set designers.",
+    "costume-designers": "Costume designers.",
+    "lighting-designers": "Lighting designers.",
+    "sound-designers": "Sound designers.",
+    musicians: "Musicians.",
+  }[filterKey] || "Filtered master index entries.";
+}
+
 function masterIndexButton(filter, activeKey) {
   const link = document.createElement("a");
   link.className = "master-index-filter";
-  link.href = filter.key === DEFAULT_MASTER_INDEX_FILTER ? "#master-index" : `#master-index:${filter.key}`;
+  link.href = masterIndexHref(filter);
   link.setAttribute("aria-pressed", String(filter.key === activeKey));
   const label = document.createElement("span");
   label.textContent = filter.label;
