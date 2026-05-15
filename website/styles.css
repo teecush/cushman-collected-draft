@@ -1879,35 +1879,35 @@ h1 {
   position: sticky;
   top: 94px;
   z-index: 15;
-  margin: 20px 0 30px;
+  margin: 16px 0 26px;
   border: 1px solid rgba(35, 82, 118, 0.18);
   background: rgba(255, 255, 255, 0.96);
-  box-shadow: 0 12px 28px rgba(17, 17, 17, 0.08);
+  box-shadow: 0 10px 22px rgba(17, 17, 17, 0.08);
   backdrop-filter: blur(12px);
 }
 
 .master-index-panel {
   display: grid;
-  gap: 14px;
-  padding: 18px;
+  gap: 10px;
+  padding: 12px 14px;
   background: linear-gradient(135deg, var(--blue-dark), #2e648b);
   color: white;
 }
 
 .master-index-filter-group {
   display: grid;
-  grid-template-columns: 88px 1fr;
-  gap: 12px;
+  grid-template-columns: 78px 1fr;
+  gap: 10px;
   align-items: start;
 }
 
 .master-index-filter-group h2 {
-  margin: 9px 0 0;
+  margin: 8px 0 0;
   color: rgba(255, 255, 255, 0.76);
   font-family: var(--sans);
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 800;
-  letter-spacing: 2.2px;
+  letter-spacing: 2px;
   line-height: 1;
   text-transform: uppercase;
 }
@@ -1915,24 +1915,24 @@ h1 {
 .master-index-filter-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 6px;
 }
 
 .master-index-filter {
   display: inline-flex;
   align-items: center;
-  gap: 9px;
+  gap: 6px;
   border: 1px solid rgba(255, 255, 255, 0.32);
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.12);
-  padding: 8px 11px;
+  padding: 6px 9px;
   color: white;
   font-family: var(--sans);
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 800;
   line-height: 1;
   text-transform: uppercase;
-  transition: background 140ms ease, border-color 140ms ease, color 140ms ease;
+  transition: background 140ms ease, border-color 140ms ease, box-shadow 140ms ease, color 140ms ease, transform 140ms ease;
 }
 
 .master-index-filter:hover,
@@ -1943,17 +1943,19 @@ h1 {
 }
 
 .master-index-filter[aria-pressed="true"] {
-  border-color: var(--cream);
+  border-color: white;
   background: var(--cream);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.36);
   color: var(--ink);
+  transform: translateY(-1px);
 }
 
 .master-index-filter em {
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.18);
-  padding: 3px 7px;
+  padding: 2px 6px;
   color: inherit;
-  font-size: 11px;
+  font-size: 10px;
   font-style: normal;
 }
 
@@ -1967,7 +1969,7 @@ h1 {
   margin: 0;
   border-block: 0;
   border-top: 1px solid var(--rule);
-  padding: 10px 14px;
+  padding: 8px 12px;
   background: rgba(255, 255, 255, 0.96);
 }
 
@@ -3333,8 +3335,8 @@ h1 {
   }
 
   .master-index-panel {
-    gap: 16px;
-    padding: 14px;
+    gap: 12px;
+    padding: 12px;
   }
 
   .master-index-filter-group {
@@ -3349,7 +3351,7 @@ h1 {
   .master-index-filter-row {
     flex-wrap: nowrap;
     overflow-x: auto;
-    padding-bottom: 4px;
+    padding: 3px 3px 5px;
     scrollbar-width: thin;
   }
 

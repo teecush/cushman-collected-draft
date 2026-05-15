@@ -1,4 +1,4 @@
-const DATA_URL = new URL("../site_export/data/public_reviews.json?v=101", import.meta.url);
+const DATA_URL = new URL("../site_export/data/public_reviews.json?v=102", import.meta.url);
 const CONTENT_ROOT = new URL("../site_export/content/reviews/", import.meta.url);
 const PAGE_SIZE = 36;
 const SHAKESPEARE_COLLECTION = "The Shakespeare Collection";
@@ -84,8 +84,8 @@ const MASTER_INDEX_WORK_FILTERS = [
 
 const MASTER_INDEX_PEOPLE_FILTERS = [
   { key: "all-people", label: "All People", typeKeys: ["people"] },
-  { key: "directors", label: "Directors", typeKeys: ["directors"] },
   { key: "actors", label: "Actors", typeKeys: ["actors"] },
+  { key: "directors", label: "Directors", typeKeys: ["directors"] },
   { key: "playwrights", label: "Playwrights", typeKeys: ["playwrights"] },
   { key: "composers-lyricists", label: "Composers & Lyricists", typeKeys: ["composers-lyricists"] },
   { key: "musical-directors", label: "Musical Directors", typeKeys: ["musical-directors"] },
@@ -95,8 +95,6 @@ const MASTER_INDEX_PEOPLE_FILTERS = [
   { key: "lighting-designers", label: "Lighting Designers", typeKeys: ["lighting-designers"] },
   { key: "sound-designers", label: "Sound Designers", typeKeys: ["sound-designers"] },
   { key: "musicians", label: "Musicians", typeKeys: ["musicians"] },
-  { key: "performers", label: "Performers", typeKeys: ["performers"] },
-  { key: "artists", label: "Artists", typeKeys: ["artists"] },
 ];
 
 const MASTER_INDEX_FILTERS = [...MASTER_INDEX_WORK_FILTERS, ...MASTER_INDEX_PEOPLE_FILTERS];
@@ -1866,6 +1864,19 @@ function masterIndexEntries(filter) {
     );
 }
 
+function masterIndexEntryCount(filter) {
+  return masterIndexEntries(filter).length;
+}
+
+function orderedMasterPeopleFilters() {
+  const allPeople = MASTER_INDEX_PEOPLE_FILTERS.find((filter) => filter.key === "all-people");
+  const actors = MASTER_INDEX_PEOPLE_FILTERS.find((filter) => filter.key === "actors");
+  const rest = MASTER_INDEX_PEOPLE_FILTERS
+    .filter((filter) => !["all-people", "actors"].includes(filter.key))
+    .sort((a, b) => masterIndexEntryCount(b) - masterIndexEntryCount(a) || a.label.localeCompare(b.label));
+  return [allPeople, actors, ...rest].filter(Boolean);
+}
+
 function masterIndexButton(filter, activeKey) {
   const link = document.createElement("a");
   link.className = "master-index-filter";
@@ -1909,7 +1920,7 @@ function renderMasterIndex(filterKey = DEFAULT_MASTER_INDEX_FILTER) {
   filters.className = "master-index-panel";
   filters.replaceChildren(
     masterIndexFilterGroup("Works", MASTER_INDEX_WORK_FILTERS, activeKey),
-    masterIndexFilterGroup("People", MASTER_INDEX_PEOPLE_FILTERS, activeKey)
+    masterIndexFilterGroup("People", orderedMasterPeopleFilters(), activeKey)
   );
   const nav = alphaNavForGroups(groups, `master-${activeKey}`, filter.label);
   sticky.replaceChildren(filters, nav);
