@@ -1,0 +1,252 @@
+:root {
+  --ink: #151515;
+  --muted: #5f5b55;
+  --rule: #d7d2ca;
+  --paper: #fbfaf7;
+  --blue: #174f76;
+  --blue-soft: #eef4f7;
+  --serif: "Libre Baskerville", Georgia, serif;
+  --sans: Rubik, Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--serif);
+}
+
+.chat-shell {
+  width: min(960px, calc(100vw - 40px));
+  margin: 44px auto 34px;
+}
+
+.chat-header {
+  border-bottom: 3px solid var(--ink);
+  padding-bottom: 24px;
+}
+
+.chat-header p {
+  margin: 0 0 8px;
+  color: var(--blue);
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.chat-header h1 {
+  margin: 0;
+  font-size: clamp(54px, 9vw, 94px);
+  line-height: 0.95;
+  letter-spacing: 0;
+}
+
+.chat-panel {
+  display: grid;
+  gap: 16px;
+  margin-top: 14px;
+}
+
+.chat-transcript {
+  display: grid;
+  gap: 0;
+  border-block: 1px solid var(--rule);
+  padding: 0;
+}
+
+.chat-message {
+  display: grid;
+  grid-template-columns: 110px minmax(0, 1fr);
+  gap: 18px;
+  border-top: 1px solid var(--rule);
+  padding: 16px 0;
+}
+
+.chat-message:first-child {
+  border-top: 0;
+}
+
+.chat-speaker {
+  color: var(--blue);
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.chat-message-user .chat-speaker {
+  color: #8a5f5f;
+}
+
+.chat-message-body {
+  display: grid;
+  gap: 10px;
+  min-width: 0;
+}
+
+.chat-message-body p {
+  margin: 0;
+  color: #303030;
+  font-size: 18px;
+  line-height: 1.56;
+}
+
+.chat-message-user .chat-message-body p {
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.chat-sources {
+  display: grid;
+  gap: 0;
+  margin-top: 4px;
+  border-top: 2px solid var(--ink);
+}
+
+.chat-sources > span {
+  display: block;
+  padding: 10px 0 2px;
+  color: var(--blue);
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 1.7px;
+  text-transform: uppercase;
+}
+
+.chat-source {
+  display: grid;
+  gap: 4px;
+  border-top: 1px solid var(--rule);
+  padding: 10px 0 12px;
+}
+
+.chat-source strong {
+  font-size: 17px;
+  line-height: 1.2;
+}
+
+.chat-source em {
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 800;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+}
+
+.chat-source q {
+  color: #444;
+  font-size: 15px;
+  line-height: 1.38;
+}
+
+.chat-suggestions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chat-suggestions button {
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  background: #f5f3ef;
+  color: var(--ink);
+  padding: 8px 12px;
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 750;
+  cursor: pointer;
+}
+
+.chat-suggestions button:hover {
+  border-color: var(--blue);
+  background: var(--blue-soft);
+}
+
+.chat-form {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 14px;
+  align-items: end;
+  border-top: 2px solid var(--ink);
+  padding-top: 16px;
+}
+
+.chat-input {
+  display: grid;
+  gap: 8px;
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.chat-input textarea {
+  width: 100%;
+  min-height: 76px;
+  border: 1px solid var(--rule);
+  border-radius: 0;
+  background: white;
+  padding: 12px;
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 18px;
+  line-height: 1.35;
+  resize: vertical;
+}
+
+.chat-form button[type="submit"] {
+  min-width: 96px;
+  border: 2px solid var(--ink);
+  border-radius: 999px;
+  background: #3b769c;
+  color: white;
+  padding: 13px 20px;
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.chat-form button[type="submit"]:disabled {
+  cursor: wait;
+  opacity: 0.58;
+}
+
+@media (max-width: 680px) {
+  .chat-shell {
+    width: calc(100vw - 40px);
+    margin-top: 28px;
+  }
+
+  .chat-message,
+  .chat-form {
+    grid-template-columns: 1fr;
+  }
+
+  .chat-message {
+    gap: 7px;
+  }
+
+  .chat-message-body p {
+    font-size: 18px;
+  }
+
+  .chat-form button[type="submit"] {
+    width: 100%;
+  }
+}
