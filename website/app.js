@@ -1251,25 +1251,90 @@ function articleWorkValues(record) {
   return uniqueEntityValues(values.flatMap((value) => value.split(/\s+\/\s+/).map((part) => part.trim()).filter(Boolean)));
 }
 
-function searchable(record) {
-  return [
+function normalizeSearchText(value) {
+  return String(value || "")
+    .normalize("NFKD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/&/g, " and ")
+    .replace(/[’‘]/g, "'")
+    .replace(/[^a-z0-9']+/gi, " ")
+    .replace(/\s+/g, " ")
+    .trim()
+    .toLowerCase();
+}
+
+function pushSearchValue(parts, value) {
+  if (value === null || value === undefined) return;
+  if (Array.isArray(value)) {
+    value.forEach((item) => pushSearchValue(parts, item));
+    return;
+  }
+  if (typeof value === "object") {
+    Object.values(value).forEach((item) => pushSearchValue(parts, item));
+    return;
+  }
+  const text = String(value).trim();
+  if (text) parts.push(text);
+}
+
+function searchableParts(record) {
+  const parts = [
     record.title,
     record.production_title,
     record.company,
     record.venue,
     record.city,
     record.publication,
+    record.source_publication,
     record.article_category,
     typeLabel(record),
+    record.date,
+    record.year,
     ...collectionNames(record),
-    ...(record.people || []),
-  ]
-    .join(" ")
-    .toLowerCase();
+  ];
+
+  [
+    record.people,
+    record.roles,
+    record.production_groups,
+    record.browse_entities,
+    record.subject_people,
+    record.subject_role_map,
+    record.book_title,
+    record.book_author,
+    record.publisher,
+    record.topic,
+    record.event_name,
+    record.network_or_platform,
+    record.featured_artists,
+    record.recording_title,
+    record.film_title,
+    record.concert_title,
+    record.studio_or_distributor,
+    record.correction_target,
+  ].forEach((value) => pushSearchValue(parts, value));
+
+  return parts;
+}
+
+function searchable(record) {
+  if (!record._searchableText) {
+    record._searchableText = normalizeSearchText(searchableParts(record).join(" "));
+  }
+  return record._searchableText;
+}
+
+function recordMatchesQuery(record, rawQuery) {
+  const query = normalizeSearchText(rawQuery);
+  if (!query) return true;
+  const haystack = searchable(record);
+  if (haystack.includes(query)) return true;
+  const tokens = query.split(/\s+/).filter((token) => token.length > 1);
+  return tokens.length > 0 && tokens.every((token) => haystack.includes(token));
 }
 
 function applyFilters() {
-  const query = state.query.trim().toLowerCase();
+  const query = state.query.trim();
   state.hasActiveQuery = hasActiveFilters();
   syncArchivePageClass();
   setArchiveExpanded(state.hasActiveQuery || document.activeElement === els.searchInput);
@@ -1279,7 +1344,7 @@ function applyFilters() {
     if (state.collection === SHAKESPEARE_COLLECTION && state.shakespeareGroup) {
       if (shakespeareGroup(record) !== state.shakespeareGroup) return false;
     }
-    if (query && !searchable(record).includes(query)) return false;
+    if (query && !recordMatchesQuery(record, query)) return false;
     return true;
   });
   state.filtered = sortRecords(state.filtered);
