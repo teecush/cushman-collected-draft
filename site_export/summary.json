@@ -2,13 +2,13 @@
   "export_dir": "/Users/openclaw/Codex Projects/Cushman CODEXted/site_export",
   "source_dir": "/Users/openclaw/Codex Projects/Cushman CODEXted/repaired_structural_v2",
   "counts": {
-    "total": 3367,
-    "publish": 3192,
+    "total": 3379,
+    "publish": 3204,
     "archive_only": 154,
     "duplicate_variant": 20,
     "exclude_from_publication": 1
   },
-  "public_reviews": 3159,
+  "public_reviews": 3171,
   "archive_records": 207,
   "excluded_records": 1,
   "map_points": 1750,

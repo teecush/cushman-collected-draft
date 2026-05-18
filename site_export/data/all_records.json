@@ -12878,6 +12878,114 @@
     }
   },
   {
+    "slug": "1975-11-14-multiple-exposure",
+    "route": "/reviews/1975-11-14-multiple-exposure/",
+    "source_file": "1975.11.14.Radio_Times.Multiple_Exposure.md",
+    "title": "Multiple Exposure",
+    "date": "1975-11-14",
+    "year": "1975",
+    "publication": "Radio Times",
+    "source_publication": "Radio Times",
+    "article_category": "Profile",
+    "collections": [
+      "UK Collection"
+    ],
+    "publication_status": "publish",
+    "editorial_issue_type": "clean_manual_transcription",
+    "canonical_file": "",
+    "production_title": "",
+    "company": "",
+    "venue": "",
+    "city": "",
+    "coordinates": [],
+    "people": [
+      "Brian Glover"
+    ],
+    "roles": {
+      "director": [],
+      "actors": [],
+      "playwright": [
+        "Brian Glover"
+      ],
+      "composer_lyricist": [],
+      "musical_director": [],
+      "choreographer": [],
+      "orchestrator": [],
+      "arranger": [],
+      "assistant_director": [],
+      "stage_manager": [],
+      "assistant_musical_director": [],
+      "vocal_director": [],
+      "dance_captain": [],
+      "fight_director": [],
+      "dramaturg": [],
+      "producer": [],
+      "set_designer": [],
+      "costume_designer": [],
+      "lighting_designer": [],
+      "sound_designer": [],
+      "musicians": [],
+      "performers": [],
+      "artists": []
+    },
+    "production_groups": [
+      {
+        "order": "1",
+        "production_title": "Keep an Eye on Albert",
+        "company": [
+          "BBC1"
+        ],
+        "playwright": [
+          "Brian Glover"
+        ]
+      }
+    ],
+    "media": [],
+    "word_count": 1197,
+    "subject_role_map": [
+      {
+        "person": "Brian Glover",
+        "roles": [
+          "playwright"
+        ],
+        "labels": [
+          "Playwright"
+        ]
+      }
+    ],
+    "subject_people": "Brian Glover",
+    "coordinate_points": [],
+    "display_schema": {
+      "work_type": "subjects",
+      "work_label": "Subject",
+      "company_label": "Company",
+      "primary_browse": "subjects",
+      "secondary_browse": "productions"
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Keep an Eye on Albert"
+      ],
+      "subjects": [
+        "Brian Glover"
+      ],
+      "book_authors": [],
+      "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
+      "companies": [
+        "BBC1"
+      ],
+      "venues": [],
+      "cities": [],
+      "people": [
+        "Brian Glover"
+      ]
+    }
+  },
+  {
     "slug": "1975-11-23-bond-s-prisoners-of-greed",
     "route": "/reviews/1975-11-23-bond-s-prisoners-of-greed/",
     "source_file": "1975.11.23.The_Observer.Bond_s_Prisoners_Of_Greed.md",
@@ -13484,10 +13592,10 @@
     }
   },
   {
-    "slug": "1976-01-11-lower-fifth",
-    "route": "/reviews/1976-01-11-lower-fifth/",
+    "slug": "1976-01-11-himmler-of-the-lower-fifth",
+    "route": "/reviews/1976-01-11-himmler-of-the-lower-fifth/",
     "source_file": "1976.01.11.The_Observer.Lower_Fifth.md",
-    "title": "Lower Fifth",
+    "title": "Himmler of the Lower Fifth",
     "date": "1976-01-11",
     "year": "1976",
     "publication": "The Observer",
@@ -14503,6 +14611,135 @@
         "Sid Livingstone",
         "Stuart M. Stanley",
         "Tom Taylor"
+      ]
+    }
+  },
+  {
+    "slug": "1976-02-26-how-the-dickens",
+    "route": "/reviews/1976-02-26-how-the-dickens/",
+    "source_file": "1976.02.26.Radio_Times.How_the_Dickens.md",
+    "title": "How the Dickens?",
+    "date": "1976-02-26",
+    "year": "1976",
+    "publication": "Radio Times",
+    "source_publication": "Radio Times",
+    "article_category": "Television Review",
+    "collections": [
+      "UK Collection"
+    ],
+    "publication_status": "publish",
+    "editorial_issue_type": "clean_manual_transcription",
+    "canonical_file": "",
+    "production_title": "",
+    "company": "",
+    "venue": "",
+    "city": "",
+    "coordinates": [],
+    "people": [
+      "Alfie Bass",
+      "Carl Davis",
+      "Charles Dickens",
+      "Leo McKern",
+      "Lesley Dunlop",
+      "Nicholas Jones",
+      "Peter Hammond"
+    ],
+    "roles": {
+      "director": [
+        "Peter Hammond"
+      ],
+      "actors": [
+        "Lesley Dunlop",
+        "Nicholas Jones",
+        "Leo McKern",
+        "Alfie Bass"
+      ],
+      "playwright": [],
+      "composer_lyricist": [
+        "Carl Davis"
+      ],
+      "musical_director": [],
+      "choreographer": [],
+      "orchestrator": [],
+      "arranger": [],
+      "assistant_director": [],
+      "stage_manager": [],
+      "assistant_musical_director": [],
+      "vocal_director": [],
+      "dance_captain": [],
+      "fight_director": [],
+      "dramaturg": [],
+      "producer": [],
+      "set_designer": [],
+      "costume_designer": [],
+      "lighting_designer": [],
+      "sound_designer": [],
+      "musicians": [],
+      "performers": [],
+      "artists": []
+    },
+    "production_groups": [
+      {
+        "order": "1",
+        "production_title": "Our Mutual Friend",
+        "company": [
+          "BBC"
+        ],
+        "director": [
+          "Peter Hammond"
+        ],
+        "actors": [
+          "Lesley Dunlop",
+          "Nicholas Jones",
+          "Leo McKern",
+          "Alfie Bass"
+        ],
+        "composer_lyricist": [
+          "Carl Davis"
+        ]
+      }
+    ],
+    "media": [],
+    "word_count": 970,
+    "show_title": "Our Mutual Friend",
+    "network_or_platform": "BBC",
+    "book_author": "Charles Dickens",
+    "coordinate_points": [],
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Show",
+      "company_label": "Network",
+      "primary_browse": "productions",
+      "secondary_browse": "networks"
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Our Mutual Friend"
+      ],
+      "subjects": [],
+      "book_authors": [
+        "Charles Dickens"
+      ],
+      "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [
+        "BBC"
+      ],
+      "companies": [
+        "BBC"
+      ],
+      "venues": [],
+      "cities": [],
+      "people": [
+        "Alfie Bass",
+        "Carl Davis",
+        "Charles Dickens",
+        "Leo McKern",
+        "Lesley Dunlop",
+        "Nicholas Jones",
+        "Peter Hammond"
       ]
     }
   },
@@ -15588,6 +15825,99 @@
     }
   },
   {
+    "slug": "1976-04-09-dennis-potter-the-values-of-a-television-playwright",
+    "route": "/reviews/1976-04-09-dennis-potter-the-values-of-a-television-playwright/",
+    "source_file": "1976.04.09.Radio_Times.Dennis_Potter_The_Values_of_a_Television_Playwright.md",
+    "title": "Dennis Potter: The Values of a Television Playwright",
+    "date": "1976-04-09",
+    "year": "1976",
+    "publication": "Radio Times",
+    "source_publication": "Radio Times",
+    "article_category": "Profile",
+    "collections": [
+      "UK Collection"
+    ],
+    "publication_status": "publish",
+    "editorial_issue_type": "clean_manual_transcription",
+    "canonical_file": "",
+    "production_title": "",
+    "company": "BBC",
+    "venue": "",
+    "city": "",
+    "coordinates": [],
+    "people": [
+      "Dennis Potter"
+    ],
+    "roles": {
+      "director": [],
+      "actors": [],
+      "playwright": [],
+      "composer_lyricist": [],
+      "musical_director": [],
+      "choreographer": [],
+      "orchestrator": [],
+      "arranger": [],
+      "assistant_director": [],
+      "stage_manager": [],
+      "assistant_musical_director": [],
+      "vocal_director": [],
+      "dance_captain": [],
+      "fight_director": [],
+      "dramaturg": [],
+      "producer": [],
+      "set_designer": [],
+      "costume_designer": [],
+      "lighting_designer": [],
+      "sound_designer": [],
+      "musicians": [],
+      "performers": [],
+      "artists": []
+    },
+    "production_groups": [],
+    "media": [],
+    "word_count": 2196,
+    "subject_role_map": [
+      {
+        "person": "Dennis Potter",
+        "roles": [
+          "playwright"
+        ],
+        "labels": [
+          "Playwright"
+        ]
+      }
+    ],
+    "subject_people": "Dennis Potter",
+    "coordinate_points": [],
+    "display_schema": {
+      "work_type": "subjects",
+      "work_label": "Subject",
+      "company_label": "Company",
+      "primary_browse": "subjects",
+      "secondary_browse": "productions"
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [],
+      "subjects": [
+        "Dennis Potter"
+      ],
+      "book_authors": [],
+      "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
+      "companies": [
+        "BBC"
+      ],
+      "venues": [],
+      "cities": [],
+      "people": [
+        "Dennis Potter"
+      ]
+    }
+  },
+  {
     "slug": "1976-04-11-much-ado-about-india",
     "route": "/reviews/1976-04-11-much-ado-about-india/",
     "source_file": "1976.04.11.Cushman_Collected.Much_Ado_About_India.md",
@@ -15985,6 +16315,101 @@
         "Osmund Bullock",
         "Sheila Steafel",
         "William Wycherley"
+      ]
+    }
+  },
+  {
+    "slug": "1976-05-09-the-innocent-troublemaker",
+    "route": "/reviews/1976-05-09-the-innocent-troublemaker/",
+    "source_file": "1976.05.09.The_Observer_Magazine.The_Innocent_Troublemaker.md",
+    "title": "The Innocent Troublemaker",
+    "date": "1976-05-09",
+    "year": "1976",
+    "publication": "The Observer Magazine",
+    "source_publication": "The Observer Magazine",
+    "article_category": "Profile",
+    "collections": [
+      "UK Collection"
+    ],
+    "publication_status": "publish",
+    "editorial_issue_type": "clean_manual_transcription",
+    "canonical_file": "",
+    "production_title": "Bus Stop",
+    "company": "",
+    "venue": "Phoenix Theatre",
+    "city": "London, England",
+    "coordinates": [],
+    "people": [
+      "Lee Remick",
+      "William Inge"
+    ],
+    "roles": {
+      "director": [],
+      "actors": [],
+      "playwright": [
+        "William Inge"
+      ],
+      "composer_lyricist": [],
+      "musical_director": [],
+      "choreographer": [],
+      "orchestrator": [],
+      "arranger": [],
+      "assistant_director": [],
+      "stage_manager": [],
+      "assistant_musical_director": [],
+      "vocal_director": [],
+      "dance_captain": [],
+      "fight_director": [],
+      "dramaturg": [],
+      "producer": [],
+      "set_designer": [],
+      "costume_designer": [],
+      "lighting_designer": [],
+      "sound_designer": [],
+      "musicians": [],
+      "performers": [],
+      "artists": []
+    },
+    "production_groups": [],
+    "media": [],
+    "word_count": 758,
+    "subject_role_map": [
+      {
+        "person": "Lee Remick"
+      }
+    ],
+    "subject_people": "Lee Remick",
+    "coordinate_points": [],
+    "display_schema": {
+      "work_type": "subjects",
+      "work_label": "Subject",
+      "company_label": "Company",
+      "primary_browse": "subjects",
+      "secondary_browse": "productions"
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Bus Stop"
+      ],
+      "subjects": [
+        "Lee Remick"
+      ],
+      "book_authors": [],
+      "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
+      "companies": [],
+      "venues": [
+        "Phoenix Theatre"
+      ],
+      "cities": [
+        "London, England"
+      ],
+      "people": [
+        "Lee Remick",
+        "William Inge"
       ]
     }
   },
@@ -16482,6 +16907,114 @@
         "Helen Mirren",
         "Martin Shaw",
         "Paul Scofield"
+      ]
+    }
+  },
+  {
+    "slug": "1976-06-02-voices-off",
+    "route": "/reviews/1976-06-02-voices-off/",
+    "source_file": "1976.06.02.Times_Literary_Supplement.Voices_Off.md",
+    "title": "Voices Off",
+    "date": "1976-06-02",
+    "year": "1976",
+    "publication": "Times Literary Supplement",
+    "source_publication": "Times Literary Supplement",
+    "article_category": "Opinion Piece",
+    "collections": [
+      "UK Collection"
+    ],
+    "publication_status": "publish",
+    "editorial_issue_type": "clean_manual_transcription",
+    "canonical_file": "",
+    "production_title": "",
+    "company": "",
+    "venue": "",
+    "city": "",
+    "coordinates": [],
+    "people": [
+      "Edward Albee",
+      "Irene Worth",
+      "James Ray"
+    ],
+    "roles": {
+      "director": [],
+      "actors": [
+        "James Ray",
+        "Irene Worth"
+      ],
+      "playwright": [
+        "Edward Albee"
+      ],
+      "composer_lyricist": [],
+      "musical_director": [],
+      "choreographer": [],
+      "orchestrator": [],
+      "arranger": [],
+      "assistant_director": [],
+      "stage_manager": [],
+      "assistant_musical_director": [],
+      "vocal_director": [],
+      "dance_captain": [],
+      "fight_director": [],
+      "dramaturg": [],
+      "producer": [],
+      "set_designer": [],
+      "costume_designer": [],
+      "lighting_designer": [],
+      "sound_designer": [],
+      "musicians": [],
+      "performers": [],
+      "artists": []
+    },
+    "production_groups": [
+      {
+        "order": "1",
+        "production_title": "Listening",
+        "company": [
+          "Radio 3"
+        ],
+        "actors": [
+          "James Ray",
+          "Irene Worth"
+        ],
+        "playwright": [
+          "Edward Albee"
+        ]
+      }
+    ],
+    "media": [],
+    "word_count": 424,
+    "topic": "Voices Off",
+    "coordinate_points": [],
+    "display_schema": {
+      "work_type": "topics",
+      "work_label": "Topic",
+      "company_label": "Company",
+      "primary_browse": "topics",
+      "secondary_browse": "productions"
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Listening"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "topics": [
+        "Voices Off"
+      ],
+      "events": [],
+      "networks": [],
+      "companies": [
+        "Radio 3"
+      ],
+      "venues": [],
+      "cities": [],
+      "people": [
+        "Edward Albee",
+        "Irene Worth",
+        "James Ray"
       ]
     }
   },
@@ -17047,6 +17580,97 @@
         "Isao Sato",
         "John Weidman",
         "Stephen Sondheim"
+      ]
+    }
+  },
+  {
+    "slug": "1976-06-27-the-glisten-of-humour",
+    "route": "/reviews/1976-06-27-the-glisten-of-humour/",
+    "source_file": "1976.06.27.The_Observer.The_Glisten_of_Humour.md",
+    "title": "The Glisten of Humour",
+    "date": "1976-06-27",
+    "year": "1976",
+    "publication": "The Observer",
+    "source_publication": "The Observer",
+    "article_category": "Obituary",
+    "collections": [
+      "UK Collection"
+    ],
+    "publication_status": "publish",
+    "editorial_issue_type": "clean_manual_transcription",
+    "canonical_file": "",
+    "production_title": "",
+    "company": "",
+    "venue": "",
+    "city": "",
+    "coordinates": [],
+    "people": [
+      "Johnny Mercer"
+    ],
+    "roles": {
+      "director": [],
+      "actors": [],
+      "playwright": [],
+      "composer_lyricist": [],
+      "musical_director": [],
+      "choreographer": [],
+      "orchestrator": [],
+      "arranger": [],
+      "assistant_director": [],
+      "stage_manager": [],
+      "assistant_musical_director": [],
+      "vocal_director": [],
+      "dance_captain": [],
+      "fight_director": [],
+      "dramaturg": [],
+      "producer": [],
+      "set_designer": [],
+      "costume_designer": [],
+      "lighting_designer": [],
+      "sound_designer": [],
+      "musicians": [],
+      "performers": [],
+      "artists": []
+    },
+    "production_groups": [],
+    "media": [],
+    "word_count": 524,
+    "subject_role_map": [
+      {
+        "person": "Johnny Mercer",
+        "roles": [
+          "composer_lyricist"
+        ],
+        "labels": [
+          "Composer/Lyricist"
+        ]
+      }
+    ],
+    "subject_people": "Johnny Mercer",
+    "coordinate_points": [],
+    "display_schema": {
+      "work_type": "subjects",
+      "work_label": "Subject",
+      "company_label": "Company",
+      "primary_browse": "subjects",
+      "secondary_browse": "productions"
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [],
+      "subjects": [
+        "Johnny Mercer"
+      ],
+      "book_authors": [],
+      "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
+      "companies": [],
+      "venues": [],
+      "cities": [],
+      "people": [
+        "Johnny Mercer"
       ]
     }
   },
@@ -19466,6 +20090,156 @@
     }
   },
   {
+    "slug": "1976-09-30-dramatic-entrances",
+    "route": "/reviews/1976-09-30-dramatic-entrances/",
+    "source_file": "1976.09.30.Radio_Times.Dramatic_Entrances.md",
+    "title": "Dramatic Entrances",
+    "date": "1976-09-30",
+    "year": "1976",
+    "publication": "Radio Times",
+    "source_publication": "Radio Times",
+    "article_category": "Opinion Piece",
+    "collections": [
+      "UK Collection"
+    ],
+    "publication_status": "publish",
+    "editorial_issue_type": "clean_manual_transcription",
+    "canonical_file": "",
+    "production_title": "",
+    "company": "BBC Third Programme",
+    "venue": "",
+    "city": "",
+    "coordinates": [],
+    "people": [
+      "Dylan Thomas",
+      "Giles Cooper",
+      "Harold Pinter",
+      "Henry Reed",
+      "Jean Anouilh",
+      "Louis MacNeice",
+      "Raymond Raikes",
+      "Rhys Adrian",
+      "Robert Bolt",
+      "Samuel Beckett",
+      "Tom Stoppard"
+    ],
+    "roles": {
+      "director": [],
+      "actors": [],
+      "playwright": [],
+      "composer_lyricist": [],
+      "musical_director": [],
+      "choreographer": [],
+      "orchestrator": [],
+      "arranger": [],
+      "assistant_director": [],
+      "stage_manager": [],
+      "assistant_musical_director": [],
+      "vocal_director": [],
+      "dance_captain": [],
+      "fight_director": [],
+      "dramaturg": [],
+      "producer": [],
+      "set_designer": [],
+      "costume_designer": [],
+      "lighting_designer": [],
+      "sound_designer": [],
+      "musicians": [],
+      "performers": [],
+      "artists": []
+    },
+    "production_groups": [],
+    "media": [],
+    "word_count": 1629,
+    "topic": "Dramatic Entrances",
+    "subject_role_map": [
+      {
+        "person": "Raymond Raikes"
+      },
+      {
+        "person": "Dylan Thomas"
+      },
+      {
+        "person": "Samuel Beckett"
+      },
+      {
+        "person": "Jean Anouilh"
+      },
+      {
+        "person": "Harold Pinter"
+      },
+      {
+        "person": "Robert Bolt"
+      },
+      {
+        "person": "Tom Stoppard"
+      },
+      {
+        "person": "Giles Cooper"
+      },
+      {
+        "person": "Rhys Adrian"
+      },
+      {
+        "person": "Louis MacNeice"
+      },
+      {
+        "person": "Henry Reed"
+      }
+    ],
+    "subject_people": "Raymond Raikes; Dylan Thomas; Samuel Beckett; Jean Anouilh; Harold Pinter; Robert Bolt; Tom Stoppard; Giles Cooper; Rhys Adrian; Louis MacNeice; Henry Reed",
+    "coordinate_points": [],
+    "display_schema": {
+      "work_type": "topics",
+      "work_label": "Topic",
+      "company_label": "Company",
+      "primary_browse": "topics",
+      "secondary_browse": "productions"
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [],
+      "subjects": [
+        "Raymond Raikes",
+        "Dylan Thomas",
+        "Samuel Beckett",
+        "Jean Anouilh",
+        "Harold Pinter",
+        "Robert Bolt",
+        "Tom Stoppard",
+        "Giles Cooper",
+        "Rhys Adrian",
+        "Louis MacNeice",
+        "Henry Reed"
+      ],
+      "book_authors": [],
+      "publishers": [],
+      "topics": [
+        "Dramatic Entrances"
+      ],
+      "events": [],
+      "networks": [],
+      "companies": [
+        "BBC Third Programme"
+      ],
+      "venues": [],
+      "cities": [],
+      "people": [
+        "Dylan Thomas",
+        "Giles Cooper",
+        "Harold Pinter",
+        "Henry Reed",
+        "Jean Anouilh",
+        "Louis MacNeice",
+        "Raymond Raikes",
+        "Rhys Adrian",
+        "Robert Bolt",
+        "Samuel Beckett",
+        "Tom Stoppard"
+      ]
+    }
+  },
+  {
     "slug": "1976-10-03-the-naked-and-the-bed",
     "route": "/reviews/1976-10-03-the-naked-and-the-bed/",
     "source_file": "1976.10.03.The_Observer.The_Naked_And_The_Bed.md",
@@ -20381,6 +21155,125 @@
     }
   },
   {
+    "slug": "1976-11-12-claudius-the-good",
+    "route": "/reviews/1976-11-12-claudius-the-good/",
+    "source_file": "1976.11.12.Radio_Times.Claudius_the_Good.md",
+    "title": "Claudius the Good",
+    "date": "1976-11-12",
+    "year": "1976",
+    "publication": "Radio Times",
+    "source_publication": "Radio Times",
+    "article_category": "Television Review",
+    "collections": [
+      "UK Collection"
+    ],
+    "publication_status": "publish",
+    "editorial_issue_type": "clean_manual_transcription",
+    "canonical_file": "",
+    "production_title": "",
+    "company": "",
+    "venue": "",
+    "city": "",
+    "coordinates": [],
+    "people": [
+      "Brian Blessed",
+      "Derek Jacobi",
+      "Herbert Wise",
+      "Jack Pulman",
+      "Robert Graves",
+      "Siân Phillips"
+    ],
+    "roles": {
+      "director": [
+        "Herbert Wise"
+      ],
+      "actors": [
+        "Brian Blessed",
+        "Siân Phillips",
+        "Derek Jacobi"
+      ],
+      "playwright": [
+        "Jack Pulman"
+      ],
+      "composer_lyricist": [],
+      "musical_director": [],
+      "choreographer": [],
+      "orchestrator": [],
+      "arranger": [],
+      "assistant_director": [],
+      "stage_manager": [],
+      "assistant_musical_director": [],
+      "vocal_director": [],
+      "dance_captain": [],
+      "fight_director": [],
+      "dramaturg": [],
+      "producer": [],
+      "set_designer": [],
+      "costume_designer": [],
+      "lighting_designer": [],
+      "sound_designer": [],
+      "musicians": [],
+      "performers": [],
+      "artists": [
+        "Robert Graves"
+      ]
+    },
+    "production_groups": [
+      {
+        "order": "1",
+        "production_title": "I, Claudius",
+        "director": [
+          "Herbert Wise"
+        ],
+        "actors": [
+          "Brian Blessed",
+          "Siân Phillips",
+          "Derek Jacobi"
+        ],
+        "playwright": [
+          "Jack Pulman"
+        ],
+        "artists": [
+          "Robert Graves"
+        ]
+      }
+    ],
+    "media": [],
+    "word_count": 947,
+    "show_title": "I, Claudius",
+    "coordinate_points": [],
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Show",
+      "company_label": "Network",
+      "primary_browse": "productions",
+      "secondary_browse": "networks"
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "I, Claudius"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
+      "companies": [],
+      "venues": [],
+      "cities": [],
+      "people": [
+        "Brian Blessed",
+        "Derek Jacobi",
+        "Herbert Wise",
+        "Jack Pulman",
+        "Robert Graves",
+        "Siân Phillips"
+      ]
+    }
+  },
+  {
     "slug": "1976-11-14-garnett-in-his-glory",
     "route": "/reviews/1976-11-14-garnett-in-his-glory/",
     "source_file": "1976.11.14.The_Observer.Garnett_In_His_Glory.md",
@@ -20746,6 +21639,146 @@
         "Molière",
         "Roger Planchon",
         "Tom McGrath"
+      ]
+    }
+  },
+  {
+    "slug": "1976-11-26-looking-back-at-look-back-in-anger",
+    "route": "/reviews/1976-11-26-looking-back-at-look-back-in-anger/",
+    "source_file": "1976.11.26.Radio_Times.Looking_Back_at_Look_Back_in_Anger.md",
+    "title": "Looking Back at Look Back in Anger",
+    "date": "1976-11-26",
+    "year": "1976",
+    "publication": "Radio Times",
+    "source_publication": "Radio Times",
+    "article_category": "Television Review",
+    "collections": [
+      "UK Collection"
+    ],
+    "publication_status": "publish",
+    "editorial_issue_type": "clean_manual_transcription",
+    "canonical_file": "",
+    "production_title": "",
+    "company": "",
+    "venue": "",
+    "city": "",
+    "coordinates": [],
+    "people": [
+      "Ciaran Madden",
+      "James Hazeldine",
+      "John Glenister",
+      "John Osborne",
+      "Kenneth Tynan",
+      "Neil Daglish"
+    ],
+    "roles": {
+      "director": [
+        "John Glenister"
+      ],
+      "actors": [
+        "James Hazeldine",
+        "Ciaran Madden",
+        "Neil Daglish"
+      ],
+      "playwright": [
+        "John Osborne"
+      ],
+      "composer_lyricist": [],
+      "musical_director": [],
+      "choreographer": [],
+      "orchestrator": [],
+      "arranger": [],
+      "assistant_director": [],
+      "stage_manager": [],
+      "assistant_musical_director": [],
+      "vocal_director": [],
+      "dance_captain": [],
+      "fight_director": [],
+      "dramaturg": [],
+      "producer": [],
+      "set_designer": [],
+      "costume_designer": [],
+      "lighting_designer": [],
+      "sound_designer": [],
+      "musicians": [],
+      "performers": [],
+      "artists": []
+    },
+    "production_groups": [
+      {
+        "order": "1",
+        "production_title": "Look Back in Anger",
+        "company": [
+          "BBC1"
+        ],
+        "director": [
+          "John Glenister"
+        ],
+        "actors": [
+          "James Hazeldine",
+          "Ciaran Madden",
+          "Neil Daglish"
+        ],
+        "playwright": [
+          "John Osborne"
+        ]
+      }
+    ],
+    "media": [],
+    "word_count": 2463,
+    "show_title": "Look Back in Anger",
+    "network_or_platform": "BBC1",
+    "subject_role_map": [
+      {
+        "person": "John Osborne",
+        "roles": [
+          "playwright"
+        ],
+        "labels": [
+          "Playwright"
+        ]
+      },
+      {
+        "person": "Kenneth Tynan"
+      }
+    ],
+    "subject_people": "John Osborne; Kenneth Tynan",
+    "coordinate_points": [],
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Show",
+      "company_label": "Network",
+      "primary_browse": "productions",
+      "secondary_browse": "networks"
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Look Back in Anger"
+      ],
+      "subjects": [
+        "John Osborne",
+        "Kenneth Tynan"
+      ],
+      "book_authors": [],
+      "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [
+        "BBC1"
+      ],
+      "companies": [
+        "BBC1"
+      ],
+      "venues": [],
+      "cities": [],
+      "people": [
+        "Ciaran Madden",
+        "James Hazeldine",
+        "John Glenister",
+        "John Osborne",
+        "Kenneth Tynan",
+        "Neil Daglish"
       ]
     }
   },
@@ -34319,6 +35352,102 @@
     }
   },
   {
+    "slug": "1978-08-04-sound-radio",
+    "route": "/reviews/1978-08-04-sound-radio/",
+    "source_file": "1978.08.04.Radio_Times.Sound_Radio.md",
+    "title": "Sound Radio",
+    "date": "1978-08-04",
+    "year": "1978",
+    "publication": "Radio Times",
+    "source_publication": "Radio Times",
+    "article_category": "Opinion Piece",
+    "collections": [
+      "UK Collection"
+    ],
+    "publication_status": "publish",
+    "editorial_issue_type": "clean_manual_transcription",
+    "canonical_file": "",
+    "production_title": "The Revenge",
+    "company": "BBC",
+    "venue": "",
+    "city": "",
+    "coordinates": [],
+    "people": [
+      "Andrew Sachs",
+      "Glyn Dearman",
+      "Lloyd Silverthorne"
+    ],
+    "roles": {
+      "director": [
+        "Glyn Dearman"
+      ],
+      "actors": [],
+      "playwright": [
+        "Andrew Sachs"
+      ],
+      "composer_lyricist": [],
+      "musical_director": [],
+      "choreographer": [],
+      "orchestrator": [],
+      "arranger": [],
+      "assistant_director": [],
+      "stage_manager": [],
+      "assistant_musical_director": [],
+      "vocal_director": [],
+      "dance_captain": [],
+      "fight_director": [],
+      "dramaturg": [],
+      "producer": [],
+      "set_designer": [],
+      "costume_designer": [],
+      "lighting_designer": [],
+      "sound_designer": [],
+      "musicians": [],
+      "performers": [
+        "Andrew Sachs"
+      ],
+      "artists": [
+        "Lloyd Silverthorne"
+      ]
+    },
+    "production_groups": [],
+    "media": [],
+    "word_count": 1034,
+    "topic": "Sound Radio",
+    "coordinate_points": [],
+    "display_schema": {
+      "work_type": "topics",
+      "work_label": "Topic",
+      "company_label": "Company",
+      "primary_browse": "topics",
+      "secondary_browse": "productions"
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "The Revenge"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "topics": [
+        "Sound Radio"
+      ],
+      "events": [],
+      "networks": [],
+      "companies": [
+        "BBC"
+      ],
+      "venues": [],
+      "cities": [],
+      "people": [
+        "Andrew Sachs",
+        "Glyn Dearman",
+        "Lloyd Silverthorne"
+      ]
+    }
+  },
+  {
     "slug": "1978-08-20-back-to-new-orleans",
     "route": "/reviews/1978-08-20-back-to-new-orleans/",
     "source_file": "1978.08.20.Cushman_Collected.Back_to_New_Orleans.md",
@@ -36455,6 +37584,140 @@
         "Cedric Messina",
         "Derek Jacobi",
         "William Shakespeare"
+      ]
+    }
+  },
+  {
+    "slug": "1978-12-03-crime-and-showbiz",
+    "route": "/reviews/1978-12-03-crime-and-showbiz/",
+    "source_file": "1978.12.03.The_Observer.Crime_and_Showbiz.md",
+    "title": "Crime and Showbiz",
+    "date": "1978-12-03",
+    "year": "1978",
+    "publication": "The Observer",
+    "source_publication": "The Observer",
+    "article_category": "Theatre Review",
+    "collections": [
+      "UK Collection"
+    ],
+    "publication_status": "publish",
+    "editorial_issue_type": "clean_manual_transcription",
+    "canonical_file": "",
+    "production_title": "",
+    "company": "",
+    "venue": "",
+    "city": "",
+    "coordinates": [],
+    "people": [
+      "Bob Fosse",
+      "Fred Ebb",
+      "Gillian Gregory",
+      "Howard Barker",
+      "John Kander",
+      "Natasha Parry",
+      "Peter James",
+      "Roger Sloman",
+      "Toby Salaman",
+      "{\"'{'order'\": \"'2'}\"}"
+    ],
+    "roles": {
+      "director": [],
+      "actors": [],
+      "playwright": [],
+      "composer_lyricist": [],
+      "musical_director": [],
+      "choreographer": [],
+      "orchestrator": [],
+      "arranger": [],
+      "assistant_director": [],
+      "stage_manager": [],
+      "assistant_musical_director": [],
+      "vocal_director": [],
+      "dance_captain": [],
+      "fight_director": [],
+      "dramaturg": [],
+      "producer": [],
+      "set_designer": [],
+      "costume_designer": [],
+      "lighting_designer": [],
+      "sound_designer": [],
+      "musicians": [],
+      "performers": [],
+      "artists": []
+    },
+    "production_groups": [
+      {
+        "order": "1",
+        "production_title": "Love of a Good Man",
+        "venue": [
+          "Crucible Studio"
+        ],
+        "city": [
+          "Sheffield"
+        ],
+        "director": [
+          "Peter James"
+        ],
+        "actors": [
+          "Natasha Parry",
+          "Roger Sloman",
+          "Toby Salaman"
+        ],
+        "playwright": [
+          "Howard Barker"
+        ],
+        "composer_lyricist": [
+          "John Kander",
+          "Fred Ebb"
+        ],
+        "choreographer": [
+          "Gillian Gregory"
+        ],
+        "artists": [
+          "Bob Fosse",
+          "{\"'{'order'\": \"'2'}\"}"
+        ]
+      }
+    ],
+    "media": [],
+    "word_count": 768,
+    "coordinate_points": [],
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Love of a Good Man"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
+      "companies": [],
+      "venues": [
+        "Crucible Studio"
+      ],
+      "cities": [
+        "Sheffield"
+      ],
+      "people": [
+        "Bob Fosse",
+        "Fred Ebb",
+        "Gillian Gregory",
+        "Howard Barker",
+        "John Kander",
+        "Natasha Parry",
+        "Peter James",
+        "Roger Sloman",
+        "Toby Salaman",
+        "{\"'{'order'\": \"'2'}\"}"
       ]
     }
   },
@@ -42003,6 +43266,162 @@
         "Peter J. Hall",
         "Sara Kestelman",
         "William Shakespeare"
+      ]
+    }
+  },
+  {
+    "slug": "1979-09-02-going-on-about-england",
+    "route": "/reviews/1979-09-02-going-on-about-england/",
+    "source_file": "1979.09.02.The_Observer.Going_on_About_England.md",
+    "title": "Going on About England",
+    "date": "1979-09-02",
+    "year": "1979",
+    "publication": "The Observer",
+    "source_publication": "The Observer",
+    "article_category": "Theatre Review",
+    "collections": [
+      "UK Collection"
+    ],
+    "publication_status": "publish",
+    "editorial_issue_type": "clean_manual_transcription",
+    "canonical_file": "",
+    "production_title": "",
+    "company": "",
+    "venue": "",
+    "city": "",
+    "coordinates": [],
+    "people": [
+      "Barry Foster",
+      "Beryl Reid",
+      "Howard Brenton",
+      "Jennie Linden",
+      "Malcolm Storry",
+      "Paola Dionisotti",
+      "Peter Bowles",
+      "Peter Nichols",
+      "Ruby Wax"
+    ],
+    "roles": {
+      "director": [
+        "Peter Nichols"
+      ],
+      "actors": [
+        "Jennie Linden",
+        "Beryl Reid",
+        "Barry Foster",
+        "Peter Bowles",
+        "Paola Dionisotti",
+        "Malcolm Storry",
+        "Ruby Wax"
+      ],
+      "playwright": [
+        "Peter Nichols",
+        "Howard Brenton"
+      ],
+      "composer_lyricist": [],
+      "musical_director": [],
+      "choreographer": [],
+      "orchestrator": [],
+      "arranger": [],
+      "assistant_director": [],
+      "stage_manager": [],
+      "assistant_musical_director": [],
+      "vocal_director": [],
+      "dance_captain": [],
+      "fight_director": [],
+      "dramaturg": [],
+      "producer": [],
+      "set_designer": [],
+      "costume_designer": [],
+      "lighting_designer": [],
+      "sound_designer": [],
+      "musicians": [],
+      "performers": [],
+      "artists": []
+    },
+    "production_groups": [
+      {
+        "order": "1",
+        "production_title": "Born in the Gardens",
+        "venue": [
+          "Theatre Royal, Bristol"
+        ],
+        "city": [
+          "Bristol"
+        ],
+        "director": [
+          "Peter Nichols"
+        ],
+        "actors": [
+          "Jennie Linden",
+          "Beryl Reid",
+          "Barry Foster",
+          "Peter Bowles"
+        ],
+        "playwright": [
+          "Peter Nichols"
+        ]
+      },
+      {
+        "order": "2",
+        "production_title": "Sore Throats",
+        "venue": [
+          "Warehouse Theatre"
+        ],
+        "city": [
+          "London, England"
+        ],
+        "actors": [
+          "Paola Dionisotti",
+          "Malcolm Storry",
+          "Ruby Wax"
+        ],
+        "playwright": [
+          "Howard Brenton"
+        ]
+      }
+    ],
+    "media": [],
+    "word_count": 1125,
+    "coordinate_points": [],
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Born in the Gardens",
+        "Sore Throats"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
+      "companies": [],
+      "venues": [
+        "Theatre Royal, Bristol",
+        "Warehouse Theatre"
+      ],
+      "cities": [
+        "Bristol",
+        "London, England"
+      ],
+      "people": [
+        "Barry Foster",
+        "Beryl Reid",
+        "Howard Brenton",
+        "Jennie Linden",
+        "Malcolm Storry",
+        "Paola Dionisotti",
+        "Peter Bowles",
+        "Peter Nichols",
+        "Ruby Wax"
       ]
     }
   },
@@ -325120,7 +326539,7 @@
     "network_or_platform": "Academy of Motion Picture Arts and Sciences",
     "subject_role_map": [
       {
-        "person": "Alec Baldwin",
+        "person": "Steve Martin",
         "roles": [
           "performers"
         ],
@@ -325129,7 +326548,7 @@
         ]
       }
     ],
-    "subject_people": "Alec Baldwin",
+    "subject_people": "Steve Martin",
     "coordinate_points": [],
     "display_schema": {
       "work_type": "productions",
@@ -325144,7 +326563,7 @@
         "82nd Academy Awards"
       ],
       "subjects": [
-        "Alec Baldwin"
+        "Steve Martin"
       ],
       "book_authors": [],
       "publishers": [],

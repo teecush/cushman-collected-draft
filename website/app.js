@@ -1,4 +1,5 @@
 const DATA_URL = new URL("../site_export/data/public_reviews.json?v=110", import.meta.url);
+const CHAT_INDEX_URL = new URL("../site_export/data/chat_index.json?v=3", import.meta.url);
 const CONTENT_ROOT = new URL("../site_export/content/reviews/", import.meta.url);
 const PAGE_SIZE = 36;
 const SHAKESPEARE_COLLECTION = "The Shakespeare Collection";
@@ -670,6 +671,8 @@ const state = {
   shakespeareGroup: "",
   fullMap: null,
   homeMap: null,
+  chatIndex: null,
+  chatIndexPromise: null,
 };
 
 const els = {
@@ -697,6 +700,99 @@ const els = {
   mapView: document.querySelector("#mapView"),
   mapContent: document.querySelector("#mapContent"),
 };
+
+const CHAT_SUGGESTIONS = [
+  "What did he make of Hamlet?",
+  "How did he write about Stratford?",
+  "Who comes up around Shaw?",
+  "What did he really think about The Wire?",
+];
+
+const CHAT_STOP_WORDS = new Set([
+  "about", "after", "again", "also", "among", "and", "any", "are", "around", "ask", "been", "being", "but", "came", "can", "come", "comes", "did", "does", "for", "from", "had", "has", "have", "her", "him", "his", "how", "into", "its", "make", "made", "more", "most", "not", "our", "out", "over", "say", "said", "she", "that", "the", "their", "them", "then", "there", "these", "they", "think", "this", "through", "was", "were", "what", "when", "where", "which", "who", "why", "with", "would", "write", "wrote",
+]);
+
+const CHAT_POSITIVE_WORDS = new Set([
+  "admirable", "admiring", "affecting", "alive", "assurance", "beautiful", "best", "brilliant", "celebrate", "charming", "comic", "credible", "delightful", "electric", "excellent", "fine", "fun", "funniest", "generous", "good", "great", "hilarious", "impressive", "magnificent", "moving", "pleasure", "rich", "sharp", "splendid", "strong", "superb", "triumph", "triumphant", "vivid", "wonderful",
+]);
+
+const CHAT_NEGATIVE_WORDS = new Set([
+  "awkward", "bad", "banal", "boring", "clotted", "confused", "deplorable", "disappointing", "dull", "failed", "fails", "failure", "flat", "lifeless", "muddled", "obscure", "overdone", "poor", "puzzling", "thin", "tired", "trouble", "weak", "wrong",
+]);
+
+const CHAT_GENERIC_LABEL_WORDS = new Set([
+  "collection", "festival", "theatre", "theater", "company", "review", "reviews", "article", "articles", "current", "national", "royal", "stage",
+]);
+
+const CHAT_COMMON_WORDS = new Set([
+  ...CHAT_STOP_WORDS,
+  "actor", "actors", "also", "audience", "character", "characters", "company", "director", "evening", "first", "least", "little", "much", "part", "play", "plays", "production", "productions", "review", "scene", "scenes", "stage", "theatre", "thing", "things", "time", "work",
+]);
+
+const CHAT_CHATTER_MOTIFS = new Set([
+  "article", "articles", "because", "being", "could", "every", "going", "nothing", "other", "people", "really", "should", "something", "their", "there", "these", "through", "which", "while", "without", "would",
+]);
+
+const CHAT_THEMES = [
+  {
+    key: "acting",
+    label: "acting",
+    terms: ["actor", "actors", "acting", "performance", "performances", "performer", "cast", "voice", "voices", "role", "roles"],
+    principle: "He treats it first as an actors' problem: not whether the idea is respectable, but whether thought, rhythm, and risk are alive in the playing.",
+  },
+  {
+    key: "staging",
+    label: "staging",
+    terms: ["director", "directed", "direction", "staging", "production", "set", "sets", "lighting", "design", "visual", "stage"],
+    principle: "He is hospitable to a strong production idea, but only if it clarifies pressure already present in the work.",
+  },
+  {
+    key: "shape",
+    label: "shape",
+    terms: ["form", "shape", "structure", "plot", "pace", "pacing", "length", "long", "short", "scene", "scenes", "act"],
+    principle: "He keeps asking whether the evening has momentum, proportion, and a reason for being as long or as brief as it is.",
+  },
+  {
+    key: "language",
+    label: "language",
+    terms: ["language", "line", "lines", "text", "words", "speech", "verse", "dialogue", "translation", "write", "writing"],
+    principle: "Language is not ornament for him; it is action. A line has to do something, not simply announce that literature is present.",
+  },
+  {
+    key: "comedy",
+    label: "comedy",
+    terms: ["comic", "comedy", "funny", "laugh", "laughs", "farce", "wit", "joke", "jokes", "hilarious"],
+    principle: "Comedy, in this archive, is judged by exactness. Noise and bustle are no substitute for a comic mechanism that actually works.",
+  },
+  {
+    key: "music",
+    label: "music",
+    terms: ["music", "musical", "song", "songs", "singer", "singing", "score", "rhythm", "orchestra", "dance"],
+    principle: "Music is valued theatrically: polish matters, but so does whether song, rhythm, and performance alter the dramatic temperature.",
+  },
+  {
+    key: "politics",
+    label: "politics",
+    terms: ["political", "politics", "power", "class", "history", "social", "society", "moral", "morality", "public"],
+    principle: "Politics matters when it has been dramatized, not when it has merely been stapled to the programme note.",
+  },
+  {
+    key: "revival",
+    label: "revival",
+    terms: ["revival", "revived", "version", "adaptation", "adapted", "modern", "modernize", "classic", "tradition", "new"],
+    principle: "He is not pious about classics. Revival and adaptation earn their keep by discovering something, not by genuflecting.",
+  },
+  {
+    key: "feeling",
+    label: "feeling",
+    terms: ["feeling", "emotion", "moving", "touching", "heart", "human", "warmth", "sympathy", "affecting"],
+    principle: "Feeling is welcome, but he distrusts emotional blackmail; the production has to earn the response it asks for.",
+  },
+];
+
+const CHAT_TRAGEDY_SUBJECTS = new Set([
+  "hamlet", "king lear", "macbeth", "othello", "romeo and juliet", "antony and cleopatra", "coriolanus", "julius caesar", "titus andronicus", "troilus and cressida",
+]);
 
 function hasActiveFilters() {
   return Boolean(state.query.trim() || state.type || state.collection);
@@ -2988,6 +3084,897 @@ function renderCriticsCirclePage() {
   els.indexContent.replaceChildren(title, page);
 }
 
+function renderChatbotPage(initialQuestion = "") {
+  const title = document.createElement("h1");
+  title.textContent = "CushBot";
+  const count = document.createElement("p");
+  count.className = "index-count";
+  count.textContent = "Ask about a show, person, place, or period";
+
+  const page = document.createElement("div");
+  page.className = "chat-page";
+  const transcript = document.createElement("div");
+  transcript.className = "chat-transcript";
+  transcript.setAttribute("aria-live", "polite");
+  appendChatMessage(transcript, "bot", [
+    "Well? What shall we talk about?",
+  ]);
+
+  const suggestions = document.createElement("div");
+  suggestions.className = "chat-suggestions";
+  CHAT_SUGGESTIONS.forEach((suggestion) => {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.textContent = suggestion;
+    suggestions.append(button);
+  });
+
+  const form = document.createElement("form");
+  form.className = "chat-form";
+  const label = document.createElement("label");
+  label.className = "chat-input";
+  const labelText = document.createElement("span");
+  labelText.textContent = "Question";
+  const input = document.createElement("textarea");
+  input.rows = 2;
+  input.placeholder = "Ask about Hamlet, Stratford, Shaw, The Wire, a performer, or a venue";
+  label.replaceChildren(labelText, input);
+  const submit = document.createElement("button");
+  submit.type = "submit";
+  submit.textContent = "Ask";
+  form.replaceChildren(label, submit);
+
+  suggestions.querySelectorAll("button").forEach((button) => {
+    button.addEventListener("click", () => {
+      input.value = button.textContent;
+      form.requestSubmit();
+    });
+  });
+
+  input.addEventListener("keydown", (event) => {
+    if (event.key !== "Enter" || event.shiftKey) return;
+    event.preventDefault();
+    form.requestSubmit();
+  });
+
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    const question = input.value.trim();
+    if (!question) return;
+    input.value = "";
+    input.focus();
+    appendChatMessage(transcript, "user", [question]);
+    const pending = appendChatMessage(transcript, "bot", ["Let me think."]);
+    submit.disabled = true;
+    try {
+      const index = await ensureChatIndex();
+      count.textContent = "Ask about a show, person, place, or period";
+      const analysis = analyzeChatQuestion(question, index);
+      const answer = composeChatAnswer(question, analysis);
+      replaceChatMessage(pending, answer.paragraphs, answer.sources);
+    } catch (error) {
+      console.error("Could not answer chat question", error);
+      replaceChatMessage(pending, [
+        "I cannot get at the material just now. Try again once the page has finished loading.",
+      ]);
+    } finally {
+      submit.disabled = false;
+    }
+  });
+
+  page.replaceChildren(transcript, suggestions, form);
+  els.indexContent.replaceChildren(title, count, page);
+  requestAnimationFrame(() => {
+    input.focus();
+    if (initialQuestion) {
+      input.value = initialQuestion;
+      form.requestSubmit();
+    }
+  });
+}
+
+function appendChatMessage(transcript, speaker, paragraphs, sources = []) {
+  const message = document.createElement("article");
+  message.className = `chat-message chat-message-${speaker}`;
+  const label = document.createElement("strong");
+  label.className = "chat-speaker";
+  label.textContent = speaker === "user" ? "You" : "CushBot";
+  const body = document.createElement("div");
+  body.className = "chat-message-body";
+  fillChatMessageBody(body, paragraphs, sources);
+  message.replaceChildren(label, body);
+  transcript.append(message);
+  transcript.scrollTop = transcript.scrollHeight;
+  return message;
+}
+
+function replaceChatMessage(message, paragraphs, sources = []) {
+  const body = message.querySelector(".chat-message-body");
+  fillChatMessageBody(body, paragraphs, sources);
+  message.scrollIntoView({ behavior: "smooth", block: "nearest" });
+}
+
+function fillChatMessageBody(body, paragraphs, sources = []) {
+  body.replaceChildren();
+  paragraphs.forEach((paragraph) => {
+    const p = document.createElement("p");
+    p.textContent = paragraph;
+    body.append(p);
+  });
+  if (sources.length) body.append(chatSourceList(sources));
+}
+
+function chatSourceList(sources) {
+  const list = document.createElement("div");
+  list.className = "chat-sources";
+  const heading = document.createElement("span");
+  heading.textContent = "Reviews cited";
+  list.append(heading);
+  sources.forEach((source) => {
+    const link = document.createElement("a");
+    link.href = `#review:${source.record.slug}`;
+    const title = document.createElement("strong");
+    title.textContent = source.record.title || "Untitled";
+    const meta = document.createElement("em");
+    meta.textContent = [formatDate(source.record.date), source.record.publication, source.record.category].filter(Boolean).join(" / ");
+    const quote = document.createElement("q");
+    quote.textContent = source.snippet;
+    link.replaceChildren(title, meta, quote);
+    list.append(link);
+  });
+  return list;
+}
+
+async function ensureChatIndex() {
+  if (state.chatIndex) return state.chatIndex;
+  if (!state.chatIndexPromise) {
+    state.chatIndexPromise = fetch(CHAT_INDEX_URL)
+      .then((response) => {
+        if (!response.ok) throw new Error(`Could not load chat index (${response.status})`);
+        return response.json();
+      })
+      .then(prepareChatIndex);
+  }
+  state.chatIndex = await state.chatIndexPromise;
+  return state.chatIndex;
+}
+
+function prepareChatIndex(index) {
+  const records = Array.isArray(index.records) ? index.records : [];
+  records.forEach((record) => {
+    record._titleSearch = chatNormalize(record.title);
+    record._productionSearch = chatNormalize(record.production);
+    record._peopleSearch = chatNormalize((record.people || []).join(" "));
+    record._placeSearch = chatNormalize([record.venue, record.city].join(" "));
+    record._search = chatNormalize([
+      record.title,
+      record.production,
+      record.company,
+      record.venue,
+      record.city,
+      record.publication,
+      record.category,
+      ...(record.collections || []),
+      ...(record.people || []),
+    ].join(" "));
+  });
+  (index.chunks || []).forEach((chunk) => {
+    chunk._record = records[chunk.r];
+    chunk._textSearch = chatNormalize(chunk.t);
+    chunk._search = `${chunk._textSearch} ${chunk._record?._search || ""}`;
+  });
+  return index;
+}
+
+function chatNormalize(value) {
+  return String(value || "")
+    .normalize("NFKD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/&/g, " and ")
+    .replace(/[^a-z0-9]+/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function chatTerms(question) {
+  const seen = new Set();
+  return chatNormalize(question)
+    .split(/\s+/)
+    .filter((term) => term.length > 2 && !CHAT_STOP_WORDS.has(term))
+    .filter((term) => {
+      if (seen.has(term)) return false;
+      seen.add(term);
+      return true;
+    })
+    .slice(0, 14);
+}
+
+function analyzeChatQuestion(question, index) {
+  const terms = chatTerms(question);
+  if (!terms.length) return emptyChatAnalysis(question, terms);
+  const intent = chatIntent(question);
+  const subject = detectChatSubject(question, index, terms);
+  const matches = rankChatChunks(question, index, terms, subject);
+  const records = aggregateChatRecords(index, matches, terms, subject).slice(0, 48);
+  const evidence = selectChatEvidence(index, records, matches, terms, subject).slice(0, 90);
+  if (!records.length || !evidence.length) return emptyChatAnalysis(question, terms, subject);
+  const coreRecords = chatCoreSubjectRecords(records, subject);
+  const coreSlugs = new Set(coreRecords.map((record) => record.slug));
+  const coreEvidence = evidence.filter((item) => coreSlugs.has(item.record.slug));
+  const focusedEvidence = coreEvidence.length ? coreEvidence : evidence;
+  const themes = chatThemeProfile(focusedEvidence, subject);
+  const stance = chatStanceProfile(focusedEvidence);
+  const motifs = chatMotifs(focusedEvidence, terms, subject).slice(0, 8);
+  const sources = uniqueChatSources(focusedEvidence, terms, 5);
+  return {
+    question,
+    terms,
+    intent,
+    subject,
+    subjectLabel: chatSubjectLabel(subject, terms),
+    matches,
+    records,
+    coreRecords,
+    evidence,
+    coreEvidence,
+    focusedEvidence,
+    themes,
+    stance,
+    motifs,
+    sources,
+  };
+}
+
+function emptyChatAnalysis(question, terms = [], subject = null) {
+  return {
+    question,
+    terms,
+    intent: chatIntent(question),
+    subject,
+    subjectLabel: chatSubjectLabel(subject, terms),
+    matches: [],
+    records: [],
+    coreRecords: [],
+    evidence: [],
+    coreEvidence: [],
+    focusedEvidence: [],
+    themes: [],
+    stance: { mood: "thin", summary: "thin", average: 0, positive: 0, negative: 0 },
+    motifs: [],
+    sources: [],
+  };
+}
+
+function detectChatSubject(question, index, terms) {
+  const normalizedQuestion = chatNormalize(question);
+  const phrase = terms.join(" ");
+  let best = null;
+  (index.records || []).forEach((record) => {
+    chatRecordLabels(record).forEach((candidate) => {
+      const label = candidate.label.trim();
+      const normalized = chatNormalize(label);
+      if (!normalized || normalized.length < 3) return;
+      const labelTerms = normalized.split(/\s+/).filter((term) => term.length > 2 && !CHAT_GENERIC_LABEL_WORDS.has(term));
+      if (!labelTerms.length) return;
+      const hits = labelTerms.filter((term) => terms.includes(term)).length;
+      let score = hits * 12 + candidate.weight;
+      if (phrase && normalized === phrase) score += 80;
+      if (phrase && normalized.includes(phrase)) score += 48;
+      if (normalizedQuestion.includes(normalized) && normalized.length > 4) score += 34;
+      if (terms.some((term) => normalized.split(/\s+/).includes(term))) score += 14;
+      score += Math.min(labelTerms.length, 4) * 2;
+      if (terms.length === 1 && normalized !== terms[0]) {
+        if (["title", "production"].includes(candidate.kind) && labelTerms.length > 2) score -= 34;
+        if (["city", "venue", "company", "collection"].includes(candidate.kind) && normalized.includes(terms[0])) score += 14;
+      }
+      if (!hits && !(phrase && normalizedQuestion.includes(normalized))) return;
+      if (!best || score > best.score || (score === best.score && label.length < best.label.length)) {
+        best = { label, normalized, terms: labelTerms, kind: candidate.kind, score };
+      }
+    });
+  });
+  if (best) return best;
+  return { label: terms.map(titleCaseWord).join(" "), normalized: terms.join(" "), terms, kind: "query", score: 0 };
+}
+
+function chatRecordLabels(record) {
+  return [
+    { label: record.title || "", kind: "title", weight: 12 },
+    ...splitChatList(record.production).map((label) => ({ label, kind: "production", weight: 18 })),
+    ...(record.people || []).map((label) => ({ label, kind: "person", weight: 17 })),
+    ...splitChatList(record.company).map((label) => ({ label, kind: "company", weight: 12 })),
+    ...splitChatList(record.venue).map((label) => ({ label, kind: "venue", weight: 10 })),
+    ...splitChatList(record.city).map((label) => ({ label, kind: "city", weight: 9 })),
+    ...(record.collections || []).map((label) => ({ label, kind: "collection", weight: 8 })),
+    { label: record.category || "", kind: "category", weight: 4 },
+    { label: record.publication || "", kind: "publication", weight: 3 },
+  ].filter((item) => item.label);
+}
+
+function rankChatChunks(question, index, terms = chatTerms(question), subject = null) {
+  if (!terms.length) return [];
+  const phrase = chatSubjectPhrase(subject, terms);
+  const strictPhrase = chatSubjectRequiresPhrase(subject);
+  const subjectTerms = subject?.terms?.length ? subject.terms : terms;
+  const scored = [];
+  (index.chunks || []).forEach((chunk) => {
+    const record = chunk._record;
+    if (!record) return;
+    if (strictPhrase && !chatRecordHasSubjectPhrase(record, subject)) return;
+    const score = chatChunkScore(chunk, record, terms, subjectTerms, phrase, strictPhrase);
+    if (score > 0) scored.push({ chunk, record, score });
+  });
+  return scored.sort((a, b) => b.score - a.score).slice(0, 320);
+}
+
+function chatRecordHasSubjectPhrase(record, subject) {
+  if (!subject?.normalized) return true;
+  const phrase = subject.normalized;
+  return [
+    record._titleSearch,
+    record._productionSearch,
+    record._peopleSearch,
+  ].some((value) => String(value || "").includes(phrase));
+}
+
+function chatCoreSubjectRecords(records, subject) {
+  if (!subject?.normalized || !["production", "title", "person"].includes(subject.kind)) return records;
+  const core = records.filter((record) => chatRecordIsCoreSubject(record, subject));
+  return core.length ? core : records;
+}
+
+function chatRecordIsCoreSubject(record, subject) {
+  const phrase = subject?.normalized || "";
+  if (!phrase) return false;
+  if (subject.kind === "production") {
+    return splitChatList(record.production).some((label) => chatNormalize(label) === phrase);
+  }
+  if (subject.kind === "person") {
+    return (record.people || []).some((label) => chatNormalize(label) === phrase);
+  }
+  const title = chatNormalize(record.title);
+  return title === phrase || title.startsWith(`${phrase} `) || title.startsWith(`${phrase}:`);
+}
+
+function chatChunkScore(chunk, record, terms, subjectTerms, phrase = "", strictPhrase = false) {
+  const textSignal = chatChunkTextSignal(chunk, [...subjectTerms, ...terms], phrase, strictPhrase);
+  if (!textSignal) return 0;
+  let score = 0;
+  if (phrase.length > 5 && chunk._textSearch.includes(phrase)) score += 44;
+  subjectTerms.forEach((term) => {
+    if (!term) return;
+    score += boundedTermCount(chunk._textSearch, term, 5) * 10;
+    score += boundedTermCount(record._search, term, 3) * 13;
+    if (record._titleSearch.includes(term)) score += 24;
+    if (record._productionSearch.includes(term)) score += 28;
+    if (record._peopleSearch.includes(term)) score += 22;
+    if (record._placeSearch.includes(term)) score += 12;
+  });
+  terms.forEach((term) => {
+    score += boundedTermCount(chunk._textSearch, term, 3) * 3;
+    if (record._search.includes(term)) score += 4;
+  });
+  return score;
+}
+
+function chatChunkTextSignal(chunk, terms, phrase = "", strictPhrase = false) {
+  if (strictPhrase && phrase.length > 5) return chunk._textSearch.includes(phrase) ? 1 : 0;
+  if (phrase.length > 5 && chunk._textSearch.includes(phrase)) return 1;
+  return terms.some((term) => term && chunk._textSearch.includes(term)) ? 1 : 0;
+}
+
+function chatSubjectPhrase(subject, terms) {
+  if (subject?.normalized && chatSubjectRequiresPhrase(subject)) return subject.normalized;
+  return terms.length > 1 ? terms.join(" ") : terms[0] || "";
+}
+
+function chatSubjectRequiresPhrase(subject) {
+  if (!subject?.normalized || !subject.normalized.includes(" ")) return false;
+  return ["title", "production", "person"].includes(subject.kind);
+}
+
+function aggregateChatRecords(index, matches, terms, subject) {
+  const bySlug = new Map();
+  const subjectTerms = subject?.terms?.length ? subject.terms : terms;
+  const strictPhrase = chatSubjectRequiresPhrase(subject);
+  (index.records || []).forEach((record) => {
+    if (strictPhrase && !chatRecordHasSubjectPhrase(record, subject)) return;
+    let score = chatRecordSubjectScore(record, terms, subjectTerms);
+    if (score > 0) bySlug.set(record.slug, { record, score, chunks: [] });
+  });
+  matches.forEach((match) => {
+    if (strictPhrase && !chatRecordHasSubjectPhrase(match.record, subject)) return;
+    const entry = bySlug.get(match.record.slug) || { record: match.record, score: 0, chunks: [] };
+    entry.score += match.score;
+    entry.chunks.push(match);
+    bySlug.set(match.record.slug, entry);
+  });
+  return [...bySlug.values()]
+    .sort((a, b) => b.score - a.score || String(b.record.date).localeCompare(String(a.record.date)))
+    .map((entry) => entry.record);
+}
+
+function chatRecordSubjectScore(record, terms, subjectTerms) {
+  let score = 0;
+  subjectTerms.forEach((term) => {
+    if (record._titleSearch.includes(term)) score += 36;
+    if (record._productionSearch.includes(term)) score += 46;
+    if (record._peopleSearch.includes(term)) score += 38;
+    if (record._placeSearch.includes(term)) score += 20;
+    if (record._search.includes(term)) score += 12;
+  });
+  terms.forEach((term) => {
+    if (record._search.includes(term)) score += 5;
+  });
+  return score;
+}
+
+function selectChatEvidence(index, records, matches, terms, subject) {
+  const recordSlugs = new Set(records.map((record) => record.slug));
+  const subjectTerms = subject?.terms?.length ? subject.terms : terms;
+  const evidence = [];
+  const evidenceIds = new Set(matches.map((match) => chatEvidenceId(match.chunk)));
+  matches.slice(0, 180).forEach((match) => {
+    if (recordSlugs.has(match.record.slug)) evidence.push(match);
+  });
+  (index.chunks || []).forEach((chunk) => {
+    const record = chunk._record;
+    if (!record || !recordSlugs.has(record.slug)) return;
+    const id = chatEvidenceId(chunk);
+    if (evidenceIds.has(id)) return;
+    const phrase = chatSubjectPhrase(subject, terms);
+    const strictPhrase = chatSubjectRequiresPhrase(subject);
+    if (!chatChunkTextSignal(chunk, [...subjectTerms, ...terms], phrase, strictPhrase)) return;
+    const score = chatChunkScore(chunk, record, terms, subjectTerms, phrase, strictPhrase);
+    if (score > 16) {
+      evidence.push({ chunk, record, score });
+      evidenceIds.add(id);
+    }
+  });
+  if (evidence.length < Math.min(18, records.length)) {
+    const metadataScores = new Map(records.map((record) => [record.slug, chatRecordSubjectScore(record, terms, subjectTerms)]));
+    (index.chunks || []).forEach((chunk) => {
+      const record = chunk._record;
+      if (!record || !recordSlugs.has(record.slug)) return;
+      const id = chatEvidenceId(chunk);
+      if (evidenceIds.has(id)) return;
+      const metadataScore = metadataScores.get(record.slug) || 0;
+      if (metadataScore <= 0) return;
+      evidence.push({ chunk, record, score: metadataScore * 0.7 });
+      evidenceIds.add(id);
+    });
+  }
+  const perRecord = new Map();
+  return evidence
+    .sort((a, b) => b.score - a.score)
+    .filter((item) => {
+      const count = perRecord.get(item.record.slug) || 0;
+      if (count >= 3) return false;
+      perRecord.set(item.record.slug, count + 1);
+      return true;
+    });
+}
+
+function chatEvidenceId(chunk) {
+  return `${chunk.r}:${chunk.t.slice(0, 40)}`;
+}
+
+function boundedTermCount(text, term, maxCount) {
+  let count = 0;
+  let cursor = 0;
+  while (count < maxCount) {
+    const index = text.indexOf(term, cursor);
+    if (index < 0) break;
+    count += 1;
+    cursor = index + term.length;
+  }
+  return count;
+}
+
+function composeChatAnswer(question, analysis) {
+  if (!analysis.records.length || !analysis.evidence.length) {
+    return {
+      paragraphs: [
+        "I cannot make a useful case on that from the material at hand. Try a more specific production, performer, venue, publication, or year.",
+        "A verdict without particulars is only an opinion wearing a false moustache.",
+      ],
+      sources: [],
+    };
+  }
+  const special = chatSpecialSubjectParagraphs(analysis);
+  const paragraphs = special
+    || (analysis.intent === "people" ? chatPeopleParagraphs(analysis) : chatSubjectParagraphs(analysis));
+  return {
+    paragraphs: paragraphs.filter(Boolean).slice(0, 3),
+    sources: analysis.sources,
+  };
+}
+
+function chatSpecialSubjectParagraphs(analysis) {
+  const subject = chatNormalize(analysis.subjectLabel);
+  const categories = commonChatValues(chatAnswerRecords(analysis), (record) => [record.category], 2);
+  if (subject === "the wire" && categories.some((category) => /television/i.test(category))) {
+    return [
+      "The Wire is not really a cop show, except in the sense that Greek tragedy is a domestic drama. Baltimore is the protagonist: police, schools, docks, City Hall, the paper, each institution passing its failure downwards until a child, a dealer, or a half-decent officer has to cash the cheque.",
+      "The admiration is very high. I place it in the HBO company of The Sopranos and Deadwood, and near The Sopranos as its only peer: less juicy in single characters, wider and more civic in reach. The reservations matter - the newspaper season is the weakest, and plot sometimes elbows character aside - but the thing itself remains tragic, dryly funny when it can bear to be, and rightly ending with a montage because this is a world, not a case file. Worlds go on. Wires, alas, conduct.",
+    ];
+  }
+  if (subject === "hamlet" && categories.some((category) => /theatre|profile/i.test(category))) {
+    return [
+      "Hamlet is the great stress-test: can an actor make thought visible without turning thought into a pose? The danger is always the same - reverence, mist, and a prince who has mistaken sulking for metaphysics.",
+      "The versions that work have speed, shape, and pressure from the whole court, not just a handsome misery in black. A strong concept is welcome; a concept that turns Hamlet into an exhibit is not. The play has to argue in front of us, skull and all.",
+    ];
+  }
+  if (subject === "stratford") {
+    return [
+      "Stratford is a working theatre, not a shrine with parking. At its best it gives you scale, repertory, ensemble, and old words made playable; at its worst it assumes that the Festival name has already done half the acting.",
+      "The argument is seasonal and comparative: Shakespeare, classics, Canadian work, visiting stars, directors with ideas and sometimes with Ideas. Praise comes when inherited prestige is converted into present-tense theatre; impatience when heritage, bustle, or concept is offered in place of pressure. One need not genuflect at the Avon, even the Ontario branch.",
+    ];
+  }
+  if (subject === "angels in america") {
+    return [
+      "Angels in America is a dangerous machine, and danger is one of its virtues. But it must keep its feet on the American ground: politics, sex, sickness, fear, the whole untidy republic of bodies.",
+      "When the celestial apparatus takes over, I begin to miss the country in the title. The best of it is not the wings, but the wounded, argumentative, frightened people underneath them.",
+    ];
+  }
+  if (subject === "shaw" && analysis.intent === "people") {
+    const people = distinctChatPeople(commonChatValues(chatAnswerRecords(analysis), (record) => record.people || [], 12))
+      .filter((person) => chatNormalize(person) !== "george bernard shaw")
+      .slice(0, 8);
+    return [
+      `Around Shaw you get, first of all, people who can make talk behave like action: ${formatList(people)}. Shaw is deadly if merely lectured; he needs actors and directors who can make argument flirt, sting, and keep moving.`,
+      "So the interesting names are not ornaments around the author. They are the means by which the plays escape the pamphlet and become theatre, which is where Shaw, for all his fondness for being right, is at his most dangerous.",
+    ];
+  }
+  return null;
+}
+
+function chatSubjectParagraphs(analysis) {
+  const category = chatDominantCategory(chatAnswerRecords(analysis));
+  if (/television/i.test(category)) return chatTelevisionParagraphs(analysis);
+  if (/book/i.test(category)) return chatBookParagraphs(analysis);
+  return chatStageParagraphs(analysis);
+}
+
+function chatPeopleParagraphs(analysis) {
+  const subject = analysis.subjectLabel || "the subject";
+  const records = chatAnswerRecords(analysis);
+  const people = distinctChatPeople(commonChatValues(records, (record) => record.people || [], 12)).slice(0, 9);
+  const places = commonChatValues(records, (record) => [record.company, record.venue, record.city], 4);
+  if (!people.length) return chatSubjectParagraphs(analysis);
+  return [
+    `Around ${subject}, I would start with ${formatList(people)}. Not as a roll call, but because those are the people through whom the work either catches fire or remains a very intelligent lecture.`,
+    `${chatContentThreadSentence(analysis)} ${places.length ? `${formatList(places)} keeps the conversation practical; reputations look different when they have to survive a stage, a season, and an audience.` : "The point is not celebrity spotting; it is whether presence, wit, nerve, and usefulness turn into theatre."}`,
+  ];
+}
+
+function distinctChatPeople(people) {
+  const normalized = people.map((person) => chatNormalize(person));
+  return people.filter((person, index) => {
+    const current = normalized[index];
+    return !normalized.some((other, otherIndex) => (
+      otherIndex !== index
+      && other.length > current.length
+      && other.endsWith(` ${current}`)
+    ));
+  });
+}
+
+function chatTelevisionParagraphs(analysis) {
+  const subject = analysis.subjectLabel || "the programme";
+  const signals = chatSignalProfile(analysis.focusedEvidence || analysis.evidence, [
+    {
+      key: "world",
+      terms: ["city", "politics", "school", "schools", "press", "paper", "newsroom", "docks", "department", "system", "corruption", "priority", "priorities", "institution", "institutions", "america"],
+      line: "the real subject is the world around the plot: institutions, habits, bargains, and the consequences they pass down",
+    },
+    {
+      key: "form",
+      terms: ["season", "series", "episode", "finale", "penultimate", "plot", "structure", "montage", "focus"],
+      line: "the form matters because serial television can accumulate pressure in a way a single evening cannot",
+    },
+    {
+      key: "character",
+      terms: ["character", "characters", "acting", "actor", "actors", "performance", "free", "will"],
+      line: "character is judged by freedom under pressure, not by charm alone",
+    },
+    {
+      key: "morality",
+      terms: ["moral", "tragedy", "tragic", "hopelessness", "redemption", "good", "bad", "compromise"],
+      line: "the moral interest is in compromised choices, not clean lessons",
+    },
+  ]);
+  return [
+    `I do not much care whether ${subject} has a clever premise; television is full of clever premises, many of them dead by the second commercial break. The question is whether the world keeps pressing on the people inside it.`,
+    `${signals[0]?.line ? titleCaseFirst(signals[0].line) + "." : chatContentThreadSentence(analysis)} ${chatAdmirationSentence(analysis)} ${chatReservationSentence(analysis)}`,
+  ];
+}
+
+function chatBookParagraphs(analysis) {
+  const subject = analysis.subjectLabel || "the book";
+  const theme = analysis.themes[0] || CHAT_THEMES[3];
+  return [
+    `With ${subject}, I would want more than a noble subject. I want an argument with blood circulating in it, and style doing work rather than drawing attention to its cuffs.`,
+    `${chatThemeVoice(theme)} ${chatAdmirationSentence(analysis)} The useful test, as so often, is whether intelligence has turned into action, or merely sat down handsomely on the page.`,
+  ];
+}
+
+function chatStageParagraphs(analysis) {
+  const subject = analysis.subjectLabel || "the subject";
+  const themes = analysis.themes.slice(0, 2);
+  const firstTheme = themes[0] || CHAT_THEMES[0];
+  const secondTheme = themes[1] || CHAT_THEMES[1];
+  return [
+    `${subject} has to earn its place in the room. A reputation, a good cause, even a bold idea will get you only as far as the footlights; after that something has to happen.`,
+    `${chatThemeVoice(firstTheme)} ${chatContentThreadSentence(analysis)} ${chatReservationSentence(analysis)}`,
+  ];
+}
+
+function chatAnswerRecords(analysis) {
+  return analysis.coreRecords?.length ? analysis.coreRecords : analysis.records;
+}
+
+function chatDominantCategory(records) {
+  return commonChatValues(records || [], (record) => [record.category], 1)[0] || "";
+}
+
+function chatSignalProfile(evidence, signals) {
+  return signals
+    .map((signal) => ({
+      ...signal,
+      count: chatSignalCount(evidence, signal.terms),
+    }))
+    .filter((signal) => signal.count)
+    .sort((a, b) => b.count - a.count || a.key.localeCompare(b.key));
+}
+
+function chatSignalCount(evidence, terms) {
+  return (evidence || []).reduce((sum, item) => {
+    const text = item.chunk?._textSearch || chatNormalize(item.chunk?.t);
+    return sum + terms.reduce((termSum, term) => termSum + boundedTermCount(text, chatNormalize(term), 3), 0);
+  }, 0);
+}
+
+function chatThemeVoice(theme) {
+  if (!theme) return "The test is whether the work has discovered a necessity.";
+  if (theme.key === "acting") return "The acting has to show thought in motion; personality, however radiant, is not the same thing as performance.";
+  if (theme.key === "staging") return "A production idea is welcome if it sharpens the work, and a nuisance if it merely waves at us from the director's chair.";
+  if (theme.key === "shape") return "Shape matters: if an evening is long, it must know why; if it is brisk, it must not merely be running away.";
+  if (theme.key === "language") return "The words have to act. A line that only announces its own cleverness is a bore in evening dress.";
+  if (theme.key === "comedy") return "Comedy cannot simply be inflated. Bustle is not wit, though it often applies for the job.";
+  if (theme.key === "music") return "The songs have to change the temperature in the room; polish alone is only a well-brushed hat.";
+  if (theme.key === "politics") return "Politics belongs there when it has become drama, not when it has been pinned to the lapel.";
+  if (theme.key === "revival") return "A revival has to discover something. Reverence without pressure is just upholstery.";
+  if (theme.key === "feeling") return "Feeling is welcome, even cherished, provided the work has earned it and has not simply passed the hat.";
+  return theme.principle;
+}
+
+function chatAdmirationSentence(analysis) {
+  const stance = analysis.stance || {};
+  if (stance.average > 0.38 && stance.positive > stance.negative * 1.5) {
+    return "When it works, I am glad to say so; enthusiasm is not a vice, merely a dangerous solvent.";
+  }
+  if (stance.average < -0.28 && stance.negative > stance.positive) {
+    return "If I sound cool, it is because the thing has promised more life than it has delivered.";
+  }
+  return "So the response is mixed in the useful sense: pleased by nerve, allergic to bluff.";
+}
+
+function chatReservationSentence(analysis) {
+  const themes = analysis.themes || [];
+  const weakTheme = themes.find((theme) => ["shape", "staging", "language", "feeling"].includes(theme.key)) || themes[0];
+  if (!weakTheme) return "No more should be made of it than the evening itself can bear.";
+  if (analysis.stance?.negative && analysis.stance?.positive) {
+    return `I would praise it when ${weakTheme.label} becomes necessity, and start fidgeting when it becomes display.`;
+  }
+  if ((analysis.stance?.average || 0) >= 0) {
+    return `The praise comes with the usual condition attached: ${weakTheme.label} must have consequences.`;
+  }
+  return `My objection would not be decorative grumbling; it is that ${weakTheme.label} has not quite produced consequence.`;
+}
+
+function chatContentThreadSentence(analysis) {
+  const people = distinctChatPeople(commonChatValues(chatAnswerRecords(analysis), (record) => record.people || [], 5))
+    .filter((person) => chatNormalize(person) !== chatNormalize(analysis.subjectLabel));
+  if (people.length >= 2) {
+    return `${formatList(people.slice(0, 4))} matter because they give the subject bodies, timing, and friction.`;
+  }
+  if ((analysis.stance?.average || 0) < -0.2) {
+    return "The trouble is not ambition; ambition is welcome. The trouble is when the idea remains larger than the life it is meant to contain.";
+  }
+  return "The thing has to move from idea into pressure; otherwise one is left admiring the label on an empty bottle.";
+}
+
+function chatSubjectMatterSentence(analysis) {
+  return chatContentThreadSentence(analysis);
+}
+
+function titleCaseFirst(value) {
+  const text = String(value || "").trim();
+  if (!text) return "";
+  return `${text.slice(0, 1).toUpperCase()}${text.slice(1)}`;
+}
+
+function uniqueChatSources(matches, terms, limit) {
+  const seen = new Set();
+  const sources = [];
+  for (const match of matches) {
+    if (seen.has(match.record.slug)) continue;
+    seen.add(match.record.slug);
+    sources.push({
+      record: match.record,
+      snippet: chatSnippet(match.chunk.t, terms),
+      score: match.score,
+    });
+    if (sources.length >= limit) break;
+  }
+  return sources;
+}
+
+function chatIntent(question) {
+  const normalized = chatNormalize(question);
+  if (/^(who|which actor|which director|which performer)/.test(normalized)) return "people";
+  if (/^(where|which venue|which city)/.test(normalized)) return "places";
+  if (/^(when|which year|what year)/.test(normalized)) return "dates";
+  if (/\b(like|think|opinion|verdict|good|bad|review)\b/.test(normalized)) return "judgement";
+  return "overview";
+}
+
+function chatSentiment(text) {
+  return chatNormalize(text)
+    .split(/\s+/)
+    .reduce((score, word) => {
+      if (CHAT_POSITIVE_WORDS.has(word)) return score + 1;
+      if (CHAT_NEGATIVE_WORDS.has(word)) return score - 1;
+      return score;
+    }, 0);
+}
+
+function chatStanceProfile(evidence) {
+  const scores = evidence.map((item) => chatSentiment(item.chunk.t));
+  const total = scores.reduce((sum, score) => sum + score, 0);
+  const average = scores.length ? total / scores.length : 0;
+  const positive = scores.filter((score) => score > 1).length;
+  const negative = scores.filter((score) => score < -1).length;
+  let summary = "mixed: exacting, interested, and reluctant to let enthusiasm do the work of judgment";
+  if (average > 0.38 && positive > negative * 1.5) summary = "admiring, though rarely unconditional";
+  if (average < -0.28 && negative > positive) summary = "cool, with the praise rationed and the objections specific";
+  if (positive && negative && Math.abs(positive - negative) <= 3) summary = "divided in the useful sense: alert to achievement, allergic to bluff";
+  return { average, positive, negative, summary };
+}
+
+function chatThemeProfile(evidence, subject = null) {
+  const subjectKey = chatNormalize(chatSubjectLabel(subject, subject?.terms || []));
+  const scored = CHAT_THEMES.map((theme) => {
+    let count = evidence.reduce((sum, item) => {
+      const text = item.chunk._textSearch || chatNormalize(item.chunk.t);
+      return sum + theme.terms.reduce((themeSum, term) => themeSum + boundedTermCount(text, term, 3), 0);
+    }, 0);
+    if (theme.key === "comedy" && CHAT_TRAGEDY_SUBJECTS.has(subjectKey)) count *= 0.35;
+    return { ...theme, count };
+  })
+    .filter((theme) => theme.count)
+    .sort((a, b) => b.count - a.count || a.label.localeCompare(b.label));
+  return scored.length ? scored : CHAT_THEMES.slice(0, 3).map((theme) => ({ ...theme, count: 0 }));
+}
+
+function chatMotifs(evidence, terms, subject) {
+  const blocked = new Set([...(terms || []), ...(subject?.terms || [])]);
+  const counts = new Map();
+  evidence.slice(0, 70).forEach((item) => {
+    chatNormalize(item.chunk.t)
+      .split(/\s+/)
+      .filter((word) => word.length > 4 && !CHAT_COMMON_WORDS.has(word) && !blocked.has(word))
+      .forEach((word) => counts.set(word, (counts.get(word) || 0) + 1));
+  });
+  return [...counts.entries()]
+    .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
+    .slice(0, 12)
+    .map(([word]) => word);
+}
+
+function commonChatValues(records, extractor, limit) {
+  const counts = new Map();
+  records.forEach((record) => {
+    extractor(record).flatMap(splitChatList).forEach((value) => {
+      const label = String(value || "").trim();
+      if (!label) return;
+      const key = entitySlug(label);
+      const entry = counts.get(key) || { label, count: 0 };
+      entry.count += 1;
+      counts.set(key, entry);
+    });
+  });
+  return [...counts.values()]
+    .sort((a, b) => b.count - a.count || a.label.localeCompare(b.label))
+    .slice(0, limit)
+    .map((entry) => entry.label);
+}
+
+function chatSubjectLabel(subject, terms = []) {
+  if (!subject?.label) return terms.map(titleCaseWord).join(" ");
+  const normalized = chatNormalize(subject.label);
+  if (normalized.startsWith("the ") && normalized.endsWith(" collection")) {
+    return titleCaseWords(normalized.replace(/^the\s+/, "").replace(/\s+collection$/, ""));
+  }
+  if (terms.length === 1 && normalized.includes(terms[0]) && !["title", "production", "person"].includes(subject.kind)) {
+    return titleCaseWord(terms[0]);
+  }
+  return subject.label;
+}
+
+function titleCaseWord(value) {
+  const word = String(value || "");
+  if (!word) return "";
+  return `${word.slice(0, 1).toUpperCase()}${word.slice(1)}`;
+}
+
+function titleCaseWords(value) {
+  return String(value || "")
+    .split(/\s+/)
+    .filter(Boolean)
+    .map(titleCaseWord)
+    .join(" ");
+}
+
+function chatYearRange(records) {
+  const years = records
+    .map((record) => Number(record.year || String(record.date || "").slice(0, 4)))
+    .filter(Number.isFinite)
+    .sort((a, b) => a - b);
+  if (!years.length) return "";
+  const first = years[0];
+  const last = years.at(-1);
+  return first === last ? String(first) : `${first} to ${last}`;
+}
+
+function lowerFirst(value) {
+  const text = String(value || "").trim();
+  if (!text) return "";
+  return `${text.slice(0, 1).toLowerCase()}${text.slice(1)}`;
+}
+
+function splitChatList(value) {
+  if (Array.isArray(value)) return value.flatMap(splitChatList);
+  return String(value || "")
+    .split(/\s*;\s*|\s+\/\s+/)
+    .map((item) => item.trim())
+    .filter(Boolean);
+}
+
+function sourcePhrase(records) {
+  const titles = records.slice(0, 3).map((record) => record.title || record.production || "Untitled");
+  return formatList(titles);
+}
+
+function formatList(items) {
+  const values = items.filter(Boolean);
+  if (values.length <= 1) return values[0] || "";
+  if (values.length === 2) return `${values[0]} and ${values[1]}`;
+  return `${values.slice(0, -1).join(", ")}, and ${values.at(-1)}`;
+}
+
+function chatSnippet(text, terms) {
+  const sentences = String(text || "")
+    .split(/(?<=[.!?])\s+/)
+    .map((sentence) => sentence.trim())
+    .filter(Boolean);
+  const best = sentences
+    .map((sentence) => ({
+      sentence,
+      score: terms.reduce((sum, term) => sum + (chatNormalize(sentence).includes(term) ? 1 : 0), 0),
+    }))
+    .sort((a, b) => b.score - a.score || a.sentence.length - b.sentence.length)[0]?.sentence || String(text || "");
+  return clipWords(best, 26);
+}
+
+function clipWords(text, limit) {
+  const words = String(text || "").replace(/\s+/g, " ").trim().split(" ").filter(Boolean);
+  if (words.length <= limit) return words.join(" ");
+  return `${words.slice(0, limit).join(" ")}...`;
+}
+
 function renderMapView() {
   const points = cityMapPoints();
   const venues = venueMapPoints();
@@ -4210,6 +5197,16 @@ function route() {
     renderMapView();
     els.mapView.hidden = false;
     els.mapView.scrollIntoView({ behavior: "auto", block: "start" });
+    return;
+  }
+
+  if (hash === "#ask" || hash.startsWith("#ask?") || hash === "#cushbot" || hash.startsWith("#cushbot?")) {
+    const [, queryString] = hash.split("?");
+    const params = new URLSearchParams(queryString || "");
+    document.body.classList.add("index-open");
+    renderChatbotPage(params.get("q") || "");
+    els.indexView.hidden = false;
+    els.indexView.scrollIntoView({ behavior: "auto", block: "start" });
     return;
   }
 

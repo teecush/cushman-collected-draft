@@ -1,7 +1,7 @@
 {
   "title": "Cushman Collected - UK Collection Draft Viewer",
   "generatedFrom": "guardian_archive/markdown clean records plus appended F-QA-pass records and clean other_uk_can records, existing numbering preserved",
-  "count": 526,
+  "count": 538,
   "records": [
     {
       "number": 1,
@@ -46391,7 +46391,7 @@
     {
       "number": 467,
       "id": "258617570",
-      "title": "Lower Fifth",
+      "title": "Himmler of the Lower Fifth",
       "author": "Robert Cushman",
       "publication": "The Observer",
       "section": "Review",
@@ -50537,6 +50537,968 @@
         "musicians": [],
         "artists": []
       }
+    },
+    {
+      "id": "trip1_new_001",
+      "title": "The Glisten of Humour",
+      "author": "Robert Cushman",
+      "publication": "The Observer",
+      "section": "Arts",
+      "date": "1976-06-27",
+      "year": "1976",
+      "category": "Obituary",
+      "url": "",
+      "markdownPath": "Scrapbook Trips/1 (May 17th)/_processing/draft_markdown/trip1_new_001.md",
+      "production_title": [],
+      "productions": [],
+      "company": "",
+      "venue": "",
+      "city": "",
+      "venues": [],
+      "cities": [],
+      "people": [
+        "Johnny Mercer"
+      ],
+      "roles": {
+        "director": [],
+        "actors": [],
+        "playwright": [],
+        "composer_lyricist": [],
+        "musical_director": [],
+        "choreographer": [],
+        "orchestrator": [],
+        "arranger": [],
+        "assistant_director": [],
+        "stage_manager": [],
+        "assistant_musical_director": [],
+        "vocal_director": [],
+        "dance_captain": [],
+        "fight_director": [],
+        "dramaturg": [],
+        "producer": [],
+        "set_designer": [],
+        "costume_designer": [],
+        "lighting_designer": [],
+        "sound_designer": [],
+        "musicians": [],
+        "performers": [],
+        "artists": []
+      },
+      "body": "The Glisten of Humour\n\nROBERT CUSHMAN writes an appreciation of American songwriter and singer Johnny Mercer, who died on Friday, aged 66.\n\nI FIRST became conscious of Johnny Mercer as a singer: a man who did duets with Bing Crosby.\n\nWhen I started listening to the radio in the late forties a record which they must have cut a decade earlier was still current (it hasn't died yet). It was a reworking of the old vaudeville cross-talk number \"Mr Gallagher and Mrs Shean,\" with the lyrics altered to a dictionary of the jargon of swing. Mercer did the rewriting of course and there are many of his peculiar qualities captured on that disc. The rhythm, the fascination with jazz and with language, the poker-faced wit. Harold Arlen, the composer with whom much of his best work was done, said that he only once saw Mercer crack a smile.\n\nBoth as writer and performer, his work glistens with humour, but it is so slyly delivered in a tart voice that it can almost slip by the listener. Singing with Crosby, and later with Bobby Darin, he loved to assume the role of a slightly bemused peasant, counterpointing the hip behaviour of the professional singer he was teamed with. In fact, he could outswing them all. Recently he made a couple of albums of his own songs, and one of the saddest things about his death is that there are so many hundreds more of which he had still to make the definitive recording.\n\nHe wrote lyrics with everybody: with Kern, Carmichael, Ellington, Schwartz down to Henry Mancini and André Previn, with whom he collaborated on the recent musical of Priestley's \"The Good Companions.\" That was not his best work; he could not adapt to an English idiom, or indeed to a theatrical one.\n\nHe wrote individual songs, not revelations of situation or character: the greatest he ever created -- Jubilation T Cornpone -- was the subject of the song, not its singer. And of course he was an American subject: Mercer was the lyricist of Americana, in two modes rural-bucolic (as in the score for \"Seven Brides for Seven Brothers,\" or his host of ornithological songs -- \"Skylark\" and the others) and urban-hip. \"One for my Baby\" is the archetypal saloon ballad, suggesting the smoke of cigarettes as much as of lovers' torches. And it is less a moaning than a shrugging song; like all the best lyricists, he knew how to be wry about heartbreak.\n\nOthers of his songs are filled with a kind of crazy, irreverent euphoria; they sound fun to write and fun to sing. An obscure piece (in fact I have only just discovered it) typically entitled \"Hang on to your Lids, Kids,\" concludes:--\n\n\"Ben Franklin once said it all\nDivided we've got to fall\nUnited we'll have a ball\nHere we go again.\"\n\nHe seems hardly ever to have stopped writing, and he turned out a great many routine numbers. But few lyricists (or composers, for he furnished Fred Astaire with the music as well as the words of the magnificent \"Something's Got to Give\") can have turned out so many great ones.",
+      "subject_people": [
+        "Johnny Mercer"
+      ],
+      "production_groups": [],
+      "collections": [
+        "UK Collection"
+      ],
+      "number": 527
+    },
+    {
+      "id": "trip1_new_002",
+      "title": "Going on About England",
+      "author": "Robert Cushman",
+      "publication": "The Observer",
+      "section": "Theatre",
+      "date": "1979-09-02",
+      "year": "1979",
+      "category": "Theatre Review",
+      "url": "",
+      "markdownPath": "Scrapbook Trips/1 (May 17th)/_processing/draft_markdown/trip1_new_002.md",
+      "production_title": "Born in the Gardens; Sore Throats",
+      "productions": [
+        "Born in the Gardens; Sore Throats"
+      ],
+      "company": "",
+      "venue": "",
+      "city": "",
+      "venues": [],
+      "cities": [],
+      "people": [
+        "Barry Foster",
+        "Beryl Reid",
+        "Howard Brenton",
+        "Jennie Linden",
+        "Malcolm Storry",
+        "Paola Dionisotti",
+        "Peter Bowles",
+        "Peter Nichols",
+        "Ruby Wax"
+      ],
+      "roles": {
+        "director": [
+          "Peter Nichols"
+        ],
+        "actors": [
+          "Jennie Linden",
+          "Beryl Reid",
+          "Barry Foster",
+          "Peter Bowles",
+          "Paola Dionisotti",
+          "Malcolm Storry",
+          "Ruby Wax"
+        ],
+        "playwright": [
+          "Peter Nichols",
+          "Howard Brenton"
+        ],
+        "composer_lyricist": [],
+        "musical_director": [],
+        "choreographer": [],
+        "orchestrator": [],
+        "arranger": [],
+        "assistant_director": [],
+        "stage_manager": [],
+        "assistant_musical_director": [],
+        "vocal_director": [],
+        "dance_captain": [],
+        "fight_director": [],
+        "dramaturg": [],
+        "producer": [],
+        "set_designer": [],
+        "costume_designer": [],
+        "lighting_designer": [],
+        "sound_designer": [],
+        "musicians": [],
+        "performers": [],
+        "artists": []
+      },
+      "body": "Going on about England\n\nYOU can empathise with a play for quite fortuitous reasons.\n\nI have just returned from California, and was naturally delighted to find that Queenie, one of the four characters in Peter Nichols's Born in the Gardens (Theatre Royal, Bristol), had done so too. Admittedly she had spent far longer in the West Coast sun than I (years as opposed to one week), but our reactions on return seemed encouragingly similar. She, if I read her right, was rocked by the home country's tatty quaintness, and most dispirited by its attempts at modernity.\n\nAsked about her life abroad, she replies among other things that she heard so much there about the wonderful English theatre she had almost begun to believe it. So, the previous night, before setting off for Bristol--which is the scene as well as the venue of Mr Nichols's play--she had gone to see a play in London. (I, of course, had had the same experience, though not for quite the same reasons.)\n\nShe doesn't seem to have enjoyed her evening out very much. At some point in every play, she says--generalising with remarkable accuracy from presumably limited experience--the characters will form a straight line and discuss the state of England, no matter how hard the dramatist tries to stop them. Mr Nichols is a formal kidder and he is on this occasion his own director. His actors at this moment are standing in the formation he describes, and talking just so.\n\nROBERT CUSHMAN on new plays in Bristol and London.\n\nYears ago, in The National Health, Mr Nichols gave us the prototype national-microcosm play. Before that, in A Day in the Death of Joe Egg, he established himself as one of our best theatrical domestics. He has more or less alternated the two modes ever since. Born in the Gardens is an attempt to unite them, and if it succeeded it would be a tour de force. It isn't that, though the author's shining mastery of such neglected basics as character and dialogue make it the most entertaining native play to have crossed my path this year.\n\nWe are in Tudor Manor, a mullioned mansion (well up to the Bristol Old Vic's usual high standard of set-design) owned by a successful brush-manufacturer, recently deceased. His coffin lies on stage, Loot-like, throughout the first act. Gathered for the funeral are his widow Maud, a ga-ga lady with an overriding fear of insect infestation and a creative line in malapropisms; Mo, her 45-year-old son, who lives with her and for Dixieland jazz; Mo's twin, the aforementioned Queenie, who seems to fancy him something rotten; and their elder brother Hedley, a back-bench Labour MP who is determined to rearrange his family's life on sensible lines even if he can't do the same for the country. This means resettling Maud in a Primrose Hill duplex (or, as she fruitfully puts it, durex), while Queenie is more than willing to seduce Mo to her own chosen side of the Atlantic. Since both Mo and Maud have developed distressing characteristics--he talks to his cat and she to the silent TV screen--the audience have good reason to wish them shaken out of their respective ruts. It is obvious, though, that they are not going to be; the situation becomes frustratingly static, and the characters' individual comic routines overstrained.\n\nThe title refers to a gorilla, the pride of Bristol Zoo, born and raised there, and unknown to the outside world. His nearest human equivalent seems to be the cardiganed Mo, resigned to a life of captivity, knowing full well that he would be awfully disillusioned if he ever actually visited New Orleans. He has some smashing speeches on jazz and other things, but for the play to work he needs to be brought more ruthlessly to its forefront.\n\nIt is most enjoyably acted, though Jennie Linden bashes Queenie over a bit hard and Beryl Reid relishes Maud's material and her own perfect timing of it rather too obviously for credibility. It is left to Barry Foster to be both grotesque and believable (as well as personally unrecognisable) as Mo, and for Peter Bowles to make Hedley quite the most sympathetic of our stage's recent crop of joke Socialists.\n\nHis blinkered good intentions (and the mess that he, like Queenie, has made of his own emotional life--Mr Nichols holds the scales fairly) say a good deal about Labour in disarray. His mother's view of the party is also pretty close to the bone of popular prejudice. She blames them for post-war austerity: \"After all we'd been through, they gave us another five years of it, without even the American soldiers to take our minds off it.\" For lines like that--burnished and rooted--I can forgive Mr Nichols a lot.\n\nThe state-of-the-nation speech in Howard Brenton's Sore Throats (Warehouse) is delivered by Sally, come to view a flat of which her privileged position as an Evening Standard telephonist has given her advance information. The speech has little to do with the rest of the play, which could be going on anywhere.\n\nIn the flat, which is desolate, Sally discovers Judy, the estranged wife of Jack, a policeman. Jack returns home to beat Judy up, so that she will hand him over half her money, enabling him to go to Canada with his new love and become a Mountie. He knocks her down, kicks her repeatedly in the guts, then invites her out to dinner. I can believe almost anything, but I want to know more about Jack's insensitivity and Judy's previous passivity before I can swallow that sequence.\n\nSally and Judy shack up together, devote themselves to sexual gratification; then Jack comes back again, still after money and delivering a searing speech about the birth of his child in the Canadian wilds. Mr Brenton is good, too, at startling images, like Judy tearing up bank notes, and shamefaced ripostes, as when Jack voices our guilty materialist thoughts by saying that if he sticks them together they will still be legal tender.\n\nThe play ends with Judy looking forward to a future of sexual, personal and financial freedom. Mr Brenton is not usually an ironist so one can only think, bully for you. Other reactions are stifled by the slenderness of his personal documentation. Paola Dionisotti gives some reality to both her suffering and her defiance; Malcolm Storry delivers his oration well, but is otherwise hard pressed to escape monotony. Jack's profession seems arbitrary: Mr Brenton can't believe that all coppers are wife-beaters, or vice versa. Ruby Wax does her bit, which mainly consists of taking some of the heat off Miss Dionisotti, ably. But if Mr Nichols's indecisiveness has led to dramatic obesity, Mr Brenton's single-mindedness has resulted in emaciation.",
+      "production_groups": [
+        {
+          "order": "1",
+          "production_title": "Born in the Gardens",
+          "venue": [
+            "Theatre Royal, Bristol"
+          ],
+          "city": [
+            "Bristol"
+          ],
+          "director": [
+            "Peter Nichols"
+          ],
+          "playwright": [
+            "Peter Nichols"
+          ],
+          "actors": [
+            "Jennie Linden",
+            "Beryl Reid",
+            "Barry Foster",
+            "Peter Bowles"
+          ]
+        },
+        {
+          "order": "2",
+          "production_title": "Sore Throats",
+          "venue": [
+            "Warehouse Theatre"
+          ],
+          "city": [
+            "London, England"
+          ],
+          "playwright": [
+            "Howard Brenton"
+          ],
+          "actors": [
+            "Paola Dionisotti",
+            "Malcolm Storry",
+            "Ruby Wax"
+          ]
+        }
+      ],
+      "collection": [
+        "UK Collection"
+      ],
+      "number": 528
+    },
+    {
+      "id": "trip1_new_003",
+      "title": "Looking Back at Look Back in Anger",
+      "author": "Robert Cushman",
+      "publication": "Radio Times",
+      "section": "Play of the Month",
+      "date": "1976-11-26",
+      "year": "1976",
+      "category": "Television Review",
+      "url": "",
+      "markdownPath": "Scrapbook Trips/1 (May 17th)/_processing/draft_markdown/trip1_new_003.md",
+      "production_title": [
+        "Look Back in Anger"
+      ],
+      "productions": [
+        "Look Back in Anger"
+      ],
+      "company": "BBC1",
+      "venue": "",
+      "city": "",
+      "venues": [],
+      "cities": [],
+      "people": [
+        "Ciaran Madden",
+        "James Hazeldine",
+        "John Glenister",
+        "John Osborne",
+        "Kenneth Tynan",
+        "Neil Daglish"
+      ],
+      "roles": {
+        "director": [
+          "John Glenister"
+        ],
+        "actors": [
+          "James Hazeldine",
+          "Ciaran Madden",
+          "Neil Daglish"
+        ],
+        "playwright": [
+          "John Osborne"
+        ],
+        "composer_lyricist": [],
+        "musical_director": [],
+        "choreographer": [],
+        "orchestrator": [],
+        "arranger": [],
+        "assistant_director": [],
+        "stage_manager": [],
+        "assistant_musical_director": [],
+        "vocal_director": [],
+        "dance_captain": [],
+        "fight_director": [],
+        "dramaturg": [],
+        "producer": [],
+        "set_designer": [],
+        "costume_designer": [],
+        "lighting_designer": [],
+        "sound_designer": [],
+        "musicians": [],
+        "performers": [],
+        "artists": []
+      },
+      "body": "Play of the Month--Look Back in Anger, Sunday 8.45 BBC1\n\nTwenty years ago, Look Back in Anger was first performed in London. It was only the third play ever produced by the English Stage Company at the Royal Court Theatre, and its author was an unknown playwright called John Osborne. But it became a pivotal point in British theatre. This week's special television production stars James Hazeldine as Jimmy Porter, Ciaran Madden as Alison and Neil Daglish as Cliff. Here Robert Cushman discusses the play's impact on contemporary British theatre and pictures take us from the first to the latest production.\n\nLooking back at Look Back in Anger\n\nIT IS a commonplace that the first night of John Osborne's Look Back in Anger 20 years ago at the Royal Court Theatre in London was a landmark. The stretch of theatrical history it opened up is the one in which we are still living.\n\nIt was the third production of the English Stage Company, a group set up at the Court with the intention of 'doing new plays': filling a hole that, nearly everyone was agreed, gaped wide. The question of what kind of new plays they should be was not much canvassed. The initial approaches made by the director, George Devine, were to novelists such as Angus Wilson and Nigel Dennis, who might be expected to come up with plays which--though certainly out of line with West End fashion--would be delicate, oblique, satiric in their approach; they would get reviews in which the adjective 'civilised' would feature rather strongly. This at least was true of Wilson's play The Mulberry Bush with which the new company went into business. It had already been done at the Bristol Old Vic, a 'civilised' theatre of the first order. So had the second Court offering, Arthur Miller's The Crucible. Miller, like Wilson, was a name, if not a commercial name.\n\nBut nobody had ever heard of John Osborne before 8 May 1956; the day on which the English Stage Company (not a name which ever caught on--from here on I'll call it the Court) staged Look Back in Anger as its third production. From that date, the Court was the theatre for New Dramatists, and the British theatre took its tone from the Court.\n\nNew dramatists were, and have remained, what it is all about; and critics gnash their teeth and point their fingers whenever some extravagantly long period of time--a fortnight, say--passes without one appearing. This has, one must admit, been hard on the old dramatists; I mean those still alive and producing. (Death pays all debts.) And of course even a new dramatist grows old, and may find himself unwelcome in his own parish. The Court has been faced with a tricky problem as the years have passed. Should it remain faithful to the authors it has nurtured, or should it cast them out?\n\nFor close on 15 years it took the first course; now it seems to have decided on the second. Of Osborne's last three London premières, two have been at Greenwich and one at the National Theatre. The dramatists who, within a couple of years of his debut, had most auspiciously followed him into Sloane Square--Arnold Wesker, John Arden--have likewise been absent. I have even heard it maintained that Edward Bond, whose debut came a full decade after Osborne's, has no right to a place at the Court. That opinion was advanced by one of Bond's greatest admirers, who still felt that the Court should be ashamed of itself harbouring someone so ancient. I honestly don't know why; the place has no particular obligation to youth. There's nothing about youth in its charter. I'm not even sure it has a charter.\n\nEven so, ever since those brave days of '56, it has behaved as though it had: for better and for worse. Critics who objected when the worse predominated were apt to be met with aggrieved incredulity: 'Don't they know that we started a revolution? We've always been terribly brave, it says so in the books.' And, as far as those early days are concerned, the books are right. I doubt if the Court knew when they began rehearsing Look Back the extent to which, in our minds if not always on our stages, things were not to be the same again. I doubt if Osborne himself knew when he started writing.\n\nHe has since referred to the play as 'formal and old-fashioned'. But this was its greatest strength; there is nothing about its form which could puzzle its audiences or distract them from its content. It is a three-act naturalistic play which--unlike most examples then successful in London--took the form literally; it was written out of its author's experience, which had not been glamorous. In the West End, a shabby-genteel hotel (as in N. C. Hunter's Waters of the Moon or Terence Rattigan's Separate Tables) was about the limit of imaginable squalor. A serious work usually had a comparably serious setting; Wilson's The Mulberry Bush was set in a university, as was the novel most immediately associated with John Osborne's play, Kingsley Amis's Lucky Jim. Osborne's hero Jimmy Porter has a university background, but we owe this information to his wife; he never mentions it. He never harks back to it, and he never complains about his present poverty--though he complains about a lot of other things.\n\nKenneth Tynan, the play's most vociferous champion among the critics, says now that for the audiences this was the most disquieting thing about it. An aspiring proletarian hero they could have coped with and recognised. But Jimmy refuses to be patronised. He has no apparent desire to rise to the social level represented by his wife Alison, her Indian Army father and dragon mother; the action of the play consists of his effort to make Alison live and love on his terms. On the first night Tynan spoke to the American dramatist and novelist Irwin Shaw, who said that Jimmy's lack of any wider ambition would doom the play in America: 'Nobody in the States will ever stomach a play about a hero who doesn't want to be a success.'\n\nShaw was not the only luminary present; unheralded the play may have been, but plainly something was in the air and could be sniffed for miles around. Tynan remembers encountering Amis (who ordinarily never went to the theatre and whose main comment on Jimmy was that since the chap played jazz trumpet he couldn't be all bad). His comment on the play was 'bloody good on language, bit thin on plot'. 'Binkie' Beaumont, the most powerful of West End managers (and one who, like all his colleagues, had turned the play down before it came to rest chez Devine) was present, and had premonitions: 'We may as well,' he was heard to say in the bar, 'roll up the map of the West End.' It seems to have been a night for quotations; Tynan remembers a gross figure moodily and repeatedly proclaiming that 'the rough beast has finally slouched home'. He will now swear it was Evelyn Waugh.\n\nTynan himself meanwhile was basking in 'the self-righteous glow that comes when you encounter a play that speaks directly to your own temperament'. The following Sunday, in the Observer, he was able, with lasting effect, to communicate that glow to his readership.\n\nHe admitted that the play had faults (he mentioned its length and the 'painful whimsy' of its end), but he disposed of them in a sentence. The rest was rhapsody, but trenchant rhapsody; Tynan's contribution to the play's success was less that he liked it better than other critics (he did but not that much) but simply that he wrote about it better. If there was a key-line in his review, it was that the play 'presents post-war youth as it really is'. It is difficult to judge the precise validity of a claim like that, but I am sure that it became truer once he had written it. Post-war youth, having read the review and/or seen the play, set about living up to its image.\n\nTynan made no detailed political claims for the play; he merely referred to Jimmy's 'instinctive Leftishness' as one of the traits to which he responded. John Glenister, who is directing the play for the BBC, reminded me of one fact--often forgotten: it came just before Suez and Hungary. It reflected a vague discontent that crystallised almost immediately, and of which the Court became one of the intellectual centres, so that the 'instinctive Leftishness' became more programmatic. In successive years a Royal Court banner flourished on the road from Aldermaston--and Osborne marched beneath it.\n\nIn the late 50s and early 60s he did his share of snarling at governments, and indeed at oppositions. But then he seemed to snarl at nearly everything. Once he had achieved success he fell with ironically obliging ease into the 'angry young man' stereotype invented for him by the gossip columnists (and incidentally by the Royal Court publicity department). But his personal brand of rhetoric, which has grown increasingly clotted with the years--ever since he wrote Luther, whose constipated hero moved his lips as violently and painfully as his bowels--has never been suited to the articulation of a political viewpoint. It was, and is, impossible to tell just what his famous 1961 'Letter to my fellow countrymen' (with its 'damn you, England' refrain) is meant to be about.\n\nJimmy Porter's rhetoric, by contrast, is free-wheelingly muscular; it is difficult to see how anyone could have failed to surrender to it from the outset. It is, apart from anything else, so funny. (The most recent London revival, at the Young Vic, had its audience rolling.) The most generalised and, I suppose, most famous declaration in the play--about there being no good causes left--is actually noticeably tacked on to the rest; what seem integral are Jimmy's onslaughts on specific targets. You do not have to be an ideologue to lampoon Tory ladies and the English Sunday, but they are subjects which would raise at least a wry smile, if not a whoop of assent, from any lively and reasonably cynical mind in 1956 (or indeed 1976); Jimmy's style, and his creator's, are very telling that way. I certainly, at the time, recognised and sympathised with the spirit evoked in Tynan's review (at 12 I was into reading reviews rather than seeing plays) and apparently though more hesitantly confirmed in Harold Hobson's piece in the Sunday Times. (Amusing that a play which begins with a riotous put-down of the posh Sundays should so quickly and decisively be enshrined in them.)\n\nObviously what was going on was wittily iconoclastic, and even I knew that that was a good thing to be. Others felt the same way, including at least one future playwright; Trevor Griffiths, just gone into the army, was also a review-reader rather than a playgoer and he too was convinced by Tynan that something good was beginning to happen, something to which he would later contribute. Some who saw the play itself took quicker action. Arnold Wesker who encountered it in Wimbledon later in the year, went straight home to write Chicken Soup with Barley, itself to become a Court play in 1958. What inspired him was 'something to do with the energy of the characters, a kind of impatience which came through the way they spoke'. He recognised it as an impatience he had expressed in short stories (he too had written about those 'bloody Sunday bells'), and wondered if Osborne 'felt the same way I did'.\n\nI doubt if he did, quite, but perhaps the great attraction of the play at its premiere was its ability to act as a mirror of disaffection for a generation in need of it: you could read your own discontents into it. Jimmy's rages--which are not all the play but which drive it along--certainly give the scope; Osborne himself says of him in a stage-direction that 'to be as vehement as he is is to be almost non-committal'. But events rapidly conspired to give the vehemence a new edge; and before you knew it we had a committed theatre. Twenty years, two subsidised companies, and innumerable fringe outlets later, we still have. Tynan, now ex-Observer and ex-National Theatre, remains the dominant critical influence, and most reviewers still expect a writer to show his political colours. Or else.\n\nElse can be quite stimulating; she even seems to function as Osborne's muse. Reviewers now accuse him of a swing to the Right; they recall the suspicious sympathy accorded the Colonel in Look Back and murmur that they should have known all along. But there has been no betrayal, since there was no real compact in the first place.\n\nOne phrase in Tynan's article which most pleased Osborne at the time was 'the determination that no one who dies shall go unmourned'. It is Jimmy's grief for his father and for the old woman who befriended him that gives him distinction in his author's eyes; it is Alison's loss of her baby that, according to the play's logic, finally makes her worthy of him. Death, as in a Jacobean tragedy, is the fount of honour--but this time for the living as well. The idea of an aristocracy of feeling is constant throughout Osborne's plays right down to his latest, Watch It Come Down. If he shows his chosen characters disdaining the outside world for no well-stated reason, he is honest enough to show them savaging each other as well. If we look back to Look Back we can find this double level already there; Jimmy's tirades may be detached from their context to be relished or detested according to taste (though the detestation, I think, has largely died out), but they are also part of his pursuit of Alison. The wit refuses to date (actually it's pleasant to be reminded of jazz and milk-bars) and the personal relationships seem more convincing in each new production; even the ending, with Jimmy and Alison playing at bears and squirrels, seems truthful enough to me. John Glenister, who directs the television production, describes the play as a love story, and he is surely right.\n\nPhoto captions:\n\nCiaran Madden and James Hazeldine in Sunday's TV performance.\n\nRichard Pasco as Jimmy Porter. London's Royal Court, 1957.\n\nPeter O'Toole and Wendy Williams. The Theatre Royal Bristol, 1957.\n\nAnna Steele and Alec McCowen. Alexandra Theatre, Birmingham, 1957.\n\nAlan Dobie, Jocelyn Britton and Michael Bryant. The first tour, 1957.\n\nVictor Henry and Caroline Mortimer. London's Royal Court, 1969.\n\nKenneth Haigh as Jimmy and Mary Ure as Alison in the first production at London's Royal Court, 1956.\n\nMary Ure, Richard Burton and Claire Bloom. The film version, 1959.",
+      "subject_people": [
+        "John Osborne",
+        "Kenneth Tynan"
+      ],
+      "production_groups": [
+        {
+          "order": "1",
+          "production_title": "Look Back in Anger",
+          "company": [
+            "BBC1"
+          ],
+          "director": [
+            "John Glenister"
+          ],
+          "actors": [
+            "James Hazeldine",
+            "Ciaran Madden",
+            "Neil Daglish"
+          ],
+          "playwright": [
+            "John Osborne"
+          ]
+        }
+      ],
+      "collection": [
+        "UK Collection"
+      ],
+      "number": 529
+    },
+    {
+      "id": "trip1_new_004",
+      "title": "Multiple Exposure",
+      "author": "Robert Cushman",
+      "publication": "Radio Times",
+      "section": "Arts",
+      "date": "1975-11-14",
+      "year": "1975",
+      "category": "Profile",
+      "url": "",
+      "markdownPath": "Scrapbook Trips/1 (May 17th)/_processing/draft_markdown/trip1_new_004.md",
+      "production_title": [
+        "Keep an Eye on Albert"
+      ],
+      "productions": [
+        "Keep an Eye on Albert"
+      ],
+      "company": "BBC1",
+      "venue": "",
+      "city": "",
+      "venues": [],
+      "cities": [],
+      "people": [
+        "Brian Glover"
+      ],
+      "roles": {
+        "director": [],
+        "actors": [],
+        "playwright": [
+          "Brian Glover"
+        ],
+        "composer_lyricist": [],
+        "musical_director": [],
+        "choreographer": [],
+        "orchestrator": [],
+        "arranger": [],
+        "assistant_director": [],
+        "stage_manager": [],
+        "assistant_musical_director": [],
+        "vocal_director": [],
+        "dance_captain": [],
+        "fight_director": [],
+        "dramaturg": [],
+        "producer": [],
+        "set_designer": [],
+        "costume_designer": [],
+        "lighting_designer": [],
+        "sound_designer": [],
+        "musicians": [],
+        "performers": [],
+        "artists": []
+      },
+      "body": "Multiple exposure\n\nWhen is a wrestler not a wrestler? Answer: when his name is Brian Glover and he's an actor who writes television plays. As Leon Arras, he's a star of the wrestling circuit. As Brian Glover, he has played Shakespearean fops and telly convicts. This week sees Glover's latest play. It is set in a Yorkshire village based on his childhood home and stars two Alberts -- a pigeon and a man. Robert Cushman asked him about his triple life\n\nKeep an Eye on Albert, Tuesday BBC1\n\nASKED TO NAME a time and place for the interview, Brian Glover was tempted to suggest tea at the Ritz. To my regret he thought better, or more modestly, of it, and so we met instead at a Soho patisserie, where the cakes are excellent but where there are no cucumber sandwiches. At first glance, Mr Glover, Yorkshire-born actor, playwright and all-in wrestler, is not a cucumber sandwich man, but he has a keen appetite for the good things of life. He certainly did a hearty job on those cakes.\n\nSomething funny happened to him just as he was parking his car in Old Compton Street. A couple of blokes came up to him, and one of them asked to shake his hand; hadn't he been in the telly play about the three friends who went up to Stratford by barge? This play, Peter Terson's Shakespeare or Bust, is now three years old, but it still remains fresh in many memories, and Brian Glover is used to being associated with it. So he took this approach calmly; he was less prepared for the handshake to be followed by a kick. Not at him, at his little four-year-old Volkswagen: 'It wasn't good enough for them, not their idea of what a successful actor should have. They decided I was pretty ordinary after all.'\n\nGlover is 41 now; his acting career only really got started when he was 36, so it has taken him a fairly short time to reach this equivocal position of being simultaneously revered and resented by the fans (or, as he likes to call them when they're paying customers, 'the punters'). He wears it well and cheerfully, but then he's been some kind of a star for 20 years. That's the length of his wrestling career, but that fame has been won under another name. In the ring he is known as Leon Arras.\n\nHe has always been pulled in two directions. He grew up in a mining village just outside Barnsley; his parents kept the corner-shop. 'We were firmly at the top of the bottom drawer.' His mother had wanted him to get a nice, steady job: say, a draughtsman. He obliged her to the extent of winning a scholarship to Barnsley Grammar and then going to Sheffield University. But his father supplemented the earnings from corner-shop-keeping with a spot of wrestling which, he pointed out, could earn Brian more than any amount of education. So, with some exertion of influence from Glover Sr, Leon Arras was born.\n\nL. Arras received so much more from the wrestling promoters than B. Glover did from the education authorities that at the end of a year Sheffield University lost a student. However, heedful of his mother's advice, he took a teachers' training course.\n\nActually though, he was still leading a double life: slipping off at weekends to throw and be thrown in Paris (Saturdays) and Zurich (Sundays), returning to Barnsley Sunday night just in time for a drink before closing time. So he was a jet-setter long before he was an actor, acquiring the confidence which one day was to enable him to negotiate with West End producer Binkie Beaumont for a higher fee than any agent could get.\n\nBetween the staff-room and the Haymarket Theatre had come Kes. The Ken Loach film was based on a novel by Barry Hines, who happened to be teaching at the same school as Glover. Glover browbeat -- his word -- Hines into getting him cast. It wasn't quite his professional debut; he'd done some commercials.\n\nIf his final capitulation to show business might have pleased his father, the solidity of his success should also have delighted his mother. 'I'm a very successful actor. Producers know what they're going to get when they get me. A big, square figure which should at least have a lot of presence, something definitely northern, and at times slightly humorous.' Add a pink, open-face with some fairish fuzz circling the back of a shiny dome, making him look at once tough and cherubic. He's very likable.\n\nTelevision has always found him valuable, whether sharing a cell with Ronnie Barker in Porridge or as one of the three men in that Stratford barge. The year after doing that he was at Stratford himself, which he thinks may have had something to do with the fact that Janet Suzman, wife of Royal Shakespeare director Trevor Nunn, was in the Terson play. He pictures 'Trevor and our Janet' watching it at home on television and thinking, 'We could use him.' So they could: they happened to be doing the one play (As You Like It) that definitely calls for a real wrestler, as well as Richard II, in which he gave what you might call a regional performance as the Bishop of Carlisle. More recently he has worked a great deal with Lindsay Anderson at the Royal Court.\n\nThere have been films: Anderson's O Lucky Man and Brannigan, in which he got to be beaten up by John Wayne. Photographs of this encounter have come in very handy on his wrestling publicity.\n\nHe also writes plays, and received perhaps his most valuable advice from Tony Garnett: if somebody says they'd be interested to see a script of yours, have one in your pocket to show them, immediately. Operating in this way he was able to sell his first two plays to BBCtv simultaneously; they hit the screen within weeks of each other -- one of them, naturally, was a wrestling play and his greatest critical success. It was called A Drink Out of the Bottle -- 'that's a wrestler's term, that's used to give the word between rounds that no quarter is going to be given.'\n\nAnother play, Pig Bin, got him into trouble 'because it's the most truthful play I've written.' It depicted football hooligans and it upset people. Glover's new play, Keep an Eye on Albert, is about a shaky marriage in a northern village. Pigeon-racing is involved as well. 'What triggered off the play was watching miler pigeons; you try to release the cock when it's desperately wanting to fertilise the egg -- just when the hen is about to lay -- so it'll fly home like a bullet. If the hen has laid the night before, you've had it. And that, of course, can be a very potent sexual metaphor.' There are two Alberts in the play, one a bird and one a man.\n\nI asked him why he wrote for television rather than the stage. 'I like to know how much I'm going to get from my effort. I've still got that Yorkshire sense.' His parents would be proud of him.",
+      "subject_people": [
+        "Brian Glover"
+      ],
+      "production_groups": [
+        {
+          "order": "1",
+          "production_title": "Keep an Eye on Albert",
+          "company": [
+            "BBC1"
+          ],
+          "playwright": [
+            "Brian Glover"
+          ]
+        }
+      ],
+      "collections": [
+        "UK Collection"
+      ],
+      "number": 530
+    },
+    {
+      "id": "trip1_new_005",
+      "title": "Claudius the Good",
+      "author": "Robert Cushman",
+      "publication": "Radio Times",
+      "section": "Review",
+      "date": "1976-11-12",
+      "year": "1976",
+      "category": "Television Review",
+      "url": "",
+      "markdownPath": "Scrapbook Trips/1 (May 17th)/_processing/draft_markdown/trip1_new_005.md",
+      "production_title": "I, Claudius",
+      "productions": [
+        "I, Claudius"
+      ],
+      "company": "",
+      "venue": "",
+      "city": "",
+      "venues": [],
+      "cities": [],
+      "people": [
+        "Brian Blessed",
+        "Derek Jacobi",
+        "Herbert Wise",
+        "Jack Pulman",
+        "Robert Graves",
+        "Siân Phillips"
+      ],
+      "roles": {
+        "director": [
+          "Herbert Wise"
+        ],
+        "actors": [
+          "Brian Blessed",
+          "Siân Phillips",
+          "Derek Jacobi"
+        ],
+        "playwright": [
+          "Jack Pulman"
+        ],
+        "composer_lyricist": [],
+        "musical_director": [],
+        "choreographer": [],
+        "orchestrator": [],
+        "arranger": [],
+        "assistant_director": [],
+        "stage_manager": [],
+        "assistant_musical_director": [],
+        "vocal_director": [],
+        "dance_captain": [],
+        "fight_director": [],
+        "dramaturg": [],
+        "producer": [],
+        "set_designer": [],
+        "costume_designer": [],
+        "lighting_designer": [],
+        "sound_designer": [],
+        "musicians": [],
+        "performers": [],
+        "artists": [
+          "Robert Graves"
+        ]
+      },
+      "body": "Claudius the good\n\nIN CHOOSING the Emperor Claudius as the protagonist of a pair of historical novels Robert Graves did something brilliantly perverse. The Roman historians have left little evidence of anything particularly interesting about Claudius. The chronicles make him out the least colourful of the Caesars; considering how lurid the others were this may be to Claudius's credit. It takes a novelist as clever as Graves to see the usefulness of a historical nonentity like Claudius--a blank sheet of paper on which the writer can scrawl whatever he likes. Graves's inscriptions have proved ineffaceable.\n\nDoing Roman history at school I found myself glaring at the textbooks with exasperation, even resentment. How could they have got everything so wrong? If only they'd read I, Claudius they would have known what the people and events were really like. They would have realised that Claudius was no weakling but a canny and compassionate man, biding his time and trying to stay alive. And why should the professors worry about Claudius's contemporaries? It's all there in his memoirs, so meticulously ghosted by Graves.\n\nThe historical Claudius may have seemed recalcitrant material for a novel, but just try turning the fictional Claudius into drama. The film never got made. A West End theatre version raced aimlessly and incomprehensibly through random bits of the action. The television treatment takes its time and is enjoyable but it has not avoided the obvious stumbling-blocks. I doubt whether anyone--including the creators themselves--ever expected it to.\n\nWhen they get to the second book, Claudius the God, the situation may be different, for that will show us Claudius as emperor, an actor as well as an observer. But as I write we are still on I, Claudius and there is no way--at least none has been found--of preventing that title from seeming a misnomer. For the action seems to concern everyone except Claudius himself. He claims the titular position not through his deeds but through his words, uttered many years after the events of which they speak.\n\nThis reminiscing Claudius is the only real character in the book; the others, including the narrator's younger self, are sketches. Their lives are narrated with earnest irony--and it is the irony far more than the lives (or, even, the deaths) that registers.\n\nTelevision has settled for introducing each episode with a glimpse of old Claudius at work on his history (or at least wondering where he left the manuscript) and then more or less abandoning him--Claudius Interruptus. The bulk of the story is left to stand, not as a record of his impressions, but as history and drama in its own right. And here enormous difficulties arise, for Graves's novel provides, by design, a partial view of history and is almost indifferent to drama; though it is certainly full of events--battles, murders, conspiracies and sexual adventures ranging from simple adulteries to complex orgies--that could be described as dramatic.\n\nKeeping the book's irreverence and informality\n\nA reviewer on Radio 4's Kaleidoscope declared that Jack Pulman, the adaptor, could hardly have used Graves's dialogue since actors would have found it unspeakable. He proceeded to quote a line or two that should have given no ordinarily competent actor any trouble at all. The real problem with the novel's dialogue, from a dramatist's point of view, is merely that there is so little of it. The first half of the book contains only one conversation of any length: a philosophical discussion on the duties of the historian. When the characters are doing things--important things, even lurid things--they keep their mouths shut.\n\nMr Pulman has accordingly had to invent a great deal; sometimes--as in the episode of Piso's trial for the murder of Germanicus--extracting 50 minutes of screen time from two or three pages of narrative. In his invention he has obviously kept in mind the book's reputation for irreverence and informality, but his back-slapping joviality is an equivalent for the dry-biscuit wit of the novel. The actors have been faced with much the same problem; in reading we can accept Augustus described simply as \"an overgrown boy\". But, when Brian Blessed comes before us with the same interpretation, and we are asked actually to look, listen and accept him as the first Roman Emperor, the whole thing becomes a charade.\n\nSiân Phillips as Livia: an artist in murder\n\nThat said, I found the Blessed Augustus endearing and at the approach of death (after which he became the Divine Augustus) honestly touching, like a puzzled teddy-bear. The performer who has done most to make the character her own (and it seems to me the actress's achievement rather than the adaptor's) is Siân Phillips as the imperial multiple murderess Livia. She is a creamier, wittier fiend than the book suggests, an artist in murder rather than a conscientious craftswoman; but Miss Phillips's handling of Mr Pulman's fairly shameless gags (one borrowed, presumably by augury, from Mae West) and her taunting of Derek Jacobi's stammering Clau-Clau-Claudius, made one disinclined to quibble. Jacobi has so far turned in two winning impersonations of the young and the old Claudius; it will be interesting to see them meet in the middle. And I liked the playing of the young Caligula as a malevolent Christopher Robin. But all Claudius's relations are becoming difficult to distinguish before they are assassinated. I wonder how those who haven't read the book are faring with the complexities of the family relationships.\n\nHerbert Wise's direction has been excellent. The absence of film is a positive virtue. Its presence would suggest authenticity--and that would never do. The serial is fun but, unlike the books, it will never replace history.\n\nRobert Cushman is drama critic of the Observer.",
+      "production_groups": [
+        {
+          "order": "1",
+          "production_title": "I, Claudius",
+          "director": [
+            "Herbert Wise"
+          ],
+          "actors": [
+            "Brian Blessed",
+            "Siân Phillips",
+            "Derek Jacobi"
+          ],
+          "playwright": [
+            "Jack Pulman"
+          ],
+          "artists": [
+            "Robert Graves"
+          ]
+        }
+      ],
+      "collection": [
+        "UK Collection"
+      ],
+      "number": 531
+    },
+    {
+      "id": "trip1_new_006",
+      "title": "Crime and Showbiz",
+      "author": "Robert Cushman",
+      "publication": "The Observer",
+      "section": "Arts",
+      "date": "1978-12-03",
+      "year": "1978",
+      "category": "Theatre Review",
+      "url": "",
+      "markdownPath": "Scrapbook Trips/1 (May 17th)/_processing/draft_markdown/trip1_new_006.md",
+      "production_title": [
+        "Chicago",
+        "Love of a Good Man"
+      ],
+      "productions": [
+        "Chicago",
+        "Love of a Good Man"
+      ],
+      "company": "",
+      "venue": "",
+      "city": "",
+      "venues": [],
+      "cities": [],
+      "people": [
+        "Bob Fosse",
+        "Fred Ebb",
+        "Gillian Gregory",
+        "Howard Barker",
+        "John Kander",
+        "Natasha Parry",
+        "Peter James",
+        "Roger Sloman",
+        "Toby Salaman",
+        "{'order': '2'}"
+      ],
+      "roles": {
+        "director": [],
+        "actors": [],
+        "playwright": [],
+        "composer_lyricist": [],
+        "musical_director": [],
+        "choreographer": [],
+        "orchestrator": [],
+        "arranger": [],
+        "assistant_director": [],
+        "stage_manager": [],
+        "assistant_musical_director": [],
+        "vocal_director": [],
+        "dance_captain": [],
+        "fight_director": [],
+        "dramaturg": [],
+        "producer": [],
+        "set_designer": [],
+        "costume_designer": [],
+        "lighting_designer": [],
+        "sound_designer": [],
+        "musicians": [],
+        "performers": [],
+        "artists": []
+      },
+      "body": "Crime and Showbiz\n\nTHE HIT Broadway musical Chicago, now given its British premiere at the Sheffield Crucible, begins with a joke pilfered from the opening of \"Irma la Douce.\" We are informed that we are about to be told a story of adultery, murder, \"all the things we hold dear.\" Derivative and patronisingly cynical, that gets the evening off to an appropriate start.\n\nThe show's ultimate source is a Twenties melodrama, also called \"Chicago\" and filmed in the Thirties under the title \"Roxie Hart.\" Roxie is an unsuccessful chorus-girl who gets famous by shooting her lover. The present version concentrates on the similarities between crime and showbiz: just two aspects of the great American spectacle. The same point was made in passing in \"Little Me\" (c.1962) whose heroine also shot an admirer and was thereupon succinctly advised in a Cy Coleman-Carolyn Leigh number wittier than anything in the present entertainment, to \"Be a Performer.\"\n\nFair's fair; much of the plagiarism in \"Chicago\" is self-inflicted. Lyricist Fred Ebb and composer John Kander wrote the score for \"Cabaret,\" whose film version was directed by Bob Fosse; he is now listed only as co-librettist of \"Chicago\" but he was its presiding genius in New York and his influence can still be seen in Sheffield.\n\n\"Cabaret,\" which came ready-made to Mr Fosse, seems to have released in him a reservoir of self-hatred; after a brilliant career as a director-choreographer he apparently came to despise his own skills but was unable to relinquish them. \"Cabaret\" used song-and-dance to reflect the rise of Nazism, but it never actually suggested that the two were synonymous. In \"Chicago,\" however, as in his previous show, \"Pippin,\" Mr Fosse pelts us with tinsel, reviles us for applauding it, and then throws us more.\n\nOne thing the show does not lack is talent; Mr Fosse is perhaps the most stylish and inventive of Broadway choreographers and he has tirelessly elaborated the central conceit; his Sheffield stand-in Gillian Gregory retains his key ideas (a duet for lawyer and murderess as ventriloquist and dummy, an execution staged as a rope-trick) and works energetically around them. The director, Peter James, meantime works energetically and efficiently round her; I doubt if the Crucible's open stage has been better used. Messrs Kander and Ebb have gone off since \"Cabaret,\" having perhaps written too many slam-bang numbers for Liza Minnelli, but they are still competent, and two of the tunes (\"Class\" and \"Nowadays,\" both late entries) have distinction; the rest are exercises in particular styles, brought off with bloodless accuracy.\n\nThere are two leading ladies, since Roxie is set against a less successful and extremely envious man-killer named Velma. The roles were created by Gwen Verdon and Chita Rivera, which enabled tourists like myself to collect two stars for the price of one but left each with less than enough to do; the story, being split between them, was exhausted by the interval. Besides, one's instinct to applaud was frustrated by the whole tone of the show; Velma starts Act Two with a cry of \"Hello, suckers\" which is enough to make any audience guarded.\n\nOne feels less uncomfortable about resisting Antonia Ellis and Jenny Logan, though the latter is accomplished and the former rather more. The leading man, Ben Cross, is colourless, which dulls the effect of his big shyster-lawyer's number \"Razzle Dazzle,\" for which Miss Gregory is also off form.\n\nMeanwhile the Crucible's second new-play festival (in the studio) has come up with a major work. Howard Barker's Love of a Good Man concerns death-worship, as practised in the wake of the First World War. A rich woman is anxious to recover and honour the body of her son, killed at Passchendaele; one of the undertakers contracted to dig up and re-bury the dead becomes besotted with her and intrigues prodigiously to secure her treasure, the ultimate accolade of being interred as the Unknown Soldier. The two are obviously made for each other, though in the end (since a class war theme is being simultaneously sounded) she ditches him for the Prince of Wales.\n\nNatasha Parry makes a stiff lady and Roger Sloman an over-clownish gent, but Toby Salaman gives a most acute account of the prince, painfully well-meaning and totally reined in by his position. The writing of this role, an ambiguous cartoon, is one of the finest things Mr Barker has done; and the play as a whole, sprouting subsidiary actions with perfectly congruent inventiveness, his most impressive to date. As in his previous good play, \"Claw,\" the third act is the best with a raw mournfulness reinforcing the mockery.",
+      "production_groups": [
+        {
+          "order": "1",
+          "production_title": "Love of a Good Man",
+          "venue": [
+            "Crucible Studio"
+          ],
+          "city": [
+            "Sheffield"
+          ],
+          "director": [
+            "Peter James"
+          ],
+          "choreographer": [
+            "Gillian Gregory"
+          ],
+          "composer_lyricist": [
+            "John Kander",
+            "Fred Ebb"
+          ],
+          "actors": [
+            "Natasha Parry",
+            "Roger Sloman",
+            "Toby Salaman"
+          ],
+          "artists": [
+            "Bob Fosse",
+            {
+              "order": "2"
+            }
+          ],
+          "playwright": [
+            "Howard Barker"
+          ]
+        }
+      ],
+      "collections": [
+        "UK Collection"
+      ],
+      "number": 532
+    },
+    {
+      "id": "trip1_new_008",
+      "title": "Dramatic Entrances",
+      "author": "Robert Cushman",
+      "publication": "Radio Times",
+      "section": "Arts",
+      "date": "1976-09-30",
+      "year": "1976",
+      "category": "Opinion Piece",
+      "url": "",
+      "markdownPath": "Scrapbook Trips/1 (May 17th)/_processing/draft_markdown/trip1_new_008.md",
+      "production_title": [],
+      "productions": [],
+      "company": "BBC Third Programme",
+      "venue": "",
+      "city": "",
+      "venues": [],
+      "cities": [],
+      "people": [
+        "Dylan Thomas",
+        "Giles Cooper",
+        "Harold Pinter",
+        "Henry Reed",
+        "Jean Anouilh",
+        "Louis MacNeice",
+        "Raymond Raikes",
+        "Rhys Adrian",
+        "Robert Bolt",
+        "Samuel Beckett",
+        "Tom Stoppard"
+      ],
+      "roles": {
+        "director": [],
+        "actors": [],
+        "playwright": [],
+        "composer_lyricist": [],
+        "musical_director": [],
+        "choreographer": [],
+        "orchestrator": [],
+        "arranger": [],
+        "assistant_director": [],
+        "stage_manager": [],
+        "assistant_musical_director": [],
+        "vocal_director": [],
+        "dance_captain": [],
+        "fight_director": [],
+        "dramaturg": [],
+        "producer": [],
+        "set_designer": [],
+        "costume_designer": [],
+        "lighting_designer": [],
+        "sound_designer": [],
+        "musicians": [],
+        "performers": [],
+        "artists": []
+      },
+      "body": "Dramatic entrances\n\n30th anniversary of the Third Programme\n\nIt was the Third rather than theatres proper that, until the rep boom of the 60s, brought British audiences the drama classics -- from Aristophanes to Shaw. It was the Third, too, that introduced to them the work of newer playwrights -- like Dylan Thomas, Samuel Beckett and Jean Anouilh; Harold Pinter, Robert Bolt and Tom Stoppard. Here Robert Cushman assesses 30 years of broadcasting drama\n\nYEARS AGO there was a radio comedy series called In All Directions, written and performed by Peter Ustinov and Peter Jones. One edition found them wandering around the BBC in search of the Third Programme. They knew when they had found the right entrance: it was guarded by a commissionaire who seemed to be reading Proust. I say seemed to be, it turned out that actually he was re-reading him.\n\nThe temptation to rib the Third had good historical precedent. The very first programme it ever presented (at 6.0 on Sunday 29 September 1946) was a spoof on itself, prepared by Stephen Potter and Joyce Grenfell, under the title How to Listen. The Third parodied its own identity even before it achieved it. This suggests an odd blend of nervousness and confidence, with the confidence predominating. In those days, you knew what Culture was. If you didn't, the Third would quickly tell you. Having, on that first evening, been told How to Listen you set about doing it. First there was a performance of Bach's Goldberg Variations; then Reflections on World Affairs by Field-Marshal Smuts; then a good, solid two-hour concert, interrupted by an introductory talk about the Third by the Director-General: presumably How to Listen for real.\n\nTAKING PRECEDENCE OVER TELEVISION\n\nWhat is amazing about the Third is its monstrous size and appetite at birth. No nonsense about introducing it by degrees: it exercised its principles from the first, seven evenings a week. In 1946 it must have seemed foolhardy, but it may be that only in a period of austerity could it have happened. There may have been a feeling abroad that the war had been fought so that we could have a Third Programme. It certainly took precedence over the re-establishment of television; if it had not, it would probably never have existed at all.\n\nDrama was slow, by the standards set by music and talks, to get into the act; the Third was all of a day old before the first thing you could possibly call a play went out. And that was a doubtful case: Milton's masque of Comus, the author sharing equal billing with his composer, Henry Lawes, and the whole issuing from the nest of poets oddly known as the Features Department. Dylan Thomas was in the cast. Drama Department did not make its bow until the Tuesday when it offered a full-length (i.e. four-and-a-quarter-hour) version of Shaw's Man and Superman. And here was born Third Programme Thrift; over the succeeding weeks there were repeats of the play in its entirety, repeats of the scenes usually played, and, for connoisseurs, repeats of the scenes usually left out.\n\nThis was only a foretaste of the role which the Third was to play in airing the classics. Shaw, after all, was repertory theatre stuff; but until the era of permanent companies began in the English theatre in the 60s there were few other dead playwrights you could hope to see performed. But there were many you could hear, and the 50s were in this respect something of a Golden Age. One producer, Raymond Raikes, worked steadily through medieval, Elizabethan and Restoration drama. He was indeed responsible for fixing in many minds the canon of what constituted the English classics. It looks now like a one-sided selection, probably influenced by 19th-century criticism; over-hospitable to lachrymose tragedies with noble sentiments and neglectful of the warped, cynical tragi-comedies that now seem so modern.\n\nBut Raikes had a boisterous way with comedy, the kind that the theatre still neglects, perhaps because it has forgotten how to be funny. He could even make Ralph Roister Doister (which the textbooks call the first English comedy) hilarious, largely by cramming it with music. And his version of The Shoemaker's Holiday, with Donald Wolfit, is a classic on several counts; it still turns up. Raikes's versions of Greek comedy, in which he redeemed jokes theoretically dead beyond recovery, outclassed the theatre even more decisively; in my teens I was quite convinced that Aristophanes was the world's greatest radio dramatist. (At least, I ranked him co-equal with Galton and Simpson, with whom he seemed to have certain affinities.)\n\nINTRODUCING ANOUILH TO THE BRITISH\n\nI must admit that as years went on, I grew tired of certain mannerisms in radio's reclamations. There was a mania for having the characters identify themselves long after we were able to recognise them by their voices. When their friends could not mention their names in dialogue, they did it themselves in soliloquy. I always expected to hear a Shakespearean tragic hero announce 'O, what a rogue and peasant slave am I, Hamlet.'\n\nShakespeare, since we have got on to him, was not the exclusive preserve of the Third; the Home might knock off an Othello or a Romeo and Juliet. But it kept clear of the less familiar plays, and it had no time (literally) for uncut texts. You tuned into the Third for Pericles or for a complete Hamlet, perhaps with John Gielgud in the title role, giving you the soul of a great performance long after the limbs and outward flourishes peculiar to the theatre had been laid to rest.\n\nThere was once a series of English classics from all periods billed as The National Theatre of the Air, making official use of a phrase which had long, and quite deservedly, been current. Even the advent of a physical National Theatre, combined with a growing adventurousness on the part of repertory companies, has failed to provide playgoers with the range from which listeners have benefited over the years. Television, picking up plays that the theatre has turned into standards, is still way behind (actually further behind now than it was in the 50s). There might well have been a similar series called International Theatre of the Air; here radio drama has been a no-contest winner almost since the Third was born.\n\nThe insularity of the English theatre is proverbial, as regards both classic and modern plays; and even when a European writer has proved popular on the stage, he usually turns out to have been introduced on radio. Jean Anouilh was the darling of the London as well as the Paris boulevards in the 50s, but it was the Third who had introduced him in 1948, with Medea, unseen in London to this day.\n\nSALVING PINTER'S CRITICAL WOUNDS\n\nWith new English dramatists the position has changed; radio, with its vast appetite for material and its relatively low costs, still puts bread in their mouths but its position as patron has been usurped -- well, supplemented -- by subsidised playhouses and, more particularly, by the theatrical fringe. Some of the latest generation of playwrights have worked for the BBC (in two senses since a few, like Howard Barker, Mike Stott and Trevor Griffiths, have held BBC jobs of various kinds) but none of them can truthfully be said to have made his name in radio.\n\nFor the generation before it could be crucial: Giles Cooper made himself into the greatest of radio playwrights; Harold Pinter recuperated in radio after the critical wounds inflicted on his theatrical debut; Robert Bolt wrote radio plays for years before his West End breakthrough; Tom Stoppard gained most of his early experience in the medium. It is very rare, though, for a highly successful radio playwright not to break out; even those who stay out of the theatre go into television -- like Rhys Adrian, who began writing for radio in the early 60s (winning a major award for his Evelyn), moved into television towards the end of the decade and would certainly be accounted one of its major writers, but is still principally a radio man; a new Adrian play, a hospital piece called The Night Nurse Slept in the Day Room (Tuesday 9.20), is to be part of the Third Programme anniversary week.\n\nLOUIS MACNEICE WORKED HERE\n\nMaybe, if you are looking for pure radio playwrights, you have to go back to another defunct and/or assimilated piece of the BBC: the Features Department which was amalgamated with Drama after the death of its guiding spirit Laurence Gilliam. It was here that Louis MacNeice worked; his most celebrated piece The Dark Tower came a fraction too early to be premiered on the Third, which however lost no time in repeating it. (MacNeice's adaptation of Virginia Woolf's The Waves will be broadcast on Thursday at 9.25 pm.) Henry Reed's famous satires on the London art scene, the well-aired series about the critic Herbert Reeve and the lady composer Hilda Tablet, were quintessential Third/Feature jokes -- and some of them will be heard next month on Radio 4.\n\nIt was for Features that Dylan Thomas, almost literally spurred to it by Douglas Cleverdon, wrote the classic of all radio classics, Under Milk Wood. Only Samuel Beckett's All That Fall (from Drama Department, to even the score) can rival it; and Beckett is among the Third's great captures. He was hardly a struggling writer in need of encouragement (Waiting for Godot was already behind him); he worked in the medium because he wanted to. And, with his output getting ever sparer, he still does; his latest work is unveiled on radio this week (For to End Yet Again, Monday 10.10 pm).\n\nRobert Cushman is theatre critic of the Observer.",
+      "subject_people": [
+        "Raymond Raikes",
+        "Dylan Thomas",
+        "Samuel Beckett",
+        "Jean Anouilh",
+        "Harold Pinter",
+        "Robert Bolt",
+        "Tom Stoppard",
+        "Giles Cooper",
+        "Rhys Adrian",
+        "Louis MacNeice",
+        "Henry Reed"
+      ],
+      "production_groups": [],
+      "collections": [
+        "UK Collection"
+      ],
+      "number": 533
+    },
+    {
+      "id": "trip1_new_009",
+      "title": "How the Dickens?",
+      "author": "Robert Cushman",
+      "publication": "Radio Times",
+      "section": "Arts",
+      "date": "1976-02-26",
+      "year": "1976",
+      "category": "Television Review",
+      "url": "",
+      "markdownPath": "Scrapbook Trips/1 (May 17th)/_processing/draft_markdown/trip1_new_009.md",
+      "production_title": [
+        "Our Mutual Friend"
+      ],
+      "productions": [
+        "Our Mutual Friend"
+      ],
+      "company": "BBC",
+      "venue": "",
+      "city": "",
+      "venues": [],
+      "cities": [],
+      "people": [
+        "Alfie Bass",
+        "Carl Davis",
+        "Charles Dickens",
+        "Leo McKern",
+        "Lesley Dunlop",
+        "Nicholas Jones",
+        "Peter Hammond"
+      ],
+      "roles": {
+        "director": [
+          "Peter Hammond"
+        ],
+        "actors": [
+          "Lesley Dunlop",
+          "Nicholas Jones",
+          "Leo McKern",
+          "Alfie Bass"
+        ],
+        "playwright": [],
+        "composer_lyricist": [
+          "Carl Davis"
+        ],
+        "musical_director": [],
+        "choreographer": [],
+        "orchestrator": [],
+        "arranger": [],
+        "assistant_director": [],
+        "stage_manager": [],
+        "assistant_musical_director": [],
+        "vocal_director": [],
+        "dance_captain": [],
+        "fight_director": [],
+        "dramaturg": [],
+        "producer": [],
+        "set_designer": [],
+        "costume_designer": [],
+        "lighting_designer": [],
+        "sound_designer": [],
+        "musicians": [],
+        "performers": [],
+        "artists": []
+      },
+      "body": "How the Dickens?\n\nRobert Cushman on Our Mutual Friend\n\nA TELEVISION serial of the late 50s first turned me on to Our Mutual Friend (hereinafter referred to as OMF in deference to one of the novel's heroes, Eugene Wrayburn, who use MRF as spoken shorthand for My Respected Father). Since then I must have read it three or four times. So I came to the new version with both the book and the earlier dramatisation strongly in mind.\n\nOMF Mark One followed highly successful television accounts of David Copperfield and Nicholas Nickleby and was inhabited by much the same group of players. Esmond Knight and Fay Compton, a previous year's Squeerses, were redeployed as stumpily villainous Silas Wegg and virtuously independent Betty Higden. Their invaluably fruity character work reinforced the efforts of youngish players (Paul Daneman, Zena Walker and Rachel Roberts) from the general direction of the Old Vic, in the sober bits.\n\nSome of the juice of the book was drained out\n\nDespite all this talent, that attempt at OMF was not a success. Dickens's last completed novel has about five complex plots all inter-connecting remorselessly enough to intimidate the boldest script editor. The early serial succumbed with hardly a struggle and merely put the book on the screen blow by blow, personage by personage. The result was bewildering: there was too much to keep up with.\n\nThe 1976 adaptors were more sophisticated. They cut through the novel's chronology, slicing the action up into large packages, allowing us to lose sight of a given strand for two weeks at a time instead of trying to juggle them all at once. There was a gain in clarity, but some of the juice of the book was drained out. For by the time he wrote it the abrupt juxtapositions of Dickens's narrative lines had become more than the necessary mannerism of a serial novelist: human interdependence was itself his subject. Rich and poor, solemn and farcical, batten on each other and will hardly be prised loose.\n\nThis version heroically managed to lop off one group of characters; the adventuring Lammles, who marry each other's non-existent money, were sacrificed, and with them the smooth-faced Fledgeby, the Christian usurer. Unfortunately the exiled figures took with them Dickens's sharpest treatment of his central theme -- which, since so much is focused on the riches of a dust contractor, may quite precisely be defined as money-grubbing. The production was certainly aware of its importance; an actor had only to mention money for the camera to zoom in on him as sharply as if it were his agent. BBC Dickens is far more intellectual now than in the 50s; modern critics have been read and their emphasis on symbols and images taken to heart.\n\nPeter Hammond is certainly the director to realise them; if he made little of the famous dust heaps, he did a fine job on the Thames which, if you tuned your set right, looked grey, green and greasy enough for the Limpopo. It was once said that you could film a Dickens novel using the book itself as your shooting script, and this might have been Hammond's method. His police station, for example, had just the cold monastic air prescribed, complete with priestly inspector. The nouveaux riches Veneerings and their dinner guests were first glimpsed in a mirror; just as Dickens -- in one of his stylistic tours de force -- presents them to us. This was a momentary treat for purists but it made no point and heralded no thorough presentation of the characters. No one unfamiliar with the book would have known why there were so many of them. They are the devil to dramatise -- most of their life comes from the author's metallic commentary -- and they have no effect on the plot; but they do matter to the structure. The voice of society, heard in a series of self-contained, satiric episodes, affects our attitude to the more volatile characters who get on with the action.\n\nAnd strange things happened to this action. The visual style and Carl Davis's screeching music were keyed to melodrama, but the acting was not. It was naturalistic, and, in its own way, truthful. Lesley Dunlop was believable as Lizzie Hexam, teenage daughter of a Limehouse water-rat; Nicholas Jones as Eugene certainly looked like a dissolute briefless barrister. Neither of them, though, was much like a figure in Dickens. They lacked fluency. Mumbling or groping for words they were like Shakespearean actors ignoring the verse. Eugene's banter with his friend Mortimer was unforgivably subdued, losing both their entertainment value and their meaning.\n\nDickens has been rescued from teatime viewing\n\nIt was in humour and in traditional warmth of personality that this serial compared least favourably with its predecessor, which was at least a highly seasoned muddle. Only Boffin and Wegg were large enough. Leo McKern may have been too authoritative for Boffin, but he acted richly enough to conquer even my preconceptions; Alfie Bass was possibly too lovable for Wegg, but Dickens's own execution here is at odds with his conception. The sad truth is that Dickensian actors are now unfashionable actors, and the growth of a subdued television style has made them so. Casting was easier 20 years ago.\n\nMaybe producers should note that Dickens criticism is already changing tack and looking with renewed favour on the extrovert early books. I would not myself trust a Dickensian who didn't laugh aloud at Pickwick Papers, and now that Dickens has been rescued from teatime viewing and restored to his rightful place among the grown-ups, it is here -- at the other extreme of his development -- that the BBC might venture next. It deserves all the time in the world and should get it. But, after two attempts, OMF still remains uncracked.\n\nRobert Cushman is drama critic of the Observer.",
+      "book_author": [
+        "Charles Dickens"
+      ],
+      "subject_people": [],
+      "production_groups": [
+        {
+          "order": "1",
+          "production_title": "Our Mutual Friend",
+          "company": [
+            "BBC"
+          ],
+          "book_author": [
+            "Charles Dickens"
+          ],
+          "director": [
+            "Peter Hammond"
+          ],
+          "actors": [
+            "Lesley Dunlop",
+            "Nicholas Jones",
+            "Leo McKern",
+            "Alfie Bass"
+          ],
+          "composer_lyricist": [
+            "Carl Davis"
+          ]
+        }
+      ],
+      "collections": [
+        "UK Collection"
+      ],
+      "number": 534
+    },
+    {
+      "id": "trip1_new_010",
+      "title": "Sound Radio",
+      "author": "Robert Cushman",
+      "publication": "Radio Times",
+      "section": "Arts",
+      "date": "1978-08-04",
+      "year": "1978",
+      "category": "Opinion Piece",
+      "url": "",
+      "markdownPath": "Scrapbook Trips/1 (May 17th)/_processing/draft_markdown/trip1_new_010.md",
+      "production_title": "The Revenge",
+      "productions": [
+        "The Revenge"
+      ],
+      "company": "BBC",
+      "venue": "",
+      "city": "",
+      "venues": [],
+      "cities": [],
+      "people": [
+        "Andrew Sachs",
+        "Glyn Dearman",
+        "Lloyd Silverthorne"
+      ],
+      "roles": {
+        "director": [
+          "Glyn Dearman"
+        ],
+        "actors": [],
+        "playwright": [
+          "Andrew Sachs"
+        ],
+        "composer_lyricist": [],
+        "musical_director": [],
+        "choreographer": [],
+        "orchestrator": [],
+        "arranger": [],
+        "assistant_director": [],
+        "stage_manager": [],
+        "assistant_musical_director": [],
+        "vocal_director": [],
+        "dance_captain": [],
+        "fight_director": [],
+        "dramaturg": [],
+        "producer": [],
+        "set_designer": [],
+        "costume_designer": [],
+        "lighting_designer": [],
+        "sound_designer": [],
+        "musicians": [],
+        "performers": [
+          "Andrew Sachs"
+        ],
+        "artists": [
+          "Lloyd Silverthorne"
+        ]
+      },
+      "body": "I don't want to describe too much of the plot but I have to say that in the course of Andrew Sachs's wordless radio play, The Revenge (repeated 31 July Radio 3), somebody's motor-bike gets stolen. The owner is disturbed, as who would not be, and his feelings get the better of him. He breaks the rules and says something. He tries to disguise it as an angry mumble but the words get through. 'Hey,' he says, 'come back 'ere.'\n\nWell, everyone is entitled to a single lapse, and four words hardly count as dialogue. The Revenge may be wordless but it is far from voiceless. It utilised 11 actors, chief among them the author himself. Good casting: Mr Sachs is best known for his tour-de-force performance as Manuel, the incoherent Spanish waiter of Fawlty Towers. He's used to doing without recognisable words. In The Revenge he plays a man on the run, and he does a lot of panting. Also, of course, a lot of running; and he did it all himself. For, though The Revenge is composed of sounds, it eschews pre-packaged effects. It was shot - I mean recorded - entirely on location. The recording took seven days, the editing another seven; and it still worked out cheaper than if they had done it in a studio. By 'they' I mean Sachs, his director Glyn Dearman, and Lloyd Silverthorne, who is credited with the 'technical realisation'. He could not, in the circumstances, be called a studio manager.\n\nSachs wrote the play, for fun really, in 1963. Dry your eyes; he has not spent the intervening 15 years campaigning bitterly for its production. He seems, in fact, to have forgotten about it. Its rediscovery has enabled Dearman to pursue a thesis and to ask a question. The thesis is that radio drama has come to rely too much on language and to neglect - or worse, stereotype - other forms of aural communication: too much chat and not enough noise, in other words. (I know I shouldn't be using other words; unfortunately I can't draw.) The question was whether, if you tried it on, audiences would understand.\n\nThe question was asked quite literally. Listeners were requested to write in with their reactions after the play was first broadcast (on 1 June); a gratifying 990 obliged, and an even more gratifying 985 of these had managed to follow the main drift of the story. Nobody, though, had managed to grasp every detail; but no two sets of lacunae were alike. Even more interestingly, there was no appreciable difference in response between those who heard the play in mono (on 'battered old trannies') and those who were able to receive it in its full binaural glory.\n\nReviewer's privileges (a pair of headphones and a darkened room in Broadcasting House) put me in the second category. Being a verbal animal, I was astonished, not to say complacent, at how much I took in. (My score, the production team said, after quizzing me, was strictly average.)\n\nI can imagine - though I don't know that I would enjoy - a production conceived entirely in terms of mechanical sound; this one emphasised the human element, to the extent that it became a bit frustrating. I kept expecting speech to break out - it would have been natural - and there was strain as well as wit inherent in its banishment. But the maintenance of suspense was extraordinary; and so, when you come to think of it, was the justification of the title. For revenge, after all, entails motivation; we had to be assured that the violence in which the play ends was not the random act of a psychotic. The play achieves this by the use of a phone-call (not, perish the thought, a phone conversation) linking assailant and victim; we may not have known them but we knew they knew each other.\n\nListeners, of course, made a few connections that were not consciously intended. I assumed, for example, that children I heard at one point were in hot pursuit of the ice-cream van that had immediately preceded them. Not, apparently, so. Reactions like this, however, have suggested to Dearman a possible next step: give the audience some sounds and let them make up their own story.\n\nTelevision directors proverbially wish that they were making films; radio directors seem to be tending more and more towards the same ambition. (I know from my own experience that there is a special kick - admittedly not always shared by the actors - in recording scenes out of sequence and putting them together in the editing channel.) Dearman's eyes gleamed as he spoke of the excitements of location: of waiting for the right silence - as elusive as the right light - and of recording scenes of underwater escape in a swimming-pool. Here, by the way, about one minute in, I got lost. I recognised the presence of water and assumed that someone was making his way through it but the quality of his gurgles was not enough to make me picture him as a frogman. Lloyd Silverthorne shook his head reproachfully when I confessed, but agreed to forgive me. The error didn't impair my understanding of the ensuing bits; future listeners take note, not to say heart. Who, I wonder, will be the first radio stuntman? Come to that, does Andrew Sachs count as the first radio mime?\n\nAnyone who has listened to much radio drama, let alone worked in the medium, will share the impatience of Sachs and Dearman with the standard effects: the eternal 'pub background', for example, or the doors that open and close whenever someone comes into a room. Progressive radio production, ironically enough, is often a matter of eliminating noise.\n\nAll the same, there are ways in which I would like radio drama to be less Spartan from time to time; it could sometimes emulate light entertainment in using effects as aural slapstick. It could even exploit its own clichés. Nobody pretends that wordless radio drama is an end to be pursued very far; The Revenge was intended basically as a demonstration, and it's a brilliant one. But there may be room for a companion-piece: studio-bound and comic.\n\nRobert Cushman is drama critic of The Observer.",
+      "collections": [
+        "UK Collection"
+      ],
+      "number": 535
+    },
+    {
+      "id": "trip1_new_011",
+      "title": "Voices Off",
+      "author": "Robert Cushman",
+      "publication": "Times Literary Supplement",
+      "section": "TLS Commentary",
+      "date": "1976-06-02",
+      "year": "1976",
+      "category": "Opinion Piece",
+      "url": "",
+      "markdownPath": "Scrapbook Trips/1 (May 17th)/_processing/draft_markdown/trip1_new_011.md",
+      "production_title": "Listening",
+      "productions": [
+        "Listening"
+      ],
+      "company": "Radio 3",
+      "venue": "",
+      "city": "",
+      "venues": [],
+      "cities": [],
+      "people": [
+        "Edward Albee",
+        "Irene Worth",
+        "James Ray"
+      ],
+      "roles": {
+        "director": [],
+        "actors": [
+          "James Ray",
+          "Irene Worth"
+        ],
+        "playwright": [
+          "Edward Albee"
+        ],
+        "composer_lyricist": [],
+        "musical_director": [],
+        "choreographer": [],
+        "orchestrator": [],
+        "arranger": [],
+        "assistant_director": [],
+        "stage_manager": [],
+        "assistant_musical_director": [],
+        "vocal_director": [],
+        "dance_captain": [],
+        "fight_director": [],
+        "dramaturg": [],
+        "producer": [],
+        "set_designer": [],
+        "costume_designer": [],
+        "lighting_designer": [],
+        "sound_designer": [],
+        "musicians": [],
+        "performers": [],
+        "artists": []
+      },
+      "body": "Voices off\n\nEdward Albee, writing his first radio play (broadcast last Sunday on Radio 3), took to the restrictions of the medium with wary eagerness. Listening was the title, putting the audience on the spot from the moment they read the billing. On another page of the Radio Times could be found the baleful news, imparted by the author himself, that the play was \"just another of those things about people's failure to communicate\". His characters were less casual about it; there were three of them, and the least comprehensible of the three repeatedly complained that the others did not listen. Then, having made the charge several times, she refined it: \"pay attention is what you don't do\". Mr Albee's regard for language is as scrupulous as ever.\n\nIt is the only thing for which he does show any solicitude. His stage plays since Who's Afraid of Virginia Woolf? have been increasingly hard on their spectators; All Over, his latest play to be seen in London, was as difficult to sit through as any piece of the last decade. Listening to Listening was easier, by the difference between an Aldwych stall and one's own armchair. One could fidget in comfort. And the banality behind the lines was less oppressive. One resents a play like All Over that fools around with death; fooling around with non-communication is permissible--everybody does it.\n\nThe protesting character was called The Girl; she seemed disturbed, and possibly in care. She and The Woman bitched at each other with varying degrees of elegance. The Man stood by, defensive and appalled. An American actor, James Ray (the play was recorded in New York), played him in a style of fruity bewilderment dispiritingly observable among radio performers in this country. Irene Worth, having proclaimed herself a more disciplined actress on the air than on the boards, justified the assertion with a reading of precise and silvery inhumanity. The author, though billed as The Voice, was not heard from.\n\nThere were two moments of solidity. In the first, Miss Worth told the story of her grandfather who had vanished; to judge from the conflicting reports of those who had seen him depart \"he'd gone off in several directions at the same time ... he had, in effect, dispersed\". Since present relationships were so tenuous, it was nice to have this bit of past to cling to. The second came when The Girl jumped into a fountain: no audible splash (this is modern radio, very pure) but at least we got our bearings for a moment.",
+      "production_groups": [
+        {
+          "order": "1",
+          "production_title": "Listening",
+          "company": [
+            "Radio 3"
+          ],
+          "playwright": [
+            "Edward Albee"
+          ],
+          "actors": [
+            "James Ray",
+            "Irene Worth"
+          ]
+        }
+      ],
+      "collection": [
+        "UK Collection"
+      ],
+      "number": 536
+    },
+    {
+      "id": "trip1_new_012",
+      "title": "Dennis Potter: The Values of a Television Playwright",
+      "author": "Robert Cushman",
+      "publication": "Radio Times",
+      "section": "Arts",
+      "date": "1976-04-09",
+      "year": "1976",
+      "category": "Profile",
+      "url": "",
+      "markdownPath": "Scrapbook Trips/1 (May 17th)/_processing/draft_markdown/trip1_new_012.md",
+      "production_title": [],
+      "productions": [],
+      "company": "BBC",
+      "venue": "",
+      "city": "",
+      "venues": [],
+      "cities": [],
+      "people": [
+        "Dennis Potter"
+      ],
+      "roles": {
+        "director": [],
+        "actors": [],
+        "playwright": [],
+        "composer_lyricist": [],
+        "musical_director": [],
+        "choreographer": [],
+        "orchestrator": [],
+        "arranger": [],
+        "assistant_director": [],
+        "stage_manager": [],
+        "assistant_musical_director": [],
+        "vocal_director": [],
+        "dance_captain": [],
+        "fight_director": [],
+        "dramaturg": [],
+        "producer": [],
+        "set_designer": [],
+        "costume_designer": [],
+        "lighting_designer": [],
+        "sound_designer": [],
+        "musicians": [],
+        "performers": [],
+        "artists": []
+      },
+      "body": "Over the last ten years around 20 plays by Dennis Potter have been seen on television. He is probably the most highly regarded playwright working for the medium, and he has devoted most of his time and talent to it. When he has not been writing for it, he has been writing about it: first for the Sun, now for the New Statesman. He has also written a novel, but though three or four of his plays have been adapted for the stage, he has never, until now, written directly for the theatre. Now, it seems that his career may change direction.\n\nHis name has been missing from the screen for about a year - a year in which his work has kept accumulating, with the result that three plays were to be transmitted in quick succession. After I had talked with Potter and written this feature, it was decided that one of those plays would not be shown, but the transmission of the other two has more than a statistical significance; Potter says that the plays may (and he stresses the qualification) be among the last he writes for television. He feels despondent about the current state of television plays, finding they blend increasingly into programmes that surround them. 'More and more one talks of television as a thing, rather than of its constituent parts. I think the days of the television play are numbered; it will soon all be done on film, and it'll be a director's medium like the cinema. It only remains an author's medium at the moment because of British anachronisms. But before it ends I want to make a few defiant noises.'\n\nPotter has been making defiant noises throughout his career. Both his plays and his journalism have been abrasive. (He had a spell as a book critic on The Times, and after he had written scathingly of a volume of military history one reader wrote in to say how interesting it was to hear Mr Potter's unfavourable opinion of the British army and now could The Times please print a review of the book.) So it is a surprise to visit his home, a three-storey house at Ross-on-Wye near the Welsh border, and to find his domestic life to be as charming (in the shapes of a wife, three children and a dog) as anyone could reasonably hope for. He talks quietly, considerately, and with exceptional lucidity.\n\nOnly he is ill. He has had arthritis for 14 years and he has often had to write in hospital. At the moment his condition is good but the constant undertow of depression and anxiety still makes itself felt. Obviously it has affected his work, making it darker but also funnier. As he says, 'a sense of the ludicrous emerges very strongly when you're not well.'\n\nHe has recently suffered another blow. His father has just died and he is still trying to come to terms with the loss. Equilibrium is harder to attain because his feelings for his father are bound up with his complicated emotions concerning the area in which he lives. Ross is the posh area of the Forest of Dean; Potter was born in the Forest, the son of a miner, and he grew up regarding 'Ross' with a mixture of distrust, amusement and presumably envy. (His wife Margaret comes from the same background; their fathers knew each other though the couple only met when Potter was an undergraduate.)\n\nWhen he was 14 his parents made an abortive move to London - his mother was a Londoner and his father had wanted to get out of the pit for years - but it didn't work out. Dennis however remained in London, staying with relatives; he was attending St Clement Danes School in Hammersmith, and his 'O' Levels were in sight. (He had also become a Fulham fan; he still comes up to London to see them play.) School was succeeded by National Service, then by Oxford. He continued to spend his holidays in the Forest of Dean but returned to London to work: first for the BBC, then as a journalist.\n\nHis life has always been bounded in a small geographical compass; he has never travelled outside Britain, and now he is back nearly where he started: in a region which has served as a background for some of his plays, and for one of his novels. Plainly some of his work engages him in a wrestling-match with his roots. He refers to his home influences as 'soggy, blanket-like things' but adds that the writer's job is to make them concrete. 'As soon as you're compelled to wrestle daily with words you're immediately in contact with your childhood. There is an insight to be gained by living in a different relationship with your past, and one of the most dangerous ways is to return to near where you lived as a child. Everything I write comes out of those first ten to 14 years.' The retreat to the Forest of Dean was partly an escape but partly a search for something positive.\n\n'The Forest of Dean is beginning to change because of the closing of all the pits but it was an extremely tightly-knit, rather weird community, wholly working-class.' He ticks off the characteristics - 'chapel, rugby football, male voice choir, many seemingly Welsh things.' Like many others he found that 'if accident and examination take you up the educational ladder you do lose many of these things along the way to a more general culture. But that cultural change, and all the insecurities accompanying it, was always there, waiting to be assessed by me, looked at again.'\n\nThe choir-and-chapel aspect of Potter's background has, in a strange way, caught up with him. From being a convinced atheist he has found himself in his work increasingly veering towards what he calls 'the traditional preoccupations of religious aspiration.' He is careful to put the word 'religious' in inverted commas and to emphasise that he does not mean the Church; he defines the object of his quest as 'the shape of an individual destiny, the uniqueness of an individual if that uniqueness is more than merely bio-chemical - and purpose, in terms of death, love, hate, beyond the merely political sense.'\n\nThe early Dennis Potter was very much concerned with 'the merely political'. While still at Oxford he worked on a scathing analysis of the society of the late 50s entitled The Glittering Coffin, which won him some notoriety. The book went beyond party to treat of politics 'in the whole New Leftish sense' and to undertake 'a sort of cultural analysis, a bastardised Marxism' addressed to problems of social mobility in an England which 'appeared to be changing very rapidly' but was as class-divisive as ever, and was inflicting 'casualties in terms of sensibility' on those who were moving. Such as Potter himself, who drew on his own experience both at Oxford and at home.\n\nHe in no way repudiates that analysis now; he feels 'very tender' towards the past self who wrote the book, and finds the political responses 'very healthy, very necessary'. One of its components was 'indignation and guilt' about the way in which his father's life had been wasted and misused. He found there were few ways in which British politics could answer such problems, but that the act of writing was in itself 'the first grappling with the permanent problems of human beings living together'. That, he agrees, sounds a Right-wing phrase 'and in a way it is instinctively right-wing to be concerned with those patterns which politics cannot change. In that sense,' he continues, 'I veer between a cast of mind which has many of the characteristics of right-wing thought, and a passion for justice which is, and must remain, intensely radical.' And in that tension lies drama.\n\nHis first drama grew almost literally out of that tension. The experience of standing as a Labour candidate in a safe Tory seat produced Vote, Vote, Vote for Nigel Barton and Stand Up, Nigel Barton - two plays about a Labour politician, a graduate from a working-class background, who finally retreats in disillusion from the crunches of the party machine. The plays were produced by the BBC in rapid succession back in 1965 and they established Potter as a television playwright. But already he was in transit, and his next play Emergency Ward Nine denoted a shift of interest. He had been in hospital, seen death for the first time, seen 'how sick bodies were'; and the play - a live Thirty-Minute Theatre planned rather cynically as a formula drama - became concerned with people's fantasies, and their inability to understand the shape of their own lives.\n\n'All the time I've been writing for television I've been trying to break its endemic naturalism.' As he says, this is a very difficult undertaking: 'You can't beat it by, say, putting the camera in shot because all you have is another piece of naturalism in a slightly different convention. The only way you can beat it is by the strength of the play's whole metaphor.' As an example he proffers Follow the Yellow Brick Road which used the disparity between grimy reality and the sunlit world of television commercials as a fight between devils and angels. He adds though that this metaphor of 'a certain religious striving' was probably lost on the audience, as it certainly was on the critics. He says this without perceptible rancour; of my own disparaging review of the stage version of Only Make Believe he remarks mildly that it spoiled his Sunday, as he in his New Statesman television column, has spoiled other people's Fridays.\n\nHe regards his journalism both as a necessary job ('I need to keep in employment') and as a safety-valve: 'I'm saved from sounding off in a sterile way in my plays by being able to do it in my column.' When he sounds off in his plays he wants it to be for real. 'I have a solemn, serious, almost indecent sense of my own importance as a writer and an individual; it's odd that I should wrestle for 11 years in the one medium - television - which tends to modify that seriousness.' He recognises, and uses, the pervasive modern mode of irony but dreads it degenerating into nervous jokiness. 'We ought not to be so diffident that we can't say our plays are about these things. If you do that then you become diffident about everything and I'm damned if I'm going to be diffident or mocking about everything. Today it seems irony exists almost in its own right; it becomes a giggling, chuckling bog.'\n\nAs an example of a play which really satisfied him, Potter cites Moonlight On The Highway which used images of nostalgia (particularly records of the 30s crooner Al Bowlly - phrases from popular songs have often furnished Potter with springboards for plays) as a 'kind of fungoid growth' - on a contemporary study of sexual unease and fear. This creative use of nostalgia is a difficult feat; one I would have thought to be impossible.\n\nThe 'defiant noises' of the new plays are inherent in both technique and content. The religious concern, coupled with a determined wryness about dogma is evident in Where Adam Stood in which Alan Badel plays a Victorian naturalist who evolves a theory to reconcile Darwin and the Book of Genesis and whose young son learns to turn his father's belief to his own advantage. The characters are historical; the boy grew up to be the literary critic Edmund Gosse. Double Dare (another Al Bowlly title) explores the mind of a playwright by juxtaposing levels of reality in a manner with which Potter experimented in Only Make Believe and the novel Hide and Seek. The idea is not just 'to write about writing' but to define the link between the way a writer looks at the world and what he actually writes.\n\nAfter reading the scripts, the play I had found the most fascinating of Potter's new work was the untransmitted third play, Brimstone and Treacle. It seemed to be nearest the author's own heart, bringing on a modern devil, working to what appears a perversely good end. The new plays continue on the road begun in Emergency Ward 9: they all concern what Potter calls 'the unconscious abstractions that make up our images of other people'.\n\nIn announcing that he may have come to the end of the road, at least as far as television is concerned, he is revolting as much as anything against the ephemerality of the medium. He feels a duty, as well as a desire, to leave a permanent mark, and accordingly he is writing his first stage play. He has long been wary of the theatre; its 'elitism' seems both to attract and repel him. His craftsman's interest in television remains unabated; and it is hard to believe that he will write no more original TV plays. I suppose that he can get on without television and television of course can get on without him. But it possesses few writers of his intelligence and ambition, and I hope it won't have to.",
+      "subject_people": "Dennis Potter",
+      "collections": [
+        "UK Collection"
+      ],
+      "number": 537
+    },
+    {
+      "id": "trip1_new_013",
+      "title": "The Innocent Troublemaker",
+      "author": "Robert Cushman",
+      "publication": "The Observer Magazine",
+      "section": "Arts",
+      "date": "1976-05-09",
+      "year": "1976",
+      "category": "Profile",
+      "url": "",
+      "markdownPath": "Scrapbook Trips/1 (May 17th)/_processing/draft_markdown/trip1_new_013.md",
+      "production_title": "Bus Stop",
+      "productions": [
+        "Bus Stop"
+      ],
+      "company": "",
+      "venue": "Phoenix Theatre",
+      "city": "London",
+      "venues": [
+        "Phoenix Theatre"
+      ],
+      "cities": [
+        "London"
+      ],
+      "people": [
+        "Lee Remick",
+        "William Inge"
+      ],
+      "roles": {
+        "director": [],
+        "actors": [],
+        "playwright": [
+          "William Inge"
+        ],
+        "composer_lyricist": [],
+        "musical_director": [],
+        "choreographer": [],
+        "orchestrator": [],
+        "arranger": [],
+        "assistant_director": [],
+        "stage_manager": [],
+        "assistant_musical_director": [],
+        "vocal_director": [],
+        "dance_captain": [],
+        "fight_director": [],
+        "dramaturg": [],
+        "producer": [],
+        "set_designer": [],
+        "costume_designer": [],
+        "lighting_designer": [],
+        "sound_designer": [],
+        "musicians": [],
+        "performers": [],
+        "artists": []
+      },
+      "body": "Lee Remick, like Audrey Hepburn and Shirley MacLaine - is one of those top movie actresses who really wanted to be dancers. As a 12-year-old at school she hated acting - 'a perfectly natural hatred for an awkward growing kid. Those who enjoy it have probably got a lot wrong with them. At that stage dancing, a purely technical discipline, requiring me to use my body but not my personality, was far more attractive.'\n\nShe got her first job by lying about her age. 'I was 16, said I was 18, actually looked about 11.' At the end of the season the choreographer confessed that she hadn't been fooled for a moment, but had gone ahead and engaged her anyhow.\n\nMiss Remick, now 40, cool, sensible and obviously able to take care of herself, is as unfairly attractive off the screen as on it. She is married to Kip Gowans, a British assistant film director (living with them are her two teenage children, a girl and a boy, by a previous marriage). She moved to London from the States seven years ago. In that time she has made two incursions into British television: one of Tennessee Williams's neurotic Southerners - the repressed one - in a BBC production of 'Summer and Smoke' four years ago, and the notably unrepressed Lady Churchill, née Jerome, in the ITV serial 'Jennie' which brought her probably her biggest audience. She has also shot the odd film here, including 'The Severed Head'.\n\nIn 'Bus Stop', the story of a group of people temporarily stranded in a small café, she plays another Southern heroine, though of a very different kind from Tennessee Williams's Alma, or from the Faulkner girl of 'The Long Hot Summer' whom she played memorably almost at the outset of her film career back in 1957. For 'Bus Stop', this will, surprisingly, be its London premiere, though it is 20 years since it was a hit on Broadway and almost as long since it became one of the most memorable of Marilyn Monroe's screen vehicles. Lee Remick is unlikely to offer anything resembling that performance, though she too has a fondness for 'naive innocent women who create havoc around themselves without realising it'.\n\nShe was lucky in being able to break into films without having to break into Hollywood. It happened 15 years ago when Elia Kazan saw her in a television play, and asked her to read the script of 'A Face in the Crowd'. He even asked her what she thought of it. She seems to have thought enough, and well enough, to get the eye-catching part of Andy Griffith's baton-twirling girl-friend. The film had, as she says, 'nothing to do with Hollywood; it was shot in New York and Arkansas' and it afforded her not only 'a splashy entrance - being a dishy kind of sex-pot part' but a prestigious one.\n\nKazan remained an enormous influence as he has been, she thinks, on almost every actor who has worked for him. 'Actors on other movies are always harking back, or imagining what he might say in that situation.' He directed her again in 'Wild River', her favourite film. But probably the movie in which she made her most decisive impact was directed by Otto Preminger: it was 'Anatomy of a Murder', in which she played the prototype of those wide-eyed trouble-makers. Preminger she found, considering his fearsome reputation, 'amazingly benign; I'd just had a baby so maybe the feminine mystique was in my favour'.\n\nThe film was considered immensely daring at the time, though there was nothing indecorous about what was seen in this courtroom picture. Such shock as there was lay in the evidence. (One ruffled British critic said the picture might have been better called 'Anatomy of a Rape'.) She stresses that the girl in 'Long Hot Summer' was sexy and funny and that though 'Wild River' had 'a strong undercurrent of sexual drive, there was no conventional sex-symbol aspect'.\n\nThe subsequent move towards sexual explicitness in films leaves her a little cynical: she regards it as largely responsible for what she calls 'a certain paucity of interesting parts for women'. 'It's ironic,' she says, 'that women were more alive in films in the 1940s, years before women's lib, than they are now. All those ridiculous restrictions on sex meant that women had to be shown doing other things. So the Rosalind Russell heroine got to run factories, or work on newspapers. That's why Jennie was so fascinating: a chance to do something more than lie down in bed'.\n\nRobert Cushman",
+      "subject_people": "Lee Remick",
+      "collections": [
+        "UK Collection"
+      ],
+      "number": 538
     }
   ]
 }
