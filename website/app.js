@@ -8,7 +8,7 @@ const SHAKESPEARE_GROUPS = [
   {
     value: "",
     label: "All Shakespeare",
-    description: "Everything in the Shakespeare pathway.",
+    description: "Play reviews plus explicit Shakespeare essays and riffs.",
   },
   {
     value: "plays",
@@ -1013,6 +1013,19 @@ function collectionNames(record) {
   return names;
 }
 
+function hasExplicitShakespeareCollection(record) {
+  const names = Array.isArray(record.collections) ? record.collections.filter(Boolean) : [];
+  return SHAKESPEARE_DERIVED_COLLECTIONS.some((name) => names.includes(name));
+}
+
+function isExplicitShakespeareRecord(record) {
+  return shakespearePlayValues(record).length > 0 || hasExplicitShakespeareCollection(record);
+}
+
+function explicitShakespeareRecords(records = state.records) {
+  return records.filter((record) => isExplicitShakespeareRecord(record));
+}
+
 function displaySchema(record) {
   const category = String(record.article_category || "");
   if (category === "Book Review") {
@@ -1494,6 +1507,7 @@ function applyFilters() {
   setArchiveExpanded(state.hasActiveQuery || document.activeElement === els.searchInput);
   state.filtered = state.records.filter((record) => {
     if (state.collection && !collectionNames(record).includes(state.collection)) return false;
+    if (state.collection === SHAKESPEARE_COLLECTION && !isExplicitShakespeareRecord(record)) return false;
     if (state.type && typeGroup(record).value !== state.type) return false;
     if (state.collection === SHAKESPEARE_COLLECTION && state.shakespeareGroup) {
       if (shakespeareGroup(record) !== state.shakespeareGroup) return false;
@@ -1558,6 +1572,9 @@ function populateFilters() {
     existing.count += 1;
     types.set(group.value, existing);
   });
+  if (collections.has(SHAKESPEARE_COLLECTION)) {
+    collections.set(SHAKESPEARE_COLLECTION, explicitShakespeareRecords().length);
+  }
 
   els.collectionFilter.replaceChildren(makeOption("All collections", ""));
   PUBLIC_COLLECTION_FILTERS
@@ -1574,12 +1591,13 @@ function shakespeareGroup(record) {
   const rawCollections = Array.isArray(record.collections) ? record.collections.filter(Boolean) : [];
   if (rawCollections.includes("Riffs on Shakespeare")) return "adaptations";
   if (rawCollections.includes("Thoughts on Shakespeare")) return "thoughts";
-  return "plays";
+  if (shakespearePlayValues(record).length) return "plays";
+  return "incidental";
 }
 
 function shakespeareGroupCount(value) {
   return state.records.filter((record) => {
-    if (!collectionNames(record).includes(SHAKESPEARE_COLLECTION)) return false;
+    if (!isExplicitShakespeareRecord(record)) return false;
     if (!value) return true;
     return shakespeareGroup(record) === value;
   }).length;
@@ -1705,7 +1723,9 @@ function categoryBrowseProfile(typeValue, records = []) {
 
 function recordsForCollectionSlug(slug) {
   const collection = collectionFromSlug(slug);
-  return collection ? state.records.filter((record) => collectionNames(record).includes(collection)) : [];
+  if (!collection) return [];
+  if (collection === SHAKESPEARE_COLLECTION) return explicitShakespeareRecords();
+  return state.records.filter((record) => collectionNames(record).includes(collection));
 }
 
 function groupedBrowseEntries(records, entityTypeKey) {
@@ -1830,7 +1850,7 @@ function renderCollectionBrowsePage(slug) {
   if (!collection) return;
   const records = recordsForCollectionSlug(slug);
   const profile = slug === "shakespeare"
-    ? { groupLabel: "Plays", entityType: "shakespeare-plays", showUngrouped: false, intro: "Shakespeare collection articles are grouped by Shakespeare play. Essays, adaptations, and broader Shakespeare criticism remain available through search and the master index." }
+    ? { groupLabel: "Plays", entityType: "shakespeare-plays", showUngrouped: false, intro: "This browse view groups Shakespeare articles by play. Use the Shakespeare page for the separate essays and riffs paths." }
     : categoryBrowseProfile("", records);
   renderGroupedBrowsePage({
     title: collection.replace(/^The\s+/, ""),
@@ -1877,7 +1897,7 @@ function landingItems(kind) {
 
   if (kind === "collections") {
     return [
-      landingItem("Shakespeare", "#section:shakespeare", countForTile("Shakespeare"), tileDescription("Shakespeare"), state.records.filter((record) => collectionNames(record).includes(SHAKESPEARE_COLLECTION))),
+      landingItem("Shakespeare", "#section:shakespeare", countForTile("Shakespeare"), tileDescription("Shakespeare"), explicitShakespeareRecords()),
       ...SECONDARY_COLLECTION_TILES.map((title) => {
         const collection = collectionFromSlug(slugForCollection(title));
         return landingItem(title.replace(/^The\s+/, ""), `#browse-collection:${slugForCollection(title)}`, countForTile(title, "collections"), tileDescription(title), state.records.filter((record) => collectionNames(record).includes(collection)));
@@ -1894,8 +1914,8 @@ function landingItems(kind) {
 
   if (kind === "shakespeare") {
     return SHAKESPEARE_GROUPS.map((group) => {
-      const href = group.value ? `#collection:shakespeare?group=${group.value}` : "#browse-collection:shakespeare";
-      const records = state.records.filter((record) => collectionNames(record).includes(SHAKESPEARE_COLLECTION) && (!group.value || shakespeareGroup(record) === group.value));
+      const href = group.value ? `#collection:shakespeare?group=${group.value}` : "#collection:shakespeare";
+      const records = explicitShakespeareRecords().filter((record) => !group.value || shakespeareGroup(record) === group.value);
       return landingItem(group.label, href, records.length, group.description, records);
     });
   }
@@ -2007,7 +2027,10 @@ function renderShakespeareLanding() {
   count.textContent = `${countForTile("Shakespeare").toLocaleString()} records`;
   const intro = document.createElement("p");
   intro.className = "landing-intro";
-  intro.textContent = "A play-by-play route through the Shakespeare collection.";
+  intro.textContent = "A play-by-play route through the Shakespeare collection, with explicit essays and riffs kept separate from incidental references.";
+  const groups = document.createElement("div");
+  groups.className = "landing-card-grid landing-card-grid-compact";
+  groups.replaceChildren(...landingItems("shakespeare").map(landingCard));
   const playHeading = document.createElement("h2");
   playHeading.className = "landing-subhead";
   playHeading.textContent = "Browse by Play";
@@ -2024,7 +2047,7 @@ function renderShakespeareLanding() {
     );
     plays.append(groupTitle, grid);
   });
-  els.indexContent.replaceChildren(title, count, intro, playHeading, plays);
+  els.indexContent.replaceChildren(title, count, intro, groups, playHeading, plays);
 }
 
 function shakespeareArtTile(title, index) {
@@ -2080,7 +2103,7 @@ function renderFrontpageDirectory() {
     .sort((a, b) => b.count - a.count || a.label.localeCompare(b.label));
 
   const collectionLinks = [
-    { label: "Shakespeare Collection", href: "#browse-collection:shakespeare", count: countForTile("Shakespeare"), featured: true },
+    { label: "Shakespeare Collection", href: "#section:shakespeare", count: countForTile("Shakespeare"), featured: true },
     { label: "Canadian Collection", href: "#browse-collection:canadian", count: collectionCount("The Canadian Collection") },
     { label: "UK Collection", href: "#browse-collection:uk", count: collectionCount("UK Collection") },
     { label: "Stratford Collection", href: "#browse-collection:stratford", count: collectionCount("The Stratford Collection") },
@@ -4510,7 +4533,7 @@ function collectionForTileContext(key) {
 
 function countForTile(title, key = "") {
   if (title === "Shakespeare") {
-    return state.records.filter((record) => collectionNames(record).includes(SHAKESPEARE_COLLECTION)).length;
+    return explicitShakespeareRecords().length;
   }
   if (title === "Other Arts") return countForOtherArts();
 
