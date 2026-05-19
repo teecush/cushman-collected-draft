@@ -1469,6 +1469,104 @@
     }
   },
   {
+    "slug": "1999-09-13-nearly-authentic-shakespeare-old-site-partial",
+    "route": "/reviews/1999-09-13-nearly-authentic-shakespeare-old-site-partial/",
+    "source_file": "1999.09.13.Cushman_Collected.Nearly_Authentic_Shakespeare.md",
+    "title": "(Nearly) Authentic Shakespeare (Old Site Partial)",
+    "date": "1999-09-13",
+    "year": "1999",
+    "publication": "National Post",
+    "source_publication": "National Post",
+    "article_category": "Theatre Review",
+    "collections": [
+      "The Shakespeare Collection"
+    ],
+    "publication_status": "duplicate_variant",
+    "editorial_issue_type": "duplicate_edition_variant",
+    "canonical_file": "1999.09.13.National_Post.Nearly_Authentic_Shakespeare_A_Production_Of_Antony_And_Cleopatra_That_Feat.md",
+    "production_title": "Antony and Cleopatra",
+    "company": "Shakespeare's Globe",
+    "venue": "Shakespeare's Globe",
+    "city": "London, England",
+    "coordinates": [],
+    "people": [
+      "Giles Block",
+      "Mark Rylance",
+      "Paul Shelley",
+      "William Shakespeare"
+    ],
+    "roles": {
+      "director": [
+        "Giles Block"
+      ],
+      "actors": [
+        "Mark Rylance",
+        "Paul Shelley"
+      ],
+      "playwright": [
+        "William Shakespeare"
+      ],
+      "composer_lyricist": [],
+      "musical_director": [],
+      "choreographer": [],
+      "orchestrator": [],
+      "arranger": [],
+      "assistant_director": [],
+      "stage_manager": [],
+      "assistant_musical_director": [],
+      "vocal_director": [],
+      "dance_captain": [],
+      "fight_director": [],
+      "dramaturg": [],
+      "producer": [],
+      "set_designer": [],
+      "costume_designer": [],
+      "lighting_designer": [],
+      "sound_designer": [],
+      "musicians": [],
+      "performers": [],
+      "artists": []
+    },
+    "production_groups": [],
+    "media": [],
+    "word_count": 1097,
+    "coordinate_points": [],
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Antony and Cleopatra"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
+      "companies": [
+        "Shakespeare's Globe"
+      ],
+      "venues": [
+        "Shakespeare's Globe"
+      ],
+      "cities": [
+        "London, England"
+      ],
+      "people": [
+        "Giles Block",
+        "Mark Rylance",
+        "Paul Shelley",
+        "William Shakespeare"
+      ]
+    }
+  },
+  {
     "slug": "2000-02-04-the-day-dr-jekyll-had-to-look-after-ms-hyde-s-baby-2",
     "route": "/reviews/2000-02-04-the-day-dr-jekyll-had-to-look-after-ms-hyde-s-baby-2/",
     "source_file": "2000.02.04.National_Post.The_day_Dr_Jekyll_had_to_look_after_Ms_Hydes_baby_Toronto_Edition.md",

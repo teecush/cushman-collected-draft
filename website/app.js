@@ -1,4 +1,4 @@
-const DATA_URL = new URL("../site_export/data/public_reviews.json?v=110", import.meta.url);
+const DATA_URL = new URL("../site_export/data/public_reviews.json?v=111", import.meta.url);
 const CHAT_INDEX_URL = new URL("../site_export/data/chat_index.json?v=3", import.meta.url);
 const CONTENT_ROOT = new URL("../site_export/content/reviews/", import.meta.url);
 const PAGE_SIZE = 36;
@@ -43,6 +43,7 @@ const SECONDARY_COLLECTION_TILES = [
 ];
 const ENTITY_TYPES = [
   { key: "people", label: "People", singular: "Person" },
+  { key: "shakespeare-plays", label: "Shakespeare Plays", singular: "Shakespeare Play" },
   { key: "subjects", label: "Subjects", singular: "Subject" },
   { key: "books", label: "Books", singular: "Book" },
   { key: "productions", label: "Productions", singular: "Production" },
@@ -503,7 +504,7 @@ const CATEGORY_BROWSE_PROFILES = {
   dance: { groupLabel: "Dance Works", entityType: "productions", secondaryEntityType: "choreographers", secondaryLabel: "Choreographers", emptyLabel: "Articles without a work title", intro: "Dance reviews are grouped by work or program title, with choreographer paths where available." },
   circus: { groupLabel: "Shows", entityType: "productions", emptyLabel: "Articles without a show title", intro: "Circus reviews are grouped by show title." },
   profiles: { groupLabel: "Subjects", entityType: "subjects", secondaryEntityType: "productions", secondaryLabel: "Current Work Context", emptyLabel: "Profiles without a subject", intro: "Profiles are grouped by subject rather than by incidental productions mentioned in career context." },
-  obituaries: { groupLabel: "Subjects", entityType: "subjects", secondaryEntityType: "productions", secondaryLabel: "Notable Works", emptyLabel: "Obituaries without a subject", intro: "Obituaries are grouped by the person being remembered, with notable works kept secondary." },
+  obituaries: { groupLabel: "Subjects", entityType: "subjects", emptyLabel: "Obituaries without a subject", intro: "Obituaries are grouped by the person being remembered." },
   "essays-opinion": { groupLabel: "Topics", entityType: "topics", secondaryEntityType: "productions", secondaryLabel: "Related Works", emptyLabel: "Ungrouped essays", intro: "Opinion pieces are grouped by topic first, with concrete works kept as secondary links when they are central." },
   "year-in-review": { groupLabel: "Seasons And Topics", entityType: "topics", secondaryEntityType: "productions", secondaryLabel: "Referenced Works", emptyLabel: "Season summaries", intro: "Year-in-review pieces are topic-led, with work links only where the article has a clear structured focus." },
   "site-notes": { groupLabel: "Correction Targets", entityType: "topics", emptyLabel: "General notes", intro: "Corrections and site notes are kept compact and chronological." },
@@ -525,24 +526,59 @@ const SHAKESPEARE_PLAY_GROUPS = [
       "The Taming of the Shrew",
       "The Tempest",
       "Twelfth Night",
-      "Two Gentlemen of Verona",
+      "The Two Gentlemen of Verona",
       "The Two Noble Kinsmen",
       "The Winter's Tale",
     ],
   },
   {
     label: "Tragedies",
-    titles: ["Antony & Cleopatra", "Coriolanus", "Cymbeline", "Julius Caesar", "King Lear", "Macbeth", "Othello", "Romeo & Juliet", "Hamlet", "Timon of Athens", "Titus Andronicus", "Troilus & Cressida"],
+    titles: ["Antony and Cleopatra", "Coriolanus", "Cymbeline", "Julius Caesar", "King Lear", "Macbeth", "Othello", "Romeo and Juliet", "Hamlet", "Timon of Athens", "Titus Andronicus", "Troilus and Cressida"],
   },
   {
     label: "Histories",
     titles: ["Henry IV", "Henry V", "Henry VI", "Henry VIII", "King John", "Richard II", "Richard III"],
   },
-  {
-    label: "Essays & Riffs",
-    titles: ["Thoughts on Shakespeare", "Riffs on Shakespeare"],
-  },
 ];
+
+const SHAKESPEARE_PLAY_TITLES = SHAKESPEARE_PLAY_GROUPS.flatMap((group) => group.titles);
+const SHAKESPEARE_PLAY_ALIASES = new Map(
+  Object.entries({
+    "antony cleopatra": "Antony and Cleopatra",
+    "romeo juliet": "Romeo and Juliet",
+    "troilus cressida": "Troilus and Cressida",
+    "two gentlemen verona": "The Two Gentlemen of Verona",
+    "the two gentlemen verona": "The Two Gentlemen of Verona",
+    "comedy errors": "The Comedy of Errors",
+    "the comedy errors": "The Comedy of Errors",
+    "merry wives windsor": "The Merry Wives of Windsor",
+    "the merry wives windsor": "The Merry Wives of Windsor",
+    "merchant venice": "The Merchant of Venice",
+    "the merchant venice": "The Merchant of Venice",
+    "midsummer nights dream": "A Midsummer Night's Dream",
+    "a midsummer nights dream": "A Midsummer Night's Dream",
+    "taming shrew": "The Taming of the Shrew",
+    "the taming shrew": "The Taming of the Shrew",
+    "tempest": "The Tempest",
+    "the tempest": "The Tempest",
+    "winters tale": "The Winter's Tale",
+    "the winters tale": "The Winter's Tale",
+    "alls well that ends well": "All's Well That Ends Well",
+    "loves labours lost": "Love's Labour's Lost",
+    "the prince hamlet": "Hamlet",
+    "prince hamlet": "Hamlet",
+    "lear": "King Lear",
+    "king henry viii all is true": "Henry VIII",
+    "henry iv part one": "Henry IV",
+    "henry iv part two": "Henry IV",
+    "henry vi part one": "Henry VI",
+    "henry vi part two": "Henry VI",
+    "henry vi part three": "Henry VI",
+    "titus": "Titus Andronicus",
+    "juliet and romeo": "Romeo and Juliet",
+  }).map(([alias, title]) => [canonicalPlayKey(alias), title])
+);
+const SHAKESPEARE_PLAY_BY_KEY = new Map(SHAKESPEARE_PLAY_TITLES.map((title) => [canonicalPlayKey(title), title]));
 
 const browseTiles = {
   types: [
@@ -578,21 +614,21 @@ const browseTiles = {
     "The Taming of the Shrew",
     "The Tempest",
     "Twelfth Night",
-    "Two Gentlemen of Verona",
+    "The Two Gentlemen of Verona",
     "The Two Noble Kinsmen",
     "The Winter's Tale",
-    "Antony & Cleopatra",
+    "Antony and Cleopatra",
     "Coriolanus",
     "Cymbeline",
     "Julius Caesar",
     "King Lear",
     "Macbeth",
     "Othello",
-    "Romeo & Juliet",
+    "Romeo and Juliet",
     "Hamlet",
     "Timon of Athens",
     "Titus Andronicus",
-    "Troilus & Cressida",
+    "Troilus and Cressida",
     "Henry IV",
     "Henry V",
     "Henry VI",
@@ -600,8 +636,6 @@ const browseTiles = {
     "King John",
     "Richard II",
     "Richard III",
-    "Thoughts on Shakespeare",
-    "Riffs on Shakespeare",
   ],
   collections: [
     "The Canadian Collection",
@@ -628,21 +662,21 @@ const tileImages = {
   "The Taming of the Shrew": "https://images.squarespace-cdn.com/content/v1/5b686ff89d5abba58f12a1bd/1554918752214-UVMHXLS165GQ51X0R5L8/Taming.png?format=750w",
   "The Tempest": "https://images.squarespace-cdn.com/content/v1/5b686ff89d5abba58f12a1bd/1554918756416-ZJDLJGMUOG6HN5KDQF1N/Tempest.png?format=750w",
   "Twelfth Night": "https://images.squarespace-cdn.com/content/v1/5b686ff89d5abba58f12a1bd/1554918765421-Q5CE9DPO74VWVOWP3GWR/Twelfth+Night.png?format=750w",
-  "Two Gentlemen of Verona": "https://images.squarespace-cdn.com/content/v1/5b686ff89d5abba58f12a1bd/1554918767950-GK3R8N49KBKH14ID0VTZ/Two+Gentleman.png?format=750w",
+  "The Two Gentlemen of Verona": "https://images.squarespace-cdn.com/content/v1/5b686ff89d5abba58f12a1bd/1554918767950-GK3R8N49KBKH14ID0VTZ/Two+Gentleman.png?format=750w",
   "The Two Noble Kinsmen": "https://images.squarespace-cdn.com/content/v1/5b686ff89d5abba58f12a1bd/1554918780500-K6CXGC6BUU6FQMM8IUAK/Two+Noble.png?format=750w",
   "The Winter's Tale": "https://images.squarespace-cdn.com/content/v1/5b686ff89d5abba58f12a1bd/1554918780811-RYV5UBHEFTW5U8ZLM0JC/Winter%27s+Tale.png?format=750w",
-  "Antony & Cleopatra": "https://images.squarespace-cdn.com/content/v1/5b686ff89d5abba58f12a1bd/1554918792163-D0BEF4LRYEFOFBG48E1L/Antony+%26+Cleopatra.png?format=750w",
+  "Antony and Cleopatra": "https://images.squarespace-cdn.com/content/v1/5b686ff89d5abba58f12a1bd/1554918792163-D0BEF4LRYEFOFBG48E1L/Antony+%26+Cleopatra.png?format=750w",
   Coriolanus: "https://images.squarespace-cdn.com/content/v1/5b686ff89d5abba58f12a1bd/1554918793484-S5FF5MG07MX5QCBJ1Y9N/Coriolanus.png?format=750w",
   Cymbeline: "https://images.squarespace-cdn.com/content/v1/5b686ff89d5abba58f12a1bd/1554918804503-YUN7M5ANHF7GM376PJER/Cymbeline.png?format=750w",
   "Julius Caesar": "https://images.squarespace-cdn.com/content/v1/5b686ff89d5abba58f12a1bd/1554918816978-GR2Q3HBH95JQJGECGMVO/Julius+Caesar.png?format=750w",
   "King Lear": "https://images.squarespace-cdn.com/content/v1/5b686ff89d5abba58f12a1bd/1554918818992-GEZHNNC3QVUY751QFM7I/King+Lear.png?format=750w",
   Macbeth: "https://images.squarespace-cdn.com/content/v1/5b686ff89d5abba58f12a1bd/1554918829561-NDU0JAUAEOP2DM9ERDYL/Macbeth.png?format=750w",
   Othello: "https://images.squarespace-cdn.com/content/v1/5b686ff89d5abba58f12a1bd/1554918831738-LN949S2N55PIE7FXFTCE/Othello.png?format=750w",
-  "Romeo & Juliet": "https://images.squarespace-cdn.com/content/v1/5b686ff89d5abba58f12a1bd/1554918842053-3W7KR0JJUJREHTDJSMKW/Romeo+%26+Juliet.png?format=750w",
+  "Romeo and Juliet": "https://images.squarespace-cdn.com/content/v1/5b686ff89d5abba58f12a1bd/1554918842053-3W7KR0JJUJREHTDJSMKW/Romeo+%26+Juliet.png?format=750w",
   Hamlet: "https://images.squarespace-cdn.com/content/v1/5b686ff89d5abba58f12a1bd/1554918806323-6HW95M5V0RDGR8GPN9VR/Hamlet.png?format=750w",
   "Timon of Athens": "https://images.squarespace-cdn.com/content/v1/5b686ff89d5abba58f12a1bd/1554918844472-LQKEKN7ZAAMY7CR86B4P/Timon.png?format=750w",
   "Titus Andronicus": "https://images.squarespace-cdn.com/content/v1/5b686ff89d5abba58f12a1bd/1554918854274-QO6COSNU8IIO3SSMVS0Q/Titus.png?format=750w",
-  "Troilus & Cressida": "https://images.squarespace-cdn.com/content/v1/5b686ff89d5abba58f12a1bd/1554918856888-V09OIA9DCYOO02SZEP4K/Troilus+%26+Cressida.png?format=750w",
+  "Troilus and Cressida": "https://images.squarespace-cdn.com/content/v1/5b686ff89d5abba58f12a1bd/1554918856888-V09OIA9DCYOO02SZEP4K/Troilus+%26+Cressida.png?format=750w",
   "Henry IV": "https://images.squarespace-cdn.com/content/v1/5b686ff89d5abba58f12a1bd/1554918869138-FB29PPATUFIE3NGB8AZR/Henry+IV.png?format=750w",
   "Henry V": "https://images.squarespace-cdn.com/content/v1/5b686ff89d5abba58f12a1bd/1554918879681-ND8VAB0RRZQXJYPOVNC8/Henry+V.png?format=750w",
   "Henry VI": "https://images.squarespace-cdn.com/content/v1/5b686ff89d5abba58f12a1bd/1554918891964-DWZDM9J247PG3KF7KYAM/Henry+VI.png?format=750w",
@@ -937,6 +971,29 @@ function groupedProductionLabelValues(record) {
   return uniqueEntityValues(productionGroups(record).flatMap((group) => productionLabelValues(group.production_title)));
 }
 
+function canonicalPlayKey(value) {
+  return normalizeSearchText(value)
+    .replace(/\b(the|a)\b/g, " ")
+    .replace(/\band\b/g, " ")
+    .replace(/\bpart\b/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function shakespearePlayTitle(value) {
+  const key = canonicalPlayKey(value);
+  if (!key) return "";
+  return SHAKESPEARE_PLAY_BY_KEY.get(key) || SHAKESPEARE_PLAY_ALIASES.get(key) || "";
+}
+
+function shakespearePlayValues(record) {
+  const values = [
+    ...productionLabelValues(record.production_title),
+    ...groupedProductionLabelValues(record),
+  ];
+  return uniqueEntityValues(values.map(shakespearePlayTitle).filter(Boolean));
+}
+
 function sortRecords(records) {
   const sorted = [...records];
   if (state.sort === "oldest") {
@@ -1083,6 +1140,7 @@ function entityValues(record, type) {
   if (type === "people") return uniqueEntityValues([...(record.people || []), ...splitEntityList(record.book_author), ...splitEntityList(record.subject_people), ...productionGroups(record).flatMap((group) => ENTITY_TYPES.filter((item) => item.role).flatMap((item) => splitEntityList(group[item.role] || [])))]);
   if (type === "subjects") return uniqueEntityValues(splitEntityList(record.subject_people));
   if (type === "books") return isBookReview(record) ? uniqueEntityValues([...splitEntityList(record.book_title || record.production_title), ...groupedEntityValues(record, "production_title")]) : [];
+  if (type === "shakespeare-plays") return collectionNames(record).includes(SHAKESPEARE_COLLECTION) ? shakespearePlayValues(record) : [];
   if (type === "productions") return isBookReview(record) ? [] : uniqueEntityValues([...productionLabelValues(record.production_title), ...groupedProductionLabelValues(record)]);
   if (type === "book-authors") return uniqueEntityValues(splitEntityList(record.book_author));
   if (type === "publishers") return uniqueEntityValues(splitEntityList(record.publisher));
@@ -1772,7 +1830,7 @@ function renderCollectionBrowsePage(slug) {
   if (!collection) return;
   const records = recordsForCollectionSlug(slug);
   const profile = slug === "shakespeare"
-    ? { ...CATEGORY_BROWSE_PROFILES.theatre, intro: "Shakespeare collection articles are grouped by play or adapted work first, then remain available chronologically through search." }
+    ? { groupLabel: "Plays", entityType: "shakespeare-plays", emptyLabel: "Shakespeare articles without a recognized play", intro: "Shakespeare collection articles are grouped by Shakespeare play. Essays, adaptations, and broader Shakespeare criticism remain available through search and the master index." }
     : categoryBrowseProfile("", records);
   renderGroupedBrowsePage({
     title: collection.replace(/^The\s+/, ""),
@@ -1949,10 +2007,7 @@ function renderShakespeareLanding() {
   count.textContent = `${countForTile("Shakespeare").toLocaleString()} records`;
   const intro = document.createElement("p");
   intro.className = "landing-intro";
-  intro.textContent = "A guided path through play reviews, Shakespeare-heavy essays, and adaptations or riffs.";
-  const groups = document.createElement("div");
-  groups.className = "landing-card-grid landing-card-grid-compact";
-  groups.replaceChildren(...landingItems("shakespeare").map(landingCard));
+  intro.textContent = "A play-by-play route through the Shakespeare collection.";
   const playHeading = document.createElement("h2");
   playHeading.className = "landing-subhead";
   playHeading.textContent = "Browse by Play";
@@ -1969,7 +2024,7 @@ function renderShakespeareLanding() {
     );
     plays.append(groupTitle, grid);
   });
-  els.indexContent.replaceChildren(title, count, intro, groups, playHeading, plays);
+  els.indexContent.replaceChildren(title, count, intro, playHeading, plays);
 }
 
 function shakespeareArtTile(title, index) {
@@ -4413,7 +4468,7 @@ function archiveHrefForTile(title, key) {
     return `#archive?${params.toString()}`;
   }
 
-  return key === "shakespeare" ? `#archive?q=${encodeURIComponent(title)}` : `#archive?q=${encodeURIComponent(title)}`;
+  return key === "shakespeare" ? `#entity:shakespeare-plays:${entitySlug(title)}` : `#archive?q=${encodeURIComponent(title)}`;
 }
 
 function slugForCollection(title) {
@@ -4502,7 +4557,7 @@ function tileDescription(title) {
     "The Musical Collection": "Musical theatre, cabaret, recordings, concerts, and related profiles.",
     "Short Takes": "Capsules, roundups, listings, and brief notices.",
     "Theatre Reviews": "Straight theatre reviews, previews, news, listings, and awards coverage.",
-    Shakespeare: "Play reviews, thoughts, adaptations, and complete play-by-play browsing.",
+    Shakespeare: "Play-by-play browsing for the Shakespeare collection.",
     "Musical Theatre": "Stage musicals and musical-theatre criticism.",
     Television: "Television criticism from the National Post years.",
     "Music & Concerts": "Concerts, recordings, cabaret, and music writing.",

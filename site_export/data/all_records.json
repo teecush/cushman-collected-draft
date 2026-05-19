@@ -21477,7 +21477,7 @@
     "slug": "1976-11-21-moli-re-caught-in-a-trap",
     "route": "/reviews/1976-11-21-moli-re-caught-in-a-trap/",
     "source_file": "1976.11.21.The_Observer.Moli_Re_Caught_In_A_Trap.md",
-    "title": "MolièRe Caught In A Trap",
+    "title": "Molière Caught In A Trap",
     "date": "1976-11-21",
     "year": "1976",
     "publication": "The Observer",
@@ -45634,10 +45634,10 @@
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "The Love of a Good Man",
-    "company": "Royal Court Theatre",
-    "venue": "Royal Court Theatre",
-    "city": "London, England",
+    "production_title": "",
+    "company": "",
+    "venue": "",
+    "city": "",
     "coordinates": [],
     "people": [
       "Diane Fletcher",
@@ -45681,7 +45681,50 @@
       "performers": [],
       "artists": []
     },
-    "production_groups": [],
+    "production_groups": [
+      {
+        "order": "1",
+        "production_title": "The Love of a Good Man",
+        "company": [
+          "Royal Court Theatre"
+        ],
+        "venue": [
+          "Royal Court Theatre"
+        ],
+        "city": [
+          "London, England"
+        ],
+        "director": [
+          "Nicolas Kent"
+        ],
+        "actors": [
+          "Ian McDiarmid",
+          "Diane Fletcher"
+        ],
+        "playwright": [
+          "Howard Barker"
+        ]
+      },
+      {
+        "order": "2",
+        "production_title": "The Long Voyage Home",
+        "company": [
+          "National Theatre"
+        ],
+        "venue": [
+          "Cottesloe Theatre"
+        ],
+        "city": [
+          "London, England"
+        ],
+        "actors": [
+          "John Salthouse"
+        ],
+        "playwright": [
+          "Eugene O'Neill"
+        ]
+      }
+    ],
     "media": [],
     "word_count": 963,
     "coordinate_points": [],
@@ -45695,6 +45738,7 @@
     "browse_entities": {
       "books": [],
       "productions": [
+        "The Long Voyage Home",
         "The Love of a Good Man"
       ],
       "subjects": [],
@@ -45704,9 +45748,11 @@
       "events": [],
       "networks": [],
       "companies": [
+        "National Theatre",
         "Royal Court Theatre"
       ],
       "venues": [
+        "Cottesloe Theatre",
         "Royal Court Theatre"
       ],
       "cities": [
@@ -60303,7 +60349,7 @@
     "slug": "1981-10-25-moli-re-s-dying-fall",
     "route": "/reviews/1981-10-25-moli-re-s-dying-fall/",
     "source_file": "1981.10.25.The_Observer.Moli_Re_s_Dying_Fall.md",
-    "title": "MolièRe's Dying Fall",
+    "title": "Molière's Dying Fall",
     "date": "1981-10-25",
     "year": "1981",
     "publication": "The Observer",
@@ -117135,10 +117181,10 @@
     }
   },
   {
-    "slug": "1999-09-13-nearly-authentic-shakespeare",
-    "route": "/reviews/1999-09-13-nearly-authentic-shakespeare/",
+    "slug": "1999-09-13-nearly-authentic-shakespeare-old-site-partial",
+    "route": "/reviews/1999-09-13-nearly-authentic-shakespeare-old-site-partial/",
     "source_file": "1999.09.13.Cushman_Collected.Nearly_Authentic_Shakespeare.md",
-    "title": "(Nearly) Authentic Shakespeare",
+    "title": "(Nearly) Authentic Shakespeare (Old Site Partial)",
     "date": "1999-09-13",
     "year": "1999",
     "publication": "National Post",
@@ -117147,9 +117193,9 @@
     "collections": [
       "The Shakespeare Collection"
     ],
-    "publication_status": "publish",
-    "editorial_issue_type": "",
-    "canonical_file": "",
+    "publication_status": "duplicate_variant",
+    "editorial_issue_type": "duplicate_edition_variant",
+    "canonical_file": "1999.09.13.National_Post.Nearly_Authentic_Shakespeare_A_Production_Of_Antony_And_Cleopatra_That_Feat.md",
     "production_title": "Antony and Cleopatra",
     "company": "Shakespeare's Globe",
     "venue": "Shakespeare's Globe",
@@ -117233,10 +117279,10 @@
     }
   },
   {
-    "slug": "1999-09-13-nearly-authentic-shakespeare-a-production-of-antony-and-cleopatra-that",
-    "route": "/reviews/1999-09-13-nearly-authentic-shakespeare-a-production-of-antony-and-cleopatra-that/",
+    "slug": "1999-09-13-nearly-authentic-shakespeare",
+    "route": "/reviews/1999-09-13-nearly-authentic-shakespeare/",
     "source_file": "1999.09.13.National_Post.Nearly_Authentic_Shakespeare_A_Production_Of_Antony_And_Cleopatra_That_Feat.md",
-    "title": "'(Nearly) Authentic Shakespeare: A Production Of Antony and Cleopatra That",
+    "title": "(Nearly) Authentic Shakespeare",
     "date": "1999-09-13",
     "year": "1999",
     "publication": "National Post",
