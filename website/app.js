@@ -1796,7 +1796,7 @@ function renderGroupedBrowsePage({ title, countLabel, intro, records, profile, b
     }
   }
 
-  if (primary.ungrouped.length) {
+  if (primary.ungrouped.length && profile.showUngrouped !== false) {
     const ungrouped = document.createElement("section");
     ungrouped.className = "grouped-browse-section";
     const ungroupedTitle = document.createElement("h2");
@@ -1830,7 +1830,7 @@ function renderCollectionBrowsePage(slug) {
   if (!collection) return;
   const records = recordsForCollectionSlug(slug);
   const profile = slug === "shakespeare"
-    ? { groupLabel: "Plays", entityType: "shakespeare-plays", emptyLabel: "Shakespeare articles without a recognized play", intro: "Shakespeare collection articles are grouped by Shakespeare play. Essays, adaptations, and broader Shakespeare criticism remain available through search and the master index." }
+    ? { groupLabel: "Plays", entityType: "shakespeare-plays", showUngrouped: false, intro: "Shakespeare collection articles are grouped by Shakespeare play. Essays, adaptations, and broader Shakespeare criticism remain available through search and the master index." }
     : categoryBrowseProfile("", records);
   renderGroupedBrowsePage({
     title: collection.replace(/^The\s+/, ""),
