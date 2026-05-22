@@ -1,5 +1,5 @@
 const DATA_URL = new URL("../site_export/data/public_reviews.json?v=111", import.meta.url);
-const CHAT_INDEX_URL = new URL("../site_export/data/chat_index.json?v=3", import.meta.url);
+const CHAT_INDEX_URL = new URL("../site_export/data/chat_index.json?v=4", import.meta.url);
 const CONTENT_ROOT = new URL("../site_export/content/reviews/", import.meta.url);
 const PAGE_SIZE = 36;
 const SHAKESPEARE_COLLECTION = "The Shakespeare Collection";
@@ -707,6 +707,10 @@ const state = {
   homeMap: null,
   chatIndex: null,
   chatIndexPromise: null,
+  bodySearchQuery: "",
+  bodySearchMatches: new Map(),
+  bodySearchLoading: false,
+  bodySearchTimer: null,
 };
 
 const els = {
@@ -1234,6 +1238,14 @@ function pointCoordinates(record, city = "", venue = "", directCoordinates = nul
   return normalizePointCoordinates(record.coordinates);
 }
 
+function coordinatePrecision(record, city = "", venue = "", directCoordinates = null) {
+  if (normalizePointCoordinates(directCoordinates)) return "record";
+  if (venue && coordinatesForVenue(venue)) return "venue";
+  if (venue && !productionGroups(record).length && normalizePointCoordinates(record.coordinates)) return "record";
+  if (city && coordinatesForCity(city)) return "city";
+  return normalizePointCoordinates(record.coordinates) ? "record" : "";
+}
+
 function recordVenueCityPairs(record) {
   const pairs = [];
   productionGroups(record).forEach((group) => {
@@ -1319,8 +1331,10 @@ function venueMapPoints() {
   const map = new Map();
   state.records.forEach((record) => {
     recordVenueCityPairs(record).forEach(({ venue, city, coordinates: pairCoordinates }) => {
+      if (!venue) return;
       const coordinates = pointCoordinates(record, city, venue, pairCoordinates);
       if (!coordinates) return;
+      const precision = coordinatePrecision(record, city, venue, pairCoordinates);
       const [lat, lon] = coordinates;
       const slug = entitySlug(venue);
       const point = map.get(slug) || {
@@ -1331,12 +1345,14 @@ function venueMapPoints() {
         latTotal: 0,
         lonTotal: 0,
         coordinateCount: 0,
+        cityLevelCount: 0,
       };
       if (city && !point.city) point.city = city;
       point.records.push(record);
       point.latTotal += lat;
       point.lonTotal += lon;
       point.coordinateCount += 1;
+      if (precision === "city") point.cityLevelCount += 1;
       map.set(slug, point);
     });
   });
@@ -1348,6 +1364,7 @@ function venueMapPoints() {
       lat: point.latTotal / point.coordinateCount,
       lon: point.lonTotal / point.coordinateCount,
       count: point.records.length,
+      precision: point.cityLevelCount === point.coordinateCount ? "city" : "venue",
     }))
     .sort((a, b) => b.count - a.count || a.label.localeCompare(b.label));
 }
@@ -1500,6 +1517,114 @@ function recordMatchesQuery(record, rawQuery) {
   return tokens.length > 0 && tokens.every((token) => haystack.includes(token));
 }
 
+function searchTerms(rawQuery) {
+  return normalizeSearchText(rawQuery)
+    .split(/\s+/)
+    .filter((term) => term.length > 1);
+}
+
+function queryMatchesText(rawQuery, text) {
+  const query = normalizeSearchText(rawQuery);
+  if (!query) return true;
+  const haystack = normalizeSearchText(text);
+  if (haystack.includes(query)) return true;
+  const terms = searchTerms(rawQuery);
+  return terms.length > 0 && terms.every((term) => haystack.includes(term));
+}
+
+function searchMatchInfo(record, rawQuery) {
+  const query = normalizeSearchText(rawQuery);
+  if (!query) return null;
+  const fields = [
+    ["Title", record.title],
+    [displaySchema(record).workLabel, articleWorkValues(record)],
+    ["Person", [record.subject_people, record.people, record.roles]],
+    ["Company", record.company],
+    ["Venue", record.venue],
+    ["City", record.city],
+    ["Publication", record.publication],
+    ["Category", typeLabel(record)],
+    ["Collection", collectionNames(record)],
+    ["Metadata", [record.production_groups, record.browse_entities, record.book_author, record.publisher, record.topic, record.event_name, record.network_or_platform, record.featured_artists]],
+  ];
+  for (const [label, value] of fields) {
+    const parts = [];
+    pushSearchValue(parts, value);
+    const matched = parts.find((part) => queryMatchesText(query, part));
+    if (matched) return { label, value: matched };
+  }
+  const bodyMatch = normalizeSearchText(state.bodySearchQuery) === normalizeSearchText(rawQuery) ? state.bodySearchMatches.get(record.slug) : null;
+  if (bodyMatch) return { label: "Article text", value: bodyMatch.snippet };
+  return null;
+}
+
+function bodySearchSnippet(text, terms) {
+  const sentences = String(text || "")
+    .split(/(?<=[.!?])\s+/)
+    .map((sentence) => sentence.trim())
+    .filter(Boolean);
+  const best = sentences
+    .map((sentence) => ({
+      sentence,
+      score: terms.reduce((sum, term) => sum + (chatNormalize(sentence).includes(term) ? 1 : 0), 0),
+    }))
+    .sort((a, b) => b.score - a.score || a.sentence.length - b.sentence.length)[0]?.sentence || text || "";
+  return clipWords(best, 28);
+}
+
+function computeBodySearchMatches(rawQuery, index) {
+  const query = chatNormalize(rawQuery);
+  if (query.length < 3) return new Map();
+  const terms = chatTerms(rawQuery);
+  if (!terms.length) return new Map();
+  const matches = new Map();
+  (index.chunks || []).forEach((chunk) => {
+    const record = chunk._record;
+    if (!record?.slug) return;
+    const text = chunk._search || "";
+    const exact = chunk._textSearch?.includes(query);
+    const allTerms = terms.every((term) => text.includes(term));
+    if (!exact && !allTerms) return;
+    const score = (exact ? 100 : 0) + terms.reduce((sum, term) => sum + boundedTermCount(text, term, 2), 0);
+    const existing = matches.get(record.slug);
+    if (existing && existing.score >= score) return;
+    matches.set(record.slug, {
+      score,
+      snippet: bodySearchSnippet(chunk.t, terms),
+    });
+  });
+  return matches;
+}
+
+function scheduleBodySearch(rawQuery) {
+  clearTimeout(state.bodySearchTimer);
+  const query = rawQuery.trim();
+  state.bodySearchQuery = "";
+  state.bodySearchMatches = new Map();
+  state.bodySearchLoading = false;
+  if (query.length < 3) return;
+  state.bodySearchLoading = true;
+  state.bodySearchTimer = setTimeout(() => runBodySearch(query), 180);
+}
+
+async function runBodySearch(rawQuery) {
+  try {
+    const index = await ensureChatIndex();
+    if (state.query.trim() !== rawQuery) return;
+    state.bodySearchMatches = computeBodySearchMatches(rawQuery, index);
+    state.bodySearchQuery = rawQuery;
+  } catch (error) {
+    console.error("Could not load full-text search index", error);
+    state.bodySearchMatches = new Map();
+    state.bodySearchQuery = rawQuery;
+  } finally {
+    if (state.query.trim() === rawQuery) {
+      state.bodySearchLoading = false;
+      applyFilters();
+    }
+  }
+}
+
 function applyFilters() {
   const query = state.query.trim();
   state.hasActiveQuery = hasActiveFilters();
@@ -1512,7 +1637,11 @@ function applyFilters() {
     if (state.collection === SHAKESPEARE_COLLECTION && state.shakespeareGroup) {
       if (shakespeareGroup(record) !== state.shakespeareGroup) return false;
     }
-    if (query && !recordMatchesQuery(record, query)) return false;
+    if (query) {
+      const metadataMatch = recordMatchesQuery(record, query);
+      const bodyMatch = state.bodySearchQuery === query && state.bodySearchMatches.has(record.slug);
+      if (!metadataMatch && !bodyMatch) return false;
+    }
     return true;
   });
   state.filtered = sortRecords(state.filtered);
@@ -1533,11 +1662,15 @@ function setArchiveExpanded(expanded) {
 }
 
 function resetArchiveControls() {
+  clearTimeout(state.bodySearchTimer);
   state.query = "";
   state.type = "";
   state.collection = "";
   state.shakespeareGroup = "";
   state.hasActiveQuery = false;
+  state.bodySearchQuery = "";
+  state.bodySearchMatches = new Map();
+  state.bodySearchLoading = false;
   state.filtered = state.records;
   syncArchivePageClass();
   els.searchInput.value = "";
@@ -1823,7 +1956,11 @@ function renderGroupedBrowsePage({ title, countLabel, intro, records, profile, b
     ungroupedTitle.textContent = profile.emptyLabel || "Ungrouped Articles";
     const list = document.createElement("div");
     list.className = "results entity-results";
-    list.replaceChildren(...primary.ungrouped.slice(0, 36).map((record) => resultCard(record)));
+    list.replaceChildren(...primary.ungrouped.slice(0, 36).map((record) => resultCard(record, {
+      contextLabel: `${title}: ${profile.emptyLabel || "Ungrouped Articles"}`,
+      backHref: window.location.hash || backHref,
+      records: primary.ungrouped,
+    })));
     ungrouped.replaceChildren(ungroupedTitle, list);
     sections.push(ungrouped);
   }
@@ -2540,7 +2677,12 @@ function renderEntityPage(typeKey, slug) {
   back.textContent = `Back to ${type.label}`;
   const list = document.createElement("div");
   list.className = "results entity-results";
-  list.replaceChildren(...sortRecords(entry.records).map((record) => resultCard(record)));
+  const records = sortRecords(entry.records);
+  list.replaceChildren(...records.map((record) => resultCard(record, {
+    contextLabel: `${type.singular}: ${entry.label}`,
+    backHref: window.location.hash || `#entity:${typeKey}:${slug}`,
+    records,
+  })));
   els.indexContent.replaceChildren(title, count, back, list);
 }
 
@@ -4183,13 +4325,14 @@ function renderLeafletMap(container, points, options = {}) {
   (options.venues || []).slice(0, options.maxVenues ?? (options.venues || []).length).forEach((point) => {
     const marker = L.marker([point.lat, point.lon], {
       icon: L.divIcon({
-        className: "map-pin-icon map-pin-venue",
+        className: `map-pin-icon map-pin-venue${point.precision === "city" ? " map-pin-approximate" : ""}`,
         html: "<span></span>",
         iconSize: [14, 14],
         iconAnchor: [7, 7],
       }),
     }).addTo(map);
-    marker.bindPopup(`<strong>${point.label}</strong>${point.city || ""}<br>${point.count.toLocaleString()} article references<br><a href="#entity:venues:${point.slug}">Open venue index</a>`);
+    const precisionNote = point.precision === "city" ? "<br><em>Approximate city-level point</em>" : "";
+    marker.bindPopup(`<strong>${point.label}</strong>${point.city || ""}${precisionNote}<br>${point.count.toLocaleString()} article references<br><a href="#entity:venues:${point.slug}">Open venue index</a>`);
     venueMarkers.push(marker);
     searchable.push({ label: `${point.label} ${point.city || ""} venue`, point, marker, zoom: 13 });
     bounds.push([point.lat, point.lon]);
@@ -4248,7 +4391,7 @@ function renderLeafletMap(container, points, options = {}) {
     map.getContainer().append(control);
   }
   const legend = L.DomUtil.create("div", "leaflet-map-legend");
-  legend.innerHTML = `<span><i class="legend-city"></i>City cluster</span><span><i class="legend-venue"></i>Venue</span>`;
+  legend.innerHTML = `<span><i class="legend-city"></i>City cluster</span><span><i class="legend-venue"></i>Venue</span><span><i class="legend-approximate"></i>Approximate venue</span>`;
   L.DomEvent.disableClickPropagation(legend);
   L.DomEvent.disableScrollPropagation(legend);
   map.getContainer().append(legend);
@@ -4630,6 +4773,120 @@ function productionParts(record) {
     .slice(0, 3);
 }
 
+function compactValueList(values, limit = 2) {
+  const clean = uniqueEntityValues(values).filter(Boolean);
+  if (clean.length <= limit) return clean.join(" / ");
+  return `${clean.slice(0, limit).join(" / ")} / +${clean.length - limit} more`;
+}
+
+function roleValues(record, role) {
+  return uniqueEntityValues([...(record.roles?.[role] || []), ...groupedRoleValues(record, role)]);
+}
+
+function cardPrimaryValues(record) {
+  const category = String(record.article_category || "");
+  if (category === "Book Review") return uniqueEntityValues(splitEntityList(record.book_title || record.production_title));
+  if (["Profile", "Obituary", "Theatre Interview", "Music Interview"].includes(category)) {
+    const subjects = splitEntityList(record.subject_people);
+    if (subjects.length) return subjects;
+  }
+  if (category === "Music Review" || category === "Concert Review") {
+    const artists = uniqueEntityValues([
+      ...roleValues(record, "musicians"),
+      ...roleValues(record, "performers"),
+      ...splitEntityList(record.featured_artists),
+    ]);
+    if (artists.length) return artists;
+  }
+  if (category === "Opinion Piece" || category === "Year in Review" || category === "Correction") {
+    const topics = splitEntityList(record.topic || record.correction_target);
+    if (topics.length) return topics;
+  }
+  if (category === "Awards Coverage" || category === "Events Listing") {
+    const events = splitEntityList(record.event_name);
+    if (events.length) return events;
+  }
+  return articleWorkValues(record);
+}
+
+function cardPrimaryLabel(record) {
+  const category = String(record.article_category || "");
+  if (category === "Music Review") return "Artist";
+  if (category === "Concert Review") return "Artist";
+  return displaySchema(record).workLabel;
+}
+
+function cardSecondaryParts(record, primaryValues = []) {
+  const category = String(record.article_category || "");
+  const primarySlugs = new Set(primaryValues.map(entitySlug));
+  const withoutPrimary = (values) => uniqueEntityValues(values).filter((value) => !primarySlugs.has(entitySlug(value)));
+  if (category === "Book Review") {
+    return withoutPrimary([record.book_author, record.publisher]).slice(0, 3);
+  }
+  if (category === "Music Review" || category === "Concert Review") {
+    return withoutPrimary([...articleWorkValues(record), record.venue, record.city]).slice(0, 3);
+  }
+  if (category === "Profile" || category === "Obituary") {
+    return withoutPrimary([record.topic, ...articleWorkValues(record)]).slice(0, 3);
+  }
+  return productionParts(record);
+}
+
+function cardDisplay(record) {
+  const titleParts = headlineParts(record.title || record.production_title || "Untitled");
+  const primaryValues = cardPrimaryValues(record);
+  const primary = compactValueList(primaryValues, 2);
+  const primaryIsHeadline = primary && normalizeSearchText(primary) === normalizeSearchText(titleParts.headline);
+  const title = primary && !primaryIsHeadline ? primary : titleParts.headline;
+  const deck = primary && !primaryIsHeadline
+    ? [titleParts.headline, titleParts.deck].filter(Boolean).join(": ")
+    : titleParts.deck;
+  return {
+    label: primary && !primaryIsHeadline ? cardPrimaryLabel(record) : "",
+    title,
+    deck,
+    primaryValues,
+    secondary: cardSecondaryParts(record, primaryValues),
+  };
+}
+
+const ARTICLE_CONTEXT_KEY = "cushmanArticleContext";
+
+function currentArchiveContextLabel() {
+  const parts = [];
+  if (state.query.trim()) parts.push(`Search: “${state.query.trim()}”`);
+  if (state.type) parts.push(TYPE_GROUPS.find((group) => group.value === state.type)?.label || state.type);
+  if (state.collection) parts.push(state.collection.replace(/^The\s+/, ""));
+  return parts.join(" / ") || "Archive results";
+}
+
+function currentArchiveHref() {
+  const params = new URLSearchParams();
+  if (state.query.trim()) params.set("q", state.query.trim());
+  if (state.type) params.set("type", state.type);
+  if (state.collection) params.set("collection", state.collection);
+  const query = params.toString();
+  return query ? `#archive?${query}` : "#archive";
+}
+
+function storeArticleContext(event, record, context = {}) {
+  if (event.defaultPrevented || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || event.button) return;
+  const records = Array.isArray(context.records) ? context.records : [];
+  if (records.length < 2) return;
+  const slugs = records.map((item) => item.slug).filter(Boolean);
+  if (slugs.length < 2) return;
+  try {
+    sessionStorage.setItem(ARTICLE_CONTEXT_KEY, JSON.stringify({
+      label: context.contextLabel || "Article set",
+      href: context.backHref || window.location.hash || "#archive",
+      slugs,
+      savedAt: Date.now(),
+    }));
+  } catch {
+    // Ignore storage failures; article links still work.
+  }
+}
+
 function headlineParts(title) {
   const text = String(title || "").trim();
   const match = text.match(/^(.+?)[;:]\s*(.+)$/);
@@ -4654,8 +4911,17 @@ function renderResults() {
     state.filtered.length === state.records.length
       ? `${total} public records`
       : `${shown} of ${total} public records`;
+  if (state.query.trim() && state.bodySearchLoading) {
+    els.archiveCount.textContent += " / searching article text...";
+  }
 
-  const cards = visible.map((record) => safeResultCard(record));
+  const resultContext = {
+    contextLabel: currentArchiveContextLabel(),
+    backHref: currentArchiveHref(),
+    records: state.filtered,
+    query: state.query.trim(),
+  };
+  const cards = visible.map((record) => safeResultCard(record, resultContext));
 
   if (state.filtered.length > state.visible) {
     const more = document.createElement("button");
@@ -4672,9 +4938,9 @@ function renderResults() {
   els.results.replaceChildren(...cards);
 }
 
-function safeResultCard(record) {
+function safeResultCard(record, context = {}) {
   try {
-    return resultCard(record);
+    return resultCard(record, context);
   } catch (error) {
     console.error("Could not render result card", record?.slug, error);
     return fallbackResultCard(record);
@@ -4706,10 +4972,11 @@ function fallbackResultCard(record) {
   return card;
 }
 
-function resultCard(record) {
+function resultCard(record, context = {}) {
   const card = document.createElement("a");
   card.className = "result-card";
   card.href = `#review:${record.slug}`;
+  card.addEventListener("click", (event) => storeArticleContext(event, record, context));
   const media = record.media?.[0];
   if (media?.local_path) {
     card.classList.add("has-thumb");
@@ -4726,20 +4993,26 @@ function resultCard(record) {
 
   const title = document.createElement("span");
   title.className = "card-title";
-  const parts = headlineParts(record.title || record.production_title || "Untitled");
+  const display = cardDisplay(record);
+  if (display.label) {
+    const label = document.createElement("span");
+    label.className = "card-primary-label";
+    label.textContent = display.label;
+    title.append(label);
+  }
   const headline = document.createElement("strong");
-  headline.textContent = parts.headline;
+  headline.textContent = display.title;
   title.append(headline);
-  if (parts.deck) {
+  if (display.deck) {
     const deck = document.createElement("span");
     deck.className = "card-deck";
-    deck.textContent = parts.deck;
+    deck.textContent = display.deck;
     title.append(deck);
   }
 
   const production = document.createElement("span");
   production.className = "production-line";
-  const productionPartsList = productionParts(record);
+  const productionPartsList = display.secondary;
   if (productionPartsList.length) {
     const name = document.createElement("strong");
     name.textContent = productionPartsList[0];
@@ -4757,6 +5030,13 @@ function resultCard(record) {
   copy.className = "result-copy";
   copy.append(date, title);
   if (productionPartsList.length) copy.append(production);
+  const matchInfo = context.query ? searchMatchInfo(record, context.query) : null;
+  if (matchInfo) {
+    const match = document.createElement("span");
+    match.className = "search-match-line";
+    match.textContent = `Matched ${matchInfo.label.toLowerCase()}: ${clipWords(matchInfo.value, 18)}`;
+    copy.append(match);
+  }
   copy.append(meta);
   card.append(copy);
   return card;
@@ -4858,7 +5138,10 @@ async function renderEmergencyArticle(slug, error) {
   const body = document.createElement("div");
   body.className = "article-body";
   body.replaceChildren(...fallbackArticleBodyNodes(markdown));
-  const articleParts = [date, title];
+  const nav = articleContextNav(record);
+  const articleParts = [];
+  if (nav) articleParts.push(nav);
+  articleParts.push(date, title);
   if (titleParts.deck) articleParts.push(deck);
   articleParts.push(meta, notice, body);
   els.article.replaceChildren(...articleParts);
@@ -5020,6 +5303,122 @@ function articleEntityLinks(record) {
   return wrap;
 }
 
+function readArticleContext(record) {
+  try {
+    const parsed = JSON.parse(sessionStorage.getItem(ARTICLE_CONTEXT_KEY) || "{}");
+    const slugs = Array.isArray(parsed.slugs) ? parsed.slugs.filter(Boolean) : [];
+    const index = slugs.indexOf(record.slug);
+    if (index >= 0 && slugs.length > 1) {
+      return {
+        label: parsed.label || "Article set",
+        href: parsed.href || "#archive",
+        slugs,
+        index,
+      };
+    }
+  } catch {
+    // Ignore malformed stored context.
+  }
+  const peers = sortRecords(state.records.filter((item) => typeGroup(item).value === typeGroup(record).value));
+  const index = peers.findIndex((item) => item.slug === record.slug);
+  if (index >= 0 && peers.length > 1) {
+    return {
+      label: typeLabel(record),
+      href: `#archive?type=${typeGroup(record).value}`,
+      slugs: peers.map((item) => item.slug),
+      index,
+    };
+  }
+  return null;
+}
+
+function articleContextNav(record) {
+  const context = readArticleContext(record);
+  if (!context) return null;
+  const nav = document.createElement("nav");
+  nav.className = "article-context-nav";
+  nav.setAttribute("aria-label", "Article navigation");
+  const back = document.createElement("a");
+  back.href = context.href;
+  back.textContent = "Back to results";
+  const progress = document.createElement("span");
+  progress.className = "article-context-progress";
+  progress.textContent = `${context.index + 1} of ${context.slugs.length} in ${context.label}`;
+  const buttons = document.createElement("span");
+  buttons.className = "article-context-buttons";
+  const previous = document.createElement("a");
+  previous.textContent = "Previous";
+  previous.href = context.index > 0 ? `#review:${context.slugs[context.index - 1]}` : "";
+  previous.toggleAttribute("aria-disabled", context.index <= 0);
+  const next = document.createElement("a");
+  next.textContent = "Next";
+  next.href = context.index < context.slugs.length - 1 ? `#review:${context.slugs[context.index + 1]}` : "";
+  next.toggleAttribute("aria-disabled", context.index >= context.slugs.length - 1);
+  buttons.replaceChildren(previous, next);
+  nav.replaceChildren(back, progress, buttons);
+  return nav;
+}
+
+function relatedEntityCandidates(record) {
+  const category = String(record.article_category || "");
+  const candidates = [];
+  const addValues = (type, label, values) => {
+    uniqueEntityValues(values).forEach((value) => candidates.push({ type, label, value }));
+  };
+  if (category === "Book Review") {
+    addValues("books", "More on this book", splitEntityList(record.book_title || record.production_title));
+    addValues("book-authors", "More by/about this author", splitEntityList(record.book_author));
+    addValues("publishers", "More from this publisher", splitEntityList(record.publisher));
+    return candidates;
+  }
+  if (category === "Profile" || category === "Obituary" || category === "Theatre Interview" || category === "Music Interview") {
+    addValues("subjects", "More on this subject", splitEntityList(record.subject_people));
+  }
+  if (category === "Music Review" || category === "Concert Review") {
+    addValues("musicians", "More by this artist", roleValues(record, "musicians"));
+    addValues("performers", "More by this performer", roleValues(record, "performers"));
+  }
+  addValues("productions", "More on this work", articleWorkValues(record));
+  addValues("directors", "More with this director", roleValues(record, "director"));
+  addValues("playwrights", "More by this playwright", roleValues(record, "playwright"));
+  addValues("actors", "More with this actor", roleValues(record, "actors"));
+  addValues("companies", "More from this company", entityValues(record, "companies"));
+  addValues("venues", "More at this venue", entityValues(record, "venues"));
+  return candidates;
+}
+
+function relatedArticleLinks(record) {
+  const seen = new Set();
+  const links = [];
+  relatedEntityCandidates(record).forEach(({ type, label, value }) => {
+    const key = `${type}:${entitySlug(value)}`;
+    if (seen.has(key)) return;
+    seen.add(key);
+    const entry = entityMap(type).get(entitySlug(value));
+    const count = entry?.records?.length || 0;
+    if (count <= 1) return;
+    links.push({ type, label, value, count });
+  });
+  if (!links.length) return null;
+  const section = document.createElement("section");
+  section.className = "article-related-links";
+  const heading = document.createElement("h2");
+  heading.textContent = "Related paths";
+  const nav = document.createElement("nav");
+  nav.setAttribute("aria-label", "Related article paths");
+  links
+    .sort((a, b) => b.count - a.count || a.value.localeCompare(b.value))
+    .slice(0, 8)
+    .forEach((item) => {
+      const link = document.createElement("a");
+      link.href = `#entity:${item.type}:${entitySlug(item.value)}`;
+      link.innerHTML = `<span>${item.label}</span><strong>${item.value}</strong><em>${item.count.toLocaleString()} articles</em>`;
+      nav.append(link);
+    });
+  section.replaceChildren(heading, nav);
+  return section;
+}
+
 function articleSubjectEntityGroup(record, label, values) {
   const section = document.createElement("section");
   section.className = "article-entity-section article-entity-section-subjects";
@@ -5176,7 +5575,10 @@ async function showReview(slug) {
   }
   body.replaceChildren(...bodyNodes);
 
-  const articleParts = [date, title];
+  const nav = articleContextNav(record);
+  const articleParts = [];
+  if (nav) articleParts.push(nav);
+  articleParts.push(date, title);
   if (titleParts.deck) articleParts.push(deck);
   articleParts.push(meta);
   try {
@@ -5188,6 +5590,8 @@ async function showReview(slug) {
   }
   if (notice) articleParts.push(notice);
   articleParts.push(body);
+  const related = relatedArticleLinks(record);
+  if (related) articleParts.push(related);
   els.article.replaceChildren(...articleParts);
   els.articleView.hidden = false;
   els.articleView.scrollIntoView({ behavior: "auto", block: "start" });
@@ -5342,6 +5746,10 @@ function route() {
       state.query = "";
       state.shakespeareGroup = slug === "shakespeare" ? params.get("group") || "" : "";
       state.hasActiveQuery = true;
+      clearTimeout(state.bodySearchTimer);
+      state.bodySearchQuery = "";
+      state.bodySearchMatches = new Map();
+      state.bodySearchLoading = false;
       els.collectionFilter.value = collection;
       els.typeFilter.value = "";
       els.searchInput.value = "";
@@ -5378,6 +5786,7 @@ function route() {
       els.searchInput.value = state.query;
       els.typeFilter.value = state.type;
       els.collectionFilter.value = state.collection;
+      scheduleBodySearch(state.query);
       applyFilters();
     } else {
       resetArchiveControls();
@@ -5445,6 +5854,7 @@ els.drawer.addEventListener("click", (event) => {
 
 els.searchInput.addEventListener("input", (event) => {
   state.query = event.target.value;
+  scheduleBodySearch(state.query);
   applyFilters();
 });
 
@@ -5475,11 +5885,15 @@ els.sortButtons.forEach((button) => {
 });
 
 els.clearFilters.addEventListener("click", () => {
+  clearTimeout(state.bodySearchTimer);
   state.query = "";
   state.collection = "";
   state.type = "";
   state.shakespeareGroup = "";
   state.hasActiveQuery = false;
+  state.bodySearchQuery = "";
+  state.bodySearchMatches = new Map();
+  state.bodySearchLoading = false;
   els.searchInput.value = "";
   els.collectionFilter.value = "";
   els.typeFilter.value = "";
