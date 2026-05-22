@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Rubik:wght@400;600;700;800;900&display=swap">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-    <link rel="stylesheet" href="./styles.css?v=96">
+    <link rel="stylesheet" href="./styles.css?v=97">
   </head>
   <body>
     <header class="site-header">
@@ -171,22 +171,21 @@
         </div>
         <div class="filter-strip" aria-label="Archive filters">
           <label>
-            <span>Type</span>
-            <select id="typeFilter"></select>
+            <span class="visually-hidden">Type</span>
+            <select id="typeFilter" aria-label="Type"></select>
           </label>
           <label>
-            <span>Collection</span>
-            <select id="collectionFilter"></select>
+            <span class="visually-hidden">Collection</span>
+            <select id="collectionFilter" aria-label="Collection"></select>
           </label>
           <div class="search-tools" aria-label="Search tools">
-            <span>Sort</span>
             <div class="sort-options" id="sortOptions">
               <button class="is-active" type="button" data-sort="newest">Newest</button>
               <button type="button" data-sort="oldest">Oldest</button>
               <button type="button" data-sort="title">Title A-Z</button>
+              <button class="clear-button" id="clearFilters" type="button">Clear</button>
             </div>
           </div>
-          <button class="clear-button" id="clearFilters" type="button">Clear</button>
         </div>
         <div class="shakespeare-nav" id="shakespeareNav" hidden></div>
         <div class="results" id="results"></div>
@@ -291,6 +290,6 @@
     </footer>
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    <script src="./app.js?v=125" type="module"></script>
+    <script src="./app.js?v=126" type="module"></script>
   </body>
 </html>

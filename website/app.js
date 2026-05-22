@@ -711,6 +711,7 @@ const state = {
   bodySearchMatches: new Map(),
   bodySearchLoading: false,
   bodySearchTimer: null,
+  pendingArchiveRestore: null,
 };
 
 const els = {
@@ -1647,7 +1648,14 @@ function applyFilters() {
   state.filtered = sortRecords(state.filtered);
   updateSortButtons();
   renderShakespeareNav();
-  state.visible = PAGE_SIZE;
+  if (state.pendingArchiveRestore) {
+    const restoreIndex = state.pendingArchiveRestore.slug
+      ? state.filtered.findIndex((record) => record.slug === state.pendingArchiveRestore.slug)
+      : state.pendingArchiveRestore.index;
+    state.visible = Math.max(PAGE_SIZE, state.pendingArchiveRestore.visibleCount || PAGE_SIZE, restoreIndex + 1);
+  } else {
+    state.visible = PAGE_SIZE;
+  }
   renderResults();
 }
 
@@ -4869,17 +4877,54 @@ function currentArchiveHref() {
   return query ? `#archive?${query}` : "#archive";
 }
 
+function archiveHashKey(value) {
+  const raw = String(value || "");
+  const hash = raw.includes("#") ? raw.slice(raw.indexOf("#")) : raw;
+  const [base, queryString] = hash.split("?");
+  if (base !== "#archive" || !queryString) return base || "";
+  const params = new URLSearchParams(queryString);
+  const ordered = new URLSearchParams();
+  ["q", "type", "collection"].forEach((key) => {
+    const paramValue = params.get(key);
+    if (paramValue) ordered.set(key, paramValue);
+  });
+  const query = ordered.toString();
+  return query ? `${base}?${query}` : base;
+}
+
+function archiveRestoreForHash(hash) {
+  try {
+    const parsed = JSON.parse(sessionStorage.getItem(ARTICLE_CONTEXT_KEY) || "{}");
+    if (archiveHashKey(parsed.href) !== archiveHashKey(hash)) return null;
+    const scrollY = Number(parsed.scrollY);
+    if (!Number.isFinite(scrollY)) return null;
+    return {
+      scrollY,
+      slug: parsed.slug || "",
+      index: Number.isFinite(Number(parsed.index)) ? Number(parsed.index) : -1,
+      visibleCount: Number.isFinite(Number(parsed.visibleCount)) ? Number(parsed.visibleCount) : PAGE_SIZE,
+    };
+  } catch {
+    return null;
+  }
+}
+
 function storeArticleContext(event, record, context = {}) {
   if (event.defaultPrevented || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || event.button) return;
   const records = Array.isArray(context.records) ? context.records : [];
   if (records.length < 2) return;
   const slugs = records.map((item) => item.slug).filter(Boolean);
   if (slugs.length < 2) return;
+  const index = slugs.indexOf(record.slug);
   try {
     sessionStorage.setItem(ARTICLE_CONTEXT_KEY, JSON.stringify({
       label: context.contextLabel || "Article set",
       href: context.backHref || window.location.hash || "#archive",
       slugs,
+      slug: record.slug,
+      index,
+      visibleCount: context.visibleCount || state.visible,
+      scrollY: window.scrollY || document.documentElement.scrollTop || 0,
       savedAt: Date.now(),
     }));
   } catch {
@@ -4901,6 +4946,7 @@ function renderResults() {
   if (!state.hasActiveQuery) {
     els.archiveCount.textContent = `${state.records.length.toLocaleString()} public records`;
     els.results.replaceChildren();
+    restoreArchivePositionIfNeeded();
     return;
   }
 
@@ -4920,6 +4966,7 @@ function renderResults() {
     backHref: currentArchiveHref(),
     records: state.filtered,
     query: state.query.trim(),
+    visibleCount: state.visible,
   };
   const cards = visible.map((record) => safeResultCard(record, resultContext));
 
@@ -4936,6 +4983,17 @@ function renderResults() {
   }
 
   els.results.replaceChildren(...cards);
+  restoreArchivePositionIfNeeded();
+}
+
+function restoreArchivePositionIfNeeded() {
+  const restore = state.pendingArchiveRestore;
+  if (!restore) return;
+  if (restore.slug && !state.filtered.some((record) => record.slug === restore.slug) && state.bodySearchLoading) return;
+  state.pendingArchiveRestore = null;
+  requestAnimationFrame(() => {
+    window.scrollTo({ top: restore.scrollY, behavior: "auto" });
+  });
 }
 
 function safeResultCard(record, context = {}) {
@@ -5776,6 +5834,8 @@ function route() {
 
   if (hash.startsWith("#archive")) {
     document.body.classList.add("search-open");
+    state.pendingArchiveRestore = archiveRestoreForHash(hash);
+    const shouldRestoreArchivePosition = Boolean(state.pendingArchiveRestore);
     const [, queryString] = hash.split("?");
     if (queryString) {
       const params = new URLSearchParams(queryString);
@@ -5791,7 +5851,7 @@ function route() {
     } else {
       resetArchiveControls();
     }
-    scrollToSection("#archive");
+    if (!shouldRestoreArchivePosition) scrollToSection("#archive");
     return;
   }
 
