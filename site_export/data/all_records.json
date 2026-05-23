@@ -13208,7 +13208,7 @@
         "order": "2",
         "production_title": "Yobbo Nowt",
         "company": [
-          "{'7': '84'}"
+          "7:84"
         ],
         "playwright": [
           "John McGrath"
@@ -13266,7 +13266,7 @@
       "events": [],
       "networks": [],
       "companies": [
-        "{'7': '84'}"
+        "7:84"
       ],
       "venues": [
         "Hampstead Theatre"
@@ -64386,7 +64386,7 @@
     "coordinates": [],
     "people": [
       "Alfred Molina",
-      "Anthony O’Donnell",
+      "Anthony O'Donnell",
       "Ben Warriss",
       "David Rudkin",
       "Derek Godfrey",
@@ -64480,7 +64480,7 @@
           "Mike Gwilym",
           "Juliet Stevenson",
           "Geoffrey Hutchings",
-          "Anthony O’Donnell"
+          "Anthony O'Donnell"
         ],
         "playwright": [
           "William Shakespeare"
@@ -64547,7 +64547,7 @@
       ],
       "people": [
         "Alfred Molina",
-        "Anthony O’Donnell",
+        "Anthony O'Donnell",
         "Ben Warriss",
         "David Rudkin",
         "Derek Godfrey",
@@ -117300,7 +117300,7 @@
     "city": "",
     "coordinates": [],
     "people": [
-      "Edward Bulwer Lytton",
+      "Edward Bulwer-Lytton",
       "Giles Block",
       "John Caird",
       "Leonard Bernstein",
@@ -117374,7 +117374,7 @@
           "London, England"
         ],
         "playwright": [
-          "Edward Bulwer Lytton"
+          "Edward Bulwer-Lytton"
         ],
         "director": [
           "John Caird"
@@ -117472,7 +117472,7 @@
         "London, England"
       ],
       "people": [
-        "Edward Bulwer Lytton",
+        "Edward Bulwer-Lytton",
         "Giles Block",
         "John Caird",
         "Leonard Bernstein",
@@ -123462,7 +123462,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "",
     "canonical_file": "",
-    "production_title": "Songs For A New World",
+    "production_title": "Songs for a New World",
     "company": "Color and Light",
     "venue": "The Church at Berkeley",
     "city": "Toronto",
@@ -123524,7 +123524,7 @@
         "lon": -79.3640549,
         "venue": "The Church at Berkeley",
         "city": "Toronto",
-        "production_title": "Songs For A New World"
+        "production_title": "Songs for a New World"
       }
     ],
     "display_schema": {
@@ -123537,7 +123537,7 @@
     "browse_entities": {
       "books": [],
       "productions": [
-        "Songs For A New World"
+        "Songs for a New World"
       ],
       "subjects": [],
       "book_authors": [],
@@ -135536,7 +135536,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "",
     "canonical_file": "",
-    "production_title": "The School For Wives",
+    "production_title": "The School for Wives",
     "company": "Soulpepper Theatre Company",
     "venue": "Premiere Dance Theatre",
     "city": "Toronto",
@@ -135607,7 +135607,7 @@
         "lon": -79.3819,
         "venue": "Premiere Dance Theatre",
         "city": "Toronto",
-        "production_title": "The School For Wives"
+        "production_title": "The School for Wives"
       }
     ],
     "display_schema": {
@@ -135620,7 +135620,7 @@
     "browse_entities": {
       "books": [],
       "productions": [
-        "The School For Wives"
+        "The School for Wives"
       ],
       "subjects": [],
       "book_authors": [],
@@ -145075,13 +145075,13 @@
     "people": [
       "David Young",
       "Eric Peterson",
-      "R. H. Thomson",
+      "R.H. Thomson",
       "Waneta Storms"
     ],
     "roles": {
       "director": [],
       "actors": [
-        "R. H. Thomson",
+        "R.H. Thomson",
         "Eric Peterson",
         "Waneta Storms"
       ],
@@ -145152,7 +145152,7 @@
       "people": [
         "David Young",
         "Eric Peterson",
-        "R. H. Thomson",
+        "R.H. Thomson",
         "Waneta Storms"
       ]
     }
@@ -182951,7 +182951,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "",
     "canonical_file": "",
-    "production_title": "The Hunchback Of Notre Dame",
+    "production_title": "The Hunchback of Notre Dame",
     "company": "Stratford Festival",
     "venue": "Avon Theatre",
     "city": "Stratford, Ontario",
@@ -183016,7 +183016,7 @@
         "lon": -80.9811,
         "venue": "Avon Theatre",
         "city": "Stratford, Ontario",
-        "production_title": "The Hunchback Of Notre Dame"
+        "production_title": "The Hunchback of Notre Dame"
       }
     ],
     "display_schema": {
@@ -183029,7 +183029,7 @@
     "browse_entities": {
       "books": [],
       "productions": [
-        "The Hunchback Of Notre Dame"
+        "The Hunchback of Notre Dame"
       ],
       "subjects": [],
       "book_authors": [],
@@ -185331,7 +185331,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "",
     "canonical_file": "",
-    "production_title": "She Stoops To Conquer",
+    "production_title": "She Stoops to Conquer",
     "company": "Soulpepper Theatre Company",
     "venue": "du Maurier Theatre Centre",
     "city": "Toronto",
@@ -185402,7 +185402,7 @@
         "lon": -79.3819,
         "venue": "du Maurier Theatre Centre",
         "city": "Toronto",
-        "production_title": "She Stoops To Conquer"
+        "production_title": "She Stoops to Conquer"
       }
     ],
     "display_schema": {
@@ -185415,7 +185415,7 @@
     "browse_entities": {
       "books": [],
       "productions": [
-        "She Stoops To Conquer"
+        "She Stoops to Conquer"
       ],
       "subjects": [],
       "book_authors": [],
@@ -190295,7 +190295,7 @@
     "production_groups": [
       {
         "order": "1",
-        "production_title": "I Claudia",
+        "production_title": "I, Claudia",
         "venue": [
           "Tarragon Theatre Extra Space"
         ],
@@ -190455,7 +190455,7 @@
         "Capture Me",
         "Copenhagen",
         "Hamlet",
-        "I Claudia",
+        "I, Claudia",
         "Provenance",
         "The Hollow Crown"
       ],
@@ -264509,7 +264509,7 @@
         "order": "2",
         "production_title": "Revisited",
         "company": [
-          "2b theatre company"
+          "2b Theatre Company"
         ],
         "venue": [
           "Harbourfront Centre"
@@ -264662,7 +264662,7 @@
       "events": [],
       "networks": [],
       "companies": [
-        "2b theatre company",
+        "2b Theatre Company",
         "Mabou Mines",
         "The TEAM"
       ],
@@ -267014,7 +267014,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "",
     "canonical_file": "",
-    "production_title": "Particularly In The Heartland",
+    "production_title": "Particularly in the Heartland",
     "company": "The TEAM",
     "venue": "Enwave Theatre",
     "city": "Toronto",
@@ -267074,7 +267074,7 @@
         "lon": -79.3819,
         "venue": "Enwave Theatre",
         "city": "Toronto",
-        "production_title": "Particularly In The Heartland"
+        "production_title": "Particularly in the Heartland"
       }
     ],
     "display_schema": {
@@ -267087,7 +267087,7 @@
     "browse_entities": {
       "books": [],
       "productions": [
-        "Particularly In The Heartland"
+        "Particularly in the Heartland"
       ],
       "subjects": [],
       "book_authors": [],
@@ -386787,7 +386787,7 @@
       },
       {
         "order": "2",
-        "production_title": "Bingo!",
+        "production_title": "Bingo",
         "company": [
           "Factory Theatre"
         ],
@@ -386829,7 +386829,7 @@
     "browse_entities": {
       "books": [],
       "productions": [
-        "Bingo!",
+        "Bingo",
         "Watching Glory Die"
       ],
       "subjects": [
@@ -399069,7 +399069,7 @@
     "publication_status": "publish",
     "editorial_issue_type": "",
     "canonical_file": "",
-    "production_title": "She Stoops To Conquer",
+    "production_title": "She Stoops to Conquer",
     "company": "Stratford Festival",
     "venue": "Avon Theatre",
     "city": "Stratford, Ontario",
@@ -399137,7 +399137,7 @@
         "lon": -80.9811,
         "venue": "Avon Theatre",
         "city": "Stratford, Ontario",
-        "production_title": "She Stoops To Conquer"
+        "production_title": "She Stoops to Conquer"
       }
     ],
     "display_schema": {
@@ -399150,7 +399150,7 @@
     "browse_entities": {
       "books": [],
       "productions": [
-        "She Stoops To Conquer"
+        "She Stoops to Conquer"
       ],
       "subjects": [],
       "book_authors": [],
@@ -420621,7 +420621,7 @@
       },
       {
         "order": "2",
-        "production_title": "Long Day's Journey Into Night",
+        "production_title": "Long Day's Journey into Night",
         "company": [
           "Stratford Festival"
         ],
@@ -420666,7 +420666,7 @@
     "browse_entities": {
       "books": [],
       "productions": [
-        "Long Day's Journey Into Night",
+        "Long Day's Journey into Night",
         "To Kill a Mockingbird"
       ],
       "subjects": [],

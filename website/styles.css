@@ -2266,6 +2266,17 @@ h1 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.browse-view-all {
+  display: inline-block;
+  margin-top: 18px;
+  color: var(--blue);
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
 .browse-group-card {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;

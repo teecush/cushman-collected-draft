@@ -1,4 +1,4 @@
-const DATA_URL = new URL("../site_export/data/public_reviews.json?v=111", import.meta.url);
+const DATA_URL = new URL("../site_export/data/public_reviews.json?v=112", import.meta.url);
 const FULL_TEXT_INDEX_URL = new URL("../site_export/data/chat_index.json?v=4", import.meta.url);
 const CONTENT_ROOT = new URL("../site_export/content/reviews/", import.meta.url);
 const PAGE_SIZE = 36;
@@ -63,7 +63,10 @@ const ENTITY_TYPES = [
   { key: "playwrights", label: "Playwrights", singular: "Playwright", role: "playwright" },
   { key: "composers-lyricists", label: "Composers & Lyricists", singular: "Composer/Lyricist", role: "composer_lyricist" },
   { key: "musical-directors", label: "Musical Directors", singular: "Musical Director", role: "musical_director" },
+  { key: "orchestrators", label: "Orchestrators", singular: "Orchestrator", role: "orchestrator" },
+  { key: "arrangers", label: "Arrangers", singular: "Arranger", role: "arranger" },
   { key: "choreographers", label: "Choreographers", singular: "Choreographer", role: "choreographer" },
+  { key: "assistant-directors", label: "Assistant Directors", singular: "Assistant Director", role: "assistant_director" },
   { key: "set-designers", label: "Set Designers", singular: "Set Designer", role: "set_designer" },
   { key: "costume-designers", label: "Costume Designers", singular: "Costume Designer", role: "costume_designer" },
   { key: "lighting-designers", label: "Lighting Designers", singular: "Lighting Designer", role: "lighting_designer" },
@@ -94,7 +97,10 @@ const MASTER_INDEX_PEOPLE_FILTERS = [
   { key: "playwrights", label: "Playwrights", typeKeys: ["playwrights"] },
   { key: "composers-lyricists", label: "Composers & Lyricists", typeKeys: ["composers-lyricists"] },
   { key: "musical-directors", label: "Musical Directors", typeKeys: ["musical-directors"] },
+  { key: "orchestrators", label: "Orchestrators", typeKeys: ["orchestrators"] },
+  { key: "arrangers", label: "Arrangers", typeKeys: ["arrangers"] },
   { key: "choreographers", label: "Choreographers", typeKeys: ["choreographers"] },
+  { key: "assistant-directors", label: "Assistant Directors", typeKeys: ["assistant-directors"] },
   { key: "set-designers", label: "Set Designers", typeKeys: ["set-designers"] },
   { key: "costume-designers", label: "Costume Designers", typeKeys: ["costume-designers"] },
   { key: "lighting-designers", label: "Lighting Designers", typeKeys: ["lighting-designers"] },
@@ -700,7 +706,7 @@ const state = {
   collection: "",
   type: "",
   query: "",
-  sort: "newest",
+  sort: "relevance",
   hasActiveQuery: false,
   shakespeareGroup: "",
   fullMap: null,
@@ -802,7 +808,10 @@ const SUBJECT_ROLE_ENTITY = {
   playwright: { type: "playwrights", label: "Playwright" },
   composer_lyricist: { type: "composers-lyricists", label: "Composer/Lyricist" },
   musical_director: { type: "musical-directors", label: "Musical Director" },
+  orchestrator: { type: "orchestrators", label: "Orchestrator" },
+  arranger: { type: "arrangers", label: "Arranger" },
   choreographer: { type: "choreographers", label: "Choreographer" },
+  assistant_director: { type: "assistant-directors", label: "Assistant Director" },
   producer: { type: "producers", label: "Producer" },
   set_designer: { type: "set-designers", label: "Set Designer" },
   costume_designer: { type: "costume-designers", label: "Costume Designer" },
@@ -906,8 +915,67 @@ function shakespearePlayValues(record) {
   return uniqueEntityValues(values.map(shakespearePlayTitle).filter(Boolean));
 }
 
+function searchPriorityText(record) {
+  return [
+    record.title,
+    articleWorkValues(record),
+    record.production_title,
+    record.book_title,
+    record.recording_title,
+    record.film_title,
+    record.concert_title,
+    record.topic,
+    record.event_name,
+  ].flatMap((value) => {
+    const parts = [];
+    pushSearchValue(parts, value);
+    return parts;
+  }).join(" ");
+}
+
+function searchMetadataText(record) {
+  return searchableParts(record).join(" ");
+}
+
+function searchRelevanceScore(record, rawQuery) {
+  const query = normalizeSearchText(rawQuery);
+  if (!query) return 0;
+  const terms = query.split(/\s+/).filter((term) => term.length > 1);
+  const primary = normalizeSearchText(searchPriorityText(record));
+  const metadata = normalizeSearchText(searchMetadataText(record));
+  const title = normalizeSearchText(record.title);
+  const workValues = normalizeSearchText(articleWorkValues(record).join(" "));
+  let score = 0;
+
+  if (title === query) score += 5000;
+  if (workValues.split(/\s+\/\s+/).includes(query) || workValues === query) score += 4600;
+  if (title.includes(query)) score += 3000;
+  if (workValues.includes(query)) score += 2800;
+  if (primary.includes(query)) score += 2200;
+  if (metadata.includes(query)) score += 1200;
+  if (terms.length) {
+    const allPrimary = terms.every((term) => primary.includes(term));
+    const allMetadata = terms.every((term) => metadata.includes(term));
+    if (allPrimary) score += 900;
+    if (allMetadata) score += 450;
+    score += Math.min(terms.filter((term) => title.includes(term)).length * 180, 700);
+    score += Math.min(terms.filter((term) => workValues.includes(term)).length * 160, 650);
+  }
+  const bodyMatch = normalizeSearchText(state.bodySearchQuery) === query ? state.bodySearchMatches.get(record.slug) : null;
+  if (bodyMatch) score += 120 + Math.min(Number(bodyMatch.score) || 0, 120);
+  return score;
+}
+
 function sortRecords(records) {
   const sorted = [...records];
+  const query = state.query.trim();
+  if (state.sort === "relevance" && query) {
+    return sorted.sort((a, b) =>
+      searchRelevanceScore(b, query) - searchRelevanceScore(a, query) ||
+      String(b.date).localeCompare(String(a.date)) ||
+      String(a.title || "").localeCompare(String(b.title || ""))
+    );
+  }
   if (state.sort === "oldest") {
     return sorted.sort((a, b) => String(a.date).localeCompare(String(b.date)));
   }
@@ -981,7 +1049,7 @@ function displaySchema(record) {
       companyLabel: "Label",
       venueLabel: "Venue",
       cityLabel: "City",
-      roleLabels: { musicians: "Artist", performers: "Performer", composer_lyricist: "Composer/Lyricist", musical_director: "Music Director" },
+      roleLabels: { musicians: "Artist", performers: "Performer", composer_lyricist: "Composer/Lyricist", musical_director: "Music Director", orchestrator: "Orchestrator", arranger: "Arranger" },
     };
   }
   if (category === "Obituary" || category === "Profile" || (category === "Theatre Interview" && splitEntityList(record.subject_people).length)) {
@@ -1066,7 +1134,16 @@ function entityValues(record, type) {
   if (type === "subjects") return uniqueEntityValues(splitEntityList(record.subject_people));
   if (type === "books") return isBookReview(record) ? uniqueEntityValues([...splitEntityList(record.book_title || record.production_title), ...groupedEntityValues(record, "production_title")]) : [];
   if (type === "shakespeare-plays") return collectionNames(record).includes(SHAKESPEARE_COLLECTION) ? shakespearePlayValues(record) : [];
-  if (type === "productions") return isBookReview(record) ? [] : uniqueEntityValues([...productionLabelValues(record.production_title), ...groupedProductionLabelValues(record)]);
+  if (type === "productions") {
+    if (isBookReview(record)) return [];
+    return uniqueEntityValues([
+      ...productionLabelValues(record.production_title),
+      ...splitEntityList(record.recording_title),
+      ...splitEntityList(record.concert_title),
+      ...splitEntityList(record.film_title),
+      ...groupedProductionLabelValues(record),
+    ]);
+  }
   if (type === "book-authors") return uniqueEntityValues(splitEntityList(record.book_author));
   if (type === "publishers") return uniqueEntityValues(splitEntityList(record.publisher));
   if (type === "topics") return uniqueEntityValues(splitEntityList(record.topic || record.correction_target));
@@ -1176,6 +1253,23 @@ function recordVenueCityPairs(record) {
   return pairs;
 }
 
+function recordCoordinatePoints(record) {
+  if (!Array.isArray(record.coordinate_points)) return [];
+  return record.coordinate_points.map((point) => {
+    const coordinates = normalizePointCoordinates(point);
+    if (!coordinates) return null;
+    const city = splitCityList(point.city)[0] || splitCityList(record.city)[0] || "";
+    const venue = splitEntityList(point.venue)[0] || splitEntityList(point.label)[0] || "";
+    return {
+      label: point.label || venue || city,
+      venue,
+      city,
+      coordinates,
+      productionTitle: point.production_title || "",
+    };
+  }).filter(Boolean);
+}
+
 function entityMap(type) {
   const map = new Map();
   state.records.forEach((record) => {
@@ -1196,31 +1290,44 @@ function entityMap(type) {
 }
 
 function cityMapPoints() {
-  const map = entityMap("cities");
+  const map = new Map();
+  const addPoint = (city, coordinates, record) => {
+    const label = normalizeCityName(city);
+    if (!label || !coordinates) return;
+    const [lat, lon] = coordinates;
+    const slug = entitySlug(label);
+    const point = map.get(slug) || {
+      slug,
+      label,
+      records: [],
+      recordSlugs: new Set(),
+      latTotal: 0,
+      lonTotal: 0,
+      coordinateCount: 0,
+    };
+    if (!point.recordSlugs.has(record.slug)) {
+      point.records.push(record);
+      point.recordSlugs.add(record.slug);
+    }
+    point.latTotal += lat;
+    point.lonTotal += lon;
+    point.coordinateCount += 1;
+    map.set(slug, point);
+  };
+
   state.records.forEach((record) => {
+    const explicitPoints = recordCoordinatePoints(record);
+    if (explicitPoints.length) {
+      explicitPoints.forEach((point) => addPoint(point.city, point.coordinates, record));
+      return;
+    }
     const groupPairs = recordVenueCityPairs(record);
     const cityPairs = groupPairs.length
       ? groupPairs.filter((pair) => pair.city)
       : splitCityList(record.city).map((city) => ({ city, venue: "", coordinates: null }));
     cityPairs.forEach(({ city, venue, coordinates: pairCoordinates }) => {
       const coordinates = pointCoordinates(record, city, venue, pairCoordinates);
-      if (!coordinates) return;
-      const [lat, lon] = coordinates;
-      const slug = entitySlug(city);
-      const point = map.get(slug) || {
-        slug,
-        label: city,
-        records: [],
-      };
-      if (!("latTotal" in point)) {
-        point.latTotal = 0;
-        point.lonTotal = 0;
-        point.coordinateCount = 0;
-      }
-      point.latTotal += lat;
-      point.lonTotal += lon;
-      point.coordinateCount += 1;
-      map.set(slug, point);
+      addPoint(city, coordinates, record);
     });
   });
 
@@ -1237,31 +1344,48 @@ function cityMapPoints() {
 
 function venueMapPoints() {
   const map = new Map();
+  const addPoint = (venue, city, coordinates, precision, record) => {
+    if (!venue || !coordinates) return;
+    const [lat, lon] = coordinates;
+    const slug = entitySlug(venue);
+    const point = map.get(slug) || {
+      slug,
+      label: venue,
+      city,
+      records: [],
+      recordSlugs: new Set(),
+      latTotal: 0,
+      lonTotal: 0,
+      coordinateCount: 0,
+      cityLevelCount: 0,
+    };
+    if (city && !point.city) point.city = city;
+    if (!point.recordSlugs.has(record.slug)) {
+      point.records.push(record);
+      point.recordSlugs.add(record.slug);
+    }
+    point.latTotal += lat;
+    point.lonTotal += lon;
+    point.coordinateCount += 1;
+    if (precision === "city") point.cityLevelCount += 1;
+    map.set(slug, point);
+  };
+
   state.records.forEach((record) => {
+    const explicitPoints = recordCoordinatePoints(record);
+    if (explicitPoints.length) {
+      explicitPoints.forEach((point) => {
+        if (!point.venue) return;
+        addPoint(point.venue, point.city, point.coordinates, "venue", record);
+      });
+      return;
+    }
     recordVenueCityPairs(record).forEach(({ venue, city, coordinates: pairCoordinates }) => {
       if (!venue) return;
       const coordinates = pointCoordinates(record, city, venue, pairCoordinates);
       if (!coordinates) return;
       const precision = coordinatePrecision(record, city, venue, pairCoordinates);
-      const [lat, lon] = coordinates;
-      const slug = entitySlug(venue);
-      const point = map.get(slug) || {
-        slug,
-        label: venue,
-        city,
-        records: [],
-        latTotal: 0,
-        lonTotal: 0,
-        coordinateCount: 0,
-        cityLevelCount: 0,
-      };
-      if (city && !point.city) point.city = city;
-      point.records.push(record);
-      point.latTotal += lat;
-      point.lonTotal += lon;
-      point.coordinateCount += 1;
-      if (precision === "city") point.cityLevelCount += 1;
-      map.set(slug, point);
+      addPoint(venue, city, coordinates, precision, record);
     });
   });
 
@@ -1337,6 +1461,9 @@ function articleWorkValues(record) {
   if (schema.workType === "books") return uniqueEntityValues(splitEntityList(record.book_title || record.production_title));
   const values = uniqueEntityValues([
     ...productionLabelValues(record.production_title),
+    ...splitEntityList(record.recording_title),
+    ...splitEntityList(record.concert_title),
+    ...splitEntityList(record.film_title),
     ...groupedProductionLabelValues(record),
   ]);
   if (!isBookReview(record)) return values;
@@ -1715,7 +1842,7 @@ function renderShakespeareNav() {
     button.dataset.shakespeareGroup = group.value;
     button.className = group.value === state.shakespeareGroup ? "is-active" : "";
     const groupCount = shakespeareGroupCount(group.value);
-    button.innerHTML = `<strong>${group.label}</strong>${groupCount > 1 ? `<span>${groupCount.toLocaleString()} records</span>` : ""}<em>${group.description}</em>`;
+    button.innerHTML = `<strong>${group.label}</strong>${groupCount > 1 ? `<span>${groupCount.toLocaleString()} articles</span>` : ""}<em>${group.description}</em>`;
     button.addEventListener("click", () => {
       state.shakespeareGroup = group.value;
       applyFilters();
@@ -1743,7 +1870,7 @@ function renderTiles(key = "types") {
       heading.textContent = title;
       const count = countForTile(title, key);
       const meta = document.createElement("span");
-      meta.textContent = count > 1 ? `${count.toLocaleString()} records` : "Browse";
+      meta.textContent = count > 1 ? `${count.toLocaleString()} articles` : "Browse";
       const description = document.createElement("p");
       description.textContent = tileDescription(title);
       link.replaceChildren(heading, meta, description);
@@ -1762,7 +1889,7 @@ function renderSecondaryCollections() {
     heading.textContent = title.replace(/^The\s+/, "");
     const count = countForTile(title, "collections");
     const meta = document.createElement("span");
-    meta.textContent = count > 1 ? `${count.toLocaleString()} records` : "Browse";
+    meta.textContent = count > 1 ? `${count.toLocaleString()} articles` : "Browse";
     const description = document.createElement("p");
     description.textContent = tileDescription(title);
     link.replaceChildren(heading, meta, description);
@@ -1816,7 +1943,7 @@ function categoryBrowseProfile(typeValue, records = []) {
     secondaryEntityType: "subjects",
     secondaryLabel: "Subjects",
     emptyLabel: "Ungrouped Articles",
-    intro: "This path groups articles by the strongest available work or subject metadata, then leaves the remaining records in chronological order.",
+    intro: "This path groups articles by the strongest available work or subject metadata, then leaves the remaining articles in chronological order.",
   };
 }
 
@@ -1874,6 +2001,16 @@ function groupedBrowseCard(entry, entityTypeKey) {
   return link;
 }
 
+function indexHrefForEntityType(entityTypeKey) {
+  const directMasterFilter = MASTER_INDEX_FILTERS.find((filter) =>
+    filter.typeKeys.length === 1 && filter.typeKeys[0] === entityTypeKey
+  );
+  if (directMasterFilter) return masterIndexHref(directMasterFilter);
+  if (entityTypeKey === "productions") return masterIndexHref(MASTER_INDEX_FILTERS.find((filter) => filter.key === "all-works"));
+  if (entityTypeKey === "people") return masterIndexHref(MASTER_INDEX_FILTERS.find((filter) => filter.key === "all-people"));
+  return `#index:${entityTypeKey}`;
+}
+
 function renderGroupedBrowsePage({ title, countLabel, intro, records, profile, backHref = "#section:browse" }) {
   const heading = document.createElement("h1");
   heading.textContent = title;
@@ -1910,7 +2047,15 @@ function renderGroupedBrowsePage({ title, countLabel, intro, records, profile, b
       const secondaryGrid = document.createElement("div");
       secondaryGrid.className = "browse-group-grid browse-group-grid-compact";
       secondaryGrid.replaceChildren(...secondary.entries.slice(0, 48).map((entry) => groupedBrowseCard(entry, profile.secondaryEntityType)));
-      secondarySection.replaceChildren(secondaryTitle, secondaryGrid);
+      const secondaryChildren = [secondaryTitle, secondaryGrid];
+      if (secondary.entries.length > 48) {
+        const more = document.createElement("a");
+        more.className = "browse-view-all";
+        more.href = indexHrefForEntityType(profile.secondaryEntityType);
+        more.textContent = `View all ${secondary.entries.length.toLocaleString()} ${secondaryTitle.textContent}`;
+        secondaryChildren.push(more);
+      }
+      secondarySection.replaceChildren(...secondaryChildren);
       sections.push(secondarySection);
     }
   }
@@ -2034,13 +2179,13 @@ function renderLandingPage(kind) {
   const config = {
     current: {
       title: "Current",
-      count: `${countForTile("Current Collection", "collections").toLocaleString()} records`,
+      count: `${countForTile("Current Collection", "collections").toLocaleString()} articles`,
       intro: "Recent self-published writing from the original Cushman Collected site.",
       items: [landingItem("Current Collection", "#section:current", countForTile("Current Collection", "collections"), "", state.records.filter((record) => collectionNames(record).includes("Current Collection")))],
     },
     browse: {
       title: "Browse",
-      count: `${state.records.length.toLocaleString()} public records`,
+      count: `${state.records.length.toLocaleString()} public articles`,
       intro: "Start with a category, then refine by search, collection, person, company, production, or city.",
       items: landingItems("browse"),
     },
@@ -2058,7 +2203,7 @@ function renderLandingPage(kind) {
     },
     "other-arts": {
       title: "Other Arts",
-      count: `${countForOtherArts().toLocaleString()} records`,
+      count: `${countForOtherArts().toLocaleString()} articles`,
       intro: "The smaller arts categories are kept separate here so comedy, opera, film, dance, and circus do not disappear into one vague bucket.",
       items: landingItems("other-arts"),
     },
@@ -2090,7 +2235,7 @@ function renderCurrentLanding() {
   title.textContent = "Current";
   const count = document.createElement("p");
   count.className = "index-count";
-  count.textContent = `${records.length.toLocaleString()} records`;
+  count.textContent = countUnitText(records.length, "article", "articles");
   const intro = document.createElement("p");
   intro.className = "landing-intro";
   intro.textContent = "Recent self-published writing from the original Cushman Collected site, presented with the images that accompanied the articles where available.";
@@ -2127,7 +2272,7 @@ function renderShakespeareLanding() {
   title.textContent = "Shakespeare";
   const count = document.createElement("p");
   count.className = "index-count";
-  count.textContent = `${countForTile("Shakespeare").toLocaleString()} records`;
+  count.textContent = countUnitText(countForTile("Shakespeare"), "article", "articles");
   const intro = document.createElement("p");
   intro.className = "landing-intro";
   intro.textContent = "A play-by-play route through the Shakespeare collection, with explicit essays and riffs kept separate from incidental references.";
@@ -2390,7 +2535,10 @@ function indexDescription(type) {
     playwrights: "Playwrights and dramatic source authors.",
     "composers-lyricists": "Composers, lyricists, and musical writers.",
     "musical-directors": "Musical directors.",
+    orchestrators: "Orchestrators credited in structured music metadata.",
+    arrangers: "Arrangers credited in structured music metadata.",
     choreographers: "Choreographers.",
+    "assistant-directors": "Assistant directors.",
     "set-designers": "Set designers.",
     "costume-designers": "Costume designers.",
     "lighting-designers": "Lighting designers.",
@@ -3013,7 +3161,7 @@ function renderExploreToolV2() {
     const records = filteredRecords();
     columns.replaceChildren();
 
-    const startColumn = makeColumn("Start", `${state.records.length.toLocaleString()} public records`);
+    const startColumn = makeColumn("Start", `${state.records.length.toLocaleString()} public articles`);
     startColumn.append(makePill({ label: "All articles", count: state.records.length }, () => {
       path.splice(0);
       openBranch = "type";
@@ -3032,7 +3180,7 @@ function renderExploreToolV2() {
 
     path.forEach((step, index) => {
       const meta = branchMeta.get(step.branch);
-      const column = makeColumn(meta?.label || "Path", `${step.count.toLocaleString()} records`);
+      const column = makeColumn(meta?.label || "Path", countUnitText(step.count, "article", "articles"));
       column.classList.add("is-path-column");
       column.append(makePill(step, () => {
         if (index === path.length - 1) {
@@ -3284,7 +3432,7 @@ function renderMapView() {
   const count = document.createElement("p");
   count.className = "index-count";
   const articleTotal = points.reduce((sum, point) => sum + point.count, 0);
-  count.textContent = `${points.length.toLocaleString()} places / ${articleTotal.toLocaleString()} mapped article references`;
+  count.textContent = `${points.length.toLocaleString()} places / ${venues.length.toLocaleString()} venue points / ${articleTotal.toLocaleString()} mapped article references`;
 
   const shell = document.createElement("div");
   shell.className = "archive-map-shell";
@@ -4017,7 +4165,7 @@ function headlineParts(title) {
 
 function renderResults() {
   if (!state.hasActiveQuery) {
-    els.archiveCount.textContent = `${state.records.length.toLocaleString()} public records`;
+    els.archiveCount.textContent = `${state.records.length.toLocaleString()} public articles`;
     els.results.replaceChildren();
     restoreArchivePositionIfNeeded();
     return;
@@ -4028,8 +4176,8 @@ function renderResults() {
   const shown = state.filtered.length.toLocaleString();
   els.archiveCount.textContent =
     state.filtered.length === state.records.length
-      ? `${total} public records`
-      : `${shown} of ${total} public records`;
+      ? `${total} public articles`
+      : `${shown} of ${total} public articles`;
   if (state.query.trim() && state.bodySearchLoading) {
     els.archiveCount.textContent += " / searching article text...";
   }
@@ -4094,7 +4242,7 @@ function fallbackResultCard(record) {
 
   const meta = document.createElement("span");
   meta.className = "meta";
-  meta.textContent = [record?.publication, record ? typeLabel(record) : ""].filter(Boolean).join(" / ");
+  meta.textContent = [record ? articlePublicationLabel(record) : "", record ? typeLabel(record) : ""].filter(Boolean).join(" / ");
 
   const copy = document.createElement("span");
   copy.className = "result-copy";
@@ -4155,7 +4303,7 @@ function resultCard(record, context = {}) {
 
   const meta = document.createElement("span");
   meta.className = "meta";
-  meta.textContent = [record.publication, typeLabel(record)].filter(Boolean).join(" / ");
+  meta.textContent = [articlePublicationLabel(record), typeLabel(record)].filter(Boolean).join(" / ");
 
   const copy = document.createElement("span");
   copy.className = "result-copy";
@@ -4331,7 +4479,10 @@ const ARTICLE_ROLE_GROUPS = [
   ["actors", "Actor", "actors", 8],
   ["composers-lyricists", "Music", "composer_lyricist", 4],
   ["musical-directors", "Music Director", "musical_director", 2],
+  ["orchestrators", "Orchestrator", "orchestrator", 2],
+  ["arrangers", "Arranger", "arranger", 2],
   ["choreographers", "Choreographer", "choreographer", 2],
+  ["assistant-directors", "Assistant Director", "assistant_director", 2],
   ["set-designers", "Set", "set_designer", 2],
   ["costume-designers", "Costume", "costume_designer", 2],
   ["lighting-designers", "Lighting", "lighting_designer", 2],
