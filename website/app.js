@@ -1,5 +1,4 @@
 const DATA_URL = new URL("../site_export/data/public_reviews.json?v=112", import.meta.url);
-const FULL_TEXT_INDEX_URL = new URL("../site_export/data/chat_index.json?v=4", import.meta.url);
 const CONTENT_ROOT = new URL("../site_export/content/reviews/", import.meta.url);
 const PAGE_SIZE = 36;
 const SHAKESPEARE_COLLECTION = "The Shakespeare Collection";
@@ -961,8 +960,6 @@ function searchRelevanceScore(record, rawQuery) {
     score += Math.min(terms.filter((term) => title.includes(term)).length * 180, 700);
     score += Math.min(terms.filter((term) => workValues.includes(term)).length * 160, 650);
   }
-  const bodyMatch = normalizeSearchText(state.bodySearchQuery) === query ? state.bodySearchMatches.get(record.slug) : null;
-  if (bodyMatch) score += 120 + Math.min(Number(bodyMatch.score) || 0, 120);
   return score;
 }
 
@@ -1587,8 +1584,6 @@ function searchMatchInfo(record, rawQuery) {
     const matched = parts.find((part) => queryMatchesText(query, part));
     if (matched) return { label, value: matched };
   }
-  const bodyMatch = normalizeSearchText(state.bodySearchQuery) === normalizeSearchText(rawQuery) ? state.bodySearchMatches.get(record.slug) : null;
-  if (bodyMatch) return { label: "Article text", value: bodyMatch.snippet };
   return null;
 }
 
@@ -1632,45 +1627,9 @@ function computeBodySearchMatches(rawQuery, index) {
 
 function scheduleBodySearch(rawQuery) {
   clearTimeout(state.bodySearchTimer);
-  const query = rawQuery.trim();
   state.bodySearchQuery = "";
   state.bodySearchMatches = new Map();
   state.bodySearchLoading = false;
-  if (query.length < 3) return;
-  state.bodySearchLoading = true;
-  state.bodySearchTimer = setTimeout(() => runBodySearch(query), 180);
-}
-
-async function runBodySearch(rawQuery) {
-  try {
-    const index = await ensureFullTextIndex();
-    if (state.query.trim() !== rawQuery) return;
-    state.bodySearchMatches = computeBodySearchMatches(rawQuery, index);
-    state.bodySearchQuery = rawQuery;
-  } catch (error) {
-    console.error("Could not load full-text search index", error);
-    state.bodySearchMatches = new Map();
-    state.bodySearchQuery = rawQuery;
-  } finally {
-    if (state.query.trim() === rawQuery) {
-      state.bodySearchLoading = false;
-      applyFilters();
-    }
-  }
-}
-
-async function ensureFullTextIndex() {
-  if (state.fullTextIndex) return state.fullTextIndex;
-  if (!state.fullTextIndexPromise) {
-    state.fullTextIndexPromise = fetch(FULL_TEXT_INDEX_URL)
-      .then((response) => {
-        if (!response.ok) throw new Error(`Could not load full-text search index (${response.status})`);
-        return response.json();
-      })
-      .then(prepareFullTextIndex);
-  }
-  state.fullTextIndex = await state.fullTextIndexPromise;
-  return state.fullTextIndex;
 }
 
 function prepareFullTextIndex(index) {
@@ -1724,8 +1683,7 @@ function applyFilters() {
     }
     if (query) {
       const metadataMatch = recordMatchesQuery(record, query);
-      const bodyMatch = state.bodySearchQuery === query && state.bodySearchMatches.has(record.slug);
-      if (!metadataMatch && !bodyMatch) return false;
+      if (!metadataMatch) return false;
     }
     return true;
   });
@@ -4187,10 +4145,6 @@ function renderResults() {
     state.filtered.length === state.records.length
       ? `${total} public articles`
       : `${shown} of ${total} public articles`;
-  if (state.query.trim() && state.bodySearchLoading) {
-    els.archiveCount.textContent += " / searching article text...";
-  }
-
   const resultContext = {
     contextLabel: currentArchiveContextLabel(),
     backHref: currentArchiveHref(),
@@ -4220,7 +4174,6 @@ function renderResults() {
 function restoreArchivePositionIfNeeded() {
   const restore = state.pendingArchiveRestore;
   if (!restore) return;
-  if (restore.slug && !state.filtered.some((record) => record.slug === restore.slug) && state.bodySearchLoading) return;
   state.pendingArchiveRestore = null;
   requestAnimationFrame(() => {
     window.scrollTo({ top: restore.scrollY, behavior: "auto" });
