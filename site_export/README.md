@@ -7,3 +7,4 @@ Generated from `repaired_structural_v2`.
 - `content/excluded/`: records excluded from publication.
 - `data/public_reviews.json`: primary website index.
 - `data/map_points.geojson`: venue map data for public records with coordinates.
+- `data/chat_index.json`: full-text chunks used by CushBot and site search.

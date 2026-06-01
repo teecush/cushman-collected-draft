@@ -2906,26 +2906,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -80.9686,
-          43.3744
-        ]
-      },
-      "properties": {
-        "title": "Shakespeare as it was meant to be performed: . . . Whatever that means",
-        "date": "1999-03-02",
-        "route": "/reviews/1999-03-02-shakespeare-as-it-was-meant-to-be-performed-whatever-that-means-2/",
-        "venue": "Stratford Festival",
-        "city": "Stratford, Ontario",
-        "production_title": "Stratford Festival Conservatory for Classical Theatre Training",
-        "article_category": "Profile",
-        "group_order": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -114.0719,
           51.0447
         ]
@@ -4736,7 +4716,7 @@
         "route": "/reviews/2000-02-01-browns-promise-is-on-parade-again/",
         "venue": "The Church at Berkeley",
         "city": "Toronto",
-        "production_title": "Songs For A New World",
+        "production_title": "Songs for a New World",
         "article_category": "Musical Review",
         "group_order": null
       }
@@ -6076,7 +6056,7 @@
         "route": "/reviews/2000-08-10-the-deeper-double-takes/",
         "venue": "Premiere Dance Theatre",
         "city": "Toronto",
-        "production_title": "The School For Wives",
+        "production_title": "The School for Wives",
         "article_category": "Theatre Review",
         "group_order": null
       }
@@ -12096,7 +12076,7 @@
         "route": "/reviews/2003-06-04-there-s-no-sanctuary-to-be-found-here/",
         "venue": "Avon Theatre",
         "city": "Stratford, Ontario",
-        "production_title": "The Hunchback Of Notre Dame",
+        "production_title": "The Hunchback of Notre Dame",
         "article_category": "Theatre Review",
         "group_order": null
       }
@@ -12396,7 +12376,7 @@
         "route": "/reviews/2003-09-04-its-a-mistaken-identity-comedy-in-crisis/",
         "venue": "du Maurier Theatre Centre",
         "city": "Toronto",
-        "production_title": "She Stoops To Conquer",
+        "production_title": "She Stoops to Conquer",
         "article_category": "Theatre Review",
         "group_order": null
       }
@@ -15046,66 +15026,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -79.0719,
-          43.2557
-        ]
-      },
-      "properties": {
-        "title": "In The Tinker's Wedding, Synge Presents 'A Voluble Set Of Cunning Loons'",
-        "date": "2004-07-31",
-        "route": "/reviews/2004-07-31-in-the-tinker-s-wedding-synge-presents-a-voluble-set-of-cunning-loons/",
-        "venue": "Court House Theatre",
-        "city": "Niagara-on-the-Lake",
-        "production_title": "The Tinker's Wedding",
-        "article_category": "Theatre Review",
-        "group_order": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -80.9781,
-          43.3736
-        ]
-      },
-      "properties": {
-        "title": "Martha Henry At Her Silkiest Is Cymbeline Highlight",
-        "date": "2004-07-31",
-        "route": "/reviews/2004-07-31-martha-henry-at-her-silkiest-is-cymbeline-highlight/",
-        "venue": "Tom Patterson Theatre",
-        "city": "Stratford, Ontario",
-        "production_title": "Cymbeline",
-        "article_category": "Theatre Review",
-        "group_order": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -79.3819,
-          43.6385
-        ]
-      },
-      "properties": {
-        "title": "Translations Is A Political Play, A Love Story And Many Other Things",
-        "date": "2004-07-31",
-        "route": "/reviews/2004-07-31-translations-is-a-political-play-a-love-story-and-many-other-things/",
-        "venue": "Premiere Dance Theatre",
-        "city": "Toronto",
-        "production_title": "Translations",
-        "article_category": "Theatre Review",
-        "group_order": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -79.6877,
           43.4675
         ]
@@ -15486,26 +15406,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -79.3496,
-          43.6769
-        ]
-      },
-      "properties": {
-        "title": "Two Gentlemen Of Verona In A Blazer-And-Boater Version - Roughly Speaking",
-        "date": "2004-08-28",
-        "route": "/reviews/2004-08-28-two-gentlemen-of-verona-in-a-blazer-and-boater-version-roughly-speaking/",
-        "venue": "Withrow Park",
-        "city": "Toronto",
-        "production_title": "The Two Gentlemen of Verona",
-        "article_category": "Theatre Review",
-        "group_order": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -80.9801,
           43.3695
         ]
@@ -15517,26 +15417,6 @@
         "venue": "",
         "city": "",
         "production_title": "The Human Voice; The Elephant Song",
-        "article_category": "Theatre Review",
-        "group_order": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -79.465,
-          43.6517
-        ]
-      },
-      "properties": {
-        "title": "Skilled Performers Do Doo-Wop Numbers For A Lively As You Like It",
-        "date": "2004-08-28",
-        "route": "/reviews/2004-08-28-skilled-performers-do-doo-wop-numbers-for-a-lively-as-you-like-it/",
-        "venue": "High Park Amphitheatre",
-        "city": "Toronto",
-        "production_title": "As You Like It",
         "article_category": "Theatre Review",
         "group_order": null
       }
@@ -20016,7 +19896,7 @@
         "route": "/reviews/2007-03-30-a-post-apocalypse-hee-haw-singalong/",
         "venue": "Enwave Theatre",
         "city": "Toronto",
-        "production_title": "Particularly In The Heartland",
+        "production_title": "Particularly in the Heartland",
         "article_category": "Theatre Review",
         "group_order": null
       }
@@ -24517,26 +24397,6 @@
         "venue": "Young Centre for the Performing Arts",
         "city": "Toronto",
         "production_title": "Awake And Sing",
-        "article_category": "Theatre Review",
-        "group_order": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -80.9686,
-          43.3744
-        ]
-      },
-      "properties": {
-        "title": "It Still Smells Just As Sweet",
-        "date": "2009-06-24",
-        "route": "/reviews/2009-06-24-it-still-smells-just-as-sweet/",
-        "venue": "Festival Theatre",
-        "city": "Stratford, Ontario",
-        "production_title": "Cyrano de Bergerac",
         "article_category": "Theatre Review",
         "group_order": null
       }
@@ -32636,7 +32496,7 @@
         "route": "/reviews/2015-06-27-ahead-of-the-class-stratford-s-she-stoops-to-conquer-surprises-with-a-return/",
         "venue": "Avon Theatre",
         "city": "Stratford, Ontario",
-        "production_title": "She Stoops To Conquer",
+        "production_title": "She Stoops to Conquer",
         "article_category": "Theatre Review",
         "group_order": null
       }

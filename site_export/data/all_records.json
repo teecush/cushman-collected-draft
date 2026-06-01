@@ -13208,7 +13208,7 @@
         "order": "2",
         "production_title": "Yobbo Nowt",
         "company": [
-          "7:84"
+          "{'7': '84'}"
         ],
         "playwright": [
           "John McGrath"
@@ -13266,7 +13266,7 @@
       "events": [],
       "networks": [],
       "companies": [
-        "7:84"
+        "{'7': '84'}"
       ],
       "venues": [
         "Hampstead Theatre"
@@ -108980,9 +108980,9 @@
       "The Shakespeare Collection",
       "Thoughts on Shakespeare"
     ],
-    "publication_status": "publish",
-    "editorial_issue_type": "",
-    "canonical_file": "",
+    "publication_status": "duplicate_variant",
+    "editorial_issue_type": "duplicate_edition_variant",
+    "canonical_file": "1999.03.02.Cushman_Collected.Shakespeare_as_It_Was_Meant_to_Be_Performed_Whatever_That_Means_Stratford_Explores_What_Makes_the_Bard_s_Words_Work.md",
     "production_title": "Stratford Festival Conservatory for Classical Theatre Training",
     "company": "Stratford Festival",
     "venue": "Stratford Festival",
@@ -205508,9 +205508,9 @@
       "The Shaw Collection",
       "Short Takes"
     ],
-    "publication_status": "publish",
-    "editorial_issue_type": "",
-    "canonical_file": "",
+    "publication_status": "duplicate_variant",
+    "editorial_issue_type": "duplicate_edition_variant",
+    "canonical_file": "2004.07.10.National_Post.The_TinkerS_Wedding_Is_Merely_So-So_Synge_Toronto_Edition.md",
     "production_title": "The Tinker's Wedding",
     "company": "Shaw Festival",
     "venue": "Court House Theatre",
@@ -205613,9 +205613,9 @@
       "The Shakespeare Collection",
       "Short Takes"
     ],
-    "publication_status": "publish",
-    "editorial_issue_type": "",
-    "canonical_file": "",
+    "publication_status": "duplicate_variant",
+    "editorial_issue_type": "duplicate_edition_variant",
+    "canonical_file": "2004.07.24.National_Post.Cymbeline_Crammed_With_Story_And_Enjoyably_Shameless_Toronto_Edition.md",
     "production_title": "Cymbeline",
     "company": "Stratford Festival",
     "venue": "Tom Patterson Theatre",
@@ -205735,9 +205735,9 @@
     "source_publication": "National Post",
     "article_category": "Theatre Review",
     "collections": [],
-    "publication_status": "publish",
-    "editorial_issue_type": "",
-    "canonical_file": "",
+    "publication_status": "duplicate_variant",
+    "editorial_issue_type": "duplicate_edition_variant",
+    "canonical_file": "2004.07.24.National_Post.Translations_Looks_At_The_Political_Power_Of_Language_And_How_It_Defines_Te.md",
     "production_title": "Translations",
     "company": "Soulpepper Theatre Company",
     "venue": "Premiere Dance Theatre",
@@ -208449,9 +208449,9 @@
       "The Shakespeare Collection",
       "Short Takes"
     ],
-    "publication_status": "publish",
-    "editorial_issue_type": "",
-    "canonical_file": "",
+    "publication_status": "duplicate_variant",
+    "editorial_issue_type": "duplicate_edition_variant",
+    "canonical_file": "2004.08.21.National_Post.The_Two_Gentlemen_Of_Verona_Featured_By_Shakespeare_In_The_Rough_Toronto_Ed.md",
     "production_title": "The Two Gentlemen of Verona",
     "company": "Shakespeare in the Rough",
     "venue": "Withrow Park",
@@ -208669,9 +208669,9 @@
       "The Shakespeare Collection",
       "Short Takes"
     ],
-    "publication_status": "publish",
-    "editorial_issue_type": "",
-    "canonical_file": "",
+    "publication_status": "duplicate_variant",
+    "editorial_issue_type": "duplicate_edition_variant",
+    "canonical_file": "2004.08.21.National_Post.As_You_Like_ItS_Numbers_Are_Put_Over_By_A_Skilled_Ensemble_Toronto_Edition.md",
     "production_title": "As You Like It",
     "company": "Canadian Stage",
     "venue": "High Park Amphitheatre",
@@ -312126,9 +312126,9 @@
     "source_publication": "Star - Phoenix",
     "article_category": "Book Review",
     "collections": [],
-    "publication_status": "publish",
-    "editorial_issue_type": "",
-    "canonical_file": "",
+    "publication_status": "duplicate_variant",
+    "editorial_issue_type": "duplicate_edition_variant",
+    "canonical_file": "2009.04.25.National_Post.How_Bach_can_change_your_life.md",
     "production_title": "The Cello Suites",
     "company": "",
     "venue": "",
@@ -314575,9 +314575,9 @@
     "collections": [
       "The Stratford Collection"
     ],
-    "publication_status": "publish",
-    "editorial_issue_type": "",
-    "canonical_file": "",
+    "publication_status": "duplicate_variant",
+    "editorial_issue_type": "duplicate_edition_variant",
+    "canonical_file": "2008.03.06.National_Post.By_Any_Other_Name_SheS_Still_As_Sweet.md",
     "production_title": "Cyrano de Bergerac",
     "company": "Stratford Festival",
     "venue": "Festival Theatre",
@@ -326585,7 +326585,7 @@
     "network_or_platform": "Academy of Motion Picture Arts and Sciences",
     "subject_role_map": [
       {
-        "person": "Steve Martin",
+        "person": "Alec Baldwin",
         "roles": [
           "performers"
         ],
@@ -326594,7 +326594,7 @@
         ]
       }
     ],
-    "subject_people": "Steve Martin",
+    "subject_people": "Alec Baldwin",
     "coordinate_points": [],
     "display_schema": {
       "work_type": "productions",
@@ -326609,7 +326609,7 @@
         "82nd Academy Awards"
       ],
       "subjects": [
-        "Steve Martin"
+        "Alec Baldwin"
       ],
       "book_authors": [],
       "publishers": [],
@@ -386787,7 +386787,7 @@
       },
       {
         "order": "2",
-        "production_title": "Bingo",
+        "production_title": "Bingo!",
         "company": [
           "Factory Theatre"
         ],
@@ -386829,7 +386829,7 @@
     "browse_entities": {
       "books": [],
       "productions": [
-        "Bingo",
+        "Bingo!",
         "Watching Glory Die"
       ],
       "subjects": [
