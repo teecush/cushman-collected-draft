@@ -1546,10 +1546,9 @@ function searchable(record) {
 function recordMatchesQuery(record, rawQuery) {
   const query = normalizeSearchText(rawQuery);
   if (!query) return true;
-  const haystack = searchable(record);
-  if (haystack.includes(query)) return true;
-  const tokens = query.split(/\s+/).filter((token) => token.length > 1);
-  return tokens.length > 0 && tokens.every((token) => haystack.includes(token));
+  const parts = [];
+  searchableParts(record).forEach((value) => pushSearchValue(parts, value));
+  return parts.some((part) => queryMatchesText(query, part));
 }
 
 function searchTerms(rawQuery) {
@@ -2796,6 +2795,7 @@ function renderEntityPage(typeKey, slug) {
     contextLabel: `${type.singular}: ${entry.label}`,
     backHref: window.location.hash || `#entity:${typeKey}:${slug}`,
     records,
+    titleFirst: true,
   })));
   els.indexContent.replaceChildren(title, count, back, list);
 }
@@ -4061,9 +4061,18 @@ function cardSecondaryParts(record, primaryValues = []) {
   return productionParts(record);
 }
 
-function cardDisplay(record) {
+function cardDisplay(record, options = {}) {
   const titleParts = headlineParts(record.title || record.production_title || "Untitled");
   const primaryValues = cardPrimaryValues(record);
+  if (options.titleFirst) {
+    return {
+      label: "",
+      title: titleParts.headline,
+      deck: titleParts.deck,
+      primaryValues,
+      secondary: compactParts([...primaryValues, ...cardSecondaryParts(record, primaryValues)]).slice(0, 4),
+    };
+  }
   const primary = compactValueList(primaryValues, 2);
   const primaryIsHeadline = primary && normalizeSearchText(primary) === normalizeSearchText(titleParts.headline);
   const title = primary && !primaryIsHeadline ? primary : titleParts.headline;
@@ -4187,6 +4196,7 @@ function renderResults() {
     backHref: currentArchiveHref(),
     records: state.filtered,
     query: state.query.trim(),
+    titleFirst: Boolean(state.query.trim()),
     visibleCount: state.visible,
   };
   const cards = visible.map((record) => safeResultCard(record, resultContext));
@@ -4272,7 +4282,7 @@ function resultCard(record, context = {}) {
 
   const title = document.createElement("span");
   title.className = "card-title";
-  const display = cardDisplay(record);
+  const display = cardDisplay(record, { titleFirst: context.titleFirst });
   if (display.label) {
     const label = document.createElement("span");
     label.className = "card-primary-label";
