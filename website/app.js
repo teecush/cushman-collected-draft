@@ -2331,6 +2331,16 @@ function renderFrontpageDirectory() {
       count: entry.records.length,
     }))
     .sort((a, b) => b.count - a.count || a.label.localeCompare(b.label));
+  const homepageIndexLabels = [
+    "All Works",
+    "Actors",
+    "Directors",
+    "Playwrights",
+    "Composers & Lyricists",
+    "Choreographers",
+    "Set Designers",
+    "All People",
+  ];
   const sections = [
     {
       id: "browseStart",
@@ -2354,11 +2364,9 @@ function renderFrontpageDirectory() {
       label: "Master index",
       title: "Works & People",
       titleHref: "#master-index",
-      links: [
-        ...indexLinks.filter((item) =>
-          ["All Works", "Plays", "Musicals", "Books", "Television", "All People", "Actors"].includes(item.label)
-        ),
-      ],
+      links: homepageIndexLabels
+        .map((label) => indexLinks.find((item) => item.label === label))
+        .filter(Boolean),
       limit: 8,
     },
     {
