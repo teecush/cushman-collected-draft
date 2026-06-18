@@ -2398,6 +2398,46 @@ h1 {
   cursor: pointer;
 }
 
+.leaflet-layer-control {
+  position: absolute;
+  top: 78px;
+  left: 54px;
+  z-index: 650;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px 10px;
+  width: min(300px, calc(100% - 84px));
+  border: 1px solid rgba(17, 17, 17, 0.16);
+  padding: 7px 10px;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.leaflet-layer-control legend {
+  width: 100%;
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.leaflet-layer-control label {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.leaflet-layer-control input {
+  accent-color: var(--blue-dark);
+}
+
 .leaflet-search-control span {
   color: var(--muted);
   font-size: 10px;
@@ -3537,15 +3577,15 @@ h1 {
   }
 
   .master-index-sticky {
-    top: 94px;
+    top: 88px;
     margin-inline: -8px;
-    margin-top: 12px;
-    margin-bottom: 18px;
+    margin-top: 0;
+    margin-bottom: 16px;
   }
 
   .master-index-panel {
     gap: 7px;
-    padding: 10px 10px 9px;
+    padding: 13px 10px 8px;
   }
 
   .master-index-current {
@@ -3581,7 +3621,7 @@ h1 {
   }
 
   .master-index-sticky + .alpha-list section {
-    scroll-margin-top: 350px;
+    scroll-margin-top: 318px;
   }
 
   .alpha-list section,

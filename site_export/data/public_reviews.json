@@ -750,6 +750,208 @@
     }
   },
   {
+    "slug": "1973-05-25-making-words-at-the-keys",
+    "route": "/reviews/1973-05-25-making-words-at-the-keys/",
+    "source_file": "1973.05.25.The_Daily_Telegraph_Magazine.Making_Words_At_The_Keys.md",
+    "title": "Making Words At The Keys",
+    "date": "1973-05-25",
+    "year": "1973",
+    "publication": "The Daily Telegraph Magazine",
+    "source_publication": "The Daily Telegraph Magazine",
+    "article_category": "Profile",
+    "collections": [
+      "The Musical Collection",
+      "UK Collection"
+    ],
+    "publication_status": "publish",
+    "editorial_issue_type": "clean_manual_transcription",
+    "canonical_file": "",
+    "production_title": "",
+    "company": "",
+    "venue": "",
+    "city": "",
+    "coordinates": [],
+    "people": [
+      "Angela Lansbury",
+      "Arthur Laurents",
+      "Boris Aronson",
+      "Ethel Merman",
+      "George Furth",
+      "Glynis Johns",
+      "Harold Prince",
+      "Hermione Gingold",
+      "Hugh Wheeler",
+      "Jule Styne",
+      "Michael Bennett",
+      "Patricia Birch",
+      "Stephen Sondheim"
+    ],
+    "roles": {
+      "director": [],
+      "actors": [],
+      "playwright": [],
+      "composer_lyricist": [],
+      "musical_director": [],
+      "choreographer": [],
+      "orchestrator": [],
+      "arranger": [],
+      "assistant_director": [],
+      "stage_manager": [],
+      "assistant_musical_director": [],
+      "vocal_director": [],
+      "dance_captain": [],
+      "fight_director": [],
+      "dramaturg": [],
+      "producer": [],
+      "set_designer": [],
+      "costume_designer": [],
+      "lighting_designer": [],
+      "sound_designer": [],
+      "musicians": [],
+      "performers": [],
+      "artists": []
+    },
+    "production_groups": [
+      {
+        "order": "1",
+        "production_title": "Gypsy",
+        "venue": [
+          "Piccadilly Theatre"
+        ],
+        "city": [
+          "London, England"
+        ],
+        "director": [
+          "Arthur Laurents"
+        ],
+        "actors": [
+          "Angela Lansbury",
+          "Ethel Merman"
+        ],
+        "playwright": [
+          "Arthur Laurents"
+        ],
+        "composer_lyricist": [
+          "Jule Styne",
+          "Stephen Sondheim"
+        ]
+      },
+      {
+        "order": "2",
+        "production_title": "Company",
+        "director": [
+          "Harold Prince"
+        ],
+        "playwright": [
+          "George Furth"
+        ],
+        "composer_lyricist": [
+          "Stephen Sondheim"
+        ]
+      },
+      {
+        "order": "3",
+        "production_title": "Follies",
+        "director": [
+          "Harold Prince"
+        ],
+        "choreographer": [
+          "Michael Bennett"
+        ],
+        "producer": [
+          "Harold Prince"
+        ],
+        "set_designer": [
+          "Boris Aronson"
+        ],
+        "composer_lyricist": [
+          "Stephen Sondheim"
+        ]
+      },
+      {
+        "order": "4",
+        "production_title": "A Little Night Music",
+        "director": [
+          "Harold Prince"
+        ],
+        "actors": [
+          "Glynis Johns",
+          "Hermione Gingold"
+        ],
+        "playwright": [
+          "Hugh Wheeler"
+        ],
+        "choreographer": [
+          "Patricia Birch"
+        ],
+        "composer_lyricist": [
+          "Stephen Sondheim"
+        ]
+      }
+    ],
+    "media": [],
+    "word_count": 3288,
+    "subject_role_map": [
+      {
+        "person": "Stephen Sondheim",
+        "roles": [
+          "composer_lyricist"
+        ],
+        "labels": [
+          "Composer/Lyricist"
+        ]
+      }
+    ],
+    "subject_people": "Stephen Sondheim",
+    "coordinate_points": [],
+    "display_schema": {
+      "work_type": "subjects",
+      "work_label": "Subject",
+      "company_label": "Company",
+      "primary_browse": "subjects",
+      "secondary_browse": "productions"
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "A Little Night Music",
+        "Company",
+        "Follies",
+        "Gypsy"
+      ],
+      "subjects": [
+        "Stephen Sondheim"
+      ],
+      "book_authors": [],
+      "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
+      "companies": [],
+      "venues": [
+        "Piccadilly Theatre"
+      ],
+      "cities": [
+        "London, England"
+      ],
+      "people": [
+        "Angela Lansbury",
+        "Arthur Laurents",
+        "Boris Aronson",
+        "Ethel Merman",
+        "George Furth",
+        "Glynis Johns",
+        "Harold Prince",
+        "Hermione Gingold",
+        "Hugh Wheeler",
+        "Jule Styne",
+        "Michael Bennett",
+        "Patricia Birch",
+        "Stephen Sondheim"
+      ]
+    }
+  },
+  {
     "slug": "1973-06-03-gypsy-triumphant",
     "route": "/reviews/1973-06-03-gypsy-triumphant/",
     "source_file": "1973.06.03.The_Observer.Gypsy_Triumphant.md",
@@ -12247,6 +12449,159 @@
     }
   },
   {
+    "slug": "1975-09-20-mr-welland-and-the-masculine-mystique",
+    "route": "/reviews/1975-09-20-mr-welland-and-the-masculine-mystique/",
+    "source_file": "1975.09.20.Radio_Times.Mr_Welland_and_the_Masculine_Mystique.md",
+    "title": "Mr Welland And The Masculine Mystique",
+    "date": "1975-09-20",
+    "year": "1975",
+    "publication": "Radio Times",
+    "source_publication": "Radio Times",
+    "article_category": "Television Feature",
+    "collections": [
+      "UK Collection"
+    ],
+    "publication_status": "publish",
+    "editorial_issue_type": "clean_manual_transcription",
+    "canonical_file": "",
+    "production_title": "",
+    "company": "",
+    "venue": "",
+    "city": "",
+    "coordinates": [],
+    "people": [
+      "Colin Welland",
+      "John Mackenzie",
+      "Kenith Trodd"
+    ],
+    "roles": {
+      "director": [
+        "John Mackenzie"
+      ],
+      "actors": [
+        "Colin Welland"
+      ],
+      "playwright": [
+        "Colin Welland"
+      ],
+      "composer_lyricist": [],
+      "musical_director": [],
+      "choreographer": [],
+      "orchestrator": [],
+      "arranger": [],
+      "assistant_director": [],
+      "stage_manager": [],
+      "assistant_musical_director": [],
+      "vocal_director": [],
+      "dance_captain": [],
+      "fight_director": [],
+      "dramaturg": [],
+      "producer": [
+        "Kenith Trodd"
+      ],
+      "set_designer": [],
+      "costume_designer": [],
+      "lighting_designer": [],
+      "sound_designer": [],
+      "musicians": [],
+      "performers": [],
+      "artists": []
+    },
+    "production_groups": [
+      {
+        "order": "1",
+        "production_title": "The Wild West Show",
+        "company": [
+          "BBC2"
+        ],
+        "director": [
+          "John Mackenzie"
+        ],
+        "producer": [
+          "Kenith Trodd"
+        ],
+        "playwright": [
+          "Colin Welland"
+        ]
+      },
+      {
+        "order": "2",
+        "production_title": "Good Lad Terry",
+        "company": [
+          "BBC2"
+        ],
+        "playwright": [
+          "Colin Welland"
+        ]
+      },
+      {
+        "order": "3",
+        "production_title": "Bangelstein's Boys",
+        "playwright": [
+          "Colin Welland"
+        ]
+      },
+      {
+        "order": "4",
+        "production_title": "Say Goodnight to Grandma",
+        "playwright": [
+          "Colin Welland"
+        ]
+      }
+    ],
+    "media": [],
+    "word_count": 1055,
+    "subject_role_map": [
+      {
+        "person": "Colin Welland",
+        "roles": [
+          "actors",
+          "playwright"
+        ],
+        "labels": [
+          "Actor",
+          "Playwright"
+        ]
+      }
+    ],
+    "subject_people": "Colin Welland",
+    "coordinate_points": [],
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Bangelstein's Boys",
+        "Good Lad Terry",
+        "Say Goodnight to Grandma",
+        "The Wild West Show"
+      ],
+      "subjects": [
+        "Colin Welland"
+      ],
+      "book_authors": [],
+      "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
+      "companies": [
+        "BBC2"
+      ],
+      "venues": [],
+      "cities": [],
+      "people": [
+        "Colin Welland",
+        "John Mackenzie",
+        "Kenith Trodd"
+      ]
+    }
+  },
+  {
     "slug": "1975-09-21-brave-and-bracing",
     "route": "/reviews/1975-09-21-brave-and-bracing/",
     "source_file": "1975.09.21.The_Observer.Brave_And_Bracing.md",
@@ -12396,6 +12751,480 @@
     }
   },
   {
+    "slug": "1975-09-21-fey-lady-with-steel-nerves",
+    "route": "/reviews/1975-09-21-fey-lady-with-steel-nerves/",
+    "source_file": "1975.09.21.The_Observer_Magazine.Fey_Lady_With_Steel_Nerves.md",
+    "title": "Fey Lady With Steel Nerves",
+    "date": "1975-09-21",
+    "year": "1975",
+    "publication": "The Observer Magazine",
+    "source_publication": "The Observer Magazine",
+    "article_category": "Profile",
+    "collections": [
+      "UK Collection"
+    ],
+    "publication_status": "publish",
+    "editorial_issue_type": "clean_manual_transcription",
+    "canonical_file": "",
+    "production_title": "",
+    "company": "",
+    "venue": "",
+    "city": "",
+    "coordinates": [],
+    "people": [
+      "Anton Chekhov",
+      "Federico García Lorca",
+      "Harley Granville-Barker",
+      "Joseph Losey",
+      "Mia Farrow",
+      "Robin Phillips",
+      "Roman Polanski"
+    ],
+    "roles": {
+      "director": [],
+      "actors": [],
+      "playwright": [],
+      "composer_lyricist": [],
+      "musical_director": [],
+      "choreographer": [],
+      "orchestrator": [],
+      "arranger": [],
+      "assistant_director": [],
+      "stage_manager": [],
+      "assistant_musical_director": [],
+      "vocal_director": [],
+      "dance_captain": [],
+      "fight_director": [],
+      "dramaturg": [],
+      "producer": [],
+      "set_designer": [],
+      "costume_designer": [],
+      "lighting_designer": [],
+      "sound_designer": [],
+      "musicians": [],
+      "performers": [],
+      "artists": []
+    },
+    "production_groups": [
+      {
+        "order": "1",
+        "production_title": "The Marrying of Ann Leete",
+        "venue": [
+          "Aldwych Theatre"
+        ],
+        "city": [
+          "London, England"
+        ],
+        "actors": [
+          "Mia Farrow"
+        ],
+        "playwright": [
+          "Harley Granville-Barker"
+        ]
+      },
+      {
+        "order": "2",
+        "production_title": "Rosemary's Baby",
+        "director": [
+          "Roman Polanski"
+        ],
+        "actors": [
+          "Mia Farrow"
+        ]
+      },
+      {
+        "order": "3",
+        "production_title": "Secret Ceremony",
+        "director": [
+          "Joseph Losey"
+        ],
+        "actors": [
+          "Mia Farrow"
+        ]
+      },
+      {
+        "order": "4",
+        "production_title": "Three Sisters",
+        "venue": [
+          "Greenwich Theatre"
+        ],
+        "city": [
+          "London, England"
+        ],
+        "director": [
+          "Robin Phillips"
+        ],
+        "actors": [
+          "Mia Farrow"
+        ],
+        "playwright": [
+          "Anton Chekhov"
+        ]
+      },
+      {
+        "order": "5",
+        "production_title": "The House of Bernarda Alba",
+        "venue": [
+          "Greenwich Theatre"
+        ],
+        "city": [
+          "London, England"
+        ],
+        "director": [
+          "Robin Phillips"
+        ],
+        "actors": [
+          "Mia Farrow"
+        ],
+        "playwright": [
+          "Federico García Lorca"
+        ]
+      }
+    ],
+    "media": [],
+    "word_count": 758,
+    "subject_role_map": [
+      {
+        "person": "Mia Farrow",
+        "roles": [
+          "actors"
+        ],
+        "labels": [
+          "Actor"
+        ]
+      }
+    ],
+    "subject_people": "Mia Farrow",
+    "coordinate_points": [],
+    "display_schema": {
+      "work_type": "subjects",
+      "work_label": "Subject",
+      "company_label": "Company",
+      "primary_browse": "subjects",
+      "secondary_browse": "productions"
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Rosemary's Baby",
+        "Secret Ceremony",
+        "The House of Bernarda Alba",
+        "The Marrying of Ann Leete",
+        "Three Sisters"
+      ],
+      "subjects": [
+        "Mia Farrow"
+      ],
+      "book_authors": [],
+      "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
+      "companies": [],
+      "venues": [
+        "Aldwych Theatre",
+        "Greenwich Theatre"
+      ],
+      "cities": [
+        "London, England"
+      ],
+      "people": [
+        "Anton Chekhov",
+        "Federico García Lorca",
+        "Harley Granville-Barker",
+        "Joseph Losey",
+        "Mia Farrow",
+        "Robin Phillips",
+        "Roman Polanski"
+      ]
+    }
+  },
+  {
+    "slug": "1975-09-28-complex-simon",
+    "route": "/reviews/1975-09-28-complex-simon/",
+    "source_file": "1975.09.28.The_Observer.Complex_Simon.md",
+    "title": "Complex Simon",
+    "date": "1975-09-28",
+    "year": "1975",
+    "publication": "The Observer",
+    "source_publication": "The Observer",
+    "article_category": "Profile",
+    "collections": [
+      "UK Collection"
+    ],
+    "publication_status": "publish",
+    "editorial_issue_type": "clean_manual_transcription",
+    "canonical_file": "",
+    "production_title": "",
+    "company": "",
+    "venue": "",
+    "city": "",
+    "coordinates": [],
+    "people": [
+      "Simon Gray"
+    ],
+    "roles": {
+      "director": [],
+      "actors": [],
+      "playwright": [
+        "Simon Gray"
+      ],
+      "composer_lyricist": [],
+      "musical_director": [],
+      "choreographer": [],
+      "orchestrator": [],
+      "arranger": [],
+      "assistant_director": [],
+      "stage_manager": [],
+      "assistant_musical_director": [],
+      "vocal_director": [],
+      "dance_captain": [],
+      "fight_director": [],
+      "dramaturg": [],
+      "producer": [],
+      "set_designer": [],
+      "costume_designer": [],
+      "lighting_designer": [],
+      "sound_designer": [],
+      "musicians": [],
+      "performers": [],
+      "artists": []
+    },
+    "production_groups": [
+      {
+        "order": "1",
+        "production_title": "Wise Child",
+        "playwright": [
+          "Simon Gray"
+        ]
+      },
+      {
+        "order": "2",
+        "production_title": "Butley",
+        "playwright": [
+          "Simon Gray"
+        ]
+      },
+      {
+        "order": "3",
+        "production_title": "Otherwise Engaged",
+        "playwright": [
+          "Simon Gray"
+        ]
+      }
+    ],
+    "media": [],
+    "word_count": 1564,
+    "subject_role_map": [
+      {
+        "person": "Simon Gray",
+        "roles": [
+          "playwright"
+        ],
+        "labels": [
+          "Playwright"
+        ]
+      }
+    ],
+    "subject_people": "Simon Gray",
+    "coordinate_points": [],
+    "display_schema": {
+      "work_type": "subjects",
+      "work_label": "Subject",
+      "company_label": "Company",
+      "primary_browse": "subjects",
+      "secondary_browse": "productions"
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Butley",
+        "Otherwise Engaged",
+        "Wise Child"
+      ],
+      "subjects": [
+        "Simon Gray"
+      ],
+      "book_authors": [],
+      "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
+      "companies": [],
+      "venues": [],
+      "cities": [],
+      "people": [
+        "Simon Gray"
+      ]
+    }
+  },
+  {
+    "slug": "1975-10-05-acts-of-rage-and-laughter",
+    "route": "/reviews/1975-10-05-acts-of-rage-and-laughter/",
+    "source_file": "1975.10.05.The_Observer.Acts_Of_Rage_And_Laughter.md",
+    "title": "Acts Of Rage And Laughter",
+    "date": "1975-10-05",
+    "year": "1975",
+    "publication": "The Observer",
+    "source_publication": "The Observer",
+    "article_category": "Theatre Review",
+    "collections": [
+      "UK Collection"
+    ],
+    "publication_status": "publish",
+    "editorial_issue_type": "clean_manual_transcription",
+    "canonical_file": "",
+    "production_title": "",
+    "company": "",
+    "venue": "",
+    "city": "",
+    "coordinates": [],
+    "people": [
+      "Andrew Cruickshank",
+      "Brenda Blethyn",
+      "C. J. Allen",
+      "Dave Hill",
+      "James Warrior",
+      "Jim Norton",
+      "Jimmy Jewel",
+      "Jonathan Pryce",
+      "Richard Crane",
+      "Richard Eyre",
+      "Stephen Rea",
+      "Trevor Griffiths"
+    ],
+    "roles": {
+      "director": [],
+      "actors": [],
+      "playwright": [],
+      "composer_lyricist": [],
+      "musical_director": [],
+      "choreographer": [],
+      "orchestrator": [],
+      "arranger": [],
+      "assistant_director": [],
+      "stage_manager": [],
+      "assistant_musical_director": [],
+      "vocal_director": [],
+      "dance_captain": [],
+      "fight_director": [],
+      "dramaturg": [],
+      "producer": [],
+      "set_designer": [],
+      "costume_designer": [],
+      "lighting_designer": [],
+      "sound_designer": [],
+      "musicians": [],
+      "performers": [],
+      "artists": []
+    },
+    "production_groups": [
+      {
+        "order": "1",
+        "production_title": "Comedians",
+        "company": [
+          "National Theatre"
+        ],
+        "venue": [
+          "Old Vic",
+          "Nottingham Playhouse"
+        ],
+        "director": [
+          "Richard Eyre"
+        ],
+        "actors": [
+          "Jimmy Jewel",
+          "Stephen Rea",
+          "Jim Norton",
+          "Jonathan Pryce",
+          "James Warrior",
+          "Dave Hill"
+        ],
+        "playwright": [
+          "Trevor Griffiths"
+        ]
+      },
+      {
+        "order": "2",
+        "production_title": "Bloody Neighbours",
+        "company": [
+          "National Theatre"
+        ],
+        "venue": [
+          "ICA"
+        ],
+        "actors": [
+          "Brenda Blethyn",
+          "C. J. Allen"
+        ],
+        "playwright": [
+          "Richard Crane"
+        ]
+      },
+      {
+        "order": "3",
+        "production_title": "Games",
+        "venue": [
+          "Haymarket Studio, Leicester"
+        ],
+        "actors": [
+          "Andrew Cruickshank"
+        ],
+        "playwright": [
+          "Andrew Cruickshank"
+        ]
+      }
+    ],
+    "media": [],
+    "word_count": 1170,
+    "coordinate_points": [],
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Bloody Neighbours",
+        "Comedians",
+        "Games"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
+      "companies": [
+        "National Theatre"
+      ],
+      "venues": [
+        "Haymarket Studio, Leicester",
+        "ICA",
+        "Nottingham Playhouse",
+        "Old Vic"
+      ],
+      "cities": [],
+      "people": [
+        "Andrew Cruickshank",
+        "Brenda Blethyn",
+        "C. J. Allen",
+        "Dave Hill",
+        "James Warrior",
+        "Jim Norton",
+        "Jimmy Jewel",
+        "Jonathan Pryce",
+        "Richard Crane",
+        "Richard Eyre",
+        "Stephen Rea",
+        "Trevor Griffiths"
+      ]
+    }
+  },
+  {
     "slug": "1975-10-05-world-of-cads-and-tuxedos",
     "route": "/reviews/1975-10-05-world-of-cads-and-tuxedos/",
     "source_file": "1975.10.05.The_Observer.World_Of_Cads_And_Tuxedos.md",
@@ -12525,6 +13354,129 @@
         "Timothy Dalton",
         "Toby Robins",
         "Vivien Merchant"
+      ]
+    }
+  },
+  {
+    "slug": "1975-10-12-all-about-the-irish",
+    "route": "/reviews/1975-10-12-all-about-the-irish/",
+    "source_file": "1975.10.12.The_Observer.All_About_The_Irish.md",
+    "title": "All About The Irish",
+    "date": "1975-10-12",
+    "year": "1975",
+    "publication": "The Observer",
+    "source_publication": "The Observer",
+    "article_category": "Theatre Review",
+    "collections": [
+      "UK Collection"
+    ],
+    "publication_status": "publish",
+    "editorial_issue_type": "clean_manual_transcription",
+    "canonical_file": "",
+    "production_title": "",
+    "company": "",
+    "venue": "",
+    "city": "",
+    "coordinates": [],
+    "people": [
+      "Donal McCann",
+      "Godfrey Quigley",
+      "Hugh Leonard",
+      "Thomas Murphy"
+    ],
+    "roles": {
+      "director": [],
+      "actors": [],
+      "playwright": [],
+      "composer_lyricist": [],
+      "musical_director": [],
+      "choreographer": [],
+      "orchestrator": [],
+      "arranger": [],
+      "assistant_director": [],
+      "stage_manager": [],
+      "assistant_musical_director": [],
+      "vocal_director": [],
+      "dance_captain": [],
+      "fight_director": [],
+      "dramaturg": [],
+      "producer": [],
+      "set_designer": [],
+      "costume_designer": [],
+      "lighting_designer": [],
+      "sound_designer": [],
+      "musicians": [],
+      "performers": [],
+      "artists": []
+    },
+    "production_groups": [
+      {
+        "order": "1",
+        "production_title": "Irishmen",
+        "venue": [
+          "Gaiety Theatre"
+        ],
+        "actors": [
+          "Godfrey Quigley",
+          "Donal McCann"
+        ],
+        "playwright": [
+          "Hugh Leonard"
+        ]
+      },
+      {
+        "order": "2",
+        "production_title": "The Sanctuary Lamp",
+        "venue": [
+          "Abbey Theatre"
+        ],
+        "playwright": [
+          "Thomas Murphy"
+        ]
+      },
+      {
+        "order": "3",
+        "production_title": "The Real Charlotte",
+        "venue": [
+          "Gate Theatre"
+        ]
+      }
+    ],
+    "media": [],
+    "word_count": 1006,
+    "coordinate_points": [],
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Irishmen",
+        "The Real Charlotte",
+        "The Sanctuary Lamp"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
+      "companies": [],
+      "venues": [
+        "Abbey Theatre",
+        "Gaiety Theatre",
+        "Gate Theatre"
+      ],
+      "cities": [],
+      "people": [
+        "Donal McCann",
+        "Godfrey Quigley",
+        "Hugh Leonard",
+        "Thomas Murphy"
       ]
     }
   },
@@ -12664,6 +13616,188 @@
         "Michael Hordern",
         "Patricia Quinn",
         "Stephen Poliakoff"
+      ]
+    }
+  },
+  {
+    "slug": "1975-11-02-down-in-the-country",
+    "route": "/reviews/1975-11-02-down-in-the-country/",
+    "source_file": "1975.11.02.The_Observer.Down_In_The_Country.md",
+    "title": "Down In The Country",
+    "date": "1975-11-02",
+    "year": "1975",
+    "publication": "The Observer",
+    "source_publication": "The Observer",
+    "article_category": "Theatre Review",
+    "collections": [
+      "UK Collection"
+    ],
+    "publication_status": "publish",
+    "editorial_issue_type": "clean_manual_transcription",
+    "canonical_file": "",
+    "production_title": "",
+    "company": "",
+    "venue": "",
+    "city": "",
+    "coordinates": [],
+    "people": [
+      "Anton Chekhov",
+      "Bill Bryden",
+      "Eddie Byrne",
+      "Frank Grimes",
+      "Helen Mirren",
+      "Herbert Farjeon",
+      "J. G. Devlin",
+      "J. M. Synge",
+      "Jim Norton",
+      "Joan Plowright",
+      "Kevin Stoney",
+      "Liam Redmond",
+      "Lindsay Anderson",
+      "Margaret Whiting",
+      "Patricia Healey",
+      "Peter McEnery",
+      "Stephen Rea",
+      "Susan Fleetwood"
+    ],
+    "roles": {
+      "director": [],
+      "actors": [],
+      "playwright": [],
+      "composer_lyricist": [],
+      "musical_director": [],
+      "choreographer": [],
+      "orchestrator": [],
+      "arranger": [],
+      "assistant_director": [],
+      "stage_manager": [],
+      "assistant_musical_director": [],
+      "vocal_director": [],
+      "dance_captain": [],
+      "fight_director": [],
+      "dramaturg": [],
+      "producer": [],
+      "set_designer": [],
+      "costume_designer": [],
+      "lighting_designer": [],
+      "sound_designer": [],
+      "musicians": [],
+      "performers": [],
+      "artists": []
+    },
+    "production_groups": [
+      {
+        "order": "1",
+        "production_title": "The Sea Gull",
+        "company": [
+          "Lyric Theatre Company"
+        ],
+        "venue": [
+          "Lyric Theatre"
+        ],
+        "director": [
+          "Lindsay Anderson"
+        ],
+        "actors": [
+          "Helen Mirren",
+          "Patricia Healey",
+          "Frank Grimes",
+          "Peter McEnery",
+          "Joan Plowright",
+          "Kevin Stoney"
+        ],
+        "playwright": [
+          "Anton Chekhov"
+        ]
+      },
+      {
+        "order": "2",
+        "production_title": "The Playboy of the Western World",
+        "company": [
+          "National Theatre"
+        ],
+        "venue": [
+          "Old Vic"
+        ],
+        "director": [
+          "Bill Bryden"
+        ],
+        "actors": [
+          "Susan Fleetwood",
+          "Stephen Rea",
+          "Jim Norton",
+          "Margaret Whiting",
+          "J. G. Devlin",
+          "Liam Redmond",
+          "Eddie Byrne"
+        ],
+        "playwright": [
+          "J. M. Synge"
+        ]
+      },
+      {
+        "order": "3",
+        "production_title": "Farjeon Revue",
+        "venue": [
+          "Mermaid Theatre"
+        ],
+        "playwright": [
+          "Herbert Farjeon"
+        ]
+      }
+    ],
+    "media": [],
+    "word_count": 1274,
+    "coordinate_points": [],
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Farjeon Revue",
+        "The Playboy of the Western World",
+        "The Sea Gull"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
+      "companies": [
+        "Lyric Theatre Company",
+        "National Theatre"
+      ],
+      "venues": [
+        "Lyric Theatre",
+        "Mermaid Theatre",
+        "Old Vic"
+      ],
+      "cities": [],
+      "people": [
+        "Anton Chekhov",
+        "Bill Bryden",
+        "Eddie Byrne",
+        "Frank Grimes",
+        "Helen Mirren",
+        "Herbert Farjeon",
+        "J. G. Devlin",
+        "J. M. Synge",
+        "Jim Norton",
+        "Joan Plowright",
+        "Kevin Stoney",
+        "Liam Redmond",
+        "Lindsay Anderson",
+        "Margaret Whiting",
+        "Patricia Healey",
+        "Peter McEnery",
+        "Stephen Rea",
+        "Susan Fleetwood"
       ]
     }
   },
@@ -12986,6 +14120,308 @@
     }
   },
   {
+    "slug": "1975-11-16-critical-conclusions",
+    "route": "/reviews/1975-11-16-critical-conclusions/",
+    "source_file": "1975.11.16.The_Observer.Critical_Conclusions.md",
+    "title": "Critical Conclusions",
+    "date": "1975-11-16",
+    "year": "1975",
+    "publication": "The Observer",
+    "source_publication": "The Observer",
+    "article_category": "Theatre Review",
+    "collections": [
+      "UK Collection"
+    ],
+    "publication_status": "publish",
+    "editorial_issue_type": "clean_manual_transcription",
+    "canonical_file": "",
+    "production_title": "",
+    "company": "",
+    "venue": "",
+    "city": "",
+    "coordinates": [],
+    "people": [
+      "Carl Davis",
+      "David Hatton",
+      "Jeanne Watts",
+      "Joseph Peters",
+      "Mike Bradwell",
+      "Penelope Lee",
+      "Rachel Bell"
+    ],
+    "roles": {
+      "director": [],
+      "actors": [],
+      "playwright": [],
+      "composer_lyricist": [],
+      "musical_director": [],
+      "choreographer": [],
+      "orchestrator": [],
+      "arranger": [],
+      "assistant_director": [],
+      "stage_manager": [],
+      "assistant_musical_director": [],
+      "vocal_director": [],
+      "dance_captain": [],
+      "fight_director": [],
+      "dramaturg": [],
+      "producer": [],
+      "set_designer": [],
+      "costume_designer": [],
+      "lighting_designer": [],
+      "sound_designer": [],
+      "musicians": [],
+      "performers": [],
+      "artists": []
+    },
+    "production_groups": [
+      {
+        "order": "1",
+        "production_title": "Oh What!",
+        "company": [
+          "Hull Truck Theatre Company"
+        ],
+        "venue": [
+          "Bush Theatre"
+        ],
+        "director": [
+          "Mike Bradwell"
+        ],
+        "performers": [
+          "Rachel Bell",
+          "David Hatton",
+          "Joseph Peters"
+        ]
+      },
+      {
+        "order": "2",
+        "production_title": "Cranford",
+        "venue": [
+          "Theatre Royal, Stratford"
+        ],
+        "composer_lyricist": [
+          "Carl Davis"
+        ],
+        "performers": [
+          "Penelope Lee",
+          "Jeanne Watts"
+        ]
+      }
+    ],
+    "media": [],
+    "word_count": 1110,
+    "coordinate_points": [],
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Cranford",
+        "Oh What!"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
+      "companies": [
+        "Hull Truck Theatre Company"
+      ],
+      "venues": [
+        "Bush Theatre",
+        "Theatre Royal, Stratford"
+      ],
+      "cities": [],
+      "people": [
+        "Carl Davis",
+        "David Hatton",
+        "Jeanne Watts",
+        "Joseph Peters",
+        "Mike Bradwell",
+        "Penelope Lee",
+        "Rachel Bell"
+      ]
+    }
+  },
+  {
+    "slug": "1975-11-16-playwright-for-today",
+    "route": "/reviews/1975-11-16-playwright-for-today/",
+    "source_file": "1975.11.16.The_Observer_Magazine.Playwright_For_Today.md",
+    "title": "Playwright For Today",
+    "date": "1975-11-16",
+    "year": "1975",
+    "publication": "The Observer Magazine",
+    "source_publication": "The Observer Magazine",
+    "article_category": "Profile",
+    "collections": [
+      "UK Collection"
+    ],
+    "publication_status": "publish",
+    "editorial_issue_type": "clean_manual_transcription",
+    "canonical_file": "",
+    "production_title": "",
+    "company": "",
+    "venue": "",
+    "city": "",
+    "coordinates": [],
+    "people": [
+      "David Hare",
+      "Howard Brenton"
+    ],
+    "roles": {
+      "director": [],
+      "actors": [],
+      "playwright": [
+        "Howard Brenton"
+      ],
+      "composer_lyricist": [],
+      "musical_director": [],
+      "choreographer": [],
+      "orchestrator": [],
+      "arranger": [],
+      "assistant_director": [],
+      "stage_manager": [],
+      "assistant_musical_director": [],
+      "vocal_director": [],
+      "dance_captain": [],
+      "fight_director": [],
+      "dramaturg": [],
+      "producer": [],
+      "set_designer": [],
+      "costume_designer": [],
+      "lighting_designer": [],
+      "sound_designer": [],
+      "musicians": [],
+      "performers": [],
+      "artists": []
+    },
+    "production_groups": [
+      {
+        "order": "1",
+        "production_title": "Weapons of Happiness",
+        "company": [
+          "National Theatre"
+        ],
+        "venue": [
+          "Lyttelton Theatre"
+        ],
+        "playwright": [
+          "Howard Brenton"
+        ]
+      },
+      {
+        "order": "2",
+        "production_title": "Brassneck",
+        "playwright": [
+          "Howard Brenton",
+          "David Hare"
+        ]
+      },
+      {
+        "order": "3",
+        "production_title": "Revenge",
+        "venue": [
+          "Royal Court Theatre Upstairs"
+        ],
+        "playwright": [
+          "Howard Brenton"
+        ]
+      },
+      {
+        "order": "4",
+        "production_title": "Christie in Love",
+        "company": [
+          "Portable Theatre"
+        ],
+        "playwright": [
+          "Howard Brenton"
+        ]
+      },
+      {
+        "order": "5",
+        "production_title": "Magnificence",
+        "venue": [
+          "Royal Court Theatre"
+        ],
+        "playwright": [
+          "Howard Brenton"
+        ]
+      },
+      {
+        "order": "6",
+        "production_title": "The Churchill Play",
+        "venue": [
+          "Nottingham Playhouse"
+        ],
+        "playwright": [
+          "Howard Brenton"
+        ]
+      }
+    ],
+    "media": [],
+    "word_count": 806,
+    "subject_role_map": [
+      {
+        "person": "Howard Brenton",
+        "roles": [
+          "playwright"
+        ],
+        "labels": [
+          "Playwright"
+        ]
+      }
+    ],
+    "subject_people": "Howard Brenton",
+    "coordinate_points": [],
+    "display_schema": {
+      "work_type": "subjects",
+      "work_label": "Subject",
+      "company_label": "Company",
+      "primary_browse": "subjects",
+      "secondary_browse": "productions"
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Brassneck",
+        "Christie in Love",
+        "Magnificence",
+        "Revenge",
+        "The Churchill Play",
+        "Weapons of Happiness"
+      ],
+      "subjects": [
+        "Howard Brenton"
+      ],
+      "book_authors": [],
+      "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
+      "companies": [
+        "National Theatre",
+        "Portable Theatre"
+      ],
+      "venues": [
+        "Lyttelton Theatre",
+        "Nottingham Playhouse",
+        "Royal Court Theatre",
+        "Royal Court Theatre Upstairs"
+      ],
+      "cities": [],
+      "people": [
+        "David Hare",
+        "Howard Brenton"
+      ]
+    }
+  },
+  {
     "slug": "1975-11-23-bond-s-prisoners-of-greed",
     "route": "/reviews/1975-11-23-bond-s-prisoners-of-greed/",
     "source_file": "1975.11.23.The_Observer.Bond_s_Prisoners_Of_Greed.md",
@@ -13118,6 +14554,497 @@
         "Terry Palmer",
         "Tom Courtenay",
         "William Dudley",
+        "William Shakespeare"
+      ]
+    }
+  },
+  {
+    "slug": "1975-11-29-some-of-the-parts",
+    "route": "/reviews/1975-11-29-some-of-the-parts/",
+    "source_file": "1975.11.29.Radio_Times.Some_of_the_Parts.md",
+    "title": "Some Of The Parts",
+    "date": "1975-11-29",
+    "year": "1975",
+    "publication": "Radio Times",
+    "source_publication": "Radio Times",
+    "article_category": "Television Feature",
+    "collections": [
+      "UK Collection"
+    ],
+    "publication_status": "publish",
+    "editorial_issue_type": "clean_manual_transcription",
+    "canonical_file": "",
+    "production_title": "",
+    "company": "",
+    "venue": "",
+    "city": "",
+    "coordinates": [],
+    "people": [
+      "Trevor Griffiths"
+    ],
+    "roles": {
+      "director": [],
+      "actors": [],
+      "playwright": [
+        "Trevor Griffiths"
+      ],
+      "composer_lyricist": [],
+      "musical_director": [],
+      "choreographer": [],
+      "orchestrator": [],
+      "arranger": [],
+      "assistant_director": [],
+      "stage_manager": [],
+      "assistant_musical_director": [],
+      "vocal_director": [],
+      "dance_captain": [],
+      "fight_director": [],
+      "dramaturg": [],
+      "producer": [],
+      "set_designer": [],
+      "costume_designer": [],
+      "lighting_designer": [],
+      "sound_designer": [],
+      "musicians": [],
+      "performers": [],
+      "artists": []
+    },
+    "production_groups": [
+      {
+        "order": "1",
+        "production_title": "Through the Night",
+        "company": [
+          "BBC1"
+        ],
+        "playwright": [
+          "Trevor Griffiths"
+        ]
+      },
+      {
+        "order": "2",
+        "production_title": "Comedians",
+        "playwright": [
+          "Trevor Griffiths"
+        ]
+      },
+      {
+        "order": "3",
+        "production_title": "The Party",
+        "playwright": [
+          "Trevor Griffiths"
+        ]
+      }
+    ],
+    "media": [],
+    "word_count": 1204,
+    "subject_role_map": [
+      {
+        "person": "Trevor Griffiths",
+        "roles": [
+          "playwright"
+        ],
+        "labels": [
+          "Playwright"
+        ]
+      }
+    ],
+    "subject_people": "Trevor Griffiths",
+    "coordinate_points": [],
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Comedians",
+        "The Party",
+        "Through the Night"
+      ],
+      "subjects": [
+        "Trevor Griffiths"
+      ],
+      "book_authors": [],
+      "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
+      "companies": [
+        "BBC1"
+      ],
+      "venues": [],
+      "cities": [],
+      "people": [
+        "Trevor Griffiths"
+      ]
+    }
+  },
+  {
+    "slug": "1975-11-30-in-the-company-of-turgenev",
+    "route": "/reviews/1975-11-30-in-the-company-of-turgenev/",
+    "source_file": "1975.11.30.The_Observer.In_The_Company_Of_Turgenev.md",
+    "title": "In the Company of Turgenev",
+    "date": "1975-11-30",
+    "year": "1975",
+    "publication": "The Observer",
+    "source_publication": "The Observer",
+    "article_category": "Theatre Review",
+    "collections": [
+      "UK Collection"
+    ],
+    "publication_status": "publish",
+    "editorial_issue_type": "clean_manual_transcription",
+    "canonical_file": "",
+    "production_title": "",
+    "company": "",
+    "venue": "",
+    "city": "",
+    "coordinates": [],
+    "people": [
+      "Carol Gillies",
+      "Denise Coffey",
+      "Derek Jacobi",
+      "Dorothy Tutin",
+      "E. M. Forster",
+      "Hugh Hastings",
+      "Ivan Turgenev",
+      "Jane Lapotaire",
+      "John Lennon",
+      "John Turner",
+      "Lynn Farleigh",
+      "Michael Howarth",
+      "Richard Cottrell",
+      "Robin Archer",
+      "Timothy West",
+      "Toby Robertson"
+    ],
+    "roles": {
+      "director": [],
+      "actors": [],
+      "playwright": [],
+      "composer_lyricist": [],
+      "musical_director": [],
+      "choreographer": [],
+      "orchestrator": [],
+      "arranger": [],
+      "assistant_director": [],
+      "stage_manager": [],
+      "assistant_musical_director": [],
+      "vocal_director": [],
+      "dance_captain": [],
+      "fight_director": [],
+      "dramaturg": [],
+      "producer": [],
+      "set_designer": [],
+      "costume_designer": [],
+      "lighting_designer": [],
+      "sound_designer": [],
+      "musicians": [],
+      "performers": [],
+      "artists": []
+    },
+    "production_groups": [
+      {
+        "order": "1",
+        "production_title": "A Month in the Country",
+        "company": [
+          "Prospect Theatre Company"
+        ],
+        "venue": [
+          "Albery Theatre"
+        ],
+        "director": [
+          "Toby Robertson"
+        ],
+        "playwright": [
+          "Ivan Turgenev"
+        ],
+        "set_designer": [
+          "Robin Archer"
+        ],
+        "performers": [
+          "Timothy West",
+          "Dorothy Tutin",
+          "Jane Lapotaire",
+          "Derek Jacobi",
+          "John Turner",
+          "Carol Gillies",
+          "Michael Howarth"
+        ]
+      },
+      {
+        "order": "2",
+        "production_title": "A Room with A View",
+        "company": [
+          "Prospect Theatre Company"
+        ],
+        "venue": [
+          "Albery Theatre"
+        ],
+        "playwright": [
+          "Richard Cottrell"
+        ],
+        "artists": [
+          "E. M. Forster"
+        ],
+        "performers": [
+          "Lynn Farleigh",
+          "Jane Lapotaire",
+          "Derek Jacobi",
+          "Timothy West",
+          "Michael Howarth"
+        ]
+      },
+      {
+        "order": "3",
+        "production_title": "All Walks of Leg",
+        "venue": [
+          "Young Vic"
+        ],
+        "playwright": [
+          "Denise Coffey"
+        ],
+        "artists": [
+          "John Lennon"
+        ],
+        "performers": [
+          "Hugh Hastings"
+        ]
+      }
+    ],
+    "media": [],
+    "word_count": 1033,
+    "coordinate_points": [],
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "A Month in the Country",
+        "A Room with A View",
+        "All Walks of Leg"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
+      "companies": [
+        "Prospect Theatre Company"
+      ],
+      "venues": [
+        "Albery Theatre",
+        "Young Vic"
+      ],
+      "cities": [],
+      "people": [
+        "Carol Gillies",
+        "Denise Coffey",
+        "Derek Jacobi",
+        "Dorothy Tutin",
+        "E. M. Forster",
+        "Hugh Hastings",
+        "Ivan Turgenev",
+        "Jane Lapotaire",
+        "John Lennon",
+        "John Turner",
+        "Lynn Farleigh",
+        "Michael Howarth",
+        "Richard Cottrell",
+        "Robin Archer",
+        "Timothy West",
+        "Toby Robertson"
+      ]
+    }
+  },
+  {
+    "slug": "1975-12-14-the-whole-of-hamlet",
+    "route": "/reviews/1975-12-14-the-whole-of-hamlet/",
+    "source_file": "1975.12.14.The_Observer.The_Whole_of_Hamlet.md",
+    "title": "The Whole Of Hamlet",
+    "date": "1975-12-14",
+    "year": "1975",
+    "publication": "The Observer",
+    "source_publication": "The Observer",
+    "article_category": "Theatre Review",
+    "collections": [
+      "UK Collection",
+      "The Shakespeare Collection"
+    ],
+    "publication_status": "publish",
+    "editorial_issue_type": "clean_manual_transcription",
+    "canonical_file": "",
+    "production_title": "",
+    "company": "",
+    "venue": "",
+    "city": "",
+    "coordinates": [],
+    "people": [
+      "Albert Finney",
+      "Angela Lansbury",
+      "Ben Travers",
+      "Denis Quilley",
+      "Joan Plowright",
+      "John Bury",
+      "John Moffatt",
+      "Peter Hall",
+      "Philip Locke",
+      "Roland Culver",
+      "Simon Ward",
+      "Susan Fleetwood",
+      "William Shakespeare"
+    ],
+    "roles": {
+      "director": [
+        "Peter Hall"
+      ],
+      "actors": [
+        "Albert Finney",
+        "Angela Lansbury",
+        "Denis Quilley",
+        "Philip Locke",
+        "Susan Fleetwood",
+        "Roland Culver",
+        "Simon Ward",
+        "Joan Plowright",
+        "John Moffatt"
+      ],
+      "playwright": [
+        "William Shakespeare",
+        "Ben Travers"
+      ],
+      "composer_lyricist": [],
+      "musical_director": [],
+      "choreographer": [],
+      "orchestrator": [],
+      "arranger": [],
+      "assistant_director": [],
+      "stage_manager": [],
+      "assistant_musical_director": [],
+      "vocal_director": [],
+      "dance_captain": [],
+      "fight_director": [],
+      "dramaturg": [],
+      "producer": [],
+      "set_designer": [
+        "John Bury"
+      ],
+      "costume_designer": [],
+      "lighting_designer": [],
+      "sound_designer": [],
+      "musicians": [],
+      "performers": [],
+      "artists": []
+    },
+    "production_groups": [
+      {
+        "order": "1",
+        "production_title": "Hamlet",
+        "company": [
+          "National Theatre"
+        ],
+        "venue": [
+          "Old Vic"
+        ],
+        "director": [
+          "Peter Hall"
+        ],
+        "actors": [
+          "Albert Finney",
+          "Angela Lansbury",
+          "Denis Quilley",
+          "Philip Locke",
+          "Susan Fleetwood",
+          "Roland Culver",
+          "Simon Ward"
+        ],
+        "playwright": [
+          "William Shakespeare"
+        ],
+        "set_designer": [
+          "John Bury"
+        ]
+      },
+      {
+        "order": "2",
+        "production_title": "The Bed Before Yesterday",
+        "venue": [
+          "Lyric Theatre"
+        ],
+        "actors": [
+          "Joan Plowright",
+          "John Moffatt"
+        ],
+        "playwright": [
+          "Ben Travers"
+        ]
+      },
+      {
+        "order": "3",
+        "production_title": "Yobbo Nowt",
+        "company": [
+          "{'7': '84 Company'}"
+        ],
+        "venue": [
+          "Shaw Theatre"
+        ]
+      }
+    ],
+    "media": [],
+    "word_count": 1306,
+    "coordinate_points": [],
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Hamlet",
+        "The Bed Before Yesterday",
+        "Yobbo Nowt"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
+      "companies": [
+        "National Theatre",
+        "{'7': '84 Company'}"
+      ],
+      "venues": [
+        "Lyric Theatre",
+        "Old Vic",
+        "Shaw Theatre"
+      ],
+      "cities": [],
+      "people": [
+        "Albert Finney",
+        "Angela Lansbury",
+        "Ben Travers",
+        "Denis Quilley",
+        "Joan Plowright",
+        "John Bury",
+        "John Moffatt",
+        "Peter Hall",
+        "Philip Locke",
+        "Roland Culver",
+        "Simon Ward",
+        "Susan Fleetwood",
         "William Shakespeare"
       ]
     }
@@ -23180,6 +25107,185 @@
         "Siobhan McKenna",
         "Ursula Mohan",
         "Vince Brimble"
+      ]
+    }
+  },
+  {
+    "slug": "1977-02-20-uncle-leo",
+    "route": "/reviews/1977-02-20-uncle-leo/",
+    "source_file": "1977.02.20.The_Observer.Uncle_Leo.md",
+    "title": "Uncle Leo",
+    "date": "1977-02-20",
+    "year": "1977",
+    "publication": "The Observer",
+    "source_publication": "The Observer",
+    "article_category": "Theatre Review",
+    "collections": [
+      "UK Collection"
+    ],
+    "publication_status": "publish",
+    "editorial_issue_type": "clean_manual_transcription",
+    "canonical_file": "",
+    "production_title": "",
+    "company": "",
+    "venue": "",
+    "city": "",
+    "coordinates": [],
+    "people": [
+      "Albert Finney",
+      "Alfred Burke",
+      "Annabel Leventon",
+      "Anton Chekhov",
+      "Eleanor Bron",
+      "Jimmy Kennedy",
+      "Joanna David",
+      "Leo McKern",
+      "Michael Elliott",
+      "Michael Feast",
+      "Niall Buggy",
+      "Peggy Thorpe-Bates",
+      "Stewart Parker",
+      "Susan Richards"
+    ],
+    "roles": {
+      "director": [
+        "Michael Elliott"
+      ],
+      "actors": [
+        "Leo McKern",
+        "Eleanor Bron",
+        "Joanna David",
+        "Susan Richards",
+        "Peggy Thorpe-Bates",
+        "Michael Feast",
+        "Alfred Burke",
+        "Albert Finney",
+        "Annabel Leventon",
+        "Niall Buggy"
+      ],
+      "playwright": [
+        "Anton Chekhov",
+        "Stewart Parker"
+      ],
+      "composer_lyricist": [
+        "Jimmy Kennedy",
+        "Stewart Parker"
+      ],
+      "musical_director": [],
+      "choreographer": [],
+      "orchestrator": [],
+      "arranger": [],
+      "assistant_director": [],
+      "stage_manager": [],
+      "assistant_musical_director": [],
+      "vocal_director": [],
+      "dance_captain": [],
+      "fight_director": [],
+      "dramaturg": [],
+      "producer": [],
+      "set_designer": [],
+      "costume_designer": [],
+      "lighting_designer": [],
+      "sound_designer": [],
+      "musicians": [],
+      "performers": [],
+      "artists": []
+    },
+    "production_groups": [
+      {
+        "order": "1",
+        "production_title": "Uncle Vanya",
+        "venue": [
+          "Royal Exchange Theatre"
+        ],
+        "city": [
+          "Manchester, England"
+        ],
+        "director": [
+          "Michael Elliott"
+        ],
+        "actors": [
+          "Leo McKern",
+          "Eleanor Bron",
+          "Joanna David",
+          "Susan Richards",
+          "Peggy Thorpe-Bates",
+          "Michael Feast",
+          "Alfred Burke",
+          "Albert Finney"
+        ],
+        "playwright": [
+          "Anton Chekhov"
+        ]
+      },
+      {
+        "order": "2",
+        "production_title": "Spokesong",
+        "venue": [
+          "Vaudeville Theatre"
+        ],
+        "city": [
+          "London, England"
+        ],
+        "actors": [
+          "Annabel Leventon",
+          "Niall Buggy"
+        ],
+        "playwright": [
+          "Stewart Parker"
+        ],
+        "composer_lyricist": [
+          "Jimmy Kennedy",
+          "Stewart Parker"
+        ]
+      }
+    ],
+    "media": [],
+    "word_count": 971,
+    "coordinate_points": [],
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Spokesong",
+        "Uncle Vanya"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
+      "companies": [],
+      "venues": [
+        "Royal Exchange Theatre",
+        "Vaudeville Theatre"
+      ],
+      "cities": [
+        "London, England",
+        "Manchester, England"
+      ],
+      "people": [
+        "Albert Finney",
+        "Alfred Burke",
+        "Annabel Leventon",
+        "Anton Chekhov",
+        "Eleanor Bron",
+        "Jimmy Kennedy",
+        "Joanna David",
+        "Leo McKern",
+        "Michael Elliott",
+        "Michael Feast",
+        "Niall Buggy",
+        "Peggy Thorpe-Bates",
+        "Stewart Parker",
+        "Susan Richards"
       ]
     }
   },
@@ -305053,7 +307159,7 @@
     "network_or_platform": "Academy of Motion Picture Arts and Sciences",
     "subject_role_map": [
       {
-        "person": "Alec Baldwin",
+        "person": "Steve Martin",
         "roles": [
           "performers"
         ],
@@ -305062,7 +307168,7 @@
         ]
       }
     ],
-    "subject_people": "Alec Baldwin",
+    "subject_people": "Steve Martin",
     "coordinate_points": [],
     "display_schema": {
       "work_type": "productions",
@@ -305077,7 +307183,7 @@
         "82nd Academy Awards"
       ],
       "subjects": [
-        "Alec Baldwin"
+        "Steve Martin"
       ],
       "book_authors": [],
       "publishers": [],

@@ -876,8 +876,13 @@ function valuesExceptGrouped(flatValues, groupedValues) {
 
 function isNonWorkProductionLabel(value) {
   const label = String(value || "").trim();
+  if (!label) return false;
+  if (/^Season's Greetings$/i.test(label)) return false;
+  if (/\b(year in review|season review|season preview|season announcement)\b/i.test(label)) return true;
+  if (/\b(dora|tony|olivier|gemini|genie|academy)\s+(awards?|nominations?)\b/i.test(label)) return true;
+  if (/\b(awards?|nominations?)\b/i.test(label) && /\b(season|year|dora|tony|olivier)\b/i.test(label)) return true;
   if (!/^(19|20)\d{2}\b/.test(label)) return false;
-  return /\b(awards?|nominations?|performances?|previews?|season|year in review)\b/i.test(label);
+  return /\b(awards?|nominations?|performances?|previews?|season|year in review|season review|festival season|company season|broadway musical season|theatre year|musical theatre preview)\b/i.test(label);
 }
 
 function productionLabelValues(value) {
@@ -1345,7 +1350,9 @@ function venueMapPoints() {
     if (!venue || !coordinates) return;
     const [lat, lon] = coordinates;
     const slug = entitySlug(venue);
-    const point = map.get(slug) || {
+    const key = `${slug}|${entitySlug(city || "")}`;
+    const point = map.get(key) || {
+      key,
       slug,
       label: venue,
       city,
@@ -1365,7 +1372,7 @@ function venueMapPoints() {
     point.lonTotal += lon;
     point.coordinateCount += 1;
     if (precision === "city") point.cityLevelCount += 1;
-    map.set(slug, point);
+    map.set(key, point);
   };
 
   state.records.forEach((record) => {
@@ -1545,7 +1552,11 @@ function recordMatchesQuery(record, rawQuery) {
   if (!query) return true;
   const parts = [];
   searchableParts(record).forEach((value) => pushSearchValue(parts, value));
-  return parts.some((part) => queryMatchesText(query, part));
+  if (parts.some((part) => queryMatchesText(query, part))) return true;
+  const terms = searchTerms(rawQuery);
+  if (!terms.length) return false;
+  const combined = searchable(record);
+  return terms.every((term) => combined.includes(term));
 }
 
 function searchTerms(rawQuery) {
@@ -2298,15 +2309,6 @@ function landingCard(item) {
 }
 
 function renderFrontpageDirectory() {
-  const browseLinks = TYPE_GROUPS
-    .map((type) => ({
-      label: type.label,
-      href: `#browse-group:${type.value}`,
-      count: state.records.filter((record) => typeGroup(record).value === type.value).length,
-    }))
-    .filter((item) => item.count)
-    .sort((a, b) => b.count - a.count || a.label.localeCompare(b.label));
-
   const collectionLinks = [
     { label: "Shakespeare Collection", href: "#section:shakespeare", count: countForTile("Shakespeare"), featured: true },
     { label: "Canadian Collection", href: "#browse-collection:canadian", count: collectionCount("The Canadian Collection") },
@@ -2332,11 +2334,29 @@ function renderFrontpageDirectory() {
   const sections = [
     {
       id: "browseStart",
+      className: "frontpage-section frontpage-lead",
+      label: "Find articles",
+      title: "Search & Browse",
+      titleHref: "#search",
+      links: [
+        { label: "Search Archive", href: "#search", count: state.records.length, featured: true },
+        { label: "Theatre Reviews", href: "#browse-group:theatre", count: countForTypeValue("theatre") },
+        { label: "Musical Theatre", href: "#browse-group:musical-theatre", count: countForTypeValue("musical-theatre") },
+        { label: "Book Reviews", href: "#browse-group:book-reviews", count: countForTypeValue("book-reviews") },
+      ],
+      limit: 5,
+    },
+    {
+      id: "indexStart",
       className: "frontpage-section",
-      label: "Categories",
-      title: "Browse",
-      titleHref: "#section:browse",
-      links: browseLinks,
+      label: "Master index",
+      title: "Works & People",
+      titleHref: "#master-index",
+      links: [
+        ...indexLinks.filter((item) =>
+          ["All Works", "Plays", "Musicals", "Books", "Television", "All People", "Actors"].includes(item.label)
+        ),
+      ],
       limit: 8,
     },
     {
@@ -2349,22 +2369,18 @@ function renderFrontpageDirectory() {
       limit: 6,
     },
     {
-      id: "indexStart",
-      className: "frontpage-section",
-      label: "Alphabetical maps",
-      title: "Indexes",
-      titleHref: "#section:indexes",
-      links: indexLinks,
-      limit: 10,
-    },
-    {
       id: "publicationStart",
       className: "frontpage-section",
-      label: "Sources",
-      title: "Publications",
-      titleHref: "#index:publications",
-      links: publicationLinks,
-      limit: 10,
+      label: "Map & sources",
+      title: "Explore",
+      titleHref: "#map",
+      links: [
+        { label: "Archive Map", href: "#map", count: venueMapPoints().length, featured: true },
+        { label: "Chronology", href: "#section:chronology", count: state.records.length },
+        { label: "Publications", href: "#index:publications", count: publicationLinks.length },
+        ...publicationLinks.slice(0, 3),
+      ],
+      limit: 7,
     },
   ];
 
@@ -2608,6 +2624,7 @@ function masterIndexEntries(filter) {
       entityValues(record, typeKey).forEach((value) => {
         const label = String(value || "").trim();
         if (!label) return;
+        if ((typeKey === "productions" || typeKey === "shakespeare-plays") && isNonWorkProductionLabel(label)) return;
         const slug = entitySlug(label);
         const key = `${typeKey}:${slug}`;
         const existing = map.get(key) || { slug, label, typeKey, records: [], recordSlugs: new Set() };
@@ -3426,7 +3443,7 @@ function renderMapView() {
   });
   const hint = document.createElement("p");
   hint.className = "map-hint";
-  hint.textContent = "Zoom in to reveal venue markers.";
+  hint.textContent = "Use the layer controls to focus cities, venues, or approximate venue points.";
   list.replaceChildren(listTitle, links, venueTitle, hint, venueLinks);
   const filterMapList = (query) => {
     list.querySelectorAll("a").forEach((link) => {
@@ -3448,8 +3465,10 @@ function renderMapView() {
       initialZoom: 3,
       searchControl: true,
       jumpControl: true,
+      layerControl: true,
+      venueZoomThreshold: 9,
       onSearch: filterMapList,
-      onZoom: (zoom) => shell.classList.toggle("is-venue-zoom", zoom >= 11),
+      onZoom: (zoom) => shell.classList.toggle("is-venue-zoom", zoom >= 9),
     });
   });
 }
@@ -3468,6 +3487,7 @@ function renderHomeMap() {
     initialZoom: 3,
     searchControl: true,
     jumpControl: true,
+    venueZoomThreshold: 9,
   });
 }
 
@@ -3490,7 +3510,10 @@ function renderLeafletMap(container, points, options = {}) {
   }).addTo(map);
   const bounds = [];
   const searchable = [];
+  const cityMarkers = [];
   const venueMarkers = [];
+  const layerState = { cities: true, venues: true, approximate: true };
+  const venueZoomThreshold = options.venueZoomThreshold ?? 9;
   const maxCount = Math.max(...points.map((point) => point.count), 1);
   points.forEach((point) => {
     const radius = 5 + Math.sqrt(point.count / maxCount) * 11;
@@ -3507,6 +3530,7 @@ function renderLeafletMap(container, points, options = {}) {
     marker.bindPopup(`<strong>${point.label}</strong>${point.count.toLocaleString()} mapped article references<br><a href="#entity:cities:${point.slug}">Open city index</a>`);
     searchable.push({ label: `${point.label} city`, point, marker, zoom: 9 });
     marker._cushmanMarkerType = "city";
+    cityMarkers.push(marker);
     bounds.push([point.lat, point.lon]);
   });
   (options.venues || []).slice(0, options.maxVenues ?? (options.venues || []).length).forEach((point) => {
@@ -3520,20 +3544,31 @@ function renderLeafletMap(container, points, options = {}) {
     }).addTo(map);
     const precisionNote = point.precision === "city" ? "<br><em>Approximate city-level point</em>" : "";
     marker.bindPopup(`<strong>${point.label}</strong>${point.city || ""}${precisionNote}<br>${point.count.toLocaleString()} article references<br><a href="#entity:venues:${point.slug}">Open venue index</a>`);
+    marker._cushmanMarkerType = "venue";
+    marker._cushmanApproximate = point.precision === "city";
     venueMarkers.push(marker);
     searchable.push({ label: `${point.label} ${point.city || ""} venue`, point, marker, zoom: 13 });
     bounds.push([point.lat, point.lon]);
   });
   const updateVenueVisibility = () => {
     const zoom = map.getZoom();
+    cityMarkers.forEach((marker) => {
+      const el = marker.getElement();
+      if (!el) return;
+      el.style.opacity = layerState.cities ? (zoom >= venueZoomThreshold ? "0.34" : "1") : "0";
+      el.style.pointerEvents = layerState.cities ? "" : "none";
+    });
     venueMarkers.forEach((marker) => {
       const el = marker.getElement();
-      if (el) el.style.opacity = zoom >= 11 ? "1" : "0";
-    });
-    searchable.forEach((item) => {
-      if (item.marker._cushmanMarkerType !== "city") return;
-      const el = item.marker.getElement();
-      if (el) el.style.opacity = zoom >= 11 ? "0.32" : "1";
+      if (!el) return;
+      const allowedByLayer = layerState.venues && (!marker._cushmanApproximate || layerState.approximate);
+      if (!allowedByLayer) {
+        el.style.opacity = "0";
+        el.style.pointerEvents = "none";
+        return;
+      }
+      el.style.opacity = zoom >= venueZoomThreshold ? "1" : "0.44";
+      el.style.pointerEvents = "";
     });
     if (typeof options.onZoom === "function") options.onZoom(zoom);
   };
@@ -3576,6 +3611,24 @@ function renderLeafletMap(container, points, options = {}) {
       }
     });
     map.getContainer().append(control);
+  }
+  if (options.layerControl) {
+    const layerControl = L.DomUtil.create("fieldset", "leaflet-layer-control");
+    layerControl.innerHTML = `
+      <legend>Layers</legend>
+      <label><input type="checkbox" data-layer="cities" checked> Cities</label>
+      <label><input type="checkbox" data-layer="venues" checked> Venues</label>
+      <label><input type="checkbox" data-layer="approximate" checked> Approx.</label>
+    `;
+    L.DomEvent.disableClickPropagation(layerControl);
+    L.DomEvent.disableScrollPropagation(layerControl);
+    layerControl.querySelectorAll("input").forEach((input) => {
+      input.addEventListener("change", () => {
+        layerState[input.dataset.layer] = input.checked;
+        updateVenueVisibility();
+      });
+    });
+    map.getContainer().append(layerControl);
   }
   const legend = L.DomUtil.create("div", "leaflet-map-legend");
   legend.innerHTML = `<span><i class="legend-city"></i>City cluster</span><span><i class="legend-venue"></i>Venue</span><span><i class="legend-approximate"></i>Approximate venue</span>`;
@@ -5076,17 +5129,22 @@ async function init() {
 }
 
 els.menuButton.addEventListener("click", () => {
-  els.drawer.classList.toggle("is-open");
+  const isOpen = els.drawer.classList.toggle("is-open");
+  els.menuButton.setAttribute("aria-expanded", String(isOpen));
 });
 
 document.addEventListener("click", (event) => {
   if (!els.drawer.classList.contains("is-open")) return;
   if (els.drawer.contains(event.target) || els.menuButton.contains(event.target)) return;
   els.drawer.classList.remove("is-open");
+  els.menuButton.setAttribute("aria-expanded", "false");
 });
 
 els.drawer.addEventListener("click", (event) => {
-  if (event.target.closest("a")) els.drawer.classList.remove("is-open");
+  if (event.target.closest("a")) {
+    els.drawer.classList.remove("is-open");
+    els.menuButton.setAttribute("aria-expanded", "false");
+  }
 });
 
 els.searchInput.addEventListener("input", (event) => {
