@@ -2342,9 +2342,11 @@ function renderFrontpageDirectory() {
         { label: "Search Archive", href: "#search", count: state.records.length, featured: true },
         { label: "Theatre Reviews", href: "#browse-group:theatre", count: countForTypeValue("theatre") },
         { label: "Musical Theatre", href: "#browse-group:musical-theatre", count: countForTypeValue("musical-theatre") },
+        { label: "Television", href: "#browse-group:television", count: countForTypeValue("television") },
+        { label: "Music & Concerts", href: "#browse-group:music-concerts", count: countForTypeValue("music-concerts") },
         { label: "Book Reviews", href: "#browse-group:book-reviews", count: countForTypeValue("book-reviews") },
       ],
-      limit: 5,
+      limit: 6,
     },
     {
       id: "indexStart",
