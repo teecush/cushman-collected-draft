@@ -1517,16 +1517,16 @@ h1 {
 }
 
 .article-production-group + .article-production-group {
-  padding-top: 4px;
+  padding-top: 10px;
 }
 
 .article-production-group + .article-production-group::before {
   content: "";
   display: block;
-  width: min(180px, 42%);
+  width: min(360px, 72%);
   height: 1px;
-  margin-bottom: 3px;
-  background: linear-gradient(90deg, #d7cfbd, rgba(215, 207, 189, 0));
+  margin-bottom: 6px;
+  background: linear-gradient(90deg, #d7cfbd, rgba(215, 207, 189, 0.18), rgba(215, 207, 189, 0));
 }
 
 .article-production-group-empty {
