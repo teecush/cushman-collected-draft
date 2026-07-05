@@ -987,6 +987,13 @@ function sortRecords(records) {
   return sorted.sort((a, b) => String(b.date).localeCompare(String(a.date)));
 }
 
+function sortRecordsChronologically(records) {
+  return [...records].sort((a, b) =>
+    String(a.date || "").localeCompare(String(b.date || "")) ||
+    String(a.title || "").localeCompare(String(b.title || ""))
+  );
+}
+
 function collectionNames(record) {
   const names = Array.isArray(record.collections) ? record.collections.filter(Boolean) : [];
   if (SHAKESPEARE_DERIVED_COLLECTIONS.some((name) => names.includes(name)) && !names.includes(SHAKESPEARE_COLLECTION)) {
@@ -2968,7 +2975,7 @@ function renderTimelineTool() {
   const max = Math.max(...[...years.values()].map((items) => items.length), 1);
   const showYear = (year) => {
     yearButtons.querySelectorAll(".timeline-year").forEach((button) => button.classList.toggle("is-active", button.dataset.year === year));
-    results.replaceChildren(...sortRecords(years.get(year) || []).slice(0, 36).map(resultCard));
+    results.replaceChildren(...sortRecordsChronologically(years.get(year) || []).map(resultCard));
   };
   [...years.entries()].sort((a, b) => a[0].localeCompare(b[0])).forEach(([year, records]) => {
     const button = document.createElement("button");
@@ -3256,14 +3263,14 @@ function renderTimelineToolV2() {
 
   const showYear = (year) => {
     activeYear = String(year);
-    const records = sortRecords(years.get(activeYear) || []);
+    const records = sortRecordsChronologically(years.get(activeYear) || []);
     const pct = ((Number(activeYear) - minYear) / yearSpan) * 100;
     thumb.style.left = `${pct}%`;
     yearLabel.style.left = `${pct}%`;
     yearLabel.textContent = `${activeYear} / ${records.length.toLocaleString()} ${records.length === 1 ? "article" : "articles"}`;
     track.querySelectorAll(".timeline-segment").forEach((segment) => segment.classList.toggle("is-active", segment.dataset.year === activeYear));
     results.replaceChildren();
-    records.slice(0, 28).forEach((record) => {
+    records.forEach((record) => {
       const link = document.createElement("a");
       link.href = `#review:${record.slug}`;
       const split = headlineParts(record.title);
