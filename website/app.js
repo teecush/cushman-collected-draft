@@ -760,6 +760,16 @@ function formatDate(value) {
   });
 }
 
+function timelineDateParts(value) {
+  if (!value) return { primary: "", secondary: "" };
+  const date = new Date(`${value}T00:00:00`);
+  if (Number.isNaN(date.valueOf())) return { primary: value, secondary: "" };
+  return {
+    primary: date.toLocaleDateString("en-US", { month: "short", day: "numeric" }),
+    secondary: date.toLocaleDateString("en-US", { year: "numeric" }),
+  };
+}
+
 function entitySlug(value) {
   return String(value || "")
     .toLowerCase()
@@ -3274,6 +3284,11 @@ function renderTimelineToolV2() {
       const link = document.createElement("a");
       link.href = `#review:${record.slug}`;
       const split = headlineParts(record.title);
+      const dateParts = timelineDateParts(record.date);
+      const date = document.createElement("span");
+      date.className = "timeline-date";
+      date.innerHTML = `<strong>${dateParts.primary || record.year || ""}</strong>${dateParts.secondary ? `<span>${dateParts.secondary}</span>` : ""}`;
+      link.append(date);
       const media = record.media?.[0];
       if (media?.local_path) {
         link.className = "has-thumb";
@@ -3285,7 +3300,7 @@ function renderTimelineToolV2() {
       }
       const copy = document.createElement("span");
       copy.className = "timeline-copy";
-      copy.innerHTML = `<strong>${split.headline}</strong>${split.deck ? `<span>${split.deck}</span>` : ""}<em>${formatDate(record.date) || record.year || ""} / ${typeLabel(record)}</em>`;
+      copy.innerHTML = `<strong>${split.headline}</strong>${split.deck ? `<span>${split.deck}</span>` : ""}<em>${typeLabel(record)}</em>`;
       link.append(copy);
       results.append(link);
     });

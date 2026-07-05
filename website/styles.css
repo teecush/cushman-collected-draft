@@ -3341,24 +3341,24 @@ h1 {
 
 .timeline-list {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0 26px;
+  grid-template-columns: 1fr;
+  gap: 0;
   border-top: 2px solid var(--ink);
   padding-top: 14px;
 }
 
 .timeline-list a {
   display: grid;
-  gap: 4px;
+  grid-template-columns: 104px minmax(0, 1fr);
+  gap: 18px;
+  align-items: start;
   border-bottom: 1px solid var(--rule);
-  padding: 10px 0;
+  padding: 14px 0;
   color: var(--ink);
 }
 
 .timeline-list a.has-thumb {
-  grid-template-columns: 84px minmax(0, 1fr);
-  gap: 12px;
-  align-items: start;
+  grid-template-columns: 104px 84px minmax(0, 1fr);
 }
 
 .timeline-list img {
@@ -3366,6 +3366,32 @@ h1 {
   aspect-ratio: 4 / 3;
   object-fit: cover;
   background: var(--cream);
+}
+
+.timeline-date {
+  display: grid;
+  justify-items: start;
+  align-content: start;
+  gap: 2px;
+  color: var(--blue-dark);
+  font-family: var(--sans);
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.timeline-date strong {
+  font-family: var(--sans);
+  font-size: 16px;
+  font-weight: 900;
+  letter-spacing: 0.6px;
+}
+
+.timeline-date span {
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.4px;
 }
 
 .timeline-copy {
@@ -3379,7 +3405,7 @@ h1 {
   line-height: 1.2;
 }
 
-.timeline-list span {
+.timeline-copy > span {
   color: #555;
   font-family: var(--serif);
   font-size: 14px;
@@ -3495,6 +3521,20 @@ h1 {
 
   .timeline-list {
     grid-template-columns: 1fr;
+  }
+
+  .timeline-list a,
+  .timeline-list a.has-thumb {
+    grid-template-columns: 74px minmax(0, 1fr);
+    gap: 12px;
+  }
+
+  .timeline-list img {
+    display: none;
+  }
+
+  .timeline-date strong {
+    font-size: 13px;
   }
 
   .timeline-year-label {
