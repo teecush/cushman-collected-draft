@@ -1,5 +1,6 @@
-const DATA_URL = new URL("../site_export/data/public_reviews.json?v=112", import.meta.url);
+const DATA_URL = new URL("../site_export/data/public_reviews.json?v=113", import.meta.url);
 const CONTENT_ROOT = new URL("../site_export/content/reviews/", import.meta.url);
+const MEDIA_ASSET_VERSION = "55aabc22";
 const PAGE_SIZE = 36;
 const SHAKESPEARE_COLLECTION = "The Shakespeare Collection";
 const SHAKESPEARE_DERIVED_COLLECTIONS = ["Riffs on Shakespeare", "Thoughts on Shakespeare"];
@@ -2233,7 +2234,7 @@ function renderCurrentLanding() {
     const media = record.media?.[0];
     if (media?.local_path) {
       const img = document.createElement("img");
-      img.src = new URL(`../site_export/content/${media.local_path}`, import.meta.url);
+      img.src = mediaAssetUrl(media.local_path);
       img.alt = media.alt || media.caption || record.title;
       img.loading = "lazy";
       link.append(img);
@@ -2432,7 +2433,7 @@ function renderCurrentFeature() {
     imageLink.className = "current-feature-image";
     imageLink.href = `#review:${current.slug}`;
     const img = document.createElement("img");
-    img.src = new URL(`../site_export/content/${media.local_path}`, import.meta.url);
+    img.src = mediaAssetUrl(media.local_path);
     img.alt = media.alt || media.caption || current.title;
     imageLink.append(img);
     card.append(imageLink);
@@ -3135,7 +3136,7 @@ function renderExploreToolV2() {
       if (media?.local_path) {
         link.className = "has-thumb";
         const thumb = document.createElement("img");
-        thumb.src = new URL(`../site_export/content/${media.local_path}`, import.meta.url);
+        thumb.src = mediaAssetUrl(media.local_path);
         thumb.alt = media.alt || media.caption || record.title || "";
         thumb.loading = "lazy";
         link.append(thumb);
@@ -3293,7 +3294,7 @@ function renderTimelineToolV2() {
       if (media?.local_path) {
         link.className = "has-thumb";
         const thumb = document.createElement("img");
-        thumb.src = new URL(`../site_export/content/${media.local_path}`, import.meta.url);
+        thumb.src = mediaAssetUrl(media.local_path);
         thumb.alt = media.alt || media.caption || record.title || "";
         thumb.loading = "lazy";
         link.append(thumb);
@@ -4309,7 +4310,7 @@ function resultCard(record, context = {}) {
     card.classList.add("has-thumb");
     const thumb = document.createElement("img");
     thumb.className = "result-thumb";
-    thumb.src = new URL(`../site_export/content/${media.local_path}`, import.meta.url);
+    thumb.src = mediaAssetUrl(media.local_path);
     thumb.alt = media.alt || media.caption || record.title || "";
     thumb.loading = "lazy";
     card.append(thumb);
@@ -4766,12 +4767,18 @@ function asArray(value) {
   return Array.isArray(value) ? value : [value];
 }
 
+function mediaAssetUrl(localPath) {
+  const url = new URL(`../site_export/content/${localPath}`, import.meta.url);
+  url.searchParams.set("v", MEDIA_ASSET_VERSION);
+  return url.toString();
+}
+
 function hasCorrespondence(record) {
   return correspondenceItems(record).length > 0;
 }
 
 function correspondenceMediaUrl(media) {
-  return media?.local_path ? new URL(`../site_export/content/${media.local_path}`, import.meta.url).toString() : "";
+  return media?.local_path ? mediaAssetUrl(media.local_path) : "";
 }
 
 function articleCorrespondenceSection(record) {
