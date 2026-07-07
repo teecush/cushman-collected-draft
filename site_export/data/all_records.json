@@ -35151,7 +35151,7 @@
         "author": "John O'Riordan",
         "date": "1977-09-26",
         "note_type": "Letter",
-        "summary": "Challenges Cushman''''''''''''''''''''''''''''''''s description of O''''''''''''''''''''''''''''''''Casey''''''''''''''''''''''''''''''''s characters as \"quaint urban numbskulls\" and defends The Plough and the Stars.",
+        "summary": "Challenges Cushman''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''s description of O''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''Casey''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''s characters as \"quaint urban numbskulls\" and defends The Plough and the Stars.",
         "source_photo": "Scrapbook Trips/4 (july 5th)/IMG_9811.HEIC",
         "media": [
           {
@@ -38061,6 +38061,644 @@
         "Peter Barnes",
         "Richard Griffiths",
         "Timothy West"
+      ]
+    }
+  },
+  {
+    "slug": "1978-01-29-the-authentic-thane",
+    "route": "/reviews/1978-01-29-the-authentic-thane/",
+    "source_file": "1978.01.29.The_Observer_Magazine.The_Authentic_Thane.md",
+    "title": "The Authentic Thane",
+    "date": "1978-01-29",
+    "year": "1978",
+    "publication": "The Observer Magazine",
+    "source_publication": "The Observer Magazine",
+    "article_category": "Profile",
+    "collections": [
+      "The Shakespeare Collection",
+      "UK Collection"
+    ],
+    "publication_status": "publish",
+    "editorial_issue_type": "clean_manual_transcription",
+    "canonical_file": "",
+    "production_title": "",
+    "company": "",
+    "venue": "",
+    "city": "",
+    "coordinates": [],
+    "people": [
+      "Ben Jonson",
+      "Christopher Marlowe",
+      "Frank Wedekind",
+      "Henrik Ibsen",
+      "Ian McKellen",
+      "Susan Fleetwood",
+      "Trevor Nunn",
+      "William Shakespeare"
+    ],
+    "roles": {
+      "director": [
+        "Trevor Nunn"
+      ],
+      "actors": [
+        "Ian McKellen",
+        "Susan Fleetwood"
+      ],
+      "playwright": [
+        "William Shakespeare",
+        "Henrik Ibsen",
+        "Ben Jonson",
+        "Christopher Marlowe",
+        "Frank Wedekind"
+      ],
+      "composer_lyricist": [],
+      "musical_director": [],
+      "choreographer": [],
+      "orchestrator": [],
+      "arranger": [],
+      "assistant_director": [],
+      "stage_manager": [],
+      "assistant_musical_director": [],
+      "vocal_director": [],
+      "dance_captain": [],
+      "fight_director": [],
+      "dramaturg": [],
+      "producer": [],
+      "set_designer": [],
+      "costume_designer": [],
+      "lighting_designer": [],
+      "sound_designer": [],
+      "musicians": [],
+      "performers": [],
+      "artists": []
+    },
+    "production_groups": [
+      {
+        "order": "1",
+        "production_title": "Macbeth",
+        "company": [
+          "Royal Shakespeare Company"
+        ]
+      },
+      {
+        "order": "2",
+        "production_title": "Romeo and Juliet",
+        "company": [
+          "Royal Shakespeare Company"
+        ]
+      },
+      {
+        "order": "3",
+        "production_title": "The Alchemist",
+        "company": [
+          "Royal Shakespeare Company"
+        ]
+      },
+      {
+        "order": "4",
+        "production_title": "Pillars of the Community",
+        "company": [
+          "Royal Shakespeare Company"
+        ]
+      },
+      {
+        "order": "5",
+        "production_title": "Doctor Faustus",
+        "company": [
+          "Royal Shakespeare Company"
+        ]
+      },
+      {
+        "order": "6",
+        "production_title": "The Marquis of Keith",
+        "company": [
+          "Royal Shakespeare Company"
+        ]
+      }
+    ],
+    "media": [],
+    "correspondence": [],
+    "word_count": 1577,
+    "subject_role_map": [
+      {
+        "person": "Ian McKellen",
+        "roles": [
+          "actors"
+        ],
+        "labels": [
+          "Actor"
+        ]
+      }
+    ],
+    "subject_people": "Ian McKellen",
+    "coordinate_points": [],
+    "display_schema": {
+      "work_type": "subjects",
+      "work_label": "Subject",
+      "company_label": "Company",
+      "primary_browse": "subjects",
+      "secondary_browse": "productions"
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Doctor Faustus",
+        "Macbeth",
+        "Pillars of the Community",
+        "Romeo and Juliet",
+        "The Alchemist",
+        "The Marquis of Keith"
+      ],
+      "subjects": [
+        "Ian McKellen"
+      ],
+      "book_authors": [],
+      "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
+      "companies": [
+        "Royal Shakespeare Company"
+      ],
+      "venues": [],
+      "cities": [],
+      "people": [
+        "Ben Jonson",
+        "Christopher Marlowe",
+        "Frank Wedekind",
+        "Henrik Ibsen",
+        "Ian McKellen",
+        "Susan Fleetwood",
+        "Trevor Nunn",
+        "William Shakespeare"
+      ]
+    }
+  },
+  {
+    "slug": "1978-02-05-robert-cushman-s-quick-guide-to-the-london-stage",
+    "route": "/reviews/1978-02-05-robert-cushman-s-quick-guide-to-the-london-stage/",
+    "source_file": "1978.02.05.The_Observer.Robert_Cushman_s_Quick_Guide_To_The_London_Stage.md",
+    "title": "Robert Cushman's Quick Guide To The London Stage",
+    "date": "1978-02-05",
+    "year": "1978",
+    "publication": "The Observer",
+    "source_publication": "The Observer",
+    "article_category": "Theatre Review",
+    "collections": [
+      "UK Collection"
+    ],
+    "publication_status": "publish",
+    "editorial_issue_type": "clean_manual_transcription",
+    "canonical_file": "",
+    "production_title": "",
+    "company": "",
+    "venue": "",
+    "city": "",
+    "coordinates": [],
+    "people": [
+      "Barrie Keeffe",
+      "Charles Wood",
+      "Diana Rigg",
+      "Edward Bond",
+      "Ferenc Molnar",
+      "Ingrid Bergman",
+      "John Murrell",
+      "Mike Gwilym",
+      "N. C. Hunter",
+      "Niall Buggy",
+      "Siobhan McKenna",
+      "Wendy Hiller"
+    ],
+    "roles": {
+      "director": [],
+      "actors": [
+        "Mike Gwilym",
+        "Diana Rigg",
+        "Siobhan McKenna",
+        "Niall Buggy",
+        "Wendy Hiller",
+        "Ingrid Bergman"
+      ],
+      "playwright": [
+        "Edward Bond",
+        "Charles Wood",
+        "Barrie Keeffe",
+        "Ferenc Molnar",
+        "John Murrell",
+        "N. C. Hunter"
+      ],
+      "composer_lyricist": [],
+      "musical_director": [],
+      "choreographer": [],
+      "orchestrator": [],
+      "arranger": [],
+      "assistant_director": [],
+      "stage_manager": [],
+      "assistant_musical_director": [],
+      "vocal_director": [],
+      "dance_captain": [],
+      "fight_director": [],
+      "dramaturg": [],
+      "producer": [],
+      "set_designer": [],
+      "costume_designer": [],
+      "lighting_designer": [],
+      "sound_designer": [],
+      "musicians": [],
+      "performers": [],
+      "artists": []
+    },
+    "production_groups": [
+      {
+        "order": "1",
+        "production_title": "The Bundle",
+        "venue": [
+          "Warehouse"
+        ],
+        "city": [
+          "London, England"
+        ],
+        "playwright": [
+          "Edward Bond"
+        ],
+        "actors": [
+          "Mike Gwilym"
+        ]
+      },
+      {
+        "order": "2",
+        "production_title": "Dingo",
+        "venue": [
+          "Warehouse"
+        ],
+        "city": [
+          "London, England"
+        ],
+        "playwright": [
+          "Charles Wood"
+        ]
+      },
+      {
+        "order": "3",
+        "production_title": "Frozen Assets",
+        "venue": [
+          "Warehouse"
+        ],
+        "city": [
+          "London, England"
+        ],
+        "playwright": [
+          "Barrie Keeffe"
+        ]
+      },
+      {
+        "order": "4",
+        "production_title": "The Guardsman",
+        "venue": [
+          "Lyttelton Theatre"
+        ],
+        "city": [
+          "London, England"
+        ],
+        "playwright": [
+          "Ferenc Molnar"
+        ],
+        "actors": [
+          "Diana Rigg"
+        ]
+      },
+      {
+        "order": "5",
+        "production_title": "Kingdom Come!",
+        "venue": [
+          "King's Head Theatre"
+        ],
+        "city": [
+          "London, England"
+        ]
+      },
+      {
+        "order": "6",
+        "production_title": "Memoir",
+        "venue": [
+          "Ambassadors Theatre"
+        ],
+        "city": [
+          "London, England"
+        ],
+        "playwright": [
+          "John Murrell"
+        ],
+        "actors": [
+          "Siobhan McKenna",
+          "Niall Buggy"
+        ]
+      },
+      {
+        "order": "7",
+        "production_title": "Waters of the Moon",
+        "venue": [
+          "Haymarket Theatre"
+        ],
+        "city": [
+          "London, England"
+        ],
+        "playwright": [
+          "N. C. Hunter"
+        ],
+        "actors": [
+          "Wendy Hiller",
+          "Ingrid Bergman"
+        ]
+      }
+    ],
+    "media": [],
+    "correspondence": [],
+    "word_count": 213,
+    "coordinate_points": [],
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Dingo",
+        "Frozen Assets",
+        "Kingdom Come!",
+        "Memoir",
+        "The Bundle",
+        "The Guardsman",
+        "Waters of the Moon"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
+      "companies": [],
+      "venues": [
+        "Ambassadors Theatre",
+        "Haymarket Theatre",
+        "King's Head Theatre",
+        "Lyttelton Theatre",
+        "Warehouse"
+      ],
+      "cities": [
+        "London, England"
+      ],
+      "people": [
+        "Barrie Keeffe",
+        "Charles Wood",
+        "Diana Rigg",
+        "Edward Bond",
+        "Ferenc Molnar",
+        "Ingrid Bergman",
+        "John Murrell",
+        "Mike Gwilym",
+        "N. C. Hunter",
+        "Niall Buggy",
+        "Siobhan McKenna",
+        "Wendy Hiller"
+      ]
+    }
+  },
+  {
+    "slug": "1978-02-05-the-phantom-from-vietnam",
+    "route": "/reviews/1978-02-05-the-phantom-from-vietnam/",
+    "source_file": "1978.02.05.The_Observer.The_Phantom_From_Vietnam.md",
+    "title": "The Phantom From Vietnam",
+    "date": "1978-02-05",
+    "year": "1978",
+    "publication": "The Observer",
+    "source_publication": "The Observer",
+    "article_category": "Theatre Review",
+    "collections": [
+      "UK Collection"
+    ],
+    "publication_status": "publish",
+    "editorial_issue_type": "clean_manual_transcription",
+    "canonical_file": "",
+    "production_title": "",
+    "company": "",
+    "venue": "",
+    "city": "",
+    "coordinates": [],
+    "people": [
+      "Ann Mitchell",
+      "Anna Carteret",
+      "Barbara Atkinson",
+      "Beryl Reid",
+      "David Rabe",
+      "Don Fellows",
+      "Ewan Hooper",
+      "Frank Barrie",
+      "John Barton",
+      "Judi Dench",
+      "Julia Blalock",
+      "Michael Pennington",
+      "Oscar Wilde",
+      "Philip Prowse",
+      "Robert David Macdonald",
+      "William Congreve"
+    ],
+    "roles": {
+      "director": [
+        "Philip Prowse",
+        "John Barton",
+        "Ewan Hooper"
+      ],
+      "actors": [
+        "Don Fellows",
+        "Ann Mitchell",
+        "Julia Blalock",
+        "Beryl Reid",
+        "Michael Pennington",
+        "Judi Dench",
+        "Frank Barrie",
+        "Anna Carteret",
+        "Barbara Atkinson",
+        "Ewan Hooper"
+      ],
+      "playwright": [
+        "David Rabe",
+        "Robert David Macdonald",
+        "William Congreve",
+        "Oscar Wilde"
+      ],
+      "composer_lyricist": [],
+      "musical_director": [],
+      "choreographer": [],
+      "orchestrator": [],
+      "arranger": [],
+      "assistant_director": [],
+      "stage_manager": [],
+      "assistant_musical_director": [],
+      "vocal_director": [],
+      "dance_captain": [],
+      "fight_director": [],
+      "dramaturg": [],
+      "producer": [],
+      "set_designer": [
+        "Philip Prowse"
+      ],
+      "costume_designer": [],
+      "lighting_designer": [],
+      "sound_designer": [],
+      "musicians": [],
+      "performers": [],
+      "artists": []
+    },
+    "production_groups": [
+      {
+        "order": "1",
+        "production_title": "Sticks and Bones",
+        "venue": [
+          "New End Theatre"
+        ],
+        "city": [
+          "London, England"
+        ],
+        "playwright": [
+          "David Rabe"
+        ],
+        "actors": [
+          "Don Fellows"
+        ]
+      },
+      {
+        "order": "2",
+        "production_title": "Summit Conference",
+        "company": [
+          "Citizens Theatre"
+        ],
+        "venue": [
+          "Citizens Theatre"
+        ],
+        "city": [
+          "Glasgow, Scotland"
+        ],
+        "playwright": [
+          "Robert David Macdonald"
+        ],
+        "director": [
+          "Philip Prowse"
+        ],
+        "set_designer": [
+          "Philip Prowse"
+        ],
+        "actors": [
+          "Ann Mitchell",
+          "Julia Blalock"
+        ]
+      },
+      {
+        "order": "3",
+        "production_title": "The Way of the World",
+        "company": [
+          "Royal Shakespeare Company"
+        ],
+        "venue": [
+          "Aldwych Theatre"
+        ],
+        "city": [
+          "London, England"
+        ],
+        "playwright": [
+          "William Congreve"
+        ],
+        "director": [
+          "John Barton"
+        ],
+        "actors": [
+          "Beryl Reid",
+          "Michael Pennington",
+          "Judi Dench"
+        ]
+      },
+      {
+        "order": "4",
+        "production_title": "An Ideal Husband",
+        "venue": [
+          "Greenwich Theatre"
+        ],
+        "city": [
+          "London, England"
+        ],
+        "playwright": [
+          "Oscar Wilde"
+        ],
+        "director": [
+          "Ewan Hooper"
+        ],
+        "actors": [
+          "Frank Barrie",
+          "Anna Carteret",
+          "Barbara Atkinson",
+          "Ewan Hooper"
+        ]
+      }
+    ],
+    "media": [],
+    "correspondence": [],
+    "word_count": 1130,
+    "coordinate_points": [],
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "An Ideal Husband",
+        "Sticks and Bones",
+        "Summit Conference",
+        "The Way of the World"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
+      "companies": [
+        "Citizens Theatre",
+        "Royal Shakespeare Company"
+      ],
+      "venues": [
+        "Aldwych Theatre",
+        "Citizens Theatre",
+        "Greenwich Theatre",
+        "New End Theatre"
+      ],
+      "cities": [
+        "Glasgow, Scotland",
+        "London, England"
+      ],
+      "people": [
+        "Ann Mitchell",
+        "Anna Carteret",
+        "Barbara Atkinson",
+        "Beryl Reid",
+        "David Rabe",
+        "Don Fellows",
+        "Ewan Hooper",
+        "Frank Barrie",
+        "John Barton",
+        "Judi Dench",
+        "Julia Blalock",
+        "Michael Pennington",
+        "Oscar Wilde",
+        "Philip Prowse",
+        "Robert David Macdonald",
+        "William Congreve"
       ]
     }
   },
@@ -339826,7 +340464,7 @@
     "network_or_platform": "Academy of Motion Picture Arts and Sciences",
     "subject_role_map": [
       {
-        "person": "Alec Baldwin",
+        "person": "Steve Martin",
         "roles": [
           "performers"
         ],
@@ -339835,7 +340473,7 @@
         ]
       }
     ],
-    "subject_people": "Alec Baldwin",
+    "subject_people": "Steve Martin",
     "coordinate_points": [],
     "display_schema": {
       "work_type": "productions",
@@ -339850,7 +340488,7 @@
         "82nd Academy Awards"
       ],
       "subjects": [
-        "Alec Baldwin"
+        "Steve Martin"
       ],
       "book_authors": [],
       "publishers": [],
