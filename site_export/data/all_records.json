@@ -19929,7 +19929,7 @@
         "author": "E. G. Hall",
         "date": "1976-10-28",
         "note_type": "Letter",
-        "summary": "Notes responding to the Funny Peculiar section of Oh No You Don''''t!",
+        "summary": "Notes responding to the Funny Peculiar section of Oh No You Don''''''''''''''''''''''''''''''''t!",
         "source_photo": "Scrapbook Trips/4 (july 5th)/IMG_9872.HEIC; Scrapbook Trips/4 (july 5th)/IMG_9873.HEIC",
         "media": [
           {
@@ -54804,6 +54804,224 @@
     }
   },
   {
+    "slug": "1979-12-01-reviewing-the-70s",
+    "route": "/reviews/1979-12-01-reviewing-the-70s/",
+    "source_file": "1979.12.01.Radio_Times.Reviewing_The_70s.md",
+    "title": "Reviewing the '70s",
+    "date": "1979-12-01",
+    "year": "1979",
+    "publication": "Radio Times",
+    "source_publication": "Radio Times",
+    "article_category": "Television Review",
+    "collections": [
+      "UK Collection"
+    ],
+    "publication_status": "publish",
+    "editorial_issue_type": "clean_manual_transcription",
+    "canonical_file": "",
+    "production_title": "",
+    "company": "",
+    "venue": "",
+    "city": "",
+    "coordinates": [],
+    "people": [
+      "Alan Bridges",
+      "Annette Crosbie",
+      "Anthony Hopkins",
+      "Coral Browne",
+      "Daniel Massey",
+      "David Hare",
+      "Dennis Potter",
+      "Derek Jacobi",
+      "Elaine Morgan",
+      "Frank Finlay",
+      "Georgia Brown",
+      "Glenda Jackson",
+      "Ian McKellen",
+      "Jack Gold",
+      "Jack Rosenthal",
+      "Janet Suzman",
+      "John Hopkins",
+      "Ken Trodd",
+      "Leo Tolstoy",
+      "Maggie Smith",
+      "Michael Bryant",
+      "Peter Barkworth",
+      "Piers Haggard",
+      "Roy Battersby",
+      "Susan Littler",
+      "Tom Stoppard",
+      "Trevor Griffiths",
+      "William Shakespeare"
+    ],
+    "roles": {
+      "director": [
+        "Alan Bridges",
+        "Piers Haggard",
+        "Jack Gold",
+        "Roy Battersby"
+      ],
+      "actors": [
+        "Annette Crosbie",
+        "Janet Suzman",
+        "Ian McKellen",
+        "Derek Jacobi",
+        "Glenda Jackson",
+        "Peter Barkworth",
+        "Frank Finlay",
+        "Michael Bryant",
+        "Daniel Massey",
+        "Georgia Brown",
+        "Coral Browne",
+        "Maggie Smith",
+        "Susan Littler"
+      ],
+      "playwright": [
+        "William Shakespeare",
+        "Leo Tolstoy",
+        "Tom Stoppard",
+        "David Hare",
+        "Dennis Potter",
+        "Jack Rosenthal",
+        "Trevor Griffiths",
+        "John Hopkins",
+        "Elaine Morgan"
+      ],
+      "composer_lyricist": [],
+      "musical_director": [],
+      "choreographer": [],
+      "orchestrator": [],
+      "arranger": [],
+      "assistant_director": [],
+      "stage_manager": [],
+      "assistant_musical_director": [],
+      "vocal_director": [],
+      "dance_captain": [],
+      "fight_director": [],
+      "dramaturg": [],
+      "producer": [
+        "Ken Trodd"
+      ],
+      "set_designer": [],
+      "costume_designer": [],
+      "lighting_designer": [],
+      "sound_designer": [],
+      "musicians": [],
+      "performers": [],
+      "artists": []
+    },
+    "production_groups": [
+      {
+        "order": "1",
+        "production_title": "The Six Wives of Henry VIII",
+        "company": [
+          "BBC"
+        ],
+        "actors": [
+          "Annette Crosbie"
+        ]
+      },
+      {
+        "order": "2",
+        "production_title": "War and Peace",
+        "company": [
+          "BBC"
+        ],
+        "playwright": [
+          "Leo Tolstoy"
+        ],
+        "actors": [
+          "Anthony Hopkins"
+        ]
+      },
+      {
+        "order": "3",
+        "production_title": "Pennies from Heaven",
+        "company": [
+          "BBC"
+        ],
+        "playwright": [
+          "Dennis Potter"
+        ],
+        "director": [
+          "Piers Haggard"
+        ]
+      },
+      {
+        "order": "4",
+        "production_title": "Tinker, Tailor, Soldier, Spy",
+        "company": [
+          "BBC"
+        ]
+      }
+    ],
+    "media": [],
+    "correspondence": [],
+    "word_count": 768,
+    "show_title": "The Six Wives of Henry VIII; War and Peace; Pennies from Heaven; Tinker, Tailor, Soldier, Spy",
+    "network_or_platform": "BBC",
+    "coordinate_points": [],
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Show",
+      "company_label": "Network",
+      "primary_browse": "productions",
+      "secondary_browse": "networks"
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Pennies from Heaven",
+        "The Six Wives of Henry VIII",
+        "Tinker, Tailor, Soldier, Spy",
+        "War and Peace"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [
+        "BBC"
+      ],
+      "companies": [
+        "BBC"
+      ],
+      "venues": [],
+      "cities": [],
+      "people": [
+        "Alan Bridges",
+        "Annette Crosbie",
+        "Anthony Hopkins",
+        "Coral Browne",
+        "Daniel Massey",
+        "David Hare",
+        "Dennis Potter",
+        "Derek Jacobi",
+        "Elaine Morgan",
+        "Frank Finlay",
+        "Georgia Brown",
+        "Glenda Jackson",
+        "Ian McKellen",
+        "Jack Gold",
+        "Jack Rosenthal",
+        "Janet Suzman",
+        "John Hopkins",
+        "Ken Trodd",
+        "Leo Tolstoy",
+        "Maggie Smith",
+        "Michael Bryant",
+        "Peter Barkworth",
+        "Piers Haggard",
+        "Roy Battersby",
+        "Susan Littler",
+        "Tom Stoppard",
+        "Trevor Griffiths",
+        "William Shakespeare"
+      ]
+    }
+  },
+  {
     "slug": "1979-12-16-sandy-s-aladdin",
     "route": "/reviews/1979-12-16-sandy-s-aladdin/",
     "source_file": "1979.12.16.The_Observer.Sandy_s_Aladdin.md",
@@ -55284,6 +55502,229 @@
         "Ian McDiarmid",
         "John Salthouse",
         "Nicolas Kent"
+      ]
+    }
+  },
+  {
+    "slug": "1980-01-27-distant-laughter",
+    "route": "/reviews/1980-01-27-distant-laughter/",
+    "source_file": "1980.01.27.The_Observer.Distant_Laughter.md",
+    "title": "Distant Laughter",
+    "date": "1980-01-27",
+    "year": "1980",
+    "publication": "The Observer",
+    "source_publication": "The Observer",
+    "article_category": "Theatre Review",
+    "collections": [
+      "UK Collection"
+    ],
+    "publication_status": "publish",
+    "editorial_issue_type": "clean_manual_transcription",
+    "canonical_file": "",
+    "production_title": "",
+    "company": "",
+    "venue": "",
+    "city": "",
+    "coordinates": [],
+    "people": [
+      "Alan Ayckbourn",
+      "Alan Dosser",
+      "Alison Skilbeck",
+      "Beryl Reid",
+      "Eugene O'Neill",
+      "Hayden Griffin",
+      "Jill Meager",
+      "Lavinia Bertram",
+      "Michael Frayn",
+      "Oliver Cotton",
+      "Paul Todd",
+      "Peter Nichols",
+      "Rikki Fulton",
+      "Ron Haddrick",
+      "Stacy Keach"
+    ],
+    "roles": {
+      "director": [
+        "Alan Dosser"
+      ],
+      "actors": [
+        "Lavinia Bertram",
+        "Alison Skilbeck",
+        "Rikki Fulton",
+        "Oliver Cotton",
+        "Jill Meager",
+        "Stacy Keach",
+        "Ron Haddrick",
+        "Beryl Reid"
+      ],
+      "playwright": [
+        "Alan Ayckbourn",
+        "Michael Frayn",
+        "Peter Nichols",
+        "Eugene O'Neill"
+      ],
+      "composer_lyricist": [
+        "Paul Todd"
+      ],
+      "musical_director": [],
+      "choreographer": [],
+      "orchestrator": [],
+      "arranger": [],
+      "assistant_director": [],
+      "stage_manager": [],
+      "assistant_musical_director": [],
+      "vocal_director": [],
+      "dance_captain": [],
+      "fight_director": [],
+      "dramaturg": [],
+      "producer": [],
+      "set_designer": [
+        "Hayden Griffin"
+      ],
+      "costume_designer": [],
+      "lighting_designer": [],
+      "sound_designer": [],
+      "musicians": [],
+      "performers": [],
+      "artists": []
+    },
+    "production_groups": [
+      {
+        "order": "1",
+        "production_title": "Suburban Strains",
+        "company": [
+          "Stephen Joseph Theatre in the Round"
+        ],
+        "venue": [
+          "Stephen Joseph Theatre in the Round"
+        ],
+        "city": [
+          "Scarborough, England"
+        ],
+        "actors": [
+          "Lavinia Bertram",
+          "Alison Skilbeck"
+        ],
+        "playwright": [
+          "Alan Ayckbourn"
+        ],
+        "composer_lyricist": [
+          "Paul Todd"
+        ]
+      },
+      {
+        "order": "2",
+        "production_title": "Liberty Hall",
+        "venue": [
+          "Greenwich Theatre"
+        ],
+        "city": [
+          "London, England"
+        ],
+        "actors": [
+          "Rikki Fulton"
+        ],
+        "playwright": [
+          "Michael Frayn"
+        ]
+      },
+      {
+        "order": "3",
+        "production_title": "Born in the Gardens",
+        "venue": [
+          "Globe Theatre"
+        ],
+        "city": [
+          "London, England"
+        ],
+        "actors": [
+          "Oliver Cotton",
+          "Jill Meager",
+          "Beryl Reid"
+        ],
+        "playwright": [
+          "Peter Nichols"
+        ]
+      },
+      {
+        "order": "4",
+        "production_title": "Hughie",
+        "company": [
+          "National Theatre"
+        ],
+        "venue": [
+          "Cottesloe Theatre"
+        ],
+        "city": [
+          "London, England"
+        ],
+        "actors": [
+          "Stacy Keach",
+          "Ron Haddrick"
+        ],
+        "playwright": [
+          "Eugene O'Neill"
+        ],
+        "set_designer": [
+          "Hayden Griffin"
+        ]
+      }
+    ],
+    "media": [],
+    "correspondence": [],
+    "word_count": 1304,
+    "coordinate_points": [],
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Born in the Gardens",
+        "Hughie",
+        "Liberty Hall",
+        "Suburban Strains"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
+      "companies": [
+        "National Theatre",
+        "Stephen Joseph Theatre in the Round"
+      ],
+      "venues": [
+        "Cottesloe Theatre",
+        "Globe Theatre",
+        "Greenwich Theatre",
+        "Stephen Joseph Theatre in the Round"
+      ],
+      "cities": [
+        "London, England",
+        "Scarborough, England"
+      ],
+      "people": [
+        "Alan Ayckbourn",
+        "Alan Dosser",
+        "Alison Skilbeck",
+        "Beryl Reid",
+        "Eugene O'Neill",
+        "Hayden Griffin",
+        "Jill Meager",
+        "Lavinia Bertram",
+        "Michael Frayn",
+        "Oliver Cotton",
+        "Paul Todd",
+        "Peter Nichols",
+        "Rikki Fulton",
+        "Ron Haddrick",
+        "Stacy Keach"
       ]
     }
   },
@@ -88247,6 +88688,137 @@
     }
   },
   {
+    "slug": "1984-01-01-a-wider-view-of-music",
+    "route": "/reviews/1984-01-01-a-wider-view-of-music/",
+    "source_file": "1984.01.01.Radio_3_Magazine.A_Wider_View_Of_Music.md",
+    "title": "A Wider View of Music",
+    "date": "1984-01-01",
+    "year": "1984",
+    "publication": "Radio 3 Magazine",
+    "source_publication": "Radio 3 Magazine",
+    "article_category": "Music Review",
+    "collections": [
+      "UK Collection"
+    ],
+    "publication_status": "publish",
+    "editorial_issue_type": "clean_manual_transcription",
+    "canonical_file": "",
+    "production_title": "Book Music and Lyrics",
+    "company": "BBC Radio 3",
+    "venue": "",
+    "city": "",
+    "coordinates": [],
+    "people": [
+      "Anthony Perkins",
+      "Bertolt Brecht",
+      "Charlie Parker",
+      "Cole Porter",
+      "Franz Schubert",
+      "George Gershwin",
+      "Irving Berlin",
+      "Kurt Weill",
+      "Lorenz Hart",
+      "Oscar Hammerstein II",
+      "Richard Rodgers",
+      "Stephen Sondheim"
+    ],
+    "roles": {
+      "director": [],
+      "actors": [
+        "Anthony Perkins"
+      ],
+      "playwright": [],
+      "composer_lyricist": [
+        "Richard Rodgers",
+        "Lorenz Hart",
+        "Oscar Hammerstein II",
+        "Irving Berlin",
+        "Charlie Parker",
+        "Franz Schubert",
+        "George Gershwin",
+        "Cole Porter",
+        "Bertolt Brecht",
+        "Kurt Weill",
+        "Stephen Sondheim"
+      ],
+      "musical_director": [],
+      "choreographer": [],
+      "orchestrator": [],
+      "arranger": [],
+      "assistant_director": [],
+      "stage_manager": [],
+      "assistant_musical_director": [],
+      "vocal_director": [],
+      "dance_captain": [],
+      "fight_director": [],
+      "dramaturg": [],
+      "producer": [],
+      "set_designer": [],
+      "costume_designer": [],
+      "lighting_designer": [],
+      "sound_designer": [],
+      "musicians": [],
+      "performers": [],
+      "artists": [
+        "Richard Rodgers",
+        "Lorenz Hart",
+        "Oscar Hammerstein II",
+        "Irving Berlin",
+        "Charlie Parker",
+        "Franz Schubert",
+        "George Gershwin",
+        "Cole Porter",
+        "Bertolt Brecht",
+        "Kurt Weill",
+        "Stephen Sondheim"
+      ]
+    },
+    "production_groups": [],
+    "media": [],
+    "correspondence": [],
+    "word_count": 992,
+    "recording_title": "Book Music and Lyrics",
+    "coordinate_points": [],
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Recording",
+      "company_label": "Label",
+      "primary_browse": "musicians",
+      "secondary_browse": "productions"
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Book Music and Lyrics"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
+      "companies": [
+        "BBC Radio 3"
+      ],
+      "venues": [],
+      "cities": [],
+      "people": [
+        "Anthony Perkins",
+        "Bertolt Brecht",
+        "Charlie Parker",
+        "Cole Porter",
+        "Franz Schubert",
+        "George Gershwin",
+        "Irving Berlin",
+        "Kurt Weill",
+        "Lorenz Hart",
+        "Oscar Hammerstein II",
+        "Richard Rodgers",
+        "Stephen Sondheim"
+      ]
+    }
+  },
+  {
     "slug": "1984-01-08-capturing-the-whale",
     "route": "/reviews/1984-01-08-capturing-the-whale/",
     "source_file": "1984.01.08.The_Observer.Capturing_The_Whale.md",
@@ -88520,6 +89092,138 @@
         "Glyn Owen",
         "Larry Fineberg",
         "Ronnie Letham"
+      ]
+    }
+  },
+  {
+    "slug": "1984-05-26-the-art-of-the-actress",
+    "route": "/reviews/1984-05-26-the-art-of-the-actress/",
+    "source_file": "1984.05.26.Radio_Times.The_Art_Of_The_Actress.md",
+    "title": "The Art of the Actress",
+    "date": "1984-05-26",
+    "year": "1984",
+    "publication": "Radio Times",
+    "source_publication": "Radio Times",
+    "article_category": "Profile",
+    "collections": [
+      "UK Collection"
+    ],
+    "publication_status": "publish",
+    "editorial_issue_type": "clean_manual_transcription",
+    "canonical_file": "",
+    "production_title": "",
+    "company": "",
+    "venue": "",
+    "city": "",
+    "coordinates": [],
+    "people": [
+      "Anna Benson Gyles",
+      "Anna Massey",
+      "Auguste Rodin",
+      "Augustus John",
+      "Elaine Morgan",
+      "Godfrey James",
+      "Gwen John",
+      "Leigh Lawson",
+      "Mary Taubman",
+      "Michael Holroyd"
+    ],
+    "roles": {
+      "director": [
+        "Anna Benson Gyles"
+      ],
+      "actors": [
+        "Anna Massey",
+        "Leigh Lawson",
+        "Godfrey James"
+      ],
+      "playwright": [
+        "Elaine Morgan"
+      ],
+      "composer_lyricist": [],
+      "musical_director": [],
+      "choreographer": [],
+      "orchestrator": [],
+      "arranger": [],
+      "assistant_director": [],
+      "stage_manager": [],
+      "assistant_musical_director": [],
+      "vocal_director": [],
+      "dance_captain": [],
+      "fight_director": [],
+      "dramaturg": [],
+      "producer": [],
+      "set_designer": [],
+      "costume_designer": [],
+      "lighting_designer": [],
+      "sound_designer": [],
+      "musicians": [],
+      "performers": [],
+      "artists": [
+        "Gwen John",
+        "Augustus John",
+        "Auguste Rodin",
+        "Mary Taubman",
+        "Michael Holroyd"
+      ]
+    },
+    "production_groups": [
+      {
+        "order": "1",
+        "production_title": "Journey Into the Shadows",
+        "company": [
+          "BBC2"
+        ],
+        "director": [
+          "Anna Benson Gyles"
+        ],
+        "actors": [
+          "Anna Massey",
+          "Leigh Lawson"
+        ],
+        "playwright": [
+          "Elaine Morgan"
+        ]
+      }
+    ],
+    "media": [],
+    "correspondence": [],
+    "word_count": 1394,
+    "coordinate_points": [],
+    "display_schema": {
+      "work_type": "subjects",
+      "work_label": "Subject",
+      "company_label": "Company",
+      "primary_browse": "subjects",
+      "secondary_browse": "productions"
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Journey Into the Shadows"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
+      "companies": [
+        "BBC2"
+      ],
+      "venues": [],
+      "cities": [],
+      "people": [
+        "Anna Benson Gyles",
+        "Anna Massey",
+        "Auguste Rodin",
+        "Augustus John",
+        "Elaine Morgan",
+        "Godfrey James",
+        "Gwen John",
+        "Leigh Lawson",
+        "Mary Taubman",
+        "Michael Holroyd"
       ]
     }
   },
@@ -341004,7 +341708,7 @@
     "network_or_platform": "Academy of Motion Picture Arts and Sciences",
     "subject_role_map": [
       {
-        "person": "Steve Martin",
+        "person": "Alec Baldwin",
         "roles": [
           "performers"
         ],
@@ -341013,7 +341717,7 @@
         ]
       }
     ],
-    "subject_people": "Steve Martin",
+    "subject_people": "Alec Baldwin",
     "coordinate_points": [],
     "display_schema": {
       "work_type": "productions",
@@ -341028,7 +341732,7 @@
         "82nd Academy Awards"
       ],
       "subjects": [
-        "Steve Martin"
+        "Alec Baldwin"
       ],
       "book_authors": [],
       "publishers": [],
