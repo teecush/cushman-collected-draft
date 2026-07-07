@@ -2118,6 +2118,14 @@ function landingItems(kind) {
         const group = TYPE_GROUPS.find((item) => item.value === value);
         return landingItem(group.label, `#browse-group:${value}`, countForTypeValue(value), tileDescription(group.label), recordsForTypeValue(value));
       }),
+      landingItem(
+        "Correspondence",
+        "#correspondence",
+        state.records.reduce((total, record) => total + correspondenceItems(record).length, 0),
+        "Letters and notes saved with scrapbook clippings, linked back to their articles.",
+        state.records.filter(hasCorrespondence),
+        "items",
+      ),
       landingItem("Site Notes", "#browse-group:site-notes", countForTypeValue("site-notes"), tileDescription("Site Notes"), recordsForTypeValue("site-notes")),
     ];
   }

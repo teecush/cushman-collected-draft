@@ -3058,7 +3058,23 @@
       }
     ],
     "media": [],
-    "correspondence": [],
+    "correspondence": [
+      {
+        "id": "the-roman-invasion-lk-ensor-1973-10-28",
+        "author": "L. K. Ensor",
+        "date": "1973-10-28",
+        "note_type": "Critical note",
+        "summary": "Handwritten response to The Roman Invasion.",
+        "source_photo": "Scrapbook Trips/4 (july 5th)/IMG_9875.HEIC; Scrapbook Trips/4 (july 5th)/IMG_9876.HEIC",
+        "media": [
+          {
+            "local_path": "media/correspondence/the-roman-invasion/lk-ensor-1973-10-28.jpg"
+          }
+        ],
+        "caption": "L. K. Ensor note to Robert Cushman about The Roman Invasion, pages 1-2.",
+        "alt": "L. K. Ensor note responding to The Roman Invasion."
+      }
+    ],
     "word_count": 1359,
     "coordinate_points": [],
     "display_schema": {
@@ -9210,10 +9226,11 @@
         "source_photo": "Scrapbook Trips/3 (june 21)/IMG_9358.heic",
         "media": [
           {
-            "local_path": "media/correspondence/lament-for-a-little-night-music/sammy-cahn-1974-09-30.png"
+            "local_path": "media/correspondence/lament-for-a-little-night-music/sammy-cahn-1974-09-30.jpg"
           }
         ],
-        "caption": "Sammy Cahn telegram to Robert Cushman, 30 September 1974, responding to Lament For A Little Night Music."
+        "caption": "Sammy Cahn telegram to Robert Cushman, 30 September 1974.",
+        "alt": "Telegram from Sammy Cahn to Robert Cushman about A Little Night Music."
       },
       {
         "id": "lament-for-a-little-night-music-richard-pilbrow-1974-09-30",
@@ -9224,10 +9241,11 @@
         "source_photo": "Scrapbook Trips/3 (june 21)/IMG_9359.HEIC; Scrapbook Trips/3 (june 21)/IMG_9360.HEIC",
         "media": [
           {
-            "local_path": "media/correspondence/lament-for-a-little-night-music/richard-pilbrow-1974-09-30.png"
+            "local_path": "media/correspondence/lament-for-a-little-night-music/richard-pilbrow-1974-09-30.jpg"
           }
         ],
-        "caption": "Richard Pilbrow letter to Robert Cushman, 30 September 1974, two pages."
+        "caption": "Richard Pilbrow letter to Robert Cushman, 30 September 1974, pages 1-2.",
+        "alt": "Two-page Richard Pilbrow letter to Robert Cushman about A Little Night Music."
       }
     ],
     "word_count": 1115,
@@ -9717,14 +9735,15 @@
         "author": "John Hodei",
         "date": "1974-10-21",
         "note_type": "Complaint letter",
-        "summary": "Objects to the review revealing the final twist of Strindberg's Comrades.",
+        "summary": "Objects that the review revealed the final twist of Comrades.",
         "source_photo": "Scrapbook Trips/3 (june 21)/IMG_9365.HEIC",
         "media": [
           {
-            "local_path": "media/correspondence/problems-at-the-place/john-hodei-1974-10-21.png"
+            "local_path": "media/correspondence/problems-at-the-place/john-hodei-1974-10-21.jpg"
           }
         ],
-        "caption": "John Hodei letter to The Observer, 21 October 1974, responding to Problems at the Place."
+        "caption": "John Hodei letter to Robert Cushman, 21 October 1974.",
+        "alt": "John Hodei complaint letter about the Comrades review."
       }
     ],
     "word_count": 1190,
@@ -10024,15 +10043,19 @@
     "media": [],
     "correspondence": [
       {
+        "id": "a-famous-thane-clive-donner-1974-11-04",
         "author": "Clive Donner",
         "date": "1974-11-04",
         "note_type": "Thank-you letter",
-        "summary": "Thanks Cushman for the notice of Kennedy's Children and says it should help bring the play to a wider audience.",
+        "summary": "Thanks Cushman for the Kennedy's Children review.",
+        "source_photo": "Scrapbook Trips/3 (june 21)/IMG_9372.HEIC",
         "media": [
           {
-            "local_path": "media/correspondence/a-famous-thane/clive-donner-1974-11-04.png"
+            "local_path": "media/correspondence/a-famous-thane/clive-donner-1974-11-04.jpg"
           }
-        ]
+        ],
+        "caption": "Clive Donner letter to Robert Cushman, 4 November 1974.",
+        "alt": "Clive Donner thank-you letter about Kennedy's Children."
       }
     ],
     "word_count": 1242,
@@ -10252,10 +10275,11 @@
         "source_photo": "Scrapbook Trips/3 (june 21)/IMG_9377.HEIC",
         "media": [
           {
-            "local_path": "media/correspondence/touch-of-ogden/michael-frayn-1974-11-10.png"
+            "local_path": "media/correspondence/touch-of-ogden/michael-frayn-1974-11-10.jpg"
           }
         ],
-        "caption": "Michael Frayn note to Robert Cushman, 10 November 1974."
+        "caption": "Michael Frayn note to Robert Cushman, 10 November 1974.",
+        "alt": "Michael Frayn note complimenting Touch of Ogden."
       },
       {
         "id": "touch-of-ogden-l-arnold-weissberger-1975-01-09",
@@ -10263,13 +10287,14 @@
         "date": "1975-01-09",
         "note_type": "Fan letter",
         "summary": "Praises Touch of Ogden and the Beaumont/meaumont rhyme.",
-        "source_photo": "Scrapbook Trips/4 (july 5th)/IMG_9732.HEIC",
+        "source_photo": "Scrapbook Trips/4 (july 5th)/IMG_9731.HEIC; Scrapbook Trips/4 (july 5th)/IMG_9732.HEIC",
         "media": [
           {
-            "local_path": "media/correspondence/touch-of-ogden/l-arnold-weissberger-1975-01-09-2.png"
+            "local_path": "media/correspondence/touch-of-ogden/l-arnold-weissberger-1975-01-09.jpg"
           }
         ],
-        "caption": "L. Arnold Weissberger letter to Robert Cushman, 9 January 1975."
+        "caption": "L. Arnold Weissberger letter to Robert Cushman, 9 January 1975, pages 1-2.",
+        "alt": "Two-page L. Arnold Weissberger letter praising Touch of Ogden."
       }
     ],
     "word_count": 550,
@@ -10752,7 +10777,38 @@
       }
     ],
     "media": [],
-    "correspondence": [],
+    "correspondence": [
+      {
+        "id": "victims-of-parental-war-michael-rothwell-1974-12-01",
+        "author": "Michael Rothwell",
+        "date": "1974-12-01",
+        "note_type": "Thank-you note",
+        "summary": "Bristol Old Vic note thanking Cushman for the Victims of Parental War review.",
+        "source_photo": "Scrapbook Trips/4 (july 5th)/IMG_9700.HEIC",
+        "media": [
+          {
+            "local_path": "media/correspondence/victims-of-parental-war/michael-rothwell-1974-12-01.jpg"
+          }
+        ],
+        "caption": "Michael Rothwell note to Robert Cushman, 1 December 1974.",
+        "alt": "Michael Rothwell note about Victims of Parental War."
+      },
+      {
+        "id": "victims-of-parental-war-pseudonymous-correspondent-1974-12-01",
+        "author": "Pseudonymous correspondent",
+        "date": "1974-12-01",
+        "note_type": "Critical note",
+        "summary": "Pseudonymous angry note addressed to \"Robert Toshman\"; included because the article tie-in is clear.",
+        "source_photo": "Scrapbook Trips/4 (july 5th)/IMG_9701.HEIC",
+        "media": [
+          {
+            "local_path": "media/correspondence/victims-of-parental-war/pseudonymous-correspondent-1974-12-01.jpg"
+          }
+        ],
+        "caption": "Pseudonymous note to Robert Cushman, 1 December 1974.",
+        "alt": "Pseudonymous angry note about Victims of Parental War."
+      }
+    ],
     "word_count": 1393,
     "coordinate_points": [],
     "display_schema": {
@@ -10952,14 +11008,31 @@
         "id": "national-manoeuvres-john-osborne-1974-12-09",
         "author": "John Osborne",
         "date": "1974-12-09",
-        "type": "letter",
-        "description": "Letter to Robert Cushman responding to the Greenwich Theatre section of National Manoeuvres.",
+        "note_type": "Letter",
+        "summary": "Angry letter responding to the Greenwich Theatre section of National Manoeuvres.",
+        "source_photo": "Scrapbook Trips/4 (july 5th)/IMG_9699.HEIC",
         "media": [
           {
-            "local_path": "media/correspondence/national-manoeuvres/john-osborne-1974-12-09.png"
+            "local_path": "media/correspondence/national-manoeuvres/john-osborne-1974-12-09.jpg"
           }
         ],
-        "caption": "John Osborne letter to Robert Cushman, 9 December 1974, responding to National Manoeuvres."
+        "caption": "John Osborne letter to Robert Cushman, 9 December 1974.",
+        "alt": "John Osborne letter responding to National Manoeuvres."
+      },
+      {
+        "id": "national-manoeuvres-a-e-ellis-1975-01-16",
+        "author": "A. E. Ellis",
+        "date": "1975-01-16",
+        "note_type": "Letter and enclosure",
+        "summary": "Letter and supporting extract sheets responding to the National Manoeuvres review.",
+        "source_photo": "Scrapbook Trips/4 (july 5th)/IMG_9741.HEIC; Scrapbook Trips/4 (july 5th)/IMG_9742.HEIC; Scrapbook Trips/4 (july 5th)/IMG_9743.HEIC; Scrapbook Trips/4 (july 5th)/IMG_9744.HEIC; Scrapbook Trips/4 (july 5th)/IMG_9745.HEIC",
+        "media": [
+          {
+            "local_path": "media/correspondence/national-manoeuvres/a-e-ellis-1975-01-16.jpg"
+          }
+        ],
+        "caption": "A. E. Ellis letter and enclosures, 16 January 1975, pages 1-5.",
+        "alt": "A. E. Ellis letter and enclosures responding to National Manoeuvres."
       }
     ],
     "word_count": 1415,
@@ -12386,7 +12459,23 @@
       }
     ],
     "media": [],
-    "correspondence": [],
+    "correspondence": [
+      {
+        "id": "true-love-conquers-all-as-usual-hh-1975-01-20",
+        "author": "H. H. (pseudonym)",
+        "date": "1975-01-20",
+        "note_type": "Critical note",
+        "summary": "Pseudonymous angry note addressed to \"Robt. Toshman\"; included because the article tie-in is clear.",
+        "source_photo": "Scrapbook Trips/4 (july 5th)/IMG_9734.HEIC; Scrapbook Trips/4 (july 5th)/IMG_9735.HEIC; Scrapbook Trips/4 (july 5th)/IMG_9736.HEIC",
+        "media": [
+          {
+            "local_path": "media/correspondence/true-love-conquers-all-as-usual/hh-pseudonym-1975-01-20.jpg"
+          }
+        ],
+        "caption": "Pseudonymous H. H. note to Robert Cushman, 20 January 1975, pages 1-3.",
+        "alt": "Pseudonymous critical note about True Love Conquers All--As Usual."
+      }
+    ],
     "word_count": 1028,
     "coordinate_points": [],
     "display_schema": {
@@ -18066,7 +18155,23 @@
       }
     ],
     "media": [],
-    "correspondence": [],
+    "correspondence": [
+      {
+        "id": "critical-conclusions-john-goodwin-1976-11-24",
+        "author": "John Goodwin",
+        "date": "1976-11-24",
+        "note_type": "Postcard letter",
+        "summary": "Friendly publicist correspondence about the National Theatre and Critical Conclusions.",
+        "source_photo": "Scrapbook Trips/4 (july 5th)/IMG_9887.HEIC; Scrapbook Trips/4 (july 5th)/IMG_9888.HEIC",
+        "media": [
+          {
+            "local_path": "media/correspondence/critical-conclusions/john-goodwin-1976-11-24.jpg"
+          }
+        ],
+        "caption": "John Goodwin correspondence to Robert Cushman, 24 November 1976, pages 1-2.",
+        "alt": "John Goodwin correspondence about Critical Conclusions."
+      }
+    ],
     "word_count": 1110,
     "coordinate_points": [],
     "display_schema": {
@@ -19629,14 +19734,16 @@
         "id": "starkness-and-farce-adam-verney-1976-01-20",
         "author": "Adam Verney",
         "date": "1976-01-20",
-        "type": "note",
-        "description": "Royal Shakespeare Company note responding to Starkness--And Farce.",
+        "note_type": "Letter",
+        "summary": "RSC note responding to Starkness--And Farce.",
+        "source_photo": "Scrapbook Trips/4 (july 5th)/IMG_9889.HEIC",
         "media": [
           {
-            "local_path": "media/correspondence/starkness-and-farce/adam-verney-1976-01-20.png"
+            "local_path": "media/correspondence/starkness-and-farce/adam-verney-1976-01-20.jpg"
           }
         ],
-        "caption": "Adam Verney note to Robert Cushman, 20 January 1976, responding to Starkness--And Farce."
+        "caption": "Adam Verney letter to Robert Cushman, 20 January 1976.",
+        "alt": "Adam Verney letter responding to Starkness--And Farce."
       }
     ],
     "word_count": 1291,
@@ -19816,7 +19923,23 @@
       }
     ],
     "media": [],
-    "correspondence": [],
+    "correspondence": [
+      {
+        "id": "oh-no-you-dont-eg-hall-1976-10-28",
+        "author": "E. G. Hall",
+        "date": "1976-10-28",
+        "note_type": "Letter",
+        "summary": "Notes responding to the Funny Peculiar section of Oh No You Don''''''''t!",
+        "source_photo": "Scrapbook Trips/4 (july 5th)/IMG_9872.HEIC; Scrapbook Trips/4 (july 5th)/IMG_9873.HEIC",
+        "media": [
+          {
+            "local_path": "media/correspondence/oh-no-you-don-t/eg-hall-1976-10-28.jpg"
+          }
+        ],
+        "caption": "E. G. Hall notes to Robert Cushman, October 1976, pages 1-2.",
+        "alt": "E. G. Hall notes about the Funny Peculiar review section."
+      }
+    ],
     "word_count": 1138,
     "coordinate_points": [],
     "display_schema": {
@@ -20197,7 +20320,38 @@
       }
     ],
     "media": [],
-    "correspondence": [],
+    "correspondence": [
+      {
+        "id": "the-other-hamlet-a-nicholson-1976-03-31",
+        "author": "A. Nicholson",
+        "date": "1976-03-31",
+        "note_type": "Complaint letter",
+        "summary": "Complaint about the Treats section and the use of the phrase \"very funny\".",
+        "source_photo": "Scrapbook Trips/4 (july 5th)/IMG_9877.HEIC",
+        "media": [
+          {
+            "local_path": "media/correspondence/the-other-hamlet/a-nicholson-1976-03-31.jpg"
+          }
+        ],
+        "caption": "A. Nicholson letter to Robert Cushman, 31 March 1976.",
+        "alt": "A. Nicholson complaint letter about the Treats review section."
+      },
+      {
+        "id": "the-other-hamlet-ann-m-robinson-1976-02-09",
+        "author": "Ann M. Robinson",
+        "date": "1976-02-09",
+        "note_type": "Critical note",
+        "summary": "Critical note objecting to the review's taste and judgement.",
+        "source_photo": "Scrapbook Trips/4 (july 5th)/IMG_9890.HEIC",
+        "media": [
+          {
+            "local_path": "media/correspondence/the-other-hamlet/ann-m-robinson-1976-02-09.jpg"
+          }
+        ],
+        "caption": "Ann M. Robinson note to Robert Cushman, 9 February 1976.",
+        "alt": "Ann M. Robinson critical note about The Other Hamlet."
+      }
+    ],
     "word_count": 1229,
     "coordinate_points": [],
     "display_schema": {
@@ -20980,7 +21134,23 @@
       }
     ],
     "media": [],
-    "correspondence": [],
+    "correspondence": [
+      {
+        "id": "fond-farewell-barry-hillman-1976-03-07",
+        "author": "Barry Hillman",
+        "date": "1976-03-07",
+        "note_type": "Letter",
+        "summary": "Letter responding to Fond Farewell.",
+        "source_photo": "Scrapbook Trips/4 (july 5th)/IMG_9860.HEIC; Scrapbook Trips/4 (july 5th)/IMG_9861.HEIC",
+        "media": [
+          {
+            "local_path": "media/correspondence/fond-farewell/barry-hillman-1976-03-07.jpg"
+          }
+        ],
+        "caption": "Barry Hillman letter to Robert Cushman, March 1976, pages 1-2.",
+        "alt": "Barry Hillman letter about Fond Farewell."
+      }
+    ],
     "word_count": 1102,
     "coordinate_points": [],
     "display_schema": {
@@ -21141,7 +21311,23 @@
       }
     ],
     "media": [],
-    "correspondence": [],
+    "correspondence": [
+      {
+        "id": "first-impressions-unidentified-correspondent-1976-03-15",
+        "author": "Unidentified correspondent",
+        "date": "1976-03-15",
+        "note_type": "Critical note",
+        "summary": "Handwritten response to First Impressions; author not identified in the available note image.",
+        "source_photo": "Scrapbook Trips/4 (july 5th)/IMG_9891.HEIC",
+        "media": [
+          {
+            "local_path": "media/correspondence/first-impressions/unidentified-correspondent-1976-03-15.jpg"
+          }
+        ],
+        "caption": "Unidentified note to Robert Cushman, 15 March 1976.",
+        "alt": "Unidentified note about First Impressions."
+      }
+    ],
     "word_count": 1254,
     "coordinate_points": [],
     "display_schema": {
@@ -22228,7 +22414,23 @@
     },
     "production_groups": [],
     "media": [],
-    "correspondence": [],
+    "correspondence": [
+      {
+        "id": "the-innocent-troublemaker-m-stern-1976-05-11",
+        "author": "M. Stern",
+        "date": "1976-05-11",
+        "note_type": "Letter",
+        "summary": "Letter responding to The Innocent Troublemaker.",
+        "source_photo": "Scrapbook Trips/4 (july 5th)/IMG_9893.HEIC",
+        "media": [
+          {
+            "local_path": "media/correspondence/the-innocent-troublemaker/m-stern-1976-05-11.jpg"
+          }
+        ],
+        "caption": "M. Stern letter to Robert Cushman, 11 May 1976.",
+        "alt": "M. Stern letter about The Innocent Troublemaker."
+      }
+    ],
     "word_count": 758,
     "subject_role_map": [
       {
@@ -22633,15 +22835,34 @@
     "media": [],
     "correspondence": [
       {
-        "author": "Patrick Magee",
-        "date": "1976-05-23",
-        "note_type": "Complimentary note",
-        "summary": "Praises Cushman's review of the Beckett work at the Court Theatre as a splendid piece of writing.",
+        "id": "in-a-hellish-half-light-esther-hepher-1976-05-25",
+        "author": "Esther Hepher",
+        "date": "1976-05-25",
+        "note_type": "Letter",
+        "summary": "Letter from the editor of The Abawak Press/Jamaica and West Indian Review responding to the article.",
+        "source_photo": "Scrapbook Trips/4 (july 5th)/IMG_9879.HEIC",
         "media": [
           {
-            "local_path": "media/correspondence/in-a-hellish-half-light/patrick-magee-1976-05-23.png"
+            "local_path": "media/correspondence/in-a-hellish-half-light/esther-hepher-1976-05-25.jpg"
           }
-        ]
+        ],
+        "caption": "Esther Hepher letter to Robert Cushman, 25 May 1976.",
+        "alt": "Esther Hepher letter about In A Hellish Half-Light."
+      },
+      {
+        "id": "in-a-hellish-half-light-patrick-magee-1976-05-23",
+        "author": "Patrick Magee",
+        "date": "1976-05-23",
+        "note_type": "Thank-you note",
+        "summary": "Thank-you note for the Beckett/Royal Court review.",
+        "source_photo": "Scrapbook Trips/4 (july 5th)/IMG_9894.HEIC",
+        "media": [
+          {
+            "local_path": "media/correspondence/in-a-hellish-half-light/patrick-magee-1976-05-23.jpg"
+          }
+        ],
+        "caption": "Patrick Magee note to Robert Cushman, 23 May 1976.",
+        "alt": "Patrick Magee note thanking Robert Cushman for the Beckett review."
       }
     ],
     "word_count": 1260,
@@ -23057,7 +23278,38 @@
       }
     ],
     "media": [],
-    "correspondence": [],
+    "correspondence": [
+      {
+        "id": "vague-views-mrs-v-larr-1976-06-09",
+        "author": "Mrs V. Larr",
+        "date": "1976-06-09",
+        "note_type": "Critical note",
+        "summary": "Critical note asking whether Cushman ever enjoys the plays he reviews.",
+        "source_photo": "Scrapbook Trips/4 (july 5th)/IMG_9880.HEIC",
+        "media": [
+          {
+            "local_path": "media/correspondence/vague-views/mrs-v-larr-1976-06-09.jpg"
+          }
+        ],
+        "caption": "Mrs V. Larr note to Robert Cushman, 9 June 1976.",
+        "alt": "Mrs V. Larr critical note about Vague Views."
+      },
+      {
+        "id": "vague-views-k-n-cartey-1976-06-09",
+        "author": "K. N. Cartey?",
+        "date": "1976-06-09",
+        "note_type": "Critical note",
+        "summary": "Handwritten critical response to Vague Views; author name is uncertain.",
+        "source_photo": "Scrapbook Trips/4 (july 5th)/IMG_9881.HEIC; Scrapbook Trips/4 (july 5th)/IMG_9882.HEIC",
+        "media": [
+          {
+            "local_path": "media/correspondence/vague-views/k-n-cartey-1976-06-09.jpg"
+          }
+        ],
+        "caption": "Possibly K. N. Cartey note to Robert Cushman, 9 June 1976, pages 1-2.",
+        "alt": "Uncertain-author note about Vague Views."
+      }
+    ],
     "word_count": 1069,
     "coordinate_points": [],
     "display_schema": {
@@ -23264,7 +23516,23 @@
       }
     ],
     "media": [],
-    "correspondence": [],
+    "correspondence": [
+      {
+        "id": "musgraves-dancing-sally-beauman-1976-06-14",
+        "author": "Sally Beauman",
+        "date": "1976-06-14",
+        "note_type": "Letter",
+        "summary": "Letter responding to Musgraves Dancing and mentioning her own book.",
+        "source_photo": "Scrapbook Trips/4 (july 5th)/IMG_9895.HEIC; Scrapbook Trips/4 (july 5th)/IMG_9896.HEIC",
+        "media": [
+          {
+            "local_path": "media/correspondence/musgraves-dancing/sally-beauman-1976-06-14.jpg"
+          }
+        ],
+        "caption": "Sally Beauman letter to Robert Cushman, 14 June 1976, pages 1-2.",
+        "alt": "Sally Beauman letter about Musgraves Dancing."
+      }
+    ],
     "word_count": 1231,
     "coordinate_points": [],
     "display_schema": {
@@ -24051,7 +24319,23 @@
       }
     ],
     "media": [],
-    "correspondence": [],
+    "correspondence": [
+      {
+        "id": "better-black-than-white-robert-walker-1976-07-09",
+        "author": "Robert Walker and Robert Cushman",
+        "date": "1976-07-09",
+        "note_type": "Letter exchange",
+        "summary": "Back-and-forth correspondence about Better Black Than White, including Cushman's reply.",
+        "source_photo": "Scrapbook Trips/4 (july 5th)/IMG_9897.HEIC; Scrapbook Trips/4 (july 5th)/IMG_9898.HEIC; Scrapbook Trips/4 (july 5th)/IMG_9899.HEIC",
+        "media": [
+          {
+            "local_path": "media/correspondence/better-black-than-white/robert-walker-1976-07-09.jpg"
+          }
+        ],
+        "caption": "Robert Walker correspondence with Robert Cushman, July 1976, pages 1-3.",
+        "alt": "Robert Walker correspondence and Cushman reply about Better Black Than White."
+      }
+    ],
     "word_count": 1093,
     "coordinate_points": [],
     "display_schema": {
@@ -25003,7 +25287,23 @@
       }
     ],
     "media": [],
-    "correspondence": [],
+    "correspondence": [
+      {
+        "id": "mr-harrison-takes-a-train-wilfred-harrison-1976-08-08",
+        "author": "Wilfred Harrison",
+        "date": "1976-08-08",
+        "note_type": "Letter",
+        "summary": "Letter reminding Cushman of an earlier production of the play.",
+        "source_photo": "Scrapbook Trips/4 (july 5th)/IMG_9883.HEIC",
+        "media": [
+          {
+            "local_path": "media/correspondence/mr-harrison-takes-a-train/wilfred-harrison-1976-08-08.jpg"
+          }
+        ],
+        "caption": "Wilfred Harrison note to Robert Cushman, August 1976.",
+        "alt": "Wilfred Harrison note about Mr Harrison Takes A Train."
+      }
+    ],
     "word_count": 1067,
     "coordinate_points": [],
     "display_schema": {
@@ -26252,7 +26552,23 @@
     },
     "production_groups": [],
     "media": [],
-    "correspondence": [],
+    "correspondence": [
+      {
+        "id": "dramatic-entrances-raymond-raikes-1976-10-04",
+        "author": "Raymond Raikes",
+        "date": "1976-10-04",
+        "note_type": "Letter",
+        "summary": "Letter responding to Dramatic Entrances.",
+        "source_photo": "Scrapbook Trips/4 (july 5th)/IMG_9884.HEIC; Scrapbook Trips/4 (july 5th)/IMG_9885.HEIC",
+        "media": [
+          {
+            "local_path": "media/correspondence/dramatic-entrances/raymond-raikes-1976-10-04.jpg"
+          }
+        ],
+        "caption": "Raymond Raikes letter to Robert Cushman, 4 October 1976, pages 1-2.",
+        "alt": "Raymond Raikes letter about Dramatic Entrances."
+      }
+    ],
     "word_count": 1629,
     "topic": "Dramatic Entrances",
     "subject_role_map": [
@@ -27108,7 +27424,38 @@
     },
     "production_groups": [],
     "media": [],
-    "correspondence": [],
+    "correspondence": [
+      {
+        "id": "national-disappointment-frederick-davies-1976-10-31",
+        "author": "Frederick Davies",
+        "date": "1976-10-31",
+        "note_type": "Letter",
+        "summary": "Letter responding to National Disappointment and the Goldoni discussion.",
+        "source_photo": "Scrapbook Trips/4 (july 5th)/IMG_9886.HEIC",
+        "media": [
+          {
+            "local_path": "media/correspondence/national-disappointment/frederick-davies-1976-10-31.jpg"
+          }
+        ],
+        "caption": "Frederick Davies letter to Robert Cushman, 31 October 1976.",
+        "alt": "Frederick Davies letter about National Disappointment."
+      },
+      {
+        "id": "national-disappointment-frederick-davies-1976-11-29",
+        "author": "Frederick Davies",
+        "date": "1976-11-29",
+        "note_type": "Letter and notes",
+        "summary": "Follow-up correspondence about Goldoni and National Disappointment.",
+        "source_photo": "Scrapbook Trips/4 (july 5th)/IMG_9870.HEIC; Scrapbook Trips/4 (july 5th)/IMG_9871.HEIC",
+        "media": [
+          {
+            "local_path": "media/correspondence/national-disappointment/frederick-davies-1976-11-29.jpg"
+          }
+        ],
+        "caption": "Frederick Davies letter to Robert Cushman, 29 November 1976, pages 1-2.",
+        "alt": "Frederick Davies follow-up letter about National Disappointment."
+      }
+    ],
     "word_count": 1174,
     "coordinate_points": [],
     "display_schema": {
@@ -27725,7 +28072,23 @@
       }
     ],
     "media": [],
-    "correspondence": [],
+    "correspondence": [
+      {
+        "id": "moliere-caught-in-a-trap-eric-conrad-1976-11-22",
+        "author": "Eric Conrad",
+        "date": "1976-11-22",
+        "note_type": "Letter",
+        "summary": "Multi-page handwritten response to Molière Caught In A Trap.",
+        "source_photo": "Scrapbook Trips/4 (july 5th)/IMG_9866.HEIC; Scrapbook Trips/4 (july 5th)/IMG_9867.HEIC; Scrapbook Trips/4 (july 5th)/IMG_9868.HEIC",
+        "media": [
+          {
+            "local_path": "media/correspondence/moli-re-caught-in-a-trap/eric-conrad-1976-11-22.jpg"
+          }
+        ],
+        "caption": "Eric Conrad letter to Robert Cushman, 22 November 1976, pages 1-3.",
+        "alt": "Eric Conrad letter about Molière Caught In A Trap."
+      }
+    ],
     "word_count": 1170,
     "subject_role_map": [
       {
@@ -27867,7 +28230,53 @@
       }
     ],
     "media": [],
-    "correspondence": [],
+    "correspondence": [
+      {
+        "id": "looking-back-at-look-back-in-anger-unidentified-1976-11-25",
+        "author": "Unidentified correspondent",
+        "date": "1976-11-25",
+        "note_type": "Letter",
+        "summary": "Multi-page handwritten response to Looking Back At Look Back In Anger; author not identified in the available images.",
+        "source_photo": "Scrapbook Trips/4 (july 5th)/IMG_9862.HEIC; Scrapbook Trips/4 (july 5th)/IMG_9863.HEIC; Scrapbook Trips/4 (july 5th)/IMG_9864.HEIC",
+        "media": [
+          {
+            "local_path": "media/correspondence/looking-back-at-look-back-in-anger/unidentified-correspondent-1976-11-25.jpg"
+          }
+        ],
+        "caption": "Unidentified letter to Robert Cushman, 25 November 1976, pages 1-3.",
+        "alt": "Unidentified letter about Looking Back At Look Back In Anger."
+      },
+      {
+        "id": "looking-back-at-look-back-in-anger-cecil-madden-1976-11-18",
+        "author": "Cecil Madden",
+        "date": "1976-11-18",
+        "note_type": "Letter",
+        "summary": "Typed letter responding to Looking Back At Look Back In Anger.",
+        "source_photo": "Scrapbook Trips/4 (july 5th)/IMG_9865.HEIC",
+        "media": [
+          {
+            "local_path": "media/correspondence/looking-back-at-look-back-in-anger/cecil-madden-1976-11-18.jpg"
+          }
+        ],
+        "caption": "Cecil Madden letter to Robert Cushman, 18 November 1976.",
+        "alt": "Cecil Madden letter about Looking Back At Look Back In Anger."
+      },
+      {
+        "id": "looking-back-at-look-back-in-anger-seething-lane-1976-11-25",
+        "author": "Pseudonymous correspondent",
+        "date": "1976-11-25",
+        "note_type": "Critical note",
+        "summary": "Pseudonymous \"Seething Lane\" note responding to Looking Back At Look Back In Anger.",
+        "source_photo": "Scrapbook Trips/4 (july 5th)/IMG_9869.HEIC",
+        "media": [
+          {
+            "local_path": "media/correspondence/looking-back-at-look-back-in-anger/seething-lane-1976-11-25.jpg"
+          }
+        ],
+        "caption": "Pseudonymous Seething Lane note to Robert Cushman, 25 November 1976.",
+        "alt": "Pseudonymous note about Looking Back At Look Back In Anger."
+      }
+    ],
     "word_count": 2463,
     "show_title": "Look Back in Anger",
     "network_or_platform": "BBC1",
@@ -29916,7 +30325,23 @@
     },
     "production_groups": [],
     "media": [],
-    "correspondence": [],
+    "correspondence": [
+      {
+        "id": "the-first-sex-farce-paul-john-geoffrey-1977-03-16",
+        "author": "Paul John Geoffrey",
+        "date": "1977-03-16",
+        "note_type": "Thank-you note",
+        "summary": "Handwritten thank-you note responding to The First Sex-Farce.",
+        "source_photo": "Scrapbook Trips/4 (july 5th)/IMG_9809.HEIC",
+        "media": [
+          {
+            "local_path": "media/correspondence/the-first-sex-farce/paul-john-geoffrey-1977-03-16.jpg"
+          }
+        ],
+        "caption": "Paul John Geoffrey note to Robert Cushman, 16 March 1977.",
+        "alt": "Paul John Geoffrey thank-you note about The First Sex-Farce."
+      }
+    ],
     "word_count": 1153,
     "coordinate_points": [],
     "display_schema": {
@@ -31422,7 +31847,23 @@
       }
     ],
     "media": [],
-    "correspondence": [],
+    "correspondence": [
+      {
+        "id": "in-perfect-harmony-gillian-lynne-1977-05-15",
+        "author": "Gillian Lynne",
+        "date": "1977-05-15",
+        "note_type": "Thank-you letter",
+        "summary": "Thanks Cushman for recognizing her co-direction of Dream with John Barton.",
+        "source_photo": "Scrapbook Trips/4 (july 5th)/IMG_9816.HEIC; Scrapbook Trips/4 (july 5th)/IMG_9817.HEIC",
+        "media": [
+          {
+            "local_path": "media/correspondence/in-perfect-harmony/gillian-lynne-1977-05-15.jpg"
+          }
+        ],
+        "caption": "Gillian Lynne letter to Robert Cushman, May 1977, pages 1-2.",
+        "alt": "Gillian Lynne letter about In Perfect Harmony."
+      }
+    ],
     "word_count": 1243,
     "coordinate_points": [],
     "display_schema": {
@@ -33007,7 +33448,23 @@
     },
     "production_groups": [],
     "media": [],
-    "correspondence": [],
+    "correspondence": [
+      {
+        "id": "thrones-coffins-and-roses-laurence-kitchin-1977-07-19",
+        "author": "Laurence Kitchin",
+        "date": "1977-07-19",
+        "note_type": "Complimentary note",
+        "summary": "Complimentary note about Thrones, Coffins and Roses.",
+        "source_photo": "Scrapbook Trips/4 (july 5th)/IMG_9758.HEIC",
+        "media": [
+          {
+            "local_path": "media/correspondence/thrones-coffins-and-roses/laurence-kitchin-1977-07-19.jpg"
+          }
+        ],
+        "caption": "Laurence Kitchin note to Robert Cushman, 19 July 1977.",
+        "alt": "Laurence Kitchin note about Thrones, Coffins and Roses."
+      }
+    ],
     "word_count": 1312,
     "coordinate_points": [],
     "display_schema": {
@@ -34401,7 +34858,23 @@
     },
     "production_groups": [],
     "media": [],
-    "correspondence": [],
+    "correspondence": [
+      {
+        "id": "supper-club-singers-don-smith-1977-09-23",
+        "author": "Don Smith",
+        "date": "1977-09-23",
+        "note_type": "Letter",
+        "summary": "Friendly letter from the agent and cabaret promoter responding to Supper Club Singers.",
+        "source_photo": "Scrapbook Trips/4 (july 5th)/IMG_9802.HEIC; Scrapbook Trips/4 (july 5th)/IMG_9803.HEIC",
+        "media": [
+          {
+            "local_path": "media/correspondence/supper-club-singers/don-smith-1977-09-23.jpg"
+          }
+        ],
+        "caption": "Don Smith letter to Robert Cushman, 23 September 1977, pages 1-2.",
+        "alt": "Don Smith letter about Supper Club Singers."
+      }
+    ],
     "word_count": 1130,
     "featured_artists": "Mabel Mercer",
     "coordinate_points": [],
@@ -34895,14 +35368,15 @@
         "author": "John O'Riordan",
         "date": "1977-09-26",
         "note_type": "Letter",
-        "summary": "Challenges Cushman''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''s description of O''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''Casey''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''s characters as \"quaint urban numbskulls\" and defends The Plough and the Stars.",
+        "summary": "Letter taking issue with the description of O'Casey's characters.",
         "source_photo": "Scrapbook Trips/4 (july 5th)/IMG_9811.HEIC",
         "media": [
           {
-            "local_path": "media/correspondence/stars-that-dont-shine/john-oriordan-1977-09-26.png"
+            "local_path": "media/correspondence/stars-that-don-t-shine/john-oriordan-1977-09-26.jpg"
           }
         ],
-        "caption": "John O'Riordan letter to The Observer, 26 September 1977, responding to Stars That Don't Shine."
+        "caption": "John O'Riordan letter to Robert Cushman, 26 September 1977.",
+        "alt": "John O'Riordan letter about Stars That Don't Shine."
       }
     ],
     "word_count": 991,
@@ -35003,7 +35477,23 @@
     },
     "production_groups": [],
     "media": [],
-    "correspondence": [],
+    "correspondence": [
+      {
+        "id": "after-all-its-not-gomorrah-michael-stewart-1977-10-02",
+        "author": "Michael Stewart",
+        "date": "1977-10-02",
+        "note_type": "Thank-you note",
+        "summary": "Thanks Cushman for making him sound smart in the interview.",
+        "source_photo": "Scrapbook Trips/4 (july 5th)/IMG_9765.HEIC",
+        "media": [
+          {
+            "local_path": "media/correspondence/after-all-it-s-not-gomorrah/michael-stewart-1977-10-02.jpg"
+          }
+        ],
+        "caption": "Michael Stewart note to Robert Cushman, 2 October 1977.",
+        "alt": "Michael Stewart note about After All, It's Not Gomorrah."
+      }
+    ],
     "word_count": 863,
     "topic": "After All, It's Not Gomorrah",
     "coordinate_points": [],
@@ -37337,17 +37827,18 @@
     "correspondence": [
       {
         "id": "swinging-back-to-words-rene-coppieters-1978-01-10",
-        "author": "René Coppieters",
+        "author": "Rene Coppieters",
         "date": "1978-01-10",
         "note_type": "Correction letter",
-        "summary": "Corrects Cushman's statement about the first word of Ubu.",
+        "summary": "Correction about the first word of Ubu.",
         "source_photo": "Scrapbook Trips/4 (july 5th)/IMG_9778.HEIC",
         "media": [
           {
-            "local_path": "media/correspondence/swinging-back-to-words/rene-coppieters-1978-01-10.png"
+            "local_path": "media/correspondence/swinging-back-to-words/rene-coppieters-1978-01-10.jpg"
           }
         ],
-        "caption": "René Coppieters letter to The Observer, 10 January 1978, correcting the first word of Ubu."
+        "caption": "Rene Coppieters letter to Robert Cushman, 10 January 1978.",
+        "alt": "Rene Coppieters correction letter about Swinging Back To Words."
       }
     ],
     "word_count": 1035,
@@ -37760,14 +38251,16 @@
         "id": "not-so-funny-lk-ensor-1978-02-02",
         "author": "L. K. Ensor",
         "date": "1978-02-02",
-        "type": "note",
-        "description": "Handwritten note responding to Not So Funny, especially the Dingo section.",
+        "note_type": "Letter",
+        "summary": "Handwritten response to Not So Funny, especially the Dingo section.",
+        "source_photo": "Scrapbook Trips/4 (july 5th)/IMG_9776.HEIC; Scrapbook Trips/4 (july 5th)/IMG_9777.HEIC",
         "media": [
           {
-            "local_path": "media/correspondence/not-so-funny/lk-ensor-1978-02-02.png"
+            "local_path": "media/correspondence/not-so-funny/lk-ensor-1978-02-02.jpg"
           }
         ],
-        "caption": "L. K. Ensor note to Robert Cushman, 2 February 1978, responding to Not So Funny."
+        "caption": "L. K. Ensor note to Robert Cushman, 2 February 1978, pages 1-2.",
+        "alt": "L. K. Ensor note responding to Not So Funny."
       }
     ],
     "word_count": 1027,
@@ -40908,7 +41401,38 @@
       }
     ],
     "media": [],
-    "correspondence": [],
+    "correspondence": [
+      {
+        "id": "return-of-don-juan-jill-mortiboys-1978-04-24",
+        "author": "Jill Mortiboys",
+        "date": "1978-04-24",
+        "note_type": "Correction letter",
+        "summary": "Polite correction about mixing up Berwick and Bury in the review.",
+        "source_photo": "Scrapbook Trips/4 (july 5th)/IMG_9787.HEIC; Scrapbook Trips/4 (july 5th)/IMG_9788.HEIC",
+        "media": [
+          {
+            "local_path": "media/correspondence/return-of-don-juan/jill-mortiboys-1978-04-24.jpg"
+          }
+        ],
+        "caption": "Jill Mortiboys letter to Robert Cushman, 24 April 1978, pages 1-2.",
+        "alt": "Jill Mortiboys correction letter about Return Of Don Juan."
+      },
+      {
+        "id": "return-of-don-juan-jill-mortiboys-1978-04-follow-up",
+        "author": "Jill Mortiboys",
+        "date": "1978-04",
+        "note_type": "Follow-up note",
+        "summary": "Follow-up thank-you note after Cushman's reply.",
+        "source_photo": "Scrapbook Trips/4 (july 5th)/IMG_9789.HEIC",
+        "media": [
+          {
+            "local_path": "media/correspondence/return-of-don-juan/jill-mortiboys-1978-04-follow-up.jpg"
+          }
+        ],
+        "caption": "Jill Mortiboys follow-up note to Robert Cushman, April 1978.",
+        "alt": "Jill Mortiboys follow-up note about Return Of Don Juan."
+      }
+    ],
     "word_count": 1216,
     "coordinate_points": [],
     "display_schema": {
@@ -50494,7 +51018,23 @@
       }
     ],
     "media": [],
-    "correspondence": [],
+    "correspondence": [
+      {
+        "id": "playing-for-kicks-richard-carrington-1979-06-18",
+        "author": "Richard Carrington",
+        "date": "1979-06-18",
+        "note_type": "Critical letter",
+        "summary": "Personal critical letter responding to Playing For Kicks; included because the article tie-in is clear.",
+        "source_photo": "Scrapbook Trips/4 (july 5th)/IMG_9821.HEIC",
+        "media": [
+          {
+            "local_path": "media/correspondence/playing-for-kicks/richard-carrington-1979-06-18.jpg"
+          }
+        ],
+        "caption": "Richard Carrington letter to Robert Cushman, 18 June 1979.",
+        "alt": "Richard Carrington critical letter about Playing For Kicks."
+      }
+    ],
     "word_count": 1271,
     "coordinate_points": [],
     "display_schema": {
@@ -318738,7 +319278,7 @@
     "network_or_platform": "Academy of Motion Picture Arts and Sciences",
     "subject_role_map": [
       {
-        "person": "Steve Martin",
+        "person": "Alec Baldwin",
         "roles": [
           "performers"
         ],
@@ -318747,7 +319287,7 @@
         ]
       }
     ],
-    "subject_people": "Steve Martin",
+    "subject_people": "Alec Baldwin",
     "coordinate_points": [],
     "display_schema": {
       "work_type": "productions",
@@ -318762,7 +319302,7 @@
         "82nd Academy Awards"
       ],
       "subjects": [
-        "Steve Martin"
+        "Alec Baldwin"
       ],
       "book_authors": [],
       "publishers": [],
