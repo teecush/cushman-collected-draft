@@ -2561,10 +2561,19 @@ function indexDescription(type) {
   }[type] || "";
 }
 
+const WORK_FILING_TYPE_KEYS = new Set(["books", "productions", "shakespeare-plays"]);
+
 function indexSortText(label, typeKey = "") {
-  return String(indexDisplayLabel(typeKey, label) || "")
+  const displayText = String(indexDisplayLabel(typeKey, label) || "")
     .replace(/^[\s"'‘’“”.,;:!?()[\]{}]+/, "")
     .trim();
+  if (typeKey === "publications") {
+    return displayText.replace(/^the\s+/i, "").trim() || displayText;
+  }
+  if (WORK_FILING_TYPE_KEYS.has(typeKey)) {
+    return displayText.replace(/^(a|an|the)\s+/i, "").trim() || displayText;
+  }
+  return displayText;
 }
 
 function indexGroupLabel(label, typeKey = "") {
