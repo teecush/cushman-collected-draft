@@ -85,6 +85,7 @@
       }
     ],
     "media": [],
+    "correspondence": [],
     "word_count": 941,
     "coordinate_points": [],
     "display_schema": {
@@ -123,8 +124,8 @@
     }
   },
   {
-    "slug": "1977-05-15-ten-years-of-stratford",
-    "route": "/reviews/1977-05-15-ten-years-of-stratford/",
+    "slug": "1977-05-15-ten-years-at-stratford",
+    "route": "/reviews/1977-05-15-ten-years-at-stratford/",
     "source_file": "1977.05.15.Cushman_Collected.Ten_Years_of_Stratford.md",
     "title": "Ten Years At Stratford",
     "date": "1977-05-15",
@@ -214,8 +215,9 @@
       }
     ],
     "media": [],
+    "correspondence": [],
     "word_count": 1073,
-    "topic": "Ten Years of Stratford",
+    "topic": "Ten Years At Stratford",
     "coordinate_points": [],
     "display_schema": {
       "work_type": "topics",
@@ -235,7 +237,7 @@
       "book_authors": [],
       "publishers": [],
       "topics": [
-        "Ten Years of Stratford"
+        "Ten Years At Stratford"
       ],
       "events": [],
       "networks": [],
@@ -335,6 +337,7 @@
       }
     ],
     "media": [],
+    "correspondence": [],
     "word_count": 546,
     "coordinate_points": [],
     "display_schema": {
@@ -423,6 +426,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 1199,
     "coordinate_points": [
       {
@@ -518,6 +522,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 527,
     "coordinate_points": [],
     "display_schema": {
@@ -620,6 +625,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 745,
     "subject_role_map": [
       {
@@ -723,6 +729,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 2171,
     "topic": "'Musicals Much: Contrary To Rumours Of Their Demise, Megamusicals Are Here",
     "coordinate_points": [],
@@ -807,6 +814,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 1346,
     "coordinate_points": [
       {
@@ -895,6 +903,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 1876,
     "event_name": "Selected Listings",
     "event_year": "1999",
@@ -977,6 +986,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 1220,
     "coordinate_points": [
       {
@@ -1072,6 +1082,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 1220,
     "coordinate_points": [
       {
@@ -1192,6 +1203,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 767,
     "coordinate_points": [
       {
@@ -1320,6 +1332,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 826,
     "coordinate_points": [
       {
@@ -1420,6 +1433,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 854,
     "coordinate_points": [],
     "display_schema": {
@@ -1515,6 +1529,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 706,
     "coordinate_points": [
       {
@@ -1624,6 +1639,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 1097,
     "coordinate_points": [],
     "display_schema": {
@@ -1719,6 +1735,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 824,
     "coordinate_points": [],
     "display_schema": {
@@ -1827,6 +1844,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 413,
     "coordinate_points": [],
     "display_schema": {
@@ -1916,6 +1934,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 2207,
     "coordinate_points": [],
     "display_schema": {
@@ -2008,6 +2027,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 585,
     "coordinate_points": [
       {
@@ -2119,6 +2139,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 1685,
     "subject_role_map": [
       {
@@ -2233,6 +2254,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 1275,
     "coordinate_points": [
       {
@@ -2329,6 +2351,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 622,
     "recording_title": "Shade",
     "featured_artists": "Holly Cole; Aaron Davis; David Piltch",
@@ -2416,6 +2439,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 1155,
     "concert_title": "Jamie Cullum Concert",
     "featured_artists": "Jamie Cullum; Geoff Gascoyne; Sebastian DeKrom",
@@ -2513,6 +2537,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 1141,
     "event_name": "Weekend Agenda",
     "event_year": "2004",
@@ -2598,6 +2623,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 1488,
     "recording_title": "Two Shots / To Johnny Hartman / Big Band",
     "featured_artists": "Matt Dusk; Kevin Mahogany",
@@ -2705,6 +2731,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 93,
     "coordinate_points": [
       {
@@ -2815,6 +2842,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 89,
     "subject_role_map": [
       {
@@ -2941,6 +2969,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 85,
     "coordinate_points": [
       {
@@ -3049,6 +3078,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 90,
     "coordinate_points": [
       {
@@ -3158,6 +3188,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 92,
     "coordinate_points": [
       {
@@ -3276,6 +3307,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 997,
     "coordinate_points": [
       {
@@ -3394,6 +3426,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 661,
     "coordinate_points": [
       {
@@ -3505,6 +3538,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 71,
     "coordinate_points": [
       {
@@ -3619,6 +3653,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 94,
     "coordinate_points": [
       {
@@ -3733,6 +3768,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 93,
     "coordinate_points": [
       {
@@ -3842,6 +3878,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 82,
     "coordinate_points": [
       {
@@ -3948,6 +3985,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 86,
     "coordinate_points": [
       {
@@ -4050,6 +4088,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 80,
     "coordinate_points": [
       {
@@ -4155,6 +4194,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 247,
     "coordinate_points": [
       {
@@ -4275,6 +4315,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 853,
     "coordinate_points": [
       {
@@ -4402,6 +4443,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 522,
     "coordinate_points": [
       {
@@ -4544,6 +4586,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 1163,
     "coordinate_points": [
       {
@@ -4663,6 +4706,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 79,
     "coordinate_points": [
       {
@@ -4766,6 +4810,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 70,
     "coordinate_points": [
       {
@@ -4873,6 +4918,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 68,
     "coordinate_points": [
       {
@@ -4974,6 +5020,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 77,
     "subject_role_map": [
       {
@@ -5098,6 +5145,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 69,
     "coordinate_points": [
       {
@@ -5206,6 +5254,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 86,
     "coordinate_points": [
       {
@@ -5313,6 +5362,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 88,
     "coordinate_points": [
       {
@@ -5435,6 +5485,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 731,
     "coordinate_points": [
       {
@@ -5554,6 +5605,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 86,
     "coordinate_points": [
       {
@@ -5667,6 +5719,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 73,
     "coordinate_points": [],
     "display_schema": {
@@ -5770,6 +5823,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 615,
     "coordinate_points": [],
     "display_schema": {
@@ -5873,6 +5927,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 66,
     "coordinate_points": [
       {
@@ -5985,6 +6040,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 61,
     "coordinate_points": [
       {
@@ -6096,6 +6152,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 66,
     "coordinate_points": [
       {
@@ -6200,6 +6257,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 64,
     "coordinate_points": [
       {
@@ -6306,6 +6364,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 80,
     "coordinate_points": [
       {
@@ -6427,6 +6486,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 1020,
     "coordinate_points": [
       {
@@ -6534,6 +6594,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 1023,
     "film_title": "The 40 Year-Old Virgin",
     "coordinate_points": [],
@@ -6633,6 +6694,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 68,
     "coordinate_points": [
       {
@@ -6741,6 +6803,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 82,
     "coordinate_points": [
       {
@@ -6853,6 +6916,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 75,
     "coordinate_points": [
       {
@@ -6967,6 +7031,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 66,
     "coordinate_points": [
       {
@@ -7074,6 +7139,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 78,
     "coordinate_points": [
       {
@@ -7180,6 +7246,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 75,
     "coordinate_points": [
       {
@@ -7294,6 +7361,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 64,
     "coordinate_points": [
       {
@@ -7403,6 +7471,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 65,
     "coordinate_points": [
       {
@@ -7512,6 +7581,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 64,
     "coordinate_points": [
       {
@@ -7624,6 +7694,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 66,
     "coordinate_points": [
       {
@@ -7732,6 +7803,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 73,
     "coordinate_points": [
       {
@@ -7843,6 +7915,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 74,
     "coordinate_points": [
       {
@@ -7954,6 +8027,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 65,
     "coordinate_points": [
       {
@@ -8072,6 +8146,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 76,
     "coordinate_points": [
       {
@@ -8185,6 +8260,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 74,
     "coordinate_points": [
       {
@@ -8293,6 +8369,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 1144,
     "film_title": "Proof",
     "coordinate_points": [],
@@ -8385,6 +8462,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 62,
     "coordinate_points": [
       {
@@ -8496,6 +8574,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 65,
     "coordinate_points": [
       {
@@ -8602,6 +8681,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 311,
     "coordinate_points": [],
     "display_schema": {
@@ -8697,6 +8777,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 71,
     "coordinate_points": [
       {
@@ -8802,6 +8883,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 71,
     "coordinate_points": [
       {
@@ -8908,6 +8990,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 71,
     "coordinate_points": [
       {
@@ -9018,6 +9101,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 73,
     "coordinate_points": [
       {
@@ -9122,6 +9206,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 75,
     "coordinate_points": [
       {
@@ -9230,6 +9315,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 72,
     "coordinate_points": [
       {
@@ -9336,6 +9422,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 67,
     "coordinate_points": [
       {
@@ -9438,6 +9525,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 62,
     "coordinate_points": [
       {
@@ -9547,6 +9635,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 61,
     "coordinate_points": [
       {
@@ -9650,6 +9739,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 64,
     "coordinate_points": [
       {
@@ -9755,6 +9845,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 59,
     "coordinate_points": [
       {
@@ -9858,6 +9949,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 61,
     "coordinate_points": [
       {
@@ -9962,6 +10054,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 78,
     "coordinate_points": [
       {
@@ -10066,6 +10159,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 68,
     "coordinate_points": [
       {
@@ -10171,6 +10265,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 69,
     "coordinate_points": [
       {
@@ -10263,6 +10358,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 666,
     "topic": "He Is His Own Trickiest Role",
     "coordinate_points": [],
@@ -10358,6 +10454,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 67,
     "coordinate_points": [
       {
@@ -10470,6 +10567,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 70,
     "coordinate_points": [
       {
@@ -10581,6 +10679,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 69,
     "coordinate_points": [
       {
@@ -10689,6 +10788,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 1028,
     "film_title": "Match Point",
     "studio_or_distributor": "DreamWorks Pictures",
@@ -10802,6 +10902,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 64,
     "coordinate_points": [
       {
@@ -10922,6 +11023,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 52,
     "coordinate_points": [
       {
@@ -11033,6 +11135,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 71,
     "coordinate_points": [
       {
@@ -11142,6 +11245,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 64,
     "coordinate_points": [
       {
@@ -11249,6 +11353,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 69,
     "coordinate_points": [
       {
@@ -11362,6 +11467,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 50,
     "coordinate_points": [],
     "display_schema": {
@@ -11462,6 +11568,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 53,
     "coordinate_points": [
       {
@@ -11570,6 +11677,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 50,
     "coordinate_points": [
       {
@@ -11677,6 +11785,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 59,
     "coordinate_points": [
       {
@@ -11786,6 +11895,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 61,
     "coordinate_points": [
       {
@@ -11896,6 +12006,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 1411,
     "film_title": "Tristram Shandy: A Cock & Bull Story",
     "coordinate_points": [],
@@ -11993,6 +12104,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 70,
     "coordinate_points": [
       {
@@ -12097,6 +12209,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 60,
     "coordinate_points": [
       {
@@ -12205,6 +12318,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 60,
     "coordinate_points": [
       {
@@ -12313,6 +12427,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 59,
     "coordinate_points": [
       {
@@ -12427,6 +12542,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 60,
     "coordinate_points": [
       {
@@ -12525,6 +12641,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 708,
     "show_title": "At the Hotel",
     "network_or_platform": "CBC",
@@ -12607,6 +12724,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 856,
     "show_title": "At The Hotel",
     "network_or_platform": "CBC",
@@ -12709,6 +12827,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 1028,
     "coordinate_points": [
       {
@@ -12814,6 +12933,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 791,
     "show_title": "At the Hotel",
     "network_or_platform": "CBC",
@@ -12912,6 +13032,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 835,
     "show_title": "At The Hotel",
     "network_or_platform": "CBC",
@@ -13021,6 +13142,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 56,
     "coordinate_points": [
       {
@@ -13131,6 +13253,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 57,
     "coordinate_points": [
       {
@@ -13229,6 +13352,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 1051,
     "show_title": "At the Hotel",
     "network_or_platform": "CBC",
@@ -13317,6 +13441,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 1050,
     "show_title": "At the Hotel",
     "network_or_platform": "CBC",
@@ -13405,6 +13530,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 1157,
     "show_title": "At the Hotel",
     "network_or_platform": "CBC",
@@ -13496,6 +13622,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 1188,
     "show_title": "At the Hotel",
     "network_or_platform": "CBC",
@@ -13590,6 +13717,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 1222,
     "show_title": "At the Hotel",
     "network_or_platform": "CBC",
@@ -13697,6 +13825,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 68,
     "coordinate_points": [
       {
@@ -13807,6 +13936,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 56,
     "coordinate_points": [
       {
@@ -13914,6 +14044,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 62,
     "coordinate_points": [
       {
@@ -14037,6 +14168,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 59,
     "coordinate_points": [
       {
@@ -14152,6 +14284,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 66,
     "coordinate_points": [
       {
@@ -14262,6 +14395,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 73,
     "coordinate_points": [
       {
@@ -14364,6 +14498,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 55,
     "coordinate_points": [
       {
@@ -14476,6 +14611,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 60,
     "coordinate_points": [
       {
@@ -14591,6 +14727,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 47,
     "coordinate_points": [
       {
@@ -14717,6 +14854,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 999,
     "coordinate_points": [
       {
@@ -14892,6 +15030,7 @@
       }
     ],
     "media": [],
+    "correspondence": [],
     "word_count": 1488,
     "coordinate_points": [],
     "display_schema": {
@@ -15050,6 +15189,7 @@
       }
     ],
     "media": [],
+    "correspondence": [],
     "word_count": 1699,
     "coordinate_points": [],
     "display_schema": {
@@ -15152,6 +15292,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 997,
     "film_title": "The Da Vinci Code",
     "coordinate_points": [],
@@ -15297,6 +15438,7 @@
       }
     ],
     "media": [],
+    "correspondence": [],
     "word_count": 1613,
     "coordinate_points": [],
     "display_schema": {
@@ -15420,6 +15562,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 1567,
     "coordinate_points": [
       {
@@ -15519,6 +15662,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 2188,
     "topic": "'Some Nods Are Inexplicable: A Desperate Season, A Desperate Slate Of Dora",
     "coordinate_points": [],
@@ -15616,6 +15760,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 733,
     "coordinate_points": [
       {
@@ -15746,6 +15891,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 942,
     "coordinate_points": [
       {
@@ -15886,6 +16032,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 1733,
     "coordinate_points": [
       {
@@ -16008,6 +16155,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 845,
     "coordinate_points": [
       {
@@ -16124,6 +16272,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 195,
     "coordinate_points": [
       {
@@ -16308,6 +16457,7 @@
       }
     ],
     "media": [],
+    "correspondence": [],
     "word_count": 1189,
     "coordinate_points": [],
     "display_schema": {
@@ -16471,6 +16621,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 920,
     "coordinate_points": [],
     "display_schema": {
@@ -16589,6 +16740,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 1097,
     "film_title": "Hollywoodland",
     "coordinate_points": [],
@@ -16713,6 +16865,7 @@
       }
     ],
     "media": [],
+    "correspondence": [],
     "word_count": 1835,
     "subject_role_map": [
       {
@@ -16833,6 +16986,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 85,
     "coordinate_points": [
       {
@@ -16931,6 +17085,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 72,
     "coordinate_points": [
       {
@@ -17038,6 +17193,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 85,
     "coordinate_points": [
       {
@@ -17152,6 +17308,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 77,
     "coordinate_points": [
       {
@@ -17266,6 +17423,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 74,
     "coordinate_points": [
       {
@@ -17377,6 +17535,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 90,
     "coordinate_points": [
       {
@@ -17497,6 +17656,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 115,
     "coordinate_points": [
       {
@@ -17659,6 +17819,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 834,
     "coordinate_points": [],
     "display_schema": {
@@ -17803,6 +17964,7 @@
       }
     ],
     "media": [],
+    "correspondence": [],
     "word_count": 2117,
     "coordinate_points": [],
     "display_schema": {
@@ -17897,6 +18059,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 824,
     "concert_title": "Barbra Streisand",
     "featured_artists": "Barbra Streisand; Il Divo",
@@ -18053,6 +18216,7 @@
       }
     ],
     "media": [],
+    "correspondence": [],
     "word_count": 2223,
     "coordinate_points": [],
     "display_schema": {
@@ -18169,6 +18333,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 595,
     "coordinate_points": [
       {
@@ -18270,6 +18435,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 762,
     "coordinate_points": [
       {
@@ -18371,6 +18537,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 503,
     "coordinate_points": [
       {
@@ -18475,6 +18642,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 1184,
     "film_title": "Casino Royale",
     "coordinate_points": [],
@@ -18625,6 +18793,7 @@
       }
     ],
     "media": [],
+    "correspondence": [],
     "word_count": 2136,
     "coordinate_points": [],
     "display_schema": {
@@ -18746,6 +18915,7 @@
       }
     ],
     "media": [],
+    "correspondence": [],
     "word_count": 934,
     "event_name": "A Christmas Carol; Radio City Christmas Spectacular; Head-Smashed-In",
     "event_year": "2006",
@@ -18864,6 +19034,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 706,
     "event_name": "Multiple Theatre Productions Listings",
     "event_year": "2006",
@@ -19050,6 +19221,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 2120,
     "topic": "2006 Theatre Year in Review",
     "coordinate_points": [],
@@ -19198,6 +19370,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 969,
     "subject_role_map": [
       {
@@ -19312,6 +19485,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 769,
     "topic": "A Chorus Of Kudos; Playwright Robert Lepage Is Feted By Europe's Thespians",
     "coordinate_points": [],
@@ -19424,6 +19598,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 969,
     "coordinate_points": [
       {
@@ -19527,6 +19702,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 948,
     "show_title": "The Sopranos",
     "network_or_platform": "HBO",
@@ -19608,6 +19784,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 1296,
     "show_title": "The Sopranos",
     "network_or_platform": "HBO",
@@ -19727,6 +19904,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 805,
     "coordinate_points": [
       {
@@ -19861,6 +20039,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 978,
     "coordinate_points": [],
     "display_schema": {
@@ -19975,6 +20154,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 781,
     "coordinate_points": [
       {
@@ -20076,6 +20256,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 1016,
     "book_title": "Shakespeare the Thinker",
     "subject_role_map": [
@@ -20196,6 +20377,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 867,
     "coordinate_points": [
       {
@@ -20303,6 +20485,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 957,
     "show_title": "ER / The Pagan Christ",
     "network_or_platform": "CTV; CBC",
@@ -20395,6 +20578,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 990,
     "show_title": "ER / The Pagan Christ",
     "network_or_platform": "CTV; CBC",
@@ -20483,6 +20667,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 1184,
     "coordinate_points": [],
     "display_schema": {
@@ -20567,6 +20752,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 558,
     "concert_title": "Sandy Stewart and Bill Charlap",
     "featured_artists": "Sandy Stewart; Bill Charlap",
@@ -20672,6 +20858,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 1011,
     "subject_role_map": [
       {
@@ -20782,6 +20969,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 902,
     "coordinate_points": [],
     "display_schema": {
@@ -20889,6 +21077,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 899,
     "coordinate_points": [
       {
@@ -20987,6 +21176,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 1124,
     "book_title": "The Cello Suites",
     "subject_role_map": [
@@ -21115,6 +21305,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 882,
     "coordinate_points": [
       {
@@ -21241,6 +21432,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 881,
     "coordinate_points": [
       {
@@ -21371,6 +21563,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 861,
     "subject_role_map": [
       {
@@ -21507,6 +21700,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 740,
     "coordinate_points": [
       {
@@ -21605,6 +21799,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 83,
     "topic": "2010 Theatre Year in Review",
     "coordinate_points": [],
@@ -21706,6 +21901,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 874,
     "coordinate_points": [
       {
@@ -21846,6 +22042,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 937,
     "coordinate_points": [
       {
@@ -21984,6 +22181,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 919,
     "coordinate_points": [
       {
@@ -22091,6 +22289,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 765,
     "subject_role_map": [
       {
@@ -22187,6 +22386,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 1080,
     "subject_role_map": [
       {
@@ -22305,6 +22505,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 702,
     "coordinate_points": [
       {
@@ -22448,6 +22649,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 1103,
     "coordinate_points": [
       {
@@ -22598,6 +22800,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 786,
     "coordinate_points": [],
     "display_schema": {
@@ -22713,6 +22916,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 1100,
     "coordinate_points": [],
     "display_schema": {
@@ -22872,6 +23076,7 @@
       }
     ],
     "media": [],
+    "correspondence": [],
     "word_count": 1147,
     "coordinate_points": [],
     "display_schema": {
@@ -22973,6 +23178,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 427,
     "film_title": "The Boxtrolls",
     "studio_or_distributor": "Laika Studio",
@@ -23068,6 +23274,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 147,
     "topic": "Columnist's Best Picks",
     "coordinate_points": [],
@@ -23174,6 +23381,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 1046,
     "coordinate_points": [
       {
@@ -23325,6 +23533,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 1135,
     "coordinate_points": [
       {
@@ -23466,6 +23675,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 988,
     "coordinate_points": [
       {
@@ -23582,6 +23792,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 825,
     "coordinate_points": [
       {
@@ -23681,6 +23892,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 1488,
     "subject_role_map": [
       {
@@ -23774,6 +23986,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 1926,
     "subject_role_map": [
       {
@@ -23859,6 +24072,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 1212,
     "subject_role_map": [
       {
@@ -23966,6 +24180,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 767,
     "coordinate_points": [
       {
@@ -24072,6 +24287,7 @@
     },
     "production_groups": [],
     "media": [],
+    "correspondence": [],
     "word_count": 239,
     "coordinate_points": [],
     "display_schema": {

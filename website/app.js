@@ -4364,6 +4364,12 @@ function resultCard(record, context = {}) {
     match.textContent = `Matched ${matchInfo.label.toLowerCase()}: ${clipWords(matchInfo.value, 18)}`;
     copy.append(match);
   }
+  if (hasCorrespondence(record)) {
+    const note = document.createElement("span");
+    note.className = "result-correspondence-line";
+    note.textContent = `${correspondenceItems(record).length} correspondence item${correspondenceItems(record).length === 1 ? "" : "s"}`;
+    copy.append(note);
+  }
   copy.append(meta);
   card.append(copy);
   return card;
@@ -4749,6 +4755,119 @@ function relatedArticleLinks(record) {
   return section;
 }
 
+function correspondenceItems(record) {
+  return Array.isArray(record?.correspondence)
+    ? record.correspondence.filter((item) => item && typeof item === "object")
+    : [];
+}
+
+function asArray(value) {
+  if (!value) return [];
+  return Array.isArray(value) ? value : [value];
+}
+
+function hasCorrespondence(record) {
+  return correspondenceItems(record).length > 0;
+}
+
+function correspondenceMediaUrl(media) {
+  return media?.local_path ? new URL(`../site_export/content/${media.local_path}`, import.meta.url).toString() : "";
+}
+
+function articleCorrespondenceSection(record) {
+  const items = correspondenceItems(record);
+  if (!items.length) return null;
+  const section = document.createElement("section");
+  section.className = "article-correspondence";
+  const heading = document.createElement("h2");
+  heading.textContent = "Correspondence";
+  const intro = document.createElement("p");
+  intro.textContent = "Letters and notes saved with the scrapbook clipping for this article.";
+  const list = document.createElement("div");
+  list.className = "article-correspondence-list";
+  items.forEach((item) => {
+    const card = document.createElement("article");
+    card.className = "correspondence-card";
+    const meta = document.createElement("p");
+    meta.className = "correspondence-meta";
+    meta.textContent = [item.author, item.date, item.note_type].filter(Boolean).join(" / ");
+    const summary = document.createElement("p");
+    summary.className = "correspondence-summary";
+    summary.textContent = item.summary || "";
+    const gallery = document.createElement("div");
+    gallery.className = "correspondence-gallery";
+    asArray(item.media).forEach((media) => {
+      const src = correspondenceMediaUrl(media);
+      if (!src) return;
+      const figure = document.createElement("figure");
+      const image = document.createElement("img");
+      image.loading = "lazy";
+      image.src = src;
+      image.alt = media.alt || media.caption || item.summary || item.author || "Correspondence image";
+      figure.append(image);
+      if (media.caption) {
+        const caption = document.createElement("figcaption");
+        caption.textContent = media.caption;
+        figure.append(caption);
+      }
+      gallery.append(figure);
+    });
+    card.replaceChildren(meta);
+    if (summary.textContent) card.append(summary);
+    if (gallery.childElementCount) card.append(gallery);
+    list.append(card);
+  });
+  section.replaceChildren(heading, intro, list);
+  return section;
+}
+
+function renderCorrespondencePage() {
+  const entries = state.records
+    .flatMap((record) => correspondenceItems(record).map((item) => ({ record, item })))
+    .sort((a, b) => String(a.item.date || a.record.date || "").localeCompare(String(b.item.date || b.record.date || "")));
+  const page = document.createElement("section");
+  page.className = "landing-page correspondence-page";
+  const back = document.createElement("a");
+  back.className = "back-link";
+  back.href = "#section:browse";
+  back.textContent = "Back to browse";
+  const title = document.createElement("h1");
+  title.textContent = "Correspondence";
+  const intro = document.createElement("p");
+  intro.className = "landing-intro";
+  intro.textContent = "Letters and notes preserved with Robert Cushman's scrapbook clippings.";
+  const list = document.createElement("div");
+  list.className = "correspondence-index-list";
+  entries.forEach(({ record, item }) => {
+    const link = document.createElement("a");
+    link.className = "correspondence-index-card";
+    link.href = `#review:${record.slug}`;
+    const media = asArray(item.media)[0];
+    const src = correspondenceMediaUrl(media);
+    if (src) {
+      const image = document.createElement("img");
+      image.loading = "lazy";
+      image.src = src;
+      image.alt = media.alt || media.caption || item.author || "Correspondence image";
+      link.append(image);
+    }
+    const copy = document.createElement("span");
+    const meta = document.createElement("span");
+    meta.className = "correspondence-meta";
+    meta.textContent = [item.author, item.date, item.note_type].filter(Boolean).join(" / ");
+    const article = document.createElement("strong");
+    article.textContent = record.title;
+    const summary = document.createElement("em");
+    summary.textContent = item.summary || "";
+    copy.replaceChildren(meta, article);
+    if (summary.textContent) copy.append(summary);
+    link.append(copy);
+    list.append(link);
+  });
+  page.replaceChildren(back, title, intro, list);
+  els.indexContent.replaceChildren(page);
+}
+
 function articleSubjectEntityGroup(record, label, values) {
   const section = document.createElement("section");
   section.className = "article-entity-section article-entity-section-subjects";
@@ -4921,6 +5040,8 @@ async function showReview(slug) {
   if (notice) articleParts.push(notice);
   articleParts.push(body);
   const related = relatedArticleLinks(record);
+  const correspondence = articleCorrespondenceSection(record);
+  if (correspondence) articleParts.push(correspondence);
   if (related) articleParts.push(related);
   els.article.replaceChildren(...articleParts);
   els.articleView.hidden = false;
@@ -5023,6 +5144,14 @@ function route() {
   if (hash === "#timeline") {
     document.body.classList.add("index-open");
     renderTimelineToolV2();
+    els.indexView.hidden = false;
+    els.indexView.scrollIntoView({ behavior: "auto", block: "start" });
+    return;
+  }
+
+  if (hash === "#correspondence") {
+    document.body.classList.add("index-open");
+    renderCorrespondencePage();
     els.indexView.hidden = false;
     els.indexView.scrollIntoView({ behavior: "auto", block: "start" });
     return;
