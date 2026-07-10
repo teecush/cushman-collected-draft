@@ -8,12 +8,15 @@
       name="description"
       content="The collected theatre criticism of Robert Cushman."
     >
+    <meta property="og:title" content="Cushman Collected">
+    <meta property="og:description" content="More than 3,000 articles by theatre critic Robert Cushman.">
+    <meta property="og:type" content="website">
     <link rel="icon" href="../favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="../apple-touch-icon.svg">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Rubik:wght@400;600;700;800;900&display=swap">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-    <link rel="stylesheet" href="./styles.css?v=105">
+    <link rel="stylesheet" href="./styles.css?v=109">
   </head>
   <body>
     <header class="site-header">
@@ -80,7 +83,7 @@
       </nav>
       <a class="brand" href="#home" aria-label="Cushman Collected">
         <img
-          src="https://images.squarespace-cdn.com/content/v1/5b686ff89d5abba58f12a1bd/1546905508569-Y2DBQ1MYPBE7FFFUX2VU/Robert+Cushman+logo.png"
+          src="./assets/cushman-collected-logo.webp"
           alt="Cushman Collected"
         >
       </a>
@@ -115,39 +118,31 @@
     </header>
 
     <nav class="drawer" id="drawer" aria-label="Site navigation">
-      <strong>Search</strong>
       <a href="#search">Search the Archive</a>
-      <strong>Current</strong>
       <a href="#section:current">Current Collection</a>
-      <strong>Browse</strong>
-      <a href="#section:browse">Categories</a>
-      <a href="#section:collections">Collections</a>
-      <a href="#section:indexes">Indexes</a>
-      <a href="#master-index:all-works">All Works</a>
-      <a href="#master-index">Plays</a>
-      <a href="#master-index:musicals">Musicals</a>
-      <a href="#master-index:books">Books</a>
-      <a href="#master-index:albums">Albums</a>
-      <a href="#master-index:concerts">Concerts</a>
-      <a href="#master-index:television">Television</a>
-      <a href="#master-index:films">Films</a>
-      <a href="#master-index:all-people">All People</a>
-      <a href="#master-index:actors">Actors</a>
-      <a href="#master-index:playwrights">Playwrights</a>
-      <a href="#master-index:directors">Directors</a>
-      <a href="#master-index:composers-lyricists">Composers &amp; Lyricists</a>
-      <a href="#master-index:musicians">Musicians</a>
-      <a href="#index:publications">Publications</a>
-      <strong>Explore</strong>
-      <a href="#explore">Article Explorer</a>
-      <a href="#map">Map</a>
-      <a href="#timeline">Timeline</a>
-      <a href="#correspondence">Correspondence</a>
-      <strong>About</strong>
-      <a class="drawer-about" href="#about">About Robert Cushman</a>
-      <a href="#critics-circle">Critic's Circle</a>
-      <a href="https://www.cushmancollected.com/checkout/donate?donatePageId=5c9b8016652dea361e5feb7d" target="_blank" rel="noopener">Donate</a>
-      <a href="#subscribe">Subscribe</a>
+      <details>
+        <summary>Browse</summary>
+        <a href="#section:browse">Categories</a>
+        <a href="#section:collections">Collections</a>
+        <a href="#master-index">Master Index</a>
+        <a href="#master-index:all-works">All Works</a>
+        <a href="#master-index:all-people">All People</a>
+        <a href="#index:publications">Publications</a>
+      </details>
+      <details>
+        <summary>Explore</summary>
+        <a href="#explore">Article Explorer</a>
+        <a href="#map">Map</a>
+        <a href="#timeline">Timeline</a>
+        <a href="#correspondence">Correspondence</a>
+      </details>
+      <details>
+        <summary>About</summary>
+        <a href="#about">About Robert Cushman</a>
+        <a href="#critics-circle">Critic's Circle</a>
+        <a href="https://www.cushmancollected.com/checkout/donate?donatePageId=5c9b8016652dea361e5feb7d" target="_blank" rel="noopener">Donate</a>
+        <a href="#subscribe">Contact &amp; Newsletter</a>
+      </details>
     </nav>
 
     <main>
@@ -267,12 +262,8 @@
     <footer class="site-footer">
       <section>
         <strong>Subscribe to Cushman Collected.</strong>
-        <p>Receive email updates when new articles are posted.</p>
-        <form>
-          <input type="email" placeholder="Email Address" aria-label="Email Address">
-          <a class="footer-button" href="#subscribe">Sign Up</a>
-        </form>
-        <small>We respect your privacy and you may unsubscribe at any time.</small>
+        <p>Newsletter sign-up is coming soon.</p>
+        <a class="footer-text-link" href="#subscribe">Contact and newsletter details</a>
       </section>
       <section>
         <strong>Support Cushman Collected.</strong>
@@ -288,6 +279,6 @@
     </footer>
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    <script src="./app.js?v=137" type="module"></script>
+    <script src="./app.js?v=140" type="module"></script>
   </body>
 </html>

@@ -3,16 +3,16 @@
   "source_dir": "/Users/openclaw/Codex Projects/Cushman CODEXted/repaired_structural_v2",
   "counts": {
     "total": 3426,
-    "publish": 3242,
+    "publish": 3194,
     "archive_only": 154,
-    "duplicate_variant": 29,
+    "duplicate_variant": 77,
     "exclude_from_publication": 1
   },
-  "public_reviews": 3209,
-  "archive_records": 216,
+  "public_reviews": 3161,
+  "archive_records": 264,
   "excluded_records": 1,
-  "map_points": 1743,
-  "chat_chunks": 20833,
+  "map_points": 1739,
+  "chat_chunks": 20511,
   "sample_public_record": {
     "slug": "1970-10-02-inside-the-shell-of-technique",
     "route": "/reviews/1970-10-02-inside-the-shell-of-technique/",
@@ -112,5 +112,5 @@
       ]
     }
   },
-  "duplicate_canonical_links": 62
+  "duplicate_canonical_links": 110
 }

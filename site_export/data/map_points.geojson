@@ -13266,26 +13266,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -79.4145,
-          43.7664
-        ]
-      },
-      "properties": {
-        "title": "Torme reads well on stage and page",
-        "date": "1995-03-17",
-        "route": "/reviews/1995-03-17-torme-reads-well-on-stage-and-page/",
-        "venue": "George Weston Recital Hall",
-        "city": "Toronto",
-        "production_title": "Sing Sing Sing / My Singing Teachers",
-        "article_category": "Music Review",
-        "group_order": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -79.4224,
           43.6432
         ]
@@ -15337,26 +15317,6 @@
         "venue": "",
         "city": "",
         "production_title": "The Human Voice; The Elephant Song",
-        "article_category": "Theatre Review",
-        "group_order": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -80.9686,
-          43.3744
-        ]
-      },
-      "properties": {
-        "title": "A Good Year at Stratford Gets Better",
-        "date": "2004-08-26",
-        "route": "/reviews/2004-08-26-a-good-year-at-stratford-gets-better/",
-        "venue": "Festival Theatre",
-        "city": "Stratford, Ontario",
-        "production_title": "King Henry VIII (All Is True)",
         "article_category": "Theatre Review",
         "group_order": null
       }
@@ -20951,26 +20911,6 @@
         ]
       },
       "properties": {
-        "title": "What's the Thing Again? Oh Right, the Play!",
-        "date": "2007-10-13",
-        "route": "/reviews/2007-10-13-what-s-the-thing-again-oh-right-the-play/",
-        "venue": "Winchester Street Theatre",
-        "city": "Toronto",
-        "production_title": "The Prince Hamlet",
-        "article_category": "Theatre Review",
-        "group_order": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -79.3668,
-          43.666
-        ]
-      },
-      "properties": {
         "title": "What's the Thing Again?; Oh right, the play! Why Not Theatre remembers this well",
         "date": "2007-10-13",
         "route": "/reviews/2007-10-13-what-s-the-thing-again-oh-right-the-play-why-not-theatre-remembers-this-well/",
@@ -24977,26 +24917,6 @@
         "venue": "Tarragon Theatre",
         "city": "Toronto",
         "production_title": "Rocking the Cradle",
-        "article_category": "Theatre Review",
-        "group_order": null
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -79.3861,
-          43.6717
-        ]
-      },
-      "properties": {
-        "title": "Survival Of The Fittest",
-        "date": "2009-11-17",
-        "route": "/reviews/2009-11-17-survival-of-the-fittest/",
-        "venue": "Bluma Appel Theatre",
-        "city": "Toronto",
-        "production_title": "7 Stories",
         "article_category": "Theatre Review",
         "group_order": null
       }

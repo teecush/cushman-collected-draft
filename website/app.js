@@ -1,4 +1,5 @@
-const DATA_URL = new URL("../site_export/data/public_reviews.json?v=113", import.meta.url);
+const DATA_URL = new URL("../site_export/data/public_reviews.json?v=114", import.meta.url);
+const ALIASES_URL = new URL("../site_export/data/route_aliases.json?v=1", import.meta.url);
 const CONTENT_ROOT = new URL("../site_export/content/reviews/", import.meta.url);
 const MEDIA_ASSET_VERSION = "55aabc22";
 const PAGE_SIZE = 36;
@@ -701,6 +702,7 @@ const tileImages = {
 
 const state = {
   records: [],
+  aliases: {},
   filtered: [],
   visible: PAGE_SIZE,
   collection: "",
@@ -717,6 +719,7 @@ const state = {
   bodySearchMatches: new Map(),
   bodySearchLoading: false,
   bodySearchTimer: null,
+  filterTimer: null,
   pendingArchiveRestore: null,
 };
 
@@ -1568,13 +1571,9 @@ function searchable(record) {
 function recordMatchesQuery(record, rawQuery) {
   const query = normalizeSearchText(rawQuery);
   if (!query) return true;
-  const parts = [];
-  searchableParts(record).forEach((value) => pushSearchValue(parts, value));
-  if (parts.some((part) => queryMatchesText(query, part))) return true;
   const terms = searchTerms(rawQuery);
-  if (!terms.length) return false;
   const combined = searchable(record);
-  return terms.every((term) => combined.includes(term));
+  return combined.includes(query) || (terms.length > 0 && terms.every((term) => combined.includes(term)));
 }
 
 function searchTerms(rawQuery) {
@@ -1728,6 +1727,28 @@ function applyFilters() {
     state.visible = PAGE_SIZE;
   }
   renderResults();
+}
+
+function archiveStateHref() {
+  const params = new URLSearchParams();
+  if (state.query.trim()) params.set("q", state.query.trim());
+  if (state.type) params.set("type", state.type);
+  if (state.collection) params.set("collection", state.collection);
+  if (state.sort && state.sort !== "relevance") params.set("sort", state.sort);
+  const query = params.toString();
+  return `#archive${query ? `?${query}` : ""}`;
+}
+
+function syncArchiveUrl() {
+  history.replaceState(null, "", archiveStateHref());
+}
+
+function scheduleFilterUpdate({ updateUrl = true } = {}) {
+  clearTimeout(state.filterTimer);
+  state.filterTimer = setTimeout(() => {
+    applyFilters();
+    if (updateUrl) syncArchiveUrl();
+  }, 90);
 }
 
 function updateSortButtons() {
@@ -2787,11 +2808,38 @@ function renderMasterIndex(filterKey = DEFAULT_MASTER_INDEX_FILTER) {
     masterIndexFilterGroup("Works", MASTER_INDEX_WORK_FILTERS, activeKey),
     masterIndexFilterGroup("People", orderedMasterPeopleFilters(), activeKey)
   );
+  const search = document.createElement("label");
+  search.className = "master-index-search";
+  const searchLabel = document.createElement("span");
+  searchLabel.textContent = `Search ${filter.label}`;
+  const searchInput = document.createElement("input");
+  searchInput.type = "search";
+  searchInput.placeholder = `Filter ${filter.label.toLowerCase()}`;
+  search.append(searchLabel, searchInput);
   const nav = alphaNavForGroups(groups, `master-${activeKey}`, filter.label);
-  sticky.replaceChildren(filters, nav);
+  sticky.replaceChildren(filters, search, nav);
 
   const list = alphaListForGroups(groups, filter.typeKeys[0], `master-${activeKey}`);
+  searchInput.addEventListener("input", () => {
+    const query = normalizeSearchText(searchInput.value);
+    let visible = 0;
+    list.querySelectorAll("section").forEach((section) => {
+      let sectionVisible = 0;
+      section.querySelectorAll("a").forEach((link) => {
+        const match = !query || normalizeSearchText(link.textContent).includes(query);
+        link.hidden = !match;
+        if (match) sectionVisible += 1;
+      });
+      section.hidden = sectionVisible === 0;
+      visible += sectionVisible;
+    });
+    currentCount.textContent = `${visible.toLocaleString()} ${visible === 1 ? "entry" : "entries"}`;
+  });
   els.indexContent.replaceChildren(title, count, sticky, list);
+  const observer = new IntersectionObserver(([entry]) => {
+    sticky.classList.toggle("is-condensed", !entry.isIntersecting);
+  }, { rootMargin: "-110px 0px 0px" });
+  observer.observe(title);
 }
 
 function renderEntityPage(typeKey, slug) {
@@ -3283,6 +3331,25 @@ function renderTimelineToolV2() {
   yearLabel.className = "timeline-year-label";
   const results = document.createElement("div");
   results.className = "timeline-results timeline-list";
+  const mobileControls = document.createElement("div");
+  mobileControls.className = "timeline-mobile-controls";
+  const previousYear = document.createElement("button");
+  previousYear.type = "button";
+  previousYear.setAttribute("aria-label", "Previous year");
+  previousYear.textContent = "‹";
+  const yearSelect = document.createElement("select");
+  yearSelect.setAttribute("aria-label", "Timeline year");
+  sortedYears.forEach(([year, records]) => {
+    const option = document.createElement("option");
+    option.value = year;
+    option.textContent = `${year} · ${records.length} ${records.length === 1 ? "article" : "articles"}`;
+    yearSelect.append(option);
+  });
+  const nextYear = document.createElement("button");
+  nextYear.type = "button";
+  nextYear.setAttribute("aria-label", "Next year");
+  nextYear.textContent = "›";
+  mobileControls.append(previousYear, yearSelect, nextYear);
   const max = Math.max(...sortedYears.map(([, items]) => items.length), 1);
   const minYear = Number(sortedYears[0]?.[0] || new Date().getFullYear());
   const maxYear = Number(sortedYears.at(-1)?.[0] || minYear);
@@ -3296,6 +3363,7 @@ function renderTimelineToolV2() {
     thumb.style.left = `${pct}%`;
     yearLabel.style.left = `${pct}%`;
     yearLabel.textContent = `${activeYear} / ${records.length.toLocaleString()} ${records.length === 1 ? "article" : "articles"}`;
+    yearSelect.value = activeYear;
     track.querySelectorAll(".timeline-segment").forEach((segment) => segment.classList.toggle("is-active", segment.dataset.year === activeYear));
     results.replaceChildren();
     records.forEach((record) => {
@@ -3357,8 +3425,16 @@ function renderTimelineToolV2() {
     if (event.buttons !== 1) return;
     showYear(nearestYear(event.clientX));
   });
+  const stepYear = (direction) => {
+    const index = sortedYears.findIndex(([year]) => year === activeYear);
+    const nextIndex = Math.max(0, Math.min(sortedYears.length - 1, index + direction));
+    showYear(sortedYears[nextIndex][0]);
+  };
+  previousYear.addEventListener("click", () => stepYear(-1));
+  nextYear.addEventListener("click", () => stepYear(1));
+  yearSelect.addEventListener("change", () => showYear(yearSelect.value));
   rail.replaceChildren(track);
-  tool.replaceChildren(rail, results);
+  tool.replaceChildren(mobileControls, rail, results);
   els.indexContent.replaceChildren(title, intro, tool);
   showYear(activeYear);
 }
@@ -3392,12 +3468,7 @@ function renderSubscribePage() {
   page.innerHTML = `
     <section>
       <h2>Newsletter</h2>
-      <p>Subscribe to the Cushman Collected newsletter: every month, you’ll be the first to read new reviews and featured reviews curated from the archive.</p>
-      <form class="contact-form">
-        <input type="email" placeholder="Email Address" aria-label="Email Address">
-        <a class="footer-button" href="https://www.cushmancollected.com/contact" target="_blank" rel="noopener">Sign Up</a>
-      </form>
-      <small>We respect your privacy and you may unsubscribe at any time.</small>
+      <p>Newsletter sign-up is not yet connected. This page will be updated when subscriptions open.</p>
     </section>
     <section>
       <h2>Questions?</h2>
@@ -3569,6 +3640,8 @@ function renderLeafletMap(container, points, options = {}) {
     const radius = 5 + Math.sqrt(point.count / maxCount) * 11;
     const size = Math.round(radius * 2);
     const marker = L.marker([point.lat, point.lon], {
+      keyboard: false,
+      title: `${point.label}, ${point.count} mapped article references`,
       icon: L.divIcon({
         className: "map-pin-icon map-pin-city",
         html: `<span style="width:${size}px;height:${size}px"></span>`,
@@ -3585,6 +3658,8 @@ function renderLeafletMap(container, points, options = {}) {
   });
   (options.venues || []).slice(0, options.maxVenues ?? (options.venues || []).length).forEach((point) => {
     const marker = L.marker([point.lat, point.lon], {
+      keyboard: false,
+      title: `${point.label}${point.city ? `, ${point.city}` : ""}, ${point.count} article references`,
       icon: L.divIcon({
         className: `map-pin-icon map-pin-venue${point.precision === "city" ? " map-pin-approximate" : ""}`,
         html: "<span></span>",
@@ -4397,6 +4472,32 @@ function stripFrontmatter(markdown) {
   return markdown.replace(/^---[\s\S]*?\n---\s*/, "").trim();
 }
 
+function publicArticleBody(markdown, record = null) {
+  let blocks = stripFrontmatter(markdown)
+    .split(/\n{2,}/)
+    .map((block) => block.trim())
+    .filter(Boolean);
+  const hasImage = Boolean(record?.media?.length) || blocks.some((block) => /^!\[.*?\]\(.*?\)$/.test(block));
+  const archiveTail = /^(?:word count\s*:|credit\s*:|illustrations?\s*:|illustrations?$|e-?mail\s*:|email\s*:)/i;
+  const oldEmail = /^(?:contact\s*:)?\s*[\w.+-]+@(?:sympatico|rogers|bell|gmail|hotmail|yahoo)\.[a-z]{2,}\s*$/i;
+  blocks = blocks.filter((block) => {
+    const text = block.replace(/\s*\n\s*/g, " ").trim();
+    if (archiveTail.test(text) || oldEmail.test(text)) return false;
+    if (!hasImage && /^(?:caption|photo caption)\s*:/i.test(text)) return false;
+    return true;
+  });
+  while (blocks.length) {
+    const tail = blocks.at(-1).replace(/\s*\n\s*/g, " ").trim();
+    const captionOnly = /^(?:caption|photo caption)\s*:/i.test(tail);
+    if (archiveTail.test(tail) || oldEmail.test(tail) || (!hasImage && captionOnly)) {
+      blocks.pop();
+      continue;
+    }
+    break;
+  }
+  return blocks.join("\n\n");
+}
+
 function safeDecodeHashValue(value) {
   try {
     return decodeURIComponent(value);
@@ -4428,8 +4529,8 @@ function articleLoadNotice(message, sourceFile = "") {
   return notice;
 }
 
-function plainParagraphNodes(markdown) {
-  return stripFrontmatter(markdown)
+function plainParagraphNodes(markdown, record = null) {
+  return publicArticleBody(markdown, record)
     .split(/\n{2,}/)
     .map((block) => block.trim())
     .filter(Boolean)
@@ -4503,7 +4604,7 @@ async function renderEmergencyArticle(slug, error) {
 function paragraphNodes(markdown, record) {
   const inlineEntities = inlineLinkEntities(record);
   const linkedSlugs = new Set();
-  const blocks = stripFrontmatter(markdown)
+  const blocks = publicArticleBody(markdown, record)
     .split(/\n{2,}/)
     .map((block) => block.trim())
     .filter(Boolean);
@@ -4702,15 +4803,48 @@ function articleContextNav(record) {
   buttons.className = "article-context-buttons";
   const previous = document.createElement("a");
   previous.textContent = "Previous";
+  previous.setAttribute("aria-label", "Previous article");
   previous.href = context.index > 0 ? `#review:${context.slugs[context.index - 1]}` : "";
   previous.toggleAttribute("aria-disabled", context.index <= 0);
   const next = document.createElement("a");
   next.textContent = "Next";
+  next.setAttribute("aria-label", "Next article");
   next.href = context.index < context.slugs.length - 1 ? `#review:${context.slugs[context.index + 1]}` : "";
   next.toggleAttribute("aria-disabled", context.index >= context.slugs.length - 1);
   buttons.replaceChildren(previous, next);
   nav.replaceChildren(back, progress, buttons);
   return nav;
+}
+
+function articleTools(record) {
+  const tools = document.createElement("nav");
+  tools.className = "article-tools";
+  tools.setAttribute("aria-label", "Article tools");
+  const copyLink = document.createElement("button");
+  copyLink.type = "button";
+  copyLink.textContent = "Copy link";
+  copyLink.addEventListener("click", async () => {
+    try {
+      await navigator.clipboard.writeText(window.location.href);
+      copyLink.textContent = "Link copied";
+      setTimeout(() => { copyLink.textContent = "Copy link"; }, 1600);
+    } catch {
+      copyLink.textContent = "Copy failed";
+    }
+  });
+  const print = document.createElement("button");
+  print.type = "button";
+  print.textContent = "Print / Save PDF";
+  print.addEventListener("click", () => window.print());
+  const source = document.createElement("details");
+  source.className = "article-source-details";
+  const summary = document.createElement("summary");
+  summary.textContent = "Source details";
+  const citation = document.createElement("p");
+  citation.textContent = `Robert Cushman, “${record.title},” ${articlePublicationLabel(record)}, ${formatDate(record.date)}.`;
+  source.append(summary, citation);
+  tools.append(copyLink, print, source);
+  return tools;
 }
 
 function relatedEntityCandidates(record) {
@@ -4803,6 +4937,7 @@ function articleCorrespondenceSection(record) {
   if (!items.length) return null;
   const section = document.createElement("section");
   section.className = "article-correspondence";
+  section.id = "article-correspondence";
   const heading = document.createElement("h2");
   heading.textContent = "Correspondence";
   const intro = document.createElement("p");
@@ -5005,6 +5140,11 @@ async function showReview(slug) {
   const normalizedSlug = safeDecodeHashValue(slug);
   const record = state.records.find((item) => item.slug === normalizedSlug);
   if (!record) {
+    const canonicalSlug = state.aliases[normalizedSlug];
+    if (canonicalSlug) {
+      window.location.replace(`#review:${canonicalSlug}`);
+      return;
+    }
     const title = document.createElement("h1");
     title.textContent = "Article Unavailable";
     const notice = articleLoadNotice(`No article record matched this link: ${normalizedSlug}`);
@@ -5027,6 +5167,8 @@ async function showReview(slug) {
   }
 
   const { date, title, deck, meta, titleParts } = articleTitleNodes(record);
+  document.title = `${record.title} | Cushman Collected`;
+  document.querySelector('meta[name="description"]')?.setAttribute("content", `${record.title}, by Robert Cushman. ${articlePublicationLabel(record)}, ${formatDate(record.date)}.`);
 
   const body = document.createElement("div");
   body.className = "article-body";
@@ -5036,7 +5178,7 @@ async function showReview(slug) {
       bodyNodes = paragraphNodes(markdown, record);
     } catch (error) {
       console.error("Could not render enhanced article body", record.slug, error);
-      bodyNodes = plainParagraphNodes(markdown);
+      bodyNodes = plainParagraphNodes(markdown, record);
       notice = articleLoadNotice(
         "The article text loaded, but enhanced linking failed. Showing plain article text.",
         record.source_file
@@ -5054,13 +5196,34 @@ async function showReview(slug) {
   articleParts.push(date, title);
   if (titleParts.deck) articleParts.push(deck);
   articleParts.push(meta);
+  if (hasCorrespondence(record)) {
+    const correspondenceLink = document.createElement("a");
+    correspondenceLink.className = "article-correspondence-chip";
+    correspondenceLink.href = "#article-correspondence";
+    const itemCount = correspondenceItems(record).length;
+    correspondenceLink.textContent = `${itemCount} correspondence ${itemCount === 1 ? "item" : "items"}`;
+    correspondenceLink.addEventListener("click", (event) => {
+      event.preventDefault();
+      document.querySelector("#article-correspondence")?.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+    articleParts.push(correspondenceLink);
+  }
   try {
     const entityLinks = articleEntityLinks(record);
-    if (entityLinks) articleParts.push(entityLinks);
+    if (entityLinks) {
+      const details = document.createElement("details");
+      details.className = "article-metadata-details";
+      details.open = !window.matchMedia("(max-width: 760px)").matches;
+      const summary = document.createElement("summary");
+      summary.textContent = "Article details";
+      details.append(summary, entityLinks);
+      articleParts.push(details);
+    }
   } catch (error) {
     console.error("Could not render article metadata chips", record.slug, error);
     notice = articleLoadNotice("Metadata chips could not be rendered for this article. Article text is shown below.", record.source_file);
   }
+  articleParts.push(articleTools(record));
   if (notice) articleParts.push(notice);
   articleParts.push(body);
   const related = relatedArticleLinks(record);
@@ -5068,6 +5231,8 @@ async function showReview(slug) {
   if (correspondence) articleParts.push(correspondence);
   if (related) articleParts.push(related);
   els.article.replaceChildren(...articleParts);
+  const backLink = els.articleView.querySelector(":scope > .back-link");
+  if (backLink) backLink.hidden = Boolean(nav);
   els.articleView.hidden = false;
   els.articleView.scrollIntoView({ behavior: "auto", block: "start" });
 }
@@ -5079,6 +5244,13 @@ function route() {
   els.indexView.hidden = true;
   els.mapView.hidden = true;
   document.body.classList.remove("article-open", "index-open", "map-open", "search-open");
+  els.drawer.querySelectorAll("a").forEach((link) => {
+    const active = link.getAttribute("href") === hash;
+    if (active) link.setAttribute("aria-current", "page");
+    else link.removeAttribute("aria-current");
+  });
+  document.title = "Cushman Collected";
+  document.querySelector('meta[name="description"]')?.setAttribute("content", "The collected theatre criticism of Robert Cushman.");
 
   if (hash.startsWith("#review:")) {
     document.body.classList.add("article-open");
@@ -5257,6 +5429,7 @@ function route() {
       state.query = params.get("q") || "";
       state.type = params.get("type") || "";
       state.collection = params.get("collection") || "";
+      state.sort = params.get("sort") || "relevance";
       state.shakespeareGroup = "";
       els.searchInput.value = state.query;
       els.typeFilter.value = state.type;
@@ -5289,9 +5462,10 @@ function scrollToSection(selector) {
 
 async function init() {
   try {
-    const response = await fetch(DATA_URL);
+    const [response, aliasesResponse] = await Promise.all([fetch(DATA_URL), fetch(ALIASES_URL)]);
     if (!response.ok) throw new Error(`Could not load records (${response.status})`);
     state.records = await response.json();
+    state.aliases = aliasesResponse.ok ? await aliasesResponse.json() : {};
   } catch (error) {
     els.archiveCount.textContent = "Records could not load";
     els.results.innerHTML = `
@@ -5316,6 +5490,7 @@ async function init() {
 els.menuButton.addEventListener("click", () => {
   const isOpen = els.drawer.classList.toggle("is-open");
   els.menuButton.setAttribute("aria-expanded", String(isOpen));
+  els.menuButton.setAttribute("aria-label", isOpen ? "Close navigation menu" : "Open navigation menu");
 });
 
 document.addEventListener("click", (event) => {
@@ -5323,19 +5498,21 @@ document.addEventListener("click", (event) => {
   if (els.drawer.contains(event.target) || els.menuButton.contains(event.target)) return;
   els.drawer.classList.remove("is-open");
   els.menuButton.setAttribute("aria-expanded", "false");
+  els.menuButton.setAttribute("aria-label", "Open navigation menu");
 });
 
 els.drawer.addEventListener("click", (event) => {
   if (event.target.closest("a")) {
     els.drawer.classList.remove("is-open");
     els.menuButton.setAttribute("aria-expanded", "false");
+    els.menuButton.setAttribute("aria-label", "Open navigation menu");
   }
 });
 
 els.searchInput.addEventListener("input", (event) => {
   state.query = event.target.value;
   scheduleBodySearch(state.query);
-  applyFilters();
+  scheduleFilterUpdate();
 });
 
 els.searchInput.addEventListener("focus", () => {
@@ -5350,17 +5527,20 @@ els.collectionFilter.addEventListener("change", (event) => {
   state.collection = event.target.value;
   if (state.collection !== SHAKESPEARE_COLLECTION) state.shakespeareGroup = "";
   applyFilters();
+  syncArchiveUrl();
 });
 
 els.typeFilter.addEventListener("change", (event) => {
   state.type = event.target.value;
   applyFilters();
+  syncArchiveUrl();
 });
 
 els.sortButtons.forEach((button) => {
   button.addEventListener("click", () => {
     state.sort = button.dataset.sort;
     applyFilters();
+    syncArchiveUrl();
   });
 });
 
@@ -5382,6 +5562,15 @@ els.clearFilters.addEventListener("click", () => {
   setArchiveExpanded(false);
   renderShakespeareNav();
   renderResults();
+  syncArchiveUrl();
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key !== "Escape" || !els.drawer.classList.contains("is-open")) return;
+  els.drawer.classList.remove("is-open");
+  els.menuButton.setAttribute("aria-expanded", "false");
+  els.menuButton.setAttribute("aria-label", "Open navigation menu");
+  els.menuButton.focus();
 });
 
 window.addEventListener("hashchange", route);

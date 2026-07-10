@@ -284,6 +284,30 @@ select {
   gap: 14px;
 }
 
+.drawer details {
+  border-top: 1px solid var(--rule);
+  padding-top: 8px;
+}
+
+.drawer summary {
+  cursor: pointer;
+  color: var(--blue-dark);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+}
+
+.drawer details a {
+  display: block;
+  padding: 7px 0 0 14px;
+}
+
+.drawer a[aria-current="page"] {
+  color: var(--ink);
+  font-weight: 800;
+}
+
 .drawer strong {
   margin-top: 4px;
   color: var(--blue-dark);
@@ -3595,6 +3619,15 @@ h1 {
 
 @media (max-width: 760px) {
   .site-header {
+    gap: 8px;
+    padding-inline: 12px;
+  }
+
+  .search-link {
+    justify-self: center;
+  }
+
+  .site-header {
     grid-template-columns: 42px 1fr 42px;
     min-height: 88px;
     padding-inline: 20px;
@@ -3864,4 +3897,244 @@ h1 {
   .tile-grid {
     grid-template-columns: 1fr;
   }
+}
+
+/* Publication-readiness refinements */
+.master-index-search {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  border-top: 1px solid var(--rule);
+  padding: 7px 12px;
+  background: rgba(255, 255, 255, 0.96);
+  font-family: var(--sans);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+}
+
+.master-index-search input {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  border-bottom: 1px solid var(--ink);
+  background: transparent;
+  padding: 5px 2px;
+  font: 600 13px var(--sans);
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.master-index-sticky.is-condensed .master-index-filter-group {
+  display: none;
+}
+
+.master-index-sticky.is-condensed .master-index-panel {
+  grid-template-columns: 1fr;
+  padding-block: 7px;
+}
+
+.article-tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  align-items: center;
+  margin: 18px 0 8px;
+  border-top: 1px solid var(--rule);
+  padding-top: 10px;
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.article-tools button,
+.article-tools summary {
+  border: 0;
+  background: transparent;
+  color: var(--blue-dark);
+  padding: 4px 0;
+  cursor: pointer;
+  font: inherit;
+  text-transform: inherit;
+}
+
+.article-source-details {
+  position: relative;
+}
+
+.article-source-details p {
+  position: absolute;
+  z-index: 5;
+  width: min(420px, 80vw);
+  margin: 4px 0 0;
+  border: 1px solid var(--rule);
+  background: white;
+  padding: 12px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+  color: var(--ink);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.45;
+  text-transform: none;
+}
+
+.article-metadata-details > summary {
+  display: none;
+}
+
+.article-correspondence-chip {
+  display: inline-block;
+  width: max-content;
+  margin-top: 12px;
+  border-radius: 999px;
+  background: #edf3f7;
+  padding: 6px 10px;
+  color: var(--blue-dark);
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.site-footer {
+  margin-top: 54px;
+  margin-bottom: 30px;
+  padding: 18px 26px 20px;
+}
+
+.site-footer strong { font-size: 15px; }
+.site-footer p { font-size: 13px; }
+
+.footer-text-link {
+  color: var(--blue-dark);
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.timeline-mobile-controls {
+  display: none;
+}
+
+@media (max-width: 760px) {
+  .article-context-nav {
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    gap: 7px;
+    margin-bottom: 14px;
+    padding: 7px 8px;
+    text-align: left;
+  }
+
+  .article-context-nav > a:first-child { font-size: 0; }
+  .article-context-nav > a:first-child::after { content: "Results"; font-size: 10px; }
+  .article-context-buttons { justify-content: flex-end; }
+  .article-context-buttons a { font-size: 0; }
+  .article-context-buttons a::after { font-size: 22px; line-height: 1; }
+  .article-context-buttons a:first-child::after { content: "‹"; }
+  .article-context-buttons a:last-child::after { content: "›"; }
+
+  .article-metadata-details {
+    margin-top: 14px;
+  }
+
+  .article-metadata-details > summary {
+    display: list-item;
+    cursor: pointer;
+    color: var(--blue-dark);
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+  }
+
+  .article-metadata-details[open] > summary { margin-bottom: 10px; }
+
+  .timeline-mobile-controls {
+    display: grid;
+    grid-template-columns: 42px minmax(0, 1fr) 42px;
+    gap: 7px;
+    margin: 16px 0;
+  }
+
+  .timeline-mobile-controls button,
+  .timeline-mobile-controls select {
+    min-height: 42px;
+    border: 1px solid var(--rule);
+    background: white;
+    color: var(--ink);
+    font: 800 13px var(--sans);
+  }
+
+  .timeline-mobile-controls button { font-size: 25px; }
+  .timeline-rail { display: none; }
+
+  .explore-pill-column,
+  .explore-pill-results {
+    flex-basis: calc(100vw - 58px);
+  }
+
+  .explore-pill-scroller {
+    overflow: visible;
+  }
+
+  .explore-pill-columns {
+    display: block;
+    min-width: 0;
+  }
+
+  .explore-pill-column,
+  .explore-pill-results {
+    display: none;
+    width: 100%;
+    min-height: 0;
+    border-right: 0;
+  }
+
+  .explore-pill-column.is-options-column,
+  .explore-pill-results {
+    display: block;
+  }
+
+  .explore-pill-results {
+    border-top: 1px solid var(--rule);
+  }
+}
+
+@media (max-width: 350px) {
+  main { padding-inline: 14px; }
+  .index-view h1 { font-size: 32px; overflow-wrap: anywhere; }
+  .article-context-progress { font-size: 9px; }
+  .correspondence-index-card { grid-template-columns: 58px minmax(0, 1fr); }
+}
+
+@media print {
+  .site-header,
+  .drawer,
+  .site-footer,
+  .back-link,
+  .article-context-nav,
+  .article-tools,
+  .article-correspondence-chip,
+  .article-related-links {
+    display: none !important;
+  }
+
+  body,
+  main,
+  .article-view {
+    width: auto;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    background: white;
+    color: black;
+  }
+
+  .article-metadata-details > summary { display: none; }
+  .article-inline-link,
+  .entity-chip { color: black; text-decoration: none; }
 }
