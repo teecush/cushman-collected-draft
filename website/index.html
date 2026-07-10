@@ -16,7 +16,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Rubik:wght@400;600;700;800;900&display=swap">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-    <link rel="stylesheet" href="./styles.css?v=109">
+    <link rel="stylesheet" href="./styles.css?v=110">
   </head>
   <body>
     <header class="site-header">
@@ -158,34 +158,42 @@
       <section class="archive" id="archive">
         <div class="archive-heading">
           <h1>Search the Archive</h1>
-          <p id="archiveCount">Loading articles...</p>
         </div>
         <div class="search-panel">
           <label class="search-field">
-            <span>Search</span>
+            <span class="search-label-row">
+              <strong>Search</strong>
+              <em id="archiveCount" aria-live="polite">Loading articles...</em>
+            </span>
             <input id="searchInput" type="search" autocomplete="off" placeholder="Title, production, company, person, city">
           </label>
         </div>
-        <div class="filter-strip" aria-label="Archive filters">
-          <label>
-            <span class="visually-hidden">Type</span>
-            <select id="typeFilter" aria-label="Type"></select>
-          </label>
-          <label>
-            <span class="visually-hidden">Collection</span>
-            <select id="collectionFilter" aria-label="Collection"></select>
-          </label>
-          <div class="search-tools" aria-label="Search tools">
-            <div class="sort-options" id="sortOptions">
-              <button class="is-active" type="button" data-sort="relevance">Relevance</button>
-              <button type="button" data-sort="newest">Newest</button>
-              <button type="button" data-sort="oldest">Oldest</button>
-              <button type="button" data-sort="title">Title A-Z</button>
-              <button class="clear-button" id="clearFilters" type="button">Clear</button>
+        <button class="filter-toggle" id="filterToggle" type="button" aria-expanded="false" aria-controls="filterControls">
+          <span>Filters &amp; sort</span>
+          <em id="filterSummary">All types · All collections</em>
+        </button>
+        <div class="filter-controls" id="filterControls">
+          <div class="filter-strip" aria-label="Archive filters">
+            <label>
+              <span class="visually-hidden">Type</span>
+              <select id="typeFilter" aria-label="Type"></select>
+            </label>
+            <label>
+              <span class="visually-hidden">Collection</span>
+              <select id="collectionFilter" aria-label="Collection"></select>
+            </label>
+            <div class="search-tools" aria-label="Search tools">
+              <div class="sort-options" id="sortOptions">
+                <button class="is-active" type="button" data-sort="relevance">Relevance</button>
+                <button type="button" data-sort="newest">Newest</button>
+                <button type="button" data-sort="oldest">Oldest</button>
+                <button type="button" data-sort="title">Title A-Z</button>
+                <button class="clear-button" id="clearFilters" type="button">Clear</button>
+              </div>
             </div>
           </div>
+          <div class="shakespeare-nav" id="shakespeareNav" hidden></div>
         </div>
-        <div class="shakespeare-nav" id="shakespeareNav" hidden></div>
         <div class="results" id="results"></div>
       </section>
 
@@ -222,6 +230,16 @@
           <span>Chronology</span>
           <strong>Timeline</strong>
           <em>Drag through forty years of reviews and essays by year.</em>
+        </a>
+        <a class="explore-home-card explore-correspondence-card" href="#correspondence">
+          <span>Letters &amp; Notes</span>
+          <strong>Correspondence</strong>
+          <em>Browse personal responses, letters, and notes preserved with the articles.</em>
+          <span class="correspondence-card-images" aria-hidden="true">
+            <img src="../site_export/content/media/correspondence/the-roman-invasion/lk-ensor-1973-10-28.jpg" alt="" loading="lazy">
+            <img src="../site_export/content/media/correspondence/a-famous-thane/clive-donner-1974-11-04.jpg" alt="" loading="lazy">
+            <img src="../site_export/content/media/correspondence/lament-for-a-little-night-music/sammy-cahn-1974-09-30.jpg" alt="" loading="lazy">
+          </span>
         </a>
       </section>
 
@@ -279,6 +297,6 @@
     </footer>
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    <script src="./app.js?v=140" type="module"></script>
+    <script src="./app.js?v=141" type="module"></script>
   </body>
 </html>

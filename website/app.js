@@ -734,6 +734,9 @@ const els = {
   secondaryTiles: document.querySelector("#secondaryTiles"),
   indexTiles: document.querySelector("#indexTiles"),
   archiveCount: document.querySelector("#archiveCount"),
+  filterToggle: document.querySelector("#filterToggle"),
+  filterControls: document.querySelector("#filterControls"),
+  filterSummary: document.querySelector("#filterSummary"),
   searchInput: document.querySelector("#searchInput"),
   collectionFilter: document.querySelector("#collectionFilter"),
   typeFilter: document.querySelector("#typeFilter"),
@@ -955,14 +958,21 @@ function searchMetadataText(record) {
   return searchableParts(record).join(" ");
 }
 
+function prepareRecordSearch(record) {
+  record._searchableText = normalizeSearchText(searchableParts(record).join(" "));
+  record._searchPriorityText = normalizeSearchText(searchPriorityText(record));
+  record._searchTitleText = normalizeSearchText(record.title);
+  record._searchWorkText = normalizeSearchText(articleWorkValues(record).join(" "));
+}
+
 function searchRelevanceScore(record, rawQuery) {
   const query = normalizeSearchText(rawQuery);
   if (!query) return 0;
   const terms = query.split(/\s+/).filter((term) => term.length > 1);
-  const primary = normalizeSearchText(searchPriorityText(record));
-  const metadata = normalizeSearchText(searchMetadataText(record));
-  const title = normalizeSearchText(record.title);
-  const workValues = normalizeSearchText(articleWorkValues(record).join(" "));
+  const primary = record._searchPriorityText || "";
+  const metadata = record._searchableText || "";
+  const title = record._searchTitleText || "";
+  const workValues = record._searchWorkText || "";
   let score = 0;
 
   if (title === query) score += 5000;
@@ -1745,16 +1755,22 @@ function syncArchiveUrl() {
 
 function scheduleFilterUpdate({ updateUrl = true } = {}) {
   clearTimeout(state.filterTimer);
+  els.archiveCount.textContent = "Searching...";
+  els.archiveCount.classList.add("is-searching");
   state.filterTimer = setTimeout(() => {
     applyFilters();
     if (updateUrl) syncArchiveUrl();
-  }, 90);
+  }, 190);
 }
 
 function updateSortButtons() {
   els.sortButtons.forEach((button) => {
     button.classList.toggle("is-active", button.dataset.sort === state.sort);
   });
+  const type = TYPE_GROUPS.find((group) => group.value === state.type)?.label || "All types";
+  const collection = state.collection ? state.collection.replace(/^The\s+/, "") : "All collections";
+  const sort = state.sort === "relevance" ? "" : ` · ${state.sort === "title" ? "Title A-Z" : state.sort[0].toUpperCase() + state.sort.slice(1)}`;
+  els.filterSummary.textContent = `${type} · ${collection}${sort}`;
 }
 
 function setArchiveExpanded(expanded) {
@@ -3331,25 +3347,19 @@ function renderTimelineToolV2() {
   yearLabel.className = "timeline-year-label";
   const results = document.createElement("div");
   results.className = "timeline-results timeline-list";
+  const selectedYear = document.createElement("div");
+  selectedYear.className = "timeline-selected-year";
   const mobileControls = document.createElement("div");
   mobileControls.className = "timeline-mobile-controls";
   const previousYear = document.createElement("button");
   previousYear.type = "button";
   previousYear.setAttribute("aria-label", "Previous year");
   previousYear.textContent = "‹";
-  const yearSelect = document.createElement("select");
-  yearSelect.setAttribute("aria-label", "Timeline year");
-  sortedYears.forEach(([year, records]) => {
-    const option = document.createElement("option");
-    option.value = year;
-    option.textContent = `${year} · ${records.length} ${records.length === 1 ? "article" : "articles"}`;
-    yearSelect.append(option);
-  });
   const nextYear = document.createElement("button");
   nextYear.type = "button";
   nextYear.setAttribute("aria-label", "Next year");
   nextYear.textContent = "›";
-  mobileControls.append(previousYear, yearSelect, nextYear);
+  mobileControls.append(previousYear, nextYear);
   const max = Math.max(...sortedYears.map(([, items]) => items.length), 1);
   const minYear = Number(sortedYears[0]?.[0] || new Date().getFullYear());
   const maxYear = Number(sortedYears.at(-1)?.[0] || minYear);
@@ -3362,8 +3372,8 @@ function renderTimelineToolV2() {
     const pct = ((Number(activeYear) - minYear) / yearSpan) * 100;
     thumb.style.left = `${pct}%`;
     yearLabel.style.left = `${pct}%`;
-    yearLabel.textContent = `${activeYear} / ${records.length.toLocaleString()} ${records.length === 1 ? "article" : "articles"}`;
-    yearSelect.value = activeYear;
+    yearLabel.textContent = activeYear;
+    selectedYear.innerHTML = `<span>Selected year</span><strong>${activeYear}</strong><em>${records.length.toLocaleString()} ${records.length === 1 ? "article" : "articles"}</em>`;
     track.querySelectorAll(".timeline-segment").forEach((segment) => segment.classList.toggle("is-active", segment.dataset.year === activeYear));
     results.replaceChildren();
     records.forEach((record) => {
@@ -3432,9 +3442,8 @@ function renderTimelineToolV2() {
   };
   previousYear.addEventListener("click", () => stepYear(-1));
   nextYear.addEventListener("click", () => stepYear(1));
-  yearSelect.addEventListener("change", () => showYear(yearSelect.value));
   rail.replaceChildren(track);
-  tool.replaceChildren(mobileControls, rail, results);
+  tool.replaceChildren(selectedYear, mobileControls, rail, results);
   els.indexContent.replaceChildren(title, intro, tool);
   showYear(activeYear);
 }
@@ -4309,20 +4318,20 @@ function headlineParts(title) {
 }
 
 function renderResults() {
+  els.archiveCount.classList.remove("is-searching", "has-matches");
   if (!state.hasActiveQuery) {
-    els.archiveCount.textContent = `${state.records.length.toLocaleString()} public articles`;
+    els.archiveCount.textContent = `${state.records.length.toLocaleString()} articles`;
     els.results.replaceChildren();
     restoreArchivePositionIfNeeded();
     return;
   }
 
   const visible = state.filtered.slice(0, state.visible);
-  const total = state.records.length.toLocaleString();
   const shown = state.filtered.length.toLocaleString();
-  els.archiveCount.textContent =
-    state.filtered.length === state.records.length
-      ? `${total} public articles`
-      : `${shown} of ${total} public articles`;
+  els.archiveCount.textContent = state.filtered.length === state.records.length
+    ? `${shown} articles`
+    : `${shown} matches`;
+  if (state.filtered.length !== state.records.length) els.archiveCount.classList.add("has-matches");
   const resultContext = {
     contextLabel: currentArchiveContextLabel(),
     backHref: currentArchiveHref(),
@@ -4820,6 +4829,14 @@ function articleTools(record) {
   const tools = document.createElement("nav");
   tools.className = "article-tools";
   tools.setAttribute("aria-label", "Article tools");
+  const menu = document.createElement("details");
+  menu.className = "article-share-menu";
+  const menuSummary = document.createElement("summary");
+  menuSummary.setAttribute("aria-label", "Share and article options");
+  menuSummary.setAttribute("title", "Share and article options");
+  menuSummary.innerHTML = `<span aria-hidden="true">↗</span>`;
+  const options = document.createElement("div");
+  options.className = "article-share-options";
   const copyLink = document.createElement("button");
   copyLink.type = "button";
   copyLink.textContent = "Copy link";
@@ -4843,7 +4860,9 @@ function articleTools(record) {
   const citation = document.createElement("p");
   citation.textContent = `Robert Cushman, “${record.title},” ${articlePublicationLabel(record)}, ${formatDate(record.date)}.`;
   source.append(summary, citation);
-  tools.append(copyLink, print, source);
+  options.append(copyLink, print, source);
+  menu.append(menuSummary, options);
+  tools.append(menu);
   return tools;
 }
 
@@ -5196,6 +5215,7 @@ async function showReview(slug) {
   articleParts.push(date, title);
   if (titleParts.deck) articleParts.push(deck);
   articleParts.push(meta);
+  articleParts.push(articleTools(record));
   if (hasCorrespondence(record)) {
     const correspondenceLink = document.createElement("a");
     correspondenceLink.className = "article-correspondence-chip";
@@ -5210,20 +5230,11 @@ async function showReview(slug) {
   }
   try {
     const entityLinks = articleEntityLinks(record);
-    if (entityLinks) {
-      const details = document.createElement("details");
-      details.className = "article-metadata-details";
-      details.open = !window.matchMedia("(max-width: 760px)").matches;
-      const summary = document.createElement("summary");
-      summary.textContent = "Article details";
-      details.append(summary, entityLinks);
-      articleParts.push(details);
-    }
+    if (entityLinks) articleParts.push(entityLinks);
   } catch (error) {
     console.error("Could not render article metadata chips", record.slug, error);
     notice = articleLoadNotice("Metadata chips could not be rendered for this article. Article text is shown below.", record.source_file);
   }
-  articleParts.push(articleTools(record));
   if (notice) articleParts.push(notice);
   articleParts.push(body);
   const related = relatedArticleLinks(record);
@@ -5240,6 +5251,8 @@ async function showReview(slug) {
 function route() {
   const hash = window.location.hash || "#home";
   els.drawer.classList.remove("is-open");
+  els.filterControls.classList.remove("is-open");
+  els.filterToggle.setAttribute("aria-expanded", "false");
   els.articleView.hidden = true;
   els.indexView.hidden = true;
   els.mapView.hidden = true;
@@ -5477,6 +5490,7 @@ async function init() {
     return;
   }
   state.records = sortRecords(state.records);
+  state.records.forEach(prepareRecordSearch);
   state.filtered = state.records;
   state.hasActiveQuery = false;
   populateFilters();
@@ -5513,6 +5527,11 @@ els.searchInput.addEventListener("input", (event) => {
   state.query = event.target.value;
   scheduleBodySearch(state.query);
   scheduleFilterUpdate();
+});
+
+els.filterToggle.addEventListener("click", () => {
+  const open = els.filterControls.classList.toggle("is-open");
+  els.filterToggle.setAttribute("aria-expanded", String(open));
 });
 
 els.searchInput.addEventListener("focus", () => {
@@ -5560,6 +5579,8 @@ els.clearFilters.addEventListener("click", () => {
   state.filtered = state.records;
   syncArchivePageClass();
   setArchiveExpanded(false);
+  els.filterControls.classList.remove("is-open");
+  els.filterToggle.setAttribute("aria-expanded", "false");
   renderShakespeareNav();
   renderResults();
   syncArchiveUrl();
