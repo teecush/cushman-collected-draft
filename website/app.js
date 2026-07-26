@@ -5137,7 +5137,7 @@ function nextEntityMatch(text, cursor, entities, linkedSlugs) {
   entities.forEach((entity) => {
     const slug = `${entity.type}:${entitySlug(entity.label)}`;
     if (linkedSlugs.has(slug)) return;
-    const pattern = new RegExp(`(^|[^\\\\p{L}\\\\p{N}])(${escapeRegExp(entity.label)})(?=$|[^\\\\p{L}\\\\p{N}])`, "iu");
+    const pattern = new RegExp(`(^|[^\\\\p{L}\\\\p{N}])(${flexibleEntityLabelPattern(entity.label)})(?=$|[^\\\\p{L}\\\\p{N}])`, "iu");
     const slice = text.slice(cursor);
     const match = slice.match(pattern);
     if (!match || match.index === undefined) return;
@@ -5149,6 +5149,19 @@ function nextEntityMatch(text, cursor, entities, linkedSlugs) {
     }
   });
   return best;
+}
+
+function flexibleEntityLabelPattern(value) {
+  return String(value)
+    .split(/(\s+|[-‐‑‒–—]|['’‘])/u)
+    .filter(Boolean)
+    .map((part) => {
+      if (/^\s+$/u.test(part)) return "\\s+";
+      if (/^[-‐‑‒–—]$/u.test(part)) return "\\s*[-‐‑‒–—]\\s*";
+      if (/^['’‘]$/u.test(part)) return "['’‘]";
+      return escapeRegExp(part);
+    })
+    .join("");
 }
 
 function escapeRegExp(value) {
