@@ -1,7 +1,8 @@
-const DATA_URL = new URL("../site_export/data/public_reviews.json?v=114", import.meta.url);
+const DATA_URL = new URL("../site_export/data/public_reviews.json?v=115", import.meta.url);
 const ALIASES_URL = new URL("../site_export/data/route_aliases.json?v=1", import.meta.url);
+const STANDALONE_CORRESPONDENCE_URL = new URL("../site_export/data/standalone_correspondence.json?v=2", import.meta.url);
 const CONTENT_ROOT = new URL("../site_export/content/reviews/", import.meta.url);
-const MEDIA_ASSET_VERSION = "55aabc22";
+const MEDIA_ASSET_VERSION = "trip5-20260809";
 const PAGE_SIZE = 36;
 const SHAKESPEARE_COLLECTION = "The Shakespeare Collection";
 const SHAKESPEARE_DERIVED_COLLECTIONS = ["Riffs on Shakespeare", "Thoughts on Shakespeare"];
@@ -703,6 +704,7 @@ const tileImages = {
 const state = {
   records: [],
   aliases: {},
+  standaloneCorrespondence: [],
   filtered: [],
   visible: PAGE_SIZE,
   collection: "",
@@ -4521,7 +4523,9 @@ function articleContentUrl(sourceFile) {
     .filter(Boolean)
     .map((part) => encodeURIComponent(part))
     .join("/");
-  return new URL(safePath, CONTENT_ROOT);
+  const url = new URL(safePath, CONTENT_ROOT);
+  url.searchParams.set("v", "trip5-20260809");
+  return url;
 }
 
 async function fetchArticleMarkdown(record) {
@@ -4951,6 +4955,43 @@ function correspondenceMediaUrl(media) {
   return media?.local_path ? mediaAssetUrl(media.local_path) : "";
 }
 
+function articleSourceMediaSection(record) {
+  const items = asArray(record?.media).filter((item) => item?.display_full && item?.local_path);
+  if (!items.length) return null;
+  const section = document.createElement("section");
+  section.className = "article-source-media";
+  section.id = "article-source-media";
+  const heading = document.createElement("h2");
+  heading.textContent = items.length === 1 ? "Archival source image" : "Archival source images";
+  const intro = document.createElement("p");
+  intro.textContent = "Select an image to open the full-size original photograph.";
+  const gallery = document.createElement("div");
+  gallery.className = "article-source-media-gallery";
+  items.forEach((item) => {
+    const src = mediaAssetUrl(item.local_path);
+    const figure = document.createElement("figure");
+    const link = document.createElement("a");
+    link.href = src;
+    link.target = "_blank";
+    link.rel = "noopener";
+    link.setAttribute("aria-label", `Open full-size source image: ${item.caption || item.alt || record.title}`);
+    const image = document.createElement("img");
+    image.loading = "lazy";
+    image.src = src;
+    image.alt = item.alt || item.caption || `${record.title} source image`;
+    link.append(image);
+    figure.append(link);
+    if (item.caption) {
+      const caption = document.createElement("figcaption");
+      caption.textContent = item.caption;
+      figure.append(caption);
+    }
+    gallery.append(figure);
+  });
+  section.replaceChildren(heading, intro, gallery);
+  return section;
+}
+
 function articleCorrespondenceSection(record) {
   const items = correspondenceItems(record);
   if (!items.length) return null;
@@ -5013,7 +5054,61 @@ function renderCorrespondencePage() {
   title.textContent = "Correspondence";
   const intro = document.createElement("p");
   intro.className = "landing-intro";
-  intro.textContent = "Letters and notes preserved with Robert Cushman's scrapbook clippings.";
+  intro.textContent = "Letters and notes from Robert Cushman’s archive, including standalone collections and correspondence preserved with individual articles.";
+  const standalone = document.createElement("div");
+  standalone.className = "standalone-correspondence-list";
+  state.standaloneCorrespondence.forEach((collection) => {
+    const section = document.createElement("section");
+    section.className = "standalone-correspondence";
+    section.id = collection.slug || "standalone-correspondence";
+    const heading = document.createElement("h2");
+    heading.textContent = collection.title || "Correspondence collection";
+    const date = document.createElement("p");
+    date.className = "standalone-correspondence-date";
+    date.textContent = collection.date_label || "";
+    const description = document.createElement("p");
+    description.className = "standalone-correspondence-description";
+    description.textContent = collection.description || "";
+    const instruction = document.createElement("p");
+    instruction.className = "standalone-correspondence-instruction";
+    instruction.textContent = "Select any document to open the full-size reading copy.";
+    const gallery = document.createElement("div");
+    gallery.className = "standalone-correspondence-gallery";
+    asArray(collection.items).forEach((item) => {
+      const src = correspondenceMediaUrl(item.media);
+      if (!src) return;
+      const card = document.createElement("article");
+      card.className = "standalone-correspondence-card";
+      const meta = document.createElement("p");
+      meta.className = "correspondence-meta";
+      meta.textContent = [item.institution, item.date].filter(Boolean).join(" / ");
+      const sender = document.createElement("h3");
+      sender.textContent = item.sender || "Correspondence";
+      const link = document.createElement("a");
+      link.href = src;
+      link.target = "_blank";
+      link.rel = "noopener";
+      link.setAttribute("aria-label", `Open full-size document: ${item.media?.caption || item.sender || "correspondence"}`);
+      const image = document.createElement("img");
+      image.loading = "lazy";
+      image.src = src;
+      image.alt = item.media?.alt || item.media?.caption || item.sender || "Correspondence document";
+      link.append(image);
+      const caption = document.createElement("p");
+      caption.textContent = item.media?.caption || "";
+      card.replaceChildren(meta, sender, link);
+      if (caption.textContent) card.append(caption);
+      gallery.append(card);
+    });
+    section.replaceChildren(heading);
+    if (date.textContent) section.append(date);
+    if (description.textContent) section.append(description);
+    section.append(instruction, gallery);
+    standalone.append(section);
+  });
+  const linkedHeading = document.createElement("h2");
+  linkedHeading.className = "correspondence-linked-heading";
+  linkedHeading.textContent = "Letters connected to articles";
   const list = document.createElement("div");
   list.className = "correspondence-index-list";
   entries.forEach(({ record, item }) => {
@@ -5042,7 +5137,9 @@ function renderCorrespondencePage() {
     link.append(copy);
     list.append(link);
   });
-  page.replaceChildren(back, title, intro, list);
+  page.replaceChildren(back, title, intro);
+  if (standalone.childElementCount) page.append(standalone);
+  if (entries.length) page.append(linkedHeading, list);
   els.indexContent.replaceChildren(page);
 }
 
@@ -5250,8 +5347,10 @@ async function showReview(slug) {
   }
   if (notice) articleParts.push(notice);
   articleParts.push(body);
+  const sourceMedia = articleSourceMediaSection(record);
   const related = relatedArticleLinks(record);
   const correspondence = articleCorrespondenceSection(record);
+  if (sourceMedia) articleParts.push(sourceMedia);
   if (correspondence) articleParts.push(correspondence);
   if (related) articleParts.push(related);
   els.article.replaceChildren(...articleParts);
@@ -5488,10 +5587,17 @@ function scrollToSection(selector) {
 
 async function init() {
   try {
-    const [response, aliasesResponse] = await Promise.all([fetch(DATA_URL), fetch(ALIASES_URL)]);
+    const [response, aliasesResponse, standaloneResponse] = await Promise.all([
+      fetch(DATA_URL),
+      fetch(ALIASES_URL),
+      fetch(STANDALONE_CORRESPONDENCE_URL).catch(() => null),
+    ]);
     if (!response.ok) throw new Error(`Could not load records (${response.status})`);
     state.records = await response.json();
     state.aliases = aliasesResponse.ok ? await aliasesResponse.json() : {};
+    state.standaloneCorrespondence = standaloneResponse?.ok
+      ? asArray((await standaloneResponse.json()).collections)
+      : [];
   } catch (error) {
     els.archiveCount.textContent = "Records could not load";
     els.results.innerHTML = `

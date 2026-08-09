@@ -1,5 +1,122 @@
 [
   {
+    "slug": "1969-03-01-the-impression-of-impotence",
+    "route": "/reviews/1969-03-01-the-impression-of-impotence/",
+    "source_file": "1969.03.01.Plays_and_Players.The_Impression_of_Impotence.md",
+    "title": "The Impression of Impotence",
+    "date": "1969-03-01",
+    "year": "1969",
+    "publication": "Plays and Players",
+    "source_publication": "Plays and Players",
+    "article_category": "Theatre Review",
+    "collections": [
+      "UK Collection"
+    ],
+    "publication_status": "archive_only",
+    "editorial_issue_type": "missing_pages_and_unrelated_photo",
+    "canonical_file": "",
+    "production_title": "H",
+    "company": "National Theatre",
+    "venue": "Old Vic",
+    "city": "London, England",
+    "coordinates": [],
+    "people": [
+      "Bernard Gallagher",
+      "Charles Wood",
+      "Frank Wylie",
+      "Geoffrey Reeves",
+      "Gerald James",
+      "Jane Wenham",
+      "John McEnery",
+      "Paul Curran",
+      "Robert Lang",
+      "Terence Taplin"
+    ],
+    "roles": {
+      "director": [
+        "Geoffrey Reeves"
+      ],
+      "actors": [
+        "Robert Lang",
+        "Paul Curran",
+        "Frank Wylie",
+        "Gerald James",
+        "Jane Wenham",
+        "Terence Taplin",
+        "John McEnery",
+        "Bernard Gallagher"
+      ],
+      "playwright": [
+        "Charles Wood"
+      ],
+      "composer_lyricist": [],
+      "musical_director": [],
+      "choreographer": [],
+      "orchestrator": [],
+      "arranger": [],
+      "assistant_director": [],
+      "stage_manager": [],
+      "assistant_musical_director": [],
+      "vocal_director": [],
+      "dance_captain": [],
+      "fight_director": [],
+      "dramaturg": [],
+      "producer": [],
+      "set_designer": [],
+      "costume_designer": [],
+      "lighting_designer": [],
+      "sound_designer": [],
+      "musicians": [],
+      "performers": [],
+      "artists": []
+    },
+    "production_groups": [],
+    "media": [],
+    "correspondence": [],
+    "word_count": 567,
+    "coordinate_points": [],
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "H"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
+      "companies": [
+        "National Theatre"
+      ],
+      "venues": [
+        "Old Vic"
+      ],
+      "cities": [
+        "London, England"
+      ],
+      "people": [
+        "Bernard Gallagher",
+        "Charles Wood",
+        "Frank Wylie",
+        "Geoffrey Reeves",
+        "Gerald James",
+        "Jane Wenham",
+        "John McEnery",
+        "Paul Curran",
+        "Robert Lang",
+        "Terence Taplin"
+      ]
+    }
+  },
+  {
     "slug": "1976-04-11-much-ado-about-india",
     "route": "/reviews/1976-04-11-much-ado-about-india/",
     "source_file": "1976.04.11.Cushman_Collected.Much_Ado_About_India.md",

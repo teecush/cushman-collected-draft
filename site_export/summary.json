@@ -2,54 +2,56 @@
   "export_dir": "/Users/openclaw/Codex Projects/Cushman CODEXted/site_export",
   "source_dir": "/Users/openclaw/Codex Projects/Cushman CODEXted/repaired_structural_v2",
   "counts": {
-    "total": 3426,
-    "publish": 3194,
-    "archive_only": 154,
+    "total": 3445,
+    "publish": 3212,
+    "archive_only": 155,
     "duplicate_variant": 77,
     "exclude_from_publication": 1
   },
-  "public_reviews": 3161,
-  "archive_records": 264,
+  "public_reviews": 3179,
+  "archive_records": 265,
   "excluded_records": 1,
   "map_points": 1739,
-  "chat_chunks": 20511,
+  "chat_chunks": 20600,
   "sample_public_record": {
-    "slug": "1970-10-02-inside-the-shell-of-technique",
-    "route": "/reviews/1970-10-02-inside-the-shell-of-technique/",
-    "source_file": "1970.10.02.The_Guardian.Inside_The_Shell_Of_Technique.md",
-    "title": "Inside The Shell Of Technique",
-    "date": "1970-10-02",
-    "year": "1970",
-    "publication": "The Guardian",
-    "source_publication": "The Guardian",
-    "article_category": "Theatre Interview",
+    "slug": "1963-01-11-shades-of-freud",
+    "route": "/reviews/1963-01-11-shades-of-freud/",
+    "source_file": "1963.01.11.New_Cambridge.Shades_of_Freud.md",
+    "title": "Shades of Freud",
+    "date": "1963-01-11",
+    "year": "1963",
+    "publication": "New Cambridge",
+    "source_publication": "New Cambridge",
+    "article_category": "Interview",
     "collections": [
       "UK Collection"
     ],
     "publication_status": "publish",
-    "editorial_issue_type": "clean_manual_transcription",
+    "editorial_issue_type": "printed_byline_error_and_damaged_source",
     "canonical_file": "",
-    "production_title": "Oedipus",
-    "company": "National Theatre / Young Vic",
-    "venue": "Young Vic",
-    "city": "London, England",
+    "production_title": "The Winter's Tale",
+    "company": "ADC",
+    "venue": "ADC Theatre",
+    "city": "Cambridge, England",
     "coordinates": [],
     "people": [
-      "Annabel Leventon",
-      "Roland Joffe",
-      "Ronald Pickup",
-      "Sophocles"
+      "Helen Kaswell",
+      "Philip Mansell",
+      "Tony Gooch",
+      "Tony Palmer",
+      "William Shakespeare"
     ],
     "roles": {
       "director": [
-        "Roland Joffe"
+        "Philip Mansell"
       ],
       "actors": [
-        "Ronald Pickup",
-        "Annabel Leventon"
+        "Tony Gooch",
+        "Tony Palmer",
+        "Helen Kaswell"
       ],
       "playwright": [
-        "Sophocles"
+        "William Shakespeare"
       ],
       "composer_lyricist": [],
       "musical_director": [],
@@ -73,21 +75,28 @@
       "artists": []
     },
     "production_groups": [],
-    "media": [],
+    "media": [
+      {
+        "local_path": "media/articles/shades-of-freud/full-page.jpg",
+        "caption": "Full clipping of “Shades of Freud,” showing the printed “Robert Ashman” byline error and the torn opening paragraph.",
+        "alt": "New Cambridge theatre page headed Shades of Freud, with photographs of Philip Mansell and Helen Kaswell.",
+        "display_full": true
+      }
+    ],
     "correspondence": [],
-    "word_count": 928,
+    "word_count": 664,
     "coordinate_points": [],
     "display_schema": {
-      "work_type": "subjects",
-      "work_label": "Subject",
+      "work_type": "productions",
+      "work_label": "Production",
       "company_label": "Company",
-      "primary_browse": "subjects",
-      "secondary_browse": "productions"
+      "primary_browse": "productions",
+      "secondary_browse": ""
     },
     "browse_entities": {
       "books": [],
       "productions": [
-        "Oedipus"
+        "The Winter's Tale"
       ],
       "subjects": [],
       "book_authors": [],
@@ -96,19 +105,20 @@
       "events": [],
       "networks": [],
       "companies": [
-        "National Theatre / Young Vic"
+        "ADC"
       ],
       "venues": [
-        "Young Vic"
+        "ADC Theatre"
       ],
       "cities": [
-        "London, England"
+        "Cambridge, England"
       ],
       "people": [
-        "Annabel Leventon",
-        "Roland Joffe",
-        "Ronald Pickup",
-        "Sophocles"
+        "Helen Kaswell",
+        "Philip Mansell",
+        "Tony Gooch",
+        "Tony Palmer",
+        "William Shakespeare"
       ]
     }
   },
