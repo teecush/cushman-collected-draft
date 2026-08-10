@@ -4663,6 +4663,7 @@ const ARTICLE_ROLE_GROUPS = [
   ["directors", "Director", "director", 3],
   ["playwrights", "Playwright", "playwright", 3],
   ["actors", "Actor", "actors", 8],
+  ["producers", "Producer", "producer", 2],
   ["composers-lyricists", "Music", "composer_lyricist", 4],
   ["musical-directors", "Music Director", "musical_director", 2],
   ["orchestrators", "Orchestrator", "orchestrator", 2],

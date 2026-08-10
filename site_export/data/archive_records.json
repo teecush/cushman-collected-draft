@@ -134,9 +134,9 @@
     "editorial_issue_type": "",
     "canonical_file": "1976.04.11.The_Observer.Much_Ado_In_India.md",
     "production_title": "",
-    "company": "",
+    "company": "Royal Shakespeare Company",
     "venue": "",
-    "city": "",
+    "city": "Stratford-upon-Avon",
     "coordinates": [],
     "people": [
       "Donald Sinden",
@@ -259,9 +259,9 @@
     "editorial_issue_type": "",
     "canonical_file": "1977.05.15.The_Observer.Profile_Trevor_Nunn.md",
     "production_title": "",
-    "company": "",
+    "company": "Royal Shakespeare Company",
     "venue": "",
-    "city": "",
+    "city": "Stratford-upon-Avon",
     "coordinates": [],
     "people": [
       "John Barton",
@@ -390,9 +390,9 @@
     "editorial_issue_type": "",
     "canonical_file": "1983.06.19.The_Observer.Sir_Ralph_In_Naples.md",
     "production_title": "",
-    "company": "",
+    "company": "Royal Shakespeare Company",
     "venue": "",
-    "city": "",
+    "city": "Stratford-upon-Avon",
     "coordinates": [],
     "people": [
       "Gemma Jones",
@@ -3200,9 +3200,9 @@
     "editorial_issue_type": "",
     "canonical_file": "2002.06.05.National_Post.AllS_Well_That_Starts_Well_The_Stratford_Festival_Began_In_1953_Under_The_S.md",
     "production_title": "",
-    "company": "",
-    "venue": "",
-    "city": "",
+    "company": "Stratford Festival",
+    "venue": "Stratford Festival",
+    "city": "Stratford, Ontario",
     "coordinates": [],
     "people": [
       "Alec Guinness",
@@ -16946,9 +16946,9 @@
     "editorial_issue_type": "duplicate_digest",
     "canonical_file": "",
     "production_title": "",
-    "company": "",
-    "venue": "",
-    "city": "",
+    "company": "Danforth Music Hall; Tarragon Theatre; Theatre Passe Muraille; Diesel Playhouse",
+    "venue": "Danforth Music Hall; Tarragon Theatre; Theatre Passe Muraille; Diesel Playhouse",
+    "city": "Toronto",
     "coordinates": [],
     "people": [
       "Andrew Lloyd Webber",
@@ -17078,8 +17078,18 @@
       "topics": [],
       "events": [],
       "networks": [],
-      "companies": [],
-      "venues": [],
+      "companies": [
+        "Danforth Music Hall",
+        "Diesel Playhouse",
+        "Tarragon Theatre",
+        "Theatre Passe Muraille"
+      ],
+      "venues": [
+        "Danforth Music Hall",
+        "Diesel Playhouse",
+        "Tarragon Theatre",
+        "Theatre Passe Muraille"
+      ],
       "cities": [
         "Toronto"
       ],
@@ -17117,9 +17127,9 @@
     "editorial_issue_type": "duplicate_digest",
     "canonical_file": "",
     "production_title": "",
-    "company": "",
-    "venue": "",
-    "city": "",
+    "company": "Da Da Kamera; Nightwood Theatre; Shaw Festival; Danforth Music Hall; Tarragon",
+    "venue": "Buddies in Bad Times Theatre; Young Centre for the Performing Arts",
+    "city": "Toronto",
     "coordinates": [],
     "people": [
       "Caroline Gillis",
@@ -17243,7 +17253,10 @@
         "Shaw Festival",
         "Tarragon"
       ],
-      "venues": [],
+      "venues": [
+        "Buddies in Bad Times Theatre",
+        "Young Centre for the Performing Arts"
+      ],
       "cities": [
         "Toronto"
       ],
@@ -17362,9 +17375,9 @@
     "editorial_issue_type": "duplicate_digest",
     "canonical_file": "",
     "production_title": "",
-    "company": "",
-    "venue": "",
-    "city": "",
+    "company": "Elgin Theatre; Nightwood Theatre; Tarragon Theatre; Mirvish Productions",
+    "venue": "Elgin Theatre; Young Centre for the Performing Arts; Tarragon Theatre; Royal",
+    "city": "Toronto",
     "coordinates": [],
     "people": [
       "Anand Rajaram",
@@ -17485,8 +17498,18 @@
       "topics": [],
       "events": [],
       "networks": [],
-      "companies": [],
-      "venues": [],
+      "companies": [
+        "Elgin Theatre",
+        "Mirvish Productions",
+        "Nightwood Theatre",
+        "Tarragon Theatre"
+      ],
+      "venues": [
+        "Elgin Theatre",
+        "Royal",
+        "Tarragon Theatre",
+        "Young Centre for the Performing Arts"
+      ],
       "cities": [
         "Toronto"
       ],
@@ -18361,9 +18384,9 @@
     "editorial_issue_type": "duplicate_digest",
     "canonical_file": "",
     "production_title": "",
-    "company": "",
-    "venue": "",
-    "city": "",
+    "company": "SummerWorks Festival",
+    "venue": "Theatre Passe Muraille Backspace; Factory Mainspace",
+    "city": "Toronto",
     "coordinates": [],
     "people": [
       "Adam Pettle",
@@ -18508,7 +18531,10 @@
       "companies": [
         "SummerWorks Festival"
       ],
-      "venues": [],
+      "venues": [
+        "Factory Mainspace",
+        "Theatre Passe Muraille Backspace"
+      ],
       "cities": [
         "Toronto"
       ],
@@ -18813,8 +18839,8 @@
     "canonical_file": "",
     "production_title": "",
     "company": "",
-    "venue": "",
-    "city": "",
+    "venue": "Theatre Passe Muraille; Capitol Event Theatre",
+    "city": "Toronto",
     "coordinates": [],
     "people": [
       "Alana Bridgewater",
@@ -19914,9 +19940,9 @@
     "editorial_issue_type": "duplicate_digest",
     "canonical_file": "",
     "production_title": "",
-    "company": "",
-    "venue": "",
-    "city": "",
+    "company": "Moonhorse Dance Theatre; Shakespeare and the Queen's Men; Theatre Smith-Gilmour",
+    "venue": "Young Centre for the Performing Arts; Glen Morris Studio; Factory Theatre Studio",
+    "city": "Toronto",
     "coordinates": [],
     "people": [],
     "roles": {
@@ -20143,9 +20169,9 @@
     "editorial_issue_type": "duplicate_digest",
     "canonical_file": "",
     "production_title": "",
-    "company": "",
-    "venue": "",
-    "city": "",
+    "company": "Factory Theatre; Canadian Opera Company; Shakespeare and the Queen's Men",
+    "venue": "Factory Theatre; Four Seasons Centre; Arts and Letters Club of Toronto",
+    "city": "Toronto",
     "coordinates": [],
     "people": [
       "Fiona Reid",
@@ -20715,9 +20741,9 @@
     "editorial_issue_type": "duplicate_digest",
     "canonical_file": "",
     "production_title": "",
-    "company": "",
-    "venue": "",
-    "city": "",
+    "company": "Lorraine Kimsa Theatre for Young People; Young Centre for the Performing Arts; Tarragon Theatre",
+    "venue": "Lorraine Kimsa Theatre for Young People; Young Centre for the Performing Arts; Tarragon Theatre Extra Space",
+    "city": "Toronto",
     "coordinates": [],
     "people": [
       "Allen MacInnis",
@@ -20885,7 +20911,7 @@
     "production_title": "",
     "company": "",
     "venue": "",
-    "city": "",
+    "city": "Toronto",
     "coordinates": [],
     "people": [],
     "roles": {
@@ -27047,9 +27073,9 @@
     "editorial_issue_type": "",
     "canonical_file": "2012.06.09.National_Post.Sex_And_Candy_Much_Ado_About_Nothing_And_French_Without_Tears_Please_Though.md",
     "production_title": "",
-    "company": "",
-    "venue": "",
-    "city": "",
+    "company": "Stratford Festival",
+    "venue": "Stratford Festival",
+    "city": "Stratford, Ontario",
     "coordinates": [],
     "people": [
       "Ben Carlson",
@@ -27910,9 +27936,9 @@
     "editorial_issue_type": "",
     "canonical_file": "2014.09.06.National_Post.Legends_Never_Die_Soulpepper_Puts_Shakespeare_On_Shuffle_And_Quarters_Glenn.md",
     "production_title": "",
-    "company": "",
-    "venue": "",
-    "city": "",
+    "company": "Soulpepper Theatre Company",
+    "venue": "Young Centre for the Performing Arts",
+    "city": "Toronto",
     "coordinates": [],
     "people": [
       "Ben Power",
