@@ -5628,11 +5628,17 @@ els.menuButton.addEventListener("click", () => {
 });
 
 document.addEventListener("click", (event) => {
-  if (!els.drawer.classList.contains("is-open")) return;
-  if (els.drawer.contains(event.target) || els.menuButton.contains(event.target)) return;
-  els.drawer.classList.remove("is-open");
-  els.menuButton.setAttribute("aria-expanded", "false");
-  els.menuButton.setAttribute("aria-label", "Open navigation menu");
+  document.querySelectorAll(".article-share-menu[open]").forEach((menu) => {
+    if (!menu.contains(event.target)) menu.removeAttribute("open");
+  });
+
+  if (els.drawer.classList.contains("is-open")
+    && !els.drawer.contains(event.target)
+    && !els.menuButton.contains(event.target)) {
+    els.drawer.classList.remove("is-open");
+    els.menuButton.setAttribute("aria-expanded", "false");
+    els.menuButton.setAttribute("aria-label", "Open navigation menu");
+  }
 });
 
 els.drawer.addEventListener("click", (event) => {
@@ -5707,11 +5713,18 @@ els.clearFilters.addEventListener("click", () => {
 });
 
 document.addEventListener("keydown", (event) => {
-  if (event.key !== "Escape" || !els.drawer.classList.contains("is-open")) return;
-  els.drawer.classList.remove("is-open");
-  els.menuButton.setAttribute("aria-expanded", "false");
-  els.menuButton.setAttribute("aria-label", "Open navigation menu");
-  els.menuButton.focus();
+  if (event.key !== "Escape") return;
+  const openShareMenu = document.querySelector(".article-share-menu[open]");
+  if (openShareMenu) {
+    openShareMenu.removeAttribute("open");
+    openShareMenu.querySelector(":scope > summary")?.focus();
+  }
+  if (els.drawer.classList.contains("is-open")) {
+    els.drawer.classList.remove("is-open");
+    els.menuButton.setAttribute("aria-expanded", "false");
+    els.menuButton.setAttribute("aria-label", "Open navigation menu");
+    els.menuButton.focus();
+  }
 });
 
 window.addEventListener("hashchange", route);
