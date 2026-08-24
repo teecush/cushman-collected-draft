@@ -3032,6 +3032,110 @@
     }
   },
   {
+    "slug": "1972-03-01-company",
+    "route": "/reviews/1972-03-01-company/",
+    "source_file": "1972.03.01.Plays_and_Players.Company.md",
+    "title": "Company",
+    "date": "1972-03-01",
+    "year": "1972",
+    "publication": "Plays and Players",
+    "source_publication": "Plays and Players",
+    "article_category": "Theatre Review",
+    "collections": [
+      "UK Collection"
+    ],
+    "publication_status": "publish",
+    "editorial_issue_type": "source_checked_layout_ocr",
+    "canonical_file": "",
+    "production_title": "Company",
+    "company": "",
+    "venue": "Her Majesty's Theatre",
+    "city": "London, England",
+    "coordinates": [],
+    "people": [
+      "Beth Howland",
+      "Elaine Stritch",
+      "George Furth",
+      "Harold Prince",
+      "Larry Kert",
+      "Stephen Sondheim"
+    ],
+    "roles": {
+      "director": [
+        "Harold Prince"
+      ],
+      "actors": [
+        "Larry Kert",
+        "Elaine Stritch",
+        "Beth Howland"
+      ],
+      "playwright": [
+        "George Furth"
+      ],
+      "composer_lyricist": [
+        "Stephen Sondheim"
+      ],
+      "musical_director": [],
+      "choreographer": [],
+      "orchestrator": [],
+      "arranger": [],
+      "assistant_director": [],
+      "stage_manager": [],
+      "assistant_musical_director": [],
+      "vocal_director": [],
+      "dance_captain": [],
+      "fight_director": [],
+      "dramaturg": [],
+      "producer": [],
+      "set_designer": [],
+      "costume_designer": [],
+      "lighting_designer": [],
+      "sound_designer": [],
+      "musicians": [],
+      "performers": [],
+      "artists": []
+    },
+    "production_groups": [],
+    "media": [],
+    "correspondence": [],
+    "word_count": 1371,
+    "coordinate_points": [],
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Company"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
+      "companies": [],
+      "venues": [
+        "Her Majesty's Theatre"
+      ],
+      "cities": [
+        "London, England"
+      ],
+      "people": [
+        "Beth Howland",
+        "Elaine Stritch",
+        "George Furth",
+        "Harold Prince",
+        "Larry Kert",
+        "Stephen Sondheim"
+      ]
+    }
+  },
+  {
     "slug": "1973-04-29-hands-across-the-channel",
     "route": "/reviews/1973-04-29-hands-across-the-channel/",
     "source_file": "1973.04.29.Cushman_Collected.Hands_Across_the_Channel.md",
@@ -55499,6 +55603,86 @@
     }
   },
   {
+    "slug": "1979-09-01-sir-alec-s-assignment",
+    "route": "/reviews/1979-09-01-sir-alec-s-assignment/",
+    "source_file": "1979.09.01.Radio_Times.Sir_Alec_s_Assignment.md",
+    "title": "Sir Alec's Assignment",
+    "date": "1979-09-01",
+    "year": "1979",
+    "publication": "Radio Times",
+    "source_publication": "Radio Times",
+    "article_category": "Interview / Profile",
+    "collections": [
+      "UK Collection"
+    ],
+    "publication_status": "publish",
+    "editorial_issue_type": "source_checked_layout_ocr",
+    "canonical_file": "",
+    "production_title": "",
+    "company": "",
+    "venue": "",
+    "city": "",
+    "coordinates": [],
+    "people": [
+      "Alec Guinness"
+    ],
+    "roles": {
+      "director": [],
+      "actors": [
+        "Alec Guinness"
+      ],
+      "playwright": [],
+      "composer_lyricist": [],
+      "musical_director": [],
+      "choreographer": [],
+      "orchestrator": [],
+      "arranger": [],
+      "assistant_director": [],
+      "stage_manager": [],
+      "assistant_musical_director": [],
+      "vocal_director": [],
+      "dance_captain": [],
+      "fight_director": [],
+      "dramaturg": [],
+      "producer": [],
+      "set_designer": [],
+      "costume_designer": [],
+      "lighting_designer": [],
+      "sound_designer": [],
+      "musicians": [],
+      "performers": [],
+      "artists": []
+    },
+    "production_groups": [],
+    "media": [],
+    "correspondence": [],
+    "word_count": 1951,
+    "coordinate_points": [],
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
+      "companies": [],
+      "venues": [],
+      "cities": [],
+      "people": [
+        "Alec Guinness"
+      ]
+    }
+  },
+  {
     "slug": "1979-09-02-going-on-about-england",
     "route": "/reviews/1979-09-02-going-on-about-england/",
     "source_file": "1979.09.02.The_Observer.Going_on_About_England.md",
@@ -57571,7 +57755,7 @@
       "UK Collection"
     ],
     "publication_status": "publish",
-    "editorial_issue_type": "clean_manual_transcription",
+    "editorial_issue_type": "source_secure_repair",
     "canonical_file": "",
     "production_title": "",
     "company": "BBC",
@@ -57711,7 +57895,7 @@
     ],
     "media": [],
     "correspondence": [],
-    "word_count": 768,
+    "word_count": 1237,
     "show_title": "The Six Wives of Henry VIII; War and Peace; Pennies from Heaven; Tinker, Tailor, Soldier, Spy",
     "network_or_platform": "BBC",
     "coordinate_points": [],
@@ -83715,6 +83899,80 @@
     }
   },
   {
+    "slug": "1983-02-01-new-records",
+    "route": "/reviews/1983-02-01-new-records/",
+    "source_file": "1983.02.01.Plays_and_Players.New_Records.md",
+    "title": "New Records",
+    "date": "1983-02-01",
+    "year": "1983",
+    "publication": "Plays and Players",
+    "source_publication": "Plays and Players",
+    "article_category": "Music Criticism",
+    "collections": [
+      "UK Collection"
+    ],
+    "publication_status": "publish",
+    "editorial_issue_type": "source_checked_layout_ocr",
+    "canonical_file": "",
+    "production_title": "",
+    "company": "",
+    "venue": "",
+    "city": "",
+    "coordinates": [],
+    "people": [],
+    "roles": {
+      "director": [],
+      "actors": [],
+      "playwright": [],
+      "composer_lyricist": [],
+      "musical_director": [],
+      "choreographer": [],
+      "orchestrator": [],
+      "arranger": [],
+      "assistant_director": [],
+      "stage_manager": [],
+      "assistant_musical_director": [],
+      "vocal_director": [],
+      "dance_captain": [],
+      "fight_director": [],
+      "dramaturg": [],
+      "producer": [],
+      "set_designer": [],
+      "costume_designer": [],
+      "lighting_designer": [],
+      "sound_designer": [],
+      "musicians": [],
+      "performers": [],
+      "artists": []
+    },
+    "production_groups": [],
+    "media": [],
+    "correspondence": [],
+    "word_count": 1134,
+    "coordinate_points": [],
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
+      "companies": [],
+      "venues": [],
+      "cities": [],
+      "people": []
+    }
+  },
+  {
     "slug": "1983-02-06-coward-up-ended",
     "route": "/reviews/1983-02-06-coward-up-ended/",
     "source_file": "1983.02.06.The_Observer.Coward_Up_Ended.md",
@@ -91892,6 +92150,154 @@
     }
   },
   {
+    "slug": "1984-01-01-robert-cushman-s-1983-year-roundup",
+    "route": "/reviews/1984-01-01-robert-cushman-s-1983-year-roundup/",
+    "source_file": "1984.01.01.Plays_and_Players.Robert_Cushman_s_1983_Year_Roundup.md",
+    "title": "Robert Cushman's 1983 Year Roundup",
+    "date": "1984-01-01",
+    "year": "1984",
+    "publication": "Plays and Players",
+    "source_publication": "Plays and Players",
+    "article_category": "Year-End Survey",
+    "collections": [
+      "UK Collection"
+    ],
+    "publication_status": "publish",
+    "editorial_issue_type": "source_checked_layout_ocr",
+    "canonical_file": "",
+    "production_title": "",
+    "company": "",
+    "venue": "",
+    "city": "",
+    "coordinates": [],
+    "people": [],
+    "roles": {
+      "director": [],
+      "actors": [],
+      "playwright": [],
+      "composer_lyricist": [],
+      "musical_director": [],
+      "choreographer": [],
+      "orchestrator": [],
+      "arranger": [],
+      "assistant_director": [],
+      "stage_manager": [],
+      "assistant_musical_director": [],
+      "vocal_director": [],
+      "dance_captain": [],
+      "fight_director": [],
+      "dramaturg": [],
+      "producer": [],
+      "set_designer": [],
+      "costume_designer": [],
+      "lighting_designer": [],
+      "sound_designer": [],
+      "musicians": [],
+      "performers": [],
+      "artists": []
+    },
+    "production_groups": [],
+    "media": [],
+    "correspondence": [],
+    "word_count": 515,
+    "coordinate_points": [],
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
+      "companies": [],
+      "venues": [],
+      "cities": [],
+      "people": []
+    }
+  },
+  {
+    "slug": "1984-01-01-the-musical-gets-respectable",
+    "route": "/reviews/1984-01-01-the-musical-gets-respectable/",
+    "source_file": "1984.01.01.Plays_and_Players.The_Musical_Gets_Respectable.md",
+    "title": "The Musical Gets Respectable",
+    "date": "1984-01-01",
+    "year": "1984",
+    "publication": "Plays and Players",
+    "source_publication": "Plays and Players",
+    "article_category": "Musical Theatre Survey",
+    "collections": [
+      "UK Collection"
+    ],
+    "publication_status": "publish",
+    "editorial_issue_type": "source_checked_layout_ocr",
+    "canonical_file": "",
+    "production_title": "",
+    "company": "",
+    "venue": "",
+    "city": "",
+    "coordinates": [],
+    "people": [],
+    "roles": {
+      "director": [],
+      "actors": [],
+      "playwright": [],
+      "composer_lyricist": [],
+      "musical_director": [],
+      "choreographer": [],
+      "orchestrator": [],
+      "arranger": [],
+      "assistant_director": [],
+      "stage_manager": [],
+      "assistant_musical_director": [],
+      "vocal_director": [],
+      "dance_captain": [],
+      "fight_director": [],
+      "dramaturg": [],
+      "producer": [],
+      "set_designer": [],
+      "costume_designer": [],
+      "lighting_designer": [],
+      "sound_designer": [],
+      "musicians": [],
+      "performers": [],
+      "artists": []
+    },
+    "production_groups": [],
+    "media": [],
+    "correspondence": [],
+    "word_count": 3129,
+    "coordinate_points": [],
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
+      "companies": [],
+      "venues": [],
+      "cities": [],
+      "people": []
+    }
+  },
+  {
     "slug": "1984-01-01-a-wider-view-of-music",
     "route": "/reviews/1984-01-01-a-wider-view-of-music/",
     "source_file": "1984.01.01.Radio_3_Magazine.A_Wider_View_Of_Music.md",
@@ -92300,6 +92706,80 @@
     }
   },
   {
+    "slug": "1984-04-01-in-celebration",
+    "route": "/reviews/1984-04-01-in-celebration/",
+    "source_file": "1984.04.01.Plays_and_Players.In_Celebration.md",
+    "title": "In Celebration",
+    "date": "1984-04-01",
+    "year": "1984",
+    "publication": "Plays and Players",
+    "source_publication": "Plays and Players",
+    "article_category": "Theatre Criticism",
+    "collections": [
+      "UK Collection"
+    ],
+    "publication_status": "publish",
+    "editorial_issue_type": "source_checked_layout_ocr",
+    "canonical_file": "",
+    "production_title": "",
+    "company": "",
+    "venue": "",
+    "city": "",
+    "coordinates": [],
+    "people": [],
+    "roles": {
+      "director": [],
+      "actors": [],
+      "playwright": [],
+      "composer_lyricist": [],
+      "musical_director": [],
+      "choreographer": [],
+      "orchestrator": [],
+      "arranger": [],
+      "assistant_director": [],
+      "stage_manager": [],
+      "assistant_musical_director": [],
+      "vocal_director": [],
+      "dance_captain": [],
+      "fight_director": [],
+      "dramaturg": [],
+      "producer": [],
+      "set_designer": [],
+      "costume_designer": [],
+      "lighting_designer": [],
+      "sound_designer": [],
+      "musicians": [],
+      "performers": [],
+      "artists": []
+    },
+    "production_groups": [],
+    "media": [],
+    "correspondence": [],
+    "word_count": 1298,
+    "coordinate_points": [],
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
+      "companies": [],
+      "venues": [],
+      "cities": [],
+      "people": []
+    }
+  },
+  {
     "slug": "1984-05-26-the-art-of-the-actress",
     "route": "/reviews/1984-05-26-the-art-of-the-actress/",
     "source_file": "1984.05.26.Radio_Times.The_Art_Of_The_Actress.md",
@@ -92432,6 +92912,98 @@
     }
   },
   {
+    "slug": "1984-07-01-little-me",
+    "route": "/reviews/1984-07-01-little-me/",
+    "source_file": "1984.07.01.Plays_and_Players.Little_Me.md",
+    "title": "Little Me",
+    "date": "1984-07-01",
+    "year": "1984",
+    "publication": "Plays and Players",
+    "source_publication": "Plays and Players",
+    "article_category": "Theatre Review",
+    "collections": [
+      "UK Collection"
+    ],
+    "publication_status": "publish",
+    "editorial_issue_type": "source_checked_layout_ocr",
+    "canonical_file": "",
+    "production_title": "Little Me",
+    "company": "",
+    "venue": "Prince of Wales Theatre",
+    "city": "London, England",
+    "coordinates": [],
+    "people": [
+      "Lynda Baron",
+      "Russ Abbot",
+      "Sheila White"
+    ],
+    "roles": {
+      "director": [],
+      "actors": [
+        "Russ Abbot",
+        "Sheila White",
+        "Lynda Baron"
+      ],
+      "playwright": [],
+      "composer_lyricist": [],
+      "musical_director": [],
+      "choreographer": [],
+      "orchestrator": [],
+      "arranger": [],
+      "assistant_director": [],
+      "stage_manager": [],
+      "assistant_musical_director": [],
+      "vocal_director": [],
+      "dance_captain": [],
+      "fight_director": [],
+      "dramaturg": [],
+      "producer": [],
+      "set_designer": [],
+      "costume_designer": [],
+      "lighting_designer": [],
+      "sound_designer": [],
+      "musicians": [],
+      "performers": [],
+      "artists": []
+    },
+    "production_groups": [],
+    "media": [],
+    "correspondence": [],
+    "word_count": 1209,
+    "coordinate_points": [],
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Little Me"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
+      "companies": [],
+      "venues": [
+        "Prince of Wales Theatre"
+      ],
+      "cities": [
+        "London, England"
+      ],
+      "people": [
+        "Lynda Baron",
+        "Russ Abbot",
+        "Sheila White"
+      ]
+    }
+  },
+  {
     "slug": "1984-07-15-the-world-over",
     "route": "/reviews/1984-07-15-the-world-over/",
     "source_file": "1984.07.15.The_Observer.The_World_Over.md",
@@ -92552,6 +93124,99 @@
         "Lee J. Cobb",
         "Michael Rudman",
         "Willy Loman"
+      ]
+    }
+  },
+  {
+    "slug": "1984-08-01-the-merchant-of-venice-chichester",
+    "route": "/reviews/1984-08-01-the-merchant-of-venice-chichester/",
+    "source_file": "1984.08.01.Plays_and_Players.The_Merchant_of_Venice_Chichester.md",
+    "title": "The Merchant of Venice — Chichester",
+    "date": "1984-08-01",
+    "year": "1984",
+    "publication": "Plays and Players",
+    "source_publication": "Plays and Players",
+    "article_category": "Theatre Review",
+    "collections": [
+      "UK Collection"
+    ],
+    "publication_status": "publish",
+    "editorial_issue_type": "source_checked_layout_ocr",
+    "canonical_file": "",
+    "production_title": "The Merchant of Venice",
+    "company": "",
+    "venue": "Chichester Festival Theatre",
+    "city": "Chichester, England",
+    "coordinates": [],
+    "people": [
+      "Alec Guinness",
+      "David Yelland",
+      "Patrick Garland"
+    ],
+    "roles": {
+      "director": [
+        "Patrick Garland"
+      ],
+      "actors": [
+        "Alec Guinness",
+        "David Yelland"
+      ],
+      "playwright": [],
+      "composer_lyricist": [],
+      "musical_director": [],
+      "choreographer": [],
+      "orchestrator": [],
+      "arranger": [],
+      "assistant_director": [],
+      "stage_manager": [],
+      "assistant_musical_director": [],
+      "vocal_director": [],
+      "dance_captain": [],
+      "fight_director": [],
+      "dramaturg": [],
+      "producer": [],
+      "set_designer": [],
+      "costume_designer": [],
+      "lighting_designer": [],
+      "sound_designer": [],
+      "musicians": [],
+      "performers": [],
+      "artists": []
+    },
+    "production_groups": [],
+    "media": [],
+    "correspondence": [],
+    "word_count": 812,
+    "coordinate_points": [],
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "The Merchant of Venice"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
+      "companies": [],
+      "venues": [
+        "Chichester Festival Theatre"
+      ],
+      "cities": [
+        "Chichester, England"
+      ],
+      "people": [
+        "Alec Guinness",
+        "David Yelland",
+        "Patrick Garland"
       ]
     }
   },
@@ -92789,6 +93454,362 @@
     }
   },
   {
+    "slug": "1984-09-01-the-way-of-the-world-chichester",
+    "route": "/reviews/1984-09-01-the-way-of-the-world-chichester/",
+    "source_file": "1984.09.01.Plays_and_Players.The_Way_of_the_World_Chichester.md",
+    "title": "The Way of the World — Chichester",
+    "date": "1984-09-01",
+    "year": "1984",
+    "publication": "Plays and Players",
+    "source_publication": "Plays and Players",
+    "article_category": "Theatre Review",
+    "collections": [
+      "UK Collection"
+    ],
+    "publication_status": "publish",
+    "editorial_issue_type": "source_checked_layout_ocr",
+    "canonical_file": "",
+    "production_title": "The Way of the World",
+    "company": "",
+    "venue": "Chichester Festival Theatre",
+    "city": "Chichester, England",
+    "coordinates": [],
+    "people": [
+      "Joan Plowright",
+      "John Moffatt",
+      "Maggie Smith",
+      "Sara Kestelman",
+      "William Congreve",
+      "William Gaskill"
+    ],
+    "roles": {
+      "director": [
+        "William Gaskill"
+      ],
+      "actors": [
+        "Maggie Smith",
+        "Joan Plowright",
+        "Sara Kestelman",
+        "John Moffatt"
+      ],
+      "playwright": [
+        "William Congreve"
+      ],
+      "composer_lyricist": [],
+      "musical_director": [],
+      "choreographer": [],
+      "orchestrator": [],
+      "arranger": [],
+      "assistant_director": [],
+      "stage_manager": [],
+      "assistant_musical_director": [],
+      "vocal_director": [],
+      "dance_captain": [],
+      "fight_director": [],
+      "dramaturg": [],
+      "producer": [],
+      "set_designer": [],
+      "costume_designer": [],
+      "lighting_designer": [],
+      "sound_designer": [],
+      "musicians": [],
+      "performers": [],
+      "artists": []
+    },
+    "production_groups": [],
+    "media": [],
+    "correspondence": [],
+    "word_count": 1063,
+    "coordinate_points": [],
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "The Way of the World"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
+      "companies": [],
+      "venues": [
+        "Chichester Festival Theatre"
+      ],
+      "cities": [
+        "Chichester, England"
+      ],
+      "people": [
+        "Joan Plowright",
+        "John Moffatt",
+        "Maggie Smith",
+        "Sara Kestelman",
+        "William Congreve",
+        "William Gaskill"
+      ]
+    }
+  },
+  {
+    "slug": "1984-10-01-pump-boys-and-dinettes",
+    "route": "/reviews/1984-10-01-pump-boys-and-dinettes/",
+    "source_file": "1984.10.01.Plays_and_Players.Pump_Boys_and_Dinettes.md",
+    "title": "Pump Boys and Dinettes",
+    "date": "1984-10-01",
+    "year": "1984",
+    "publication": "Plays and Players",
+    "source_publication": "Plays and Players",
+    "article_category": "Theatre Review",
+    "collections": [
+      "UK Collection"
+    ],
+    "publication_status": "publish",
+    "editorial_issue_type": "source_checked_layout_ocr",
+    "canonical_file": "",
+    "production_title": "Pump Boys and Dinettes",
+    "company": "",
+    "venue": "",
+    "city": "",
+    "coordinates": [],
+    "people": [],
+    "roles": {
+      "director": [],
+      "actors": [],
+      "playwright": [],
+      "composer_lyricist": [],
+      "musical_director": [],
+      "choreographer": [],
+      "orchestrator": [],
+      "arranger": [],
+      "assistant_director": [],
+      "stage_manager": [],
+      "assistant_musical_director": [],
+      "vocal_director": [],
+      "dance_captain": [],
+      "fight_director": [],
+      "dramaturg": [],
+      "producer": [],
+      "set_designer": [],
+      "costume_designer": [],
+      "lighting_designer": [],
+      "sound_designer": [],
+      "musicians": [],
+      "performers": [],
+      "artists": []
+    },
+    "production_groups": [],
+    "media": [],
+    "correspondence": [],
+    "word_count": 849,
+    "coordinate_points": [],
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Pump Boys and Dinettes"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
+      "companies": [],
+      "venues": [],
+      "cities": [],
+      "people": []
+    }
+  },
+  {
+    "slug": "1984-11-01-from-sondheim-to-la-cage",
+    "route": "/reviews/1984-11-01-from-sondheim-to-la-cage/",
+    "source_file": "1984.11.01.Plays_and_Players.From_Sondheim_to_La_Cage.md",
+    "title": "From Sondheim to La Cage",
+    "date": "1984-11-01",
+    "year": "1984",
+    "publication": "Plays and Players",
+    "source_publication": "Plays and Players",
+    "article_category": "Music Criticism",
+    "collections": [
+      "UK Collection"
+    ],
+    "publication_status": "publish",
+    "editorial_issue_type": "source_checked_layout_ocr",
+    "canonical_file": "",
+    "production_title": "",
+    "company": "",
+    "venue": "",
+    "city": "",
+    "coordinates": [],
+    "people": [],
+    "roles": {
+      "director": [],
+      "actors": [],
+      "playwright": [],
+      "composer_lyricist": [],
+      "musical_director": [],
+      "choreographer": [],
+      "orchestrator": [],
+      "arranger": [],
+      "assistant_director": [],
+      "stage_manager": [],
+      "assistant_musical_director": [],
+      "vocal_director": [],
+      "dance_captain": [],
+      "fight_director": [],
+      "dramaturg": [],
+      "producer": [],
+      "set_designer": [],
+      "costume_designer": [],
+      "lighting_designer": [],
+      "sound_designer": [],
+      "musicians": [],
+      "performers": [],
+      "artists": []
+    },
+    "production_groups": [],
+    "media": [],
+    "correspondence": [],
+    "word_count": 3262,
+    "coordinate_points": [],
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
+      "companies": [],
+      "venues": [],
+      "cities": [],
+      "people": []
+    }
+  },
+  {
+    "slug": "1984-12-01-fool-for-love",
+    "route": "/reviews/1984-12-01-fool-for-love/",
+    "source_file": "1984.12.01.Plays_and_Players.Fool_for_Love.md",
+    "title": "Fool for Love",
+    "date": "1984-12-01",
+    "year": "1984",
+    "publication": "Plays and Players",
+    "source_publication": "Plays and Players",
+    "article_category": "Theatre Review",
+    "collections": [
+      "UK Collection"
+    ],
+    "publication_status": "publish",
+    "editorial_issue_type": "source_checked_layout_ocr",
+    "canonical_file": "",
+    "production_title": "Fool for Love",
+    "company": "",
+    "venue": "Cottesloe Theatre",
+    "city": "London, England",
+    "coordinates": [],
+    "people": [
+      "David Troughton",
+      "Ian Charleson",
+      "Julie Walters",
+      "Peter Gill",
+      "Sam Shepard",
+      "Tom Watson"
+    ],
+    "roles": {
+      "director": [
+        "Peter Gill"
+      ],
+      "actors": [
+        "Julie Walters",
+        "Ian Charleson",
+        "Tom Watson",
+        "David Troughton"
+      ],
+      "playwright": [
+        "Sam Shepard"
+      ],
+      "composer_lyricist": [],
+      "musical_director": [],
+      "choreographer": [],
+      "orchestrator": [],
+      "arranger": [],
+      "assistant_director": [],
+      "stage_manager": [],
+      "assistant_musical_director": [],
+      "vocal_director": [],
+      "dance_captain": [],
+      "fight_director": [],
+      "dramaturg": [],
+      "producer": [],
+      "set_designer": [],
+      "costume_designer": [],
+      "lighting_designer": [],
+      "sound_designer": [],
+      "musicians": [],
+      "performers": [],
+      "artists": []
+    },
+    "production_groups": [],
+    "media": [],
+    "correspondence": [],
+    "word_count": 950,
+    "coordinate_points": [],
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Fool for Love"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
+      "companies": [],
+      "venues": [
+        "Cottesloe Theatre"
+      ],
+      "cities": [
+        "London, England"
+      ],
+      "people": [
+        "David Troughton",
+        "Ian Charleson",
+        "Julie Walters",
+        "Peter Gill",
+        "Sam Shepard",
+        "Tom Watson"
+      ]
+    }
+  },
+  {
     "slug": "1984-12-09-cry-god-for-harold",
     "route": "/reviews/1984-12-09-cry-god-for-harold/",
     "source_file": "1984.12.09.The_Observer.Cry_God_For_Harold.md",
@@ -92959,6 +93980,417 @@
         "Samuel Beckett",
         "Terence Rattigan",
         "W. H. Auden"
+      ]
+    }
+  },
+  {
+    "slug": "1985-01-01-of-mice-and-men",
+    "route": "/reviews/1985-01-01-of-mice-and-men/",
+    "source_file": "1985.01.01.Plays_and_Players.Of_Mice_and_Men.md",
+    "title": "Of Mice and Men",
+    "date": "1985-01-01",
+    "year": "1985",
+    "publication": "Plays and Players",
+    "source_publication": "Plays and Players",
+    "article_category": "Theatre Review",
+    "collections": [
+      "UK Collection"
+    ],
+    "publication_status": "publish",
+    "editorial_issue_type": "source_checked_layout_ocr",
+    "canonical_file": "",
+    "production_title": "Of Mice and Men",
+    "company": "",
+    "venue": "Mermaid Theatre",
+    "city": "London, England",
+    "coordinates": [],
+    "people": [
+      "Clive Mantle",
+      "Geoff Bullen",
+      "John Steinbeck"
+    ],
+    "roles": {
+      "director": [
+        "Geoff Bullen"
+      ],
+      "actors": [
+        "Clive Mantle"
+      ],
+      "playwright": [
+        "John Steinbeck"
+      ],
+      "composer_lyricist": [],
+      "musical_director": [],
+      "choreographer": [],
+      "orchestrator": [],
+      "arranger": [],
+      "assistant_director": [],
+      "stage_manager": [],
+      "assistant_musical_director": [],
+      "vocal_director": [],
+      "dance_captain": [],
+      "fight_director": [],
+      "dramaturg": [],
+      "producer": [],
+      "set_designer": [],
+      "costume_designer": [],
+      "lighting_designer": [],
+      "sound_designer": [],
+      "musicians": [],
+      "performers": [],
+      "artists": []
+    },
+    "production_groups": [],
+    "media": [],
+    "correspondence": [],
+    "word_count": 1102,
+    "coordinate_points": [],
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Of Mice and Men"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
+      "companies": [],
+      "venues": [
+        "Mermaid Theatre"
+      ],
+      "cities": [
+        "London, England"
+      ],
+      "people": [
+        "Clive Mantle",
+        "Geoff Bullen",
+        "John Steinbeck"
+      ]
+    }
+  },
+  {
+    "slug": "1985-01-01-waiting-for-cage-aux-folles",
+    "route": "/reviews/1985-01-01-waiting-for-cage-aux-folles/",
+    "source_file": "1985.01.01.Plays_and_Players.Waiting_for_Cage_Aux_Folles.md",
+    "title": "Waiting for Cage Aux Folles",
+    "date": "1985-01-01",
+    "year": "1985",
+    "publication": "Plays and Players",
+    "source_publication": "Plays and Players",
+    "article_category": "Musical Theatre Survey",
+    "collections": [
+      "UK Collection"
+    ],
+    "publication_status": "publish",
+    "editorial_issue_type": "source_checked_layout_ocr",
+    "canonical_file": "",
+    "production_title": "",
+    "company": "",
+    "venue": "",
+    "city": "",
+    "coordinates": [],
+    "people": [],
+    "roles": {
+      "director": [],
+      "actors": [],
+      "playwright": [],
+      "composer_lyricist": [],
+      "musical_director": [],
+      "choreographer": [],
+      "orchestrator": [],
+      "arranger": [],
+      "assistant_director": [],
+      "stage_manager": [],
+      "assistant_musical_director": [],
+      "vocal_director": [],
+      "dance_captain": [],
+      "fight_director": [],
+      "dramaturg": [],
+      "producer": [],
+      "set_designer": [],
+      "costume_designer": [],
+      "lighting_designer": [],
+      "sound_designer": [],
+      "musicians": [],
+      "performers": [],
+      "artists": []
+    },
+    "production_groups": [],
+    "media": [],
+    "correspondence": [],
+    "word_count": 2316,
+    "coordinate_points": [],
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
+      "companies": [],
+      "venues": [],
+      "cities": [],
+      "people": []
+    }
+  },
+  {
+    "slug": "1985-02-01-bloody-poetry",
+    "route": "/reviews/1985-02-01-bloody-poetry/",
+    "source_file": "1985.02.01.Plays_and_Players.Bloody_Poetry.md",
+    "title": "Bloody Poetry",
+    "date": "1985-02-01",
+    "year": "1985",
+    "publication": "Plays and Players",
+    "source_publication": "Plays and Players",
+    "article_category": "Theatre Review",
+    "collections": [
+      "UK Collection"
+    ],
+    "publication_status": "publish",
+    "editorial_issue_type": "source_checked_layout_ocr",
+    "canonical_file": "",
+    "production_title": "Bloody Poetry",
+    "company": "",
+    "venue": "Hampstead Theatre",
+    "city": "London, England",
+    "coordinates": [],
+    "people": [
+      "Fiona Shaw",
+      "Howard Brenton",
+      "Roland Rees",
+      "Valentine Pelka",
+      "William Gaminara"
+    ],
+    "roles": {
+      "director": [
+        "Roland Rees"
+      ],
+      "actors": [
+        "William Gaminara",
+        "Fiona Shaw",
+        "Valentine Pelka"
+      ],
+      "playwright": [
+        "Howard Brenton"
+      ],
+      "composer_lyricist": [],
+      "musical_director": [],
+      "choreographer": [],
+      "orchestrator": [],
+      "arranger": [],
+      "assistant_director": [],
+      "stage_manager": [],
+      "assistant_musical_director": [],
+      "vocal_director": [],
+      "dance_captain": [],
+      "fight_director": [],
+      "dramaturg": [],
+      "producer": [],
+      "set_designer": [],
+      "costume_designer": [],
+      "lighting_designer": [],
+      "sound_designer": [],
+      "musicians": [],
+      "performers": [],
+      "artists": []
+    },
+    "production_groups": [],
+    "media": [],
+    "correspondence": [],
+    "word_count": 800,
+    "coordinate_points": [],
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Bloody Poetry"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
+      "companies": [],
+      "venues": [
+        "Hampstead Theatre"
+      ],
+      "cities": [
+        "London, England"
+      ],
+      "people": [
+        "Fiona Shaw",
+        "Howard Brenton",
+        "Roland Rees",
+        "Valentine Pelka",
+        "William Gaminara"
+      ]
+    }
+  },
+  {
+    "slug": "1985-02-01-the-winter-s-tale-the-crucible",
+    "route": "/reviews/1985-02-01-the-winter-s-tale-the-crucible/",
+    "source_file": "1985.02.01.Plays_and_Players.The_Winter_s_Tale_The_Crucible.md",
+    "title": "The Winter's Tale / The Crucible",
+    "date": "1985-02-01",
+    "year": "1985",
+    "publication": "Plays and Players",
+    "source_publication": "Plays and Players",
+    "article_category": "Theatre Review",
+    "collections": [
+      "UK Collection"
+    ],
+    "publication_status": "publish",
+    "editorial_issue_type": "source_checked_layout_ocr",
+    "canonical_file": "",
+    "production_title": "",
+    "company": "",
+    "venue": "Spitalfields",
+    "city": "London, England",
+    "coordinates": [],
+    "people": [
+      "Adrian Noble",
+      "Alun Armstrong",
+      "Arthur Miller",
+      "Barry Kyle",
+      "Janet Dale",
+      "Julian Curry",
+      "Lynn Farleigh",
+      "Margery Mason",
+      "Nick Hamm",
+      "Ron Cook",
+      "Trevor Martin",
+      "William Shakespeare"
+    ],
+    "roles": {
+      "director": [
+        "Adrian Noble",
+        "Barry Kyle",
+        "Nick Hamm"
+      ],
+      "actors": [
+        "Alun Armstrong",
+        "Lynn Farleigh",
+        "Janet Dale",
+        "Ron Cook",
+        "Trevor Martin",
+        "Julian Curry",
+        "Margery Mason"
+      ],
+      "playwright": [
+        "William Shakespeare",
+        "Arthur Miller"
+      ],
+      "composer_lyricist": [],
+      "musical_director": [],
+      "choreographer": [],
+      "orchestrator": [],
+      "arranger": [],
+      "assistant_director": [],
+      "stage_manager": [],
+      "assistant_musical_director": [],
+      "vocal_director": [],
+      "dance_captain": [],
+      "fight_director": [],
+      "dramaturg": [],
+      "producer": [],
+      "set_designer": [],
+      "costume_designer": [],
+      "lighting_designer": [],
+      "sound_designer": [],
+      "musicians": [],
+      "performers": [],
+      "artists": []
+    },
+    "production_groups": [
+      {
+        "order": "1",
+        "production_title": "The Winter's Tale",
+        "venue": [
+          "Spitalfields"
+        ],
+        "city": [
+          "London, England"
+        ]
+      },
+      {
+        "order": "2",
+        "production_title": "The Crucible",
+        "venue": [
+          "Spitalfields"
+        ],
+        "city": [
+          "London, England"
+        ]
+      }
+    ],
+    "media": [],
+    "correspondence": [],
+    "word_count": 1291,
+    "coordinate_points": [],
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "The Crucible",
+        "The Winter's Tale"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
+      "companies": [],
+      "venues": [
+        "Spitalfields"
+      ],
+      "cities": [
+        "London, England"
+      ],
+      "people": [
+        "Adrian Noble",
+        "Alun Armstrong",
+        "Arthur Miller",
+        "Barry Kyle",
+        "Janet Dale",
+        "Julian Curry",
+        "Lynn Farleigh",
+        "Margery Mason",
+        "Nick Hamm",
+        "Ron Cook",
+        "Trevor Martin",
+        "William Shakespeare"
       ]
     }
   },
@@ -93146,6 +94578,328 @@
         "Michael Bennett",
         "Richard Attenborough",
         "Terence Mann"
+      ]
+    }
+  },
+  {
+    "slug": "1986-03-01-women-beware-women",
+    "route": "/reviews/1986-03-01-women-beware-women/",
+    "source_file": "1986.03.01.Plays_International.Women_Beware_Women.md",
+    "title": "Women Beware Women",
+    "date": "1986-03-01",
+    "year": "1986",
+    "publication": "Plays International",
+    "source_publication": "Plays International",
+    "article_category": "Theatre Review",
+    "collections": [
+      "UK Collection"
+    ],
+    "publication_status": "publish",
+    "editorial_issue_type": "source_checked_layout_ocr",
+    "canonical_file": "",
+    "production_title": "Women Beware Women",
+    "company": "",
+    "venue": "Royal Court Theatre",
+    "city": "London, England",
+    "coordinates": [],
+    "people": [
+      "Howard Barker",
+      "Joanne Whalley",
+      "Nigel Davenport",
+      "Thomas Middleton",
+      "William Gaskill"
+    ],
+    "roles": {
+      "director": [
+        "William Gaskill"
+      ],
+      "actors": [
+        "Nigel Davenport",
+        "Joanne Whalley"
+      ],
+      "playwright": [
+        "Thomas Middleton",
+        "Howard Barker"
+      ],
+      "composer_lyricist": [],
+      "musical_director": [],
+      "choreographer": [],
+      "orchestrator": [],
+      "arranger": [],
+      "assistant_director": [],
+      "stage_manager": [],
+      "assistant_musical_director": [],
+      "vocal_director": [],
+      "dance_captain": [],
+      "fight_director": [],
+      "dramaturg": [],
+      "producer": [],
+      "set_designer": [],
+      "costume_designer": [],
+      "lighting_designer": [],
+      "sound_designer": [],
+      "musicians": [],
+      "performers": [],
+      "artists": []
+    },
+    "production_groups": [],
+    "media": [],
+    "correspondence": [],
+    "word_count": 1263,
+    "coordinate_points": [],
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Women Beware Women"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
+      "companies": [],
+      "venues": [
+        "Royal Court Theatre"
+      ],
+      "cities": [
+        "London, England"
+      ],
+      "people": [
+        "Howard Barker",
+        "Joanne Whalley",
+        "Nigel Davenport",
+        "Thomas Middleton",
+        "William Gaskill"
+      ]
+    }
+  },
+  {
+    "slug": "1986-04-01-brighton-beach-memoirs",
+    "route": "/reviews/1986-04-01-brighton-beach-memoirs/",
+    "source_file": "1986.04.01.Plays_International.Brighton_Beach_Memoirs.md",
+    "title": "Brighton Beach Memoirs",
+    "date": "1986-04-01",
+    "year": "1986",
+    "publication": "Plays International",
+    "source_publication": "Plays International",
+    "article_category": "Theatre Review",
+    "collections": [
+      "UK Collection"
+    ],
+    "publication_status": "publish",
+    "editorial_issue_type": "source_checked_layout_ocr",
+    "canonical_file": "",
+    "production_title": "Brighton Beach Memoirs",
+    "company": "",
+    "venue": "Lyttelton Theatre",
+    "city": "London, England",
+    "coordinates": [],
+    "people": [
+      "Alison Fiske",
+      "Frances de la Tour",
+      "Geraldine McEwan",
+      "Harry Towb",
+      "Michael Rudman",
+      "Neil Simon",
+      "Robert Glenister",
+      "Steven Mackintosh"
+    ],
+    "roles": {
+      "director": [
+        "Michael Rudman"
+      ],
+      "actors": [
+        "Steven Mackintosh",
+        "Robert Glenister",
+        "Harry Towb",
+        "Alison Fiske",
+        "Geraldine McEwan",
+        "Frances de la Tour"
+      ],
+      "playwright": [
+        "Neil Simon"
+      ],
+      "composer_lyricist": [],
+      "musical_director": [],
+      "choreographer": [],
+      "orchestrator": [],
+      "arranger": [],
+      "assistant_director": [],
+      "stage_manager": [],
+      "assistant_musical_director": [],
+      "vocal_director": [],
+      "dance_captain": [],
+      "fight_director": [],
+      "dramaturg": [],
+      "producer": [],
+      "set_designer": [],
+      "costume_designer": [],
+      "lighting_designer": [],
+      "sound_designer": [],
+      "musicians": [],
+      "performers": [],
+      "artists": []
+    },
+    "production_groups": [],
+    "media": [],
+    "correspondence": [],
+    "word_count": 1024,
+    "coordinate_points": [],
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Brighton Beach Memoirs"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
+      "companies": [],
+      "venues": [
+        "Lyttelton Theatre"
+      ],
+      "cities": [
+        "London, England"
+      ],
+      "people": [
+        "Alison Fiske",
+        "Frances de la Tour",
+        "Geraldine McEwan",
+        "Harry Towb",
+        "Michael Rudman",
+        "Neil Simon",
+        "Robert Glenister",
+        "Steven Mackintosh"
+      ]
+    }
+  },
+  {
+    "slug": "1986-05-01-the-threepenny-opera",
+    "route": "/reviews/1986-05-01-the-threepenny-opera/",
+    "source_file": "1986.05.01.Plays_International.The_Threepenny_Opera.md",
+    "title": "The Threepenny Opera",
+    "date": "1986-05-01",
+    "year": "1986",
+    "publication": "Plays International",
+    "source_publication": "Plays International",
+    "article_category": "Theatre Review",
+    "collections": [
+      "UK Collection"
+    ],
+    "publication_status": "publish",
+    "editorial_issue_type": "source_checked_layout_ocr",
+    "canonical_file": "",
+    "production_title": "The Threepenny Opera",
+    "company": "",
+    "venue": "Olivier Theatre",
+    "city": "London, England",
+    "coordinates": [],
+    "people": [
+      "Bertolt Brecht",
+      "Kurt Weill",
+      "Michael Bryant",
+      "Niall Buggy",
+      "Peter Wood",
+      "Sally Dexter",
+      "Sara Kestelman",
+      "Stephen Moore",
+      "Tim Curry"
+    ],
+    "roles": {
+      "director": [
+        "Peter Wood"
+      ],
+      "actors": [
+        "Tim Curry",
+        "Michael Bryant",
+        "Sara Kestelman",
+        "Stephen Moore",
+        "Sally Dexter",
+        "Niall Buggy"
+      ],
+      "playwright": [
+        "Bertolt Brecht"
+      ],
+      "composer_lyricist": [
+        "Kurt Weill"
+      ],
+      "musical_director": [],
+      "choreographer": [],
+      "orchestrator": [],
+      "arranger": [],
+      "assistant_director": [],
+      "stage_manager": [],
+      "assistant_musical_director": [],
+      "vocal_director": [],
+      "dance_captain": [],
+      "fight_director": [],
+      "dramaturg": [],
+      "producer": [],
+      "set_designer": [],
+      "costume_designer": [],
+      "lighting_designer": [],
+      "sound_designer": [],
+      "musicians": [],
+      "performers": [],
+      "artists": []
+    },
+    "production_groups": [],
+    "media": [],
+    "correspondence": [],
+    "word_count": 1559,
+    "coordinate_points": [],
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "The Threepenny Opera"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
+      "companies": [],
+      "venues": [
+        "Olivier Theatre"
+      ],
+      "cities": [
+        "London, England"
+      ],
+      "people": [
+        "Bertolt Brecht",
+        "Kurt Weill",
+        "Michael Bryant",
+        "Niall Buggy",
+        "Peter Wood",
+        "Sally Dexter",
+        "Sara Kestelman",
+        "Stephen Moore",
+        "Tim Curry"
       ]
     }
   },

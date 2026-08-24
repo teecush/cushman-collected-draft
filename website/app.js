@@ -1,8 +1,8 @@
-const DATA_URL = new URL("../site_export/data/public_reviews.json?v=115", import.meta.url);
+const DATA_URL = new URL("../site_export/data/public_reviews.json?v=116", import.meta.url);
 const ALIASES_URL = new URL("../site_export/data/route_aliases.json?v=1", import.meta.url);
 const STANDALONE_CORRESPONDENCE_URL = new URL("../site_export/data/standalone_correspondence.json?v=2", import.meta.url);
 const CONTENT_ROOT = new URL("../site_export/content/reviews/", import.meta.url);
-const MEDIA_ASSET_VERSION = "trip5-20260809";
+const MEDIA_ASSET_VERSION = "trip5-20260823";
 const PAGE_SIZE = 36;
 const SHAKESPEARE_COLLECTION = "The Shakespeare Collection";
 const SHAKESPEARE_DERIVED_COLLECTIONS = ["Riffs on Shakespeare", "Thoughts on Shakespeare"];
@@ -2860,6 +2860,38 @@ function renderMasterIndex(filterKey = DEFAULT_MASTER_INDEX_FILTER) {
   observer.observe(title);
 }
 
+function observerFarewellFeature() {
+  const section = document.createElement("section");
+  section.className = "observer-farewell-feature";
+  section.setAttribute("aria-labelledby", "observer-farewell-title");
+
+  const copy = document.createElement("div");
+  copy.className = "observer-farewell-copy";
+  const eyebrow = document.createElement("p");
+  eyebrow.className = "observer-farewell-eyebrow";
+  eyebrow.textContent = "From the letters page";
+  const heading = document.createElement("h2");
+  heading.id = "observer-farewell-title";
+  heading.textContent = "Critic without prejudice";
+  const description = document.createElement("p");
+  description.textContent = "A reader marks Robert Cushman’s departure from The Observer and the end of his tenure as the paper’s theatre critic.";
+  copy.append(eyebrow, heading, description);
+
+  const figure = document.createElement("figure");
+  figure.className = "observer-farewell-clipping";
+  const image = document.createElement("img");
+  image.src = mediaAssetUrl("media/observer/critic-without-prejudice.jpg");
+  image.alt = "The complete newspaper clipping Critic without prejudice, with a portrait of Robert Cushman and Brian Orrell’s letter praising him on his departure from The Observer.";
+  image.loading = "eager";
+  image.decoding = "async";
+  const caption = document.createElement("figcaption");
+  caption.textContent = "Brian Orrell’s published letter, preserved with its portrait and succession note.";
+  figure.append(image, caption);
+
+  section.append(copy, figure);
+  return section;
+}
+
 function renderEntityPage(typeKey, slug) {
   const type = entityType(typeKey);
   if (!type) return;
@@ -2883,7 +2915,10 @@ function renderEntityPage(typeKey, slug) {
     records,
     titleFirst: true,
   })));
-  els.indexContent.replaceChildren(title, count, back, list);
+  const observerFeature = typeKey === "publications" && slug === "the-observer"
+    ? observerFarewellFeature()
+    : null;
+  els.indexContent.replaceChildren(title, count, back, ...(observerFeature ? [observerFeature] : []), list);
 }
 
 function renderExploreTool() {
