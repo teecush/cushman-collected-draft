@@ -82263,6 +82263,80 @@
     }
   },
   {
+    "slug": "1982-11-01-art-is-a-meaningless-word",
+    "route": "/reviews/1982-11-01-art-is-a-meaningless-word/",
+    "source_file": "1982.11.01.Plays_and_Players.Art_Is_a_Meaningless_Word.md",
+    "title": "Art Is a Meaningless Word",
+    "date": "1982-11-01",
+    "year": "1982",
+    "publication": "Plays and Players",
+    "source_publication": "Plays and Players",
+    "article_category": "Theatre Criticism",
+    "collections": [
+      "UK Collection"
+    ],
+    "publication_status": "publish",
+    "editorial_issue_type": "clean_manual_transcription",
+    "canonical_file": "",
+    "production_title": "",
+    "company": "",
+    "venue": "",
+    "city": "",
+    "coordinates": [],
+    "people": [],
+    "roles": {
+      "director": [],
+      "actors": [],
+      "playwright": [],
+      "composer_lyricist": [],
+      "musical_director": [],
+      "choreographer": [],
+      "orchestrator": [],
+      "arranger": [],
+      "assistant_director": [],
+      "stage_manager": [],
+      "assistant_musical_director": [],
+      "vocal_director": [],
+      "dance_captain": [],
+      "fight_director": [],
+      "dramaturg": [],
+      "producer": [],
+      "set_designer": [],
+      "costume_designer": [],
+      "lighting_designer": [],
+      "sound_designer": [],
+      "musicians": [],
+      "performers": [],
+      "artists": []
+    },
+    "production_groups": [],
+    "media": [],
+    "correspondence": [],
+    "word_count": 2443,
+    "coordinate_points": [],
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
+      "companies": [],
+      "venues": [],
+      "cities": [],
+      "people": []
+    }
+  },
+  {
     "slug": "1982-11-07-a-case-of-nuts",
     "route": "/reviews/1982-11-07-a-case-of-nuts/",
     "source_file": "1982.11.07.The_Observer.A_Case_Of_Nuts.md",
@@ -346817,7 +346891,7 @@
     "network_or_platform": "Academy of Motion Picture Arts and Sciences",
     "subject_role_map": [
       {
-        "person": "Alec Baldwin",
+        "person": "Steve Martin",
         "roles": [
           "performers"
         ],
@@ -346826,7 +346900,7 @@
         ]
       }
     ],
-    "subject_people": "Alec Baldwin",
+    "subject_people": "Steve Martin",
     "coordinate_points": [],
     "display_schema": {
       "work_type": "productions",
@@ -346841,7 +346915,7 @@
         "82nd Academy Awards"
       ],
       "subjects": [
-        "Alec Baldwin"
+        "Steve Martin"
       ],
       "book_authors": [],
       "publishers": [],
