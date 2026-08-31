@@ -16636,6 +16636,110 @@
     }
   },
   {
+    "slug": "1975-04-20-our-treasury-of-drama",
+    "route": "/reviews/1975-04-20-our-treasury-of-drama/",
+    "source_file": "1975.04.20.The_Observer_Magazine.Our_Treasury_of_Drama.md",
+    "title": "Our Treasury of Drama",
+    "date": "1975-04-20",
+    "year": "1975",
+    "publication": "The Observer Magazine",
+    "source_publication": "The Observer Magazine",
+    "article_category": "Theatre Essay",
+    "collections": [
+      "UK Collection"
+    ],
+    "publication_status": "publish",
+    "editorial_issue_type": "missing_intervening_continuation",
+    "canonical_file": "",
+    "production_title": "",
+    "company": "National Theatre; Mermaid Theatre; Young Vic",
+    "venue": "",
+    "city": "London, England",
+    "coordinates": [],
+    "people": [
+      "Anton Chekhov",
+      "George Chapman",
+      "George Peele",
+      "Henrik Ibsen",
+      "Henry Fielding",
+      "William Shakespeare",
+      "William Wycherley"
+    ],
+    "roles": {
+      "director": [],
+      "actors": [],
+      "playwright": [
+        "William Shakespeare",
+        "Henrik Ibsen",
+        "Anton Chekhov",
+        "George Peele",
+        "George Chapman",
+        "William Wycherley",
+        "Henry Fielding"
+      ],
+      "composer_lyricist": [],
+      "musical_director": [],
+      "choreographer": [],
+      "orchestrator": [],
+      "arranger": [],
+      "assistant_director": [],
+      "stage_manager": [],
+      "assistant_musical_director": [],
+      "vocal_director": [],
+      "dance_captain": [],
+      "fight_director": [],
+      "dramaturg": [],
+      "producer": [],
+      "set_designer": [],
+      "costume_designer": [],
+      "lighting_designer": [],
+      "sound_designer": [],
+      "musicians": [],
+      "performers": [],
+      "artists": []
+    },
+    "production_groups": [],
+    "media": [],
+    "correspondence": [],
+    "word_count": 964,
+    "coordinate_points": [],
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
+      "companies": [
+        "Mermaid Theatre",
+        "National Theatre",
+        "Young Vic"
+      ],
+      "venues": [],
+      "cities": [
+        "London, England"
+      ],
+      "people": [
+        "Anton Chekhov",
+        "George Chapman",
+        "George Peele",
+        "Henrik Ibsen",
+        "Henry Fielding",
+        "William Shakespeare",
+        "William Wycherley"
+      ]
+    }
+  },
+  {
     "slug": "1975-04-27-mr-pinter-s-spoonerisms",
     "route": "/reviews/1975-04-27-mr-pinter-s-spoonerisms/",
     "source_file": "1975.04.27.The_Observer.Mr_Pinter_s_Spoonerisms.md",
@@ -346894,7 +346998,7 @@
     "network_or_platform": "Academy of Motion Picture Arts and Sciences",
     "subject_role_map": [
       {
-        "person": "Alec Baldwin",
+        "person": "Steve Martin",
         "roles": [
           "performers"
         ],
@@ -346903,7 +347007,7 @@
         ]
       }
     ],
-    "subject_people": "Alec Baldwin",
+    "subject_people": "Steve Martin",
     "coordinate_points": [],
     "display_schema": {
       "work_type": "productions",
@@ -346918,7 +347022,7 @@
         "82nd Academy Awards"
       ],
       "subjects": [
-        "Alec Baldwin"
+        "Steve Martin"
       ],
       "book_authors": [],
       "publishers": [],
