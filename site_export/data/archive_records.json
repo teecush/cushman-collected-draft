@@ -3351,7 +3351,7 @@
     "year": "2002",
     "publication": "National Post",
     "source_publication": "National Post",
-    "article_category": "Opinion Piece",
+    "article_category": "Obituary",
     "collections": [
       "The Stratford Collection",
       "Thoughts on Shakespeare",
@@ -3399,7 +3399,6 @@
     "media": [],
     "correspondence": [],
     "word_count": 766,
-    "topic": "A Man of the Theatre: Findley as Playwright",
     "subject_role_map": [
       {
         "person": "Timothy Findley",
@@ -3414,10 +3413,10 @@
     "subject_people": "Timothy Findley",
     "coordinate_points": [],
     "display_schema": {
-      "work_type": "topics",
-      "work_label": "Topic",
+      "work_type": "subjects",
+      "work_label": "Subject",
       "company_label": "Company",
-      "primary_browse": "topics",
+      "primary_browse": "subjects",
       "secondary_browse": "productions"
     },
     "browse_entities": {
@@ -3428,9 +3427,7 @@
       ],
       "book_authors": [],
       "publishers": [],
-      "topics": [
-        "A Man of the Theatre: Findley as Playwright"
-      ],
+      "topics": [],
       "events": [],
       "networks": [],
       "companies": [

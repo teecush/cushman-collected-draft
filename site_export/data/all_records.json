@@ -38986,7 +38986,7 @@
     "year": "1977",
     "publication": "The Observer",
     "source_publication": "The Observer",
-    "article_category": "Opinion Piece",
+    "article_category": "Obituary",
     "collections": [
       "UK Collection"
     ],
@@ -39043,13 +39043,12 @@
     "media": [],
     "correspondence": [],
     "word_count": 428,
-    "topic": "Words And Rhythm",
     "coordinate_points": [],
     "display_schema": {
-      "work_type": "topics",
-      "work_label": "Topic",
+      "work_type": "subjects",
+      "work_label": "Subject",
       "company_label": "Company",
-      "primary_browse": "topics",
+      "primary_browse": "subjects",
       "secondary_browse": "productions"
     },
     "browse_entities": {
@@ -39058,9 +39057,7 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
-      "topics": [
-        "Words And Rhythm"
-      ],
+      "topics": [],
       "events": [],
       "networks": [],
       "companies": [],
@@ -63282,7 +63279,7 @@
     "year": "1980",
     "publication": "The Observer",
     "source_publication": "The Observer",
-    "article_category": "Opinion Piece",
+    "article_category": "Obituary",
     "collections": [
       "UK Collection"
     ],
@@ -63343,13 +63340,12 @@
     "media": [],
     "correspondence": [],
     "word_count": 997,
-    "topic": "The Showman And The Ideologue",
     "coordinate_points": [],
     "display_schema": {
-      "work_type": "topics",
-      "work_label": "Topic",
+      "work_type": "subjects",
+      "work_label": "Subject",
       "company_label": "Company",
-      "primary_browse": "topics",
+      "primary_browse": "subjects",
       "secondary_browse": "productions"
     },
     "browse_entities": {
@@ -63358,9 +63354,7 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
-      "topics": [
-        "The Showman And The Ideologue"
-      ],
+      "topics": [],
       "events": [],
       "networks": [],
       "companies": [],
@@ -76717,7 +76711,7 @@
     "year": "1982",
     "publication": "The Observer",
     "source_publication": "The Observer",
-    "article_category": "Opinion Piece",
+    "article_category": "Obituary",
     "collections": [
       "UK Collection"
     ],
@@ -76765,13 +76759,12 @@
     "media": [],
     "correspondence": [],
     "word_count": 836,
-    "topic": "Man Of Method",
     "coordinate_points": [],
     "display_schema": {
-      "work_type": "topics",
-      "work_label": "Topic",
+      "work_type": "subjects",
+      "work_label": "Subject",
       "company_label": "Company",
-      "primary_browse": "topics",
+      "primary_browse": "subjects",
       "secondary_browse": "productions"
     },
     "browse_entities": {
@@ -76780,9 +76773,7 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
-      "topics": [
-        "Man Of Method"
-      ],
+      "topics": [],
       "events": [],
       "networks": [],
       "companies": [],
@@ -84771,7 +84762,7 @@
     "year": "1983",
     "publication": "The Observer",
     "source_publication": "The Observer",
-    "article_category": "Opinion Piece",
+    "article_category": "Obituary",
     "collections": [
       "UK Collection"
     ],
@@ -84829,13 +84820,12 @@
     "media": [],
     "correspondence": [],
     "word_count": 966,
-    "topic": "Poet On A Hot Tin Roof",
     "coordinate_points": [],
     "display_schema": {
-      "work_type": "topics",
-      "work_label": "Topic",
+      "work_type": "subjects",
+      "work_label": "Subject",
       "company_label": "Company",
-      "primary_browse": "topics",
+      "primary_browse": "subjects",
       "secondary_browse": "productions"
     },
     "browse_entities": {
@@ -84846,9 +84836,7 @@
       "subjects": [],
       "book_authors": [],
       "publishers": [],
-      "topics": [
-        "Poet On A Hot Tin Roof"
-      ],
+      "topics": [],
       "events": [],
       "networks": [],
       "companies": [
@@ -93303,7 +93291,7 @@
     "year": "1984",
     "publication": "The New York Times",
     "source_publication": "The New York Times",
-    "article_category": "Profile",
+    "article_category": "Obituary",
     "collections": [],
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
@@ -93389,14 +93377,14 @@
     "year": "1984",
     "publication": "The Observer",
     "source_publication": "The Observer",
-    "article_category": "Profile",
+    "article_category": "Obituary",
     "collections": [
       "UK Collection"
     ],
     "publication_status": "publish",
     "editorial_issue_type": "clean_manual_transcription",
     "canonical_file": "",
-    "production_title": "Ellis Island",
+    "production_title": "",
     "company": "",
     "venue": "Shepperton Studios",
     "city": "",
@@ -93411,6 +93399,7 @@
       "Dylan Thomas",
       "Edward Albee",
       "Elizabeth Taylor",
+      "Ellis Island",
       "George Orwell",
       "Ian McKellen",
       "John le Carre",
@@ -93478,6 +93467,12 @@
     "media": [],
     "correspondence": [],
     "word_count": 1579,
+    "subject_role_map": [
+      {
+        "person": "Ellis Island"
+      }
+    ],
+    "subject_people": "Ellis Island",
     "coordinate_points": [],
     "display_schema": {
       "work_type": "subjects",
@@ -93488,10 +93483,10 @@
     },
     "browse_entities": {
       "books": [],
-      "productions": [
+      "productions": [],
+      "subjects": [
         "Ellis Island"
       ],
-      "subjects": [],
       "book_authors": [],
       "publishers": [],
       "topics": [],
@@ -93512,6 +93507,7 @@
         "Dylan Thomas",
         "Edward Albee",
         "Elizabeth Taylor",
+        "Ellis Island",
         "George Orwell",
         "Ian McKellen",
         "John le Carre",
@@ -102918,17 +102914,19 @@
     "year": "1990",
     "publication": "The Globe and Mail",
     "source_publication": "The Globe and Mail",
-    "article_category": "Opinion Piece",
+    "article_category": "Obituary",
     "collections": [],
     "publication_status": "publish",
     "editorial_issue_type": "",
     "canonical_file": "",
-    "production_title": "Leonard Bernstein",
+    "production_title": "",
     "company": "",
     "venue": "",
     "city": "",
     "coordinates": [],
-    "people": [],
+    "people": [
+      "Leonard Bernstein"
+    ],
     "roles": {
       "director": [],
       "actors": [],
@@ -102958,32 +102956,43 @@
     "media": [],
     "correspondence": [],
     "word_count": 959,
-    "topic": "Cross Current Sure, Bernstein Was Gifted, But Was He Any Better Than Gershwin,",
+    "subject_role_map": [
+      {
+        "person": "Leonard Bernstein",
+        "roles": [
+          "composer_lyricist"
+        ],
+        "labels": [
+          "Composer/Lyricist"
+        ]
+      }
+    ],
+    "subject_people": "Leonard Bernstein",
     "coordinate_points": [],
     "display_schema": {
-      "work_type": "topics",
-      "work_label": "Topic",
+      "work_type": "subjects",
+      "work_label": "Subject",
       "company_label": "Company",
-      "primary_browse": "topics",
+      "primary_browse": "subjects",
       "secondary_browse": "productions"
     },
     "browse_entities": {
       "books": [],
-      "productions": [
+      "productions": [],
+      "subjects": [
         "Leonard Bernstein"
       ],
-      "subjects": [],
       "book_authors": [],
       "publishers": [],
-      "topics": [
-        "Cross Current Sure, Bernstein Was Gifted, But Was He Any Better Than Gershwin,"
-      ],
+      "topics": [],
       "events": [],
       "networks": [],
       "companies": [],
       "venues": [],
       "cities": [],
-      "people": []
+      "people": [
+        "Leonard Bernstein"
+      ]
     }
   },
   {
@@ -183869,7 +183878,7 @@
     "year": "2002",
     "publication": "National Post",
     "source_publication": "National Post",
-    "article_category": "Profile",
+    "article_category": "Obituary",
     "collections": [
       "The Stratford Collection",
       "The Canadian Collection",
@@ -184101,7 +184110,7 @@
     "year": "2002",
     "publication": "National Post",
     "source_publication": "National Post",
-    "article_category": "Opinion Piece",
+    "article_category": "Obituary",
     "collections": [
       "The Stratford Collection",
       "Thoughts on Shakespeare",
@@ -184149,7 +184158,6 @@
     "media": [],
     "correspondence": [],
     "word_count": 766,
-    "topic": "A Man of the Theatre: Findley as Playwright",
     "subject_role_map": [
       {
         "person": "Timothy Findley",
@@ -184164,10 +184172,10 @@
     "subject_people": "Timothy Findley",
     "coordinate_points": [],
     "display_schema": {
-      "work_type": "topics",
-      "work_label": "Topic",
+      "work_type": "subjects",
+      "work_label": "Subject",
       "company_label": "Company",
-      "primary_browse": "topics",
+      "primary_browse": "subjects",
       "secondary_browse": "productions"
     },
     "browse_entities": {
@@ -184178,9 +184186,7 @@
       ],
       "book_authors": [],
       "publishers": [],
-      "topics": [
-        "A Man of the Theatre: Findley as Playwright"
-      ],
+      "topics": [],
       "events": [],
       "networks": [],
       "companies": [
@@ -184206,7 +184212,7 @@
     "year": "2002",
     "publication": "National Post",
     "source_publication": "National Post",
-    "article_category": "Profile",
+    "article_category": "Obituary",
     "collections": [
       "The Stratford Collection",
       "The Canadian Collection",
@@ -343997,7 +344003,7 @@
     "year": "2010",
     "publication": "National Post",
     "source_publication": "National Post",
-    "article_category": "Opinion Piece",
+    "article_category": "Obituary",
     "collections": [
       "The Canadian Collection"
     ],
@@ -344085,7 +344091,6 @@
     "media": [],
     "correspondence": [],
     "word_count": 1033,
-    "topic": "Praise For The Year's Best Performances; And Remembering Goldie Semple",
     "subject_role_map": [
       {
         "person": "Goldie Semple",
@@ -344100,10 +344105,10 @@
     "subject_people": "Goldie Semple",
     "coordinate_points": [],
     "display_schema": {
-      "work_type": "topics",
-      "work_label": "Topic",
+      "work_type": "subjects",
+      "work_label": "Subject",
       "company_label": "Company",
-      "primary_browse": "topics",
+      "primary_browse": "subjects",
       "secondary_browse": "productions"
     },
     "browse_entities": {
@@ -344116,9 +344121,7 @@
       ],
       "book_authors": [],
       "publishers": [],
-      "topics": [
-        "Praise For The Year's Best Performances; And Remembering Goldie Semple"
-      ],
+      "topics": [],
       "events": [],
       "networks": [],
       "companies": [],
@@ -346891,7 +346894,7 @@
     "network_or_platform": "Academy of Motion Picture Arts and Sciences",
     "subject_role_map": [
       {
-        "person": "Steve Martin",
+        "person": "Alec Baldwin",
         "roles": [
           "performers"
         ],
@@ -346900,7 +346903,7 @@
         ]
       }
     ],
-    "subject_people": "Steve Martin",
+    "subject_people": "Alec Baldwin",
     "coordinate_points": [],
     "display_schema": {
       "work_type": "productions",
@@ -346915,7 +346918,7 @@
         "82nd Academy Awards"
       ],
       "subjects": [
-        "Steve Martin"
+        "Alec Baldwin"
       ],
       "book_authors": [],
       "publishers": [],
@@ -442358,7 +442361,7 @@
     "year": "2019",
     "publication": "",
     "source_publication": "Cushman Collected",
-    "article_category": "Profile",
+    "article_category": "Obituary",
     "collections": [
       "Current Collection",
       "The Shaw Collection",
