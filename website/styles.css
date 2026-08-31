@@ -2617,17 +2617,13 @@ h1 {
 }
 
 .observer-farewell-feature {
-  display: grid;
-  grid-template-columns: minmax(210px, 0.72fr) minmax(320px, 1.28fr);
-  gap: clamp(24px, 5vw, 64px);
-  align-items: center;
   margin: 28px 0 42px;
   border-block: 1px solid var(--rule);
   padding: clamp(24px, 4vw, 48px) 0;
 }
 
 .observer-farewell-copy {
-  max-width: 34rem;
+  max-width: 54rem;
 }
 
 .observer-farewell-eyebrow {
@@ -2648,11 +2644,26 @@ h1 {
   line-height: 0.98;
 }
 
-.observer-farewell-copy > p:last-child {
-  margin: 0;
+.observer-farewell-copy > p:last-of-type {
+  margin: 0 0 14px;
   color: var(--ink-muted);
   font-size: 16px;
   line-height: 1.55;
+}
+
+.observer-farewell-copy > a {
+  color: var(--blue-dark);
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.observer-farewell-content {
+  display: grid;
+  grid-template-columns: minmax(300px, 0.9fr) minmax(420px, 1.45fr);
+  gap: clamp(22px, 4vw, 48px);
+  align-items: start;
+  margin-top: 28px;
 }
 
 .observer-farewell-clipping {
@@ -2674,16 +2685,57 @@ h1 {
   line-height: 1.45;
 }
 
-@media (max-width: 720px) {
-  .observer-farewell-feature {
+.observer-farewell-notes {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px 18px;
+}
+
+.observer-farewell-note {
+  margin: 0;
+}
+
+.observer-farewell-note a {
+  display: block;
+  background: var(--cream);
+}
+
+.observer-farewell-note img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: contain;
+  border: 1px solid color-mix(in srgb, var(--ink) 14%, transparent);
+  background: #d7b579;
+}
+
+.observer-farewell-note figcaption {
+  display: grid;
+  gap: 3px;
+  margin-top: 8px;
+  font-family: var(--sans);
+  font-size: 12px;
+  line-height: 1.35;
+}
+
+.observer-farewell-note figcaption span {
+  color: var(--ink-muted);
+}
+
+@media (max-width: 920px) {
+  .observer-farewell-content {
     grid-template-columns: 1fr;
-    gap: 22px;
-    margin-bottom: 30px;
   }
+}
+
+@media (max-width: 720px) {
+  .observer-farewell-feature { margin-bottom: 30px; }
 
   .observer-farewell-copy h2 {
     font-size: 34px;
   }
+
+  .observer-farewell-notes { grid-template-columns: 1fr; }
 }
 
 .grouped-browse-section {
