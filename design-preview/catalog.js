@@ -1,0 +1,228 @@
+import {FIELDS, normalize, nameMatches, serialize, parse, articleForm, articleSubject} from './catalog-engine.js';
+export function createCatalog({state, els, h}) {
+  let extra = {}, indexCache = new Map(), textIndex = null, textPromise = null;
+  const node = (tag, text, className) => { const n = document.createElement(tag); if (text !== undefined) n.textContent = text; if (className) n.className = className; return n; };
+  const link = (label, href, cls) => { const a = node('a', label, cls); a.href = href; return a; };
+  const button = (label, fn, cls) => { const b = node('button', label, cls); b.type = 'button'; b.addEventListener('click', fn); return b; };
+  const values = () => ({...extra,q:state.query,type:state.type,collection:state.collection,group:state.shakespeareGroup,sort:state.sort,shown:state.visible > 36 ? state.visible : ''});
+  const href = () => serialize(values());
+  function setValues(v) {
+    extra = {...v}; state.query = v.q || ''; state.type = v.type || ''; state.collection = v.collection || ''; state.shakespeareGroup = v.group || ''; state.sort = v.sort || (state.query ? 'relevance' : 'newest'); state.visible = Math.max(36,Math.min(10000,Number(v.shown)||36));
+    els.searchInput.value=state.query; els.typeFilter.value=state.type; els.collectionFilter.value=state.collection;
+    document.querySelectorAll('[data-catalog-filter]').forEach(input => { input.value = v[input.dataset.catalogFilter] || ''; });
+    const check=document.querySelector('#searchArticleText'); if(check) check.checked=v.text==='1';
+  }
+  function tabs(active='articles',scope={}) {
+    const nav=node('nav',undefined,'catalog-tabs'); nav.setAttribute('aria-label','Catalog views');
+    [['Articles','#archive','articles'],['Works A–Z','#works','works'],['People A–Z','#people','people'],['Publications','#index:publications','publications'],['Places','#places','places']].forEach(([label,url,key])=>{const context={...scope};delete context.origin;delete context.shown;delete context.entity;delete context.entityType;delete context.indexScope;const a=link(label,serialize(context,url));if(key===active)a.setAttribute('aria-current','page');nav.append(a);});
+    return nav;
+  }
+  function focusHeading(root=els.indexContent) { const heading=root.querySelector('h1'); if(heading){heading.tabIndex=-1; heading.focus({preventScroll:true});} }
+  function openIndex(title, active) {
+    document.body.classList.add('index-open'); els.indexView.hidden=false;
+    const heading=node('h1',title); els.indexContent.replaceChildren(heading,tabs(active));
+    const back=els.indexView.querySelector(':scope > .back-link'); back.href='#archive';back.textContent='Back to catalog';
+    requestAnimationFrame(()=>{window.scrollTo(0,0);focusHeading();});
+  }
+  function matches(record,v=values(), omitQuery=false) {
+    if(v.collection && v.collection!==h.SHAKESPEARE_COLLECTION && !h.collectionNames(record).includes(v.collection))return false;
+    if(v.collection===h.SHAKESPEARE_COLLECTION && !h.isExplicitShakespeareRecord(record))return false;
+    if(v.group && v.collection===h.SHAKESPEARE_COLLECTION && h.shakespeareGroup(record)!==v.group)return false;
+    if(v.type && h.typeGroup(record).value!==v.type)return false;
+    if(v.from && (!record.year || Number(record.year)<Number(v.from)))return false;
+    if(v.to && (!record.year || Number(record.year)>Number(v.to)))return false;
+    if(v.publication && h.articlePublicationLabel(record)!==v.publication)return false;
+    if(v.subject && articleSubject(record.article_category)!==v.subject)return false;
+    if(v.form && articleForm(record.article_category)!==v.form)return false;
+    if(v.completeness && (h.isIncompleteArticle(record)?'partial':'complete')!==v.completeness)return false;
+    for(const [key,type] of [['company','companies'],['city','cities'],['venue','venues'],['person',v.role||'people']]) {
+      if(v[key] && !(key==='city'&&v.city==='__unspecified__') && !h.entityValues(record,type).some(value=>normalize(value)===normalize(v[key])))return false;
+    }
+    // A venue and city must belong to the same production/location, not merely the same multi-review article.
+    if(v.venue && v.city && !h.recordVenueCityPairs(record).some(pair=>normalize(pair.venue)===normalize(v.venue)&&normalize(pair.city)===normalize(v.city==='__unspecified__'?'':v.city)))return false;
+    if(v.entityType && v.entity && !h.entityValues(record,v.entityType).some(value=>h.entitySlug(value)===v.entity))return false;
+    if(v.indexScope){const filter=h.masterIndexFilter(v.indexScope);if(filter.predicate && !filter.predicate(record))return false;}
+    if(!omitQuery && v.q){
+      const metadata=h.recordMatchesQuery(record,v.q);
+      if(!metadata && !(v.text==='1' && normalize(textIndex?.[record.slug]).includes(normalize(v.q))))return false;
+    }
+    return true;
+  }
+  function renderChips() {
+    const chips=document.querySelector('#activeFilters'); if(!chips)return;chips.replaceChildren();
+    const v=values();
+    const labels={q:'Search',type:'Type',collection:'Collection',group:'Shakespeare',from:'From',to:'To',publication:'Publication',subject:'Subject',form:'Form',company:'Company',city:'City',venue:'Venue',person:'Person',role:'Role',completeness:'Source',entity:'Coverage',indexScope:'Work type',text:'Search article text'};
+    Object.entries(labels).forEach(([key,label])=>{
+      if(!v[key])return;
+      let value=v[key];if(value==='__unspecified__')value='Not recorded';if(key==='entity')value=h.entityMap(v.entityType).get(value)?.label||value;
+      if(key==='type')value=h.TYPE_GROUPS.find(x=>x.value===value)?.label||value;
+      if(key==='text')value='Included';
+      const b=button(`${label}: ${value} ×`,()=>{const next=values();delete next[key];if(key==='collection')delete next.group;if(key==='entity')delete next.entityType;delete next.shown;setValues(next);apply();history.replaceState(null,'',href());});b.setAttribute('aria-label',`Remove ${label}: ${value}`);chips.append(b);
+    });
+    if(chips.children.length)chips.append(button('Clear all',clear));
+    document.querySelector('#exactMatches')?.remove();
+    if(v.q && !v.entity){const exact=node('nav',undefined,'exact-matches');exact.id='exactMatches';exact.setAttribute('aria-label','Exact catalog entries');
+      for(const type of ['productions','books','people']){for(const e of h.entityMap(type).values()){if(normalize(e.label)===normalize(v.q))exact.append(link(`${e.label} — ${type==='people'?'person':'work'} · ${e.records.filter(r=>matches(r,{...v,q:''})).length} articles`,serialize({...v,q:'',entityType:type,entity:e.slug,shown:''})));}}
+      if(exact.childElementCount)chips.after(exact);
+    }
+  }
+  async function ensureText() {
+    if(textIndex)return;
+    if(!textPromise)textPromise=fetch(new URL('../site_export/data/search_text.json',import.meta.url)).then(r=>{if(!r.ok)throw Error('Text search unavailable');return r.json();}).then(data=>textIndex=data).catch(error=>{textPromise=null;throw error;});
+    return textPromise;
+  }
+  function apply({preserve=false}={}) {
+    state.hasActiveQuery=true;document.body.classList.add('search-open');els.archive.classList.add('is-expanded');
+    if(!preserve)state.visible=36;
+    if(extra.text==='1' && !textIndex){
+      els.archiveCount.textContent='Loading article text…';els.results.replaceChildren(node('p','Loading the optional article-text index. This is downloaded only when requested.'));
+      ensureText().then(()=>{if(extra.text==='1')apply({preserve:true});}).catch(()=>{els.results.replaceChildren(node('p','Article text could not load. Try again or turn off “Search article text” to use the catalog.'));});return;
+    }
+    state.filtered=h.sortRecords(state.records.filter(r=>matches(r)));
+    els.archive.querySelector(".catalog-tabs")?.replaceWith(tabs("articles",values()));
+    h.updateSortButtons();h.renderShakespeareNav();renderChips();render();
+  }
+  function render() {
+    if(!document.body.classList.contains('search-open')){els.results.replaceChildren();return;}
+    const total=state.filtered.length, shown=Math.min(state.visible,total);
+    els.archiveCount.classList.remove('is-searching');els.archiveCount.textContent=total ? `Showing 1–${shown.toLocaleString()} of ${total.toLocaleString()} articles`:'No matching articles';
+    const context={contextLabel:'catalog results',backHref:href(),records:state.filtered,query:state.query,titleFirst:true,visibleCount:state.visible};
+    const fragment=document.createDocumentFragment();
+    if(!total){const empty=node('div',undefined,'catalog-empty');empty.append(node('h2','No articles match these choices'),node('p',extra.text==='1'?'Try a shorter phrase or remove a filter.':'Search covers titles, works, credited people and places. Try fewer words, remove a filter, or include article text.'),button('Clear filters and browse all articles',clear));fragment.append(empty);}
+    state.filtered.slice(0,shown).forEach(record=>{
+      const card=h.safeResultCard(record,context);card.id='result-'+record.slug;
+      if(extra.text==='1' && state.query && !h.recordMatchesQuery(record,state.query)){
+        const source=textIndex[record.slug]||'', terms=state.query.trim(), pos=source.toLowerCase().indexOf(terms.toLowerCase());
+        const excerpt=node('span',`In article text: …${source.slice(Math.max(0,pos-65),Math.max(0,pos)+180).replace(/\s+/g,' ')}…`,'text-match');card.append(excerpt);
+      }
+      fragment.append(card);
+    });
+    if(shown<total)fragment.append(button(`Show next ${Math.min(36,total-shown)} articles (${(total-shown).toLocaleString()} remaining)`,()=>{const old=shown;state.visible+=36;history.replaceState(null,'',href());render();els.results.querySelectorAll('.result-card')[old]?.focus({preventScroll:true});},'load-more'));
+    els.results.replaceChildren(fragment);
+    if(state.pendingArchiveRestore){state.visible=Math.max(state.visible,state.pendingArchiveRestore.visibleCount||36,(state.pendingArchiveRestore.index||0)+1);h.restoreArchivePositionIfNeeded();}
+  }
+  function clear(){setValues({});apply();history.replaceState(null,'',href());els.searchInput.focus({preventScroll:true});}
+  function selectField(labelText,key,options,parent,emptyLabel='All') {
+    const label=node('label');label.append(node('span',labelText));const input=node('select');input.dataset.catalogFilter=key;input.append(new Option(emptyLabel,''));options.forEach(item=>input.append(new Option(typeof item==='string'?item:item[1],typeof item==='string'?item:item[0])));input.addEventListener('change',()=>{extra[key]=input.value;apply();history.replaceState(null,'',href());});label.append(input);parent.append(label);return input;
+  }
+  function install() {
+    els.archive.querySelector('h1').textContent='Catalog';els.searchInput.setAttribute('aria-label','Search titles, works, people and places');els.searchInput.placeholder='Title, work, person or place';
+    els.archive.querySelector('.archive-heading').after(tabs());
+    const scope=node('div',undefined,'search-scope');const label=node('label');const check=node('input');check.type='checkbox';check.id='searchArticleText';check.addEventListener('change',()=>{extra.text=check.checked?'1':'';apply();history.replaceState(null,'',href());});label.append(check,document.createTextNode(' Search article text'));scope.append(node('p','Search titles, works, credited people and places.'),label);els.archive.querySelector('.search-panel').append(scope);
+    const grid=node('div',undefined,'catalog-filter-grid');
+    for(const [labelText,key] of [['From year','from'],['To year','to']]){const label=node('label');label.append(node('span',labelText));const input=node('input');input.type='number';input.min='1963';input.max='2026';input.placeholder=key==='from'?'1963':'2026';input.dataset.catalogFilter=key;input.addEventListener('change',()=>{extra[key]=input.value;apply();history.replaceState(null,'',href());});label.append(input);grid.append(label);}
+    selectField('Publication','publication',[...new Set(state.records.map(h.articlePublicationLabel))].sort(),grid,'All publications');
+    selectField('Subject','subject',[...new Set(state.records.map(r=>articleSubject(r.article_category)))].sort(),grid,'All subjects');
+    selectField('Form','form',[...new Set(state.records.map(r=>articleForm(r.article_category)))].sort(),grid,'All forms');
+    els.filterControls.prepend(grid);
+    const more=node('details',undefined,'catalog-more');more.append(node('summary','More filters'));const advanced=node('div',undefined,'catalog-filter-grid');
+    const categoryLabel=els.typeFilter.parentElement;categoryLabel.querySelector('span').classList.remove('visually-hidden');categoryLabel.querySelector('span').textContent='Original category';els.typeFilter.setAttribute('aria-label','Original category');advanced.append(categoryLabel);
+    for(const [labelText,key,type] of [['Company','company','companies'],['City','city','cities'],['Venue','venue','venues'],['Person','person','people']]){
+      const label=node('label');label.append(node('span',labelText));const input=node('input');input.type='search';input.placeholder=`Enter exact ${labelText.toLowerCase()} name`;input.dataset.catalogFilter=key;input.setAttribute('list',`choices-${key}`);const list=node('datalist');list.id=`choices-${key}`;
+      let timer;input.addEventListener('input',()=>{clearTimeout(timer);timer=setTimeout(()=>{const entries=[...h.entityMap(type).values()].filter(e=>nameMatches(e.label,input.value)).slice(0,40);list.replaceChildren(...entries.map(e=>new Option(e.label)));},100);});input.addEventListener('change',()=>{extra[key]=input.value;apply();history.replaceState(null,'',href());});label.append(input,list);advanced.append(label);
+    }
+    selectField('Person’s role','role',h.MASTER_INDEX_PEOPLE_FILTERS.filter(f=>f.key!=='all-people').map(f=>[f.typeKeys[0],f.label]),advanced,'All roles');
+    selectField('Surviving source','completeness',[['partial','Incomplete surviving source'],['complete','No recorded source gaps']],advanced,'All sources');more.append(advanced);els.filterControls.append(more);
+    const chips=node('div',undefined,'active-filters');chips.id='activeFilters';chips.setAttribute('aria-label','Active filters');els.results.before(chips);
+    const shortcuts=node('nav',undefined,'catalog-discovery');shortcuts.setAttribute('aria-label','Explore the catalog');shortcuts.append(link('Map','#map'),link('Timeline','#timeline'),link('Guided explorer','#explore'),link('Correspondence','#correspondence'));els.archive.append(shortcuts);
+  }
+  function showCatalog(v) {
+    els.archive.hidden=false;
+    setValues(v);
+    history.replaceState(null,"",href());
+    state.pendingArchiveRestore=h.archiveRestoreForHash(href());
+    const restoring=Boolean(state.pendingArchiveRestore);
+    if(state.pendingArchiveRestore)state.visible=Math.max(state.visible,state.pendingArchiveRestore.visibleCount||36,(state.pendingArchiveRestore.index||0)+1);
+    els.archive.querySelector('.catalog-tabs').replaceWith(tabs('articles',values()));
+    apply({preserve:true});
+    const old=document.querySelector('#catalogOrigin');old?.remove();
+    if(v.origin && /^#(people|works|places|index:|master-index|map|timeline|explore)/.test(v.origin)) {const a=link('Back to '+(v.origin.startsWith('#people')?'people index':v.origin.startsWith('#works')?'works index':'browse view'),v.origin,'back-link');a.id='catalogOrigin';els.archive.prepend(a);}
+    if(v.entityType && v.entity){const a=link('See all coverage of this entry',serialize({entityType:v.entityType,entity:v.entity}),'scope-expand');els.results.before(a);}
+    if(!restoring)requestAnimationFrame(()=>{els.archive.scrollIntoView({block:'start'});focusHeading(els.archive);});
+  }
+  function indexPage(mode,params=new URLSearchParams(),type='') {
+    const people=mode==='people', works=mode==='works';
+    let filterKey=params.get('role')||params.get('kind')||(people?'all-people':'all-works');
+    const filters=people?h.MASTER_INDEX_PEOPLE_FILTERS:h.MASTER_INDEX_WORK_FILTERS;
+    if((people||works)&&!filters.some(f=>f.key===filterKey))filterKey=people?'all-people':'all-works';
+    const cacheKey=people||works?'master:'+filterKey:'entity:'+type;
+    if(!indexCache.has(cacheKey))indexCache.set(cacheKey,people||works?h.masterIndexEntries(h.masterIndexFilter(filterKey)):[...h.entityMap(type).values()].map(e=>({...e,typeKey:type})));
+    const scope=parse('#archive?'+params);delete scope.q;delete scope.role;delete scope.shown;delete scope.origin;delete scope.entity;delete scope.entityType;
+    let entries=type==='venues'?h.venueMapPoints().map(p=>({...p,label:p.label+(p.city?' — '+p.city:' — city not recorded'),venue:p.label,typeKey:'venues'})):indexCache.get(cacheKey), base=people?'#people':works?'#works':`#index:${type}`;
+    let query=params.get('q')||'',letter=params.get('letter')||'',order=params.get('order')||'alpha',shown=Math.max(100,Number(params.get('shown'))||100);
+    entries=entries.map(e=>({...e,records:e.records.filter(r=>matches(r,scope))})).filter(e=>e.records.length);
+    const title=people?'People A–Z':works?'Works A–Z':h.entityType(type)?.label||'Places';openIndex(title,people?'people':works?'works':type==='publications'?'publications':'places');
+    els.indexContent.querySelector('.catalog-tabs').replaceWith(tabs(people?'people':works?'works':type==='publications'?'publications':'places',scope));
+    if(Object.entries(scope).some(([key,value])=>value && key!=='sort')){const info=node('p',undefined,'index-scope');info.append(document.createTextNode('Within your selected catalog filters. '),link('Review filters',serialize(scope)),document.createTextNode(' · '),link('Show the full index',base));els.indexContent.append(info);}
+    els.indexContent.append(node('p',people?'Find a person by either given name or surname, then narrow by role.':works?'Find a work, then compare its productions by year, company and place.':'Choose an entry to browse its articles.','landing-intro'));
+    const controls=node('div',undefined,'index-controls');const label=node('label');label.append(node('span',people?'Find a person':'Find an entry'));const search=node('input');search.type='search';search.value=query;search.placeholder=people?'e.g. Plummer, Christopher':'Search this index';label.append(search);controls.append(label);
+    const updateUrl=()=>{const p=new URLSearchParams(serialize(scope).split('?')[1]||'');if(query)p.set('q',query);if(letter)p.set('letter',letter);if(order!=='alpha')p.set('order',order);if(people||works)p.set(people?'role':'kind',filterKey);if(shown>100)p.set('shown',String(shown));history.replaceState(null,'',base+(p.size?'?'+p:''));};
+    if(people||works){const field=node('label');field.append(node('span',people?'Role':'Kind of work'));const select=node('select');filters.forEach(f=>select.append(new Option(f.label,f.key)));select.value=filterKey;select.addEventListener('change',()=>{params.set(people?'role':'kind',select.value);params.set('q',query);params.delete('shown');history.replaceState(null,'',base+'?'+params);indexPage(mode,params,type);});field.append(select);controls.append(field);}
+    const sortLabel=node('label');sortLabel.append(node('span','Order'));const sort=node('select');sort.append(new Option('Browse A–Z','alpha'),new Option('Most covered','coverage'));sort.value=order;sort.addEventListener('change',()=>{order=sort.value;shown=100;updateUrl();draw();});sortLabel.append(sort);controls.append(sortLabel);
+    const alpha=node('nav',undefined,'index-alphabet');alpha.setAttribute('aria-label','Filter by first letter');['All',...'ABCDEFGHIJKLMNOPQRSTUVWXYZ','0–9'].forEach(l=>{const b=button(l,()=>{letter=l==='All'?'':l;shown=100;updateUrl();draw();});b.dataset.letter=l==='All'?'':l;alpha.append(b);});
+    const count=node('p',undefined,'index-count');count.setAttribute('aria-live','polite');const list=node('div',undefined,'catalog-index-list');const more=button('Show more entries',()=>{shown+=100;updateUrl();draw();});
+    function draw(){const found=entries.filter(e=>nameMatches(e.label,query)&&(!letter||(letter==='0–9'?/^\d/.test(h.indexSortText(e.label,e.typeKey)):h.indexSortText(e.label,e.typeKey).toUpperCase().startsWith(letter)))).sort((a,b)=>order==='coverage'?b.records.length-a.records.length||a.label.localeCompare(b.label):h.indexSortText(a.label,a.typeKey).localeCompare(h.indexSortText(b.label,b.typeKey)));
+      count.textContent=`Showing ${Math.min(shown,found.length).toLocaleString()} of ${found.length.toLocaleString()} ${people?'people':works?'works':'entries'}`;list.replaceChildren();
+      found.slice(0,shown).forEach(e=>{const entryScope={...scope,entityType:e.typeKey,entity:e.slug,origin:window.location.hash};if(e.venue){entryScope.venue=e.venue;entryScope.city=e.city||'__unspecified__';}if(works)entryScope.indexScope=filterKey;if(people&&filterKey!=='all-people'){entryScope.person=e.label;entryScope.role=e.typeKey;}const a=link('',serialize(entryScope));a.append(node('span',h.indexDisplayLabel(e.typeKey,e.label)),node('em',`${e.records.length.toLocaleString()} ${e.records.length===1?'article':'articles'}`));list.append(a);});
+      if(!found.length)list.append(node('p','No entries match. Try part of a name or choose All letters.'));more.hidden=found.length<=shown;
+      alpha.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.letter===letter)));
+    }
+    search.addEventListener('input',()=>{query=search.value;shown=100;updateUrl();draw();});els.indexContent.append(controls,alpha,count,list,more);updateUrl();draw();
+  }
+  function home(){
+    h.renderCurrentFeature();h.renderTiles('types');
+    const feature=els.currentFeature;feature.querySelectorAll('.current-feature-kicker').forEach(n=>n.textContent='Latest writing');
+    const lede=document.querySelector('#home .lede');lede.textContent=`Robert Cushman’s theatre and arts writing, 1963–2026. Explore ${state.records.length.toLocaleString()} articles from a lifetime of looking closely and writing clearly.`;
+    const paths=node('nav',undefined,'home-starts');paths.setAttribute('aria-label','Start exploring');[['Browse all articles','#archive'],['Find a work','#works'],['Find a person','#people'],['Browse collections','#section:collections']].forEach(([text,url])=>paths.append(link(text,url)));
+    const form=node('form',undefined,'home-search');form.setAttribute('role','search');const input=node('input');input.type='search';input.setAttribute('aria-label','Search the catalog');input.placeholder='Search titles, works, people and places';const submit=node('button','Search');submit.type='submit';form.append(input,submit);form.addEventListener('submit',event=>{event.preventDefault();window.location.hash=serialize({q:input.value});});
+    els.frontpageDirectory.replaceChildren(form,paths);
+    document.querySelector('#homeMap')?.setAttribute('hidden','');
+  }
+  function collections(){
+    openIndex('Collections','');els.indexContent.append(node('p','Collections are overlapping routes through the same archive. One article can appear in several collections; counts always refer to articles.','landing-intro'));
+    const descriptions={'The Shakespeare Collection':'Reviews of Shakespeare productions, critical essays and adaptations.','The Canadian Collection':'Writing about theatre and the arts in Canada.','UK Collection':'British theatre and arts writing, including the early Observer years.','The Stratford Collection':'Coverage of the Stratford Festival and its productions.','The Shaw Collection':'Coverage of the Shaw Festival and its productions.','Current Collection':'Writing published for Cushman Collected.'};
+    const list=node('div',undefined,'collection-cards');h.PUBLIC_COLLECTION_FILTERS.forEach(item=>{const name=typeof item==='string'?item:item.value;if(!name)return;const records=state.records.filter(r=>name===h.SHAKESPEARE_COLLECTION?h.isExplicitShakespeareRecord(r):h.collectionNames(r).includes(name));if(!records.length)return;const a=link('',serialize({collection:name}));a.append(node('h2',name.replace(/^The /,'')),node('p',descriptions[name]||'A curated route through related writing in the archive.'),node('strong',`${records.length.toLocaleString()} articles`));list.append(a);});els.indexContent.append(list);
+  }
+  function timeline(params){
+    openIndex('Timeline','');const years=[...new Set(state.records.map(r=>String(r.year||'')).filter(Boolean))].sort();let year=params.get('year')||years.at(-1);if(!years.includes(year))year=years.at(-1);
+    els.indexContent.append(node('p','Browse by publication year. Month-only dates retain their precision; undated writing is listed separately.','landing-intro'));
+    const controls=node('div',undefined,'timeline-year-controls');const select=node('select');select.setAttribute('aria-label','Publication year');years.forEach(y=>select.append(new Option(y,y)));select.value=year;
+    const result=node('div',undefined,'results');let shown=Math.max(36,Number(params.get('shown'))||36);
+    const draw=()=>{history.replaceState(null,'',`#timeline?year=${year}${shown>36?"&shown="+shown:""}`);select.value=year;slider.value=String(years.indexOf(year));slider.setAttribute('aria-valuetext',year);const records=h.sortRecordsChronologically(state.records.filter(r=>String(r.year)===year));result.replaceChildren(node('h2',`${year} · ${records.length} articles`),link('Search and filter this year',serialize({from:year,to:year,origin:window.location.hash})));const ctx={records,backHref:window.location.hash,contextLabel:year,titleFirst:true,visibleCount:shown};result.append(...records.slice(0,shown).map(r=>h.safeResultCard(r,ctx)));if(shown<records.length)result.append(button(`Show more (${records.length-shown} remaining)`,()=>{shown+=36;draw();},'load-more'));prev.disabled=year===years[0];next.disabled=year===years.at(-1);};
+    const move=step=>{year=years[Math.max(0,Math.min(years.length-1,years.indexOf(year)+step))];shown=36;draw();};const prev=button('Previous year',()=>move(-1)),next=button('Next year',()=>move(1));select.addEventListener('change',()=>{year=select.value;shown=36;draw();});controls.append(prev,select,next);
+    const slider=node('input');slider.type='range';slider.min='0';slider.max=String(years.length-1);slider.step='1';slider.setAttribute('aria-label','Choose publication year');slider.addEventListener('input',()=>{year=years[Number(slider.value)];shown=36;draw();});
+    els.indexContent.append(controls,slider,link('Browse undated writing',serialize({q:'You’re the Top'})),result);draw();
+  }
+  function explorer(params){
+    openIndex('Guided explorer','');els.indexContent.append(node('p','Choose any combination below. Every matching article is available in the catalog, and this path can be bookmarked.','landing-intro'));
+    let v=parse('#explore?'+params);const controls=node('div',undefined,'catalog-filter-grid');const count=node('p',undefined,'index-count');const all=link('View all matching articles','#archive','primary-action');const preview=node('div',undefined,'results');
+    const draw=()=>{const records=state.records.filter(r=>matches(r,v));history.replaceState(null,'',serialize(v,'#explore'));count.textContent=`${records.length.toLocaleString()} matching articles · showing ${Math.min(18,records.length)} below`;all.href=serialize({...v,origin:window.location.hash});all.textContent=`View all ${records.length.toLocaleString()} matching articles`;preview.replaceChildren(...h.sortRecords(records).slice(0,18).map(r=>h.safeResultCard(r,{records,backHref:window.location.hash,contextLabel:'guided explorer',titleFirst:true})));};
+    for(const [labelText,key,options] of [['Subject','subject',[...new Set(state.records.map(r=>articleSubject(r.article_category)))].sort()],['Collection','collection',h.PUBLIC_COLLECTION_FILTERS.map(x=>typeof x==='string'?x:x.value)],['Publication','publication',[...new Set(state.records.map(h.articlePublicationLabel))].sort()],['Year','from',[...new Set(state.records.map(r=>String(r.year||'')))].filter(Boolean).sort()]]){
+      const label=node('label');label.append(node('span',labelText));const select=node('select');select.append(new Option('All',''));options.filter(Boolean).forEach(x=>select.append(new Option(x,x)));select.value=v[key]||'';select.addEventListener('change',()=>{v[key]=select.value;if(key==='from')v.to=select.value;draw();});label.append(select);controls.append(label);
+    }
+    const search=node('input');search.type='search';search.placeholder='Work, person, company or city';search.setAttribute('aria-label','Search within the selected path');search.value=v.q||'';search.addEventListener('input',()=>{v.q=search.value;draw();});controls.append(search);els.indexContent.append(controls,count,all,preview);draw();
+  }
+  function unavailable(){openIndex('Page unavailable','');els.indexContent.append(node('p','This link does not match a page in the archive.'),link('Browse the catalog','#archive'));}
+  function route(hash) {
+    document.querySelectorAll('.observer-farewell-feature, .observer-farewell-section').forEach(n=>n.remove());
+    document.querySelectorAll('.scope-expand').forEach(n=>n.remove());document.querySelector('#catalogOrigin')?.remove();document.querySelector('#exactMatches')?.remove();
+    const [base,qs]=hash.split('?'),params=new URLSearchParams(qs||'');
+    if(base==='#archive'||base==='#search'){showCatalog(parse(hash));return true;}
+    if(base==='#home'){if(h.FEATURES.redesignedHome)home();else {els.archive.hidden=false;h.renderFrontpageDirectory();h.renderCurrentFeature();state.hasActiveQuery=false;els.results.replaceChildren();els.archiveCount.textContent=`${state.records.length.toLocaleString()} articles`;els.archive.classList.remove('is-expanded');}return true;}
+    if(base==='#people'||base==='#works'){indexPage(base.slice(1),params);return true;}
+    if(base==='#master-index'||base.startsWith('#master-index:')){const key=base.split(':')[1]||'plays',people=h.MASTER_INDEX_PEOPLE_FILTERS.some(f=>f.key===key);params.set(people?'role':'kind',key);indexPage(people?'people':'works',params);return true;}
+    if(base==='#places'){openIndex('Places','places');els.indexContent.append(node('p','Find a city or venue. Map locations may be approximate; use the lists for a complete keyboard-accessible route.','landing-intro'),link('Browse cities','#index:cities','primary-action'),link('Browse venues','#index:venues','primary-action'),link('Open the map','#map','primary-action'));return true;}
+    if(base.startsWith('#index:')){const type=base.split(':')[1];if(!h.entityType(type)){unavailable();return true;}if(type==='people'){indexPage('people',params);return true;}if(type==='productions'){indexPage('works',params);return true;}indexPage('entities',params,type);return true;}
+    if(base.startsWith('#entity:')){const [,type,slug]=base.split(':');if(!h.entityType(type)||!h.entityMap(type).has(slug)){unavailable();return true;}const v=parse(hash);showCatalog({...v,entityType:type,entity:slug});if(type==='publications'&&slug==='the-observer'){const feature=h.observerFarewellFeature?.();if(feature)els.results.before(feature);}return true;}
+    if(base==='#section:chronology'){timeline(params);return true;}
+    if(base==='#timeline'){timeline(params);return true;}
+    if(base==='#explore'){explorer(params);return true;}
+    if(base==='#section:collections'){collections();return true;}
+    if(base==='#section:current'||base==='#current'){showCatalog({collection:'Current Collection'});els.archive.querySelector('h1').textContent='Latest writing';return true;}
+    if(base.startsWith('#collection:')||base.startsWith('#browse-collection:')){const collection=h.collectionFromSlug(base.split(':')[1]);if(!collection)unavailable();else showCatalog({collection,group:params.get('group')||''});return true;}
+    if(base.startsWith('#browse-group:')){showCatalog({type:base.split(':')[1]});return true;}
+    if(base==='#section:browse'||base==='#section:indexes'||base.startsWith('#browse:')){showCatalog({});return true;}
+    return false;
+  }
+  return {install,route,apply,render,href,clear,values,matches,unavailable};
+}
