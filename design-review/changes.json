@@ -1,0 +1,327 @@
+{
+  "date": "10 September 2026",
+  "views": [
+    [
+      "home",
+      "Homepage",
+      "#home"
+    ],
+    [
+      "catalog",
+      "All articles",
+      "#archive"
+    ],
+    [
+      "search",
+      "Hamlet search",
+      "#archive?q=Hamlet&sort=oldest"
+    ],
+    [
+      "people",
+      "People: Plummer",
+      "#people?q=Plummer"
+    ],
+    [
+      "works",
+      "Works: Hamlet",
+      "#works?q=Hamlet"
+    ],
+    [
+      "collections",
+      "Collections",
+      "#section:collections"
+    ],
+    [
+      "current",
+      "Current / latest writing",
+      "#section:current"
+    ],
+    [
+      "browse",
+      "Browse landing",
+      "#section:browse"
+    ],
+    [
+      "indexes",
+      "Indexes landing",
+      "#section:indexes"
+    ],
+    [
+      "article",
+      "Article: Tom and Viv and Jumpers",
+      "#review:1985-05-01-tom-and-viv-and-jumpers"
+    ],
+    [
+      "about",
+      "Biography / About",
+      "#about"
+    ],
+    [
+      "contact",
+      "Subscribe / Contact",
+      "#subscribe"
+    ],
+    [
+      "explorer",
+      "Article Explorer",
+      "#explore"
+    ],
+    [
+      "timeline",
+      "Timeline: 1985",
+      "#timeline?year=1985"
+    ],
+    [
+      "map",
+      "Map and Toronto list",
+      "#map?q=Toronto&view=list"
+    ],
+    [
+      "letters",
+      "Correspondence",
+      "#correspondence"
+    ]
+  ],
+  "design": [
+    [
+      "D01",
+      "Desktop navigation",
+      "The earlier search icon and Current, Browse, Explore and About menus, including their dropdown links.",
+      "The simplified Catalog, Collections, Latest writing, About and labelled Search navigation.",
+      "home",
+      "Menu labels, grouping and search placement are restored; links still use the repaired routes."
+    ],
+    [
+      "D02",
+      "Phone navigation",
+      "The earlier grouped, expandable drawer menu.",
+      "A shorter flat list of primary links.",
+      "home",
+      "Menu opening, closing, Escape handling and accessible state remain working in both versions."
+    ],
+    [
+      "D03",
+      "Homepage introduction",
+      "The original longer introduction about Robert, with its large drop cap and left-aligned editorial layout.",
+      "A shorter centred introduction giving 1963–2026 coverage and the live article count.",
+      "home",
+      "The original “over forty years” wording is back for comparison; the catalog still contains writing from 1963 to 2026."
+    ],
+    [
+      "D04",
+      "Homepage search",
+      "The grey Search the Archive panel directly beneath the introduction.",
+      "A dedicated search-and-button row with four prominent starting links.",
+      "home",
+      "The original placement and appearance are back. The search itself retains the improved matching and filters."
+    ],
+    [
+      "D05",
+      "Homepage directories",
+      "The four earlier directories: Search & Browse, Works & People, Collections, and Explore, with detailed links and counts.",
+      "Four broad starting buttons: Browse all articles, Find a work, Find a person, and Browse collections.",
+      "home",
+      "The original Browse the Archive heading and directory content are restored. Counts reflect the corrected data."
+    ],
+    [
+      "D06",
+      "Featured writing",
+      "The larger original feature, before the directories, with its photograph, Latest current article label, Open Current Collection link and Newest sidebar.",
+      "A smaller feature below the starting links, labelled Latest writing. On phones the redesigned feature hides the photo and Newest sidebar.",
+      "home",
+      "The earlier size, ordering and image treatment return. Both versions show the same latest article."
+    ],
+    [
+      "D07",
+      "Homepage map",
+      "The Archive Map section and its Open full map link appear above the exploration cards.",
+      "The homepage map is hidden to shorten the page.",
+      "home",
+      "The map is back in its original position. Its resources load as it approaches the screen."
+    ],
+    [
+      "D08",
+      "Article result cards",
+      "Large editorial cards, bold headline treatment, stronger top rules and larger photographs. Unsearched lists can lead with the work or production; searches lead with the article headline.",
+      "Compact rows with smaller serif headlines, lighter separators, smaller thumbnails and article-first titles.",
+      "catalog",
+      "Pagination, match explanations, incomplete-source labels and result counts remain."
+    ],
+    [
+      "D09",
+      "Reading details",
+      "Production, cast and other metadata are expanded above the article text.",
+      "Metadata is initially collapsed behind an expandable details panel.",
+      "article",
+      "The original expanded presentation is restored. Jump to article text remains available."
+    ],
+    [
+      "D10",
+      "Current landing page",
+      "The earlier image-led Current gallery with its introductory text and large latest article card.",
+      "A filtered catalog of Latest writing.",
+      "current",
+      "The gallery is back; opening an article and returning now retains the Current context."
+    ],
+    [
+      "D11",
+      "Collections, Browse and Indexes landing pages",
+      "The original introductory text and card grids for Collections, Browse and Indexes.",
+      "New collection descriptions/cards; Browse and Indexes entry links lead directly into the shared catalog.",
+      "collections",
+      "These landing pages are restored. Searchable people/works indexes and scoped article results remain the improved versions."
+    ],
+    [
+      "D12",
+      "About page content",
+      "Biography heading and the earlier biography/photo layout.",
+      "About Robert and the archive heading, plus a new section explaining archive coverage, transcription, gaps and collection overlaps.",
+      "about",
+      "The additional archive explanation is removed from the main About page and remains available in the preview. Article-level source notes remain."
+    ],
+    [
+      "D13",
+      "Contact, newsletter and donation wording",
+      "Subscribe & Contact page, the earlier newsletter placeholder, Subscribe footer and Donate labels.",
+      "Contact-only page/footer and the longer Donate on the original site label.",
+      "contact",
+      "The earlier content and labels are restored. Newsletter signup is still explicitly described as unconnected; the existing contact and donation destinations are unchanged."
+    ],
+    [
+      "D14",
+      "Catalog and control styling",
+      "Search the Archive heading, earlier archive width/spacing, square controls, underlined fields and stronger black rules that fit the original visual style.",
+      "Catalog heading, more restrained archive spacing and the redesigned rounded/outlined fields, tabs and control treatment.",
+      "search",
+      "The controls themselves remain because they provide the retained navigation improvements."
+    ]
+  ],
+  "kept": [
+    [
+      "K01",
+      "Search and filtering",
+      "Titles, works, credited people and places remain searchable. Publication, year range, subject, form, collection and advanced company/place/person/role/source filters remain, with removable active-filter labels and clear empty states.",
+      "Visible usability improvement",
+      "search"
+    ],
+    [
+      "K02",
+      "Optional article-text search",
+      "Readers can choose to search article text. The separate text index is downloaded only when requested.",
+      "Visible usability improvement",
+      "catalog"
+    ],
+    [
+      "K03",
+      "Searchable people and works indexes",
+      "Given-name and surname matching, role/kind selection, A–Z filtering and most-covered ordering remain. Results load in groups of 100 instead of rendering every entry at once.",
+      "Visible usability improvement",
+      "people"
+    ],
+    [
+      "K04",
+      "Article return and browser Back",
+      "Query, filters, Shakespeare subgroup, sort order, loaded result count and browse origin remain in the URL/context. Returning from an article restores the result list and position. Direct article visits show an honest Browse more link.",
+      "Navigation repair",
+      "search"
+    ],
+    [
+      "K05",
+      "Complete, scoped results",
+      "The catalog starts with up to 36 articles and offers more. People/work counts follow the selected scope. Selected entries retain that scope, with an explicit option to expand to all coverage. Category and collection links retain the corrected shared result path.",
+      "Navigation repair",
+      "catalog"
+    ],
+    [
+      "K06",
+      "Guided Explorer",
+      "The revised functional Explorer remains: combinable selectors, a visible total, an 18-article preview and View all matching articles. Its selections can be bookmarked. The old branching widget has not been restored.",
+      "Visible usability improvement",
+      "explorer"
+    ],
+    [
+      "K07",
+      "Timeline",
+      "The working Chronology alias, year selector, previous/next-year controls and keyboard-operable slider remain. Year and loaded count are preserved. The old drag-only visual timeline has not been restored.",
+      "Visible usability improvement",
+      "timeline"
+    ],
+    [
+      "K08",
+      "Map filtering and place scope",
+      "Filtering actually hides non-matches. Search, List/Map and list choices, and layer controls remain outside the map. Same-named venues retain their city scope, including an explicit city-not-recorded value. A list provides an alternative to map interaction.",
+      "Visible usability improvement",
+      "map"
+    ],
+    [
+      "K09",
+      "Reading tools",
+      "Explicit Share, Cite, Print, Suggest a correction and Jump to article text remain. Safe emphasis and other supported Markdown formatting render correctly. These tools remain visible even though expanded metadata and older card styling have returned.",
+      "Visible usability improvement",
+      "article"
+    ],
+    [
+      "K10",
+      "Source transparency and transcripts",
+      "Incomplete surviving source notices, editorial gaps, date notes, correspondence links and the two source-checked March 1969 letter transcripts remain. Other letters retain their existing images/descriptions where no checked transcript exists.",
+      "Content/accessibility improvement",
+      "letters"
+    ],
+    [
+      "K11",
+      "Month-accurate dates",
+      "Tom and Viv and Jumpers is displayed as May 1985. The Impression of Impotence is displayed as March 1969 with the month explicitly identified as inferred. Normalized first-of-month dates are not presented as known publication days.",
+      "Metadata repair",
+      "article"
+    ],
+    [
+      "K12",
+      "Company names and categories",
+      "7:84 Company remains repaired. All 31 source categories have explicit filter mappings. Shakespeare consistently includes all 346 explicitly identified articles, including the 18 Thoughts & Context articles.",
+      "Metadata/navigation repair",
+      "catalog"
+    ],
+    [
+      "K13",
+      "Reliable exports",
+      "The metadata parser preserves colons inside entity names. Deterministic tie-breaking prevents subject inference changing unpredictably between builds.",
+      "Internal improvement",
+      ""
+    ],
+    [
+      "K14",
+      "Faster and bounded delivery",
+      "Compact catalog data, per-article detail loading, on-demand text search, deferred map assets, cached indexes and 110 derived thumbnails remain. The catalog payload is about 45% smaller than the full metadata export. Preservation images are unchanged.",
+      "Internal improvement",
+      ""
+    ],
+    [
+      "K15",
+      "Readable article URLs and discovery",
+      "All 3,206 articles retain readable HTML pages, individual titles/metadata, canonical URLs and sitemap entries. Existing article hash links and aliases continue to work. The custom unavailable-page handling remains.",
+      "Internal improvement",
+      "article"
+    ],
+    [
+      "K16",
+      "Accessibility and stale-page repairs",
+      "The hidden-element CSS repair, focus outlines, skip link, button state labels, usable phone controls and unknown-route recovery remain. Navigating to a bad route no longer leaves unrelated previous content on screen.",
+      "Internal/usability repair",
+      ""
+    ],
+    [
+      "K17",
+      "Legacy pages",
+      "The UK draft and CushBot retain explanatory links to the main archive and noindex notices. No older archival source or private material was newly published for this comparison.",
+      "Internal improvement",
+      ""
+    ],
+    [
+      "K18",
+      "Independent comparison navigation",
+      "The preview has its own article-return context and preview article links. Browsing it does not switch a reader into the main design. Both designs use the same corrected public archive data.",
+      "Comparison support",
+      ""
+    ]
+  ]
+}
