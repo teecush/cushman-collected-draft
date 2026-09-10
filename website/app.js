@@ -1,6 +1,6 @@
-import { createCatalog } from "./catalog.js";
-import { FEATURES } from "./features.js";
-const DATA_URL = new URL("../site_export/data/catalog.json?v=148", import.meta.url);
+import { createCatalog } from "./catalog.js?v=149";
+import { FEATURES } from "./features.js?v=149";
+const DATA_URL = new URL("../site_export/data/catalog.json?v=149", import.meta.url);
 const ALIASES_URL = new URL("../site_export/data/route_aliases.json?v=1", import.meta.url);
 const STANDALONE_CORRESPONDENCE_URL = new URL("../site_export/data/standalone_correspondence.json?v=4", import.meta.url);
 const CONTENT_ROOT = new URL("../site_export/content/reviews/", import.meta.url);
@@ -2250,6 +2250,7 @@ function renderCurrentLanding() {
     const link = document.createElement("a");
     link.className = `current-landing-card${index === 0 ? " is-latest" : ""}`;
     link.href = `#review:${record.slug}`;
+    link.addEventListener("click", event => storeArticleContext(event, record, {records, contextLabel: "Current Collection", backHref: "#section:current"}));
     const media = record.media?.[0];
     if (media?.local_path) {
       const img = document.createElement("img");
@@ -2461,7 +2462,7 @@ function renderCurrentFeature() {
   copy.className = "current-feature-copy";
   const kicker = document.createElement("span");
   kicker.className = "current-feature-kicker";
-  kicker.textContent = "Latest writing";
+  kicker.textContent = FEATURES.redesignedHome ? "Latest writing" : "Latest current article";
   const title = document.createElement("h2");
   title.textContent = current.title;
   const meta = document.createElement("p");
@@ -2473,7 +2474,7 @@ function renderCurrentFeature() {
   const currentLink = document.createElement("a");
   currentLink.className = "current-page-link";
   currentLink.href = "#section:current";
-  currentLink.textContent = "All writing for Cushman Collected";
+  currentLink.textContent = FEATURES.redesignedHome ? "All writing for Cushman Collected" : "Open Current Collection";
   copy.replaceChildren(kicker, title, meta, readLink, currentLink);
   const latest = document.createElement("aside");
   latest.className = "current-feature-latest";
@@ -3495,7 +3496,7 @@ function renderTimelineToolV2() {
 
 function renderAboutPage() {
   const title = document.createElement("h1");
-  title.textContent = "About Robert and the archive";
+  title.textContent = FEATURES.revisedEditorialCopy ? "About Robert and the archive" : "Biography";
   const page = document.createElement("div");
   page.className = "about-page";
   const image = document.createElement("figure");
@@ -3512,20 +3513,19 @@ function renderAboutPage() {
   `;
   const archive = document.createElement("section"); archive.className="about-archive";
   archive.innerHTML = `<h2>About the archive</h2><p>This family archive brings together Robert Cushman’s theatre and arts writing from 1963 to 2026. It is an evolving collection, rather than a complete bibliography. Collections overlap, and one article may discuss several productions.</p><p>Texts are transcribed from surviving sources. Editorial notes and bracketed gaps are separate from Robert’s writing. Articles marked “Incomplete surviving source” contain known gaps; missing language has not been reconstructed. Month-only and inferred dates are identified where recorded.</p><p>Letters, notes and working manuscripts provide additional context. Available transcriptions accompany the images; items without a verified transcription remain images with descriptions.</p><p><a href="#contact">Suggest a correction or contact the archive</a> · <a href="#critics-circle">Donor acknowledgements</a></p>`;
-  copy.append(archive);
+  if (FEATURES.revisedEditorialCopy) copy.append(archive);
   page.replaceChildren(image, copy);
   els.indexContent.replaceChildren(title, page);
 }
 
 function renderSubscribePage() {
   const title = document.createElement("h1");
-  title.textContent = "Contact";
+  title.textContent = FEATURES.revisedEditorialCopy ? "Contact" : "Subscribe & Contact";
   const page = document.createElement("div");
   page.className = "contact-page";
   page.innerHTML = `
     <section>
-      <h2>Contact the archive</h2>
-      <p>For questions, corrections, or information about the collection, contact the archive team.</p>
+      ${FEATURES.revisedEditorialCopy ? '<h2>Contact the archive</h2><p>For questions, corrections, or information about the collection, contact the archive team.</p>' : '<h2>Newsletter</h2><p>Newsletter sign-up is not yet connected. This page will be updated when subscriptions open.</p>'}
     </section>
     <section>
       <h2>Questions?</h2>
@@ -4300,7 +4300,7 @@ function cardDisplay(record, options = {}) {
   };
 }
 
-const ARTICLE_CONTEXT_KEY = "cushmanArticleContext";
+const ARTICLE_CONTEXT_KEY = "cushmanArticleContext:main";
 
 function currentArchiveContextLabel() {
   const parts = [];
@@ -5437,7 +5437,7 @@ function route() {
     if (active) link.setAttribute("aria-current", "page");
     else link.removeAttribute("aria-current");
   });
-  els.archive.querySelector("h1").textContent = "Catalog";
+  els.archive.querySelector("h1").textContent = FEATURES.modernCatalogPresentation ? "Catalog" : "Search the Archive";
   els.menuButton.setAttribute("aria-expanded", "false");
   document.querySelectorAll(".site-nav a, .drawer a").forEach(link => {
     const href = link.getAttribute("href");
@@ -5736,7 +5736,7 @@ els.searchInput.addEventListener("focus", () => {
 });
 
 els.searchInput.addEventListener("blur", () => {
-  if (!hasActiveFilters()) setArchiveExpanded(false);
+  if (!hasActiveFilters() && !document.body.classList.contains("search-open")) setArchiveExpanded(false);
 });
 
 els.collectionFilter.addEventListener("change", (event) => {
@@ -5783,7 +5783,7 @@ window.addEventListener("hashchange", () => {
 });
 document.querySelector(".skip-link").addEventListener("click",event=>{event.preventDefault();const main=document.querySelector("main");main.focus();main.scrollIntoView({block:"start",behavior:"auto"});});
 
-const catalog = createCatalog({state, els, h: { FEATURES, TYPE_GROUPS, PUBLIC_COLLECTION_FILTERS, SHAKESPEARE_COLLECTION, MASTER_INDEX_PEOPLE_FILTERS, MASTER_INDEX_WORK_FILTERS, collectionNames, isExplicitShakespeareRecord, shakespeareGroup, typeGroup, articlePublicationLabel, isIncompleteArticle, entityValues, recordVenueCityPairs, entitySlug, masterIndexFilter, masterIndexEntries, recordMatchesQuery, sortRecords, sortRecordsChronologically, updateSortButtons, renderShakespeareNav, safeResultCard, restoreArchivePositionIfNeeded, archiveRestoreForHash, entityMap, entityType, indexSortText, indexDisplayLabel, renderCurrentFeature, renderTiles, renderFrontpageDirectory, collectionFromSlug, observerFarewellFeature, venueMapPoints }});
+const catalog = createCatalog({state, els, h: { FEATURES, TYPE_GROUPS, PUBLIC_COLLECTION_FILTERS, SHAKESPEARE_COLLECTION, MASTER_INDEX_PEOPLE_FILTERS, MASTER_INDEX_WORK_FILTERS, collectionNames, isExplicitShakespeareRecord, shakespeareGroup, typeGroup, articlePublicationLabel, isIncompleteArticle, entityValues, recordVenueCityPairs, entitySlug, masterIndexFilter, masterIndexEntries, recordMatchesQuery, sortRecords, sortRecordsChronologically, updateSortButtons, renderShakespeareNav, safeResultCard, restoreArchivePositionIfNeeded, archiveRestoreForHash, entityMap, entityType, indexSortText, indexDisplayLabel, renderCurrentFeature, renderTiles, renderFrontpageDirectory, renderClassicHome, renderLandingPage, collectionFromSlug, observerFarewellFeature, venueMapPoints }});
 
 init().catch((error) => {
   els.archiveCount.textContent = "Content export unavailable";
@@ -5809,10 +5809,15 @@ function setupPresentation() {
     document.querySelector('#siteNavRight').innerHTML='<a href="#section:current">Latest writing</a><a href="#about">About</a><a href="#search" class="nav-search-label">Search</a>';
     els.drawer.innerHTML='<a href="#archive">Catalog</a><a href="#section:collections">Collections</a><a href="#section:current">Latest writing</a><a href="#about">About</a><a href="#search">Search</a><a href="#map">Map</a><a href="#timeline">Timeline</a><a href="#correspondence">Correspondence</a><a href="#contact">Contact</a><a href="#critics-circle">Critic’s Circle</a>';
   }
-  document.querySelectorAll('a[href="#subscribe"]').forEach(a=>{a.href='#contact';a.textContent='Contact';});
+  if (FEATURES.revisedEditorialCopy) {
+    document.querySelectorAll('a[href="#subscribe"]').forEach(a=>{a.href='#contact';a.textContent='Contact';});
+    const footer=document.querySelector('.site-footer section');
+    footer.querySelector('strong').textContent='Contact Cushman Collected.';
+    footer.querySelector('p').textContent='Questions, corrections and archive enquiries.';
+    document.querySelectorAll('a[href*="/checkout/donate"]').forEach(a=>a.textContent='Donate on the original site ↗');
+  }
   document.querySelectorAll('a[href="#section:chronology"]').forEach(a=>a.href='#timeline');
-  document.querySelectorAll('.frontpage-browse-heading h2').forEach(n=>n.textContent='Start exploring');
-  document.querySelectorAll('.current-feature-kicker').forEach(n=>n.textContent='Latest writing');
+  if (FEATURES.redesignedHome) document.querySelectorAll('.frontpage-browse-heading h2').forEach(n=>n.textContent='Start exploring');
 }
 
 let mapResourcesPromise;
@@ -5834,4 +5839,22 @@ function correspondenceTranscript(item) {
   const summary=document.createElement("summary");summary.textContent="Read transcript";details.append(summary);
   if(item.transcript_note){const note=document.createElement("p");note.className="transcript-note";note.textContent=item.transcript_note;details.append(note);}
   item.transcript.split(/\n{2,}/).forEach(block=>{const p=document.createElement("p");p.textContent=block;p.style.whiteSpace="pre-line";details.append(p);});return details;
+}
+
+// Recreate the original homepage only; the catalog engine keeps all fixes.
+let homeMapObserver;
+function renderClassicHome() {
+  document.querySelector('#homeMap').hidden = false;
+  renderFrontpageDirectory();
+  renderCurrentFeature();
+  renderTiles('types');
+  // Defer the original map until it approaches the viewport.
+  homeMapObserver?.disconnect();
+  homeMapObserver = new IntersectionObserver(async entries => {
+    if (!entries.some(entry => entry.isIntersecting)) return;
+    homeMapObserver.disconnect();
+    await loadMapResources();
+    if (!document.body.matches('.article-open,.index-open,.search-open,.map-open')) { renderHomeMap(); renderFrontpageDirectory(); }
+  }, {rootMargin: '250px'});
+  homeMapObserver.observe(els.homeMapCanvas);
 }

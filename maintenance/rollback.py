@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """Prepare a reversible site rollback. Never pushes or rewrites Git history."""
-import argparse, re, subprocess
+import argparse, hashlib, re, subprocess
 from pathlib import Path
 SITE=Path(__file__).resolve().parents[1]
-FEATURES=('simplifiedNavigation','compactResults','collapsedMetadata','redesignedHome')
+FEATURES=('simplifiedNavigation','compactResults','collapsedMetadata','redesignedHome','revisedEditorialCopy','modernBrowseLandings','modernCatalogPresentation')
 p=argparse.ArgumentParser(description=__doc__)
 p.add_argument('--feature',choices=FEATURES)
 p.add_argument('--value',choices=('on','off'))
@@ -15,7 +15,16 @@ if a.feature:
     text,count=re.subn(r'('+re.escape(a.feature)+r':\s*)(true|false)',lambda m:m[1]+('true' if a.value=='on' else 'false'),text)
     if count!=1:raise SystemExit('Feature configuration did not match; no changes written.')
     path.write_text(text)
-    print(f'{a.feature}: {a.value}. Review locally, then commit and push to publish.')
+    # Refresh the module and entry URLs so a published switch is not served stale.
+    app=SITE/'website/app.js';code=app.read_text()
+    feature_hash=hashlib.sha256(text.encode()).hexdigest()[:12]
+    code=re.sub(r'(?<=\./features\.js)\?v=[^"\']+', '?v='+feature_hash, code)
+    app.write_text(code)
+    index=SITE/'website/index.html'
+    app_hash=hashlib.sha256(code.encode()).hexdigest()[:12]
+    index.write_text(re.sub(r'(?<=\./app\.js)\?v=[^"\']+', '?v='+app_hash,index.read_text()))
+    subprocess.run(['python3',str(SITE/'maintenance/build_site.py')],check=True)
+    print(f'{a.feature}: {a.value}. Article pages rebuilt. Review locally, then commit and push to publish. The design-preview copy is unchanged.')
 elif a.restore:
     status=subprocess.check_output(['git','status','--porcelain'],cwd=SITE,text=True)
     if status.strip():raise SystemExit('Save or commit current local changes before restoring. Nothing changed.')

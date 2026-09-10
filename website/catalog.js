@@ -1,4 +1,4 @@
-import {FIELDS, normalize, nameMatches, serialize, parse, articleForm, articleSubject} from './catalog-engine.js';
+import {FIELDS, normalize, nameMatches, serialize, parse, articleForm, articleSubject} from './catalog-engine.js?v=149';
 export function createCatalog({state, els, h}) {
   let extra = {}, indexCache = new Map(), textIndex = null, textPromise = null;
   const node = (tag, text, className) => { const n = document.createElement(tag); if (text !== undefined) n.textContent = text; if (className) n.className = className; return n; };
@@ -86,7 +86,7 @@ export function createCatalog({state, els, h}) {
     if(!document.body.classList.contains('search-open')){els.results.replaceChildren();return;}
     const total=state.filtered.length, shown=Math.min(state.visible,total);
     els.archiveCount.classList.remove('is-searching');els.archiveCount.textContent=total ? `Showing 1–${shown.toLocaleString()} of ${total.toLocaleString()} articles`:'No matching articles';
-    const context={contextLabel:'catalog results',backHref:href(),records:state.filtered,query:state.query,titleFirst:true,visibleCount:state.visible};
+    const context={contextLabel:'catalog results',backHref:href(),records:state.filtered,query:state.query,titleFirst:h.FEATURES.compactResults || Boolean(state.query.trim()),visibleCount:state.visible};
     const fragment=document.createDocumentFragment();
     if(!total){const empty=node('div',undefined,'catalog-empty');empty.append(node('h2','No articles match these choices'),node('p',extra.text==='1'?'Try a shorter phrase or remove a filter.':'Search covers titles, works, credited people and places. Try fewer words, remove a filter, or include article text.'),button('Clear filters and browse all articles',clear));fragment.append(empty);}
     state.filtered.slice(0,shown).forEach(record=>{
@@ -106,7 +106,7 @@ export function createCatalog({state, els, h}) {
     const label=node('label');label.append(node('span',labelText));const input=node('select');input.dataset.catalogFilter=key;input.append(new Option(emptyLabel,''));options.forEach(item=>input.append(new Option(typeof item==='string'?item:item[1],typeof item==='string'?item:item[0])));input.addEventListener('change',()=>{extra[key]=input.value;apply();history.replaceState(null,'',href());});label.append(input);parent.append(label);return input;
   }
   function install() {
-    els.archive.querySelector('h1').textContent='Catalog';els.searchInput.setAttribute('aria-label','Search titles, works, people and places');els.searchInput.placeholder='Title, work, person or place';
+    els.archive.querySelector('h1').textContent=h.FEATURES.modernCatalogPresentation?'Catalog':'Search the Archive';els.searchInput.setAttribute('aria-label','Search titles, works, people and places');els.searchInput.placeholder='Title, work, person or place';
     els.archive.querySelector('.archive-heading').after(tabs());
     const scope=node('div',undefined,'search-scope');const label=node('label');const check=node('input');check.type='checkbox';check.id='searchArticleText';check.addEventListener('change',()=>{extra.text=check.checked?'1':'';apply();history.replaceState(null,'',href());});label.append(check,document.createTextNode(' Search article text'));scope.append(node('p','Search titles, works, credited people and places.'),label);els.archive.querySelector('.search-panel').append(scope);
     const grid=node('div',undefined,'catalog-filter-grid');
@@ -188,7 +188,7 @@ export function createCatalog({state, els, h}) {
     els.indexContent.append(node('p','Browse by publication year. Month-only dates retain their precision; undated writing is listed separately.','landing-intro'));
     const controls=node('div',undefined,'timeline-year-controls');const select=node('select');select.setAttribute('aria-label','Publication year');years.forEach(y=>select.append(new Option(y,y)));select.value=year;
     const result=node('div',undefined,'results');let shown=Math.max(36,Number(params.get('shown'))||36);
-    const draw=()=>{history.replaceState(null,'',`#timeline?year=${year}${shown>36?"&shown="+shown:""}`);select.value=year;slider.value=String(years.indexOf(year));slider.setAttribute('aria-valuetext',year);const records=h.sortRecordsChronologically(state.records.filter(r=>String(r.year)===year));result.replaceChildren(node('h2',`${year} · ${records.length} articles`),link('Search and filter this year',serialize({from:year,to:year,origin:window.location.hash})));const ctx={records,backHref:window.location.hash,contextLabel:year,titleFirst:true,visibleCount:shown};result.append(...records.slice(0,shown).map(r=>h.safeResultCard(r,ctx)));if(shown<records.length)result.append(button(`Show more (${records.length-shown} remaining)`,()=>{shown+=36;draw();},'load-more'));prev.disabled=year===years[0];next.disabled=year===years.at(-1);};
+    const draw=()=>{history.replaceState(null,'',`#timeline?year=${year}${shown>36?"&shown="+shown:""}`);select.value=year;slider.value=String(years.indexOf(year));slider.setAttribute('aria-valuetext',year);const records=h.sortRecordsChronologically(state.records.filter(r=>String(r.year)===year));result.replaceChildren(node('h2',`${year} · ${records.length} articles`),link('Search and filter this year',serialize({from:year,to:year,origin:window.location.hash})));const ctx={records,backHref:window.location.hash,contextLabel:year,titleFirst:h.FEATURES.compactResults,visibleCount:shown};result.append(...records.slice(0,shown).map(r=>h.safeResultCard(r,ctx)));if(shown<records.length)result.append(button(`Show more (${records.length-shown} remaining)`,()=>{shown+=36;draw();},'load-more'));prev.disabled=year===years[0];next.disabled=year===years.at(-1);};
     const move=step=>{year=years[Math.max(0,Math.min(years.length-1,years.indexOf(year)+step))];shown=36;draw();};const prev=button('Previous year',()=>move(-1)),next=button('Next year',()=>move(1));select.addEventListener('change',()=>{year=select.value;shown=36;draw();});controls.append(prev,select,next);
     const slider=node('input');slider.type='range';slider.min='0';slider.max=String(years.length-1);slider.step='1';slider.setAttribute('aria-label','Choose publication year');slider.addEventListener('input',()=>{year=years[Number(slider.value)];shown=36;draw();});
     els.indexContent.append(controls,slider,link('Browse undated writing',serialize({q:'You’re the Top'})),result);draw();
@@ -196,7 +196,7 @@ export function createCatalog({state, els, h}) {
   function explorer(params){
     openIndex('Guided explorer','');els.indexContent.append(node('p','Choose any combination below. Every matching article is available in the catalog, and this path can be bookmarked.','landing-intro'));
     let v=parse('#explore?'+params);const controls=node('div',undefined,'catalog-filter-grid');const count=node('p',undefined,'index-count');const all=link('View all matching articles','#archive','primary-action');const preview=node('div',undefined,'results');
-    const draw=()=>{const records=state.records.filter(r=>matches(r,v));history.replaceState(null,'',serialize(v,'#explore'));count.textContent=`${records.length.toLocaleString()} matching articles · showing ${Math.min(18,records.length)} below`;all.href=serialize({...v,origin:window.location.hash});all.textContent=`View all ${records.length.toLocaleString()} matching articles`;preview.replaceChildren(...h.sortRecords(records).slice(0,18).map(r=>h.safeResultCard(r,{records,backHref:window.location.hash,contextLabel:'guided explorer',titleFirst:true})));};
+    const draw=()=>{const records=state.records.filter(r=>matches(r,v));history.replaceState(null,'',serialize(v,'#explore'));count.textContent=`${records.length.toLocaleString()} matching articles · showing ${Math.min(18,records.length)} below`;all.href=serialize({...v,origin:window.location.hash});all.textContent=`View all ${records.length.toLocaleString()} matching articles`;preview.replaceChildren(...h.sortRecords(records).slice(0,18).map(r=>h.safeResultCard(r,{records,backHref:window.location.hash,contextLabel:'guided explorer',titleFirst:h.FEATURES.compactResults})));};
     for(const [labelText,key,options] of [['Subject','subject',[...new Set(state.records.map(r=>articleSubject(r.article_category)))].sort()],['Collection','collection',h.PUBLIC_COLLECTION_FILTERS.map(x=>typeof x==='string'?x:x.value)],['Publication','publication',[...new Set(state.records.map(h.articlePublicationLabel))].sort()],['Year','from',[...new Set(state.records.map(r=>String(r.year||'')))].filter(Boolean).sort()]]){
       const label=node('label');label.append(node('span',labelText));const select=node('select');select.append(new Option('All',''));options.filter(Boolean).forEach(x=>select.append(new Option(x,x)));select.value=v[key]||'';select.addEventListener('change',()=>{v[key]=select.value;if(key==='from')v.to=select.value;draw();});label.append(select);controls.append(label);
     }
@@ -208,7 +208,7 @@ export function createCatalog({state, els, h}) {
     document.querySelectorAll('.scope-expand').forEach(n=>n.remove());document.querySelector('#catalogOrigin')?.remove();document.querySelector('#exactMatches')?.remove();
     const [base,qs]=hash.split('?'),params=new URLSearchParams(qs||'');
     if(base==='#archive'||base==='#search'){showCatalog(parse(hash));return true;}
-    if(base==='#home'){if(h.FEATURES.redesignedHome)home();else {els.archive.hidden=false;h.renderFrontpageDirectory();h.renderCurrentFeature();state.hasActiveQuery=false;els.results.replaceChildren();els.archiveCount.textContent=`${state.records.length.toLocaleString()} articles`;els.archive.classList.remove('is-expanded');}return true;}
+    if(base==='#home'){if(h.FEATURES.redesignedHome)home();else {els.archive.hidden=false;setValues({});h.renderClassicHome();state.hasActiveQuery=false;els.results.replaceChildren();els.archiveCount.textContent=`${state.records.length.toLocaleString()} articles`;els.archive.classList.remove('is-expanded');}return true;}
     if(base==='#people'||base==='#works'){indexPage(base.slice(1),params);return true;}
     if(base==='#master-index'||base.startsWith('#master-index:')){const key=base.split(':')[1]||'plays',people=h.MASTER_INDEX_PEOPLE_FILTERS.some(f=>f.key===key);params.set(people?'role':'kind',key);indexPage(people?'people':'works',params);return true;}
     if(base==='#places'){openIndex('Places','places');els.indexContent.append(node('p','Find a city or venue. Map locations may be approximate; use the lists for a complete keyboard-accessible route.','landing-intro'),link('Browse cities','#index:cities','primary-action'),link('Browse venues','#index:venues','primary-action'),link('Open the map','#map','primary-action'));return true;}
@@ -217,6 +217,12 @@ export function createCatalog({state, els, h}) {
     if(base==='#section:chronology'){timeline(params);return true;}
     if(base==='#timeline'){timeline(params);return true;}
     if(base==='#explore'){explorer(params);return true;}
+    if(!h.FEATURES.modernBrowseLandings && ['#section:collections','#section:browse','#section:indexes','#section:current','#current'].includes(base)){
+      document.body.classList.add('index-open');els.indexView.hidden=false;
+      els.indexView.querySelector(':scope > .back-link').href='#home';els.indexView.querySelector(':scope > .back-link').textContent='Back to home';
+      h.renderLandingPage(base==='#current'?'current':base.split(':')[1]);
+      requestAnimationFrame(()=>{window.scrollTo(0,0);focusHeading();});return true;
+    }
     if(base==='#section:collections'){collections();return true;}
     if(base==='#section:current'||base==='#current'){showCatalog({collection:'Current Collection'});els.archive.querySelector('h1').textContent='Latest writing';return true;}
     if(base.startsWith('#collection:')||base.startsWith('#browse-collection:')){const collection=h.collectionFromSlug(base.split(':')[1]);if(!collection)unavailable();else showCatalog({collection,group:params.get('group')||''});return true;}
