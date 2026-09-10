@@ -2,17 +2,17 @@
   "export_dir": "/Users/openclaw/Codex Projects/Cushman CODEXted/site_export",
   "source_dir": "/Users/openclaw/Codex Projects/Cushman CODEXted/repaired_structural_v2",
   "counts": {
-    "total": 3466,
-    "publish": 3233,
-    "archive_only": 155,
+    "total": 3471,
+    "publish": 3239,
+    "archive_only": 154,
     "duplicate_variant": 77,
     "exclude_from_publication": 1
   },
-  "public_reviews": 3200,
-  "archive_records": 265,
+  "public_reviews": 3206,
+  "archive_records": 264,
   "excluded_records": 1,
   "map_points": 1739,
-  "chat_chunks": 20795,
+  "chat_chunks": 20844,
   "sample_public_record": {
     "slug": "1963-01-11-shades-of-freud",
     "route": "/reviews/1963-01-11-shades-of-freud/",
@@ -27,7 +27,9 @@
       "UK Collection"
     ],
     "publication_status": "publish",
+    "editorial_status": "done",
     "editorial_issue_type": "printed_byline_error_and_damaged_source",
+    "source_completeness": "",
     "canonical_file": "",
     "production_title": "The Winter's Tale",
     "company": "ADC",

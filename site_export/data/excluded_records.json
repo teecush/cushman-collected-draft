@@ -15,7 +15,9 @@
       "The Shakespeare Collection"
     ],
     "publication_status": "exclude_from_publication",
+    "editorial_status": "done",
     "editorial_issue_type": "non_robert_author",
+    "source_completeness": "",
     "canonical_file": "",
     "production_title": "",
     "company": "",

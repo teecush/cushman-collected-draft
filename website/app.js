@@ -1,8 +1,8 @@
 const DATA_URL = new URL("../site_export/data/public_reviews.json?v=118", import.meta.url);
 const ALIASES_URL = new URL("../site_export/data/route_aliases.json?v=1", import.meta.url);
-const STANDALONE_CORRESPONDENCE_URL = new URL("../site_export/data/standalone_correspondence.json?v=2", import.meta.url);
+const STANDALONE_CORRESPONDENCE_URL = new URL("../site_export/data/standalone_correspondence.json?v=3", import.meta.url);
 const CONTENT_ROOT = new URL("../site_export/content/reviews/", import.meta.url);
-const MEDIA_ASSET_VERSION = "trip5-20260823";
+const MEDIA_ASSET_VERSION = "working-manuscripts-20260830";
 const PAGE_SIZE = 36;
 const SHAKESPEARE_COLLECTION = "The Shakespeare Collection";
 const SHAKESPEARE_DERIVED_COLLECTIONS = ["Riffs on Shakespeare", "Thoughts on Shakespeare"];
@@ -2869,13 +2869,19 @@ function observerFarewellFeature() {
   copy.className = "observer-farewell-copy";
   const eyebrow = document.createElement("p");
   eyebrow.className = "observer-farewell-eyebrow";
-  eyebrow.textContent = "From the letters page";
+  eyebrow.textContent = "From the archive";
   const heading = document.createElement("h2");
   heading.id = "observer-farewell-title";
-  heading.textContent = "Critic without prejudice";
+  heading.textContent = "Farewell to The Observer";
   const description = document.createElement("p");
-  description.textContent = "A reader marks Robert Cushman’s departure from The Observer and the end of his tenure as the paper’s theatre critic.";
-  copy.append(eyebrow, heading, description);
+  description.textContent = "A published reader tribute and five letters and notes sent around the end of Robert Cushman’s regular tenure as the paper’s theatre critic.";
+  const archiveLink = document.createElement("a");
+  archiveLink.href = "#correspondence";
+  archiveLink.textContent = "See the complete correspondence archive";
+  copy.append(eyebrow, heading, description, archiveLink);
+
+  const content = document.createElement("div");
+  content.className = "observer-farewell-content";
 
   const figure = document.createElement("figure");
   figure.className = "observer-farewell-clipping";
@@ -2885,10 +2891,40 @@ function observerFarewellFeature() {
   image.loading = "eager";
   image.decoding = "async";
   const caption = document.createElement("figcaption");
-  caption.textContent = "Brian Orrell’s published letter, preserved with its portrait and succession note.";
+  caption.textContent = "“Critic without prejudice” — Brian Orrell’s published letter, preserved with its portrait and succession note.";
   figure.append(image, caption);
 
-  section.append(copy, figure);
+  const notes = document.createElement("div");
+  notes.className = "observer-farewell-notes";
+  const collection = state.standaloneCorrespondence.find((entry) => entry?.slug === "observer-farewell-correspondence");
+  asArray(collection?.items).forEach((item) => {
+    const src = correspondenceMediaUrl(item.media);
+    if (!src) return;
+    const card = document.createElement("figure");
+    card.className = "observer-farewell-note";
+    const link = document.createElement("a");
+    link.href = src;
+    link.target = "_blank";
+    link.rel = "noopener";
+    link.setAttribute("aria-label", `Open full-size document: ${item.media?.caption || item.sender || "farewell note"}`);
+    const noteImage = document.createElement("img");
+    noteImage.src = src;
+    noteImage.alt = item.media?.alt || item.media?.caption || "Farewell note";
+    noteImage.loading = "lazy";
+    noteImage.decoding = "async";
+    link.append(noteImage);
+    const noteCaption = document.createElement("figcaption");
+    const sender = document.createElement("strong");
+    sender.textContent = item.sender || "Correspondent";
+    const date = document.createElement("span");
+    date.textContent = item.date || "Undated";
+    noteCaption.append(sender, date);
+    card.append(link, noteCaption);
+    notes.append(card);
+  });
+
+  content.append(figure, notes);
+  section.append(copy, content);
   return section;
 }
 
@@ -4509,6 +4545,12 @@ function resultCard(record, context = {}) {
     note.textContent = `${correspondenceItems(record).length} correspondence item${correspondenceItems(record).length === 1 ? "" : "s"}`;
     copy.append(note);
   }
+  if (isIncompleteArticle(record)) {
+    const note = document.createElement("span");
+    note.className = "result-incomplete-line";
+    note.textContent = "Incomplete surviving source";
+    copy.append(note);
+  }
   copy.append(meta);
   card.append(copy);
   return card;
@@ -4516,6 +4558,26 @@ function resultCard(record, context = {}) {
 
 function stripFrontmatter(markdown) {
   return markdown.replace(/^---[\s\S]*?\n---\s*/, "").trim();
+}
+
+function isIncompleteArticle(record) {
+  const values = [
+    record?.source_completeness,
+    record?.editorial_status,
+    record?.editorial_issue_type,
+  ].map((value) => String(value || "").toLowerCase());
+  return values.some((value) => /incomplete|missing_(?:page|pages|portion|continuation|intervening)/.test(value));
+}
+
+function incompleteArticleNotice() {
+  const notice = document.createElement("aside");
+  notice.className = "article-incomplete-notice";
+  const label = document.createElement("strong");
+  label.textContent = "Incomplete surviving source";
+  const text = document.createElement("span");
+  text.textContent = " This transcription contains one or more gaps because portions of the surviving source are missing. Bracketed editorial notes mark every known break; no missing text has been reconstructed.";
+  notice.append(label, text);
+  return notice;
 }
 
 function publicArticleBody(markdown, record = null) {
@@ -4677,6 +4739,15 @@ function paragraphNodes(markdown, record) {
         index += 1;
       }
       nodes.push(figure);
+      continue;
+    }
+    const editorialMatch = block.match(/^\*(Editorial note:\s*[\s\S]*?)\*$/i);
+    const gapMatch = block.match(/^\*\[([\s\S]*?)\]\*$/);
+    if (editorialMatch || gapMatch) {
+      const note = document.createElement("aside");
+      note.className = editorialMatch ? "article-editorial-note" : "article-source-gap";
+      note.textContent = (editorialMatch?.[1] || gapMatch?.[1] || "").replace(/\s*\n\s*/g, " ");
+      nodes.push(note);
       continue;
     }
     const p = document.createElement("p");
@@ -4994,13 +5065,18 @@ function correspondenceMediaUrl(media) {
 function articleSourceMediaSection(record) {
   const items = asArray(record?.media).filter((item) => item?.display_full && item?.local_path);
   if (!items.length) return null;
+  const isManuscript = items.every((item) => item.media_type === "manuscript_page");
   const section = document.createElement("section");
-  section.className = "article-source-media";
+  section.className = `article-source-media${isManuscript ? " article-manuscript" : ""}`;
   section.id = "article-source-media";
   const heading = document.createElement("h2");
-  heading.textContent = items.length === 1 ? "Archival source image" : "Archival source images";
+  heading.textContent = isManuscript
+    ? "Working manuscript"
+    : items.length === 1 ? "Archival source image" : "Archival source images";
   const intro = document.createElement("p");
-  intro.textContent = "Select an image to open the full-size original photograph.";
+  intro.textContent = isManuscript
+    ? "These five typewritten pages preserve Robert Cushman’s handwritten revisions before publication. Select a page to inspect the original-resolution photograph."
+    : "Select an image to open the full-size original photograph.";
   const gallery = document.createElement("div");
   gallery.className = "article-source-media-gallery";
   items.forEach((item) => {
@@ -5013,7 +5089,8 @@ function articleSourceMediaSection(record) {
     link.setAttribute("aria-label", `Open full-size source image: ${item.caption || item.alt || record.title}`);
     const image = document.createElement("img");
     image.loading = "lazy";
-    image.src = src;
+    image.decoding = "async";
+    image.src = item.thumbnail_path ? mediaAssetUrl(item.thumbnail_path) : src;
     image.alt = item.alt || item.caption || `${record.title} source image`;
     link.append(image);
     figure.append(link);
@@ -5361,6 +5438,7 @@ async function showReview(slug) {
   articleParts.push(date, title);
   if (titleParts.deck) articleParts.push(deck);
   articleParts.push(meta);
+  if (isIncompleteArticle(record)) articleParts.push(incompleteArticleNotice());
   articleParts.push(articleTools(record));
   if (hasCorrespondence(record)) {
     const correspondenceLink = document.createElement("a");
