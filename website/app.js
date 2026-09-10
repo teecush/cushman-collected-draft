@@ -1,6 +1,8 @@
-const DATA_URL = new URL("../site_export/data/public_reviews.json?v=118", import.meta.url);
+import { createCatalog } from "./catalog.js";
+import { FEATURES } from "./features.js";
+const DATA_URL = new URL("../site_export/data/catalog.json?v=148", import.meta.url);
 const ALIASES_URL = new URL("../site_export/data/route_aliases.json?v=1", import.meta.url);
-const STANDALONE_CORRESPONDENCE_URL = new URL("../site_export/data/standalone_correspondence.json?v=3", import.meta.url);
+const STANDALONE_CORRESPONDENCE_URL = new URL("../site_export/data/standalone_correspondence.json?v=4", import.meta.url);
 const CONTENT_ROOT = new URL("../site_export/content/reviews/", import.meta.url);
 const MEDIA_ASSET_VERSION = "site-audit-20260909";
 const PAGE_SIZE = 36;
@@ -417,6 +419,7 @@ const VENUE_COORDINATES = new Map(Object.entries({
 });
 
 const TYPE_GROUPS = [
+  { value: "interviews", label: "Interviews", categories: ["Interview", "Theatre Interview", "Music Interview", "Interview / Profile"] },
   {
     value: "theatre",
     label: "Theatre Reviews",
@@ -430,12 +433,12 @@ const TYPE_GROUPS = [
   {
     value: "television",
     label: "Television",
-    categories: ["Television Review"],
+    categories: ["Television Review", "Television Feature"],
   },
   {
     value: "music-concerts",
     label: "Music & Concerts",
-    categories: ["Music Review", "Concert Review"],
+    categories: ["Music Review", "Concert Review", "Music Criticism", "Music Essay"],
   },
   {
     value: "book-reviews",
@@ -445,12 +448,12 @@ const TYPE_GROUPS = [
   {
     value: "essays-opinion",
     label: "Essays & Opinion",
-    categories: ["Opinion Piece"],
+    categories: ["Opinion Piece", "Theatre Essay", "Theatre Criticism"],
   },
   {
     value: "year-in-review",
     label: "Year in Review",
-    categories: ["Year in Review"],
+    categories: ["Year in Review", "Year-End Survey", "Musical Theatre Survey"],
   },
   {
     value: "profiles",
@@ -759,6 +762,13 @@ function hasActiveFilters() {
 }
 
 function formatDate(value) {
+  if (value && typeof value === "object") {
+    const record = value;
+    if (!record.date) return "Undated";
+    if (record.date_precision === "year") return String(record.year || record.date.slice(0, 4));
+    if (record.date_precision === "month") return new Date(`${record.date}T00:00:00`).toLocaleDateString("en-US", { month: "long", year: "numeric" });
+    value = record.date;
+  }
   if (!value) return "";
   const date = new Date(`${value}T00:00:00`);
   if (Number.isNaN(date.valueOf())) return value;
@@ -995,22 +1005,16 @@ function searchRelevanceScore(record, rawQuery) {
 }
 
 function sortRecords(records) {
-  const sorted = [...records];
-  const query = state.query.trim();
-  if (state.sort === "relevance" && query) {
-    return sorted.sort((a, b) =>
-      searchRelevanceScore(b, query) - searchRelevanceScore(a, query) ||
-      String(b.date).localeCompare(String(a.date)) ||
-      String(a.title || "").localeCompare(String(b.title || ""))
-    );
-  }
-  if (state.sort === "oldest") {
-    return sorted.sort((a, b) => String(a.date).localeCompare(String(b.date)));
-  }
-  if (state.sort === "title") {
-    return sorted.sort((a, b) => String(a.title || "").localeCompare(String(b.title || "")));
-  }
-  return sorted.sort((a, b) => String(b.date).localeCompare(String(a.date)));
+  const sorted=[...records], query=state.query.trim();
+  const byDate=(a,b,direction=1)=>{
+    if(!a.date && !b.date)return String(a.title||"").localeCompare(String(b.title||""));
+    if(!a.date)return 1;
+    if(!b.date)return -1;
+    return direction * String(a.date).localeCompare(String(b.date));
+  };
+  if(state.sort==="title")return sorted.sort((a,b)=>String(a.title||"").localeCompare(String(b.title||"")));
+  if(state.sort==="relevance" && query)return sorted.sort((a,b)=>searchRelevanceScore(b,query)-searchRelevanceScore(a,query)||byDate(a,b,-1)||String(a.title||"").localeCompare(String(b.title||"")));
+  return sorted.sort((a,b)=>byDate(a,b,state.sort==="oldest"?1:-1));
 }
 
 function sortRecordsChronologically(records) {
@@ -1143,7 +1147,7 @@ function displaySchema(record) {
 }
 
 function collectionCount(name) {
-  return state.records.filter((record) => collectionNames(record).includes(name)).length;
+  return state.records.filter((record) => collectionNames(record).includes(name) && (name !== SHAKESPEARE_COLLECTION || isExplicitShakespeareRecord(record))).length;
 }
 
 function countBadgeText(count) {
@@ -1305,7 +1309,9 @@ function recordCoordinatePoints(record) {
   }).filter(Boolean);
 }
 
+const entityIndexCache = new Map();
 function entityMap(type) {
+  if (entityIndexCache.has(type)) return entityIndexCache.get(type);
   const map = new Map();
   state.records.forEach((record) => {
     const labels = new Map();
@@ -1321,6 +1327,7 @@ function entityMap(type) {
       map.set(slug, existing);
     });
   });
+  entityIndexCache.set(type, map);
   return map;
 }
 
@@ -1473,7 +1480,7 @@ function indexDisplayLabel(typeKey, label) {
 
 function typeGroup(record) {
   return TYPE_BY_CATEGORY.get(record.article_category) || {
-    value: "other",
+    value: `category-${entitySlug(record.article_category)}`,
     label: record.article_category || "Other",
     categories: [record.article_category || ""],
   };
@@ -1709,47 +1716,9 @@ function boundedTermCount(text, term, maxCount) {
   return count;
 }
 
-function applyFilters() {
-  const query = state.query.trim();
-  state.hasActiveQuery = hasActiveFilters();
-  syncArchivePageClass();
-  setArchiveExpanded(state.hasActiveQuery || document.activeElement === els.searchInput);
-  state.filtered = state.records.filter((record) => {
-    if (state.collection && !collectionNames(record).includes(state.collection)) return false;
-    if (state.collection === SHAKESPEARE_COLLECTION && !isExplicitShakespeareRecord(record)) return false;
-    if (state.type && typeGroup(record).value !== state.type) return false;
-    if (state.collection === SHAKESPEARE_COLLECTION && state.shakespeareGroup) {
-      if (shakespeareGroup(record) !== state.shakespeareGroup) return false;
-    }
-    if (query) {
-      const metadataMatch = recordMatchesQuery(record, query);
-      if (!metadataMatch) return false;
-    }
-    return true;
-  });
-  state.filtered = sortRecords(state.filtered);
-  updateSortButtons();
-  renderShakespeareNav();
-  if (state.pendingArchiveRestore) {
-    const restoreIndex = state.pendingArchiveRestore.slug
-      ? state.filtered.findIndex((record) => record.slug === state.pendingArchiveRestore.slug)
-      : state.pendingArchiveRestore.index;
-    state.visible = Math.max(PAGE_SIZE, state.pendingArchiveRestore.visibleCount || PAGE_SIZE, restoreIndex + 1);
-  } else {
-    state.visible = PAGE_SIZE;
-  }
-  renderResults();
-}
+function applyFilters() { catalog.apply(); }
 
-function archiveStateHref() {
-  const params = new URLSearchParams();
-  if (state.query.trim()) params.set("q", state.query.trim());
-  if (state.type) params.set("type", state.type);
-  if (state.collection) params.set("collection", state.collection);
-  if (state.sort && state.sort !== "relevance") params.set("sort", state.sort);
-  const query = params.toString();
-  return `#archive${query ? `?${query}` : ""}`;
-}
+function archiveStateHref() { return catalog.href(); }
 
 function syncArchiveUrl() {
   history.replaceState(null, "", archiveStateHref());
@@ -1768,6 +1737,7 @@ function scheduleFilterUpdate({ updateUrl = true } = {}) {
 function updateSortButtons() {
   els.sortButtons.forEach((button) => {
     button.classList.toggle("is-active", button.dataset.sort === state.sort);
+    button.setAttribute("aria-pressed", String(button.dataset.sort === state.sort));
   });
   const type = TYPE_GROUPS.find((group) => group.value === state.type)?.label || "All types";
   const collection = state.collection ? state.collection.replace(/^The\s+/, "") : "All collections";
@@ -1800,7 +1770,7 @@ function resetArchiveControls() {
 }
 
 function syncArchivePageClass() {
-  const hash = window.location.hash || "#home";
+  const hash = window.location.hash || (document.documentElement.dataset.articleSlug ? `#review:${document.documentElement.dataset.articleSlug}` : "#home");
   const isArchiveRoute =
     hash.startsWith("#archive") || hash.startsWith("#collection:") || hash === "#search";
   document.body.classList.toggle("search-open", state.hasActiveQuery || isArchiveRoute);
@@ -1865,12 +1835,14 @@ function renderShakespeareNav() {
     const button = document.createElement("button");
     button.type = "button";
     button.dataset.shakespeareGroup = group.value;
+    button.setAttribute("aria-pressed", String(group.value === state.shakespeareGroup));
     button.className = group.value === state.shakespeareGroup ? "is-active" : "";
     const groupCount = shakespeareGroupCount(group.value);
     button.innerHTML = `<strong>${group.label}</strong>${groupCount > 1 ? `<span>${groupCount.toLocaleString()} articles</span>` : ""}<em>${group.description}</em>`;
     button.addEventListener("click", () => {
       state.shakespeareGroup = group.value;
       applyFilters();
+      syncArchiveUrl();
     });
     return button;
   });
@@ -2288,7 +2260,7 @@ function renderCurrentLanding() {
     }
     const copy = document.createElement("div");
     const date = document.createElement("span");
-    date.textContent = formatDate(record.date);
+    date.textContent = formatDate(record);
     const heading = document.createElement("strong");
     heading.textContent = record.title;
     const meta = document.createElement("p");
@@ -2489,7 +2461,7 @@ function renderCurrentFeature() {
   copy.className = "current-feature-copy";
   const kicker = document.createElement("span");
   kicker.className = "current-feature-kicker";
-  kicker.textContent = "Latest current article";
+  kicker.textContent = "Latest writing";
   const title = document.createElement("h2");
   title.textContent = current.title;
   const meta = document.createElement("p");
@@ -2501,7 +2473,7 @@ function renderCurrentFeature() {
   const currentLink = document.createElement("a");
   currentLink.className = "current-page-link";
   currentLink.href = "#section:current";
-  currentLink.textContent = "Open Current Collection";
+  currentLink.textContent = "All writing for Cushman Collected";
   copy.replaceChildren(kicker, title, meta, readLink, currentLink);
   const latest = document.createElement("aside");
   latest.className = "current-feature-latest";
@@ -2511,7 +2483,7 @@ function renderCurrentFeature() {
   currentRecords.slice(0, 5).forEach((record) => {
     const item = document.createElement("a");
     item.href = `#review:${record.slug}`;
-    item.innerHTML = `<strong>${record.title}</strong><em>${formatDate(record.date)}</em>`;
+    item.innerHTML = `<strong>${record.title}</strong><em>${formatDate(record)}</em>`;
     latest.append(item);
   });
   card.append(copy, latest);
@@ -3290,7 +3262,7 @@ function renderExploreToolV2() {
       if (media?.local_path) {
         link.className = "has-thumb";
         const thumb = document.createElement("img");
-        thumb.src = mediaAssetUrl(media.local_path);
+        thumb.src = mediaAssetUrl(media.thumbnail_path || media.local_path);
         thumb.alt = media.alt || media.caption || record.title || "";
         thumb.loading = "lazy";
         link.append(thumb);
@@ -3453,7 +3425,7 @@ function renderTimelineToolV2() {
       const link = document.createElement("a");
       link.href = `#review:${record.slug}`;
       const split = headlineParts(record.title);
-      const dateParts = timelineDateParts(record.date);
+      const dateParts = ({primary: formatDate(record), secondary: ""});
       const date = document.createElement("span");
       date.className = "timeline-date";
       date.innerHTML = `<strong>${dateParts.primary || record.year || ""}</strong>${dateParts.secondary ? `<span>${dateParts.secondary}</span>` : ""}`;
@@ -3462,7 +3434,7 @@ function renderTimelineToolV2() {
       if (media?.local_path) {
         link.className = "has-thumb";
         const thumb = document.createElement("img");
-        thumb.src = mediaAssetUrl(media.local_path);
+        thumb.src = mediaAssetUrl(media.thumbnail_path || media.local_path);
         thumb.alt = media.alt || media.caption || record.title || "";
         thumb.loading = "lazy";
         link.append(thumb);
@@ -3523,7 +3495,7 @@ function renderTimelineToolV2() {
 
 function renderAboutPage() {
   const title = document.createElement("h1");
-  title.textContent = "Biography";
+  title.textContent = "About Robert and the archive";
   const page = document.createElement("div");
   page.className = "about-page";
   const image = document.createElement("figure");
@@ -3538,19 +3510,22 @@ function renderAboutPage() {
     <p>He has also been a prolific broadcaster, especially on musical theatre and American popular song; popular series include <em>Book, Music and Lyrics</em> (BBC) and <em>Songbook</em> (CBC). His book <em>Fifty Seasons at Stratford</em>, a history of the Stratford Festival, was published in 2002; and he is a record eight-time winner of the Nathan Cohen Award for Excellence in Theatre Criticism.</p>
     <p>He is married, with three children, and lives in Toronto.</p>
   `;
+  const archive = document.createElement("section"); archive.className="about-archive";
+  archive.innerHTML = `<h2>About the archive</h2><p>This family archive brings together Robert Cushman’s theatre and arts writing from 1963 to 2026. It is an evolving collection, rather than a complete bibliography. Collections overlap, and one article may discuss several productions.</p><p>Texts are transcribed from surviving sources. Editorial notes and bracketed gaps are separate from Robert’s writing. Articles marked “Incomplete surviving source” contain known gaps; missing language has not been reconstructed. Month-only and inferred dates are identified where recorded.</p><p>Letters, notes and working manuscripts provide additional context. Available transcriptions accompany the images; items without a verified transcription remain images with descriptions.</p><p><a href="#contact">Suggest a correction or contact the archive</a> · <a href="#critics-circle">Donor acknowledgements</a></p>`;
+  copy.append(archive);
   page.replaceChildren(image, copy);
   els.indexContent.replaceChildren(title, page);
 }
 
 function renderSubscribePage() {
   const title = document.createElement("h1");
-  title.textContent = "Subscribe & Contact";
+  title.textContent = "Contact";
   const page = document.createElement("div");
   page.className = "contact-page";
   page.innerHTML = `
     <section>
-      <h2>Newsletter</h2>
-      <p>Newsletter sign-up is not yet connected. This page will be updated when subscriptions open.</p>
+      <h2>Contact the archive</h2>
+      <p>For questions, corrections, or information about the collection, contact the archive team.</p>
     </section>
     <section>
       <h2>Questions?</h2>
@@ -3602,7 +3577,10 @@ function clipWords(text, limit) {
   return `${words.slice(0, limit).join(" ")}...`;
 }
 
-function renderMapView() {
+async function renderMapView() {
+  const mapHash=window.location.hash;
+  await loadMapResources();
+  if(window.location.hash!==mapHash)return;
   const points = cityMapPoints();
   const venues = venueMapPoints();
   const title = document.createElement("h1");
@@ -3640,7 +3618,7 @@ function renderMapView() {
   venues.forEach((point) => {
     const link = document.createElement("a");
     link.dataset.mapLabel = `${point.label} ${point.city || ""} venue`;
-    link.href = `#entity:venues:${point.slug}`;
+    link.href = `#archive?venue=${encodeURIComponent(point.label)}&city=${encodeURIComponent(point.city || "__unspecified__")}&origin=${encodeURIComponent(window.location.hash)}`;
     link.innerHTML = `<span>${point.label}${point.city ? `<small>${point.city}</small>` : ""}</span><em>${countBadgeText(point.count)}</em>`;
     venueLinks.append(link);
   });
@@ -3648,14 +3626,28 @@ function renderMapView() {
   hint.className = "map-hint";
   hint.textContent = "Use the layer controls to focus cities, venues, or approximate venue points.";
   list.replaceChildren(listTitle, links, venueTitle, hint, venueLinks);
+  const params=new URLSearchParams(window.location.hash.split("?")[1]||"");
+  const toolbar=document.createElement("div");toolbar.className="map-toolbar";
+  const search=document.createElement("input");search.type="search";search.placeholder="Search cities and venues";search.setAttribute("aria-label","Search cities and venues");search.value=params.get("q")||"";
+  const countLabel=document.createElement("p");countLabel.className="map-filter-count";countLabel.setAttribute("aria-live","polite");
+  const listButton=document.createElement("button"),mapButton=document.createElement("button");listButton.type=mapButton.type="button";listButton.textContent="List";mapButton.textContent="Map and list";
+  let listOnly=params.get("view")==="list";
+  const sync=()=>{const p=new URLSearchParams();if(search.value)p.set("q",search.value);if(listOnly)p.set("view","list");history.replaceState(null,"","#map"+(p.size?"?"+p:""));shell.classList.toggle("map-list-only",listOnly);listButton.setAttribute("aria-pressed",String(listOnly));mapButton.setAttribute("aria-pressed",String(!listOnly));};
+  listButton.addEventListener("click",()=>{listOnly=true;sync();});mapButton.addEventListener("click",()=>{listOnly=false;sync();window.dispatchEvent(new Event("resize"));});
+  toolbar.append(search,listButton,mapButton);
   const filterMapList = (query) => {
     list.querySelectorAll("a").forEach((link) => {
       link.hidden = query && !link.dataset.mapLabel.toLowerCase().includes(query);
     });
-    if (state.fullMap?.focus) state.fullMap.focus(query);
+    const visible=[...list.querySelectorAll("a")].filter(a=>!a.hidden).length;
+    countLabel.textContent=`${visible} matching places and venues`;
+    if (state.fullMap?.focus && query) state.fullMap.focus(query);
   };
   shell.replaceChildren(map, list);
-  els.mapContent.replaceChildren(title, count, shell);
+  els.mapContent.replaceChildren(title, count, toolbar, countLabel, shell);
+  search.addEventListener("input",()=>{filterMapList(search.value.trim().toLowerCase());sync();});
+  sync();filterMapList(search.value.trim().toLowerCase());
+  title.tabIndex=-1;title.focus({preventScroll:true});
   requestAnimationFrame(() => {
     state.fullMap = renderArchiveMap(canvas, points, {
       existingMap: state.fullMap,
@@ -3666,13 +3658,15 @@ function renderMapView() {
       maxVenueLabels: 14,
       initialCenter: [50, -35],
       initialZoom: 3,
-      searchControl: true,
-      jumpControl: true,
+      searchControl: false,
+      jumpControl: false,
       layerControl: true,
       venueZoomThreshold: 9,
       onSearch: filterMapList,
       onZoom: (zoom) => shell.classList.toggle("is-venue-zoom", zoom >= 9),
     });
+    const layers=canvas.querySelector(".leaflet-layer-control");
+    if(layers){const panel=document.createElement("details");const summary=document.createElement("summary");summary.textContent="Map layers";panel.append(summary,layers);toolbar.append(panel);}
   });
 }
 
@@ -3722,7 +3716,7 @@ function renderLeafletMap(container, points, options = {}) {
     const radius = 5 + Math.sqrt(point.count / maxCount) * 11;
     const size = Math.round(radius * 2);
     const marker = L.marker([point.lat, point.lon], {
-      keyboard: false,
+      keyboard: true,
       title: `${point.label}, ${point.count} mapped article references`,
       icon: L.divIcon({
         className: "map-pin-icon map-pin-city",
@@ -3740,7 +3734,7 @@ function renderLeafletMap(container, points, options = {}) {
   });
   (options.venues || []).slice(0, options.maxVenues ?? (options.venues || []).length).forEach((point) => {
     const marker = L.marker([point.lat, point.lon], {
-      keyboard: false,
+      keyboard: true,
       title: `${point.label}${point.city ? `, ${point.city}` : ""}, ${point.count} article references`,
       icon: L.divIcon({
         className: `map-pin-icon map-pin-venue${point.precision === "city" ? " map-pin-approximate" : ""}`,
@@ -3750,7 +3744,7 @@ function renderLeafletMap(container, points, options = {}) {
       }),
     }).addTo(map);
     const precisionNote = point.precision === "city" ? "<br><em>Approximate city-level point</em>" : "";
-    marker.bindPopup(`<strong>${point.label}</strong>${point.city || ""}${precisionNote}<br>${point.count.toLocaleString()} article references<br><a href="#entity:venues:${point.slug}">Open venue index</a>`);
+    marker.bindPopup(`<strong>${point.label}</strong>${point.city || ""}${precisionNote}<br>${point.count.toLocaleString()} article references<br><a href="#archive?venue=${encodeURIComponent(point.label)}&city=${encodeURIComponent(point.city || "__unspecified__")}">Open venue articles</a>`);
     marker._cushmanMarkerType = "venue";
     marker._cushmanApproximate = point.precision === "city";
     venueMarkers.push(marker);
@@ -4010,7 +4004,7 @@ function mapSvg(points, options = {}) {
 
   venues.forEach((point, index) => {
     const link = createSvgElement("a");
-    link.setAttribute("href", `#entity:venues:${point.slug}`);
+    link.setAttribute("href", `#archive?venue=${encodeURIComponent(point.label)}&city=${encodeURIComponent(point.city || "__unspecified__")}`);
     link.setAttribute("class", `map-venue${index < (options.maxVenueLabels || 12) ? " map-venue-featured" : ""}`);
     const offsetX = ((index % 11) - 5) * 11;
     const offsetY = ((Math.floor(index / 11) % 7) - 3) * 8;
@@ -4316,28 +4310,14 @@ function currentArchiveContextLabel() {
   return parts.join(" / ") || "Archive results";
 }
 
-function currentArchiveHref() {
-  const params = new URLSearchParams();
-  if (state.query.trim()) params.set("q", state.query.trim());
-  if (state.type) params.set("type", state.type);
-  if (state.collection) params.set("collection", state.collection);
-  const query = params.toString();
-  return query ? `#archive?${query}` : "#archive";
-}
+function currentArchiveHref() { return archiveStateHref(); }
 
 function archiveHashKey(value) {
-  const raw = String(value || "");
-  const hash = raw.includes("#") ? raw.slice(raw.indexOf("#")) : raw;
-  const [base, queryString] = hash.split("?");
-  if (base !== "#archive" || !queryString) return base || "";
-  const params = new URLSearchParams(queryString);
-  const ordered = new URLSearchParams();
-  ["q", "type", "collection"].forEach((key) => {
-    const paramValue = params.get(key);
-    if (paramValue) ordered.set(key, paramValue);
-  });
-  const query = ordered.toString();
-  return query ? `${base}?${query}` : base;
+  const hash = String(value || "").split("#").at(-1);
+  const [base, query] = hash.split("?");
+  const params = new URLSearchParams(query || "");
+  params.delete("shown"); params.sort();
+  return base + (params.size ? "?" + params : "");
 }
 
 function archiveRestoreForHash(hash) {
@@ -4360,9 +4340,9 @@ function archiveRestoreForHash(hash) {
 function storeArticleContext(event, record, context = {}) {
   if (event.defaultPrevented || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || event.button) return;
   const records = Array.isArray(context.records) ? context.records : [];
-  if (records.length < 2) return;
+  if (!records.length) return;
   const slugs = records.map((item) => item.slug).filter(Boolean);
-  if (slugs.length < 2) return;
+  if (!slugs.length) return;
   const index = slugs.indexOf(record.slug);
   try {
     sessionStorage.setItem(ARTICLE_CONTEXT_KEY, JSON.stringify({
@@ -4390,46 +4370,7 @@ function headlineParts(title) {
   };
 }
 
-function renderResults() {
-  els.archiveCount.classList.remove("is-searching", "has-matches");
-  if (!state.hasActiveQuery) {
-    els.archiveCount.textContent = `${state.records.length.toLocaleString()} articles`;
-    els.results.replaceChildren();
-    restoreArchivePositionIfNeeded();
-    return;
-  }
-
-  const visible = state.filtered.slice(0, state.visible);
-  const shown = state.filtered.length.toLocaleString();
-  els.archiveCount.textContent = state.filtered.length === state.records.length
-    ? `${shown} articles`
-    : `${shown} matches`;
-  if (state.filtered.length !== state.records.length) els.archiveCount.classList.add("has-matches");
-  const resultContext = {
-    contextLabel: currentArchiveContextLabel(),
-    backHref: currentArchiveHref(),
-    records: state.filtered,
-    query: state.query.trim(),
-    titleFirst: Boolean(state.query.trim()),
-    visibleCount: state.visible,
-  };
-  const cards = visible.map((record) => safeResultCard(record, resultContext));
-
-  if (state.filtered.length > state.visible) {
-    const more = document.createElement("button");
-    more.className = "result-card";
-    more.type = "button";
-    more.innerHTML = `<strong>Load more</strong><span class="meta">${state.filtered.length - state.visible} remaining</span>`;
-    more.addEventListener("click", () => {
-      state.visible += PAGE_SIZE;
-      renderResults();
-    });
-    cards.push(more);
-  }
-
-  els.results.replaceChildren(...cards);
-  restoreArchivePositionIfNeeded();
-}
+function renderResults() { catalog.render(); }
 
 function restoreArchivePositionIfNeeded() {
   const restore = state.pendingArchiveRestore;
@@ -4455,7 +4396,7 @@ function fallbackResultCard(record) {
   card.href = `#review:${record?.slug || ""}`;
 
   const date = document.createElement("time");
-  date.textContent = formatDate(record?.date);
+  date.textContent = formatDate(record);
 
   const title = document.createElement("span");
   title.className = "card-title";
@@ -4477,21 +4418,24 @@ function fallbackResultCard(record) {
 function resultCard(record, context = {}) {
   const card = document.createElement("a");
   card.className = "result-card";
-  card.href = `#review:${record.slug}`;
-  card.addEventListener("click", (event) => storeArticleContext(event, record, context));
+  card.href = new URL(`../reviews/${record.slug}/`, import.meta.url).href;
+  card.addEventListener("click", event => {
+    storeArticleContext(event, record, context);
+    if (!event.metaKey && !event.ctrlKey && !event.shiftKey && !event.altKey && !event.button) { event.preventDefault(); window.location.hash=`#review:${record.slug}`; }
+  });
   const media = record.media?.[0];
   if (media?.local_path) {
     card.classList.add("has-thumb");
     const thumb = document.createElement("img");
     thumb.className = "result-thumb";
-    thumb.src = mediaAssetUrl(media.local_path);
+    thumb.src = mediaAssetUrl(media.thumbnail_path || media.local_path);
     thumb.alt = media.alt || media.caption || record.title || "";
     thumb.loading = "lazy";
     card.append(thumb);
   }
 
   const date = document.createElement("time");
-  date.textContent = formatDate(record.date);
+  date.textContent = formatDate(record);
 
   const title = document.createElement("span");
   title.className = "card-title";
@@ -4614,20 +4558,20 @@ function safeDecodeHashValue(value) {
   }
 }
 
-function articleContentUrl(sourceFile) {
+function articleContentUrl(sourceFile, version = "trip5-20260809") {
   const safePath = String(sourceFile || "")
     .split("/")
     .filter(Boolean)
     .map((part) => encodeURIComponent(part))
     .join("/");
   const url = new URL(safePath, CONTENT_ROOT);
-  url.searchParams.set("v", "trip5-20260809");
+  url.searchParams.set("v", version);
   return url;
 }
 
 async function fetchArticleMarkdown(record) {
   if (!record?.source_file) throw new Error("Article record has no source_file");
-  const response = await fetch(articleContentUrl(record.source_file));
+  const response = await fetch(articleContentUrl(record.source_file, record.content_version));
   if (!response.ok) throw new Error(`Article content request failed (${response.status})`);
   return response.text();
 }
@@ -4660,7 +4604,7 @@ function articleTitleNodes(record) {
   deck.textContent = titleParts.deck;
   const date = document.createElement("time");
   date.className = "article-date";
-  date.textContent = formatDate(record?.date);
+  date.textContent = formatDate(record);
   const meta = document.createElement("p");
   meta.className = "article-meta";
   meta.textContent = record ? [articlePublicationLabel(record), typeLabel(record)].filter(Boolean).join(" / ") : "";
@@ -4677,7 +4621,7 @@ function fallbackArticleBodyNodes(markdown) {
 async function renderEmergencyArticle(slug, error) {
   console.error("Could not render enhanced article route", error);
   const normalizedSlug = safeDecodeHashValue(slug);
-  const record = state.records.find((item) => item.slug === normalizedSlug);
+  let record = state.records.find((item) => item.slug === normalizedSlug);
   if (!record) {
     const title = document.createElement("h1");
     title.textContent = "Article Unavailable";
@@ -4699,6 +4643,7 @@ async function renderEmergencyArticle(slug, error) {
   const { date, title, deck, meta, titleParts } = articleTitleNodes(record);
   const body = document.createElement("div");
   body.className = "article-body";
+  body.id = "article-text";
   body.replaceChildren(...fallbackArticleBodyNodes(markdown));
   const nav = articleContextNav(record);
   const articleParts = [];
@@ -4707,6 +4652,7 @@ async function renderEmergencyArticle(slug, error) {
   if (titleParts.deck) articleParts.push(deck);
   articleParts.push(meta, notice, body);
   els.article.replaceChildren(...articleParts);
+  title.tabIndex = -1; title.focus({preventScroll:true});
   els.articleView.hidden = false;
   els.articleView.scrollIntoView({ behavior: "auto", block: "start" });
 }
@@ -4750,8 +4696,10 @@ function paragraphNodes(markdown, record) {
       nodes.push(note);
       continue;
     }
-    const p = document.createElement("p");
-    appendInlineLinkedText(p, block.replace(/\s*\n\s*/g, " "), inlineEntities, linkedSlugs);
+    if (/^(?:---|\*\*\*)$/.test(block)) { nodes.push(document.createElement("hr")); continue; }
+    const heading = block.match(/^(#{1,6})\s+([\s\S]*)$/);
+    const p = document.createElement(heading ? `h${Math.min(6, heading[1].length + 1)}` : "p");
+    appendFormattedText(p, (heading ? heading[2] : block).replace(/\s*\n\s*/g, " "), inlineEntities, linkedSlugs);
     nodes.push(p);
   }
   return nodes;
@@ -4883,7 +4831,7 @@ function readArticleContext(record) {
     const parsed = JSON.parse(sessionStorage.getItem(ARTICLE_CONTEXT_KEY) || "{}");
     const slugs = Array.isArray(parsed.slugs) ? parsed.slugs.filter(Boolean) : [];
     const index = slugs.indexOf(record.slug);
-    if (index >= 0 && slugs.length > 1) {
+    if (index >= 0 && parsed.slug === record.slug && !document.documentElement.dataset.articleSlug && Date.now() - (parsed.savedAt || 0) < 7200000) {
       return {
         label: parsed.label || "Article set",
         href: parsed.href || "#archive",
@@ -4898,6 +4846,7 @@ function readArticleContext(record) {
   const index = peers.findIndex((item) => item.slug === record.slug);
   if (index >= 0 && peers.length > 1) {
     return {
+      direct: true,
       label: typeLabel(record),
       href: `#archive?type=${typeGroup(record).value}`,
       slugs: peers.map((item) => item.slug),
@@ -4915,7 +4864,7 @@ function articleContextNav(record) {
   nav.setAttribute("aria-label", "Article navigation");
   const back = document.createElement("a");
   back.href = context.href;
-  back.textContent = "Back to results";
+  back.textContent = context.direct ? `Browse more ${typeLabel(record).toLowerCase()}` : "Back to results";
   const progress = document.createElement("span");
   progress.className = "article-context-progress";
   progress.textContent = `${context.index + 1} of ${context.slugs.length} in ${context.label}`;
@@ -4931,50 +4880,29 @@ function articleContextNav(record) {
   next.setAttribute("aria-label", "Next article");
   next.href = context.index < context.slugs.length - 1 ? `#review:${context.slugs[context.index + 1]}` : "";
   next.toggleAttribute("aria-disabled", context.index >= context.slugs.length - 1);
+  [previous,next].forEach(link=>link.addEventListener("click",event=>{
+    if (link.hasAttribute("aria-disabled")) {event.preventDefault();return;}
+    try {const saved=JSON.parse(sessionStorage.getItem(ARTICLE_CONTEXT_KEY)||"{}");saved.slug=link.hash.slice(8);saved.index=saved.slugs.indexOf(saved.slug);sessionStorage.setItem(ARTICLE_CONTEXT_KEY,JSON.stringify(saved));} catch {}
+  }));
   buttons.replaceChildren(previous, next);
-  nav.replaceChildren(back, progress, buttons);
+  nav.replaceChildren(back, ...(context.direct ? [] : [progress, buttons]));
   return nav;
 }
 
 function articleTools(record) {
-  const tools = document.createElement("nav");
-  tools.className = "article-tools";
-  tools.setAttribute("aria-label", "Article tools");
-  const menu = document.createElement("details");
-  menu.className = "article-share-menu";
-  const menuSummary = document.createElement("summary");
-  menuSummary.setAttribute("aria-label", "Share and article options");
-  menuSummary.setAttribute("title", "Share and article options");
-  menuSummary.innerHTML = `<span aria-hidden="true">↗</span>`;
-  const options = document.createElement("div");
-  options.className = "article-share-options";
-  const copyLink = document.createElement("button");
-  copyLink.type = "button";
-  copyLink.textContent = "Copy link";
-  copyLink.addEventListener("click", async () => {
-    try {
-      await navigator.clipboard.writeText(window.location.href);
-      copyLink.textContent = "Link copied";
-      setTimeout(() => { copyLink.textContent = "Copy link"; }, 1600);
-    } catch {
-      copyLink.textContent = "Copy failed";
-    }
-  });
-  const print = document.createElement("button");
-  print.type = "button";
-  print.textContent = "Print / Save PDF";
-  print.addEventListener("click", () => window.print());
-  const source = document.createElement("details");
-  source.className = "article-source-details";
-  const summary = document.createElement("summary");
-  summary.textContent = "Source details";
-  const citation = document.createElement("p");
-  citation.textContent = `Robert Cushman, “${record.title},” ${articlePublicationLabel(record)}, ${formatDate(record.date)}.`;
-  source.append(summary, citation);
-  options.append(copyLink, print, source);
-  menu.append(menuSummary, options);
-  tools.append(menu);
-  return tools;
+  const tools=document.createElement("nav");tools.className="article-tools explicit-tools";tools.setAttribute("aria-label","Article tools");
+  const url=new URL(`../reviews/${record.slug}/`,import.meta.url).href;
+  const citation=`Robert Cushman, “${record.title},” ${articlePublicationLabel(record)}, ${formatDate(record)}. ${url}`;
+  const makeButton=(label,action)=>{const b=document.createElement("button");b.type="button";b.textContent=label;b.addEventListener("click",action);return b;};
+  const copy=async(button,text)=>{try{await navigator.clipboard.writeText(text);button.textContent="Copied";status.textContent="Copied to clipboard";}catch{status.textContent=text;}};
+  const share=makeButton("Share",()=>copy(share,url));
+  const cite=document.createElement("details");cite.className="citation-details";const summary=document.createElement("summary");summary.textContent="Cite";
+  const citationText=document.createElement("p");citationText.textContent=citation;
+  const copyCitation=makeButton("Copy citation",()=>copy(copyCitation,citation));cite.append(summary,citationText,copyCitation);
+  const print=makeButton("Print",()=>window.print());
+  const correction=document.createElement("a");correction.textContent="Suggest a correction";correction.href=`mailto:cushmancollected@gmail.com?subject=${encodeURIComponent("Correction: "+record.title)}&body=${encodeURIComponent(url+"\n\nSuggested correction:\n")}`;
+  const status=document.createElement("span");status.className="tool-status";status.setAttribute("role","status");
+  tools.append(share,cite,print,correction,status);return tools;
 }
 
 function relatedEntityCandidates(record) {
@@ -5146,6 +5074,7 @@ function articleCorrespondenceSection(record) {
     });
     card.replaceChildren(meta);
     if (summary.textContent) card.append(summary);
+    const transcript=correspondenceTranscript(item);if(transcript)card.append(transcript);
     if (gallery.childElementCount) card.append(gallery);
     list.append(card);
   });
@@ -5211,6 +5140,7 @@ function renderCorrespondencePage() {
       caption.textContent = item.media?.caption || "";
       card.replaceChildren(meta, sender, link);
       if (caption.textContent) card.append(caption);
+      const transcript=correspondenceTranscript(item);if(transcript)card.append(transcript);
       gallery.append(card);
     });
     section.replaceChildren(heading);
@@ -5228,6 +5158,7 @@ function renderCorrespondencePage() {
     const link = document.createElement("a");
     link.className = "correspondence-index-card";
     link.href = `#review:${record.slug}`;
+    link.addEventListener("click",event=>storeArticleContext(event,record,{records:[...new Map(entries.map(entry=>[entry.record.slug,entry.record])).values()],backHref:"#correspondence",contextLabel:"correspondence"}));
     const media = asArray(item.media)[0];
     const src = correspondenceMediaUrl(media);
     if (src) {
@@ -5380,7 +5311,7 @@ function escapeRegExp(value) {
 
 async function showReview(slug) {
   const normalizedSlug = safeDecodeHashValue(slug);
-  const record = state.records.find((item) => item.slug === normalizedSlug);
+  let record = state.records.find((item) => item.slug === normalizedSlug);
   if (!record) {
     const canonicalSlug = state.aliases[normalizedSlug];
     if (canonicalSlug) {
@@ -5396,6 +5327,11 @@ async function showReview(slug) {
     return;
   }
 
+  const requestedHash = window.location.hash;
+  if (record.detail_path) {
+    try { const response = await fetch(new URL(record.detail_path, DATA_URL)); if (!response.ok) throw new Error("Article details unavailable"); record = {...record, ...await response.json()}; }
+    catch (error) { console.warn("Using catalog metadata", error); }
+  }
   let markdown = "";
   let notice = null;
   try {
@@ -5408,12 +5344,14 @@ async function showReview(slug) {
     );
   }
 
+  if (window.location.hash !== requestedHash) return;
   const { date, title, deck, meta, titleParts } = articleTitleNodes(record);
   document.title = `${record.title} | Cushman Collected`;
-  document.querySelector('meta[name="description"]')?.setAttribute("content", `${record.title}, by Robert Cushman. ${articlePublicationLabel(record)}, ${formatDate(record.date)}.`);
+  document.querySelector('meta[name="description"]')?.setAttribute("content", `${record.title}, by Robert Cushman. ${articlePublicationLabel(record)}, ${formatDate(record)}.`);
 
   const body = document.createElement("div");
   body.className = "article-body";
+  body.id = "article-text";
   let bodyNodes = [];
   if (markdown) {
     try {
@@ -5438,6 +5376,9 @@ async function showReview(slug) {
   articleParts.push(date, title);
   if (titleParts.deck) articleParts.push(deck);
   articleParts.push(meta);
+  if (record.date_note) { const note = document.createElement("p"); note.className="public-date-note"; note.textContent=record.date_note; articleParts.push(note); }
+  const jump = document.createElement("a"); jump.href="#article-text";jump.className="jump-to-text";jump.textContent="Jump to article text";
+  jump.addEventListener("click", event=>{event.preventDefault();body.tabIndex=-1;body.focus();body.scrollIntoView({block:"start",behavior:"auto"});});articleParts.push(jump);
   if (isIncompleteArticle(record)) articleParts.push(incompleteArticleNotice());
   articleParts.push(articleTools(record));
   if (hasCorrespondence(record)) {
@@ -5454,7 +5395,13 @@ async function showReview(slug) {
   }
   try {
     const entityLinks = articleEntityLinks(record);
-    if (entityLinks) articleParts.push(entityLinks);
+    if (entityLinks) {
+      if (FEATURES.collapsedMetadata) {
+        const details = document.createElement("details"); details.className = "reading-details";
+        const summary = document.createElement("summary"); summary.textContent = "Cast, works and production details";
+        details.append(summary, entityLinks); articleParts.push(details);
+      } else articleParts.push(entityLinks);
+    }
   } catch (error) {
     console.error("Could not render article metadata chips", record.slug, error);
     notice = articleLoadNotice("Metadata chips could not be rendered for this article. Article text is shown below.", record.source_file);
@@ -5468,6 +5415,7 @@ async function showReview(slug) {
   if (correspondence) articleParts.push(correspondence);
   if (related) articleParts.push(related);
   els.article.replaceChildren(...articleParts);
+  title.tabIndex = -1; title.focus({preventScroll:true});
   const backLink = els.articleView.querySelector(":scope > .back-link");
   if (backLink) backLink.hidden = Boolean(nav);
   els.articleView.hidden = false;
@@ -5475,10 +5423,11 @@ async function showReview(slug) {
 }
 
 function route() {
-  const hash = window.location.hash || "#home";
+  const hash = window.location.hash || (document.documentElement.dataset.articleSlug ? `#review:${document.documentElement.dataset.articleSlug}` : "#home");
   els.drawer.classList.remove("is-open");
   els.filterControls.classList.remove("is-open");
   els.filterToggle.setAttribute("aria-expanded", "false");
+  els.archive.hidden = true;
   els.articleView.hidden = true;
   els.indexView.hidden = true;
   els.mapView.hidden = true;
@@ -5488,8 +5437,17 @@ function route() {
     if (active) link.setAttribute("aria-current", "page");
     else link.removeAttribute("aria-current");
   });
+  els.archive.querySelector("h1").textContent = "Catalog";
+  els.menuButton.setAttribute("aria-expanded", "false");
+  document.querySelectorAll(".site-nav a, .drawer a").forEach(link => {
+    const href = link.getAttribute("href");
+    const current = href === hash.split("?")[0] || (href === "#archive" && /^#(archive|search|people|works|index|entity|places|master-index)/.test(hash));
+    if (current) link.setAttribute("aria-current", "page"); else link.removeAttribute("aria-current");
+  });
   document.title = "Cushman Collected";
   document.querySelector('meta[name="description"]')?.setAttribute("content", "The collected theatre criticism of Robert Cushman.");
+
+  if (catalog.route(hash)) return;
 
   if (hash.startsWith("#review:")) {
     document.body.classList.add("article-open");
@@ -5532,7 +5490,9 @@ function route() {
   if (hash.startsWith("#section:")) {
     const section = hash.replace("#section:", "");
     document.body.classList.add("index-open");
+    els.indexContent.replaceChildren();
     renderLandingPage(section);
+    if (!els.indexContent.childElementCount) catalog.unavailable();
     els.indexView.hidden = false;
     els.indexView.scrollIntoView({ behavior: "auto", block: "start" });
     return;
@@ -5560,9 +5520,9 @@ function route() {
     return;
   }
 
-  if (hash === "#map") {
+  if (hash.split("?")[0] === "#map") {
     document.body.classList.add("map-open");
-    renderMapView();
+    renderMapView().catch(()=>{els.mapContent.textContent="The map could not load. You can still browse places from the catalog.";});
     els.mapView.hidden = false;
     els.mapView.scrollIntoView({ behavior: "auto", block: "start" });
     return;
@@ -5600,7 +5560,7 @@ function route() {
     return;
   }
 
-  if (hash === "#subscribe") {
+  if (hash === "#subscribe" || hash === "#contact") {
     document.body.classList.add("index-open");
     renderSubscribePage();
     els.indexView.hidden = false;
@@ -5689,8 +5649,7 @@ function route() {
     return;
   }
 
-  resetArchiveControls();
-  renderTiles("types");
+  catalog.unavailable();
 }
 
 function scrollToSection(selector) {
@@ -5716,7 +5675,7 @@ async function init() {
     els.archiveCount.textContent = "Records could not load";
     els.results.innerHTML = `
       <p class="load-error">
-        The archive data could not be loaded from this page location. Open the site through the local server URL, or refresh once the server is running.
+        The archive data could not be loaded from this page location. Please refresh the page or try again shortly.
       </p>
     `;
     console.error(error);
@@ -5727,10 +5686,8 @@ async function init() {
   state.filtered = state.records;
   state.hasActiveQuery = false;
   populateFilters();
-  renderFrontpageDirectory();
-  renderCurrentFeature();
-  renderHomeMap();
-  renderResults();
+  catalog.install();
+  setupPresentation();
   route();
 }
 
@@ -5763,6 +5720,7 @@ els.drawer.addEventListener("click", (event) => {
 });
 
 els.searchInput.addEventListener("input", (event) => {
+  if (!state.query && event.target.value) state.sort = "relevance";
   state.query = event.target.value;
   scheduleBodySearch(state.query);
   scheduleFilterUpdate();
@@ -5802,28 +5760,7 @@ els.sortButtons.forEach((button) => {
   });
 });
 
-els.clearFilters.addEventListener("click", () => {
-  clearTimeout(state.bodySearchTimer);
-  state.query = "";
-  state.collection = "";
-  state.type = "";
-  state.shakespeareGroup = "";
-  state.hasActiveQuery = false;
-  state.bodySearchQuery = "";
-  state.bodySearchMatches = new Map();
-  state.bodySearchLoading = false;
-  els.searchInput.value = "";
-  els.collectionFilter.value = "";
-  els.typeFilter.value = "";
-  state.filtered = state.records;
-  syncArchivePageClass();
-  setArchiveExpanded(false);
-  els.filterControls.classList.remove("is-open");
-  els.filterToggle.setAttribute("aria-expanded", "false");
-  renderShakespeareNav();
-  renderResults();
-  syncArchiveUrl();
-});
+els.clearFilters.addEventListener("click", () => catalog.clear());
 
 document.addEventListener("keydown", (event) => {
   if (event.key !== "Escape") return;
@@ -5840,9 +5777,61 @@ document.addEventListener("keydown", (event) => {
   }
 });
 
-window.addEventListener("hashchange", route);
+window.addEventListener("hashchange", () => {
+  route();
+  requestAnimationFrame(()=>{if(document.body.classList.contains("index-open")){const heading=els.indexContent.querySelector("h1");if(heading){heading.tabIndex=-1;heading.focus({preventScroll:true});}const restore=archiveRestoreForHash(window.location.hash);if(restore)window.scrollTo(0,restore.scrollY);}});
+});
+document.querySelector(".skip-link").addEventListener("click",event=>{event.preventDefault();const main=document.querySelector("main");main.focus();main.scrollIntoView({block:"start",behavior:"auto"});});
+
+const catalog = createCatalog({state, els, h: { FEATURES, TYPE_GROUPS, PUBLIC_COLLECTION_FILTERS, SHAKESPEARE_COLLECTION, MASTER_INDEX_PEOPLE_FILTERS, MASTER_INDEX_WORK_FILTERS, collectionNames, isExplicitShakespeareRecord, shakespeareGroup, typeGroup, articlePublicationLabel, isIncompleteArticle, entityValues, recordVenueCityPairs, entitySlug, masterIndexFilter, masterIndexEntries, recordMatchesQuery, sortRecords, sortRecordsChronologically, updateSortButtons, renderShakespeareNav, safeResultCard, restoreArchivePositionIfNeeded, archiveRestoreForHash, entityMap, entityType, indexSortText, indexDisplayLabel, renderCurrentFeature, renderTiles, renderFrontpageDirectory, collectionFromSlug, observerFarewellFeature, venueMapPoints }});
 
 init().catch((error) => {
   els.archiveCount.textContent = "Content export unavailable";
   console.error(error);
 });
+
+function appendFormattedText(parent, text, entities, linked) {
+  // Deliberately small, safe Markdown subset; source HTML is always text.
+  const pattern = /(\*\*([^*]+)\*\*|\*([^*]+)\*|_([^_]+)_|`([^`]+)`)/g;
+  let cursor=0;
+  for (const match of text.matchAll(pattern)) {
+    appendInlineLinkedText(parent,text.slice(cursor,match.index),entities,linked);
+    const n=document.createElement(match[2]?'strong':match[5]?'code':'em');
+    appendInlineLinkedText(n,match[2]||match[3]||match[4]||match[5],entities,linked);parent.append(n);cursor=match.index+match[0].length;
+  }
+  appendInlineLinkedText(parent,text.slice(cursor),entities,linked);
+}
+
+function setupPresentation() {
+  for (const [key,on] of Object.entries(FEATURES)) document.body.classList.toggle(`feature-${key}`,on);
+  if (FEATURES.simplifiedNavigation) {
+    document.querySelector('#siteNavLeft').innerHTML='<a href="#archive">Catalog</a><a href="#section:collections">Collections</a>';
+    document.querySelector('#siteNavRight').innerHTML='<a href="#section:current">Latest writing</a><a href="#about">About</a><a href="#search" class="nav-search-label">Search</a>';
+    els.drawer.innerHTML='<a href="#archive">Catalog</a><a href="#section:collections">Collections</a><a href="#section:current">Latest writing</a><a href="#about">About</a><a href="#search">Search</a><a href="#map">Map</a><a href="#timeline">Timeline</a><a href="#correspondence">Correspondence</a><a href="#contact">Contact</a><a href="#critics-circle">Critic’s Circle</a>';
+  }
+  document.querySelectorAll('a[href="#subscribe"]').forEach(a=>{a.href='#contact';a.textContent='Contact';});
+  document.querySelectorAll('a[href="#section:chronology"]').forEach(a=>a.href='#timeline');
+  document.querySelectorAll('.frontpage-browse-heading h2').forEach(n=>n.textContent='Start exploring');
+  document.querySelectorAll('.current-feature-kicker').forEach(n=>n.textContent='Latest writing');
+}
+
+let mapResourcesPromise;
+async function loadMapResources() {
+  if(!mapResourcesPromise)mapResourcesPromise=Promise.all([
+    fetch(new URL("../site_export/data/map_details.json",import.meta.url)).then(r=>r.json()).then(details=>state.records.forEach(r=>{r.coordinate_points=details[r.slug]||[];})).catch(()=>{}),
+    new Promise(resolve=>{
+      if(window.L){resolve();return;}
+      const css=document.createElement("link");css.rel="stylesheet";css.href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css";document.head.append(css);
+      const script=document.createElement("script");script.src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js";script.onload=resolve;script.onerror=resolve;document.head.append(script);
+    })
+  ]);
+  return mapResourcesPromise;
+}
+
+function correspondenceTranscript(item) {
+  if(!item.transcript)return null;
+  const details=document.createElement("details");details.className="correspondence-transcript";
+  const summary=document.createElement("summary");summary.textContent="Read transcript";details.append(summary);
+  if(item.transcript_note){const note=document.createElement("p");note.className="transcript-note";note.textContent=item.transcript_note;details.append(note);}
+  item.transcript.split(/\n{2,}/).forEach(block=>{const p=document.createElement("p");p.textContent=block;p.style.whiteSpace="pre-line";details.append(p);});return details;
+}

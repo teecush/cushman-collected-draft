@@ -1,0 +1,38 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import vm from 'node:vm';
+import {fileURLToPath} from 'node:url';
+import {parse,serialize,nameMatches,articleForm,articleSubject,FIELDS} from '../../website/catalog-engine.js';
+const site=new URL('../../',import.meta.url);
+const records=JSON.parse(fs.readFileSync(new URL('site_export/data/public_reviews.json',site)));
+const app=fs.readFileSync(new URL('website/app.js',site),'utf8');
+const v={q:'Hamlet & Shakespeare',collection:'The Shakespeare Collection',group:'thoughts',sort:'oldest',from:'1970',to:'1989',publication:'The Observer',person:'Christopher Plummer',role:'actors',venue:'Festival Theatre',city:'Stratford, Ontario',shown:'72',origin:'#people?q=Plummer&role=actors'};
+for(const [key,value] of Object.entries(v)) assert.equal(parse(serialize(v))[key],value,`URL roundtrip: ${key}`);
+assert.equal(nameMatches('Christopher Plummer','Plummer, Christopher'),true);
+assert.equal(nameMatches('Christopher Plummer','christoph plum'),true);
+assert.equal(nameMatches('Amanda Plummer','Christopher'),false);
+const typeCode=app.slice(app.indexOf('const TYPE_GROUPS = ['),app.indexOf('const TYPE_BY_CATEGORY'));
+const groups=vm.runInNewContext(typeCode+'; TYPE_GROUPS');
+const allCategories=groups.flatMap(g=>g.categories);
+assert.equal(new Set(allCategories).size,allCategories.length,'Categories belong to one filter group');
+assert.equal(new Set(groups.map(g=>g.value)).size,groups.length,'Filter IDs are unique');
+for(const record of records)assert(allCategories.includes(record.article_category),`Unmapped: ${record.article_category}`);
+assert.equal(groups.reduce((sum,g)=>sum+records.filter(r=>g.categories.includes(r.article_category)).length,0),records.length);
+const tom=records.find(r=>r.slug==='1985-05-01-tom-and-viv-and-jumpers');assert.equal(tom.date_precision,'month');assert(tom.date_note.includes('publication day is unknown'));
+const hamlet=records.find(r=>r.slug==='1975-12-14-the-whole-of-hamlet');assert(JSON.stringify(hamlet).includes('7:84 Company'));assert(!JSON.stringify(hamlet).includes("{'7':"));
+assert.equal(articleForm('Theatre Interview'),'Interview');assert.equal(articleSubject('Theatre Interview'),'Theatre & performance');
+assert.equal(articleForm('Musical Theatre Survey'),'Retrospective');
+const catalog=JSON.parse(fs.readFileSync(new URL('site_export/data/catalog.json',site)));assert.equal(catalog.length,records.length);
+const fullText=JSON.parse(fs.readFileSync(new URL('site_export/data/search_text.json',site)));assert(fullText[tom.slug].includes('stepped on his tortoise'));
+assert(!fullText[tom.slug].includes('editorial_notes:'));
+for(const record of catalog){assert(fs.existsSync(new URL(`site_export/data/${record.detail_path.split('?')[0]}`,site)));assert(fs.existsSync(new URL(`reviews/${record.slug}/index.html`,site)));}
+const article=fs.readFileSync(new URL(`reviews/${tom.slug}/index.html`,site),'utf8');assert(article.includes('<time>May 1985</time>'));assert(article.includes('<em>Tom and Viv</em>'));assert(article.includes(`rel="canonical" href="https://teecush.github.io/cushman-collected-draft/reviews/${tom.slug}/"`));assert(!article.includes('Raw family-archive'));
+console.log(`PASS: URL state, name lookup, ${allCategories.length} explicit category mappings, date precision, canonical company, ${catalog.length} detail/static pages, optional text index.`);
+
+const dateSort=app.slice(app.indexOf('function sortRecords(records)'),app.indexOf('function sortRecordsChronologically'));
+const dateContext={state:{query:'',sort:'newest'},searchRelevanceScore:()=>0};
+const sorter=vm.runInNewContext(dateSort+';sortRecords',dateContext);
+const sample=[{slug:'undated'},{slug:'old',date:'1963-01-11'},{slug:'new',date:'2026-02-08'}];
+assert.equal(sorter(sample).map(x=>x.slug).join(','),'new,old,undated');
+dateContext.state.sort='oldest';assert.equal(sorter(sample).map(x=>x.slug).join(','),'old,new,undated');
+console.log('PASS: undated articles sort after dated articles in both date directions.');
