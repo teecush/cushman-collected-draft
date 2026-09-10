@@ -2,7 +2,7 @@ const DATA_URL = new URL("../site_export/data/public_reviews.json?v=118", import
 const ALIASES_URL = new URL("../site_export/data/route_aliases.json?v=1", import.meta.url);
 const STANDALONE_CORRESPONDENCE_URL = new URL("../site_export/data/standalone_correspondence.json?v=3", import.meta.url);
 const CONTENT_ROOT = new URL("../site_export/content/reviews/", import.meta.url);
-const MEDIA_ASSET_VERSION = "working-manuscripts-20260830";
+const MEDIA_ASSET_VERSION = "site-audit-20260909";
 const PAGE_SIZE = 36;
 const SHAKESPEARE_COLLECTION = "The Shakespeare Collection";
 const SHAKESPEARE_DERIVED_COLLECTIONS = ["Riffs on Shakespeare", "Thoughts on Shakespeare"];
