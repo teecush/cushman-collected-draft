@@ -1,5 +1,5 @@
 // Homepage previews reuse credited archive artwork; every card opens its collection.
-import {COLLECTIONS} from './collections-engine.js?v=157';
+import {COLLECTIONS} from './collections-engine.js?v=158';
 const examples = {
   books:['alan-jay-lerner-a-biography','all-his-jazz-the-life-and-death-of-bob-fosse','all-my-best-friends'],
   albums:['both-sides-now','art-of-romance','gypsy'],

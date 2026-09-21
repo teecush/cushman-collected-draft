@@ -1,8 +1,8 @@
-import {renderHomeCollections} from './home-collections.js?v=157';
-import {spotlightRecord} from './collections-engine.js?v=157';
-import { createCatalog } from "./catalog.js?v=157";
-import { FEATURES } from "./features.js?v=157";
-const DATA_URL = new URL("../site_export/data/catalog.json?v=157", import.meta.url);
+import {renderHomeCollections} from './home-collections.js?v=158';
+import {spotlightRecord} from './collections-engine.js?v=158';
+import { createCatalog } from "./catalog.js?v=158";
+import { FEATURES } from "./features.js?v=158";
+const DATA_URL = new URL("../site_export/data/catalog.json?v=158", import.meta.url);
 const ALIASES_URL = new URL("../site_export/data/route_aliases.json?v=1", import.meta.url);
 const STANDALONE_CORRESPONDENCE_URL = new URL("../site_export/data/standalone_correspondence.json?v=4", import.meta.url);
 const CONTENT_ROOT = new URL("../site_export/content/reviews/", import.meta.url);
@@ -5678,7 +5678,7 @@ async function init() {
       fetch(DATA_URL),
       fetch(ALIASES_URL),
       fetch(STANDALONE_CORRESPONDENCE_URL).catch(() => null),
-      fetch(new URL('./collection-curation.json?v=157', import.meta.url)),
+      fetch(new URL('./collection-curation.json?v=158', import.meta.url)),
     ]);
     if (!response.ok) throw new Error(`Could not load records (${response.status})`);
     state.records = await response.json();

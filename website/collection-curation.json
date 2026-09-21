@@ -1933,6 +1933,110 @@
     "albums:sweet-smell-of-success": {
       "src": "assets/collections/album-df306381-df11-38dc-97de-6dd54df9e2c8.jpg",
       "alt": "Sweet Smell of Success"
+    },
+    "musicals:cradle-will-rock": {
+      "src": "assets/collections/extra-14ea2954363f56ed.jpg",
+      "alt": "The Cradle Will Rock"
+    },
+    "television:air-farce-live": {
+      "src": "assets/collections/extra-65f31e37a666d81a.jpg",
+      "alt": "Air Farce Live"
+    },
+    "television:bored-to-death": {
+      "src": "assets/collections/extra-81c901444ec60884.png",
+      "alt": "Bored to Death"
+    },
+    "television:californication": {
+      "src": "assets/collections/extra-ce6bb446ebda4e6e.png",
+      "alt": "Californication"
+    },
+    "television:good-guys": {
+      "src": "assets/collections/extra-4c67cd218df86c5f.png",
+      "alt": "The Good Guys"
+    },
+    "television:hiccups": {
+      "src": "assets/collections/extra-13c1c36936dd426c.jpg",
+      "alt": "Hiccups"
+    },
+    "television:horace-and-pete": {
+      "src": "assets/collections/extra-d911f8097c83d3ce.jpg",
+      "alt": "Horace and Pete"
+    },
+    "television:important-things-with-demetri-martin": {
+      "src": "assets/collections/extra-c770b90f24f8c14b.jpg",
+      "alt": "Important Things with Demetri Martin"
+    },
+    "television:national": {
+      "src": "assets/collections/extra-ae63dcc3b9121988.png",
+      "alt": "The National"
+    },
+    "television:pennies-from-heaven": {
+      "src": "assets/collections/extra-d619c25ffd00ae8b.jpg",
+      "alt": "Pennies from Heaven"
+    },
+    "television:so-you-think-you-can-dance-canada": {
+      "src": "assets/collections/extra-2ea5db005c00cdc6.jpg",
+      "alt": "So You Think You Can Dance Canada"
+    },
+    "profiles:william-hutt": {
+      "src": "assets/collections/extra-263e50bc7867881c.jpg",
+      "alt": "William Hutt"
+    },
+    "profiles:peter-hinton": {
+      "src": "assets/collections/extra-67754037365c6606.jpg",
+      "alt": "Peter Hinton"
+    },
+    "profiles:richard-griffiths": {
+      "src": "assets/collections/extra-7116676b8926eaa6.jpg",
+      "alt": "Richard Griffiths"
+    },
+    "books:all-the-way-a-biography-of-frank-sinatra": {
+      "src": "assets/collections/extra-9e6faa370431b2c6.jpg",
+      "alt": "All the Way: A Biography of Frank Sinatra"
+    },
+    "books:american-songbook": {
+      "src": "assets/collections/extra-785d04551812da39.jpg",
+      "alt": "The American Songbook"
+    },
+    "books:canadian-children-s-treasury": {
+      "src": "assets/collections/extra-abf7010f922b74dc.jpg",
+      "alt": "The Canadian Children's Treasury"
+    },
+    "books:conversations-with-ayckbourn": {
+      "src": "assets/collections/extra-03b2e2849acf1c90.jpg",
+      "alt": "Conversations with Ayckbourn"
+    },
+    "books:garbo-her-story": {
+      "src": "assets/collections/extra-e4c6c5af0aef9f30.jpg",
+      "alt": "Garbo Her Story"
+    },
+    "books:letters-of-noel-coward": {
+      "src": "assets/collections/extra-530814bd71429527.jpg",
+      "alt": "The Letters of Noel Coward"
+    },
+    "books:rodgers-and-hammerstein": {
+      "src": "assets/collections/extra-61be0c9842d1f5ab.jpg",
+      "alt": "Rodgers and Hammerstein"
+    },
+    "albums:1776": {
+      "src": "assets/collections/extra-cf52f97c9f203767.jpg",
+      "alt": "1776"
+    },
+    "albums:gentlemen-prefer-blondes": {
+      "src": "assets/collections/extra-ac099ff4955e3d54.jpg",
+      "alt": "Gentlemen Prefer Blondes"
+    },
+    "albums:irma-la-douce": {
+      "src": "assets/collections/extra-706ae843c935226e.jpg",
+      "alt": "Irma la Douce"
+    },
+    "musicals:wonderful-town": {
+      "src": "assets/collections/extra-a2ee36a118f62ae3.jpg",
+      "alt": "Wonderful Town"
+    },
+    "books:complete-lyrics-of-johnny-mercer": {
+      "src": "assets/collections/extra-20a9f1bdd3e8f1bc.jpg",
+      "alt": "The Complete Lyrics of Johnny Mercer"
     }
   },
   "excludedMusicalTitles": [
@@ -1989,6 +2093,10 @@
     "the-spectator": {
       "src": "assets/collections/wiki-6e030e4905ba4f19.png",
       "alt": "The Spectator"
+    },
+    "plays-and-players": {
+      "src": "assets/collections/plays-and-players-masthead.jpg",
+      "alt": "Plays and Players"
     }
   },
   "earlyUndated": [

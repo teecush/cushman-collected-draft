@@ -1,5 +1,5 @@
-import {serialize, publicationYear, normalize} from './catalog-engine.js?v=157';
-import {COLLECTIONS} from './collections-engine.js?v=157';
+import {serialize, publicationYear, normalize} from './catalog-engine.js?v=158';
+import {COLLECTIONS} from './collections-engine.js?v=158';
 
 export function createCollectionViews({state,els,h,node,link,button,openIndex,getCollections}) {
   let activeMap=null, generation=0;
@@ -33,7 +33,7 @@ export function createCollectionViews({state,els,h,node,link,button,openIndex,ge
     els.indexContent.append(node('p','Artwork identifies the publications, shows, books, recordings and people discussed in this archive. Copyright remains with the respective rights holders. Source and licence details are listed below.','landing-intro'));
     const content=node('div',undefined,'image-credits');els.indexContent.append(content);
     try {
-      const response=await fetch(new URL('./assets/collections/credits.json',import.meta.url));
+      const response=await fetch(new URL('./assets/collections/credits.json?v=158',import.meta.url));
       if(!response.ok)throw new Error('Credits unavailable');
       const entries=await response.json();if(token!==generation)return;
       for(const asset of entries){

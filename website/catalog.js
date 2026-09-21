@@ -1,7 +1,7 @@
-import {FIELDS, normalize, nameMatches, publicationYear, serialize, parse, articleForm, articleSubject} from './catalog-engine.js?v=157';
-import {makeCollections, COLLECTIONS} from './collections-engine.js?v=157';
-import {createCollectionViews} from './collection-views.js?v=157';
-import {INDEX_LETTERS, indexOrder, indexEntries, indexSections} from './index-engine.js?v=157';
+import {FIELDS, normalize, nameMatches, publicationYear, serialize, parse, articleForm, articleSubject} from './catalog-engine.js?v=158';
+import {makeCollections, COLLECTIONS} from './collections-engine.js?v=158';
+import {createCollectionViews} from './collection-views.js?v=158';
+import {INDEX_LETTERS, indexOrder, indexEntries, indexSections} from './index-engine.js?v=158';
 export function createCatalog({state, els, h}) {
   let extra = {}, indexCache = new Map(), textIndex = null, textPromise = null, indexResizeObserver = null, placesMap = null, collectionData = null;
   const getCollections = () => collectionData ||= makeCollections(state.records, h, state.collectionCuration);
@@ -286,7 +286,17 @@ export function createCatalog({state, els, h}) {
         for (const entry of featured) {
           const a = entryLink(entry);
           const asset = state.collectionCuration?.publications?.[entry.slug];
-          if (asset?.src) {const img=node('img');img.src=asset.src;img.alt=entry.label+' masthead';img.loading='lazy';img.addEventListener('error',()=>img.remove(),{once:true});a.prepend(img);}
+          if (asset?.src) {
+            const img = node('img');
+            img.src = asset.src; img.alt = entry.label; img.loading = 'lazy';
+            const title = a.querySelector('span');
+            if (title) title.hidden = true;
+            img.addEventListener('error', () => {
+              img.remove();
+              if (title) title.hidden = false;
+            }, {once: true});
+            a.prepend(img);
+          }
           a.classList.add('publication-card');cards.append(a);
         }
         list.append(cards);
