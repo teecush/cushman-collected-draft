@@ -1,8 +1,8 @@
-import {renderHomeCollections} from './home-collections.js?v=163';
-import {spotlightRecord} from './collections-engine.js?v=163';
-import { createCatalog } from "./catalog.js?v=163";
-import { FEATURES } from "./features.js?v=163";
-const DATA_URL = new URL("../site_export/data/catalog.json?v=163", import.meta.url);
+import {renderHomeCollections} from './home-collections.js?v=164';
+import {spotlightRecord} from './collections-engine.js?v=164';
+import { createCatalog } from "./catalog.js?v=164";
+import { FEATURES } from "./features.js?v=164";
+const DATA_URL = new URL("../site_export/data/catalog.json?v=164", import.meta.url);
 const ALIASES_URL = new URL("../site_export/data/route_aliases.json?v=1", import.meta.url);
 const STANDALONE_CORRESPONDENCE_URL = new URL("../site_export/data/standalone_correspondence.json?v=4", import.meta.url);
 const CONTENT_ROOT = new URL("../site_export/content/reviews/", import.meta.url);
@@ -5691,7 +5691,7 @@ async function init() {
       fetch(DATA_URL),
       fetch(ALIASES_URL),
       fetch(STANDALONE_CORRESPONDENCE_URL).catch(() => null),
-      fetch(new URL('./collection-curation.json?v=163', import.meta.url)),
+      fetch(new URL('./collection-curation.json?v=164', import.meta.url)),
     ]);
     if (!response.ok) throw new Error(`Could not load records (${response.status})`);
     state.records = await response.json();
@@ -5858,7 +5858,7 @@ function correspondenceTranscript(item) {
 let homeMapObserver;
 function renderClassicHome() {
   els.searchInput.placeholder = '';
-  renderHomeCollections(document.querySelector('#homeCollections'),state.collectionCuration);
+  renderHomeCollections(document.querySelector('#homeCollections'),state.collectionCuration,catalog.getCollections());
   document.querySelector('#homeMap').hidden = false;
   renderFrontpageDirectory();
   renderCurrentFeature();

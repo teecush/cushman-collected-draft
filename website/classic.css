@@ -298,3 +298,13 @@ body.map-open .leaflet-jump-control{display:flex;}
 
 /* The casing remains visible outside the rounded screen corners. */
 .collection-art.television,.collection-art.television.has-artwork{background:#353b3d;}
+
+/* Three miniature sets preview the most-covered TV shows. */
+.home-collection-card.television .home-collection-visual{border:0;border-radius:0;background:#b6c6bd;padding:0;}
+.home-collection-card.television .home-mini-tv{position:absolute;width:40%;max-width:40%;border-width:5px;border-right-width:14px;border-radius:10px;bottom:2%;left:8%;}
+.home-collection-card.television .home-mini-tv:nth-child(2){left:30%;bottom:auto;top:2%;z-index:2;}
+.home-collection-card.television .home-mini-tv:nth-child(3){left:auto;right:8%;}
+.home-mini-tv .television-screen,.home-mini-tv .television-screen::after{border-radius:4px;}
+.home-mini-tv .television-screen::after{border-width:2px;}
+.home-collection-card.television .home-mini-tv img{transform:none;filter:none;}
+.home-collection-card.television .home-mini-tv::after{width:5px;height:5px;right:-10px;border-width:1px;box-shadow:0 10px 0 -1px #202729,0 10px 0 0 #919798;}

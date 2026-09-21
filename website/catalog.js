@@ -1,7 +1,7 @@
-import {FIELDS, normalize, nameMatches, publicationYear, serialize, parse, articleForm, articleSubject} from './catalog-engine.js?v=163';
-import {makeCollections, COLLECTIONS} from './collections-engine.js?v=163';
-import {createCollectionViews} from './collection-views.js?v=163';
-import {INDEX_LETTERS, indexOrder, indexEntries, indexSections} from './index-engine.js?v=163';
+import {FIELDS, normalize, nameMatches, publicationYear, serialize, parse, articleForm, articleSubject} from './catalog-engine.js?v=164';
+import {makeCollections, COLLECTIONS} from './collections-engine.js?v=164';
+import {createCollectionViews} from './collection-views.js?v=164';
+import {INDEX_LETTERS, indexOrder, indexEntries, indexSections} from './index-engine.js?v=164';
 export function createCatalog({state, els, h}) {
   let extra = {}, indexCache = new Map(), textIndex = null, textPromise = null, indexResizeObserver = null, placesMap = null, collectionData = null;
   const getCollections = () => collectionData ||= makeCollections(state.records, h, state.collectionCuration);
@@ -447,5 +447,5 @@ export function createCatalog({state, els, h}) {
     if(base==='#section:browse'||base==='#section:indexes'||base.startsWith('#browse:')){showCatalog({});return true;}
     return false;
   }
-  return {install,route,apply,render,href,clear,values,matches,unavailable};
+  return {install,route,apply,render,href,clear,values,matches,unavailable,getCollections};
 }
