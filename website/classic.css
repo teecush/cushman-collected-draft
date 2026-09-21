@@ -308,3 +308,17 @@ body.map-open .leaflet-jump-control{display:flex;}
 .home-mini-tv .television-screen::after{border-width:2px;}
 .home-collection-card.television .home-mini-tv img{transform:none;filter:none;}
 .home-collection-card.television .home-mini-tv::after{width:5px;height:5px;right:-10px;border-width:1px;box-shadow:0 10px 0 -1px #202729,0 10px 0 0 #919798;}
+
+/* Listing artwork is a compact identifier, not a gallery-sized image. */
+.collection-result-art{gap:16px;margin:16px 0;min-width:0;}
+.collection-result-art .collection-art{box-sizing:border-box;width:96px;max-width:96px;flex:0 0 auto;padding:6px;}
+.collection-result-art .collection-art.books{width:64px;max-width:64px;}
+.collection-result-art .collection-art.television{width:120px;max-width:120px;padding:0;border-width:6px;border-right-width:20px;border-radius:12px;}
+.collection-result-art .collection-art.television::after{width:8px;height:8px;right:-15px;border-width:1px;box-shadow:0 15px 0 -1px #202729,0 15px 0 0 #919798;}
+.collection-result-art h2{min-width:0;margin:0;font-size:24px;overflow-wrap:anywhere;}
+@media(max-width:550px){
+ .collection-result-art .collection-art{width:72px;max-width:72px;}
+ .collection-result-art .collection-art.books{width:48px;max-width:48px;}
+ .collection-result-art .collection-art.television{width:96px;max-width:96px;}
+ .collection-result-art h2{font-size:20px;}
+}
