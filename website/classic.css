@@ -376,3 +376,6 @@ body.catalog-page #indexView.directory-page .index-controls label{gap:0;}
 /* Profiles share the index's sticky surname tabs, without hiding other letters. */
 @media(max-width:600px){body.catalog-page .profiles-alphabet{display:grid;grid-template-columns:repeat(14,minmax(0,1fr));gap:2px;padding-top:6px;}body.catalog-page .profiles-alphabet :is(a,span){min-width:0;min-height:30px;padding:2px 0;font-size:11px;}}
 @media(max-width:359px){body.catalog-page .profiles-alphabet{grid-template-columns:repeat(10,minmax(0,1fr));}}
+
+/* Keep the same five-tab row on every catalog view, including Places itself. */
+@media(max-width:600px){body.catalog-page #indexView .catalog-tabs{flex-wrap:nowrap;justify-content:space-between;gap:0;}body.catalog-page #indexView .catalog-tabs a{font-size:10px;padding-inline:3px;white-space:nowrap;flex-shrink:0;}}
