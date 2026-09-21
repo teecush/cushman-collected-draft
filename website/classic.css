@@ -289,3 +289,9 @@ body.map-open .leaflet-jump-control{display:flex;}
 .collection-art.television{box-sizing:border-box;width:100%;max-width:100%;min-width:0;flex:none;}
 
 .collection-art.television .television-screen img.television-logo{inset:4px;width:calc(100% - 8px);height:calc(100% - 8px);}
+
+/* Keep the complete collection navigation together on small screens. */
+@media(max-width:800px){
+ body.catalog-page #indexView.collection-page #indexContent>.catalog-tabs{grid-column:1/-1;grid-row:2;flex-wrap:nowrap;justify-content:space-between;gap:0;margin-top:8px;}
+ body.catalog-page #indexView.collection-page .catalog-tabs a{white-space:nowrap;flex-shrink:0;padding-inline:3px;}
+}
