@@ -372,3 +372,7 @@ body.catalog-page #indexView.directory-page .index-controls label{gap:0;}
 @media(max-width:600px){.festival-heading img{height:62px;max-width:260px;}.festival-fixed-map{height:500px;}.festival-year{margin:14px 0;}.festival-map-theatre{width:120px;}.festival-venue-card{padding:12px;grid-template-columns:80px 1fr;}.festival-venue-card h3{font-size:20px;}}
 .festival-map-base .leaflet-tile-pane{opacity:.72;}.festival-map-note{font:12px/1.5 var(--sans);color:var(--muted);margin:0 0 20px;}
 .festival-venue-card[aria-current],.festival-map-theatre[aria-current]{outline:2px solid var(--link);outline-offset:3px;}.festival-selected-articles{margin-top:32px;}.festival-selected-articles h2{scroll-margin-top:110px;}.festival-clear{display:inline-block;margin-bottom:20px;}
+
+/* Profiles share the index's sticky surname tabs, without hiding other letters. */
+@media(max-width:600px){body.catalog-page .profiles-alphabet{display:grid;grid-template-columns:repeat(14,minmax(0,1fr));gap:2px;padding-top:6px;}body.catalog-page .profiles-alphabet :is(a,span){min-width:0;min-height:30px;padding:2px 0;font-size:11px;}}
+@media(max-width:359px){body.catalog-page .profiles-alphabet{grid-template-columns:repeat(10,minmax(0,1fr));}}

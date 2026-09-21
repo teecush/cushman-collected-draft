@@ -1,10 +1,11 @@
-import {theatreIllustration, renderFestivalMap, festivalLocation} from './festival-map.js?v=172';
-import {serialize, publicationYear, normalize} from './catalog-engine.js?v=172';
-import {COLLECTIONS} from './collections-engine.js?v=172';
+import {INDEX_LETTERS,indexSections} from './index-engine.js?v=173';
+import {theatreIllustration, renderFestivalMap, festivalLocation} from './festival-map.js?v=173';
+import {serialize, publicationYear, normalize} from './catalog-engine.js?v=173';
+import {COLLECTIONS} from './collections-engine.js?v=173';
 
 export function createCollectionViews({state,els,h,node,link,button,openIndex,getCollections}) {
-  let activeMap=null, generation=0, artObserver=null;
-  const dispose=()=>{artObserver?.disconnect();artObserver=null;els.indexView.classList.remove('collection-page');generation++;activeMap?.remove();activeMap=null;document.querySelector('.collection-result-art')?.remove();};
+  let activeMap=null, generation=0, artObserver=null, alphabetObserver=null;
+  const dispose=()=>{alphabetObserver?.disconnect();alphabetObserver=null;artObserver?.disconnect();artObserver=null;els.indexView.classList.remove('collection-page');generation++;activeMap?.remove();activeMap=null;document.querySelector('.collection-result-art')?.remove();};
   function frame() {
     els.indexView.classList.add('collection-page');
     const back=els.indexView.querySelector(':scope > .back-link');
@@ -61,7 +62,7 @@ export function createCollectionViews({state,els,h,node,link,button,openIndex,ge
     els.indexContent.append(node('p','Artwork identifies the publications, shows, books, recordings and people discussed in this archive. Copyright remains with the respective rights holders. Source and licence details are listed below.','landing-intro'));
     const content=node('div',undefined,'image-credits');els.indexContent.append(content);
     try {
-      const response=await fetch(new URL('./assets/collections/credits.json?v=172',import.meta.url));
+      const response=await fetch(new URL('./assets/collections/credits.json?v=173',import.meta.url));
       if(!response.ok)throw new Error('Credits unavailable');
       const entries=await response.json();if(token!==generation)return;
       for(const asset of entries){
@@ -91,7 +92,7 @@ export function createCollectionViews({state,els,h,node,link,button,openIndex,ge
   function show(id,params) {
     const collection=getCollections().get(id);openIndex(collection.title,'');frame();
     if(collection.kind==='festival'){festival(collection,params);return;}
-    els.indexContent.append(node('p',collection.intro,'landing-intro'));
+    if(id!=='profiles')els.indexContent.append(node('p',collection.intro,'landing-intro'));
     if(id!=='television')els.indexContent.append(link('Search all '+collection.records.length.toLocaleString()+' articles',resultsHref(collection),'primary-action'));
     if(collection.kind==='early'){
       els.indexContent.append(recordList(collection.records,collection.title));
@@ -108,12 +109,37 @@ export function createCollectionViews({state,els,h,node,link,button,openIndex,ge
       const featured=items.filter(item=>id!=='musicals'||item.records.length>=2);
       const single=items.filter(item=>id==='musicals'&&item.records.length<2);
       content.replaceChildren();
-      const gallery=node('div',undefined,'collection-gallery '+collection.kind);gallery.append(...featured.map(item=>itemCard(collection,item)));content.append(gallery);fitTitles(gallery);
+      if(id==='profiles')profileGallery(collection,featured,content,search.value);
+      else {const gallery=node('div',undefined,'collection-gallery '+collection.kind);gallery.append(...featured.map(item=>itemCard(collection,item)));content.append(gallery);fitTitles(gallery);}
       if(single.length){content.append(node('h2','More musicals, A–Z'));const list=node('div',undefined,'catalog-index-list');for(const item of single)list.append(itemLink(collection,item,item.title));content.append(list);}
       if(!items.length)content.append(node('p','No titles match this search.'));
       if(collection.ungrouped.length&&!query){content.append(node('h2',id==='sondheim'?'Essays, profiles and other writing':'More writing'),recordList(collection.ungrouped,collection.title));}
     };
     search.addEventListener('input',()=>{const p=new URLSearchParams();if(search.value)p.set('q',search.value);history.replaceState(null,'','#collection:'+id+(p.size?'?'+p:''));draw();});draw();
+  }
+  function profileGallery(collection,items,content,query) {
+    const sortText=item=>h.indexSortText(item.title,'people');
+    const sorted=[...items].sort((a,b)=>sortText(a).localeCompare(sortText(b)));
+    const alpha=node('nav',undefined,'index-alphabet profiles-alphabet');alpha.setAttribute('aria-label','Jump to a surname');
+    content.append(alpha);const headings=new Map();
+    for(const [initial,group] of indexSections(sorted,sortText)){
+      const section=node('section',undefined,'index-letter-section');
+      const heading=node('h2',initial);heading.id='profiles-letter-'+(initial==='0–9'?'numbers':initial==='#'?'other':initial.toLowerCase());heading.tabIndex=-1;
+      section.setAttribute('aria-labelledby',heading.id);headings.set(initial,heading);
+      const gallery=node('div',undefined,'collection-gallery portraits');gallery.append(...group.map(item=>itemCard(collection,item)));section.append(heading,gallery);content.append(section);
+    }
+    const route=letter=>{const p=new URLSearchParams();if(query)p.set('q',query);p.set('letter',letter);return '#collection:profiles?'+p;};
+    const jump=letter=>{const heading=headings.get(letter);if(!heading)return;history.replaceState(null,'',route(letter));alpha.querySelectorAll('a').forEach(a=>{if(a.dataset.letter===letter)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current');});heading.scrollIntoView({block:'start'});heading.focus({preventScroll:true});};
+    for(const initial of INDEX_LETTERS){
+      if(initial==='#'&&!headings.has(initial))continue;
+      if(!headings.has(initial)){const empty=node('span',initial);empty.setAttribute('aria-disabled','true');alpha.append(empty);continue;}
+      const a=link(initial,route(initial));a.dataset.letter=initial;a.setAttribute('aria-label','Jump to '+initial);
+      a.addEventListener('click',event=>{if(event.button||event.metaKey||event.ctrlKey||event.shiftKey||event.altKey)return;event.preventDefault();jump(initial);});alpha.append(a);
+    }
+    alpha.hidden=!items.length;
+    const measure=()=>content.style.setProperty('--index-alphabet-height',alpha.getBoundingClientRect().height+'px');
+    alphabetObserver?.disconnect();alphabetObserver=new ResizeObserver(measure);alphabetObserver.observe(alpha);
+    fitTitles(content);requestAnimationFrame(()=>{measure();const letter=new URLSearchParams(location.hash.split('?')[1]||'').get('letter');if(letter)jump(letter);});
   }
   function festival(collection,params) {
     const heading=els.indexContent.querySelector('h1');
