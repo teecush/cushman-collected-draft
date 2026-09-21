@@ -1,7 +1,8 @@
-import {spotlightRecord} from './collections-engine.js?v=156';
-import { createCatalog } from "./catalog.js?v=156";
-import { FEATURES } from "./features.js?v=156";
-const DATA_URL = new URL("../site_export/data/catalog.json?v=156", import.meta.url);
+import {renderHomeCollections} from './home-collections.js?v=157';
+import {spotlightRecord} from './collections-engine.js?v=157';
+import { createCatalog } from "./catalog.js?v=157";
+import { FEATURES } from "./features.js?v=157";
+const DATA_URL = new URL("../site_export/data/catalog.json?v=157", import.meta.url);
 const ALIASES_URL = new URL("../site_export/data/route_aliases.json?v=1", import.meta.url);
 const STANDALONE_CORRESPONDENCE_URL = new URL("../site_export/data/standalone_correspondence.json?v=4", import.meta.url);
 const CONTENT_ROOT = new URL("../site_export/content/reviews/", import.meta.url);
@@ -2439,19 +2440,21 @@ function renderFrontpageDirectory() {
 
 function renderCurrentFeature() {
   const record = spotlightRecord(state.records);
-  if (!els.currentFeature || !record) return;
+  if (!els.currentFeature) return;
+  els.currentFeature.hidden = !record;
+  if (!record) { els.currentFeature.replaceChildren(); delete els.currentFeature.dataset.slug; return; }
   if (els.currentFeature.dataset.slug === record.slug) return;
   els.currentFeature.dataset.slug = record.slug;
-  els.currentFeature.setAttribute('aria-label', 'Article Spotlight');
+  els.currentFeature.setAttribute('aria-label', 'On This Day');
   const make = (tag, text, cls) => {const el=document.createElement(tag);el.textContent=text||'';if(cls)el.className=cls;return el;};
   const card=make('article','','spotlight-card');
   const copy=make('div','','spotlight-copy');
-  const kicker=make('span','Article Spotlight','frontpage-kicker');
+  const kicker=make('span','On This Day','frontpage-kicker');
   const title=make('h2',record.title);
   const meta=make('p',[formatDate(record),articlePublicationLabel(record)].filter(Boolean).join(' · '),'spotlight-meta');
-  const excerpt=make('p','From Robert Cushman’s archive. A different article to discover each day.','spotlight-excerpt');
+  const excerpt=make('p','Published on this day in Robert Cushman’s archive.','spotlight-excerpt');
   const read=make('a','Read article','primary-action');read.href='#review:'+record.slug;
-  const context={contextLabel:'Article Spotlight',backHref:'#home',records:[record]};
+  const context={contextLabel:'On This Day',backHref:'#home',records:[record]};
   read.addEventListener('click',event=>storeArticleContext(event,record,context));
   copy.append(kicker,title,meta,excerpt,read);
   const date=make('div','','spotlight-date');date.setAttribute('aria-hidden','true');
@@ -5675,7 +5678,7 @@ async function init() {
       fetch(DATA_URL),
       fetch(ALIASES_URL),
       fetch(STANDALONE_CORRESPONDENCE_URL).catch(() => null),
-      fetch(new URL('./collection-curation.json?v=156', import.meta.url)),
+      fetch(new URL('./collection-curation.json?v=157', import.meta.url)),
     ]);
     if (!response.ok) throw new Error(`Could not load records (${response.status})`);
     state.records = await response.json();
@@ -5841,6 +5844,8 @@ function correspondenceTranscript(item) {
 // Recreate the original homepage only; the catalog engine keeps all fixes.
 let homeMapObserver;
 function renderClassicHome() {
+  els.searchInput.placeholder = '';
+  renderHomeCollections(document.querySelector('#homeCollections'),state.collectionCuration);
   document.querySelector('#homeMap').hidden = false;
   renderFrontpageDirectory();
   renderCurrentFeature();

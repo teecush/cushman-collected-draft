@@ -1,5 +1,5 @@
-import {serialize, publicationYear, normalize} from './catalog-engine.js?v=156';
-import {COLLECTIONS} from './collections-engine.js?v=156';
+import {serialize, publicationYear, normalize} from './catalog-engine.js?v=157';
+import {COLLECTIONS} from './collections-engine.js?v=157';
 
 export function createCollectionViews({state,els,h,node,link,button,openIndex,getCollections}) {
   let activeMap=null, generation=0;

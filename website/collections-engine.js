@@ -1,4 +1,4 @@
-import {normalize, publicationYear} from './catalog-engine.js?v=156';
+import {normalize, publicationYear} from './catalog-engine.js?v=157';
 export const COLLECTIONS = [
   {id:'shakespeare',title:'Shakespeare',kind:'plays',href:'#section:shakespeare',intro:'The plays, the productions, and a lifetime of returning to Shakespeare.'},
   {id:'sondheim',title:'Sondheim',kind:'musicals',intro:'The musicals, the lyrics, and the art of Stephen Sondheim.'},
@@ -17,10 +17,11 @@ export function spotlightRecord(records, date = new Date()) {
   records = records.filter(record => !record.authorship_note && record.author !== "Unknown");
   if (!records.length) return null;
   const day = new Intl.DateTimeFormat('en-CA',{timeZone:'America/Toronto',year:'numeric',month:'2-digit',day:'2-digit'}).format(date);
-  const dayNumber = Math.floor(Date.parse(day + 'T00:00:00Z') / 86400000);
-  const hash = value => {let n=2166136261;for(const c of value)n=Math.imul(n^c.charCodeAt(0),16777619);return n>>>0;};
-  const shuffled = [...records].sort((a,b)=>hash(a.slug)-hash(b.slug)||a.slug.localeCompare(b.slug));
-  return shuffled[((dayNumber % shuffled.length)+shuffled.length)%shuffled.length];
+  const anniversary = records.filter(record => record.date?.slice(5) === day.slice(5) && record.date.slice(0,4) < day.slice(0,4) && (!record.date_precision || record.date_precision === 'day'));
+  if (!anniversary.length) return null;
+  // Rotate among matching dates each year, independent of catalog ordering.
+  const sorted = anniversary.sort((a,b)=>a.slug.localeCompare(b.slug));
+  return sorted[Number(day.slice(0,4)) % sorted.length];
 }
 export function makeCollections(records, h, curation = {}) {
   const overrides = curation.records || {};

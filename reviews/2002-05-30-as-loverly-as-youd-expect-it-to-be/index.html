@@ -13,9 +13,9 @@
     <link rel="apple-touch-icon" href="../apple-touch-icon.svg">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Rubik:wght@400;600;700;800;900&display=swap">
-    <link rel="stylesheet" href="./styles.css?v=156">
-    <link rel="stylesheet" href="./catalog.css?v=156">
-    <link rel="stylesheet" href="./classic.css?v=156">
+    <link rel="stylesheet" href="./styles.css?v=157">
+    <link rel="stylesheet" href="./catalog.css?v=157">
+    <link rel="stylesheet" href="./classic.css?v=157">
   </head>
   <body class="article-open">
     <a class="skip-link" href="#main-content">Skip to content</a>
@@ -147,7 +147,7 @@
               <strong>Search</strong>
               <em id="archiveCount" aria-live="polite">Loading articles...</em>
             </span>
-            <input id="searchInput" aria-label="Search titles, works, people and places" type="search" autocomplete="off" placeholder="Title, production, company, person, city">
+            <input id="searchInput" aria-label="Search titles, works, people and places" type="search" autocomplete="off">
           </label>
         </div>
         <button class="filter-toggle" id="filterToggle" type="button" aria-expanded="false" aria-controls="filterControls">
@@ -179,11 +179,13 @@
         <div class="results" id="results"></div>
       </section>
 
-      <section class="current-feature" id="currentFeature" aria-label="Article Spotlight"></section>
-
       <section class="browse-heading frontpage-browse-heading" aria-label="Browse the archive heading">
         <h2>Browse the Archive</h2>
       </section>
+
+      <section id="homeCollections" aria-label="Collections and publications"></section>
+
+      <section class="current-feature" id="currentFeature" aria-label="On This Day"></section>
 
       <section class="frontpage-directory" id="frontpageDirectory" aria-label="Primary site paths"></section>
 
@@ -291,6 +293,6 @@
       </section>
     </footer>
 
-    <script src="./app.js?v=156" type="module"></script>
+    <script src="./app.js?v=157" type="module"></script>
   </body>
 </html>

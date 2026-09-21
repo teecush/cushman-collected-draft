@@ -1,12 +1,21 @@
 import assert from 'node:assert/strict';
 import {spotlightRecord,makeCollections,workKey} from '../../website/collections-engine.js';
 import {parse,serialize} from '../../website/catalog-engine.js';
-const records=Array.from({length:100},(_,i)=>({slug:'article-'+i}));
+const records=[
+ {slug:'same-day-a',date:'1974-09-21',date_precision:'day'},
+ {slug:'same-day-b',date:'2001-09-21',date_precision:'day'},
+ {slug:'yesterday',date:'1980-09-20'},
+ {slug:'uncertain',date:'1980-09-21',date_precision:'month'},
+ {slug:'unsigned',date:'1980-09-21',authorship_note:'Unconfirmed'},
+ {slug:'today',date:'2026-09-21'},
+];
 assert.equal(spotlightRecord([]),null);
-assert.equal(spotlightRecord([{slug:'unsigned',author:'Unknown',authorship_note:'Unconfirmed'}]),null,'Unconfirmed authorship is not featured as Robert’s writing');
-assert.equal(spotlightRecord([{slug:'unsigned',authorship_note:'Unconfirmed'},{slug:'signed'}]).slug,'signed');
-assert.equal(spotlightRecord(records,new Date('2026-09-21T03:59:59Z')).slug,spotlightRecord([...records].reverse(),new Date('2026-09-20T04:00:00Z')).slug,'Same Toronto calendar day and record order independent');
-assert.notEqual(spotlightRecord(records,new Date('2026-09-21T03:59:59Z')).slug,spotlightRecord(records,new Date('2026-09-21T04:00:00Z')).slug,'Spotlight changes at Toronto midnight');
+const date=new Date('2026-09-21T16:00:00Z');
+assert(['same-day-a','same-day-b'].includes(spotlightRecord(records,date).slug));
+assert.equal(spotlightRecord(records,date).slug,spotlightRecord([...records].reverse(),date).slug);
+assert.equal(spotlightRecord(records,new Date('2026-09-21T03:59:59Z')).slug,'yesterday','Toronto date is still September 20 before local midnight');
+assert.equal(spotlightRecord(records,new Date('2026-09-22T16:00:00Z')),null,'No false anniversary when there is no exact historical date');
+assert.equal(spotlightRecord(records.slice(3),date),null,'Exclude uncertain, unsigned and current-year records');
 const route={shelf:'musicals',item:'into-the-woods',from:'2000',to:'2009',origin:'#collection:musicals'};
 assert.deepEqual(Object.fromEntries(Object.entries(parse(serialize(route))).filter(([,v])=>v)),route,'Collection scopes survive shared URL roundtrip');
 const sample=[
