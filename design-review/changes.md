@@ -4,15 +4,15 @@ Main: https://teecush.github.io/cushman-collected-draft/website/
 Preview: https://teecush.github.io/cushman-collected-draft/design-preview/
 Comparison and review checklist: https://teecush.github.io/cushman-collected-draft/design-review/
 
-## Design changes rolled back
+## Design comparison and approved updates
 
 ### D01 — Desktop navigation
 
-**Main site:** The earlier search icon and Current, Browse, Explore and About menus, including their dropdown links.
+**Main site:** The earlier header layout, now labelled Recent, Browse, Explore and About. Browse has the family-approved Collections, Indexes and Publications menus.
 
 **Preview:** The simplified Catalog, Collections, Latest writing, About and labelled Search navigation.
 
-Menu labels, grouping and search placement are restored; links still use the repaired routes.
+Updated after the family review: fixed publication choices; All Works, All People, Publications and Places under Indexes; Categories removed from the menu.
 
 ### D02 — Phone navigation
 
@@ -32,11 +32,11 @@ The original “over forty years” wording is back for comparison; the catalog 
 
 ### D04 — Homepage search
 
-**Main site:** The grey Search the Archive panel directly beneath the introduction.
+**Main site:** The grey Search the Archive panel beneath the introduction, with an explicit Search button, a visible article-text option and collapsed Advanced Search.
 
 **Preview:** A dedicated search-and-button row with four prominent starting links.
 
-The original placement and appearance are back. The search itself retains the improved matching and filters.
+Typing waits for Enter or Search. Focusing the field leaves filters collapsed. The article-text checkbox is aligned beside the scope explanation on desktop.
 
 ### D05 — Homepage directories
 
@@ -48,11 +48,11 @@ The original Browse the Archive heading and directory content are restored. Coun
 
 ### D06 — Featured writing
 
-**Main site:** The larger original feature, before the directories, with its photograph, Latest current article label, Open Current Collection link and Newest sidebar.
+**Main site:** Article Spotlight between Search and Browse: a different archival article each Toronto calendar day, with its date, publication and excerpt.
 
 **Preview:** A smaller feature below the starting links, labelled Latest writing. On phones the redesigned feature hides the photo and Newest sidebar.
 
-The earlier size, ordering and image treatment return. Both versions show the same latest article.
+The latest-current feature was replaced at the family’s request. The preview preserves the September latest-writing feature.
 
 ### D07 — Homepage map
 
@@ -80,19 +80,19 @@ The original expanded presentation is restored. Jump to article text remains ava
 
 ### D10 — Current landing page
 
-**Main site:** The earlier image-led Current gallery with its introductory text and large latest article card.
+**Main site:** The earlier image-led gallery, renamed Recent, with its introductory text and large latest article card.
 
 **Preview:** A filtered catalog of Latest writing.
 
-The gallery is back; opening an article and returning now retains the Current context.
+The Recent label replaces Current throughout the main public interface. Existing Current links still work.
 
 ### D11 — Collections, Browse and Indexes landing pages
 
-**Main site:** The original introductory text and card grids for Collections, Browse and Indexes.
+**Main site:** New themed collection galleries: Sondheim and Musicals artwork, matching Stratford/Shaw venue maps, television frames, album and book shelves, portraits, and Early Writing from 1963–1966. Shakespeare remains as before.
 
 **Preview:** New collection descriptions/cards; Browse and Indexes entry links lead directly into the shared catalog.
 
-These landing pages are restored. Searchable people/works indexes and scoped article results remain the improved versions.
+The homepage Browse the Archive directory remains unchanged at the family’s request. The new collections have scoped article pages; the preview keeps the earlier collection design.
 
 ### D12 — About page content
 
@@ -112,29 +112,29 @@ The earlier content and labels are restored. Newsletter signup is still explicit
 
 ### D14 — Catalog and control styling
 
-**Main site:** Search the Archive heading, earlier archive width/spacing, square controls, underlined fields and stronger black rules that fit the original visual style.
+**Main site:** Matching Search the Archive, Works A–Z, People A–Z and Publications headings, aligned tabs and controls, and more space above index fields.
 
 **Preview:** Catalog heading, more restrained archive spacing and the redesigned rounded/outlined fields, tabs and control treatment.
 
-The controls themselves remain because they provide the retained navigation improvements.
+All matching index entries load together. Sticky alphabet tabs jump down the page. Publications has masthead cards and no alphabet strip.
 
 ## Improvements retained
 
 ### K01 — Search and filtering
 
-Visible usability improvement. Titles, works, credited people and places remain searchable. Publication, year range, subject, form, collection and advanced company/place/person/role/source filters remain, with removable active-filter labels and clear empty states.
+Visible usability improvement. Titles, works, credited people and places remain searchable. Publication, year range, subject, form, collection and advanced company/place/person/role/source filters remain, with removable active-filter labels and clear empty states. On the main site, keyword search now waits for Enter or Search; other filters sit in an initially collapsed Advanced Search section.
 
 ### K02 — Optional article-text search
 
-Visible usability improvement. Readers can choose to search article text. The separate text index is downloaded only when requested.
+Visible usability improvement. Readers can choose to search article text. The separate text index is downloaded only when requested. The option stays visible beside the search explanation on desktop and on its own aligned row on phones.
 
 ### K03 — Searchable people and works indexes
 
-Visible usability improvement. Given-name and surname matching, role/kind selection, A–Z filtering and most-covered ordering remain. Results load in groups of 100 instead of rendering every entry at once.
+Visible usability improvement. Searchable People and Works indexes remain. Following the family review, the main site now loads every matching entry, with sticky A–Z tabs that jump to sections. Counts appear only above one article. Works and People default to A–Z; Publications defaults to Most covered, with no alphabet strip in either sort order. Publications with at least five articles have masthead/name cards. Chris Abraham now has 41 articles after the spelling correction. Headings, tabs and controls align across catalog views. The preview retains its earlier index layout.
 
 ### K04 — Article return and browser Back
 
-Navigation repair. Query, filters, Shakespeare subgroup, sort order, loaded result count and browse origin remain in the URL/context. Returning from an article restores the result list and position. Direct article visits show an honest Browse more link.
+Navigation repair. Query, filters, Shakespeare subgroup, sort order, loaded result count and browse origin remain in the URL/context. Returning from an article restores the result list and position. Direct article visits show an honest Browse more link. Browser history also restores article reading position. Going Home starts at the top.
 
 ### K05 — Complete, scoped results
 
@@ -146,11 +146,11 @@ Visible usability improvement. The revised functional Explorer remains: combinab
 
 ### K07 — Timeline
 
-Visible usability improvement. The working Chronology alias, year selector, previous/next-year controls and keyboard-operable slider remain. Year and loaded count are preserved. The old drag-only visual timeline has not been restored.
+Visible usability improvement. Following the family review, the main site restores clickable year bars showing the number of articles, replacing the dropdown and slider. Keyboard year navigation, the Chronology alias, shareable year and loaded count, complete results and previous/next controls remain. Recorded dates supply missing year fields; genuinely undated writing has its own list. The preview retains the dropdown/slider version.
 
 ### K08 — Map filtering and place scope
 
-Visible usability improvement. Filtering actually hides non-matches. Search, List/Map and list choices, and layer controls remain outside the map. Same-named venues retain their city scope, including an explicit city-not-recorded value. A list provides an alternative to map interaction.
+Visible usability improvement. Filtering actually hides non-matches. Search, List/Map and list choices, and layer controls remain outside the map. Same-named venues retain their city scope, including an explicit city-not-recorded value. A list provides an alternative to map interaction. Places now embeds the map beneath Browse Cities and Browse Venues, with a separate full-map link. Stratford and Shaw collection maps filter by season and link to scoped venue articles.
 
 ### K09 — Reading tools
 

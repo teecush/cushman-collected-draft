@@ -1,6 +1,7 @@
-import { createCatalog } from "./catalog.js?v=149";
-import { FEATURES } from "./features.js?v=149";
-const DATA_URL = new URL("../site_export/data/catalog.json?v=149", import.meta.url);
+import {spotlightRecord} from './collections-engine.js?v=155';
+import { createCatalog } from "./catalog.js?v=155";
+import { FEATURES } from "./features.js?v=155";
+const DATA_URL = new URL("../site_export/data/catalog.json?v=155", import.meta.url);
 const ALIASES_URL = new URL("../site_export/data/route_aliases.json?v=1", import.meta.url);
 const STANDALONE_CORRESPONDENCE_URL = new URL("../site_export/data/standalone_correspondence.json?v=4", import.meta.url);
 const CONTENT_ROOT = new URL("../site_export/content/reviews/", import.meta.url);
@@ -31,7 +32,7 @@ const SHAKESPEARE_GROUPS = [
   },
 ];
 const PUBLIC_COLLECTION_FILTERS = [
-  "Current Collection",
+  "Recent Collection",
   "The Canadian Collection",
   "UK Collection",
   SHAKESPEARE_COLLECTION,
@@ -1025,7 +1026,7 @@ function sortRecordsChronologically(records) {
 }
 
 function collectionNames(record) {
-  const names = Array.isArray(record.collections) ? record.collections.filter(Boolean) : [];
+  const names = Array.isArray(record.collections) ? record.collections.filter(Boolean).map(name => name === "Current Collection" ? "Recent Collection" : name) : [];
   if (SHAKESPEARE_DERIVED_COLLECTIONS.some((name) => names.includes(name)) && !names.includes(SHAKESPEARE_COLLECTION)) {
     return [...names, SHAKESPEARE_COLLECTION];
   }
@@ -1033,7 +1034,7 @@ function collectionNames(record) {
 }
 
 function hasExplicitShakespeareCollection(record) {
-  const names = Array.isArray(record.collections) ? record.collections.filter(Boolean) : [];
+  const names = Array.isArray(record.collections) ? record.collections.filter(Boolean).map(name => name === "Current Collection" ? "Recent Collection" : name) : [];
   return SHAKESPEARE_DERIVED_COLLECTIONS.some((name) => names.includes(name));
 }
 
@@ -1280,6 +1281,7 @@ function recordVenueCityPairs(record) {
         venue,
         city: cities[index] || cities[0] || splitCityList(record.city)[0] || "",
         coordinates: normalizePointCoordinates(group.coordinates),
+        productionTitle: group.production_title || "",
       }));
     } else {
       cities.forEach((city) => pairs.push({ venue: "", city, coordinates: normalizePointCoordinates(group.coordinates) }));
@@ -1288,7 +1290,7 @@ function recordVenueCityPairs(record) {
   if (pairs.length) return pairs;
   const venues = splitEntityList(record.venue);
   const cities = splitCityList(record.city);
-  venues.forEach((venue, index) => pairs.push({ venue, city: cities[index] || cities[0] || "", coordinates: null }));
+  venues.forEach((venue, index) => pairs.push({ venue, city: cities[index] || cities[0] || "", coordinates: null, productionTitle: productionLabelValues(record.production_title)[index] || productionLabelValues(record.production_title)[0] || "" }));
   return pairs;
 }
 
@@ -1809,7 +1811,7 @@ function populateFilters() {
 }
 
 function shakespeareGroup(record) {
-  const rawCollections = Array.isArray(record.collections) ? record.collections.filter(Boolean) : [];
+  const rawCollections = Array.isArray(record.collections) ? record.collections.filter(Boolean).map(name => name === "Current Collection" ? "Recent Collection" : name) : [];
   if (rawCollections.includes("Riffs on Shakespeare")) return "adaptations";
   if (rawCollections.includes("Thoughts on Shakespeare")) return "thoughts";
   if (shakespearePlayValues(record).length) return "plays";
@@ -2183,10 +2185,10 @@ function landingItem(title, href, count, description, records, unit = "records")
 function renderLandingPage(kind) {
   const config = {
     current: {
-      title: "Current",
-      count: `${countForTile("Current Collection", "collections").toLocaleString()} articles`,
+      title: "Recent",
+      count: `${countForTile("Recent Collection", "collections").toLocaleString()} articles`,
       intro: "Recent self-published writing from the original Cushman Collected site.",
-      items: [landingItem("Current Collection", "#section:current", countForTile("Current Collection", "collections"), "", state.records.filter((record) => collectionNames(record).includes("Current Collection")))],
+      items: [landingItem("Recent Collection", "#section:current", countForTile("Recent Collection", "collections"), "", state.records.filter((record) => collectionNames(record).includes("Recent Collection")))],
     },
     browse: {
       title: "Browse",
@@ -2234,10 +2236,10 @@ function renderLandingPage(kind) {
 
 function renderCurrentLanding() {
   const records = state.records
-    .filter((record) => collectionNames(record).includes("Current Collection"))
+    .filter((record) => collectionNames(record).includes("Recent Collection"))
     .sort((a, b) => String(b.date).localeCompare(String(a.date)));
   const title = document.createElement("h1");
-  title.textContent = "Current";
+  title.textContent = "Recent";
   const count = document.createElement("p");
   count.className = "index-count";
   count.textContent = countUnitText(records.length, "article", "articles");
@@ -2250,7 +2252,7 @@ function renderCurrentLanding() {
     const link = document.createElement("a");
     link.className = `current-landing-card${index === 0 ? " is-latest" : ""}`;
     link.href = `#review:${record.slug}`;
-    link.addEventListener("click", event => storeArticleContext(event, record, {records, contextLabel: "Current Collection", backHref: "#section:current"}));
+    link.addEventListener("click", event => storeArticleContext(event, record, {records, contextLabel: "Recent Collection", backHref: "#section:current"}));
     const media = record.media?.[0];
     if (media?.local_path) {
       const img = document.createElement("img");
@@ -2436,59 +2438,31 @@ function renderFrontpageDirectory() {
 }
 
 function renderCurrentFeature() {
-  if (!els.currentFeature) return;
-  const currentRecords = state.records
-    .filter((record) => collectionNames(record).includes("Current Collection"))
-    .sort((a, b) => String(b.date).localeCompare(String(a.date)));
-  const current = currentRecords[0];
-  if (!current) {
-    els.currentFeature.replaceChildren();
-    return;
-  }
-  const media = current.media?.[0];
-  const card = document.createElement("article");
-  card.className = "current-feature-card";
-  if (media?.local_path) {
-    const imageLink = document.createElement("a");
-    imageLink.className = "current-feature-image";
-    imageLink.href = `#review:${current.slug}`;
-    const img = document.createElement("img");
-    img.src = mediaAssetUrl(media.local_path);
-    img.alt = media.alt || media.caption || current.title;
-    imageLink.append(img);
-    card.append(imageLink);
-  }
-  const copy = document.createElement("div");
-  copy.className = "current-feature-copy";
-  const kicker = document.createElement("span");
-  kicker.className = "current-feature-kicker";
-  kicker.textContent = FEATURES.redesignedHome ? "Latest writing" : "Latest current article";
-  const title = document.createElement("h2");
-  title.textContent = current.title;
-  const meta = document.createElement("p");
-  meta.textContent = [formatDate(current.date), ...productionParts(current)].filter(Boolean).join(" / ");
-  const readLink = document.createElement("a");
-  readLink.className = "current-read-link";
-  readLink.href = `#review:${current.slug}`;
-  readLink.textContent = "Read latest";
-  const currentLink = document.createElement("a");
-  currentLink.className = "current-page-link";
-  currentLink.href = "#section:current";
-  currentLink.textContent = FEATURES.redesignedHome ? "All writing for Cushman Collected" : "Open Current Collection";
-  copy.replaceChildren(kicker, title, meta, readLink, currentLink);
-  const latest = document.createElement("aside");
-  latest.className = "current-feature-latest";
-  const latestTitle = document.createElement("span");
-  latestTitle.textContent = "Newest";
-  latest.append(latestTitle);
-  currentRecords.slice(0, 5).forEach((record) => {
-    const item = document.createElement("a");
-    item.href = `#review:${record.slug}`;
-    item.innerHTML = `<strong>${record.title}</strong><em>${formatDate(record)}</em>`;
-    latest.append(item);
-  });
-  card.append(copy, latest);
-  els.currentFeature.replaceChildren(card);
+  const record = spotlightRecord(state.records);
+  if (!els.currentFeature || !record) return;
+  if (els.currentFeature.dataset.slug === record.slug) return;
+  els.currentFeature.dataset.slug = record.slug;
+  els.currentFeature.setAttribute('aria-label', 'Article Spotlight');
+  const make = (tag, text, cls) => {const el=document.createElement(tag);el.textContent=text||'';if(cls)el.className=cls;return el;};
+  const card=make('article','','spotlight-card');
+  const copy=make('div','','spotlight-copy');
+  const kicker=make('span','Article Spotlight','frontpage-kicker');
+  const title=make('h2',record.title);
+  const meta=make('p',[formatDate(record),articlePublicationLabel(record)].filter(Boolean).join(' · '),'spotlight-meta');
+  const excerpt=make('p','From Robert Cushman’s archive. A different article to discover each day.','spotlight-excerpt');
+  const read=make('a','Read article','primary-action');read.href='#review:'+record.slug;
+  const context={contextLabel:'Article Spotlight',backHref:'#home',records:[record]};
+  read.addEventListener('click',event=>storeArticleContext(event,record,context));
+  copy.append(kicker,title,meta,excerpt,read);
+  const date=make('div','','spotlight-date');date.setAttribute('aria-hidden','true');
+  date.append(make('span','From the archive'),make('strong',String(record.year||record.date?.slice(0,4)||'Undated')),make('span',articlePublicationLabel(record)));
+  card.append(date,copy);els.currentFeature.replaceChildren(card);
+  fetchArticleMarkdown(record).then(markdown=>{
+    if(els.currentFeature.dataset.slug!==record.slug)return;
+    const body=markdown.replace(/^---[\s\S]*?\n---\s*/, '').split(/\n\s*\n/);
+    const paragraph=body.map(p=>p.trim()).find(p=>p.length>100&&!/^(#|\[|!|<)/.test(p));
+    if(paragraph){const plain=paragraph.replace(/\[([^\]]+)\]\([^)]*\)/g,'$1').replace(/[*_`]/g,'').replace(/\s+/g,' ');excerpt.textContent=plain.length>350?plain.slice(0,350).replace(/\s+\S*$/,'')+'…':plain;}
+  }).catch(()=>{});
 }
 
 function frontpageSection(section) {
@@ -3689,7 +3663,7 @@ function renderHomeMap() {
 }
 
 function renderArchiveMap(container, points, options = {}) {
-  if (!container || !points.length) return null;
+  if (!container || (!points.length && !options.venues?.length)) return null;
   if (options.existingMap) options.existingMap.remove();
   container.replaceChildren();
   if (!options.compact && window.L) return renderLeafletMap(container, points, options);
@@ -3744,7 +3718,11 @@ function renderLeafletMap(container, points, options = {}) {
       }),
     }).addTo(map);
     const precisionNote = point.precision === "city" ? "<br><em>Approximate city-level point</em>" : "";
-    marker.bindPopup(`<strong>${point.label}</strong>${point.city || ""}${precisionNote}<br>${point.count.toLocaleString()} article references<br><a href="#archive?venue=${encodeURIComponent(point.label)}&city=${encodeURIComponent(point.city || "__unspecified__")}">Open venue articles</a>`);
+    const venuePopup=document.createElement('div');
+    const venueTitle=document.createElement('strong');venueTitle.textContent=point.label;
+    const venueInfo=document.createElement('p');venueInfo.textContent=[point.city,point.precision==='city'?'Approximate city-level point':'',point.count.toLocaleString()+' article references'].filter(Boolean).join(' · ');
+    const venueLink=document.createElement('a');venueLink.href=options.venueLink?options.venueLink(point):`#archive?venue=${encodeURIComponent(point.label)}&city=${encodeURIComponent(point.city || '__unspecified__')}`;venueLink.textContent='Open venue articles';
+    venuePopup.append(venueTitle,venueInfo,venueLink);marker.bindPopup(venuePopup);
     marker._cushmanMarkerType = "venue";
     marker._cushmanApproximate = point.precision === "city";
     venueMarkers.push(marker);
@@ -4080,7 +4058,7 @@ function archiveHrefForTile(title, key) {
 
 function slugForCollection(title) {
   const map = {
-    "Current Collection": "current",
+    "Recent Collection": "current",
     "The Canadian Collection": "canadian",
     "UK Collection": "uk",
     "The Stratford Collection": "stratford",
@@ -4094,7 +4072,8 @@ function slugForCollection(title) {
 
 function collectionFromSlug(slug) {
   const map = {
-    current: "Current Collection",
+    current: "Recent Collection",
+    recent: "Recent Collection",
     canadian: "The Canadian Collection",
     uk: "UK Collection",
     stratford: "The Stratford Collection",
@@ -5309,6 +5288,30 @@ function escapeRegExp(value) {
   return String(value).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
 
+let loadedArticleHash = '';
+let readingSaveTimer = null, lastReadingSave = 0;
+function saveReadingPosition() {
+  clearTimeout(readingSaveTimer);readingSaveTimer=null;
+  if (!document.body.classList.contains('article-open') || loadedArticleHash !== window.location.hash) return;
+  lastReadingSave=Date.now();
+  history.replaceState({...history.state, readingPosition:{hash:loadedArticleHash,y:window.scrollY}},'');
+}
+window.addEventListener('scroll',()=>{
+  if(Date.now()-lastReadingSave>=500)saveReadingPosition();
+  else if(!readingSaveTimer)readingSaveTimer=setTimeout(saveReadingPosition,500-(Date.now()-lastReadingSave));
+},{passive:true});
+window.addEventListener('pagehide',saveReadingPosition);
+document.addEventListener('click',saveReadingPosition,{capture:true});
+function restoreReadingPosition(hash) {
+  loadedArticleHash='';
+  const saved=history.state?.readingPosition;
+  const top=saved?.hash===hash&&Number.isFinite(saved.y)?saved.y:0;
+  requestAnimationFrame(()=>requestAnimationFrame(()=>{
+    if(window.location.hash!==hash)return;
+    window.scrollTo(0,top);loadedArticleHash=hash;
+  }));
+}
+
 async function showReview(slug) {
   const normalizedSlug = safeDecodeHashValue(slug);
   let record = state.records.find((item) => item.slug === normalizedSlug);
@@ -5419,7 +5422,7 @@ async function showReview(slug) {
   const backLink = els.articleView.querySelector(":scope > .back-link");
   if (backLink) backLink.hidden = Boolean(nav);
   els.articleView.hidden = false;
-  els.articleView.scrollIntoView({ behavior: "auto", block: "start" });
+  restoreReadingPosition(requestedHash);
 }
 
 function route() {
@@ -5431,7 +5434,7 @@ function route() {
   els.articleView.hidden = true;
   els.indexView.hidden = true;
   els.mapView.hidden = true;
-  document.body.classList.remove("article-open", "index-open", "map-open", "search-open");
+  document.body.classList.remove("article-open", "index-open", "map-open", "search-open", "catalog-page");
   els.drawer.querySelectorAll("a").forEach((link) => {
     const active = link.getAttribute("href") === hash;
     if (active) link.setAttribute("aria-current", "page");
@@ -5660,13 +5663,16 @@ function scrollToSection(selector) {
 
 async function init() {
   try {
-    const [response, aliasesResponse, standaloneResponse] = await Promise.all([
+    const [response, aliasesResponse, standaloneResponse, curationResponse] = await Promise.all([
       fetch(DATA_URL),
       fetch(ALIASES_URL),
       fetch(STANDALONE_CORRESPONDENCE_URL).catch(() => null),
+      fetch(new URL('./collection-curation.json?v=155', import.meta.url)),
     ]);
     if (!response.ok) throw new Error(`Could not load records (${response.status})`);
     state.records = await response.json();
+    if(!curationResponse.ok)throw new Error('Collection details could not load');
+    state.collectionCuration=await curationResponse.json();
     state.aliases = aliasesResponse.ok ? await aliasesResponse.json() : {};
     state.standaloneCorrespondence = standaloneResponse?.ok
       ? asArray((await standaloneResponse.json()).collections)
@@ -5687,6 +5693,7 @@ async function init() {
   state.hasActiveQuery = false;
   populateFilters();
   catalog.install();
+  setInterval(()=>{if((window.location.hash||'#home')==='#home')renderCurrentFeature();},60000);
   setupPresentation();
   route();
 }
@@ -5719,26 +5726,8 @@ els.drawer.addEventListener("click", (event) => {
   }
 });
 
-els.searchInput.addEventListener("input", (event) => {
-  if (!state.query && event.target.value) state.sort = "relevance";
-  state.query = event.target.value;
-  scheduleBodySearch(state.query);
-  scheduleFilterUpdate();
-});
-
-els.filterToggle.addEventListener("click", () => {
-  const open = els.filterControls.classList.toggle("is-open");
-  els.filterToggle.setAttribute("aria-expanded", String(open));
-});
-
-els.searchInput.addEventListener("focus", () => {
-  setArchiveExpanded(true);
-});
-
-els.searchInput.addEventListener("blur", () => {
-  if (!hasActiveFilters() && !document.body.classList.contains("search-open")) setArchiveExpanded(false);
-});
-
+// Keyword search commits only on the Search form's submit event.
+// Focusing or typing in the field does not expand Advanced search.
 els.collectionFilter.addEventListener("change", (event) => {
   state.collection = event.target.value;
   if (state.collection !== SHAKESPEARE_COLLECTION) state.shakespeareGroup = "";
@@ -5783,7 +5772,7 @@ window.addEventListener("hashchange", () => {
 });
 document.querySelector(".skip-link").addEventListener("click",event=>{event.preventDefault();const main=document.querySelector("main");main.focus();main.scrollIntoView({block:"start",behavior:"auto"});});
 
-const catalog = createCatalog({state, els, h: { FEATURES, TYPE_GROUPS, PUBLIC_COLLECTION_FILTERS, SHAKESPEARE_COLLECTION, MASTER_INDEX_PEOPLE_FILTERS, MASTER_INDEX_WORK_FILTERS, collectionNames, isExplicitShakespeareRecord, shakespeareGroup, typeGroup, articlePublicationLabel, isIncompleteArticle, entityValues, recordVenueCityPairs, entitySlug, masterIndexFilter, masterIndexEntries, recordMatchesQuery, sortRecords, sortRecordsChronologically, updateSortButtons, renderShakespeareNav, safeResultCard, restoreArchivePositionIfNeeded, archiveRestoreForHash, entityMap, entityType, indexSortText, indexDisplayLabel, renderCurrentFeature, renderTiles, renderFrontpageDirectory, renderClassicHome, renderLandingPage, collectionFromSlug, observerFarewellFeature, venueMapPoints }});
+const catalog = createCatalog({state, els, h: { FEATURES, TYPE_GROUPS, PUBLIC_COLLECTION_FILTERS, SHAKESPEARE_COLLECTION, MASTER_INDEX_PEOPLE_FILTERS, MASTER_INDEX_WORK_FILTERS, collectionNames, isExplicitShakespeareRecord, shakespeareGroup, typeGroup, articlePublicationLabel, isIncompleteArticle, entityValues, recordVenueCityPairs, entitySlug, masterIndexFilter, masterIndexEntries, recordMatchesQuery, sortRecords, sortRecordsChronologically, updateSortButtons, renderShakespeareNav, safeResultCard, restoreArchivePositionIfNeeded, archiveRestoreForHash, entityMap, entityType, indexSortText, indexDisplayLabel, renderCurrentFeature, renderTiles, renderFrontpageDirectory, renderClassicHome, renderLandingPage, collectionFromSlug, observerFarewellFeature, venueMapPoints, loadMapResources, renderArchiveMap, cityMapPoints, splitEntityList, formatDate }});
 
 init().catch((error) => {
   els.archiveCount.textContent = "Content export unavailable";

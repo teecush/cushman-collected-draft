@@ -13,58 +13,41 @@
     <link rel="apple-touch-icon" href="../apple-touch-icon.svg">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Rubik:wght@400;600;700;800;900&display=swap">
-    <link rel="stylesheet" href="./styles.css?v=149">
-    <link rel="stylesheet" href="./catalog.css?v=149">
-    <link rel="stylesheet" href="./classic.css?v=149">
+    <link rel="stylesheet" href="./styles.css?v=155">
+    <link rel="stylesheet" href="./catalog.css?v=155">
+    <link rel="stylesheet" href="./classic.css?v=155">
   </head>
   <body class="article-open">
     <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="site-header">
       <nav class="site-nav site-nav-left" id="siteNavLeft" aria-label="Primary navigation left">
         <a class="nav-search" href="#search" aria-label="Search the archive"><span></span></a>
-        <a href="#section:current">Current</a>
+        <a href="#section:current">Recent</a>
         <div class="nav-folder nav-folder-wide">
           <a href="#section:browse">Browse</a>
           <div class="nav-dropdown nav-mega">
             <div class="nav-subfolder">
-              <a href="#section:browse">Categories</a>
-              <div class="nav-side-menu">
-                <a href="#archive?type=theatre">Theatre Reviews</a>
-                <a href="#archive?type=musical-theatre">Musical Theatre</a>
-                <a href="#archive?type=television">Television</a>
-                <a href="#archive?type=music-concerts">Music &amp; Concerts</a>
-                <a href="#archive?type=book-reviews">Book Reviews</a>
-                <a href="#archive?type=essays-opinion">Essays &amp; Opinion</a>
-                <a href="#section:other-arts">Other Arts</a>
-              </div>
-            </div>
-            <div class="nav-subfolder">
               <a href="#section:collections">Collections</a>
               <div class="nav-side-menu">
-                <a href="#section:shakespeare">Shakespeare Collection</a>
-                <a href="#collection:canadian">Canadian Collection</a>
-                <a href="#collection:uk">UK Collection</a>
-                <a href="#collection:stratford">Stratford Collection</a>
-                <a href="#collection:shaw">Shaw Collection</a>
+                <a href="#section:shakespeare">Shakespeare</a>
+                <a href="#collection:sondheim">Sondheim</a>
+                <a href="#collection:musicals">Musicals</a>
+                <a href="#collection:stratford">Stratford</a>
+                <a href="#collection:shaw">Shaw</a>
+                <a href="#collection:television">Television</a>
+                <a href="#collection:albums">Albums</a>
+                <a href="#collection:books">Book Reviews</a>
+                <a href="#collection:profiles">Profiles &amp; Obits</a>
+                <a href="#collection:early">Early Writing</a>
               </div>
             </div>
             <div class="nav-subfolder">
               <a href="#section:indexes">Indexes</a>
               <div class="nav-side-menu">
-                <a href="#master-index:all-works">All Works</a>
-                <a href="#master-index">Plays</a>
-                <a href="#master-index:musicals">Musicals</a>
-                <a href="#master-index:books">Books</a>
-                <a href="#master-index:albums">Albums</a>
-                <a href="#master-index:concerts">Concerts</a>
-                <a href="#master-index:television">Television</a>
-                <a href="#master-index:films">Films</a>
-                <a href="#master-index:all-people">All People</a>
-                <a href="#master-index:actors">Actors</a>
-                <a href="#master-index:playwrights">Playwrights</a>
-                <a href="#master-index:directors">Directors</a>
-                <a href="#master-index:composers-lyricists">Composers &amp; Lyricists</a>
-                <a href="#master-index:musicians">Musicians</a>
+                <a href="#works">All Works</a>
+                <a href="#people">All People</a>
+                <a href="#index:publications">Publications</a>
+                <a href="#places">Places</a>
               </div>
             </div>
             <div class="nav-subfolder">
@@ -73,7 +56,7 @@
                 <a href="#entity:publications:national-post">National Post</a>
                 <a href="#entity:publications:the-observer">The Observer</a>
                 <a href="#entity:publications:the-globe-and-mail">The Globe and Mail</a>
-                <a href="#entity:publications:the-independent">The Independent</a>
+                <a href="#entity:publications:the-new-york-times">The New York Times</a>
                 <a href="#entity:publications:the-guardian">The Guardian</a>
                 <a href="#index:publications">Other publications</a>
               </div>
@@ -119,15 +102,14 @@
 
     <nav class="drawer" id="drawer" aria-label="Site navigation">
       <a href="#search">Search the Archive</a>
-      <a href="#section:current">Current Collection</a>
+      <a href="#section:current">Recent</a>
       <details>
         <summary>Browse</summary>
-        <a href="#section:browse">Categories</a>
         <a href="#section:collections">Collections</a>
-        <a href="#master-index">Master Index</a>
         <a href="#master-index:all-works">All Works</a>
         <a href="#master-index:all-people">All People</a>
         <a href="#index:publications">Publications</a>
+        <a href="#places">Places</a>
       </details>
       <details>
         <summary>Explore</summary>
@@ -197,7 +179,7 @@
         <div class="results" id="results"></div>
       </section>
 
-      <section class="current-feature" id="currentFeature" aria-label="Latest current article"></section>
+      <section class="current-feature" id="currentFeature" aria-label="Article Spotlight"></section>
 
       <section class="browse-heading frontpage-browse-heading" aria-label="Browse the archive heading">
         <h2>Browse the Archive</h2>
@@ -313,9 +295,10 @@
       </section>
       <section class="footer-credit">
         <p>Designed by <a href="http://www.colinsimmons.design" target="_blank" rel="noopener">Colin Simmons</a> and Tony Cushman</p>
+        <p><a href="#image-credits">Image credits</a></p>
       </section>
     </footer>
 
-    <script src="./app.js?v=149" type="module"></script>
+    <script src="./app.js?v=155" type="module"></script>
   </body>
 </html>

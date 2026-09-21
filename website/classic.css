@@ -1,6 +1,6 @@
 /* Earlier visual language; working catalog controls remain available. */
 body:not(.feature-redesignedHome):not(.search-open) #archive:not(.is-expanded) .filter-controls:not(.is-open) { display:none; }
-body:not(.feature-redesignedHome):not(.search-open) #archive :is(.catalog-tabs,.search-scope,.catalog-discovery,.active-filters) { display:none; }
+body:not(.feature-redesignedHome):not(.search-open) #archive :is(.catalog-tabs,.catalog-discovery,.active-filters) { display:none; }
 body:not(.feature-redesignedHome):not(.search-open) #archive .search-panel { padding:28px;margin-bottom:16px; }
 body:not(.feature-modernCatalogPresentation).search-open .archive { max-width:none;margin-top:28px;margin-inline:0;padding-top:40px; }
 body:not(.feature-modernCatalogPresentation).search-open .archive-heading h1 { font-size:clamp(26px,3.2vw,40px);margin:0; }
@@ -24,3 +24,157 @@ body:not(.feature-compactResults) .text-match { max-width:none; }
  body:not(.feature-compactResults) .result-card.has-thumb { grid-template-columns:80px minmax(0,1fr);gap:12px; }
  body:not(.feature-compactResults) .result-card .card-title strong { overflow-wrap:anywhere; }
 }
+
+/* Shared catalog frame: switching Articles / Works / People keeps headings and tabs still. */
+.catalog-back { display:none; }
+body.catalog-page.search-open #archive,
+body.catalog-page.index-open #indexView {
+  max-width:none;margin:28px 0 0;padding:24px 0 0;border-top:1px solid var(--rule);
+}
+body.catalog-page :is(#archive > .catalog-back, #indexView > .back-link) {
+  display:block;width:fit-content;line-height:20px;margin:0 0 18px;
+}
+body.catalog-page :is(.archive-heading h1, #indexContent > h1) {
+  font-size:clamp(26px,3.2vw,40px);line-height:1.15;margin:0;letter-spacing:normal;
+}
+body.catalog-page .archive-heading { display:block;margin:0; }
+body.catalog-page .catalog-tabs { margin:26px 0 24px;padding-bottom:14px; }
+body.catalog-page .landing-intro { margin:24px 0 0; }
+body.catalog-page .index-controls { margin:28px 0 24px;align-items:start; }
+body.catalog-page .index-controls-two { grid-template-columns:minmax(220px,2fr) 1fr; }
+body.catalog-page .index-controls label { gap:8px;line-height:20px; }
+body.catalog-page .index-controls :is(input,select) {
+  box-sizing:border-box;display:block;height:48px;min-height:48px;margin:0;
+  padding:10px 0;border:0;border-bottom:1px solid var(--ink);border-radius:0;
+  font:18px/26px var(--serif);color:var(--ink);background-color:transparent;
+}
+body.catalog-page .index-controls select {
+  appearance:none;padding-right:26px;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath d='m4 6 4 4 4-4' fill='none' stroke='%23333' stroke-width='1.5'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right center;
+}
+body.catalog-page .index-count { margin:0 0 16px; }
+body.catalog-page .index-alphabet {
+  position:sticky;top:var(--catalog-header-height,104px);z-index:30;
+  display:flex;flex-wrap:wrap;gap:3px;margin:0;padding:12px 0 0;
+  border-bottom:2px solid var(--ink);background:var(--paper,#fff);
+  box-shadow:0 6px 0 var(--paper,#fff);
+}
+body.catalog-page .index-alphabet :is(a,span) {
+  display:flex;justify-content:center;align-items:center;flex:1 0 27px;
+  min-width:27px;min-height:44px;padding:5px 4px;white-space:nowrap;border:1px solid var(--rule);border-bottom:0;
+  border-radius:5px 5px 0 0;background:var(--panel);font:700 13px var(--sans);text-decoration:none;
+}
+body.catalog-page .index-alphabet a:hover,
+body.catalog-page .index-alphabet a[aria-current] { background:var(--blue-dark);color:#fff; }
+body.catalog-page .index-alphabet span { color:var(--muted);background:transparent;border-color:transparent; }
+body.catalog-page .index-letter-section { margin:32px 0 48px; }
+body.catalog-page .index-letter-section > h2 {
+  margin:0 0 12px;font:700 30px/1.2 var(--serif);
+  scroll-margin-top:calc(var(--catalog-header-height,104px) + var(--index-alphabet-height,64px) + 22px);
+}
+body.catalog-page .index-letter-section .catalog-index-list { margin:0; }
+body.catalog-page .catalog-index-list a { align-items:baseline;gap:14px; }
+body.catalog-page .catalog-index-list a > span { overflow-wrap:anywhere; }
+body.catalog-page .catalog-index-list em { flex-shrink:0; }
+@media(max-width:800px) {
+  body.catalog-page .index-controls-two { grid-template-columns:1fr 1fr; }
+  body.catalog-page .index-controls-two label:first-child { grid-column:auto; }
+  body.catalog-page .index-alphabet :is(a,span) { flex-basis:31px;min-width:31px; }
+}
+@media(max-width:420px) {
+  body.catalog-page .index-controls-two { grid-template-columns:1fr; }
+}
+
+/* Restore the visual timeline, with clickable bars and keyboard year navigation. */
+body.catalog-page .timeline-selected-year { margin:28px 0 0; }
+body.catalog-page .timeline-bar-chart { position:relative;overflow-x:auto;margin:22px 0;padding:18px 4px 8px;background:#fbfaf7; }
+body.catalog-page .timeline-bar-chart .timeline-track {
+  display:grid;grid-template-columns:repeat(var(--year-count),minmax(14px,1fr));
+  min-width:calc(var(--year-count) * 14px);height:202px;gap:0;
+}
+body.catalog-page .timeline-bar-chart .timeline-track::before { display:none; }
+body.catalog-page .timeline-bar-chart .timeline-segment {
+  position:relative;bottom:auto;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;
+  width:100%;height:202px;min-height:0;min-width:0;padding:0;border:0;border-radius:0;
+  background:transparent;transform:none;color:var(--ink);transition:none;
+}
+body.catalog-page .timeline-bar-ink { display:block;width:8px;min-height:0;background:var(--blue);border-radius:3px 3px 0 0; }
+body.catalog-page .timeline-bar-year { display:block;height:52px;width:100%;border-top:1px solid var(--ink);padding-top:9px;writing-mode:vertical-rl;font:10px var(--sans); }
+body.catalog-page .timeline-segment:is(:hover,.is-active) { background:rgba(35,82,118,.08); }
+body.catalog-page .timeline-segment:is(:hover,.is-active) .timeline-bar-ink { background:var(--blue-dark);width:12px; }
+body.catalog-page .timeline-segment.is-active .timeline-bar-year { font-weight:800; }
+body.catalog-page .timeline-year-controls { flex-wrap:wrap;margin-bottom:24px; }
+@media(max-width:800px) {
+ body.catalog-page .timeline-bar-chart .timeline-track { grid-template-columns:repeat(var(--year-count),24px);min-width:calc(var(--year-count) * 24px); }
+ body.catalog-page .timeline-bar-chart .timeline-bar-ink { width:12px; }
+ body.catalog-page .timeline-bar-chart .timeline-bar-year { font-size:12px; }
+}
+
+.archive-search-form { margin:0; }
+.search-submit-row { display:grid;grid-template-columns:minmax(0,1fr) auto;gap:20px;align-items:end; }
+.search-submit-row .primary-action { margin:0;min-height:46px;padding:10px 24px;border:0; }
+body #archive .search-scope { display:flex;align-items:center;justify-content:space-between;gap:14px;margin-top:14px; }
+body #archive .search-scope p { margin:0; }
+body #archive .search-scope label { display:flex;align-items:center;gap:7px;margin:0;text-transform:none;white-space:nowrap; }
+body #archive .search-scope input { width:18px;height:18px;min-height:0;margin:0; }
+.advanced-search { margin:18px 0 24px;border-bottom:1px solid var(--rule);padding-bottom:16px; }
+.advanced-search > summary { cursor:pointer;font:700 12px/24px var(--sans);text-transform:uppercase;letter-spacing:.04em; }
+body #archive .advanced-search:not([open]) > .filter-controls { display:none; }
+body #archive .advanced-search[open] > .filter-controls { display:block;margin-top:20px; }
+body #archive .advanced-search[open] .filter-strip { display:grid; }
+button, .primary-action, .current-read-link, .current-page-link { text-transform:uppercase; }
+@media(max-width:600px) {
+ body #archive .search-scope { align-items:flex-start;flex-direction:column;gap:10px; }
+ .search-submit-row { gap:10px; }
+ .search-submit-row .primary-action { padding-inline:14px; }
+}
+.places-paths { display:flex;flex-wrap:wrap;gap:12px;margin:24px 0; }
+.places-paths .primary-action { margin:0; }
+.places-map { height:450px;border:1px solid var(--rule);margin-bottom:16px; }
+.places-map .leaflet-map { height:100%;min-height:0; }
+.larger-map-link { display:inline-block;font:700 12px/24px var(--sans);text-transform:uppercase;margin-bottom:20px; }
+@media(max-width:600px) { .places-map { height:360px; } }
+
+body:not(.feature-redesignedHome):not(.search-open) #archive .advanced-search[open] > .filter-controls {display:block;}
+.publication-cards {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin:28px 0 44px;}
+.publication-card {display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;min-height:160px;padding:28px 18px;border:1px solid var(--rule);border-top:3px solid var(--ink);text-align:center;text-decoration:none;background:var(--paper);}
+.publication-card > span {font:700 26px/1.25 var(--serif);}
+.publication-card img {max-height:70px;max-width:100%;object-fit:contain;}
+.publication-card em {font:12px var(--sans);color:var(--muted);}
+.spotlight-card {display:grid;grid-template-columns:180px 1fr;gap:36px;padding:30px 0;border-block:1px solid var(--rule);}
+.spotlight-date {display:flex;flex-direction:column;justify-content:center;gap:18px;text-align:center;padding:20px;background:#e9edf0;}
+.spotlight-date strong {font:60px/1 var(--serif);}.spotlight-date span {font:12px/1.5 var(--sans);}
+.spotlight-copy h2 {font:32px/1.2 var(--serif);margin:12px 0;}.spotlight-excerpt {font:17px/1.65 var(--serif);max-width:70ch;}.spotlight-meta {font:12px var(--sans);color:var(--muted);}
+.spotlight-copy .primary-action {display:inline-block;margin-top:10px;}
+@media(max-width:800px){.publication-cards{grid-template-columns:repeat(2,minmax(0,1fr));}}
+@media(max-width:500px){.publication-cards{grid-template-columns:1fr;}.spotlight-card{grid-template-columns:1fr;gap:18px;}.spotlight-date{display:none;}.spotlight-copy h2{font-size:26px;}}
+
+.collection-find,.festival-year {display:block;max-width:520px;margin:32px 0;font:700 12px/1.5 var(--sans);text-transform:uppercase;}
+.collection-find input,.festival-year select {display:block;width:100%;margin-top:10px;background:transparent;border:0;border-bottom:1px solid var(--ink);padding:12px 0;font:18px/1.5 var(--serif);color:var(--ink);}
+.collection-gallery {display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:32px 24px;margin:28px 0 48px;}
+.collection-item {min-width:0;display:flex;flex-direction:column;gap:10px;text-decoration:none;}
+.collection-item > strong {font:18px/1.3 var(--serif);}.collection-item-count{font:12px var(--sans);color:var(--muted);}
+.collection-art {display:flex;align-items:center;justify-content:center;aspect-ratio:1;padding:20px;background:#eee8dc;color:var(--ink);text-align:center;border:1px solid #d9d1c0;overflow:hidden;}
+.collection-art img {width:100%;height:100%;object-fit:contain;}.collection-art .art-title {font:700 clamp(18px,2vw,26px)/1.25 var(--serif);overflow-wrap:anywhere;}
+.collection-art.musicals {background:#162e42;color:#fff;border:7px double #c3aa74;}
+.collection-art.musicals.has-artwork {background:#faf7f0;}
+.collection-art.television {border:12px solid #353b3d;border-right-width:30px;border-radius:20px;box-shadow:inset 0 0 0 3px #777;aspect-ratio:4/3;background:#e1e9df;}
+.collection-art.books {aspect-ratio:2/3;box-shadow:-6px 2px 0 #82725f,inset 6px 0 #d3c5ad;background:#f2e8d5;}
+.collection-art.albums {box-shadow:5px 5px 0 #292c30;background:#f0e7d8;}
+.collection-art.portraits {border-radius:50%;background:#f0eee9;}
+.collection-art.portraits.has-artwork {padding:0;}
+.collection-art.portraits img {object-fit:cover;object-position:50% 20%;filter:grayscale(1);}
+.collection-art.books.has-artwork,.collection-art.albums.has-artwork {padding:0;background:transparent;}
+.collection-art.books img,.collection-art.albums img {object-fit:contain;}
+.image-credits {max-width:850px;}
+.image-credits section {padding:22px 0;border-bottom:1px solid var(--rule);overflow-wrap:anywhere;}
+.image-credits h2 {font:22px/1.35 var(--serif);}
+.image-credits p,.image-credits a {font:14px/1.6 var(--sans);}
+.collection-gallery.books,.collection-gallery.albums {row-gap:42px;}
+.collection-gallery.books .collection-item,.collection-gallery.albums .collection-item {padding:0 8px 18px;border-bottom:10px solid #a59076;}
+.collection-result-art {display:flex;gap:24px;align-items:center;margin:24px 0;}.collection-result-art .collection-art{width:150px;flex-shrink:0;}.collection-result-art h2{font:28px/1.3 var(--serif);}
+.festival-venue-grid {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin:24px 0;}.festival-venue-card{padding:20px;border:1px solid var(--rule);text-decoration:none;}.festival-venue-card h3{margin:0 0 10px;font:22px var(--serif);}.festival-venue-card p{font:15px/1.6 var(--serif);}
+.collection-articles {margin-top:24px;}
+@media(max-width:800px){.collection-gallery{grid-template-columns:repeat(3,minmax(0,1fr));}}
+@media(max-width:550px){.collection-gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 16px;}.collection-art{padding:12px;}.collection-art.television{border-width:8px;border-right-width:18px;}.collection-art .art-title{font-size:18px;}.festival-venue-grid{grid-template-columns:1fr;}.collection-result-art .collection-art{width:100px;}.collection-result-art h2{font-size:22px;}}
