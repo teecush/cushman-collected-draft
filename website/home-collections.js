@@ -1,7 +1,7 @@
 // Homepage previews reuse credited archive artwork; every card opens its collection.
-import {COLLECTIONS} from './collections-engine.js?v=164';
+import {COLLECTIONS} from './collections-engine.js?v=165';
 const examples = {
-  books:['alan-jay-lerner-a-biography','all-his-jazz-the-life-and-death-of-bob-fosse','all-my-best-friends'],
+  books:['swing-time','all-or-nothing-at-all-a-life-of-frank-sinatra','broadway-anecdotes'],
   albums:['both-sides-now','art-of-romance','gypsy'],
   profiles:['alan-rickman','angela-lansbury','christopher-plummer'],
   sondheim:['company','follies','assassins'],
