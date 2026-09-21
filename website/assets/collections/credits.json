@@ -4542,5 +4542,71 @@
       "Plays and Players"
     ],
     "changes": "Supplied image unchanged; displayed at reduced size."
+  },
+  {
+    "source": "https://commons.wikimedia.org/wiki/File:William_Shakespeare_by_John_Taylor,_edited.jpg",
+    "creator": "Attributed to John Taylor",
+    "credit": "",
+    "license": "Public domain",
+    "licenseUrl": "",
+    "titles": [
+      "William Shakespeare — Chandos portrait"
+    ],
+    "changes": "Downloaded artwork unchanged; displayed at reduced size."
+  },
+  {
+    "source": "https://www.shawfest.com/",
+    "creator": "Shaw Festival",
+    "credit": "",
+    "license": "Copyright and trademark retained by Shaw Festival",
+    "licenseUrl": "",
+    "titles": [
+      "Shaw Festival"
+    ],
+    "changes": "Downloaded artwork unchanged; displayed at reduced size."
+  },
+  {
+    "source": "https://www.stratfordfestival.ca/",
+    "creator": "Stratford Festival",
+    "credit": "",
+    "license": "Copyright and trademark retained by Stratford Festival",
+    "licenseUrl": "",
+    "titles": [
+      "Stratford Festival"
+    ],
+    "changes": "Downloaded artwork unchanged; displayed at reduced size."
+  },
+  {
+    "source": "https://openlibrary.org/works/OL19662477W",
+    "creator": "Edited by Richard Findlater",
+    "credit": "",
+    "license": "Copyright retained by cover rights holders",
+    "licenseUrl": "",
+    "titles": [
+      "At the Royal Court"
+    ],
+    "changes": "Downloaded artwork unchanged; displayed at reduced size."
+  },
+  {
+    "source": "https://openlibrary.org/works/OL14957021W",
+    "creator": "Stanley Wells and Gary Taylor",
+    "credit": "",
+    "license": "Copyright retained by cover rights holders",
+    "licenseUrl": "",
+    "titles": [
+      "William Shakespeare: A Textual Companion"
+    ],
+    "changes": "Downloaded artwork unchanged; displayed at reduced size."
+  },
+  {
+    "source": "https://openlibrary.org/works/OL18550648W",
+    "creator": "Will Friedwald",
+    "credit": "",
+    "license": "Copyright retained by cover rights holders",
+    "licenseUrl": "",
+    "titles": [
+      "A Biographical Guide to the Great Jazz and Pop Singers"
+    ],
+    "changes": "Downloaded artwork unchanged; displayed at reduced size."
   }
 ]

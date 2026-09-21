@@ -367,6 +367,11 @@
     },
     "1990-03-10-sesame-street-s-charm-lost-on-stage-sesame-street-live": {
       "excludeTelevision": true
+    },
+    "undated-you-re-the-top": {
+      "songTitles": [
+        "You're the Top"
+      ]
     }
   },
   "artwork": {
@@ -1571,7 +1576,7 @@
       "alt": "All Things Considered"
     },
     "books:at-the-royal-court": {
-      "src": "assets/collections/book-9468023.jpg",
+      "src": "assets/collections/royal-court-findlater.jpg",
       "alt": "At the Royal Court"
     },
     "books:bernard-shaw-volume-ii-1898-1918-the-pursuit-of-power": {
@@ -2037,6 +2042,14 @@
     "books:complete-lyrics-of-johnny-mercer": {
       "src": "assets/collections/extra-20a9f1bdd3e8f1bc.jpg",
       "alt": "The Complete Lyrics of Johnny Mercer"
+    },
+    "books:william-shakespeare-a-textual-companion": {
+      "src": "assets/collections/textual-companion-wells-taylor.jpg",
+      "alt": "William Shakespeare: A Textual Companion"
+    },
+    "books:biographical-guide-to-the-great-jazz-and-pop-singers": {
+      "src": "assets/collections/friedwald-guide.jpg",
+      "alt": "A Biographical Guide to the Great Jazz and Pop Singers — Will Friedwald"
     }
   },
   "excludedMusicalTitles": [
@@ -2103,5 +2116,16 @@
     "undated-cocteau-ionesco-becket-new-company-at-a-d-c",
     "undated-arts-theatre-the-english-opera-group",
     "undated-a-d-c-theatre-the-two-gentlemen-of-verona"
-  ]
+  ],
+  "homeArtwork": {
+    "shakespeare": {
+      "src": "assets/collections/shakespeare-chandos-portrait.jpg"
+    },
+    "shaw": {
+      "src": "assets/collections/shaw-official-logo.svg"
+    },
+    "stratford": {
+      "src": "assets/collections/stratford-official-logo.png"
+    }
+  }
 }

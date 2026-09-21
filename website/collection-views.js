@@ -1,15 +1,30 @@
-import {serialize, publicationYear, normalize} from './catalog-engine.js?v=158';
-import {COLLECTIONS} from './collections-engine.js?v=158';
+import {serialize, publicationYear, normalize} from './catalog-engine.js?v=159';
+import {COLLECTIONS} from './collections-engine.js?v=159';
 
 export function createCollectionViews({state,els,h,node,link,button,openIndex,getCollections}) {
-  let activeMap=null, generation=0;
-  const dispose=()=>{generation++;activeMap?.remove();activeMap=null;document.querySelector('.collection-result-art')?.remove();};
+  let activeMap=null, generation=0, artObserver=null;
+  const dispose=()=>{artObserver?.disconnect();artObserver=null;els.indexView.classList.remove('collection-page');generation++;activeMap?.remove();activeMap=null;document.querySelector('.collection-result-art')?.remove();};
+  function frame() {
+    els.indexView.classList.add('collection-page');
+    const back=els.indexView.querySelector(':scope > .back-link');
+    back.href='#home';back.textContent='Back to home';
+  }
+  function fitTitles(root) {
+    const fit=()=>root.querySelectorAll('.art-title').forEach(title=>{
+      const box=title.parentElement;
+      let size=24;title.style.fontSize=size+'px';
+      while(size>9&&(title.scrollWidth>title.clientWidth+1||title.scrollHeight>box.clientHeight-16)){
+        title.style.fontSize=(--size)+'px';
+      }
+    });
+    artObserver?.disconnect();artObserver=new ResizeObserver(fit);artObserver.observe(root);requestAnimationFrame(fit);
+  }
   const resultsHref=(collection,item,extra={})=>serialize({shelf:collection.id,...(item?{item:item.id}:{}),origin:window.location.hash,...extra});
   function artwork(collection,item,cls='') {
     const wrapper=node('div',undefined,'collection-art '+collection.kind+' '+cls);
     const asset=state.collectionCuration?.artwork?.[collection.id+':'+item.id];
     if(asset?.src){
-      const img=node('img');img.src=asset.src;img.alt='';img.loading='lazy';wrapper.classList.add('has-artwork');
+      const img=node('img');img.src=asset.src;img.alt='';if(asset.fit)img.style.objectFit=asset.fit;img.loading='lazy';wrapper.classList.add('has-artwork');
       img.addEventListener('error',()=>{img.remove();wrapper.classList.remove('has-artwork');wrapper.append(node('span',item.title,'art-title'));},{once:true});wrapper.append(img);
     } else wrapper.append(node('span',item.title,'art-title'));
     return wrapper;
@@ -33,7 +48,7 @@ export function createCollectionViews({state,els,h,node,link,button,openIndex,ge
     els.indexContent.append(node('p','Artwork identifies the publications, shows, books, recordings and people discussed in this archive. Copyright remains with the respective rights holders. Source and licence details are listed below.','landing-intro'));
     const content=node('div',undefined,'image-credits');els.indexContent.append(content);
     try {
-      const response=await fetch(new URL('./assets/collections/credits.json?v=158',import.meta.url));
+      const response=await fetch(new URL('./assets/collections/credits.json?v=159',import.meta.url));
       if(!response.ok)throw new Error('Credits unavailable');
       const entries=await response.json();if(token!==generation)return;
       for(const asset of entries){
@@ -61,10 +76,10 @@ export function createCollectionViews({state,els,h,node,link,button,openIndex,ge
     result.append(...h.sortRecordsChronologically(records).map(r=>h.safeResultCard(r,context)));return result;
   }
   function show(id,params) {
-    const collection=getCollections().get(id);openIndex(collection.title,'');
+    const collection=getCollections().get(id);openIndex(collection.title,'');frame();
     els.indexContent.append(node('p',collection.intro,'landing-intro'));
     if(collection.kind==='festival'){festival(collection,params);return;}
-    els.indexContent.append(link('Search all '+collection.records.length.toLocaleString()+' articles',resultsHref(collection),'primary-action'));
+    if(id!=='television')els.indexContent.append(link('Search all '+collection.records.length.toLocaleString()+' articles',resultsHref(collection),'primary-action'));
     if(collection.kind==='early'){
       els.indexContent.append(recordList(collection.records,collection.title));
       const relatedIds=new Set(state.collectionCuration?.earlyUndated||[]);
@@ -72,15 +87,15 @@ export function createCollectionViews({state,els,h,node,link,button,openIndex,ge
       if(related.length)els.indexContent.append(node('h2','Undated Cambridge clippings'),node('p','Related student-publication clippings whose dates have not been established. The opera preview is unsigned.'),recordList(related,'Undated Cambridge clippings'));
       return;
     }
-    const field=node('label',undefined,'collection-find');field.append(node('span','Find '+(collection.kind==='portraits'?'a person':'a title')));
-    const search=node('input');search.type='search';search.placeholder='Search this collection';search.value=params.get('q')||'';field.append(search);els.indexContent.append(field);
+    const field=node('label',undefined,'collection-find');field.append(node('span',id==='television'?'Search this collection':'Find '+(collection.kind==='portraits'?'a person':'a title')));
+    const search=node('input');search.type='search';search.placeholder=id==='television'?'':'Search this collection';search.value=params.get('q')||'';field.append(search);els.indexContent.append(field);
     const content=node('div');els.indexContent.append(content);
     const draw=()=>{
       const query=normalize(search.value);const items=collection.items.filter(item=>normalize(item.title).includes(query));
       const featured=items.filter(item=>id!=='musicals'||item.records.length>=2);
       const single=items.filter(item=>id==='musicals'&&item.records.length<2);
       content.replaceChildren();
-      const gallery=node('div',undefined,'collection-gallery '+collection.kind);gallery.append(...featured.map(item=>itemCard(collection,item)));content.append(gallery);
+      const gallery=node('div',undefined,'collection-gallery '+collection.kind);gallery.append(...featured.map(item=>itemCard(collection,item)));content.append(gallery);fitTitles(gallery);
       if(single.length){content.append(node('h2','More musicals, A–Z'));const list=node('div',undefined,'catalog-index-list');for(const item of single)list.append(link(item.title,resultsHref(collection,item)));content.append(list);}
       if(!items.length)content.append(node('p','No titles match this search.'));
       if(collection.ungrouped.length&&!query){content.append(node('h2',id==='sondheim'?'Essays, profiles and other writing':'More writing'),recordList(collection.ungrouped,collection.title));}
@@ -127,5 +142,5 @@ export function createCollectionViews({state,els,h,node,link,button,openIndex,ge
     };
     select.addEventListener('change',()=>{year=select.value;draw();});draw();
   }
-  return {directory,show,decorateCatalog,dispose,credits};
+  return {directory,show,decorateCatalog,dispose,credits,frame};
 }

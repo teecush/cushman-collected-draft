@@ -1,7 +1,7 @@
-import {FIELDS, normalize, nameMatches, publicationYear, serialize, parse, articleForm, articleSubject} from './catalog-engine.js?v=158';
-import {makeCollections, COLLECTIONS} from './collections-engine.js?v=158';
-import {createCollectionViews} from './collection-views.js?v=158';
-import {INDEX_LETTERS, indexOrder, indexEntries, indexSections} from './index-engine.js?v=158';
+import {FIELDS, normalize, nameMatches, publicationYear, serialize, parse, articleForm, articleSubject} from './catalog-engine.js?v=159';
+import {makeCollections, COLLECTIONS} from './collections-engine.js?v=159';
+import {createCollectionViews} from './collection-views.js?v=159';
+import {INDEX_LETTERS, indexOrder, indexEntries, indexSections} from './index-engine.js?v=159';
 export function createCatalog({state, els, h}) {
   let extra = {}, indexCache = new Map(), textIndex = null, textPromise = null, indexResizeObserver = null, placesMap = null, collectionData = null;
   const getCollections = () => collectionData ||= makeCollections(state.records, h, state.collectionCuration);
@@ -119,7 +119,8 @@ export function createCatalog({state, els, h}) {
     const back = link('Back to home', '#home', 'back-link catalog-back'); els.archive.prepend(back);
     els.archive.querySelector('h1').textContent=h.FEATURES.modernCatalogPresentation?'Catalog':'Search the Archive';els.searchInput.setAttribute('aria-label','Search titles, works, people and places');els.searchInput.placeholder='Title, work, person or place';
     els.archive.querySelector('.archive-heading').after(tabs());
-    const scope=node('div',undefined,'search-scope');const label=node('label');const check=node('input');check.type='checkbox';check.id='searchArticleText';check.addEventListener('change',()=>{extra.text=check.checked?'1':'';apply();history.replaceState(null,'',href());});label.append(check,document.createTextNode(' Search article text'));scope.append(node('p','Search titles, works, credited people and places.'),label);els.archive.querySelector('.search-panel').append(scope);
+    const scope=node('div',undefined,'search-scope');const label=node('label');const check=node('input');check.type='checkbox';check.id='searchArticleText';check.addEventListener('change',()=>{extra.text=check.checked?'1':'';apply();history.replaceState(null,'',href());});label.append(check,document.createTextNode(' Search article text'));scope.append(els.archiveCount,label);els.archive.querySelector('.search-panel').append(scope);
+    els.archive.querySelector('.search-label-row').remove();
     const panel = els.archive.querySelector('.search-panel');
     const form = node('form', undefined, 'archive-search-form'); form.setAttribute('role', 'search');
     const row = node('div', undefined, 'search-submit-row');
@@ -422,7 +423,7 @@ export function createCatalog({state, els, h}) {
       const paths=node('div',undefined,'places-paths');paths.append(link('Browse cities','#index:cities','primary-action'),link('Browse venues','#index:venues','primary-action'));
       const map=node('div',undefined,'places-map');map.setAttribute('aria-label','Archive places map');
       els.indexContent.append(node('p','Explore the places in the archive. Choose a city or venue, or browse the map.','landing-intro'),paths,map,link('View the full map →','#map','larger-map-link'));
-      h.loadMapResources().then(()=>{if(map.isConnected)placesMap=h.renderArchiveMap(map,h.cityMapPoints(),{venues:h.venueMapPoints(),maxVenues:Infinity,initialCenter:[50,-35],initialZoom:3,zoomControl:true,searchControl:false,jumpControl:false,venueZoomThreshold:9});}).catch(()=>{if(map.isConnected)map.replaceChildren(node('p','The map could not load. You can still browse every city and venue using the links above.'));});
+      h.loadMapResources().then(()=>{if(map.isConnected)placesMap=h.renderArchiveMap(map,h.cityMapPoints(),{venues:h.venueMapPoints(),maxVenues:Infinity,initialCenter:matchMedia('(max-width:600px)').matches?[43.6532,-79.3832]:[50,-35],initialZoom:matchMedia('(max-width:600px)').matches?13:3,zoomControl:true,searchControl:false,jumpControl:false,venueZoomThreshold:9});}).catch(()=>{if(map.isConnected)map.replaceChildren(node('p','The map could not load. You can still browse every city and venue using the links above.'));});
       return true;
     }
     if(base.startsWith('#index:')){const type=base.split(':')[1];if(!h.entityType(type)){unavailable();return true;}if(type==='people'){indexPage('people',params);return true;}if(type==='productions'){indexPage('works',params);return true;}indexPage('entities',params,type);return true;}
@@ -430,6 +431,7 @@ export function createCatalog({state, els, h}) {
     if(base==='#section:chronology'){timeline(params);return true;}
     if(base==='#timeline'){timeline(params);return true;}
     if(base==='#explore'){explorer(params);return true;}
+    if(base==='#section:shakespeare'||base==='#collection:shakespeare'){openIndex('Shakespeare','');h.renderLandingPage('shakespeare');els.indexContent.prepend(tabs());collectionViews.frame();return true;}
     if(base==='#section:collections'){collectionViews.directory();return true;}
     if(base.startsWith('#collection:')||base.startsWith('#browse-collection:')){const id=base.split(':')[1]==='musical'?'musicals':base.split(':')[1];if(getCollections().has(id)&&id!=='shakespeare'){collectionViews.show(id,params);return true;}}
     if(!h.FEATURES.modernBrowseLandings && ['#section:collections','#section:browse','#section:indexes','#section:current','#current'].includes(base)){

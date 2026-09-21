@@ -39,3 +39,15 @@ assert.equal(workKey('Sweeney Todd: The Demon Barber of Fleet Street'),workKey('
 console.log('PASS: daily spotlight, collection URL scope, inclusive early years, show grouping, album exclusions and profile subjects.');
 
 assert.notEqual(workKey('The Passion'),workKey('Passion'),'Medieval mystery play and Sondheim musical are different works');
+
+const revised=makeCollections([
+ {slug:'tv-a',article_category:'Television Review',production_title:'Zebra'},
+ {slug:'tv-b',article_category:'Television Review',production_title:'Zebra'},
+ {slug:'tv-c',article_category:'Television Review',production_title:'The Apple'},
+ {slug:'tv-d',article_category:'Television Review',production_title:'Banana'},
+ {slug:'song',article_category:'Music Essay'},
+ {slug:'concert',article_category:'Music Review',recording_title:'Live at the Concert Hall'},
+],h,{records:{song:{songTitles:["You're the Top"]}}});
+assert.deepEqual(revised.get('television').items.map(x=>x.title),['Zebra','The Apple','Banana'],'TV coverage precedes alphabetic ordering for ties');
+assert.deepEqual(revised.get('albums').records.map(x=>x.slug),['song'],'Verified song writing joins Music Reviews without including concerts');
+assert(revised.get('albums').itemMap.get('you-re-the-top').recordIds.has('song'));

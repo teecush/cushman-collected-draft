@@ -1,12 +1,12 @@
-import {normalize, publicationYear} from './catalog-engine.js?v=158';
+import {normalize, publicationYear} from './catalog-engine.js?v=159';
 export const COLLECTIONS = [
   {id:'shakespeare',title:'Shakespeare',kind:'plays',href:'#section:shakespeare',intro:'The plays, the productions, and a lifetime of returning to Shakespeare.'},
   {id:'sondheim',title:'Sondheim',kind:'musicals',intro:'The musicals, the lyrics, and the art of Stephen Sondheim.'},
   {id:'musicals',title:'Musicals',kind:'musicals',intro:'Return to a favourite show, or discover one you have never seen.'},
   {id:'stratford',title:'Stratford',kind:'festival',intro:'Explore the Stratford Festival, theatre by theatre and season by season.'},
   {id:'shaw',title:'Shaw',kind:'festival',intro:'Explore the Shaw Festival, theatre by theatre and season by season.'},
-  {id:'television',title:'Television',kind:'television',intro:'Small screens, big stories. Browse the shows Robert wrote about.'},
-  {id:'albums',title:'Albums',kind:'albums',intro:'Recordings, singers, and the songs worth listening to again.'},
+  {id:'television',title:'TV Reviews',kind:'television',intro:'Small screens, big stories. Browse the shows Robert wrote about.'},
+  {id:'albums',title:'Music Reviews',kind:'albums',intro:'Recordings, singers, and the songs worth listening to again.'},
   {id:'books',title:'Book Reviews',kind:'books',intro:'A shelf of books about the people and ideas behind the arts.'},
   {id:'profiles',title:'Profiles & Obits',kind:'portraits',intro:'The artists behind the work, in profiles and remembrances.'},
   {id:'early',title:'Early Writing',kind:'early',intro:'The beginning: writing published from 1963 through 1966.'},
@@ -58,12 +58,13 @@ export function makeCollections(records, h, curation = {}) {
     if(names.includes('The Shaw Collection')||h.entityValues(record,'companies').some(name=>/^shaw festival/i.test(name)))add('shaw',record,[]);
     if(!fix.excludeTelevision&&(fix.tvTitles||/^Television/.test(record.article_category)||names.includes('The Television Collection')))add('television',record,fix.tvTitles||workValues(record));
     if(fix.bookTitles||record.article_category==='Book Review')add('books',record,fix.bookTitles||h.entityValues(record,'books'));
-    if(fix.albumTitles?.length)add('albums',record,fix.albumTitles);
+    if(fix.songTitles?.length)add('albums',record,fix.songTitles);
+    else if(fix.albumTitles?.length)add('albums',record,fix.albumTitles);
     else if(fix.albumTitles===undefined&&record.recording_title&&!/concert|convention|at the concert hall/i.test(record.recording_title))add('albums',record,h.splitEntityList(record.recording_title));
     if(/Profile|Obituary/.test(record.article_category))add('profiles',record,fix.subjects||h.splitEntityList(record.subject_people));
   }
   for(const [id,collection] of definitions){
-    collection.items=[...itemMaps.get(id).values()].sort((a,b)=>workKey(a.title).localeCompare(workKey(b.title)));
+    collection.items=[...itemMaps.get(id).values()].sort((a,b)=>(id==='television' ? b.records.length-a.records.length : 0)||workKey(a.title).localeCompare(workKey(b.title)));
     collection.recordIds=new Set(collection.records.map(r=>r.slug));
     collection.itemMap=new Map(collection.items.map(item=>[item.id,{...item,recordIds:new Set(item.records.map(r=>r.slug))}]));
   }

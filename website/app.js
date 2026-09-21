@@ -1,8 +1,8 @@
-import {renderHomeCollections} from './home-collections.js?v=158';
-import {spotlightRecord} from './collections-engine.js?v=158';
-import { createCatalog } from "./catalog.js?v=158";
-import { FEATURES } from "./features.js?v=158";
-const DATA_URL = new URL("../site_export/data/catalog.json?v=158", import.meta.url);
+import {renderHomeCollections} from './home-collections.js?v=159';
+import {spotlightRecord} from './collections-engine.js?v=159';
+import { createCatalog } from "./catalog.js?v=159";
+import { FEATURES } from "./features.js?v=159";
+const DATA_URL = new URL("../site_export/data/catalog.json?v=159", import.meta.url);
 const ALIASES_URL = new URL("../site_export/data/route_aliases.json?v=1", import.meta.url);
 const STANDALONE_CORRESPONDENCE_URL = new URL("../site_export/data/standalone_correspondence.json?v=4", import.meta.url);
 const CONTENT_ROOT = new URL("../site_export/content/reviews/", import.meta.url);
@@ -2284,7 +2284,7 @@ function renderShakespeareLanding() {
   count.textContent = countUnitText(countForTile("Shakespeare"), "article", "articles");
   const intro = document.createElement("p");
   intro.className = "landing-intro";
-  intro.textContent = "A play-by-play route through the Shakespeare collection, with explicit essays and riffs kept separate from incidental references.";
+  intro.textContent = "Browse Robert Cushman’s Shakespeare reviews and essays by play.";
   const groups = document.createElement("div");
   groups.className = "landing-card-grid landing-card-grid-compact";
   groups.replaceChildren(...landingItems("shakespeare").map(landingCard));
@@ -2445,20 +2445,23 @@ function renderCurrentFeature() {
   if (!record) { els.currentFeature.replaceChildren(); delete els.currentFeature.dataset.slug; return; }
   if (els.currentFeature.dataset.slug === record.slug) return;
   els.currentFeature.dataset.slug = record.slug;
-  els.currentFeature.setAttribute('aria-label', 'On This Day');
+  els.currentFeature.setAttribute('aria-label', 'Reviewed on This Day');
   const make = (tag, text, cls) => {const el=document.createElement(tag);el.textContent=text||'';if(cls)el.className=cls;return el;};
   const card=make('article','','spotlight-card');
   const copy=make('div','','spotlight-copy');
-  const kicker=make('span','On This Day','frontpage-kicker');
+  const kicker=make('span','Reviewed on This Day','frontpage-kicker');
   const title=make('h2',record.title);
-  const meta=make('p',[formatDate(record),articlePublicationLabel(record)].filter(Boolean).join(' · '),'spotlight-meta');
+  const meta=make('p',formatDate(record),'spotlight-meta');
+  const publication=articlePublicationLabel(record);
+  const masthead=state.collectionCuration?.publications?.[entitySlug(publication)];
+  if(masthead?.src){const img=make('img','','spotlight-masthead');img.src=masthead.src;img.alt=publication;img.addEventListener('error',()=>img.replaceWith(document.createTextNode(' · '+publication)),{once:true});meta.append(img);}else meta.append(document.createTextNode(' · '+publication));
   const excerpt=make('p','Published on this day in Robert Cushman’s archive.','spotlight-excerpt');
   const read=make('a','Read article','primary-action');read.href='#review:'+record.slug;
-  const context={contextLabel:'On This Day',backHref:'#home',records:[record]};
+  const context={contextLabel:'Reviewed on This Day',backHref:'#home',records:[record]};
   read.addEventListener('click',event=>storeArticleContext(event,record,context));
   copy.append(kicker,title,meta,excerpt,read);
   const date=make('div','','spotlight-date');date.setAttribute('aria-hidden','true');
-  date.append(make('span','From the archive'),make('strong',String(record.year||record.date?.slice(0,4)||'Undated')),make('span',articlePublicationLabel(record)));
+  date.append(make('span','From the archive'),make('strong',String(record.year||record.date?.slice(0,4)||'Undated')));
   card.append(date,copy);els.currentFeature.replaceChildren(card);
   fetchArticleMarkdown(record).then(markdown=>{
     if(els.currentFeature.dataset.slug!==record.slug)return;
@@ -3611,7 +3614,11 @@ async function renderMapView() {
   let listOnly=params.get("view")==="list";
   const sync=()=>{const p=new URLSearchParams();if(search.value)p.set("q",search.value);if(listOnly)p.set("view","list");history.replaceState(null,"","#map"+(p.size?"?"+p:""));shell.classList.toggle("map-list-only",listOnly);listButton.setAttribute("aria-pressed",String(listOnly));mapButton.setAttribute("aria-pressed",String(!listOnly));};
   listButton.addEventListener("click",()=>{listOnly=true;sync();});mapButton.addEventListener("click",()=>{listOnly=false;sync();window.dispatchEvent(new Event("resize"));});
-  toolbar.append(search,listButton,mapButton);
+  const options=document.createElement('details');options.className='map-options';
+  const optionsTitle=document.createElement('summary');optionsTitle.textContent='Map options';
+  const optionsBody=document.createElement('div');optionsBody.className='map-options-body';
+  optionsBody.append(count,listButton,mapButton);options.append(optionsTitle,optionsBody);
+  toolbar.append(search,options);
   const filterMapList = (query) => {
     list.querySelectorAll("a").forEach((link) => {
       link.hidden = query && !link.dataset.mapLabel.toLowerCase().includes(query);
@@ -3621,7 +3628,8 @@ async function renderMapView() {
     if (state.fullMap?.focus && query) state.fullMap.focus(query);
   };
   shell.replaceChildren(map, list);
-  els.mapContent.replaceChildren(title, count, toolbar, countLabel, shell);
+  optionsBody.append(countLabel);
+  els.mapContent.replaceChildren(title, toolbar, shell);
   search.addEventListener("input",()=>{filterMapList(search.value.trim().toLowerCase());sync();});
   sync();filterMapList(search.value.trim().toLowerCase());
   title.tabIndex=-1;title.focus({preventScroll:true});
@@ -3633,17 +3641,22 @@ async function renderMapView() {
       venues,
       maxVenues: Infinity,
       maxVenueLabels: 14,
-      initialCenter: [50, -35],
-      initialZoom: 3,
+      initialCenter: matchMedia('(max-width:600px)').matches ? [43.6532,-79.3832] : [50,-35],
+      initialZoom: matchMedia('(max-width:600px)').matches ? 13 : 3,
       searchControl: false,
-      jumpControl: false,
+      jumpControl: true,
       layerControl: true,
       venueZoomThreshold: 9,
       onSearch: filterMapList,
       onZoom: (zoom) => shell.classList.toggle("is-venue-zoom", zoom >= 9),
     });
     const layers=canvas.querySelector(".leaflet-layer-control");
-    if(layers){const panel=document.createElement("details");const summary=document.createElement("summary");summary.textContent="Map layers";panel.append(summary,layers);toolbar.append(panel);}
+    if(layers){const panel=document.createElement("details");const summary=document.createElement("summary");summary.textContent="Map layers";panel.append(summary,layers);optionsBody.append(panel);}
+    state.mapLayoutObserver?.disconnect();
+    state.mapLayoutAbort?.abort();state.mapLayoutAbort=new AbortController();
+    const fitMap=()=>{if(!canvas.isConnected)return;const height=Math.max(180,window.innerHeight-canvas.getBoundingClientRect().top-16);canvas.style.height=height+'px';shell.style.setProperty('--full-map-height',height+'px');};
+    state.mapLayoutObserver=new ResizeObserver(fitMap);state.mapLayoutObserver.observe(document.querySelector('.site-header'));state.mapLayoutObserver.observe(toolbar);
+    window.addEventListener('resize',fitMap,{signal:state.mapLayoutAbort.signal});requestAnimationFrame(fitMap);
   });
 }
 
@@ -3657,8 +3670,8 @@ function renderHomeMap() {
     venues: venueMapPoints(),
     maxVenues: Infinity,
     maxVenueLabels: 6,
-    initialCenter: [50, -35],
-    initialZoom: 3,
+    initialCenter: matchMedia('(max-width:600px)').matches ? [43.6532,-79.3832] : [50,-35],
+    initialZoom: matchMedia('(max-width:600px)').matches ? 13 : 3,
     searchControl: true,
     jumpControl: true,
     venueZoomThreshold: 9,
@@ -5678,7 +5691,7 @@ async function init() {
       fetch(DATA_URL),
       fetch(ALIASES_URL),
       fetch(STANDALONE_CORRESPONDENCE_URL).catch(() => null),
-      fetch(new URL('./collection-curation.json?v=158', import.meta.url)),
+      fetch(new URL('./collection-curation.json?v=159', import.meta.url)),
     ]);
     if (!response.ok) throw new Error(`Could not load records (${response.status})`);
     state.records = await response.json();
