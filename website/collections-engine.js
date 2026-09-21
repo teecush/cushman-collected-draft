@@ -1,4 +1,4 @@
-import {normalize, publicationYear} from './catalog-engine.js?v=159';
+import {normalize, publicationYear} from './catalog-engine.js?v=160';
 export const COLLECTIONS = [
   {id:'shakespeare',title:'Shakespeare',kind:'plays',href:'#section:shakespeare',intro:'The plays, the productions, and a lifetime of returning to Shakespeare.'},
   {id:'sondheim',title:'Sondheim',kind:'musicals',intro:'The musicals, the lyrics, and the art of Stephen Sondheim.'},

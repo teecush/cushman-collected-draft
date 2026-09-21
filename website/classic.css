@@ -274,3 +274,18 @@ body.map-open .leaflet-jump-control{display:flex;}
  body.map-open .leaflet-map-legend{font-size:9px;gap:5px;}
 }
 #indexView.collection-page #indexContent>.catalog-tabs{grid-column:2;min-width:0;}
+
+/* TV artwork sits inside a clipped screen, beneath an opaque bezel. */
+.collection-art.television{padding:0;box-shadow:none;isolation:isolate;}
+.television-screen{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;overflow:hidden;border-radius:8px;}
+.television-screen::after{content:'';position:absolute;inset:0;z-index:2;border:4px solid #777f7c;border-radius:8px;pointer-events:none;}
+.collection-art.television .television-screen img{display:block;width:100%;height:100%;object-fit:cover;border-radius:0;position:absolute;inset:0;z-index:0;}
+.television-screen>.art-title{max-width:calc(100% - 18px);position:relative;z-index:1;}
+.collection-art.television::after{z-index:3;}
+@media(max-width:550px){.television-screen::after{border-width:3px;}}
+/* Explicit border-box sizing also prevents Safari's aspect-ratio items from
+   overflowing their grid tracks at desktop display/zoom combinations. */
+.collection-gallery.television>.collection-item{min-width:0;max-width:100%;}
+.collection-art.television{box-sizing:border-box;width:100%;max-width:100%;min-width:0;flex:none;}
+
+.collection-art.television .television-screen img.television-logo{inset:4px;width:calc(100% - 8px);height:calc(100% - 8px);}

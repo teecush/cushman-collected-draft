@@ -1,5 +1,5 @@
-import {serialize, publicationYear, normalize} from './catalog-engine.js?v=159';
-import {COLLECTIONS} from './collections-engine.js?v=159';
+import {serialize, publicationYear, normalize} from './catalog-engine.js?v=160';
+import {COLLECTIONS} from './collections-engine.js?v=160';
 
 export function createCollectionViews({state,els,h,node,link,button,openIndex,getCollections}) {
   let activeMap=null, generation=0, artObserver=null;
@@ -23,10 +23,12 @@ export function createCollectionViews({state,els,h,node,link,button,openIndex,ge
   function artwork(collection,item,cls='') {
     const wrapper=node('div',undefined,'collection-art '+collection.kind+' '+cls);
     const asset=state.collectionCuration?.artwork?.[collection.id+':'+item.id];
+    const screen=collection.kind==='television'?node('div',undefined,'television-screen'):wrapper;
+    if(screen!==wrapper){wrapper.append(screen);screen.style.backgroundColor=asset?.screenColor||'#e1e9df';}
     if(asset?.src){
-      const img=node('img');img.src=asset.src;img.alt='';if(asset.fit)img.style.objectFit=asset.fit;img.loading='lazy';wrapper.classList.add('has-artwork');
-      img.addEventListener('error',()=>{img.remove();wrapper.classList.remove('has-artwork');wrapper.append(node('span',item.title,'art-title'));},{once:true});wrapper.append(img);
-    } else wrapper.append(node('span',item.title,'art-title'));
+      const img=node('img');img.src=asset.src;img.alt='';if(asset.fit)img.style.objectFit=asset.fit;if(collection.kind==='television'&&asset.fit==='contain')img.classList.add('television-logo');if(asset.position)img.style.objectPosition=asset.position;img.loading='lazy';wrapper.classList.add('has-artwork');
+      img.addEventListener('error',()=>{img.remove();wrapper.classList.remove('has-artwork');screen.append(node('span',item.title,'art-title'));},{once:true});screen.append(img);
+    } else screen.append(node('span',item.title,'art-title'));
     return wrapper;
   }
   function itemCard(collection,item) {
@@ -48,7 +50,7 @@ export function createCollectionViews({state,els,h,node,link,button,openIndex,ge
     els.indexContent.append(node('p','Artwork identifies the publications, shows, books, recordings and people discussed in this archive. Copyright remains with the respective rights holders. Source and licence details are listed below.','landing-intro'));
     const content=node('div',undefined,'image-credits');els.indexContent.append(content);
     try {
-      const response=await fetch(new URL('./assets/collections/credits.json?v=159',import.meta.url));
+      const response=await fetch(new URL('./assets/collections/credits.json?v=160',import.meta.url));
       if(!response.ok)throw new Error('Credits unavailable');
       const entries=await response.json();if(token!==generation)return;
       for(const asset of entries){

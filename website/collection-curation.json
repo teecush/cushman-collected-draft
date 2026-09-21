@@ -769,319 +769,490 @@
     },
     "television:24": {
       "src": "assets/collections/wiki-528ed18ec7c50740.png",
-      "alt": "24"
+      "alt": "24",
+      "fit": "cover",
+      "position": "50% 50%"
     },
     "television:24-live-another-day": {
       "src": "assets/collections/wiki-e432e23116ceee5c.jpg",
-      "alt": "24: Live Another Day"
+      "alt": "24: Live Another Day",
+      "fit": "cover",
+      "position": "50% 0%"
     },
     "television:24-redemption": {
       "src": "assets/collections/wiki-aa3cd4e038720795.jpg",
-      "alt": "24: Redemption"
+      "alt": "24: Redemption",
+      "fit": "cover",
+      "position": "50% 100%"
     },
     "television:ally-mcbeal": {
       "src": "assets/collections/wiki-4e5d5c215ff7a7e5.jpg",
-      "alt": "Ally McBeal"
+      "alt": "Ally McBeal",
+      "fit": "cover",
+      "position": "50% 90%"
     },
     "television:anne-of-green-gables-a-new-beginning": {
       "src": "assets/collections/wiki-2c3ab60a7a62a73c.jpg",
-      "alt": "Anne of Green Gables: A New Beginning"
+      "alt": "Anne of Green Gables: A New Beginning",
+      "fit": "cover",
+      "position": "50% 55%"
     },
     "television:as-you-like-it": {
       "src": "assets/collections/wiki-825de0dd7e749128.jpg",
-      "alt": "As You Like It"
+      "alt": "As You Like It",
+      "fit": "cover",
+      "position": "50% 55%"
     },
     "television:being-erica": {
       "src": "assets/collections/wiki-e9ac52cd384ed332.png",
-      "alt": "Being Erica"
+      "alt": "Being Erica",
+      "fit": "cover",
+      "position": "50% 50%"
     },
     "television:boardwalk-empire": {
       "src": "assets/collections/wiki-f5f92f52a9092bf7.png",
-      "alt": "Boardwalk Empire"
+      "alt": "Boardwalk Empire",
+      "fit": "cover",
+      "position": "50% 50%"
     },
     "television:border": {
       "src": "assets/collections/wiki-b2f9de9b0af3d776.jpg",
-      "alt": "The Border"
+      "alt": "The Border",
+      "fit": "cover",
+      "position": "50% 50%"
     },
     "television:borgias": {
       "src": "assets/collections/wiki-f3e48b519cf63ac8.jpg",
-      "alt": "The Borgias"
+      "alt": "The Borgias",
+      "fit": "cover",
+      "position": "50% 50%"
     },
     "television:camelot": {
       "src": "assets/collections/wiki-ed2b825e04e6cd98.png",
-      "alt": "Camelot"
+      "alt": "Camelot",
+      "fit": "cover",
+      "position": "50% 50%"
     },
     "television:colbert-christmas-the-greatest-gift-of-all": {
       "src": "assets/collections/wiki-2ac88fbaea5b1d35.jpg",
-      "alt": "A Colbert Christmas: The Greatest Gift of All"
+      "alt": "A Colbert Christmas: The Greatest Gift of All",
+      "fit": "cover",
+      "position": "50% 0%"
     },
     "television:colbert-report": {
       "src": "assets/collections/wiki-1371755f56a3a228.png",
-      "alt": "The Colbert Report"
+      "alt": "The Colbert Report",
+      "fit": "contain",
+      "position": "50% 50%",
+      "screenColor": "#fff"
     },
     "television:crown": {
       "src": "assets/collections/wiki-734daaae9703be84.jpg",
-      "alt": "The Crown"
+      "alt": "The Crown",
+      "fit": "cover",
+      "position": "50% 50%"
     },
     "television:daily-show": {
       "src": "assets/collections/wiki-4fdf3a17808ad7d7.png",
-      "alt": "The Daily Show"
+      "alt": "The Daily Show",
+      "fit": "contain",
+      "position": "50% 50%",
+      "screenColor": "#fff"
     },
     "television:dan-for-mayor": {
       "src": "assets/collections/wiki-774c3aa714d9d11e.jpg",
-      "alt": "Dan for Mayor"
+      "alt": "Dan for Mayor",
+      "fit": "cover",
+      "position": "50% 50%"
     },
     "television:dirty-sexy-money": {
       "src": "assets/collections/wiki-67df9a94694506d4.jpg",
-      "alt": "Dirty Sexy Money"
+      "alt": "Dirty Sexy Money",
+      "fit": "cover",
+      "position": "50% 50%"
     },
     "television:durham-county": {
       "src": "assets/collections/wiki-d2c7aa94ee873625.jpg",
-      "alt": "Durham County"
+      "alt": "Durham County",
+      "fit": "cover",
+      "position": "50% 50%"
     },
     "television:er": {
       "src": "assets/collections/wiki-cc713a22c9d52f0b.png",
-      "alt": "ER"
+      "alt": "ER",
+      "fit": "contain",
+      "position": "50% 50%",
+      "screenColor": "#fff"
     },
     "television:extras": {
       "src": "assets/collections/wiki-e934532b1ed25b57.jpg",
-      "alt": "Extras"
+      "alt": "Extras",
+      "fit": "cover",
+      "position": "50% 50%"
     },
     "television:family-guy": {
       "src": "assets/collections/wiki-f95fc34b8f22e36c.png",
-      "alt": "Family Guy"
+      "alt": "Family Guy",
+      "fit": "contain",
+      "position": "50% 50%",
+      "screenColor": "#fff"
     },
     "television:flashpoint": {
       "src": "assets/collections/wiki-41c7b71fac343a39.jpg",
-      "alt": "Flashpoint"
+      "alt": "Flashpoint",
+      "fit": "cover",
+      "position": "50% 50%"
     },
     "television:flight-of-the-conchords": {
       "src": "assets/collections/wiki-eeff8d0976c71c64.png",
-      "alt": "Flight of the Conchords"
+      "alt": "Flight of the Conchords",
+      "fit": "cover",
+      "position": "50% 50%"
     },
     "television:fringe": {
       "src": "assets/collections/wiki-d416c46f6ef32c4e.png",
-      "alt": "Fringe"
+      "alt": "Fringe",
+      "fit": "cover",
+      "position": "50% 50%"
     },
     "television:frost-report": {
       "src": "assets/collections/wiki-7a8fbe3c4a8f245c.jpg",
-      "alt": "The Frost Report"
+      "alt": "The Frost Report",
+      "fit": "cover",
+      "position": "50% 50%"
     },
     "television:glee": {
       "src": "assets/collections/wiki-2ae45a18ce13763e.png",
-      "alt": "Glee"
+      "alt": "Glee",
+      "fit": "contain",
+      "position": "50% 50%",
+      "screenColor": "#fff"
     },
     "television:gracepoint": {
       "src": "assets/collections/wiki-9abff28d2627cd15.png",
-      "alt": "Gracepoint"
+      "alt": "Gracepoint",
+      "fit": "cover",
+      "position": "50% 50%"
     },
     "television:gravity": {
       "src": "assets/collections/wiki-a335683541f42181.jpg",
-      "alt": "Gravity"
+      "alt": "Gravity",
+      "fit": "cover",
+      "position": "50% 50%"
     },
     "television:grey-gardens": {
       "src": "assets/collections/wiki-4dece251e01a2075.jpg",
-      "alt": "Grey Gardens"
+      "alt": "Grey Gardens",
+      "fit": "cover",
+      "position": "50% 50%"
     },
     "television:hills": {
       "src": "assets/collections/wiki-1f89d907dca1c3c3.png",
-      "alt": "The Hills"
+      "alt": "The Hills",
+      "fit": "cover",
+      "position": "50% 50%"
     },
     "television:how-do-you-solve-a-problem-like-maria": {
       "src": "assets/collections/wiki-da8b4a39121feffc.png",
-      "alt": "How Do You Solve a Problem Like Maria?"
+      "alt": "How Do You Solve a Problem Like Maria?",
+      "fit": "cover",
+      "position": "50% 50%"
     },
     "television:hung": {
       "src": "assets/collections/wiki-e77f02e6ce3f0dba.png",
-      "alt": "Hung"
+      "alt": "Hung",
+      "fit": "cover",
+      "position": "50% 50%"
     },
     "television:i-claudius": {
       "src": "assets/collections/wiki-6f2c5b9c323a3f4e.jpg",
-      "alt": "I, Claudius"
+      "alt": "I, Claudius",
+      "fit": "cover",
+      "position": "50% 50%"
     },
     "television:ice-road-truckers": {
       "src": "assets/collections/wiki-438a8992485db783.jpg",
-      "alt": "Ice Road Truckers"
+      "alt": "Ice Road Truckers",
+      "fit": "cover",
+      "position": "50% 50%"
     },
     "television:insecurity": {
       "src": "assets/collections/wiki-ff8d936b31d5d1f1.jpg",
-      "alt": "InSecurity"
+      "alt": "InSecurity",
+      "fit": "cover",
+      "position": "100% 50%"
     },
     "television:intelligence": {
       "src": "assets/collections/wiki-1d5452d0045ffc1a.jpg",
-      "alt": "Intelligence"
+      "alt": "Intelligence",
+      "fit": "cover",
+      "position": "50% 50%"
     },
     "television:it-s-always-sunny-in-philadelphia": {
       "src": "assets/collections/wiki-d0701bac5f63dfb5.png",
-      "alt": "It's Always Sunny in Philadelphia"
+      "alt": "It's Always Sunny in Philadelphia",
+      "fit": "cover",
+      "position": "50% 50%"
     },
     "television:john-adams": {
       "src": "assets/collections/wiki-eeb6f9379391ca4c.jpg",
-      "alt": "John Adams"
+      "alt": "John Adams",
+      "fit": "cover",
+      "position": "50% 85%"
     },
     "television:jon-dore-television-show": {
       "src": "assets/collections/wiki-3ccf7c14bee803fc.png",
-      "alt": "The Jon Dore Television Show"
+      "alt": "The Jon Dore Television Show",
+      "fit": "cover",
+      "position": "50% 50%"
     },
     "television:jpod": {
       "src": "assets/collections/wiki-c3f8dcb4036fe1c5.png",
-      "alt": "jPod"
+      "alt": "jPod",
+      "fit": "cover",
+      "position": "50% 50%"
     },
     "television:kath-and-kim": {
       "src": "assets/collections/wiki-b5375b13f1080d40.png",
-      "alt": "Kath and Kim"
+      "alt": "Kath and Kim",
+      "fit": "contain",
+      "position": "50% 50%",
+      "screenColor": "#fff"
     },
     "television:little-mosque-on-the-prairie": {
       "src": "assets/collections/wiki-444602471614d7c0.png",
-      "alt": "Little Mosque on the Prairie"
+      "alt": "Little Mosque on the Prairie",
+      "fit": "contain",
+      "position": "50% 50%",
+      "screenColor": "#fff"
     },
     "television:lost": {
       "src": "assets/collections/wiki-85aebc8e7849ec83.png",
-      "alt": "Lost"
+      "alt": "Lost",
+      "fit": "contain",
+      "position": "50% 50%",
+      "screenColor": "#000"
     },
     "television:lost-in-austen": {
       "src": "assets/collections/wiki-3cbf7d85a17e78c7.jpg",
-      "alt": "Lost in Austen"
+      "alt": "Lost in Austen",
+      "fit": "cover",
+      "position": "50% 50%"
     },
     "television:luck": {
       "src": "assets/collections/wiki-c2f9e4ad83b3d45e.png",
-      "alt": "Luck"
+      "alt": "Luck",
+      "fit": "cover",
+      "position": "100% 50%"
     },
     "television:mad-men": {
       "src": "assets/collections/wiki-f154ce8dd246a528.jpg",
-      "alt": "Mad Men"
+      "alt": "Mad Men",
+      "fit": "cover",
+      "position": "100% 50%"
     },
     "television:making-a-murderer": {
       "src": "assets/collections/wiki-20f2476c33a28e71.jpg",
-      "alt": "Making a Murderer"
+      "alt": "Making a Murderer",
+      "fit": "cover",
+      "position": "50% 50%"
     },
     "television:merlin": {
       "src": "assets/collections/wiki-0bb91de1cfa50b1c.jpg",
-      "alt": "Merlin"
+      "alt": "Merlin",
+      "fit": "cover",
+      "position": "50% 50%"
     },
     "television:monty-python-almost-the-truth-the-lawyer-s-cut": {
       "src": "assets/collections/wiki-b5f52a1f432af2d9.jpg",
-      "alt": "Monty Python: Almost the Truth (The Lawyer's Cut)"
+      "alt": "Monty Python: Almost the Truth (The Lawyer's Cut)",
+      "fit": "cover",
+      "position": "50% 50%"
     },
     "television:mvp": {
       "src": "assets/collections/wiki-765ca5fff241d19b.jpg",
-      "alt": "MVP"
+      "alt": "MVP",
+      "fit": "cover",
+      "position": "50% 50%"
     },
     "television:night-of": {
       "src": "assets/collections/wiki-d05b4049d2400c7a.jpg",
-      "alt": "The Night Of"
+      "alt": "The Night Of",
+      "fit": "cover",
+      "position": "50% 50%"
     },
     "television:no-1-ladies-detective-agency": {
       "src": "assets/collections/wiki-78bafaa8ec7a99a5.jpg",
-      "alt": "The No. 1 Ladies Detective Agency"
+      "alt": "The No. 1 Ladies Detective Agency",
+      "fit": "cover",
+      "position": "50% 50%"
     },
     "television:northanger-abbey": {
       "src": "assets/collections/wiki-27edd7d6fc36d5ba.jpg",
-      "alt": "Northanger Abbey"
+      "alt": "Northanger Abbey",
+      "fit": "cover",
+      "position": "50% 15%"
     },
     "television:nurse-jackie": {
       "src": "assets/collections/wiki-af414d82da6b5c79.jpg",
-      "alt": "Nurse Jackie"
+      "alt": "Nurse Jackie",
+      "fit": "cover",
+      "position": "50% 50%"
     },
     "television:oliver-twist": {
       "src": "assets/collections/wiki-880d210728b7ed0e.jpg",
-      "alt": "Oliver Twist"
+      "alt": "Oliver Twist",
+      "fit": "cover",
+      "position": "50% 50%"
     },
     "television:on-golden-pond": {
       "src": "assets/collections/wiki-12e584e6189668ad.jpg",
-      "alt": "On Golden Pond"
+      "alt": "On Golden Pond",
+      "fit": "cover",
+      "position": "50% 50%"
     },
     "television:our-mutual-friend": {
       "src": "assets/collections/wiki-27f977f41561b7ef.jpg",
-      "alt": "Our Mutual Friend"
+      "alt": "Our Mutual Friend",
+      "fit": "cover",
+      "position": "50% 50%"
     },
     "television:pu-239": {
       "src": "assets/collections/wiki-8f9201d1029e0e9b.jpg",
-      "alt": "PU-239"
+      "alt": "PU-239",
+      "fit": "cover",
+      "position": "50% 15%"
     },
     "television:rich-kids-cattle-drive": {
       "src": "assets/collections/wiki-7b6c8a30f7b91d0e.jpg",
-      "alt": "Rich Kids: Cattle Drive"
+      "alt": "Rich Kids: Cattle Drive",
+      "fit": "cover",
+      "position": "50% 50%"
     },
     "television:rick-mercer-report": {
       "src": "assets/collections/wiki-3e08bb93028abc47.jpg",
-      "alt": "Rick Mercer Report"
+      "alt": "Rick Mercer Report",
+      "fit": "cover",
+      "position": "50% 50%"
     },
     "television:rome": {
       "src": "assets/collections/wiki-8be878ad06cc9bcf.jpg",
-      "alt": "Rome"
+      "alt": "Rome",
+      "fit": "cover",
+      "position": "50% 50%"
     },
     "television:rubicon": {
       "src": "assets/collections/wiki-d8450ccfb6ff04d7.png",
-      "alt": "Rubicon"
+      "alt": "Rubicon",
+      "fit": "cover",
+      "position": "50% 50%"
     },
     "television:sarah-silverman-program": {
       "src": "assets/collections/wiki-143182b288990fd4.jpg",
-      "alt": "The Sarah Silverman Program"
+      "alt": "The Sarah Silverman Program",
+      "fit": "cover",
+      "position": "50% 50%"
     },
     "television:simpsons": {
       "src": "assets/collections/wiki-ab104c373c46b9a8.png",
-      "alt": "The Simpsons"
+      "alt": "The Simpsons",
+      "fit": "contain",
+      "position": "50% 50%",
+      "screenColor": "#fff"
     },
     "television:slings-and-arrows": {
       "src": "assets/collections/wiki-24b6e5730cd75eb3.jpg",
-      "alt": "Slings & Arrows"
+      "alt": "Slings & Arrows",
+      "fit": "cover",
+      "position": "50% 50%"
     },
     "television:smash": {
       "src": "assets/collections/wiki-583d65e9de3f2e39.jpg",
-      "alt": "Smash"
+      "alt": "Smash",
+      "fit": "cover",
+      "position": "50% 50%"
     },
     "television:swingtown": {
       "src": "assets/collections/wiki-aaaf49680c1abd8e.jpg",
-      "alt": "Swingtown"
+      "alt": "Swingtown",
+      "fit": "cover",
+      "position": "50% 78%"
     },
     "television:that-was-the-week-that-was": {
       "src": "assets/collections/wiki-a7ef5688e5577cc5.jpg",
-      "alt": "That Was The Week That Was"
+      "alt": "That Was The Week That Was",
+      "fit": "contain",
+      "position": "50% 50%",
+      "screenColor": "#1e1f24"
     },
     "television:this-hour-has-22-minutes": {
       "src": "assets/collections/wiki-9b4321d7db2c5f5e.jpg",
-      "alt": "This Hour Has 22 Minutes"
+      "alt": "This Hour Has 22 Minutes",
+      "fit": "cover",
+      "position": "50% 50%"
     },
     "television:tinker-tailor-soldier-spy": {
       "src": "assets/collections/wiki-544c41b8feab7222.jpg",
-      "alt": "Tinker, Tailor, Soldier, Spy"
+      "alt": "Tinker, Tailor, Soldier, Spy",
+      "fit": "cover",
+      "position": "50% 50%"
     },
     "television:to-play-the-king": {
       "src": "assets/collections/wiki-444f853b16414063.png",
-      "alt": "To Play the King"
+      "alt": "To Play the King",
+      "fit": "cover",
+      "position": "50% 50%"
     },
     "television:treme": {
       "src": "assets/collections/wiki-6e8ca4a1c1e94594.jpg",
-      "alt": "Treme"
+      "alt": "Treme",
+      "fit": "cover",
+      "position": "50% 50%"
     },
     "television:tudors": {
       "src": "assets/collections/wiki-617cc0850cbcb0bb.jpg",
-      "alt": "The Tudors"
+      "alt": "The Tudors",
+      "fit": "cover",
+      "position": "50% 50%"
     },
     "television:ugly-betty": {
       "src": "assets/collections/wiki-dab1400ce0a2ebe9.png",
-      "alt": "Ugly Betty"
+      "alt": "Ugly Betty",
+      "fit": "cover",
+      "position": "50% 50%"
     },
     "television:war-and-peace": {
       "src": "assets/collections/wiki-662b42950cf67ce4.jpg",
-      "alt": "War and Peace"
+      "alt": "War and Peace",
+      "fit": "cover",
+      "position": "50% 0%"
     },
     "television:weeds": {
       "src": "assets/collections/wiki-2ef4d951277ae82b.png",
-      "alt": "Weeds"
+      "alt": "Weeds",
+      "fit": "contain",
+      "position": "50% 50%",
+      "screenColor": "#fff"
     },
     "television:wild-roses": {
       "src": "assets/collections/wiki-2399ebf4a33697be.png",
-      "alt": "Wild Roses"
+      "alt": "Wild Roses",
+      "fit": "cover",
+      "position": "50% 50%"
     },
     "television:wire": {
       "src": "assets/collections/wiki-acc717f4d9a28835.png",
-      "alt": "The Wire"
+      "alt": "The Wire",
+      "fit": "contain",
+      "position": "50% 50%",
+      "screenColor": "#fff"
     },
     "television:wolf-hall": {
       "src": "assets/collections/wiki-0a471b283781bb8d.png",
-      "alt": "Wolf Hall"
+      "alt": "Wolf Hall",
+      "fit": "contain",
+      "position": "50% 50%",
+      "screenColor": "#fff"
     },
     "profiles:adolph-green": {
       "src": "assets/collections/wiki-fea582ce0e2206bb.jpg",
@@ -1473,87 +1644,150 @@
     },
     "television:sopranos": {
       "src": "assets/collections/wiki-8f02f21c9dc680ce.png",
-      "alt": "The Sopranos"
+      "alt": "The Sopranos",
+      "fit": "contain",
+      "position": "50% 50%",
+      "screenColor": "#fff"
     },
     "television:30-rock": {
       "src": "assets/collections/wiki-2fbe10ff9d6d740f.png",
-      "alt": "30 Rock"
+      "alt": "30 Rock",
+      "fit": "contain",
+      "position": "50% 50%",
+      "screenColor": "#fff"
     },
     "television:curb-your-enthusiasm": {
       "src": "assets/collections/wiki-aa68878b7e0cf32e.png",
-      "alt": "Curb Your Enthusiasm"
+      "alt": "Curb Your Enthusiasm",
+      "fit": "contain",
+      "position": "50% 50%",
+      "screenColor": "#fff"
     },
     "television:damages": {
       "src": "assets/collections/wiki-1ae2529921655827.png",
-      "alt": "Damages"
+      "alt": "Damages",
+      "fit": "contain",
+      "position": "50% 50%",
+      "screenColor": "#fff"
     },
     "television:episodes": {
       "src": "assets/collections/wiki-89842338da58c474.png",
-      "alt": "Episodes"
+      "alt": "Episodes",
+      "fit": "contain",
+      "position": "50% 50%",
+      "screenColor": "#fff"
     },
     "television:generation-kill": {
       "src": "assets/collections/wiki-fb5029e07c0f24ad.png",
-      "alt": "Generation Kill"
+      "alt": "Generation Kill",
+      "fit": "contain",
+      "position": "50% 50%",
+      "screenColor": "#000"
     },
     "television:heroes": {
       "src": "assets/collections/wiki-2965aa5d04492e7b.png",
-      "alt": "Heroes"
+      "alt": "Heroes",
+      "fit": "contain",
+      "position": "50% 50%",
+      "screenColor": "#fff"
     },
     "television:house": {
       "src": "assets/collections/wiki-063242f78df9bc8a.png",
-      "alt": "House"
+      "alt": "House",
+      "fit": "contain",
+      "position": "50% 50%",
+      "screenColor": "#fff"
     },
     "television:howie-do-it": {
       "src": "assets/collections/wiki-8a0501d1dc836351.png",
-      "alt": "Howie Do It"
+      "alt": "Howie Do It",
+      "fit": "contain",
+      "position": "50% 50%",
+      "screenColor": "#fff"
     },
     "television:in-treatment": {
       "src": "assets/collections/wiki-ac89bb605f95a9f2.png",
-      "alt": "In Treatment"
+      "alt": "In Treatment",
+      "fit": "contain",
+      "position": "50% 50%",
+      "screenColor": "#fff"
     },
     "television:kenny-vs-spenny": {
       "src": "assets/collections/wiki-4c3ff4907595c2b5.png",
-      "alt": "Kenny vs. Spenny"
+      "alt": "Kenny vs. Spenny",
+      "fit": "contain",
+      "position": "50% 50%",
+      "screenColor": "#fff"
     },
     "television:lie-to-me": {
       "src": "assets/collections/wiki-f3425d8963f54370.png",
-      "alt": "Lie to Me"
+      "alt": "Lie to Me",
+      "fit": "contain",
+      "position": "50% 50%",
+      "screenColor": "#fff"
     },
     "television:naked-archaeologist": {
       "src": "assets/collections/wiki-a07d21838a53f70f.jpg",
-      "alt": "The Naked Archaeologist"
+      "alt": "The Naked Archaeologist",
+      "fit": "contain",
+      "position": "50% 50%",
+      "screenColor": "#fff"
     },
     "television:office": {
       "src": "assets/collections/wiki-134d5960677ecd62.png",
-      "alt": "The Office"
+      "alt": "The Office",
+      "fit": "contain",
+      "position": "50% 50%",
+      "screenColor": "#fff"
     },
     "television:parks-and-recreation": {
       "src": "assets/collections/wiki-aa1da7667890d387.png",
-      "alt": "Parks and Recreation"
+      "alt": "Parks and Recreation",
+      "fit": "contain",
+      "position": "50% 50%",
+      "screenColor": "#fff"
     },
     "television:prison-break": {
       "src": "assets/collections/wiki-9ff305809b4e8d4d.png",
-      "alt": "Prison Break"
+      "alt": "Prison Break",
+      "fit": "contain",
+      "position": "50% 50%",
+      "screenColor": "#fff"
     },
     "television:royal-canadian-air-farce": {
       "src": "assets/collections/wiki-8a17b7c5f9e7d26f.png",
-      "alt": "The Royal Canadian Air Farce"
+      "alt": "The Royal Canadian Air Farce",
+      "fit": "contain",
+      "position": "50% 50%",
+      "screenColor": "#fff"
     },
     "television:torchwood": {
       "src": "assets/collections/wiki-08b5f2f03ff73107.png",
-      "alt": "Torchwood"
+      "alt": "Torchwood",
+      "fit": "contain",
+      "position": "50% 50%",
+      "screenColor": "#fff"
     },
     "television:true-blood": {
       "src": "assets/collections/wiki-8187f93d4f81aa32.png",
-      "alt": "True Blood"
+      "alt": "True Blood",
+      "fit": "contain",
+      "position": "50% 50%",
+      "screenColor": "#fff"
     },
     "television:united-states-of-tara": {
       "src": "assets/collections/wiki-edb7eed0b39ad7a1.png",
-      "alt": "United States of Tara"
+      "alt": "United States of Tara",
+      "fit": "contain",
+      "position": "50% 50%",
+      "screenColor": "#fff"
     },
     "television:west-wing": {
       "src": "assets/collections/wiki-c4c8dc252c759e8d.png",
-      "alt": "The West Wing"
+      "alt": "The West Wing",
+      "fit": "contain",
+      "position": "50% 50%",
+      "screenColor": "#fff"
     },
     "books:alan-jay-lerner-a-biography": {
       "src": "assets/collections/book-9628608.jpg",
@@ -1945,43 +2179,67 @@
     },
     "television:air-farce-live": {
       "src": "assets/collections/extra-65f31e37a666d81a.jpg",
-      "alt": "Air Farce Live"
+      "alt": "Air Farce Live",
+      "fit": "contain",
+      "position": "50% 50%",
+      "screenColor": "#000"
     },
     "television:bored-to-death": {
       "src": "assets/collections/extra-81c901444ec60884.png",
-      "alt": "Bored to Death"
+      "alt": "Bored to Death",
+      "fit": "cover",
+      "position": "50% 50%"
     },
     "television:californication": {
       "src": "assets/collections/extra-ce6bb446ebda4e6e.png",
-      "alt": "Californication"
+      "alt": "Californication",
+      "fit": "contain",
+      "position": "50% 50%",
+      "screenColor": "#fff"
     },
     "television:good-guys": {
       "src": "assets/collections/extra-4c67cd218df86c5f.png",
-      "alt": "The Good Guys"
+      "alt": "The Good Guys",
+      "fit": "cover",
+      "position": "50% 50%"
     },
     "television:hiccups": {
       "src": "assets/collections/extra-13c1c36936dd426c.jpg",
-      "alt": "Hiccups"
+      "alt": "Hiccups",
+      "fit": "cover",
+      "position": "50% 50%"
     },
     "television:horace-and-pete": {
       "src": "assets/collections/extra-d911f8097c83d3ce.jpg",
-      "alt": "Horace and Pete"
+      "alt": "Horace and Pete",
+      "fit": "cover",
+      "position": "50% 57%"
     },
     "television:important-things-with-demetri-martin": {
       "src": "assets/collections/extra-c770b90f24f8c14b.jpg",
-      "alt": "Important Things with Demetri Martin"
+      "alt": "Important Things with Demetri Martin",
+      "fit": "contain",
+      "position": "50% 50%",
+      "screenColor": "#fff"
     },
     "television:national": {
       "src": "assets/collections/extra-ae63dcc3b9121988.png",
-      "alt": "The National"
+      "alt": "The National",
+      "fit": "contain",
+      "position": "50% 50%",
+      "screenColor": "#000"
     },
     "television:pennies-from-heaven": {
       "src": "assets/collections/extra-d619c25ffd00ae8b.jpg",
-      "alt": "Pennies from Heaven"
+      "alt": "Pennies from Heaven",
+      "fit": "cover",
+      "position": "50% 50%"
     },
     "television:so-you-think-you-can-dance-canada": {
       "src": "assets/collections/extra-2ea5db005c00cdc6.jpg",
-      "alt": "So You Think You Can Dance Canada"
+      "alt": "So You Think You Can Dance Canada",
+      "fit": "cover",
+      "position": "50% 50%"
     },
     "profiles:william-hutt": {
       "src": "assets/collections/extra-263e50bc7867881c.jpg",
