@@ -379,3 +379,6 @@ body.catalog-page #indexView.directory-page .index-controls label{gap:0;}
 
 /* Keep the same five-tab row on every catalog view, including Places itself. */
 @media(max-width:600px){body.catalog-page #indexView .catalog-tabs{flex-wrap:nowrap;justify-content:space-between;gap:0;}body.catalog-page #indexView .catalog-tabs a{font-size:10px;padding-inline:3px;white-space:nowrap;flex-shrink:0;}}
+
+.collection-find.collection-find-compact { margin:16px 0; }
+.collection-find-compact input { margin-top:0; }
