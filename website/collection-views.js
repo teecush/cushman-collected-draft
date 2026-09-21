@@ -154,7 +154,7 @@ export function createCollectionViews({state,els,h,node,link,button,openIndex,ge
     const map=node('div',undefined,'places-map festival-map');map.setAttribute('aria-label',collection.title+' festival venues');
     const list=node('div',undefined,'festival-venues'),all=link('',resultsHref(collection),'primary-action');
     els.indexContent.append(field,map,node('p','Select a theatre to browse its articles. ≈ marks an approximate location.','festival-map-note'),all,list);
-    const draw=async()=>{
+    const draw=async({scrollToReviews=true}={})=>{
       const token=++generation;activeMap?.remove();activeMap=null;
       const extra=year?{from:year,to:year}:{};
       const records=collection.records.filter(r=>!year||publicationYear(r)===year);
@@ -194,9 +194,9 @@ export function createCollectionViews({state,els,h,node,link,button,openIndex,ge
       try{await h.loadMapResources();}catch{if(token===generation)map.replaceChildren(node('p','The map could not load. Browse the theatres below.'));return;}
       if(token!==generation||!map.isConnected)return;
       activeMap=renderFestivalMap(map,allVenues,collection.id,theatreHref);
-      if(selected){map.querySelectorAll('.festival-map-theatre').forEach(a=>{if(a.getAttribute('href')===theatreHref(selected))a.setAttribute('aria-current','true');});requestAnimationFrame(()=>{const heading=list.querySelector('.festival-selected-articles h2');heading.tabIndex=-1;heading.focus({preventScroll:true});heading.scrollIntoView({block:'start'});});}
+      if(selected){map.querySelectorAll('.festival-map-theatre').forEach(a=>{if(a.getAttribute('href')===theatreHref(selected))a.setAttribute('aria-current','true');});if(scrollToReviews)requestAnimationFrame(()=>{if(token!==generation)return;const heading=list.querySelector('.festival-selected-articles h2');heading.tabIndex=-1;heading.focus({preventScroll:true});heading.scrollIntoView({block:'start'});});}
     };
-    select.addEventListener('change',()=>{year=select.value;draw();});draw();
+    select.addEventListener('change',()=>{year=select.value;draw({scrollToReviews:false});});draw();
   }
   return {directory,show,decorateCatalog,dispose,credits,frame};
 }
