@@ -1,5 +1,5 @@
 // Homepage previews reuse credited archive artwork; every card opens its collection.
-import {COLLECTIONS} from './collections-engine.js?v=165';
+import {COLLECTIONS} from './collections-engine.js?v=168';
 const examples = {
   books:['swing-time','all-or-nothing-at-all-a-life-of-frank-sinatra','broadway-anecdotes'],
   albums:['both-sides-now','art-of-romance','gypsy'],

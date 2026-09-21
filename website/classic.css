@@ -327,3 +327,23 @@ body.map-open .leaflet-jump-control{display:flex;}
  body #archive .catalog-tabs{flex-wrap:nowrap;justify-content:space-between;gap:0;}
  body #archive .catalog-tabs a{font-size:9px;padding-inline:3px;white-space:nowrap;flex-shrink:0;}
 }
+
+/* Compact directory controls bring the alphabet and entries into view sooner. */
+body.catalog-page #indexView.directory-page .index-controls{margin:16px 0 12px;}
+body.catalog-page #indexView.directory-page .catalog-tabs{margin:16px 0 12px;padding-bottom:8px;}
+@media(max-width:600px){
+ body.catalog-page.index-open #indexView.directory-page{margin-top:12px;padding-top:14px;}
+ body.catalog-page #indexView.directory-page>.back-link{margin-bottom:10px;}
+ body.catalog-page #indexView.directory-page .catalog-tabs{flex-wrap:nowrap;justify-content:space-between;gap:0;margin:8px 0 10px;padding-bottom:5px;}
+ body.catalog-page #indexView.directory-page .catalog-tabs a{font-size:10px;padding:6px 3px;white-space:nowrap;min-height:36px;}
+ body.catalog-page #indexView.directory-page .index-controls{grid-template-columns:1fr 1fr;gap:8px 12px;margin:10px 0;}
+ body.catalog-page #indexView.directory-page .index-controls label{gap:0;font-size:11px;line-height:16px;}
+ body.catalog-page #indexView.directory-page .index-controls :is(input,select){height:38px;min-height:38px;padding-block:6px;font-size:16px;line-height:24px;}
+ body.catalog-page #indexView.directory-page .index-controls-two label:first-child{grid-column:auto;}
+ body.catalog-page #indexView.directory-page .index-count{font-size:12px;margin-bottom:4px;}
+ body.catalog-page #indexView.directory-page .index-alphabet{display:grid;grid-template-columns:repeat(14,minmax(0,1fr));gap:2px;padding-top:6px;}
+ body.catalog-page #indexView.directory-page .index-alphabet :is(a,span){min-width:0;min-height:30px;padding:2px 0;font-size:11px;}
+ body.catalog-page #indexView.directory-page .index-letter-section{margin-top:16px;}
+ body.catalog-page #indexView.directory-page .index-letter-section>h2{font-size:24px;margin-bottom:8px;}
+}
+@media(max-width:359px){body.catalog-page #indexView.directory-page .index-alphabet{grid-template-columns:repeat(10,minmax(0,1fr));}}

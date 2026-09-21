@@ -1,7 +1,7 @@
-import {FIELDS, normalize, nameMatches, publicationYear, serialize, parse, articleForm, articleSubject} from './catalog-engine.js?v=165';
-import {makeCollections, COLLECTIONS} from './collections-engine.js?v=165';
-import {createCollectionViews} from './collection-views.js?v=165';
-import {INDEX_LETTERS, indexOrder, indexEntries, indexSections} from './index-engine.js?v=165';
+import {FIELDS, normalize, nameMatches, publicationYear, serialize, parse, articleForm, articleSubject} from './catalog-engine.js?v=168';
+import {makeCollections, COLLECTIONS} from './collections-engine.js?v=168';
+import {createCollectionViews} from './collection-views.js?v=168';
+import {INDEX_LETTERS, indexOrder, indexEntries, indexSections} from './index-engine.js?v=168';
 export function createCatalog({state, els, h}) {
   let extra = {}, indexCache = new Map(), textIndex = null, textPromise = null, indexResizeObserver = null, placesMap = null, collectionData = null;
   const getCollections = () => collectionData ||= makeCollections(state.records, h, state.collectionCuration);
@@ -18,11 +18,12 @@ export function createCatalog({state, els, h}) {
   }
   function tabs(active='articles',scope={}) {
     const nav=node('nav',undefined,'catalog-tabs'); nav.setAttribute('aria-label','Catalog views');
-    [['Articles','#archive','articles'],['Works A–Z','#works','works'],['People A–Z','#people','people'],['Publications','#index:publications','publications'],['Places','#places','places']].forEach(([label,url,key])=>{const context={...scope};delete context.origin;delete context.shown;delete context.entity;delete context.entityType;delete context.indexScope;const a=link(label,serialize(context,url));if(key===active)a.setAttribute('aria-current','page');nav.append(a);});
+    [['Articles','#archive','articles'],['Works','#works','works'],['People','#people','people'],['Publications','#index:publications','publications'],['Places','#places','places']].forEach(([label,url,key])=>{const context={...scope};delete context.origin;delete context.shown;delete context.entity;delete context.entityType;delete context.indexScope;const a=link(label,serialize(context,url));if(key===active)a.setAttribute('aria-current','page');nav.append(a);});
     return nav;
   }
   function focusHeading(root=els.indexContent) { const heading=root.querySelector('h1'); if(heading){heading.tabIndex=-1; heading.focus({preventScroll:true});} }
   function openIndex(title, active) {
+    els.indexView.classList.remove('directory-page');
     document.body.classList.add('index-open', 'catalog-page'); els.indexView.hidden=false;
     const heading=node('h1',title); els.indexContent.replaceChildren(heading,tabs(active));
     const back=els.indexView.querySelector(':scope > .back-link'); back.href='#archive';back.textContent='Back to catalog';
@@ -189,14 +190,14 @@ export function createCatalog({state, els, h}) {
     const base = people ? '#people' : works ? '#works' : `#index:${type}`;
     let query = params.get('q') || '', letter = params.get('letter') || '', order = indexOrder(type, params.get('order'));
     const active = people ? 'people' : works ? 'works' : type === 'publications' ? 'publications' : 'places';
-    openIndex(people ? 'People A–Z' : works ? 'Works A–Z' : h.entityType(type)?.label || 'Places', active);
+    openIndex(people ? 'People' : works ? 'Works' : h.entityType(type)?.label || 'Places', active);
     els.indexContent.querySelector('.catalog-tabs').replaceWith(tabs(active, scope));
     if (Object.entries(scope).some(([key, value]) => value && key !== 'sort')) {
       const info = node('p', undefined, 'index-scope');
       info.append(document.createTextNode('Within your selected catalog filters. '), link('Review filters', serialize(scope)), document.createTextNode(' · '), link('Show the full index', base));
       els.indexContent.append(info);
     }
-    els.indexContent.append(node('p', people ? 'Find a person by either given name or surname, then narrow by role.' : works ? 'Find a work, then compare its productions by year, company and place.' : 'Choose an entry to browse its articles.', 'landing-intro'));
+    els.indexView.classList.add('directory-page');
     const controls = node('div', undefined, 'index-controls' + (people || works ? '' : ' index-controls-two'));
     const label = node('label'); label.append(node('span', people ? 'Find a person' : 'Find an entry'));
     const search = node('input'); search.type = 'search'; search.value = query;
