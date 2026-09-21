@@ -1,8 +1,8 @@
 import {renderHomeCollections} from './home-collections.js?v=173';
 import {spotlightRecord} from './collections-engine.js?v=173';
-import { createCatalog } from "./catalog.js?v=176";
+import { createCatalog } from "./catalog.js?v=177";
 import { FEATURES } from "./features.js?v=173";
-const DATA_URL = new URL("../site_export/data/catalog.json?v=173", import.meta.url);
+const DATA_URL = new URL("../site_export/data/catalog.json?v=177", import.meta.url);
 const ALIASES_URL = new URL("../site_export/data/route_aliases.json?v=1", import.meta.url);
 const STANDALONE_CORRESPONDENCE_URL = new URL("../site_export/data/standalone_correspondence.json?v=4", import.meta.url);
 const CONTENT_ROOT = new URL("../site_export/content/reviews/", import.meta.url);
@@ -4904,7 +4904,13 @@ function articleTools(record) {
   const print=makeButton("Print",()=>window.print());
   const correction=document.createElement("a");correction.textContent="Suggest a correction";correction.href=`mailto:cushmancollected@gmail.com?subject=${encodeURIComponent("Correction: "+record.title)}&body=${encodeURIComponent(url+"\n\nSuggested correction:\n")}`;
   const status=document.createElement("span");status.className="tool-status";status.setAttribute("role","status");
-  tools.append(share,cite,print,correction,status);return tools;
+  tools.append(cite,print,share,correction,status);
+  const menu=document.createElement("details");menu.className="article-options";
+  const toggle=document.createElement("summary");toggle.textContent="…";toggle.setAttribute("aria-label","Article options");toggle.title="Article options";
+  menu.append(toggle,tools);
+  menu.addEventListener("keydown",event=>{if(event.key==="Escape"){menu.open=false;toggle.focus();}});
+  menu.addEventListener("focusout",event=>{if(event.relatedTarget&&!menu.contains(event.relatedTarget))menu.open=false;});
+  return menu;
 }
 
 function relatedEntityCandidates(record) {
@@ -5404,8 +5410,6 @@ async function showReview(slug) {
   articleParts.push(meta);
   if (record.authorship_note) { const note = document.createElement("p"); note.className="public-date-note"; note.textContent=record.authorship_note; articleParts.push(note); }
   if (record.date_note) { const note = document.createElement("p"); note.className="public-date-note"; note.textContent=record.date_note; articleParts.push(note); }
-  const jump = document.createElement("a"); jump.href="#article-text";jump.className="jump-to-text";jump.textContent="Jump to article text";
-  jump.addEventListener("click", event=>{event.preventDefault();body.tabIndex=-1;body.focus();body.scrollIntoView({block:"start",behavior:"auto"});});articleParts.push(jump);
   if (isIncompleteArticle(record)) articleParts.push(incompleteArticleNotice());
   articleParts.push(articleTools(record));
   if (hasCorrespondence(record)) {
@@ -5691,7 +5695,7 @@ async function init() {
       fetch(DATA_URL),
       fetch(ALIASES_URL),
       fetch(STANDALONE_CORRESPONDENCE_URL).catch(() => null),
-      fetch(new URL('./collection-curation.json?v=175', import.meta.url)),
+      fetch(new URL('./collection-curation.json?v=177', import.meta.url)),
     ]);
     if (!response.ok) throw new Error(`Could not load records (${response.status})`);
     state.records = await response.json();

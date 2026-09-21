@@ -43,7 +43,7 @@ production_groups:
   - Jean Cocteau
   actors:
   - Sue Bendall
-date_note: 'Publication date not visible on the clipping. Publication identified from the family-supplied Cambridge PDF grouping; no year or exact date has been assigned.'
+date_note: Undated Cambridge student-theatre review, probably early to mid-1960s. The announced Carey Harrison production of The Caretaker is a dating lead, but no reliable production or issue date was established. The clipping bears Robert Cushman’s byline.
 ---
 Cocteau, Ionesco, Becket
 

@@ -173,3 +173,15 @@ main { scroll-margin-top:120px; }
 .exact-matches { display:flex;flex-wrap:wrap;gap:10px;margin:10px 0;font:14px var(--sans); }
 .exact-matches a { padding:12px 15px;border-left:3px solid var(--blue-dark);background:#edf3f7;min-height:44px; }
 .catalog-more .catalog-filter-grid label { text-transform:none;letter-spacing:0;font-weight:400; }
+
+/* Keep article actions available behind a single quiet disclosure. */
+.article-options { position:relative; width:max-content; max-width:100%; margin:8px 0 12px; }
+.article-options > summary { display:flex; align-items:center; justify-content:center; width:44px; height:44px; padding:0; list-style:none; cursor:pointer; color:var(--blue-dark); font:28px/1 var(--sans); }
+.article-options > summary::-webkit-details-marker { display:none; }
+.article-options > summary:focus-visible { outline:2px solid var(--blue-dark); outline-offset:2px; }
+.article-options[open] > summary { background:var(--cream); }
+.article-options .explicit-tools { position:absolute; z-index:20; top:100%; left:0; display:flex; flex-direction:column; align-items:stretch; width:min(320px,calc(100vw - 48px)); box-sizing:border-box; margin:0; padding:12px; gap:4px; border:1px solid var(--rule); background:white; box-shadow:0 4px 12px #0002; }
+.article-options .explicit-tools > :is(button,a),.article-options .citation-details > summary { display:block; width:100%; box-sizing:border-box; text-align:left; border:0; padding:10px; font:14px/1.5 var(--sans); background:transparent; color:var(--blue-dark); }
+.article-options .explicit-tools > :is(button,a):hover,.article-options .citation-details > summary:hover { background:var(--cream); }
+.article-options .tool-status:empty { display:none; }
+@media print { .article-options { display:none !important; } }

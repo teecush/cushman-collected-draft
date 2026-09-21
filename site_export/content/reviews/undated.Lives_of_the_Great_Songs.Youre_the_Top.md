@@ -3,21 +3,18 @@ title: You're the Top
 author: Robert Cushman
 publication: Lives of the Great Songs
 section: Music
-date: ''
+date: '1994-01-01'
 article_category: Music Essay
 collection:
 - The Musical Collection
 - UK Collection
-year: ''
+year: '1994'
 editorial_status: done
 editorial_issue_type: clean_manual_transcription
-editorial_notes: >-
-  Transcribed from user-provided photographs of pages 35–39. The source shown
-  in the photographs does not supply a publication date. Song-lyric quotations
-  are represented by editorial omission notices in the public transcription.
+editorial_notes: '>-'
 media: []
 coordinates: []
-production_title: You're the Top; Anything Goes
+production_title: 'You''re the Top; Anything Goes'
 director: []
 actors: []
 playwright: []
@@ -63,6 +60,10 @@ source_provenance:
 - Song Essays/Lives of the Great Songs/You're the Top/Article Photos/8-Photo-8.jpg
 - Song Essays/Lives of the Great Songs/You're the Top/Article Photos/9-Photo-9.jpg
 publication_status: publish
+date_precision: year
+slug: undated-you-re-the-top
+date_note: Dated to the 1994 publication of the anthology Lives of the Great Songs. This is the book publication year, not a confirmed date of first newspaper publication.
+date_source_url: https://www.independent.co.uk/arts-entertainment/dispatches-from-the-heart-1448081.html
 ---
 On a broad view, most songs are list songs. I’m thinking especially of songs in the standard or Broadway tradition, but I suspect that it applies across the board. Popular songs fasten on a single idea, a single conceit, and spin out examples of it or variations on it until the music stops. “My Funny Valentine” is a list song. It catalogues the beloved’s physical limitations, and the irrelevance of those limitations, one at a time. Most lyrics are collections of one-liners, for fairly obvious reasons. The demands of rhyme and scansion—we’re talking here about conscientious lyricists—are easier to negotiate if you confine yourself to one thought per line or, more important in practical terms, one line per thought. The musical line, generally pretty simple, encourages that discipline anyway, and if you get it right, a certain elegance will result. It is a rare lyricist who can construct in paragraphs: who can spin out a thought over half-a-dozen lines without clumsiness or padding. P. G. Wodehouse, long ago, could do it. Oscar Hammerstein did it, though so unspectacularly you hardly notice, and Frank Loesser, who could do almost anything. This is beginning to sound like a list song itself—appropriately, since the great master of the long form, the one who told the suavest stories (cf. “Begin the Beguine”) was Cole Porter who, most unfairly, was also the virtuoso of the list song in its purest state. As far as lists are concerned, Porter consummately did it, all the way back to “Let’s Do It”.
 

@@ -34,7 +34,7 @@ lighting_designer:
 - John Taylor
 playwright:
 - William Shakespeare
-date_note: 'Publication date not visible on the clipping. Publication identified from the family-supplied Cambridge PDF grouping; no year or exact date has been assigned.'
+date_note: Undated Cambridge student-theatre review, probably early to mid-1960s. Searches for the Carey Harrison production and its named cast did not establish a reliable year or issue date. Robert Cushman is named on the surviving source.
 ---
 A.D.C. Theatre: The Two Gentlemen of Verona
 

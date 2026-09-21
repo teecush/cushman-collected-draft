@@ -98,7 +98,7 @@ export function createCollectionViews({state,els,h,node,link,button,openIndex,ge
       els.indexContent.append(recordList(collection.records,collection.title));
       const relatedIds=new Set(state.collectionCuration?.earlyUndated||[]);
       const related=state.records.filter(record=>relatedIds.has(record.slug));
-      if(related.length)els.indexContent.append(node('h2','Undated Cambridge clippings'),node('p','Related student-publication clippings whose dates have not been established. The opera preview is unsigned.'),recordList(related,'Undated Cambridge clippings'));
+      if(related.length)els.indexContent.append(node('h2','Undated Cambridge clippings'),node('p','Related student-publication clippings whose dates have not been established.'),recordList(related,'Undated Cambridge clippings'));
       return;
     }
     const field=node('label',undefined,'collection-find');field.append(node('span',id==='television'?'Search this collection':'Find '+(collection.kind==='portraits'?'a person':'a title')));

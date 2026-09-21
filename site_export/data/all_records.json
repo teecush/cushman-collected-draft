@@ -461802,7 +461802,7 @@
     "title": "A.D.C. Theatre: The Two Gentlemen of Verona",
     "date": "",
     "date_precision": "unknown",
-    "date_note": "Publication date not visible on the clipping. Publication identified from the family-supplied Cambridge PDF grouping; no year or exact date has been assigned.",
+    "date_note": "Undated Cambridge student-theatre review, probably early to mid-1960s. Searches for the Carey Harrison production and its named cast did not establish a reliable year or issue date. Robert Cushman is named on the surviving source.",
     "year": "",
     "publication": "Broadsheet",
     "source_publication": "Broadsheet",
@@ -461912,147 +461912,14 @@
     }
   },
   {
-    "slug": "undated-arts-theatre-the-english-opera-group",
-    "route": "/reviews/undated-arts-theatre-the-english-opera-group/",
-    "source_file": "undated.Broadsheet.Arts_Theatre_The_English_Opera_Group.md",
-    "title": "Arts Theatre: The English Opera Group",
-    "date": "",
-    "date_precision": "unknown",
-    "date_note": "Publication date not visible on the clipping. Publication identified from the family-supplied Cambridge PDF grouping; no year or exact date has been assigned.",
-    "year": "",
-    "publication": "Broadsheet",
-    "source_publication": "Broadsheet",
-    "article_category": "Theatre Preview",
-    "collections": [
-      "UK Collection"
-    ],
-    "publication_status": "publish",
-    "editorial_status": "done",
-    "editorial_issue_type": "unsigned_authorship_unconfirmed",
-    "source_completeness": "complete_clipping",
-    "canonical_file": "",
-    "production_title": "",
-    "company": "English Opera Group; English Chamber Orchestra",
-    "venue": "Arts Theatre",
-    "city": "Cambridge, England",
-    "coordinates": [],
-    "people": [
-      "Benjamin Britten",
-      "Bryan Balkwill",
-      "Malcolm Williamson",
-      "Marcus Dods"
-    ],
-    "roles": {
-      "director": [],
-      "actors": [],
-      "playwright": [],
-      "composer_lyricist": [],
-      "musical_director": [],
-      "choreographer": [],
-      "orchestrator": [],
-      "arranger": [],
-      "assistant_director": [],
-      "stage_manager": [],
-      "assistant_musical_director": [],
-      "vocal_director": [],
-      "dance_captain": [],
-      "fight_director": [],
-      "dramaturg": [],
-      "producer": [],
-      "set_designer": [],
-      "costume_designer": [],
-      "lighting_designer": [],
-      "sound_designer": [],
-      "musicians": [],
-      "performers": [],
-      "artists": []
-    },
-    "production_groups": [
-      {
-        "order": "1",
-        "production_title": "Albert Herring",
-        "composer_lyricist": [
-          "Benjamin Britten"
-        ],
-        "musical_director": [
-          "Bryan Balkwill"
-        ]
-      },
-      {
-        "order": "2",
-        "production_title": "The Turn of the Screw",
-        "composer_lyricist": [
-          "Benjamin Britten"
-        ],
-        "musical_director": [
-          "Benjamin Britten",
-          "Bryan Balkwill"
-        ]
-      },
-      {
-        "order": "3",
-        "production_title": "English Eccentrics",
-        "composer_lyricist": [
-          "Malcolm Williamson"
-        ],
-        "musical_director": [
-          "Marcus Dods"
-        ]
-      }
-    ],
-    "media": [],
-    "correspondence": [],
-    "word_count": 425,
-    "author": "Unknown",
-    "authorship_note": "Unsigned preview; attribution to Robert Cushman is unconfirmed.",
-    "coordinate_points": [],
-    "display_schema": {
-      "work_type": "productions",
-      "work_label": "Production",
-      "company_label": "Company",
-      "primary_browse": "productions",
-      "secondary_browse": ""
-    },
-    "browse_entities": {
-      "books": [],
-      "productions": [
-        "Albert Herring",
-        "English Eccentrics",
-        "The Turn of the Screw"
-      ],
-      "subjects": [],
-      "book_authors": [],
-      "publishers": [],
-      "topics": [],
-      "events": [],
-      "networks": [],
-      "companies": [
-        "English Chamber Orchestra",
-        "English Opera Group"
-      ],
-      "venues": [
-        "Arts Theatre"
-      ],
-      "cities": [
-        "Cambridge, England"
-      ],
-      "people": [
-        "Benjamin Britten",
-        "Bryan Balkwill",
-        "Malcolm Williamson",
-        "Marcus Dods"
-      ]
-    }
-  },
-  {
     "slug": "undated-you-re-the-top",
     "route": "/reviews/undated-you-re-the-top/",
     "source_file": "undated.Lives_of_the_Great_Songs.Youre_the_Top.md",
     "title": "You're the Top",
-    "date": "",
-    "date_precision": "unknown",
-    "date_note": "",
-    "year": "",
+    "date": "1994-01-01",
+    "date_precision": "year",
+    "date_note": "Dated to the 1994 publication of the anthology Lives of the Great Songs. This is the book publication year, not a confirmed date of first newspaper publication.",
+    "year": "1994",
     "publication": "Lives of the Great Songs",
     "source_publication": "Lives of the Great Songs",
     "article_category": "Music Essay",
@@ -462186,7 +462053,7 @@
     "title": "Cocteau, Ionesco, Becket: New Company at A.D.C.",
     "date": "",
     "date_precision": "unknown",
-    "date_note": "Publication date not visible on the clipping. Publication identified from the family-supplied Cambridge PDF grouping; no year or exact date has been assigned.",
+    "date_note": "Undated Cambridge student-theatre review, probably early to mid-1960s. The announced Carey Harrison production of The Caretaker is a dating lead, but no reliable production or issue date was established. The clipping bears Robert Cushman’s byline.",
     "year": "",
     "publication": "New Cambridge",
     "source_publication": "New Cambridge",

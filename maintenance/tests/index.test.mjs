@@ -39,5 +39,5 @@ assert.equal(publicationYear({year: 'unknown'}), '');
 const recoveredYears = records.filter(r => !r.year && publicationYear(r));
 assert.equal(recoveredYears.length, 14, 'Fourteen dated articles without a redundant year field remain browsable');
 const undated = records.filter(r => !publicationYear(r));
-assert.deepEqual(undated.map(r=>r.slug).sort(), ['undated-you-re-the-top','undated-cocteau-ionesco-becket-new-company-at-a-d-c','undated-arts-theatre-the-english-opera-group','undated-a-d-c-theatre-the-two-gentlemen-of-verona'].sort());
+assert.deepEqual(undated.map(r=>r.slug).sort(), ['undated-cocteau-ionesco-becket-new-company-at-a-d-c','undated-a-d-c-theatre-the-two-gentlemen-of-verona'].sort());
 console.log('PASS: timeline/year filters recover 14 dated articles; only genuinely undated writing is separate.');
