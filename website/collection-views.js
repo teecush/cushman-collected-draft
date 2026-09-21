@@ -1,5 +1,6 @@
-import {serialize, publicationYear, normalize} from './catalog-engine.js?v=168';
-import {COLLECTIONS} from './collections-engine.js?v=168';
+import {theatreIllustration, renderFestivalMap, festivalLocation} from './festival-map.js?v=172';
+import {serialize, publicationYear, normalize} from './catalog-engine.js?v=172';
+import {COLLECTIONS} from './collections-engine.js?v=172';
 
 export function createCollectionViews({state,els,h,node,link,button,openIndex,getCollections}) {
   let activeMap=null, generation=0, artObserver=null;
@@ -60,7 +61,7 @@ export function createCollectionViews({state,els,h,node,link,button,openIndex,ge
     els.indexContent.append(node('p','Artwork identifies the publications, shows, books, recordings and people discussed in this archive. Copyright remains with the respective rights holders. Source and licence details are listed below.','landing-intro'));
     const content=node('div',undefined,'image-credits');els.indexContent.append(content);
     try {
-      const response=await fetch(new URL('./assets/collections/credits.json?v=168',import.meta.url));
+      const response=await fetch(new URL('./assets/collections/credits.json?v=172',import.meta.url));
       if(!response.ok)throw new Error('Credits unavailable');
       const entries=await response.json();if(token!==generation)return;
       for(const asset of entries){
@@ -89,8 +90,8 @@ export function createCollectionViews({state,els,h,node,link,button,openIndex,ge
   }
   function show(id,params) {
     const collection=getCollections().get(id);openIndex(collection.title,'');frame();
-    els.indexContent.append(node('p',collection.intro,'landing-intro'));
     if(collection.kind==='festival'){festival(collection,params);return;}
+    els.indexContent.append(node('p',collection.intro,'landing-intro'));
     if(id!=='television')els.indexContent.append(link('Search all '+collection.records.length.toLocaleString()+' articles',resultsHref(collection),'primary-action'));
     if(collection.kind==='early'){
       els.indexContent.append(recordList(collection.records,collection.title));
@@ -115,42 +116,59 @@ export function createCollectionViews({state,els,h,node,link,button,openIndex,ge
     search.addEventListener('input',()=>{const p=new URLSearchParams();if(search.value)p.set('q',search.value);history.replaceState(null,'','#collection:'+id+(p.size?'?'+p:''));draw();});draw();
   }
   function festival(collection,params) {
+    const heading=els.indexContent.querySelector('h1');
+    const logo=state.collectionCuration?.homeArtwork?.[collection.id];
+    if(logo?.src){const img=node('img');img.src=logo.src;img.alt=collection.title;heading.replaceChildren(img);heading.classList.add('festival-heading');}
     const years=[...new Set(collection.records.map(publicationYear).filter(Boolean))].sort().reverse();
     let year=years.includes(params.get('year'))?params.get('year'):'';
+    const selectedTheatre=params.get('theatre')||'';
+    const theatreHref=venue=>{const p=new URLSearchParams();if(year)p.set('year',year);p.set('theatre',venue.label);return '#collection:'+collection.id+'?'+p;};
     const field=node('label',undefined,'festival-year');field.append(node('span','Season'));
     const select=node('select');select.append(new Option('All years',''));years.forEach(y=>select.append(new Option(y,y)));select.value=year;field.append(select);
     const map=node('div',undefined,'places-map festival-map');map.setAttribute('aria-label',collection.title+' festival venues');
     const list=node('div',undefined,'festival-venues'),all=link('',resultsHref(collection),'primary-action');
-    els.indexContent.append(field,map,all,list);
+    els.indexContent.append(field,map,node('p','Select a theatre to browse its articles. ≈ marks an approximate location.','festival-map-note'),all,list);
     const draw=async()=>{
       const token=++generation;activeMap?.remove();activeMap=null;
       const extra=year?{from:year,to:year}:{};
       const records=collection.records.filter(r=>!year||publicationYear(r)===year);
       const ids=new Set(records.map(r=>r.slug));
       all.href=resultsHref(collection,null,extra);all.textContent='Browse all '+records.length+' articles'+(year?' from '+year:'');
-      history.replaceState(null,'','#collection:'+collection.id+(year?'?year='+year:''));
+      const pageParams=new URLSearchParams();if(year)pageParams.set('year',year);if(selectedTheatre)pageParams.set('theatre',selectedTheatre);history.replaceState(null,'','#collection:'+collection.id+(pageParams.size?'?'+pageParams:''));
       list.replaceChildren(node('h2','The theatres'));
       map.replaceChildren(node('p','Loading the festival map…'));
-      try{await h.loadMapResources();}catch{if(token!==generation)return;map.replaceChildren(node('p','The map could not load. Browse the theatres below.'));}
-      if(token!==generation||!map.isConnected)return;
       // Match the Canadian festival city, not venues with the same name elsewhere.
       const cityMatches=value=>collection.id==='stratford'?/^stratford(?: ontario| on canada)?$/.test(normalize(value)):/^niagara on the lake(?: ontario| on canada)?$/.test(normalize(value));
       const isFestivalVenue=label=>collection.id==='stratford'?/^(festival theatre|stratford festival theatre|avon theatre|tom patterson theatre|studio theatre|third stage|masonic concert hall|studio annex)$/.test(normalize(label)):/^(festival theatre|shaw festival theatre|court house theatre|royal george theatre|studio theatre|jackie maxwell studio(?: theatre)?)$/.test(normalize(label));
-      const venues=h.venueMapPoints().filter(p=>cityMatches(p.city)&&isFestivalVenue(p.label)).map(p=>({...p,records:p.records.filter(r=>ids.has(r.slug)&&h.recordVenueCityPairs(r).some(pair=>normalize(pair.venue)===normalize(p.label)&&normalize(pair.city)===normalize(p.city)))})).filter(p=>p.records.length).map(p=>({...p,count:p.records.length}));
+      const venueAliases=h.venueMapPoints().filter(p=>cityMatches(p.city)&&isFestivalVenue(p.label)).map(p=>({...p,records:p.records.filter(r=>ids.has(r.slug)&&h.recordVenueCityPairs(r).some(pair=>normalize(pair.venue)===normalize(p.label)&&normalize(pair.city)===normalize(p.city)))})).map(p=>festivalLocation(collection.id,{...p,count:p.records.length}));
+      // Group historical/alternate names only in this view; preserve source metadata.
+      const groups=new Map();
+      for(const venue of venueAliases){
+        let label=venue.label;
+        if(/^(stratford |shaw )?festival theatre$/i.test(label))label='Festival Theatre';
+        if(collection.id==='shaw'&&/studio/i.test(label))label='Jackie Maxwell Studio Theatre';
+        if(collection.id==='stratford'&&label==='Third Stage')label='Tom Patterson Theatre';
+        const group=groups.get(label)||{...venue,label,records:[],aliases:[]};
+        group.aliases.push(venue.label);group.records.push(...venue.records);groups.set(label,group);
+      }
+      const allVenues=[...groups.values()].map(v=>{const records=[...new Map(v.records.map(r=>[r.slug,r])).values()];return {...v,records,count:records.length};});
+      const venues=allVenues.filter(p=>p.count);
       const rows=node('div',undefined,'festival-venue-grid');
       for(const venue of venues){
-        const a=link('',resultsHref(collection,null,{...extra,venue:venue.label,city:venue.city}),'festival-venue-card');a.append(node('h3',venue.label));
+        const a=link('',theatreHref(venue),'festival-venue-card');if(venue.label===selectedTheatre)a.setAttribute('aria-current','true');const art=node('div',undefined,'theatre-illustration');art.innerHTML=theatreIllustration(collection.id,venue.label);a.append(art,node('h3',venue.label));
         if(venue.count>1)a.append(node('span',venue.count+' articles'));
-        const titles=[...new Set(venue.records.flatMap(r=>h.recordVenueCityPairs(r).filter(pair=>normalize(pair.venue)===normalize(venue.label)&&cityMatches(pair.city)).map(pair=>pair.productionTitle).filter(Boolean)))];
+        const titles=[...new Set(venue.records.flatMap(r=>h.recordVenueCityPairs(r).filter(pair=>venue.aliases.some(alias=>normalize(pair.venue)===normalize(alias))&&cityMatches(pair.city)).map(pair=>pair.productionTitle).filter(Boolean)))];
         if(year&&titles.length)a.append(node('p',titles.join(' · ')));rows.append(a);
       }
       list.append(rows);
-      if(!venues.length){list.append(node('p','No venue-linked articles for this season. Use Browse all articles above.'));map.replaceChildren(node('p','No festival venues are recorded for this selection.'));return;}
-      if(!window.L)map.replaceChildren(node('p','The interactive map could not load. Browse the theatres below.'));
-      if(window.L){
-        const center=collection.id==='stratford'?[43.372,-80.979]:[43.252,-79.073];
-        activeMap=h.renderArchiveMap(map,[],{venues,initialCenter:center,initialZoom:14,venueZoomThreshold:0,zoomControl:true,venueLink:venue=>resultsHref(collection,null,{...extra,venue:venue.label,city:venue.city})});
-      }
+      const selected=allVenues.find(v=>v.label===selectedTheatre);
+      if(selected){const results=node('section',undefined,'festival-selected-articles');results.append(node('h2',selected.label+(year?' · '+year:'')),node('p',selected.count+' '+(selected.count===1?'article':'articles')),link('All theatres','#collection:'+collection.id+(year?'?year='+year:''),'festival-clear'),recordList(selected.records,collection.title+' — '+selected.label));list.append(results);}
+
+      if(!venues.length)list.append(node('p','No venue-linked articles for this season. Use Browse all articles above.'));
+      try{await h.loadMapResources();}catch{if(token===generation)map.replaceChildren(node('p','The map could not load. Browse the theatres below.'));return;}
+      if(token!==generation||!map.isConnected)return;
+      activeMap=renderFestivalMap(map,allVenues,collection.id,theatreHref);
+      if(selected){map.querySelectorAll('.festival-map-theatre').forEach(a=>{if(a.getAttribute('href')===theatreHref(selected))a.setAttribute('aria-current','true');});requestAnimationFrame(()=>{const heading=list.querySelector('.festival-selected-articles h2');heading.tabIndex=-1;heading.focus({preventScroll:true});heading.scrollIntoView({block:'start'});});}
     };
     select.addEventListener('change',()=>{year=select.value;draw();});draw();
   }

@@ -1,0 +1,11 @@
+import assert from 'node:assert/strict';
+import {festivalLocation,theatreIllustration} from '../../website/festival-map.js';
+const venue={label:'Festival Theatre',lat:44,lon:-80,records:[{slug:'a'}]};
+const shaw=festivalLocation('shaw',venue),stratford=festivalLocation('stratford',venue);
+assert(shaw.lon>-80 && stratford.lon<-80,'Identically named Festival theatres stay in their own cities');
+assert.deepEqual(shaw.records,venue.records,'Location correction preserves article membership');
+assert.equal(venue.lat,44,'Source metadata is not mutated');
+assert.deepEqual(festivalLocation('shaw',{label:'Studio Theatre'}).lat,shaw.lat,'Shaw studio maps to the Festival campus');
+assert.equal(festivalLocation('stratford',{label:'Third Stage'}).lon,festivalLocation('stratford',{label:'Tom Patterson Theatre'}).lon,'Historical Third Stage remains at the Tom Patterson site');
+assert(theatreIllustration('stratford','Festival Theatre')!==theatreIllustration('shaw','Festival Theatre'),'The two festival buildings have distinct drawings');
+console.log('PASS: festival-specific locations, historical location, preserved metadata and distinctive art.');
