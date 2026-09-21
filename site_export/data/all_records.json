@@ -113,6 +113,343 @@
     }
   },
   {
+    "slug": "1964-01-24-marching-song",
+    "route": "/reviews/1964-01-24-marching-song/",
+    "source_file": "1964.01.24.New_Cambridge.Marching_Song.md",
+    "title": "Marching Song",
+    "date": "1964-01-24",
+    "date_precision": "day",
+    "date_note": "Publication and date follow the handwritten annotation on the preserved clipping.",
+    "year": "1964",
+    "publication": "New Cambridge",
+    "source_publication": "New Cambridge",
+    "article_category": "Theatre Review",
+    "collections": [
+      "UK Collection"
+    ],
+    "publication_status": "publish",
+    "editorial_status": "done",
+    "editorial_issue_type": "source_checked_cambridge_transcription",
+    "source_completeness": "complete_clipping",
+    "canonical_file": "",
+    "production_title": "Marching Song",
+    "company": "Dryden Society",
+    "venue": "ADC Theatre",
+    "city": "Cambridge, England",
+    "coordinates": [],
+    "people": [
+      "Christopher Pinfield",
+      "David Ross",
+      "John Whiting",
+      "Liz Goodwin",
+      "Michael Woosnam-Mills"
+    ],
+    "roles": {
+      "director": [
+        "Michael Woosnam-Mills"
+      ],
+      "actors": [
+        "Liz Goodwin",
+        "Christopher Pinfield",
+        "David Ross"
+      ],
+      "playwright": [
+        "John Whiting"
+      ],
+      "composer_lyricist": [],
+      "musical_director": [],
+      "choreographer": [],
+      "orchestrator": [],
+      "arranger": [],
+      "assistant_director": [],
+      "stage_manager": [],
+      "assistant_musical_director": [],
+      "vocal_director": [],
+      "dance_captain": [],
+      "fight_director": [],
+      "dramaturg": [],
+      "producer": [],
+      "set_designer": [],
+      "costume_designer": [],
+      "lighting_designer": [],
+      "sound_designer": [],
+      "musicians": [],
+      "performers": [],
+      "artists": []
+    },
+    "production_groups": [],
+    "media": [],
+    "correspondence": [],
+    "word_count": 475,
+    "coordinate_points": [],
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Marching Song"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
+      "companies": [
+        "Dryden Society"
+      ],
+      "venues": [
+        "ADC Theatre"
+      ],
+      "cities": [
+        "Cambridge, England"
+      ],
+      "people": [
+        "Christopher Pinfield",
+        "David Ross",
+        "John Whiting",
+        "Liz Goodwin",
+        "Michael Woosnam-Mills"
+      ]
+    }
+  },
+  {
+    "slug": "1964-02-21-the-visit",
+    "route": "/reviews/1964-02-21-the-visit/",
+    "source_file": "1964.02.21.New_Cambridge.The_Visit.md",
+    "title": "The Visit",
+    "date": "1964-02-21",
+    "date_precision": "day",
+    "date_note": "Publication and date follow the handwritten annotation on the preserved clipping.",
+    "year": "1964",
+    "publication": "New Cambridge",
+    "source_publication": "New Cambridge",
+    "article_category": "Theatre Review",
+    "collections": [
+      "UK Collection"
+    ],
+    "publication_status": "publish",
+    "editorial_status": "done",
+    "editorial_issue_type": "source_checked_cambridge_transcription",
+    "source_completeness": "complete_clipping",
+    "canonical_file": "",
+    "production_title": "The Visit",
+    "company": "Mummers",
+    "venue": "",
+    "city": "Cambridge, England",
+    "coordinates": [],
+    "people": [
+      "Bernard Krichefski",
+      "David Collins",
+      "David Lascelles",
+      "Friedrich Dürrenmatt",
+      "Ian Barritt",
+      "Jeffrey Tate",
+      "Lis Rietberg",
+      "Rob Knights",
+      "Roger Gartland",
+      "Tim Davies"
+    ],
+    "roles": {
+      "director": [
+        "Rob Knights"
+      ],
+      "actors": [
+        "Lis Rietberg",
+        "Jeffrey Tate",
+        "Tim Davies",
+        "David Lascelles",
+        "Ian Barritt",
+        "Bernard Krichefski",
+        "Roger Gartland",
+        "David Collins"
+      ],
+      "playwright": [
+        "Friedrich Dürrenmatt"
+      ],
+      "composer_lyricist": [],
+      "musical_director": [],
+      "choreographer": [],
+      "orchestrator": [],
+      "arranger": [],
+      "assistant_director": [],
+      "stage_manager": [],
+      "assistant_musical_director": [],
+      "vocal_director": [],
+      "dance_captain": [],
+      "fight_director": [],
+      "dramaturg": [],
+      "producer": [],
+      "set_designer": [],
+      "costume_designer": [],
+      "lighting_designer": [],
+      "sound_designer": [],
+      "musicians": [],
+      "performers": [],
+      "artists": []
+    },
+    "production_groups": [],
+    "media": [],
+    "correspondence": [],
+    "word_count": 377,
+    "coordinate_points": [],
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "The Visit"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
+      "companies": [
+        "Mummers"
+      ],
+      "venues": [],
+      "cities": [
+        "Cambridge, England"
+      ],
+      "people": [
+        "Bernard Krichefski",
+        "David Collins",
+        "David Lascelles",
+        "Friedrich Dürrenmatt",
+        "Ian Barritt",
+        "Jeffrey Tate",
+        "Lis Rietberg",
+        "Rob Knights",
+        "Roger Gartland",
+        "Tim Davies"
+      ]
+    }
+  },
+  {
+    "slug": "1965-01-26-arts-theatre-the-alchemist",
+    "route": "/reviews/1965-01-26-arts-theatre-the-alchemist/",
+    "source_file": "1965.01.26.Broadsheet.Arts_Theatre_The_Alchemist.md",
+    "title": "Arts Theatre: The Alchemist",
+    "date": "1965-01-26",
+    "date_precision": "day",
+    "date_note": "Publication and date follow the handwritten annotation on the preserved clipping.",
+    "year": "1965",
+    "publication": "Broadsheet",
+    "source_publication": "Broadsheet",
+    "article_category": "Theatre Review",
+    "collections": [
+      "UK Collection"
+    ],
+    "publication_status": "publish",
+    "editorial_status": "done",
+    "editorial_issue_type": "source_checked_cambridge_transcription",
+    "source_completeness": "complete_clipping",
+    "canonical_file": "",
+    "production_title": "The Alchemist",
+    "company": "",
+    "venue": "Arts Theatre",
+    "city": "Cambridge, England",
+    "coordinates": [],
+    "people": [
+      "Alan MacNaughtan",
+      "Ben Jonson",
+      "David Swift",
+      "John Turner",
+      "Judi Dench",
+      "Julian Curry",
+      "Simon Ward",
+      "Zia Mohyeddin"
+    ],
+    "roles": {
+      "director": [],
+      "actors": [
+        "Alan MacNaughtan",
+        "John Turner",
+        "Judi Dench",
+        "David Swift",
+        "Zia Mohyeddin",
+        "Simon Ward",
+        "Julian Curry"
+      ],
+      "playwright": [
+        "Ben Jonson"
+      ],
+      "composer_lyricist": [],
+      "musical_director": [],
+      "choreographer": [],
+      "orchestrator": [],
+      "arranger": [],
+      "assistant_director": [],
+      "stage_manager": [],
+      "assistant_musical_director": [],
+      "vocal_director": [],
+      "dance_captain": [],
+      "fight_director": [],
+      "dramaturg": [],
+      "producer": [],
+      "set_designer": [],
+      "costume_designer": [],
+      "lighting_designer": [],
+      "sound_designer": [],
+      "musicians": [],
+      "performers": [],
+      "artists": []
+    },
+    "production_groups": [],
+    "media": [],
+    "correspondence": [],
+    "word_count": 599,
+    "coordinate_points": [],
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "The Alchemist"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
+      "companies": [],
+      "venues": [
+        "Arts Theatre"
+      ],
+      "cities": [
+        "Cambridge, England"
+      ],
+      "people": [
+        "Alan MacNaughtan",
+        "Ben Jonson",
+        "David Swift",
+        "John Turner",
+        "Judi Dench",
+        "Julian Curry",
+        "Simon Ward",
+        "Zia Mohyeddin"
+      ]
+    }
+  },
+  {
     "slug": "1965-03-09-arts-theatre-romeo-and-juliet",
     "route": "/reviews/1965-03-09-arts-theatre-romeo-and-juliet/",
     "source_file": "1965.03.09.Broadsheet.Arts_Theatre_Romeo_and_Juliet.md",
@@ -461459,6 +461796,255 @@
     }
   },
   {
+    "slug": "undated-a-d-c-theatre-the-two-gentlemen-of-verona",
+    "route": "/reviews/undated-a-d-c-theatre-the-two-gentlemen-of-verona/",
+    "source_file": "undated.Broadsheet.A_D_C_Theatre_The_Two_Gentlemen_of_Verona.md",
+    "title": "A.D.C. Theatre: The Two Gentlemen of Verona",
+    "date": "",
+    "date_precision": "unknown",
+    "date_note": "Publication date not visible on the clipping. Publication identified from the family-supplied Cambridge PDF grouping; no year or exact date has been assigned.",
+    "year": "",
+    "publication": "Broadsheet",
+    "source_publication": "Broadsheet",
+    "article_category": "Theatre Review",
+    "collections": [
+      "UK Collection"
+    ],
+    "publication_status": "publish",
+    "editorial_status": "done",
+    "editorial_issue_type": "source_checked_cambridge_transcription",
+    "source_completeness": "complete_clipping",
+    "canonical_file": "",
+    "production_title": "The Two Gentlemen of Verona",
+    "company": "University Actors",
+    "venue": "ADC Theatre",
+    "city": "Cambridge, England",
+    "coordinates": [],
+    "people": [
+      "Carey Harrison",
+      "David Cheshire",
+      "Eric Idle",
+      "Jean Liddiard",
+      "John Taylor",
+      "Liz Wrangham",
+      "Roger Gartland",
+      "William Shakespeare"
+    ],
+    "roles": {
+      "director": [
+        "Carey Harrison"
+      ],
+      "actors": [
+        "David Cheshire",
+        "Jean Liddiard",
+        "Roger Gartland",
+        "Liz Wrangham",
+        "Eric Idle"
+      ],
+      "playwright": [
+        "William Shakespeare"
+      ],
+      "composer_lyricist": [],
+      "musical_director": [],
+      "choreographer": [],
+      "orchestrator": [],
+      "arranger": [],
+      "assistant_director": [],
+      "stage_manager": [],
+      "assistant_musical_director": [],
+      "vocal_director": [],
+      "dance_captain": [],
+      "fight_director": [],
+      "dramaturg": [],
+      "producer": [],
+      "set_designer": [],
+      "costume_designer": [],
+      "lighting_designer": [
+        "John Taylor"
+      ],
+      "sound_designer": [],
+      "musicians": [],
+      "performers": [],
+      "artists": []
+    },
+    "production_groups": [],
+    "media": [],
+    "correspondence": [],
+    "word_count": 695,
+    "coordinate_points": [],
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "The Two Gentlemen of Verona"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
+      "companies": [
+        "University Actors"
+      ],
+      "venues": [
+        "ADC Theatre"
+      ],
+      "cities": [
+        "Cambridge, England"
+      ],
+      "people": [
+        "Carey Harrison",
+        "David Cheshire",
+        "Eric Idle",
+        "Jean Liddiard",
+        "John Taylor",
+        "Liz Wrangham",
+        "Roger Gartland",
+        "William Shakespeare"
+      ]
+    }
+  },
+  {
+    "slug": "undated-arts-theatre-the-english-opera-group",
+    "route": "/reviews/undated-arts-theatre-the-english-opera-group/",
+    "source_file": "undated.Broadsheet.Arts_Theatre_The_English_Opera_Group.md",
+    "title": "Arts Theatre: The English Opera Group",
+    "date": "",
+    "date_precision": "unknown",
+    "date_note": "Publication date not visible on the clipping. Publication identified from the family-supplied Cambridge PDF grouping; no year or exact date has been assigned.",
+    "year": "",
+    "publication": "Broadsheet",
+    "source_publication": "Broadsheet",
+    "article_category": "Theatre Preview",
+    "collections": [
+      "UK Collection"
+    ],
+    "publication_status": "publish",
+    "editorial_status": "done",
+    "editorial_issue_type": "unsigned_authorship_unconfirmed",
+    "source_completeness": "complete_clipping",
+    "canonical_file": "",
+    "production_title": "",
+    "company": "English Opera Group; English Chamber Orchestra",
+    "venue": "Arts Theatre",
+    "city": "Cambridge, England",
+    "coordinates": [],
+    "people": [
+      "Benjamin Britten",
+      "Bryan Balkwill",
+      "Malcolm Williamson",
+      "Marcus Dods"
+    ],
+    "roles": {
+      "director": [],
+      "actors": [],
+      "playwright": [],
+      "composer_lyricist": [],
+      "musical_director": [],
+      "choreographer": [],
+      "orchestrator": [],
+      "arranger": [],
+      "assistant_director": [],
+      "stage_manager": [],
+      "assistant_musical_director": [],
+      "vocal_director": [],
+      "dance_captain": [],
+      "fight_director": [],
+      "dramaturg": [],
+      "producer": [],
+      "set_designer": [],
+      "costume_designer": [],
+      "lighting_designer": [],
+      "sound_designer": [],
+      "musicians": [],
+      "performers": [],
+      "artists": []
+    },
+    "production_groups": [
+      {
+        "order": "1",
+        "production_title": "Albert Herring",
+        "composer_lyricist": [
+          "Benjamin Britten"
+        ],
+        "musical_director": [
+          "Bryan Balkwill"
+        ]
+      },
+      {
+        "order": "2",
+        "production_title": "The Turn of the Screw",
+        "composer_lyricist": [
+          "Benjamin Britten"
+        ],
+        "musical_director": [
+          "Benjamin Britten",
+          "Bryan Balkwill"
+        ]
+      },
+      {
+        "order": "3",
+        "production_title": "English Eccentrics",
+        "composer_lyricist": [
+          "Malcolm Williamson"
+        ],
+        "musical_director": [
+          "Marcus Dods"
+        ]
+      }
+    ],
+    "media": [],
+    "correspondence": [],
+    "word_count": 425,
+    "author": "Unknown",
+    "authorship_note": "Unsigned preview; attribution to Robert Cushman is unconfirmed.",
+    "coordinate_points": [],
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Albert Herring",
+        "English Eccentrics",
+        "The Turn of the Screw"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
+      "companies": [
+        "English Chamber Orchestra",
+        "English Opera Group"
+      ],
+      "venues": [
+        "Arts Theatre"
+      ],
+      "cities": [
+        "Cambridge, England"
+      ],
+      "people": [
+        "Benjamin Britten",
+        "Bryan Balkwill",
+        "Malcolm Williamson",
+        "Marcus Dods"
+      ]
+    }
+  },
+  {
     "slug": "undated-you-re-the-top",
     "route": "/reviews/undated-you-re-the-top/",
     "source_file": "undated.Lives_of_the_Great_Songs.Youre_the_Top.md",
@@ -461590,6 +462176,143 @@
         "Kim Criswell",
         "Patti LuPone",
         "William Gaxton"
+      ]
+    }
+  },
+  {
+    "slug": "undated-cocteau-ionesco-becket-new-company-at-a-d-c",
+    "route": "/reviews/undated-cocteau-ionesco-becket-new-company-at-a-d-c/",
+    "source_file": "undated.New_Cambridge.Cocteau_Ionesco_Becket_New_Company_at_A_D_C.md",
+    "title": "Cocteau, Ionesco, Becket: New Company at A.D.C.",
+    "date": "",
+    "date_precision": "unknown",
+    "date_note": "Publication date not visible on the clipping. Publication identified from the family-supplied Cambridge PDF grouping; no year or exact date has been assigned.",
+    "year": "",
+    "publication": "New Cambridge",
+    "source_publication": "New Cambridge",
+    "article_category": "Theatre Review",
+    "collections": [
+      "UK Collection"
+    ],
+    "publication_status": "publish",
+    "editorial_status": "done",
+    "editorial_issue_type": "source_checked_cambridge_transcription",
+    "source_completeness": "complete_clipping",
+    "canonical_file": "",
+    "production_title": "",
+    "company": "Independent Theatre",
+    "venue": "ADC Theatre",
+    "city": "Cambridge, England",
+    "coordinates": [],
+    "people": [
+      "Eugène Ionesco",
+      "Jean Cocteau",
+      "Philip Mansell",
+      "Robert Leach",
+      "Samuel Beckett",
+      "Sue Bendall"
+    ],
+    "roles": {
+      "director": [
+        "Philip Mansell",
+        "Robert Leach"
+      ],
+      "actors": [],
+      "playwright": [],
+      "composer_lyricist": [],
+      "musical_director": [],
+      "choreographer": [],
+      "orchestrator": [],
+      "arranger": [],
+      "assistant_director": [],
+      "stage_manager": [],
+      "assistant_musical_director": [],
+      "vocal_director": [],
+      "dance_captain": [],
+      "fight_director": [],
+      "dramaturg": [],
+      "producer": [],
+      "set_designer": [],
+      "costume_designer": [],
+      "lighting_designer": [],
+      "sound_designer": [],
+      "musicians": [],
+      "performers": [],
+      "artists": []
+    },
+    "production_groups": [
+      {
+        "order": "1",
+        "production_title": "The Chairs",
+        "playwright": [
+          "Eugène Ionesco"
+        ],
+        "actors": [
+          "Robert Leach",
+          "Sue Bendall"
+        ]
+      },
+      {
+        "order": "2",
+        "production_title": "Krapp's Last Tape",
+        "playwright": [
+          "Samuel Beckett"
+        ],
+        "actors": [
+          "Robert Leach"
+        ]
+      },
+      {
+        "order": "3",
+        "production_title": "The Human Voice",
+        "playwright": [
+          "Jean Cocteau"
+        ],
+        "actors": [
+          "Sue Bendall"
+        ]
+      }
+    ],
+    "media": [],
+    "correspondence": [],
+    "word_count": 488,
+    "coordinate_points": [],
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Krapp's Last Tape",
+        "The Chairs",
+        "The Human Voice"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
+      "companies": [
+        "Independent Theatre"
+      ],
+      "venues": [
+        "ADC Theatre"
+      ],
+      "cities": [
+        "Cambridge, England"
+      ],
+      "people": [
+        "Eugène Ionesco",
+        "Jean Cocteau",
+        "Philip Mansell",
+        "Robert Leach",
+        "Samuel Beckett",
+        "Sue Bendall"
       ]
     }
   }

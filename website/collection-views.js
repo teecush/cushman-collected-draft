@@ -1,5 +1,5 @@
-import {serialize, publicationYear, normalize} from './catalog-engine.js?v=155';
-import {COLLECTIONS} from './collections-engine.js?v=155';
+import {serialize, publicationYear, normalize} from './catalog-engine.js?v=156';
+import {COLLECTIONS} from './collections-engine.js?v=156';
 
 export function createCollectionViews({state,els,h,node,link,button,openIndex,getCollections}) {
   let activeMap=null, generation=0;
@@ -65,7 +65,13 @@ export function createCollectionViews({state,els,h,node,link,button,openIndex,ge
     els.indexContent.append(node('p',collection.intro,'landing-intro'));
     if(collection.kind==='festival'){festival(collection,params);return;}
     els.indexContent.append(link('Search all '+collection.records.length.toLocaleString()+' articles',resultsHref(collection),'primary-action'));
-    if(collection.kind==='early'){els.indexContent.append(recordList(collection.records,collection.title));return;}
+    if(collection.kind==='early'){
+      els.indexContent.append(recordList(collection.records,collection.title));
+      const relatedIds=new Set(state.collectionCuration?.earlyUndated||[]);
+      const related=state.records.filter(record=>relatedIds.has(record.slug));
+      if(related.length)els.indexContent.append(node('h2','Undated Cambridge clippings'),node('p','Related student-publication clippings whose dates have not been established. The opera preview is unsigned.'),recordList(related,'Undated Cambridge clippings'));
+      return;
+    }
     const field=node('label',undefined,'collection-find');field.append(node('span','Find '+(collection.kind==='portraits'?'a person':'a title')));
     const search=node('input');search.type='search';search.placeholder='Search this collection';search.value=params.get('q')||'';field.append(search);els.indexContent.append(field);
     const content=node('div');els.indexContent.append(content);

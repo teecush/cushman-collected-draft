@@ -298,7 +298,7 @@
     [
       "K15",
       "Readable article URLs and discovery",
-      "All 3,206 articles retain readable HTML pages, individual titles/metadata, canonical URLs and sitemap entries. Existing article hash links and aliases continue to work. The custom unavailable-page handling remains.",
+      "All public articles retain readable HTML pages, individual titles/metadata, canonical URLs and sitemap entries. Existing article hash links and aliases continue to work. The custom unavailable-page handling remains.",
       "Internal improvement",
       "article"
     ],

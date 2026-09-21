@@ -88,14 +88,16 @@ def main():
         light['detail_path']=f'articles/{r["slug"]}.json?v={detail_hash}';catalog.append(light)
         texts[r['slug']]=re.sub(r'!\[.*?\]\(.*?\)','',body).replace('*','')
         url=BASE+'reviews/'+quote(r['slug'])+'/'
-        description=f'{r["title"]}, by Robert Cushman. {r.get("publication") or r.get("source_publication","")}, {display_date(r)}.'
+        author="Unsigned (authorship unconfirmed)" if r.get("authorship_note") else r.get("author") or "Robert Cushman"
+        description=f'{r["title"]}, {author}. {r.get("publication") or r.get("source_publication","")}, {display_date(r)}.'
         title=html.escape(r['title']);page=shell.replace('<html lang="en">',f'<html lang="en" data-article-slug="{html.escape(r["slug"],quote=True)}">',1).replace('<body>','<body class="article-open">',1)
         page=re.sub(r'<title>.*?</title>',lambda m:f'<title>{title} | Cushman Collected</title>',page,count=1)
         page=re.sub(r'<meta\s+name="description"\s+content="[^"]*"\s*>',lambda m:f'<meta name="description" content="{html.escape(description,quote=True)}">',page,count=1)
         page=re.sub(r'<meta property="og:title" content="[^"]*">',lambda m:f'<meta property="og:title" content="{html.escape(r["title"],quote=True)}">',page,count=1)
         page=re.sub(r'<meta property="og:description" content="[^"]*">',lambda m:f'<meta property="og:description" content="{html.escape(description,quote=True)}">',page,count=1)
         page=page.replace('<meta property="og:type" content="website">',f'<meta property="og:type" content="article"><meta property="og:url" content="{url}"><link rel="canonical" href="{url}">')
-        article=f'<article id="article"><time>{display_date(r)}</time><h1>{title}</h1><p class="article-meta">Robert Cushman · {html.escape(r.get("publication") or r.get("source_publication",""))}</p>'
+        article=f'<article id="article"><time>{display_date(r)}</time><h1>{title}</h1><p class="article-meta">{html.escape(author)} · {html.escape(r.get("publication") or r.get("source_publication",""))}</p>'
+        if r.get('authorship_note'):article+=f'<p class="public-date-note">{html.escape(r["authorship_note"])}</p>'
         if r.get('date_note'):article+=f'<p class="public-date-note">{html.escape(r["date_note"])}</p>'
         if any(re.search(r'incomplete|missing_(page|pages|portion|continuation|intervening)',str(r.get(k,'')),re.I) for k in ('editorial_status','editorial_issue_type','source_completeness')):article+='<aside class="article-incomplete-notice">Incomplete surviving source. Bracketed notes mark known gaps.</aside>'
         article+=f'<div class="article-body" id="article-text">{rendered_body(body)}</div></article>'

@@ -1,7 +1,7 @@
-import {spotlightRecord} from './collections-engine.js?v=155';
-import { createCatalog } from "./catalog.js?v=155";
-import { FEATURES } from "./features.js?v=155";
-const DATA_URL = new URL("../site_export/data/catalog.json?v=155", import.meta.url);
+import {spotlightRecord} from './collections-engine.js?v=156';
+import { createCatalog } from "./catalog.js?v=156";
+import { FEATURES } from "./features.js?v=156";
+const DATA_URL = new URL("../site_export/data/catalog.json?v=156", import.meta.url);
 const ALIASES_URL = new URL("../site_export/data/route_aliases.json?v=1", import.meta.url);
 const STANDALONE_CORRESPONDENCE_URL = new URL("../site_export/data/standalone_correspondence.json?v=4", import.meta.url);
 const CONTENT_ROOT = new URL("../site_export/content/reviews/", import.meta.url);
@@ -4385,7 +4385,7 @@ function fallbackResultCard(record) {
 
   const meta = document.createElement("span");
   meta.className = "meta";
-  meta.textContent = [record ? articlePublicationLabel(record) : "", record ? typeLabel(record) : ""].filter(Boolean).join(" / ");
+  meta.textContent = [record ? articlePublicationLabel(record) : "", record ? typeLabel(record) : "", record?.authorship_note].filter(Boolean).join(" / ");
 
   const copy = document.createElement("span");
   copy.className = "result-copy";
@@ -4473,6 +4473,9 @@ function resultCard(record, context = {}) {
     note.className = "result-incomplete-line";
     note.textContent = "Incomplete surviving source";
     copy.append(note);
+  }
+  if (record.authorship_note) {
+    const note = document.createElement("span"); note.className="result-incomplete-line"; note.textContent=record.authorship_note; copy.append(note);
   }
   copy.append(meta);
   card.append(copy);
@@ -4868,10 +4871,14 @@ function articleContextNav(record) {
   return nav;
 }
 
+function articleAuthor(record) {
+  return record.authorship_note ? "Unsigned (authorship unconfirmed)" : record.author || "Robert Cushman";
+}
+
 function articleTools(record) {
   const tools=document.createElement("nav");tools.className="article-tools explicit-tools";tools.setAttribute("aria-label","Article tools");
   const url=new URL(`../reviews/${record.slug}/`,import.meta.url).href;
-  const citation=`Robert Cushman, “${record.title},” ${articlePublicationLabel(record)}, ${formatDate(record)}. ${url}`;
+  const citation=`${articleAuthor(record)}, “${record.title},” ${articlePublicationLabel(record)}, ${formatDate(record)}. ${url}`;
   const makeButton=(label,action)=>{const b=document.createElement("button");b.type="button";b.textContent=label;b.addEventListener("click",action);return b;};
   const copy=async(button,text)=>{try{await navigator.clipboard.writeText(text);button.textContent="Copied";status.textContent="Copied to clipboard";}catch{status.textContent=text;}};
   const share=makeButton("Share",()=>copy(share,url));
@@ -5350,7 +5357,7 @@ async function showReview(slug) {
   if (window.location.hash !== requestedHash) return;
   const { date, title, deck, meta, titleParts } = articleTitleNodes(record);
   document.title = `${record.title} | Cushman Collected`;
-  document.querySelector('meta[name="description"]')?.setAttribute("content", `${record.title}, by Robert Cushman. ${articlePublicationLabel(record)}, ${formatDate(record)}.`);
+  document.querySelector('meta[name="description"]')?.setAttribute("content", `${record.title}, ${articleAuthor(record)}. ${articlePublicationLabel(record)}, ${formatDate(record)}.`);
 
   const body = document.createElement("div");
   body.className = "article-body";
@@ -5379,6 +5386,7 @@ async function showReview(slug) {
   articleParts.push(date, title);
   if (titleParts.deck) articleParts.push(deck);
   articleParts.push(meta);
+  if (record.authorship_note) { const note = document.createElement("p"); note.className="public-date-note"; note.textContent=record.authorship_note; articleParts.push(note); }
   if (record.date_note) { const note = document.createElement("p"); note.className="public-date-note"; note.textContent=record.date_note; articleParts.push(note); }
   const jump = document.createElement("a"); jump.href="#article-text";jump.className="jump-to-text";jump.textContent="Jump to article text";
   jump.addEventListener("click", event=>{event.preventDefault();body.tabIndex=-1;body.focus();body.scrollIntoView({block:"start",behavior:"auto"});});articleParts.push(jump);
@@ -5667,7 +5675,7 @@ async function init() {
       fetch(DATA_URL),
       fetch(ALIASES_URL),
       fetch(STANDALONE_CORRESPONDENCE_URL).catch(() => null),
-      fetch(new URL('./collection-curation.json?v=155', import.meta.url)),
+      fetch(new URL('./collection-curation.json?v=156', import.meta.url)),
     ]);
     if (!response.ok) throw new Error(`Could not load records (${response.status})`);
     state.records = await response.json();

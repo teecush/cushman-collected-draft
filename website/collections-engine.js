@@ -1,4 +1,4 @@
-import {normalize, publicationYear} from './catalog-engine.js?v=155';
+import {normalize, publicationYear} from './catalog-engine.js?v=156';
 export const COLLECTIONS = [
   {id:'shakespeare',title:'Shakespeare',kind:'plays',href:'#section:shakespeare',intro:'The plays, the productions, and a lifetime of returning to Shakespeare.'},
   {id:'sondheim',title:'Sondheim',kind:'musicals',intro:'The musicals, the lyrics, and the art of Stephen Sondheim.'},
@@ -14,6 +14,7 @@ export const COLLECTIONS = [
 export const SONDHEIM_SHOWS = ['Saturday Night','West Side Story','Gypsy','A Funny Thing Happened on the Way to the Forum','Anyone Can Whistle','Do I Hear a Waltz?','Company','Follies','A Little Night Music','The Frogs','Pacific Overtures','Sweeney Todd','Merrily We Roll Along','Sunday in the Park with George','Into the Woods','Assassins','Passion','Bounce','Road Show','Here We Are','Side by Side by Sondheim','Marry Me a Little','Putting It Together','Sondheim on Sondheim','Old Friends'];
 export const workKey = value => normalize(value)==='the passion'?'the passion':normalize(value).replace(/^(the|a|an) /,'').replace(/^sweeney todd the demon barber of fleet street$/, 'sweeney todd');
 export function spotlightRecord(records, date = new Date()) {
+  records = records.filter(record => !record.authorship_note && record.author !== "Unknown");
   if (!records.length) return null;
   const day = new Intl.DateTimeFormat('en-CA',{timeZone:'America/Toronto',year:'numeric',month:'2-digit',day:'2-digit'}).format(date);
   const dayNumber = Math.floor(Date.parse(day + 'T00:00:00Z') / 86400000);

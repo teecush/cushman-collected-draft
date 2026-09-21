@@ -3,6 +3,8 @@ import {spotlightRecord,makeCollections,workKey} from '../../website/collections
 import {parse,serialize} from '../../website/catalog-engine.js';
 const records=Array.from({length:100},(_,i)=>({slug:'article-'+i}));
 assert.equal(spotlightRecord([]),null);
+assert.equal(spotlightRecord([{slug:'unsigned',author:'Unknown',authorship_note:'Unconfirmed'}]),null,'Unconfirmed authorship is not featured as Robert’s writing');
+assert.equal(spotlightRecord([{slug:'unsigned',authorship_note:'Unconfirmed'},{slug:'signed'}]).slug,'signed');
 assert.equal(spotlightRecord(records,new Date('2026-09-21T03:59:59Z')).slug,spotlightRecord([...records].reverse(),new Date('2026-09-20T04:00:00Z')).slug,'Same Toronto calendar day and record order independent');
 assert.notEqual(spotlightRecord(records,new Date('2026-09-21T03:59:59Z')).slug,spotlightRecord(records,new Date('2026-09-21T04:00:00Z')).slug,'Spotlight changes at Toronto midnight');
 const route={shelf:'musicals',item:'into-the-woods',from:'2000',to:'2009',origin:'#collection:musicals'};

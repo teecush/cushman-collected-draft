@@ -178,7 +178,7 @@ Internal improvement. Compact catalog data, per-article detail loading, on-deman
 
 ### K15 — Readable article URLs and discovery
 
-Internal improvement. All 3,206 articles retain readable HTML pages, individual titles/metadata, canonical URLs and sitemap entries. Existing article hash links and aliases continue to work. The custom unavailable-page handling remains.
+Internal improvement. All public articles retain readable HTML pages, individual titles/metadata, canonical URLs and sitemap entries. Existing article hash links and aliases continue to work. The custom unavailable-page handling remains.
 
 ### K16 — Accessibility and stale-page repairs
 
