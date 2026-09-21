@@ -1,4 +1,4 @@
-import {nameMatches, normalize} from './catalog-engine.js?v=160';
+import {nameMatches, normalize} from './catalog-engine.js?v=163';
 
 export const INDEX_LETTERS = [...'ABCDEFGHIJKLMNOPQRSTUVWXYZ', '0–9', '#'];
 

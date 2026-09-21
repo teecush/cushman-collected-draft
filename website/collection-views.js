@@ -1,5 +1,5 @@
-import {serialize, publicationYear, normalize} from './catalog-engine.js?v=160';
-import {COLLECTIONS} from './collections-engine.js?v=160';
+import {serialize, publicationYear, normalize} from './catalog-engine.js?v=163';
+import {COLLECTIONS} from './collections-engine.js?v=163';
 
 export function createCollectionViews({state,els,h,node,link,button,openIndex,getCollections}) {
   let activeMap=null, generation=0, artObserver=null;
@@ -31,8 +31,18 @@ export function createCollectionViews({state,els,h,node,link,button,openIndex,ge
     } else screen.append(node('span',item.title,'art-title'));
     return wrapper;
   }
+  function itemLink(collection,item,label='',cls='') {
+    if(item.records.length!==1)return link(label,resultsHref(collection,item),cls);
+    const record=item.records[0];
+    const a=link(label,new URL(`../reviews/${record.slug}/`,import.meta.url).href,cls);
+    a.addEventListener('click',event=>{
+      h.storeArticleContext(event,record,{records:item.records,backHref:window.location.hash,contextLabel:collection.title});
+      if(!event.defaultPrevented&&!event.metaKey&&!event.ctrlKey&&!event.shiftKey&&!event.altKey&&!event.button){event.preventDefault();window.location.hash=`#review:${record.slug}`;}
+    });
+    return a;
+  }
   function itemCard(collection,item) {
-    const a=link('',resultsHref(collection,item),'collection-item');
+    const a=itemLink(collection,item,'','collection-item');
     a.append(artwork(collection,item),node('strong',item.title));
     if(item.records.length>1)a.append(node('span',item.records.length+' articles','collection-item-count'));
     return a;
@@ -50,7 +60,7 @@ export function createCollectionViews({state,els,h,node,link,button,openIndex,ge
     els.indexContent.append(node('p','Artwork identifies the publications, shows, books, recordings and people discussed in this archive. Copyright remains with the respective rights holders. Source and licence details are listed below.','landing-intro'));
     const content=node('div',undefined,'image-credits');els.indexContent.append(content);
     try {
-      const response=await fetch(new URL('./assets/collections/credits.json?v=160',import.meta.url));
+      const response=await fetch(new URL('./assets/collections/credits.json?v=163',import.meta.url));
       if(!response.ok)throw new Error('Credits unavailable');
       const entries=await response.json();if(token!==generation)return;
       for(const asset of entries){
@@ -98,7 +108,7 @@ export function createCollectionViews({state,els,h,node,link,button,openIndex,ge
       const single=items.filter(item=>id==='musicals'&&item.records.length<2);
       content.replaceChildren();
       const gallery=node('div',undefined,'collection-gallery '+collection.kind);gallery.append(...featured.map(item=>itemCard(collection,item)));content.append(gallery);fitTitles(gallery);
-      if(single.length){content.append(node('h2','More musicals, A–Z'));const list=node('div',undefined,'catalog-index-list');for(const item of single)list.append(link(item.title,resultsHref(collection,item)));content.append(list);}
+      if(single.length){content.append(node('h2','More musicals, A–Z'));const list=node('div',undefined,'catalog-index-list');for(const item of single)list.append(itemLink(collection,item,item.title));content.append(list);}
       if(!items.length)content.append(node('p','No titles match this search.'));
       if(collection.ungrouped.length&&!query){content.append(node('h2',id==='sondheim'?'Essays, profiles and other writing':'More writing'),recordList(collection.ungrouped,collection.title));}
     };
