@@ -295,3 +295,6 @@ body.map-open .leaflet-jump-control{display:flex;}
  body.catalog-page #indexView.collection-page #indexContent>.catalog-tabs{grid-column:1/-1;grid-row:2;flex-wrap:nowrap;justify-content:space-between;gap:0;margin-top:8px;}
  body.catalog-page #indexView.collection-page .catalog-tabs a{white-space:nowrap;flex-shrink:0;padding-inline:3px;}
 }
+
+/* The casing remains visible outside the rounded screen corners. */
+.collection-art.television,.collection-art.television.has-artwork{background:#353b3d;}
