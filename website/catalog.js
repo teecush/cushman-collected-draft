@@ -201,7 +201,7 @@ export function createCatalog({state, els, h}) {
     const controls = node('div', undefined, 'index-controls' + (people || works ? '' : ' index-controls-two'));
     const label = node('label'); label.append(node('span', people ? 'Find a person' : 'Find an entry'));
     const search = node('input'); search.type = 'search'; search.value = query;
-    search.placeholder = people ? 'e.g. Plummer, Christopher' : 'Search this index'; label.append(search); controls.append(label);
+    search.placeholder = people ? 'Search for a person' : 'Search this index'; label.append(search); controls.append(label);
     function indexHref(targetLetter = letter) {
       const p = new URLSearchParams(serialize(scope).split('?')[1] || '');
       if (query) p.set('q', query);

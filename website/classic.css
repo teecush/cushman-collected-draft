@@ -347,3 +347,7 @@ body.catalog-page #indexView.directory-page .catalog-tabs{margin:16px 0 12px;pad
  body.catalog-page #indexView.directory-page .index-letter-section>h2{font-size:24px;margin-bottom:8px;}
 }
 @media(max-width:359px){body.catalog-page #indexView.directory-page .index-alphabet{grid-template-columns:repeat(10,minmax(0,1fr));}}
+
+/* Retain accessible control names without visible directory label rows. */
+body.catalog-page #indexView.directory-page .index-controls label>span{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);clip-path:inset(50%);white-space:nowrap;border:0;}
+body.catalog-page #indexView.directory-page .index-controls label{gap:0;}
