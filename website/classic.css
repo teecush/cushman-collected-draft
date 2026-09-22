@@ -386,3 +386,19 @@ body.catalog-page #indexView.directory-page .index-controls label{gap:0;}
 /* Keep Places presets clear of Leaflet zoom controls on narrow screens. */
 .places-map .leaflet-jump-control{left:52px;right:10px;justify-content:flex-end;gap:4px;}
 .places-map .leaflet-jump-control button{padding:8px;font-size:11px;}
+
+/* Compact article navigation: explicit columns prevent reordered controls colliding. */
+.article-context-nav{grid-template-columns:auto minmax(0,1fr) auto;background:#fff;letter-spacing:.4px;}
+.article-context-nav > a:first-child{white-space:nowrap;}
+.article-context-progress{order:0;}
+@media(max-width:800px){
+ .article-context-nav{gap:6px;padding:4px 8px;font-size:11px;}
+ .article-context-nav > a:first-child{font-size:11px;}
+ .article-context-nav > a:first-child::after{content:none;}
+ .article-context-progress{font-size:11px;flex-basis:auto;}
+ .article-context-buttons{gap:2px;}
+ .article-context-buttons a{font-size:0;min-width:32px;min-height:44px;justify-content:center;}
+ .article-context-buttons a::after{font-size:22px;line-height:1;}
+ .article-context-buttons a:first-child::after{content:"‹";}
+ .article-context-buttons a:last-child::after{content:"›";}
+}

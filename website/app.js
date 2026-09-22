@@ -1,8 +1,8 @@
 import {renderHomeCollections} from './home-collections.js?v=173';
 import {spotlightRecord} from './collections-engine.js?v=173';
-import { createCatalog } from "./catalog.js?v=179";
+import { createCatalog } from "./catalog.js?v=181";
 import { FEATURES } from "./features.js?v=173";
-const DATA_URL = new URL("../site_export/data/catalog.json?v=179", import.meta.url);
+const DATA_URL = new URL("../site_export/data/catalog.json?v=181", import.meta.url);
 const ALIASES_URL = new URL("../site_export/data/route_aliases.json?v=1", import.meta.url);
 const STANDALONE_CORRESPONDENCE_URL = new URL("../site_export/data/standalone_correspondence.json?v=4", import.meta.url);
 const CONTENT_ROOT = new URL("../site_export/content/reviews/", import.meta.url);
@@ -4862,10 +4862,12 @@ function articleContextNav(record) {
   nav.setAttribute("aria-label", "Article navigation");
   const back = document.createElement("a");
   back.href = context.href;
-  back.textContent = context.direct ? `Browse more ${typeLabel(record).toLowerCase()}` : "Back to results";
+  back.textContent = context.direct ? "← Browse" : "← Results";
+  back.setAttribute("aria-label", context.direct ? `Browse more ${typeLabel(record).toLowerCase()}` : "Back to results");
   const progress = document.createElement("span");
   progress.className = "article-context-progress";
-  progress.textContent = `${context.index + 1} of ${context.slugs.length} in ${context.label}`;
+  progress.textContent = `${context.index + 1} of ${context.slugs.length}`;
+  progress.title = context.label;
   const buttons = document.createElement("span");
   buttons.className = "article-context-buttons";
   const previous = document.createElement("a");
@@ -5695,7 +5697,7 @@ async function init() {
       fetch(DATA_URL),
       fetch(ALIASES_URL),
       fetch(STANDALONE_CORRESPONDENCE_URL).catch(() => null),
-      fetch(new URL('./collection-curation.json?v=179', import.meta.url)),
+      fetch(new URL('./collection-curation.json?v=181', import.meta.url)),
     ]);
     if (!response.ok) throw new Error(`Could not load records (${response.status})`);
     state.records = await response.json();
