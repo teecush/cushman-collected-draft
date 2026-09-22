@@ -378,6 +378,11 @@
     },
     "2000-08-12-a-monotonous-musical-memoir": {
       "albumTitles": []
+    },
+    "1975-11-29-some-of-the-parts": {
+      "tvTitles": [
+        "Through the Night"
+      ]
     }
   },
   "artwork": {
@@ -2641,6 +2646,233 @@
     "musicals:elegies-a-song-cycle": {
       "src": "assets/collections/verified-9034a55e85a624d5.jpg",
       "alt": "Elegies: A Song Cycle"
+    },
+    "profiles:dr-robert-buckman": {
+      "src": "assets/collections/verified-7ed526a91a6cb56e.jpg",
+      "alt": "Robert Buckman",
+      "fit": "cover",
+      "position": "50% 20%"
+    },
+    "profiles:michael-rudman": {
+      "src": "assets/collections/verified-60ca5d7ebffefb91.jpg",
+      "alt": "Michael Rudman",
+      "fit": "cover",
+      "position": "50% 20%"
+    },
+    "profiles:richard-eyre": {
+      "src": "assets/collections/verified-84c4f7bd044d4a21.jpg",
+      "alt": "Richard Eyre",
+      "fit": "cover",
+      "position": "50% 20%"
+    },
+    "profiles:william-gaskill": {
+      "src": "assets/collections/verified-c0890486c938c888.jpg",
+      "alt": "William Gaskill",
+      "fit": "cover",
+      "position": "50% 20%"
+    },
+    "profiles:matthew-jocelyn": {
+      "src": "assets/collections/verified-f065c39886650292.jpg",
+      "alt": "Matthew Jocelyn",
+      "fit": "cover",
+      "position": "50% 20%"
+    },
+    "profiles:antony-sher": {
+      "src": "assets/collections/verified-8680093c8d98657f.jpg",
+      "alt": "Antony Sher",
+      "fit": "cover",
+      "position": "50% 20%"
+    },
+    "albums:sherry": {
+      "src": "assets/collections/verified-174b49bda1768190.jpg",
+      "alt": "Sherry!"
+    },
+    "musicals:blondel": {
+      "src": "assets/collections/verified-d1a74ecb114af840.jpg",
+      "alt": "Blondel"
+    },
+    "television:shakespeare-re-told": {
+      "src": "assets/collections/verified-d206ed32dc93fb9f.png",
+      "alt": "Shakespeare Re-told",
+      "fit": "contain",
+      "position": "50% 50%",
+      "screenColor": "#111111"
+    },
+    "television:extraordinary-rendition": {
+      "src": "assets/collections/verified-ca61e1424e5c9a0a.jpg",
+      "alt": "Extraordinary Rendition",
+      "fit": "contain",
+      "position": "50% 50%",
+      "screenColor": "#111111"
+    },
+    "television:china-s-sexual-revolution": {
+      "src": "assets/collections/verified-fbc75d47799e69c0.png",
+      "alt": "China’s Sexual Revolution",
+      "fit": "cover",
+      "position": "50% 50%",
+      "screenColor": "#111111"
+    },
+    "albums:miss-liberty": {
+      "src": "assets/collections/verified-57cc932cd1033a82.jpg",
+      "alt": "Miss Liberty - Original Broadway Cast"
+    },
+    "albums:most-happy-fella": {
+      "src": "assets/collections/verified-0378736b22231d23.jpg",
+      "alt": "The Most Happy Fella"
+    },
+    "albums:love-locked-out": {
+      "src": "assets/collections/verified-c4fdab82a9566f44.jpg",
+      "alt": "Love Locked Out"
+    },
+    "albums:here-come-the-boys-a-canadian-crooner-collection": {
+      "src": "assets/collections/verified-52dd027d5ae1f35d.jpg",
+      "alt": "Here Come the Boys - A Canadian Crooner Collection"
+    },
+    "television:stormy-weather-the-music-of-harold-arlen": {
+      "src": "assets/collections/tvpass3-stormy-weather-the-music-of-harold-arlen.jpg",
+      "alt": "Stormy Weather: The Music of Harold Arlen",
+      "fit": "contain",
+      "position": "50% 50%",
+      "screenColor": "#111111"
+    },
+    "television:suicide-tourist": {
+      "src": "assets/collections/tvpass3-suicide-tourist.jpg",
+      "alt": "The Suicide Tourist",
+      "fit": "contain",
+      "position": "50% 50%",
+      "screenColor": "#111111"
+    },
+    "television:chef-school": {
+      "src": "assets/collections/tvpass3-chef-school.jpg",
+      "alt": "Chef School",
+      "fit": "contain",
+      "position": "50% 50%",
+      "screenColor": "#111111"
+    },
+    "television:working-over-time": {
+      "src": "assets/collections/tvpass3-working-over-time.jpg",
+      "alt": "Working Over Time",
+      "fit": "contain",
+      "position": "50% 50%",
+      "screenColor": "#111111"
+    },
+    "television:my-israel": {
+      "src": "assets/collections/tvpass3-my-israel.jpg",
+      "alt": "Ralph Benmergui: My Israel",
+      "fit": "contain",
+      "position": "50% 50%",
+      "screenColor": "#111111"
+    },
+    "television:pagan-christ": {
+      "src": "assets/collections/tvpass3-pagan-christ.jpg",
+      "alt": "The Pagan Christ",
+      "fit": "contain",
+      "position": "50% 50%",
+      "screenColor": "#111111"
+    },
+    "television:cleopatra-portrait-of-a-killer": {
+      "src": "assets/collections/tvpass3-cleopatra-portrait-of-a-killer.jpg",
+      "alt": "Cleopatra: Portrait of a Killer",
+      "fit": "contain",
+      "position": "50% 50%",
+      "screenColor": "#111111"
+    },
+    "television:hiroshima": {
+      "src": "assets/collections/tvpass3-hiroshima.jpg",
+      "alt": "Hiroshima",
+      "fit": "contain",
+      "position": "50% 50%",
+      "screenColor": "#111111"
+    },
+    "television:filth-the-mary-whitehouse-story": {
+      "src": "assets/collections/tvpass3-filth-the-mary-whitehouse-story.jpg",
+      "alt": "Filth: The Mary Whitehouse Story",
+      "fit": "contain",
+      "position": "50% 50%",
+      "screenColor": "#111111"
+    },
+    "television:mayday-air-india-explosive-evidence": {
+      "src": "assets/collections/tvpass3-mayday-air-india-explosive-evidence.jpg",
+      "alt": "Mayday: Air India — Explosive Evidence",
+      "fit": "contain",
+      "position": "50% 50%",
+      "screenColor": "#111111"
+    },
+    "musicals:anything-that-moves": {
+      "src": "assets/collections/musicpass3-anything-that-moves.jpg",
+      "alt": "Anything That Moves",
+      "fit": "contain"
+    },
+    "musicals:dream-machine": {
+      "src": "assets/collections/musicpass3-dream-machine.png",
+      "alt": "Dream Machine",
+      "fit": "contain"
+    },
+    "musicals:cinderella": {
+      "src": "assets/collections/musicpass3-cinderella.png",
+      "alt": "Cinderella",
+      "fit": "contain"
+    },
+    "musicals:robin-hood": {
+      "src": "assets/collections/musicpass3-robin-hood.png",
+      "alt": "Robin Hood",
+      "fit": "contain"
+    },
+    "albums:complete-ella-fitzgerald-song-books": {
+      "src": "assets/collections/musicpass3-complete-ella-fitzgerald-song-books.jpg",
+      "alt": "The Complete Ella Fitzgerald Song Books",
+      "fit": "contain"
+    },
+    "musicals:cookin-at-the-cookery": {
+      "src": "assets/collections/musicpass3-cookin-at-the-cookery.jpg",
+      "alt": "Cookin’ at the Cookery",
+      "fit": "contain"
+    },
+    "profiles:trevor-nunn": {
+      "src": "assets/collections/portraitpass3-trevor-nunn.jpg",
+      "alt": "Trevor Nunn",
+      "fit": "cover",
+      "position": "50% 20%"
+    },
+    "profiles:dennis-potter": {
+      "src": "assets/collections/portraitpass3-dennis-potter.jpg",
+      "alt": "Dennis Potter",
+      "fit": "cover",
+      "position": "50% 20%"
+    },
+    "profiles:ross-petty": {
+      "src": "assets/collections/portraitpass3-ross-petty.png",
+      "alt": "Ross Petty",
+      "fit": "cover",
+      "position": "50% 30%"
+    },
+    "profiles:arlene-gould": {
+      "src": "assets/collections/portraitpass3-arlene-gould.jpg",
+      "alt": "Arlene Gould",
+      "fit": "cover",
+      "position": "50% 30%"
+    },
+    "profiles:tanya-moiseiwitsch": {
+      "src": "assets/collections/portraitpass3-tanya-moiseiwitsch.jpg",
+      "alt": "Tanya Moiseiwitsch",
+      "fit": "cover",
+      "position": "50% 30%"
+    },
+    "profiles:tim-carroll": {
+      "src": "assets/collections/portraitpass3-tim-carroll.jpg",
+      "alt": "Tim Carroll",
+      "fit": "cover",
+      "position": "50% 15%"
+    },
+    "albums:ella-fitzgerald-sings-the-cole-porter-songbook-volume-one": {
+      "src": "assets/collections/musicpass3-ella-cole-porter-volume-one.jpg",
+      "alt": "Ella Fitzgerald Sings the Cole Porter Songbook, Volume One",
+      "fit": "contain"
+    },
+    "musicals:last-empress": {
+      "src": "assets/collections/musicpass3-last-empress-1996.gif",
+      "alt": "The Last Empress",
+      "fit": "contain"
     }
   },
   "excludedMusicalTitles": [
@@ -2701,6 +2933,10 @@
     "plays-and-players": {
       "src": "assets/collections/plays-and-players-transparent.png",
       "alt": "Plays and Players"
+    },
+    "the-observer-magazine": {
+      "src": "assets/collections/observer-magazine-masthead.png",
+      "alt": "The Observer Magazine"
     }
   },
   "earlyUndated": [
