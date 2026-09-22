@@ -1,6 +1,6 @@
 import {FIELDS, normalize, nameMatches, publicationYear, serialize, parse, articleForm, articleSubject} from './catalog-engine.js?v=173';
 import {makeCollections, COLLECTIONS} from './collections-engine.js?v=173';
-import {createCollectionViews} from './collection-views.js?v=178';
+import {createCollectionViews} from './collection-views.js?v=179';
 import {INDEX_LETTERS, indexOrder, indexEntries, indexSections} from './index-engine.js?v=173';
 export function createCatalog({state, els, h}) {
   let extra = {}, indexCache = new Map(), textIndex = null, textPromise = null, indexResizeObserver = null, placesMap = null, collectionData = null;
@@ -423,8 +423,8 @@ export function createCatalog({state, els, h}) {
       openIndex('Places','places');
       const paths=node('div',undefined,'places-paths');paths.append(link('Browse cities','#index:cities','primary-action'),link('Browse venues','#index:venues','primary-action'));
       const map=node('div',undefined,'places-map');map.setAttribute('aria-label','Archive places map');
-      els.indexContent.append(node('p','Explore the places in the archive. Choose a city or venue, or browse the map.','landing-intro'),paths,map,link('View the full map →','#map','larger-map-link'));
-      h.loadMapResources().then(()=>{if(map.isConnected)placesMap=h.renderArchiveMap(map,h.cityMapPoints(),{venues:h.venueMapPoints(),maxVenues:Infinity,initialCenter:matchMedia('(max-width:600px)').matches?[43.6532,-79.3832]:[50,-35],initialZoom:matchMedia('(max-width:600px)').matches?13:3,zoomControl:true,searchControl:false,jumpControl:false,venueZoomThreshold:9});}).catch(()=>{if(map.isConnected)map.replaceChildren(node('p','The map could not load. You can still browse every city and venue using the links above.'));});
+      els.indexContent.append(paths,map,link('View the full map →','#map','larger-map-link'));
+      h.loadMapResources().then(()=>{if(map.isConnected)placesMap=h.renderArchiveMap(map,h.cityMapPoints(),{venues:h.venueMapPoints(),maxVenues:Infinity,initialCenter:matchMedia('(max-width:600px)').matches?[43.6532,-79.3832]:[50,-35],initialZoom:matchMedia('(max-width:600px)').matches?13:3,zoomControl:true,searchControl:false,jumpControl:true,venueZoomThreshold:9});}).catch(()=>{if(map.isConnected)map.replaceChildren(node('p','The map could not load. You can still browse every city and venue using the links above.'));});
       return true;
     }
     if(base.startsWith('#index:')){const type=base.split(':')[1];if(!h.entityType(type)){unavailable();return true;}if(type==='people'){indexPage('people',params);return true;}if(type==='productions'){indexPage('works',params);return true;}indexPage('entities',params,type);return true;}

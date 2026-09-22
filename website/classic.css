@@ -382,3 +382,7 @@ body.catalog-page #indexView.directory-page .index-controls label{gap:0;}
 
 .collection-find.collection-find-compact { margin:16px 0; }
 .collection-find-compact input { margin-top:0; }
+
+/* Keep Places presets clear of Leaflet zoom controls on narrow screens. */
+.places-map .leaflet-jump-control{left:52px;right:10px;justify-content:flex-end;gap:4px;}
+.places-map .leaflet-jump-control button{padding:8px;font-size:11px;}
