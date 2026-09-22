@@ -1,6 +1,6 @@
 import {FIELDS, normalize, nameMatches, publicationYear, serialize, parse, articleForm, articleSubject} from './catalog-engine.js?v=173';
 import {makeCollections, COLLECTIONS} from './collections-engine.js?v=173';
-import {createCollectionViews} from './collection-views.js?v=182';
+import {createCollectionViews} from './collection-views.js?v=183';
 import {INDEX_LETTERS, indexOrder, indexEntries, indexSections} from './index-engine.js?v=173';
 export function createCatalog({state, els, h}) {
   let extra = {}, indexCache = new Map(), textIndex = null, textPromise = null, indexResizeObserver = null, placesMap = null, collectionData = null;
@@ -151,7 +151,7 @@ export function createCatalog({state, els, h}) {
     selectField('Person’s role','role',h.MASTER_INDEX_PEOPLE_FILTERS.filter(f=>f.key!=='all-people').map(f=>[f.typeKeys[0],f.label]),advanced,'All roles');
     selectField('Surviving source','completeness',[['partial','Incomplete surviving source'],['complete','No recorded source gaps']],advanced,'All sources');els.filterControls.append(advanced);
     const chips=node('div',undefined,'active-filters');chips.id='activeFilters';chips.setAttribute('aria-label','Active filters');els.results.before(chips);
-    const shortcuts=node('nav',undefined,'catalog-discovery');shortcuts.setAttribute('aria-label','Explore the catalog');shortcuts.append(link('Map','#map'),link('Timeline','#timeline'),link('Guided explorer','#explore'),link('Correspondence','#correspondence'));els.archive.append(shortcuts);
+    const shortcuts=node('nav',undefined,'catalog-discovery');shortcuts.setAttribute('aria-label','Explore the catalog');shortcuts.append(link('Map','#map'),link('Timeline','#timeline'),link('Article Explorer','#explore'),link('Correspondence','#correspondence'));els.archive.append(shortcuts);
   }
   const collectionViews = createCollectionViews({state, els, h, node, link, button, openIndex, getCollections});
   function showCatalog(v) {
@@ -399,9 +399,9 @@ export function createCatalog({state, els, h}) {
     requestAnimationFrame(revealBar);
   }
   function explorer(params){
-    openIndex('Guided explorer','');els.indexContent.append(node('p','Choose any combination below. Every matching article is available in the catalog, and this path can be bookmarked.','landing-intro'));
+    openIndex('Article Explorer','');
     let v=parse('#explore?'+params);const controls=node('div',undefined,'catalog-filter-grid');const count=node('p',undefined,'index-count');const all=link('View all matching articles','#archive','primary-action');const preview=node('div',undefined,'results');
-    const draw=()=>{const records=state.records.filter(r=>matches(r,v));history.replaceState(null,'',serialize(v,'#explore'));count.textContent=`${records.length.toLocaleString()} matching articles · showing ${Math.min(18,records.length)} below`;all.href=serialize({...v,origin:window.location.hash});all.textContent=`View all ${records.length.toLocaleString()} matching articles`;preview.replaceChildren(...h.sortRecords(records).slice(0,18).map(r=>h.safeResultCard(r,{records,backHref:window.location.hash,contextLabel:'guided explorer',titleFirst:h.FEATURES.compactResults})));};
+    const draw=()=>{const records=state.records.filter(r=>matches(r,v));history.replaceState(null,'',serialize(v,'#explore'));count.textContent=`${records.length.toLocaleString()} matching articles · showing ${Math.min(18,records.length)} below`;all.href=serialize({...v,origin:window.location.hash});all.textContent=`View all ${records.length.toLocaleString()} matching articles`;preview.replaceChildren(...h.sortRecords(records).slice(0,18).map(r=>h.safeResultCard(r,{records,backHref:window.location.hash,contextLabel:'Article Explorer',titleFirst:h.FEATURES.compactResults})));};
     for(const [labelText,key,options] of [['Subject','subject',[...new Set(state.records.map(r=>articleSubject(r.article_category)))].sort()],['Collection','collection',h.PUBLIC_COLLECTION_FILTERS.map(x=>typeof x==='string'?x:x.value)],['Publication','publication',[...new Set(state.records.map(h.articlePublicationLabel))].sort()],['Year','from',[...new Set(state.records.map(publicationYear))].filter(Boolean).sort()]]){
       const label=node('label');label.append(node('span',labelText));const select=node('select');select.append(new Option('All',''));options.filter(Boolean).forEach(x=>select.append(new Option(x,x)));select.value=v[key]||'';select.addEventListener('change',()=>{v[key]=select.value;if(key==='from')v.to=select.value;draw();});label.append(select);controls.append(label);
     }

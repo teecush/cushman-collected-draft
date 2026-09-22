@@ -402,3 +402,8 @@ body.catalog-page #indexView.directory-page .index-controls label{gap:0;}
  .article-context-buttons a:first-child::after{content:"‹";}
  .article-context-buttons a:last-child::after{content:"›";}
 }
+
+.article-publication-row{display:flex;align-items:center;gap:8px;min-width:0;}
+.article-publication-row > p{margin:0;min-width:0;flex:1;}
+.article-publication-row .article-options{margin:0;flex:none;}
+.article-publication-row .article-options .explicit-tools{left:auto;right:0;}

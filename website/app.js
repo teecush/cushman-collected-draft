@@ -1,8 +1,8 @@
 import {renderHomeCollections} from './home-collections.js?v=173';
 import {spotlightRecord} from './collections-engine.js?v=173';
-import { createCatalog } from "./catalog.js?v=182";
+import { createCatalog } from "./catalog.js?v=183";
 import { FEATURES } from "./features.js?v=173";
-const DATA_URL = new URL("../site_export/data/catalog.json?v=182", import.meta.url);
+const DATA_URL = new URL("../site_export/data/catalog.json?v=183", import.meta.url);
 const ALIASES_URL = new URL("../site_export/data/route_aliases.json?v=1", import.meta.url);
 const STANDALONE_CORRESPONDENCE_URL = new URL("../site_export/data/standalone_correspondence.json?v=4", import.meta.url);
 const CONTENT_ROOT = new URL("../site_export/content/reviews/", import.meta.url);
@@ -5409,11 +5409,11 @@ async function showReview(slug) {
   if (nav) articleParts.push(nav);
   articleParts.push(date, title);
   if (titleParts.deck) articleParts.push(deck);
-  articleParts.push(meta);
+  const publicationRow=document.createElement("div");publicationRow.className="article-publication-row";publicationRow.append(meta,articleTools(record));
+  articleParts.push(publicationRow);
   if (record.authorship_note) { const note = document.createElement("p"); note.className="public-date-note"; note.textContent=record.authorship_note; articleParts.push(note); }
   if (record.date_note) { const note = document.createElement("p"); note.className="public-date-note"; note.textContent=record.date_note; articleParts.push(note); }
   if (isIncompleteArticle(record)) articleParts.push(incompleteArticleNotice());
-  articleParts.push(articleTools(record));
   if (hasCorrespondence(record)) {
     const correspondenceLink = document.createElement("a");
     correspondenceLink.className = "article-correspondence-chip";
@@ -5697,7 +5697,7 @@ async function init() {
       fetch(DATA_URL),
       fetch(ALIASES_URL),
       fetch(STANDALONE_CORRESPONDENCE_URL).catch(() => null),
-      fetch(new URL('./collection-curation.json?v=182', import.meta.url)),
+      fetch(new URL('./collection-curation.json?v=183', import.meta.url)),
     ]);
     if (!response.ok) throw new Error(`Could not load records (${response.status})`);
     state.records = await response.json();
