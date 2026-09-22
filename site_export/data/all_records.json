@@ -159919,7 +159919,7 @@
     "year": "2000",
     "publication": "National Post",
     "source_publication": "National Post",
-    "article_category": "Music Review",
+    "article_category": "Concert Review",
     "collections": [
       "The Canadian Collection"
     ],
@@ -159970,7 +159970,7 @@
     "media": [],
     "correspondence": [],
     "word_count": 836,
-    "recording_title": "River Road and Other Stories",
+    "concert_title": "River Road and Other Stories",
     "featured_artists": "Sylvia Tyson",
     "coordinate_points": [
       {
@@ -159984,8 +159984,8 @@
     ],
     "display_schema": {
       "work_type": "productions",
-      "work_label": "Recording",
-      "company_label": "Label",
+      "work_label": "Concert",
+      "company_label": "Presenter",
       "primary_browse": "musicians",
       "secondary_browse": "productions"
     },
@@ -187620,7 +187620,7 @@
     "year": "2002",
     "publication": "National Post",
     "source_publication": "National Post",
-    "article_category": "Music Review",
+    "article_category": "Concert Review",
     "collections": [
       "The Musical Collection"
     ],
@@ -187731,13 +187731,13 @@
     "media": [],
     "correspondence": [],
     "word_count": 1299,
-    "recording_title": "The Two Sides of Kurt Weill; Friends, Lovers, Husbands",
+    "concert_title": "The Two Sides of Kurt Weill; Friends, Lovers, Husbands",
     "featured_artists": "William Bolcom; Bob Ashley",
     "coordinate_points": [],
     "display_schema": {
       "work_type": "productions",
-      "work_label": "Recording",
-      "company_label": "Label",
+      "work_label": "Concert",
+      "company_label": "Presenter",
       "primary_browse": "musicians",
       "secondary_browse": "productions"
     },
