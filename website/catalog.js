@@ -1,6 +1,6 @@
 import {FIELDS, normalize, nameMatches, publicationYear, serialize, parse, articleForm, articleSubject} from './catalog-engine.js?v=173';
 import {makeCollections, COLLECTIONS} from './collections-engine.js?v=173';
-import {createCollectionViews} from './collection-views.js?v=191';
+import {createCollectionViews} from './collection-views.js?v=192';
 import {INDEX_LETTERS, indexOrder, indexEntries, indexSections} from './index-engine.js?v=173';
 export function createCatalog({state, els, h}) {
   let extra = {}, indexCache = new Map(), textIndex = null, textPromise = null, indexResizeObserver = null, indexScrollCleanup = null, archiveNavObserver = null, placesMap = null, collectionData = null;
@@ -227,22 +227,27 @@ export function createCatalog({state, els, h}) {
       return base + '?' + p;
     }
     const updateUrl = () => history.replaceState(null, '', indexHref());
-    let filterSelect, compactCount = '';
+    let filterSelect, filterDisplayLabel, filterDisplayCount, compactCount = '';
     const syncCompactCount = () => {
       if (!filterSelect) return;
-      for (const option of filterSelect.options) {
-        const original = filters.find(f => f.key === option.value).label;
-        option.textContent = option.value === filterKey && els.indexView.classList.contains('directory-scrolled') ? `${original} (${compactCount})` : original;
-      }
+      filterDisplayLabel.textContent = filters.find(f => f.key === filterKey).label;
+      filterDisplayCount.textContent = compactCount;
     };
     if (people || works) {
-      const field = node('label'); field.append(node('span', people ? 'Role' : 'Kind of work'));
+      const field = node('label', undefined, 'index-filter-select'); field.append(node('span', people ? 'Role' : 'Kind of work'));
+      const display = node('span', undefined, 'index-filter-display');
+      filterDisplayLabel = node('span'); filterDisplayCount = node('small');
+      display.append(filterDisplayLabel, filterDisplayCount); field.append(display);
       const select = filterSelect = node('select'); filters.forEach(f => select.append(new Option(f.label, f.key))); select.value = filterKey;
       select.addEventListener('change', () => {
+        const scrollY = window.scrollY;
         filterKey = select.value; letter = ''; updateUrl();
         indexResizeObserver?.disconnect();
         indexPage(mode, new URLSearchParams(indexHref().split('?')[1]), type);
-        requestAnimationFrame(() => els.indexContent.querySelector('.index-controls select')?.focus({preventScroll: true}));
+        requestAnimationFrame(() => {
+          window.scrollTo(0, scrollY);
+          els.indexContent.querySelector('.index-controls select')?.focus({preventScroll: true});
+        });
       });
       field.append(select); controls.append(field);
     }
@@ -252,6 +257,7 @@ export function createCatalog({state, els, h}) {
     sortLabel.append(sort); controls.append(sortLabel);
     const alpha = node('nav', undefined, 'index-alphabet'); alpha.setAttribute('aria-label', 'Jump to a letter');
     const count = node('p', undefined, 'index-count'); count.setAttribute('aria-live', 'polite');
+    if (people || works) count.classList.add('master-index-count');
     const list = node('div', undefined, 'index-entries');
     const sections = new Map();
     const sortText = entry => h.indexSortText(entry.label, entry.typeKey);
