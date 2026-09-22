@@ -92,8 +92,6 @@ export function createCollectionViews({state,els,h,node,link,button,openIndex,ge
   function show(id,params) {
     const collection=getCollections().get(id);openIndex(collection.title,'');frame();
     if(collection.kind==='festival'){festival(collection,params);return;}
-    if(id!=='profiles')els.indexContent.append(node('p',collection.intro,'landing-intro'));
-    if(!['television','profiles'].includes(id))els.indexContent.append(link('Search all '+collection.records.length.toLocaleString()+' articles',resultsHref(collection),'primary-action'));
     if(collection.kind==='early'){
       els.indexContent.append(recordList(collection.records,collection.title));
       const relatedIds=new Set(state.collectionCuration?.earlyUndated||[]);
@@ -101,8 +99,8 @@ export function createCollectionViews({state,els,h,node,link,button,openIndex,ge
       if(related.length)els.indexContent.append(node('h2','Undated Cambridge clippings'),node('p','Related student-publication clippings whose dates have not been established.'),recordList(related,'Undated Cambridge clippings'));
       return;
     }
-    const field=node('label',undefined,'collection-find');if(id!=='profiles')field.append(node('span',id==='television'?'Search this collection':'Find '+(collection.kind==='portraits'?'a person':'a title')));else field.classList.add('collection-find-compact');
-    const search=node('input');search.type='search';if(id==='profiles')search.setAttribute('aria-label','Search for a person');search.placeholder=id==='television'?'':'Search this collection';search.value=params.get('q')||'';field.append(search);els.indexContent.append(field);
+    const field=node('label',undefined,'collection-find collection-find-compact');
+    const search=node('input');search.type='search';search.setAttribute('aria-label',id==='profiles'?'Search for a person':'Search this collection');search.placeholder='Search this collection';search.value=params.get('q')||'';field.append(search);els.indexContent.append(field);
     const content=node('div');els.indexContent.append(content);
     const draw=()=>{
       const query=normalize(search.value);const items=collection.items.filter(item=>normalize(item.title).includes(query));
