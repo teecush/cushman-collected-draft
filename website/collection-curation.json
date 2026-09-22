@@ -2442,6 +2442,199 @@
     "albums:julie-wilson-sings-the-cole-porter-songbook": {
       "src": "assets/collections/verified-2a63fc9fca77e946.jpg",
       "alt": "Sings the Cole Porter Songbook"
+    },
+    "albums:all-american": {
+      "src": "assets/collections/verified-d1bde845d6373638.jpg",
+      "alt": "All American (Original Broadway Cast Recording)"
+    },
+    "albums:mr-president": {
+      "src": "assets/collections/verified-d9ff211a17ef8b30.jpg",
+      "alt": "Mr. President (Original Broadway Cast Recording"
+    },
+    "albums:over-here": {
+      "src": "assets/collections/verified-4fa3367212f47ecf.jpg",
+      "alt": "Over Here! (Original Broadway Cast Recording)"
+    },
+    "albums:in-my-life": {
+      "src": "assets/collections/verified-3513bcce65f8f877.jpg",
+      "alt": "In My Life"
+    },
+    "albums:remembering-mabel-mercer-volume-2": {
+      "src": "assets/collections/verified-530a07ae01cbf606.jpg",
+      "alt": "Remembering Mabel Mercer, Vol. 2 (feat. Keith Ingham, James Chirillo & Greg Cohen)"
+    },
+    "albums:show-boat": {
+      "src": "assets/collections/verified-b2a0c826f839a968.jpg",
+      "alt": "Kern: Show Boat"
+    },
+    "albums:rink": {
+      "src": "assets/collections/verified-19f21357df2ad986.jpg",
+      "alt": "The Rink (Original 1984 Broadway Cast) [1999 Remaster]"
+    },
+    "albums:wonderful-town": {
+      "src": "assets/collections/verified-ca598bbb3e273508.jpg",
+      "alt": "Wonderful Town (Television Cast Recording (1958))"
+    },
+    "albums:sweet-little-devil": {
+      "src": "assets/collections/verified-c8693ca75c63730c.jpg",
+      "alt": "Sweet Little Devil - World Premiere Recording"
+    },
+    "profiles:howard-brenton": {
+      "src": "assets/collections/verified-ebbfbb8a645d5696.webp",
+      "alt": "Howard Brenton",
+      "fit": "cover",
+      "position": "50% 20%"
+    },
+    "profiles:domini-blythe": {
+      "src": "assets/collections/verified-048a55bfe3e87040.jpg",
+      "alt": "Domini Blythe",
+      "fit": "cover",
+      "position": "50% 20%"
+    },
+    "albums:andy-capp": {
+      "src": "assets/collections/verified-7f992fa1ca95c8bc.jpg",
+      "alt": "Andy Capp"
+    },
+    "television:bloodletting-and-miraculous-cures": {
+      "src": "assets/collections/verified-07c4720360032eec.jpg",
+      "alt": "Bloodletting & Miraculous Cures",
+      "fit": "cover",
+      "position": "50% 50%",
+      "screenColor": "#111111"
+    },
+    "television:broadway-the-american-musical": {
+      "src": "assets/collections/verified-7426d6a5f2369438.jpg",
+      "alt": "Broadway The American Musical",
+      "fit": "contain",
+      "position": "50% 50%",
+      "screenColor": "#111111"
+    },
+    "television:da-kink-in-my-hair": {
+      "src": "assets/collections/verified-2bcadae2b1c61b57.jpg",
+      "alt": "Da Kink in My Hair",
+      "fit": "contain",
+      "position": "50% 50%",
+      "screenColor": "#111111"
+    },
+    "television:girls-of-hedsor-hall": {
+      "src": "assets/collections/verified-dcdf7d5a3149dc36.jpg",
+      "alt": "The Girls of Hedsor Hall",
+      "fit": "contain",
+      "position": "50% 50%",
+      "screenColor": "#111111"
+    },
+    "television:guns": {
+      "src": "assets/collections/verified-f17c4193a27f1a01.jpg",
+      "alt": "Guns",
+      "fit": "contain",
+      "position": "50% 50%",
+      "screenColor": "#111111"
+    },
+    "television:henry-viii-mind-of-a-tyrant": {
+      "src": "assets/collections/verified-d56f074fca1ff4fe.jpg",
+      "alt": "Henry VIII: The Mind of a Tyrant",
+      "fit": "contain",
+      "position": "50% 50%",
+      "screenColor": "#111111"
+    },
+    "television:line": {
+      "src": "assets/collections/verified-e84fdce7ca09ac1e.jpg",
+      "alt": "The Line",
+      "fit": "contain",
+      "position": "50% 50%",
+      "screenColor": "#111111"
+    },
+    "television:michael-feinstein-s-american-songbook": {
+      "src": "assets/collections/verified-de27fd1ba1eb7914.jpg",
+      "alt": "Michael Feinstein's American Songbook",
+      "fit": "contain",
+      "position": "50% 50%",
+      "screenColor": "#111111"
+    },
+    "television:oprah-s-big-give": {
+      "src": "assets/collections/verified-66c1da82b57f7e8f.jpg",
+      "alt": "Oprah's Big Give",
+      "fit": "contain",
+      "position": "50% 50%",
+      "screenColor": "#111111"
+    },
+    "television:ruby": {
+      "src": "assets/collections/verified-0eab4d3abcbcf25a.jpg",
+      "alt": "Ruby",
+      "fit": "contain",
+      "position": "50% 50%",
+      "screenColor": "#111111"
+    },
+    "television:science-and-islam": {
+      "src": "assets/collections/verified-811857fc07a4b042.jpg",
+      "alt": "Science and Islam",
+      "fit": "contain",
+      "position": "50% 50%",
+      "screenColor": "#111111"
+    },
+    "television:six-wives-of-henry-viii": {
+      "src": "assets/collections/verified-71fcca335b80705d.jpg",
+      "alt": "The Six Wives of Henry VIII",
+      "fit": "contain",
+      "position": "50% 50%",
+      "screenColor": "#111111"
+    },
+    "television:sophie": {
+      "src": "assets/collections/verified-1a3c5adbee4caa4d.jpg",
+      "alt": "Sophie",
+      "fit": "contain",
+      "position": "50% 50%",
+      "screenColor": "#111111"
+    },
+    "television:spectacle-elvis-costello-with": {
+      "src": "assets/collections/verified-1fa8afe5921f96c6.jpg",
+      "alt": "Spectacle: Elvis Costello with...",
+      "fit": "contain",
+      "position": "50% 50%",
+      "screenColor": "#111111"
+    },
+    "television:trojan-horse": {
+      "src": "assets/collections/verified-83f76ad1a169808c.jpg",
+      "alt": "The Trojan Horse",
+      "fit": "contain",
+      "position": "50% 50%",
+      "screenColor": "#111111"
+    },
+    "television:whistleblowers": {
+      "src": "assets/collections/verified-1398dcc4cdc442d2.jpg",
+      "alt": "The Whistleblowers",
+      "fit": "contain",
+      "position": "50% 50%",
+      "screenColor": "#111111"
+    },
+    "television:zos-zone-of-separation": {
+      "src": "assets/collections/verified-f2d54cfcd548b3ac.jpg",
+      "alt": "ZOS: Zone of Separation",
+      "fit": "contain",
+      "position": "50% 50%",
+      "screenColor": "#111111"
+    },
+    "profiles:randy-hughson": {
+      "src": "assets/collections/verified-d3a7ba369b195089.png",
+      "alt": "Randy Hughson",
+      "fit": "cover",
+      "position": "50% 20%"
+    },
+    "profiles:jeff-douglas": {
+      "src": "assets/collections/verified-1a2ae08b99041b05.jpg",
+      "alt": "Jeff Douglas",
+      "fit": "cover",
+      "position": "50% 20%"
+    },
+    "profiles:eva-meier": {
+      "src": "assets/collections/verified-0dbb31c8dff02342.jpg",
+      "alt": "Eva Meier",
+      "fit": "cover",
+      "position": "50% 0%"
+    },
+    "musicals:elegies-a-song-cycle": {
+      "src": "assets/collections/verified-9034a55e85a624d5.jpg",
+      "alt": "Elegies: A Song Cycle"
     }
   },
   "excludedMusicalTitles": [
