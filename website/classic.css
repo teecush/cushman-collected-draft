@@ -362,7 +362,8 @@ body.catalog-page #indexView.directory-page .index-controls label{gap:0;}
 .festival-map-theatre{position:absolute;transform:translate(-50%,-40%);width:128px;text-align:center;z-index:2;text-decoration:none;color:var(--link);line-height:1.15;}
 .festival-map-theatre svg{display:block;width:90px;height:66px;margin:auto;filter:drop-shadow(0 1px 3px white) drop-shadow(0 0 6px white);}
 .festival-map-name{display:block;background:rgba(255,255,255,.95);padding:4px 5px;border-radius:3px;font:700 12px/1.2 var(--sans);}
-.festival-map-count{position:absolute;top:3px;right:13px;background:#345e6c;color:white;border:2px solid white;border-radius:20px;min-width:26px;padding:3px;font:700 12px/1 var(--sans);}
+.festival-map-count{position:absolute;top:0;right:9px;background:#ad431b;color:#fff;border:2px solid #fff;border-radius:24px;min-width:34px;min-height:34px;display:flex;align-items:center;justify-content:center;padding:5px;font:700 15px/1 var(--sans);box-shadow:0 2px 5px #4e271c40;cursor:pointer;}
+.festival-map-theatre:hover .festival-map-count,.festival-map-theatre:focus-visible .festival-map-count{background:#853015;box-shadow:0 0 0 2px #fff,0 0 0 4px #ad431b;}
 .festival-map-theatre:hover,.festival-map-theatre:focus-visible{z-index:3;outline:2px solid var(--link);outline-offset:4px;}
 .festival-map-theatre.no-articles{opacity:.6;}
 .festival-fixed-map .leaflet-control-attribution{font-size:9px;}
@@ -414,18 +415,21 @@ body.catalog-page #indexView.directory-page .index-controls label{gap:0;}
 
 /* Keep the festival selector alongside its logo and leave room for the map. */
 .festival-header{display:flex;align-items:center;justify-content:space-between;gap:20px;margin:20px 0 14px;}
-body.catalog-page #indexView.collection-page .festival-header h1{margin:0;min-width:0;flex:1;}
+body.catalog-page #indexView.collection-page .festival-header h1{margin:0;min-width:0;flex:0 1 auto;max-width:45%;}
 .festival-header .festival-heading img{max-width:100%;height:64px;}
-.festival-header .festival-year{margin:0;flex:0 0 160px;}
-.festival-header .festival-year select{margin:0;padding:8px 0;}
+.festival-header .festival-year{margin:0;min-width:0;flex:1 1 180px;max-width:240px;}
+.festival-header .festival-year select{margin:0;padding:8px 24px 8px 0;min-width:0;}
 @media(max-width:600px){
  body.catalog-page #indexView.festival-page{padding-top:16px;}
  .festival-header{gap:16px;margin:12px 0;}
  .festival-header .festival-heading img{height:52px;}
- .festival-header .festival-year{flex-basis:126px;}
+ .festival-header .festival-year{flex-basis:180px;}
  .festival-header .festival-year select{font-size:17px;}
  .festival-page .festival-fixed-map{height:clamp(300px,calc(100svh - 310px),430px);margin-top:0;}
  .festival-page .festival-map-theatre{width:110px;}
  .festival-page .festival-map-theatre svg{width:72px;height:52px;}
  .festival-page .festival-map-name{font-size:11px;}
 }
+
+/* Headings receive navigation focus for screen readers, without a selection box. */
+:is(h1,h2,h3,h4,h5,h6)[tabindex="-1"]:focus{outline:none;}
