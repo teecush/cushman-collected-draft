@@ -417,13 +417,13 @@ body.catalog-page #indexView.directory-page .index-controls label{gap:0;}
 .festival-header{display:flex;align-items:center;justify-content:space-between;gap:20px;margin:20px 0 14px;}
 body.catalog-page #indexView.collection-page .festival-header h1{margin:0;min-width:0;flex:0 1 auto;max-width:45%;}
 .festival-header .festival-heading img{max-width:100%;height:64px;}
-.festival-header .festival-year{margin:0;min-width:0;flex:1 1 180px;max-width:240px;}
-.festival-header .festival-year select{margin:0;padding:8px 24px 8px 0;min-width:0;}
+.festival-header .festival-year{margin:0;min-width:0;flex:0 1 160px;max-width:160px;}
+.festival-header .festival-year select{margin:0;padding:8px 32px 8px 14px;min-width:0;box-sizing:border-box;text-indent:0;}
 @media(max-width:600px){
  body.catalog-page #indexView.festival-page{padding-top:16px;}
  .festival-header{gap:16px;margin:12px 0;}
  .festival-header .festival-heading img{height:52px;}
- .festival-header .festival-year{flex-basis:180px;}
+ .festival-header .festival-year{flex-basis:160px;}
  .festival-header .festival-year select{font-size:17px;}
  .festival-page .festival-fixed-map{height:clamp(300px,calc(100svh - 310px),430px);margin-top:0;}
  .festival-page .festival-map-theatre{width:110px;}
