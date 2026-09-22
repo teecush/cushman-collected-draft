@@ -433,3 +433,22 @@ body.catalog-page #indexView.collection-page .festival-header h1{margin:0;min-wi
 
 /* Headings receive navigation focus for screen readers, without a selection box. */
 :is(h1,h2,h3,h4,h5,h6)[tabindex="-1"]:focus{outline:none;}
+
+/* Keep directory navigation and filters above the alphabet while the search scrolls away. */
+body.catalog-page #indexView.sticky-directory .catalog-tabs{position:sticky;top:var(--catalog-header-height,104px);z-index:34;background:var(--paper,#fff);margin-bottom:0;box-shadow:0 -8px 0 var(--paper,#fff);}
+body.catalog-page #indexView.sticky-directory .index-controls{position:sticky;top:calc(var(--catalog-header-height,104px) + var(--directory-nav-height,50px) - var(--directory-search-height,56px));z-index:33;grid-template-columns:1fr 1fr;gap:8px 12px;background:var(--paper,#fff);margin-bottom:0;padding-bottom:8px;}
+body.catalog-page #indexView.sticky-directory .index-controls label:first-child{grid-column:1/-1;}
+body.catalog-page #indexView.sticky-directory .index-count{margin-top:8px;}
+body.catalog-page #indexView.sticky-directory.directory-scrolled .index-count{visibility:hidden;}
+body.catalog-page #indexView.sticky-directory .index-alphabet{top:calc(var(--catalog-header-height,104px) + var(--directory-nav-height,50px) + var(--directory-filters-height,56px));}
+body.catalog-page #indexView.sticky-directory .index-letter-section>h2{scroll-margin-top:calc(var(--catalog-header-height,104px) + var(--directory-nav-height,50px) + var(--directory-filters-height,56px) + var(--index-alphabet-height,64px) + 22px);}
+
+body.catalog-page #indexView.sticky-catalog .catalog-tabs,
+body.catalog-page.search-open #archive>.catalog-tabs{position:sticky;top:var(--catalog-header-height,104px);z-index:34;background:var(--paper,#fff);box-shadow:0 -8px 0 var(--paper,#fff);}
+body.catalog-page #indexView.sticky-catalog .places-paths,
+body.catalog-page.search-open #archive>.advanced-search{position:sticky;top:calc(var(--catalog-header-height,104px) + var(--directory-nav-height,50px));z-index:33;background:var(--paper,#fff);padding-block:8px;margin-bottom:12px;}
+body.catalog-page.search-open #archive>.advanced-search[open]{max-height:calc(100svh - var(--catalog-header-height,104px) - var(--directory-nav-height,50px) - 24px);overflow-y:auto;overscroll-behavior:contain;}
+body.catalog-page #indexView.sticky-directory .index-controls-two label:last-child{grid-column:1/-1;}
+
+/* Contain Leaflet panes so they cannot cover catalog navigation. */
+.places-map{isolation:isolate;z-index:0;}

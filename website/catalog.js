@@ -1,9 +1,9 @@
 import {FIELDS, normalize, nameMatches, publicationYear, serialize, parse, articleForm, articleSubject} from './catalog-engine.js?v=173';
 import {makeCollections, COLLECTIONS} from './collections-engine.js?v=173';
-import {createCollectionViews} from './collection-views.js?v=190';
+import {createCollectionViews} from './collection-views.js?v=191';
 import {INDEX_LETTERS, indexOrder, indexEntries, indexSections} from './index-engine.js?v=173';
 export function createCatalog({state, els, h}) {
-  let extra = {}, indexCache = new Map(), textIndex = null, textPromise = null, indexResizeObserver = null, placesMap = null, collectionData = null;
+  let extra = {}, indexCache = new Map(), textIndex = null, textPromise = null, indexResizeObserver = null, indexScrollCleanup = null, archiveNavObserver = null, placesMap = null, collectionData = null;
   const getCollections = () => collectionData ||= makeCollections(state.records, h, state.collectionCuration);
   const node = (tag, text, className) => { const n = document.createElement(tag); if (text !== undefined) n.textContent = text; if (className) n.className = className; return n; };
   const link = (label, href, cls) => { const a = node('a', label, cls); a.href = href; return a; };
@@ -18,14 +18,29 @@ export function createCatalog({state, els, h}) {
   }
   function tabs(active='articles',scope={}) {
     const nav=node('nav',undefined,'catalog-tabs'); nav.setAttribute('aria-label','Catalog views');
-    [['Articles','#archive','articles'],['Works','#works','works'],['People','#people','people'],['Publications','#index:publications','publications'],['Places','#places','places']].forEach(([label,url,key])=>{const context={...scope};delete context.origin;delete context.shown;delete context.entity;delete context.entityType;delete context.indexScope;const a=link(label,serialize(context,url));if(key===active)a.setAttribute('aria-current','page');nav.append(a);});
+    [['Articles','#archive','articles'],['Works','#works','works'],['People','#people','people'],['Places','#places','places'],['Publications','#index:publications','publications']].forEach(([label,url,key])=>{const context={...scope};delete context.origin;delete context.shown;delete context.entity;delete context.entityType;delete context.indexScope;const a=link(label,serialize(context,url));if(key===active)a.setAttribute('aria-current','page');nav.append(a);});
     return nav;
+  }
+  function refreshArchiveTabs(scope={}) {
+    const nav=tabs('articles',scope), previous=els.archive.querySelector('.catalog-tabs');
+    if(previous) previous.replaceWith(nav); else els.archive.querySelector('.archive-heading').after(nav);
+    archiveNavObserver?.disconnect();
+    archiveNavObserver=new ResizeObserver(() => {
+      const height=nav.getBoundingClientRect().height;
+      if(height) els.archive.style.setProperty('--directory-nav-height',height+'px');
+    });
+    archiveNavObserver.observe(nav);
   }
   function focusHeading(root=els.indexContent) { const heading=root.querySelector('h1'); if(heading){heading.tabIndex=-1; heading.focus({preventScroll:true});} }
   function openIndex(title, active) {
-    els.indexView.classList.remove('directory-page');
+    els.indexView.classList.remove('directory-page', 'sticky-directory', 'sticky-catalog');
+    indexScrollCleanup?.(); indexScrollCleanup = null;
     document.body.classList.add('index-open', 'catalog-page'); els.indexView.hidden=false;
-    const heading=node('h1',title); els.indexContent.replaceChildren(heading,tabs(active));
+    const heading=node('h1',title); const nav=tabs(active); els.indexContent.replaceChildren(heading,nav);
+    if (['people','works','publications','places'].includes(active)) els.indexView.classList.add('sticky-catalog');
+    indexResizeObserver?.disconnect();
+    indexResizeObserver = new ResizeObserver(() => els.indexContent.style.setProperty('--directory-nav-height', nav.getBoundingClientRect().height + 'px'));
+    indexResizeObserver.observe(nav);
     const back=els.indexView.querySelector(':scope > .back-link'); back.href='#archive';back.textContent='Back to catalog';
     requestAnimationFrame(()=>{window.scrollTo(0,0);focusHeading();});
   }
@@ -87,7 +102,7 @@ export function createCatalog({state, els, h}) {
       ensureText().then(()=>{if(extra.text==='1')apply({preserve:true});}).catch(()=>{els.results.replaceChildren(node('p','Article text could not load. Try again or turn off “Search article text” to use the catalog.'));});return;
     }
     state.filtered=h.sortRecords(state.records.filter(r=>matches(r)));
-    els.archive.querySelector(".catalog-tabs")?.replaceWith(tabs("articles",values()));
+    refreshArchiveTabs(values());
     h.updateSortButtons();h.renderShakespeareNav();renderChips();render();
   }
   function render() {
@@ -119,7 +134,7 @@ export function createCatalog({state, els, h}) {
     new ResizeObserver(measureHeader).observe(header); measureHeader();
     const back = link('Back to home', '#home', 'back-link catalog-back'); els.archive.prepend(back);
     els.archive.querySelector('h1').textContent=h.FEATURES.modernCatalogPresentation?'Catalog':'Search the Archive';els.searchInput.setAttribute('aria-label','Search titles, works, people and places');els.searchInput.placeholder='Title, work, person or place';
-    els.archive.querySelector('.archive-heading').after(tabs());
+    refreshArchiveTabs();
     const scope=node('div',undefined,'search-scope');const label=node('label');const check=node('input');check.type='checkbox';check.id='searchArticleText';check.addEventListener('change',()=>{extra.text=check.checked?'1':'';apply();history.replaceState(null,'',href());});label.append(check,document.createTextNode(' Search article text'));scope.append(els.archiveCount,label);els.archive.querySelector('.search-panel').append(scope);
     els.archive.querySelector('.search-label-row').remove();
     const panel = els.archive.querySelector('.search-panel');
@@ -163,7 +178,7 @@ export function createCatalog({state, els, h}) {
     state.pendingArchiveRestore=h.archiveRestoreForHash(href());
     const restoring=Boolean(state.pendingArchiveRestore);
     if(state.pendingArchiveRestore)state.visible=Math.max(state.visible,state.pendingArchiveRestore.visibleCount||36,(state.pendingArchiveRestore.index||0)+1);
-    els.archive.querySelector('.catalog-tabs').replaceWith(tabs('articles',values()));
+    refreshArchiveTabs(values());
     apply({preserve:true});
     const back = els.archive.querySelector('.catalog-back'); back.href = '#home'; back.textContent = 'Back to home';
     if(v.origin && /^#(people|works|places|index:|master-index|map|timeline|explore|collection:)/.test(v.origin)) {
@@ -198,6 +213,7 @@ export function createCatalog({state, els, h}) {
       els.indexContent.append(info);
     }
     els.indexView.classList.add('directory-page');
+    els.indexView.classList.add('sticky-directory');
     const controls = node('div', undefined, 'index-controls' + (people || works ? '' : ' index-controls-two'));
     const label = node('label'); label.append(node('span', people ? 'Find a person' : 'Find an entry'));
     const search = node('input'); search.type = 'search'; search.value = query;
@@ -211,9 +227,17 @@ export function createCatalog({state, els, h}) {
       return base + '?' + p;
     }
     const updateUrl = () => history.replaceState(null, '', indexHref());
+    let filterSelect, compactCount = '';
+    const syncCompactCount = () => {
+      if (!filterSelect) return;
+      for (const option of filterSelect.options) {
+        const original = filters.find(f => f.key === option.value).label;
+        option.textContent = option.value === filterKey && els.indexView.classList.contains('directory-scrolled') ? `${original} (${compactCount})` : original;
+      }
+    };
     if (people || works) {
       const field = node('label'); field.append(node('span', people ? 'Role' : 'Kind of work'));
-      const select = node('select'); filters.forEach(f => select.append(new Option(f.label, f.key))); select.value = filterKey;
+      const select = filterSelect = node('select'); filters.forEach(f => select.append(new Option(f.label, f.key))); select.value = filterKey;
       select.addEventListener('change', () => {
         filterKey = select.value; letter = ''; updateUrl();
         indexResizeObserver?.disconnect();
@@ -259,6 +283,7 @@ export function createCatalog({state, els, h}) {
     ['pointerdown', 'focusin', 'click', 'auxclick'].forEach(event => list.addEventListener(event, prepareLink));
     function draw() {
       const found = indexEntries(entries, query, order, sortText);
+      compactCount = found.length.toLocaleString(); syncCompactCount();
       count.textContent = `${found.length.toLocaleString()} ${people ? 'people' : works ? 'works' : 'entries'}`;
       sections.clear(); list.replaceChildren(); alpha.replaceChildren(); alpha.hidden = order !== 'alpha' || type === 'publications';
       if (order === 'alpha' && type !== 'publications') {
@@ -310,8 +335,30 @@ export function createCatalog({state, els, h}) {
     }
     search.addEventListener('input', () => { query = search.value; letter = ''; updateUrl(); draw(); });
     els.indexContent.append(controls, count, alpha, list); updateUrl(); draw();
-    const measureAlphabet = () => els.indexContent.style.setProperty('--index-alphabet-height', alpha.getBoundingClientRect().height + 'px');
+    const nav = els.indexContent.querySelector('.catalog-tabs');
+    const measureAlphabet = () => {
+      const style = els.indexContent.style;
+      style.setProperty('--index-alphabet-height', alpha.getBoundingClientRect().height + 'px');
+      {
+        style.setProperty('--directory-nav-height', nav.getBoundingClientRect().height + 'px');
+        const searchHeight = label.getBoundingClientRect().height + parseFloat(getComputedStyle(controls).rowGap);
+        style.setProperty('--directory-search-height', searchHeight + 'px');
+        style.setProperty('--directory-filters-height', (controls.getBoundingClientRect().height - searchHeight) + 'px');
+      }
+    };
+    indexResizeObserver?.disconnect();
     indexResizeObserver = new ResizeObserver(measureAlphabet); indexResizeObserver.observe(alpha);
+    {
+      indexResizeObserver.observe(controls); indexResizeObserver.observe(nav);
+      const onScroll = () => {
+        const stuck = controls.getBoundingClientRect().top <= parseFloat(getComputedStyle(controls).top) + 1;
+        if (els.indexView.classList.contains('directory-scrolled') !== stuck) {
+          els.indexView.classList.toggle('directory-scrolled', stuck); syncCompactCount();
+        }
+      };
+      window.addEventListener('scroll', onScroll, {passive:true});
+      indexScrollCleanup = () => { window.removeEventListener('scroll', onScroll); els.indexView.classList.remove('directory-scrolled'); };
+    }
     requestAnimationFrame(() => { measureAlphabet(); if (letter && order === 'alpha') jump(letter); });
   }
   function home(){
@@ -410,6 +457,7 @@ export function createCatalog({state, els, h}) {
   function unavailable(){openIndex('Page unavailable','');els.indexContent.append(node('p','This link does not match a page in the archive.'),link('Browse the catalog','#archive'));}
   function route(hash) {
     indexResizeObserver?.disconnect();
+    indexScrollCleanup?.(); indexScrollCleanup = null;
     placesMap?.remove(); placesMap=null; collectionViews.dispose();
     document.querySelectorAll('.observer-farewell-feature, .observer-farewell-section').forEach(n=>n.remove());
     document.querySelectorAll('.scope-expand').forEach(n=>n.remove());document.querySelector('#catalogOrigin')?.remove();document.querySelector('#exactMatches')?.remove();
