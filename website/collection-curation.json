@@ -2308,6 +2308,140 @@
     "books:biographical-guide-to-the-great-jazz-and-pop-singers": {
       "src": "assets/collections/friedwald-guide.jpg",
       "alt": "A Biographical Guide to the Great Jazz and Pop Singers — Will Friedwald"
+    },
+    "profiles:richard-monette": {
+      "src": "assets/collections/verified-8cb620e39a77d35b.jpg",
+      "alt": "Richard Monette",
+      "fit": "cover",
+      "position": "50% 20%"
+    },
+    "profiles:goldie-semple": {
+      "src": "assets/collections/verified-b1daf711efa0319a.jpg",
+      "alt": "Goldie Semple",
+      "fit": "cover",
+      "position": "50% 0%"
+    },
+    "profiles:david-fox": {
+      "src": "assets/collections/verified-a4444ad7ee49e991.gif",
+      "alt": "David Fox",
+      "fit": "cover",
+      "position": "50% 20%"
+    },
+    "profiles:david-william": {
+      "src": "assets/collections/verified-88149d5b9c78ce6b.jpg",
+      "alt": "David William",
+      "fit": "cover",
+      "position": "50% 20%"
+    },
+    "profiles:bill-glassco": {
+      "src": "assets/collections/verified-6ea4efada3929f28.jpg",
+      "alt": "Bill Glassco",
+      "fit": "cover",
+      "position": "50% 20%"
+    },
+    "profiles:michael-langham": {
+      "src": "assets/collections/verified-3cb410849b78a827.jpg",
+      "alt": "Michael Langham",
+      "fit": "cover",
+      "position": "50% 20%"
+    },
+    "profiles:peter-donaldson": {
+      "src": "assets/collections/verified-eb00a670f6beb9d4.jpg",
+      "alt": "Peter Donaldson",
+      "fit": "cover",
+      "position": "50% 0%"
+    },
+    "profiles:urjo-kareda": {
+      "src": "assets/collections/verified-ad4f821a52e1d28d.jpg",
+      "alt": "Urjo Kareda",
+      "fit": "cover",
+      "position": "50% 20%"
+    },
+    "profiles:tom-patterson": {
+      "src": "assets/collections/verified-125998b3e1120ba0.jpg",
+      "alt": "Tom Patterson",
+      "fit": "cover",
+      "position": "75% 40%"
+    },
+    "profiles:jennifer-phipps": {
+      "src": "assets/collections/verified-c893e062f0f64b7f.jpg",
+      "alt": "Jennifer Phipps",
+      "fit": "cover",
+      "position": "50% 20%"
+    },
+    "profiles:jerry-franken": {
+      "src": "assets/collections/verified-af34ae343218619a.jpg",
+      "alt": "Jerry Franken",
+      "fit": "cover",
+      "position": "50% 20%"
+    },
+    "profiles:michael-levine": {
+      "src": "assets/collections/verified-74758dbec4263386.jpg",
+      "alt": "Michael Levine",
+      "fit": "cover",
+      "position": "50% 20%"
+    },
+    "profiles:chris-abraham": {
+      "src": "assets/collections/verified-b6bb6eb8d31e4f87.jpg",
+      "alt": "Chris Abraham",
+      "fit": "cover",
+      "position": "50% 20%"
+    },
+    "profiles:antoni-cimolino": {
+      "src": "assets/collections/verified-91a45443d669034d.jpg",
+      "alt": "Antoni Cimolino",
+      "fit": "cover",
+      "position": "50% 20%"
+    },
+    "profiles:diego-matamoros": {
+      "src": "assets/collections/verified-56f39ab093831eff.jpg",
+      "alt": "Diego Matamoros",
+      "fit": "cover",
+      "position": "50% 20%"
+    },
+    "television:producing-parker": {
+      "src": "assets/collections/verified-be913f92046a51cc.jpg",
+      "alt": "Producing Parker",
+      "fit": "cover",
+      "position": "50% 50%"
+    },
+    "television:bridge": {
+      "src": "assets/collections/verified-b809168aa0a724ae.jpg",
+      "alt": "The Bridge",
+      "fit": "cover",
+      "position": "50% 50%"
+    },
+    "albums:dark-divas": {
+      "src": "assets/collections/verified-24085ac847caff2e.jpg",
+      "alt": "Dark Divas: The Musical"
+    },
+    "albums:dear-world": {
+      "src": "assets/collections/verified-0e84773c8817fa4f.jpg",
+      "alt": "Dear World (Original Broadway Cast Recording)"
+    },
+    "albums:dames-at-sea": {
+      "src": "assets/collections/verified-9b98c9e375309e58.jpg",
+      "alt": "Dames at Sea (Original Off-Broadway Cast Recording)"
+    },
+    "albums:tree-grows-in-brooklyn": {
+      "src": "assets/collections/verified-9fe8cfea05dea4f3.jpg",
+      "alt": "A Tree Grows in Brooklyn (Original Broadway Cast Recording)"
+    },
+    "albums:rothschilds": {
+      "src": "assets/collections/verified-d7d13ff63f80bcfc.jpg",
+      "alt": "The Rothschilds: A Musical (Original Broadway Cast Recording)"
+    },
+    "albums:this-love-of-mine": {
+      "src": "assets/collections/verified-f84d0e28b278cb29.jpg",
+      "alt": "This Love of Mine"
+    },
+    "albums:land-where-the-good-songs-go": {
+      "src": "assets/collections/verified-2125de93be2aca93.jpg",
+      "alt": "The Land Where the Good Songs Go"
+    },
+    "albums:julie-wilson-sings-the-cole-porter-songbook": {
+      "src": "assets/collections/verified-2a63fc9fca77e946.jpg",
+      "alt": "Sings the Cole Porter Songbook"
     }
   },
   "excludedMusicalTitles": [

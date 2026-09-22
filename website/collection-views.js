@@ -62,7 +62,7 @@ export function createCollectionViews({state,els,h,node,link,button,openIndex,ge
     els.indexContent.append(node('p','Artwork identifies the publications, shows, books, recordings and people discussed in this archive. Copyright remains with the respective rights holders. Source and licence details are listed below.','landing-intro'));
     const content=node('div',undefined,'image-credits');els.indexContent.append(content);
     try {
-      const response=await fetch(new URL('./assets/collections/credits.json?v=173',import.meta.url));
+      const response=await fetch(new URL('./assets/collections/credits.json?v=184',import.meta.url));
       if(!response.ok)throw new Error('Credits unavailable');
       const entries=await response.json();if(token!==generation)return;
       for(const asset of entries){
