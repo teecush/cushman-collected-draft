@@ -1,6 +1,6 @@
 import {FIELDS, normalize, nameMatches, publicationYear, serialize, parse, articleForm, articleSubject} from './catalog-engine.js?v=173';
 import {makeCollections, COLLECTIONS} from './collections-engine.js?v=173';
-import {createCollectionViews} from './collection-views.js?v=192';
+import {createCollectionViews} from './collection-views.js?v=194';
 import {INDEX_LETTERS, indexOrder, indexEntries, indexSections} from './index-engine.js?v=173';
 export function createCatalog({state, els, h}) {
   let extra = {}, indexCache = new Map(), textIndex = null, textPromise = null, indexResizeObserver = null, indexScrollCleanup = null, archiveNavObserver = null, placesMap = null, collectionData = null;
@@ -227,7 +227,7 @@ export function createCatalog({state, els, h}) {
       return base + '?' + p;
     }
     const updateUrl = () => history.replaceState(null, '', indexHref());
-    let filterSelect, filterDisplayLabel, filterDisplayCount, compactCount = '';
+    let filterSelect, filterDisplayLabel, filterDisplayCount, compactCount = '', viewportLetter = letter;
     const syncCompactCount = () => {
       if (!filterSelect) return;
       filterDisplayLabel.textContent = filters.find(f => f.key === filterKey).label;
@@ -240,12 +240,11 @@ export function createCatalog({state, els, h}) {
       display.append(filterDisplayLabel, filterDisplayCount); field.append(display);
       const select = filterSelect = node('select'); filters.forEach(f => select.append(new Option(f.label, f.key))); select.value = filterKey;
       select.addEventListener('change', () => {
-        const scrollY = window.scrollY;
-        filterKey = select.value; letter = ''; updateUrl();
+        const anchorLetter = order === 'alpha' ? (letter || viewportLetter || currentVisibleLetter()) : '';
+        filterKey = select.value; letter = anchorLetter; updateUrl();
         indexResizeObserver?.disconnect();
         indexPage(mode, new URLSearchParams(indexHref().split('?')[1]), type);
         requestAnimationFrame(() => {
-          window.scrollTo(0, scrollY);
           els.indexContent.querySelector('.index-controls select')?.focus({preventScroll: true});
         });
       });
@@ -261,15 +260,42 @@ export function createCatalog({state, els, h}) {
     const list = node('div', undefined, 'index-entries');
     const sections = new Map();
     const sortText = entry => h.indexSortText(entry.label, entry.typeKey);
+    function currentVisibleLetter() {
+      const cutoff = alpha.getBoundingClientRect().bottom + 2;
+      const visibleSection = document.elementsFromPoint(innerWidth / 2, Math.min(innerHeight - 1, cutoff + 8))
+        .map(element => element.closest?.('.index-letter-section')).find(Boolean);
+      if (visibleSection) return visibleSection.querySelector('h2')?.textContent || '';
+      let current = '';
+      for (const [initial, heading] of sections) {
+        if (heading.getBoundingClientRect().top <= cutoff + 36) current = initial;
+        else break;
+      }
+      return current || sections.keys().next().value || '';
+    }
+    function closestAvailableLetter(targetLetter) {
+      if (sections.has(targetLetter)) return targetLetter;
+      const targetIndex = INDEX_LETTERS.indexOf(targetLetter);
+      if (targetIndex < 0) return sections.keys().next().value || '';
+      for (let i = targetIndex + 1; i < INDEX_LETTERS.length; i += 1) {
+        if (sections.has(INDEX_LETTERS[i])) return INDEX_LETTERS[i];
+      }
+      for (let i = targetIndex - 1; i >= 0; i -= 1) {
+        if (sections.has(INDEX_LETTERS[i])) return INDEX_LETTERS[i];
+      }
+      return '';
+    }
     function jump(targetLetter) {
-      const heading = sections.get(targetLetter);
+      const resolvedLetter = closestAvailableLetter(targetLetter);
+      const heading = sections.get(resolvedLetter);
       if (!heading) return;
-      letter = targetLetter; updateUrl();
+      letter = resolvedLetter; updateUrl();
+      viewportLetter = resolvedLetter;
       alpha.querySelectorAll('a').forEach(a => {
         a.href = indexHref(a.dataset.letter);
         if (a.dataset.letter === letter) a.setAttribute('aria-current', 'location'); else a.removeAttribute('aria-current');
       });
       heading.scrollIntoView({block: 'start'}); heading.focus({preventScroll: true});
+      requestAnimationFrame(() => { viewportLetter = currentVisibleLetter() || resolvedLetter; });
     }
     function entryLink(entry) {
       const entryScope = {...scope, entityType: entry.typeKey, entity: entry.slug, origin: window.location.hash};
@@ -357,6 +383,7 @@ export function createCatalog({state, els, h}) {
     {
       indexResizeObserver.observe(controls); indexResizeObserver.observe(nav);
       const onScroll = () => {
+        if (order === 'alpha') viewportLetter = currentVisibleLetter();
         const stuck = controls.getBoundingClientRect().top <= parseFloat(getComputedStyle(controls).top) + 1;
         if (els.indexView.classList.contains('directory-scrolled') !== stuck) {
           els.indexView.classList.toggle('directory-scrolled', stuck); syncCompactCount();
