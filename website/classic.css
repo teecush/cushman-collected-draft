@@ -610,3 +610,20 @@ body.catalog-page.search-open #archive>.catalog-tabs{
   body.catalog-page #indexView.directory-page .index-alphabet,
   body.catalog-page #indexView.collection-page .profiles-alphabet{grid-template-columns:repeat(14,minmax(0,1fr));}
 }
+
+/* The active blue tab underline is sufficient; omit the full-width grey rule. */
+body.catalog-page :is(#archive,#indexView) .catalog-tabs{border-bottom:0;}
+body.catalog-page #indexView.sticky-directory .catalog-tabs,
+body.catalog-page #indexView.sticky-catalog .catalog-tabs,
+body.catalog-page #indexView.sticky-collection .catalog-tabs,
+body.catalog-page.search-open #archive>.catalog-tabs{
+  box-shadow:0 -8px 0 var(--paper,#fff);
+}
+@media(max-width:600px){
+  body.catalog-page #indexView.sticky-directory .catalog-tabs,
+  body.catalog-page #indexView.sticky-catalog .catalog-tabs,
+  body.catalog-page #indexView.sticky-collection .catalog-tabs,
+  body.catalog-page.search-open #archive>.catalog-tabs{
+    box-shadow:0 0 0 100vmax var(--paper,#fff);
+  }
+}
