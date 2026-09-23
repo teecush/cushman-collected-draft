@@ -525,6 +525,29 @@ body.catalog-page #indexView.sticky-directory .index-filter-select>select{
 }
 body.catalog-page #indexView.sticky-directory .index-filter-select>select:focus{outline:none;box-shadow:none;}
 
+/* Keep the five primary catalog headers fixed to one title-and-tab rhythm. */
+body.catalog-page #indexView.sticky-catalog .catalog-tabs,
+body.catalog-page.search-open #archive>.catalog-tabs{
+  margin:16px 0 12px;padding-bottom:8px;
+}
+@media(max-width:600px){
+  body.catalog-page.index-open #indexView.sticky-catalog,
+  body.catalog-page.search-open #archive{
+    margin-top:12px;padding-top:14px;
+  }
+  body.catalog-page :is(#indexView.sticky-catalog #indexContent>h1,#archive .archive-heading h1){
+    min-height:37px;font-size:32px;line-height:1.15;
+  }
+  body.catalog-page #indexView.sticky-catalog .catalog-tabs,
+  body.catalog-page.search-open #archive>.catalog-tabs{
+    margin:8px 0 10px;padding-bottom:5px;
+  }
+  body.catalog-page #indexView.sticky-catalog .catalog-tabs a,
+  body.catalog-page.search-open #archive>.catalog-tabs a{
+    min-height:36px;padding:6px 3px;font-size:10px;white-space:nowrap;
+  }
+}
+
 /* One structural frame for every collection: title, catalog tabs, controls, content. */
 body.catalog-page #indexView.collection-page{display:block;margin-top:12px;padding-top:14px;}
 body.catalog-page #indexView.collection-page #indexContent{display:block;}
