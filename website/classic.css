@@ -128,7 +128,9 @@ body #archive .advanced-search[open] > .filter-controls { display:block;margin-t
 body #archive .advanced-search[open] .filter-strip { display:grid; }
 button, .primary-action, .current-read-link, .current-page-link { text-transform:uppercase; }
 @media(max-width:600px) {
- body #archive .search-scope { grid-template-columns:minmax(0,1fr) auto auto;gap:8px; }
+ body #archive .search-scope { grid-template-columns:auto minmax(0,1fr) auto;gap:8px; }
+ body #archive .search-scope>label { justify-self:center; }
+ body #archive .search-scope>.advanced-search>summary { justify-self:end; }
  .search-submit-row { gap:10px; }
  .search-submit-row .primary-action { padding-inline:14px; }
 }
