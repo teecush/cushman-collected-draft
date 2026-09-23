@@ -138,8 +138,11 @@ export function createCatalog({state, els, h}) {
     els.archive.querySelector('h1').textContent=h.FEATURES.modernCatalogPresentation?'Catalog':'Search the Archive';els.searchInput.setAttribute('aria-label','Search titles, works, people and places');els.searchInput.placeholder='';
     refreshArchiveTabs();
     const disclosure = node('details', undefined, 'advanced-search');
-    const summary = node('summary', 'Advanced'); disclosure.append(summary);
-    const scope=node('div',undefined,'search-scope');const label=node('label');const check=node('input');check.type='checkbox';check.id='searchArticleText';check.addEventListener('change',()=>{extra.text=check.checked?'1':'';apply();history.replaceState(null,'',href());});label.append(check,document.createTextNode(' Search article text'));scope.append(els.archiveCount,label,disclosure);els.archive.querySelector('.search-panel').append(scope);
+    const summary = node('summary', 'Advanced search options'); summary.hidden = true; disclosure.append(summary);
+    const advancedToggle = node('button', 'Advanced', 'advanced-search-toggle'); advancedToggle.type = 'button'; advancedToggle.setAttribute('aria-expanded', 'false');
+    advancedToggle.addEventListener('click', () => { disclosure.open = !disclosure.open; });
+    disclosure.addEventListener('toggle', () => advancedToggle.setAttribute('aria-expanded', disclosure.open ? 'true' : 'false'));
+    const scope=node('div',undefined,'search-scope');const label=node('label');const check=node('input');check.type='checkbox';check.id='searchArticleText';check.addEventListener('change',()=>{extra.text=check.checked?'1':'';apply();history.replaceState(null,'',href());});label.append(check,document.createTextNode(' Search article text'));scope.append(els.archiveCount,label,advancedToggle,disclosure);els.archive.querySelector('.search-panel').append(scope);
     els.archive.querySelector('.search-label-row').remove();
     const panel = els.archive.querySelector('.search-panel');
     const form = node('form', undefined, 'archive-search-form'); form.setAttribute('role', 'search');
