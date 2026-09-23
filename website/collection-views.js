@@ -142,10 +142,10 @@ export function createCollectionViews({state,els,h,node,link,button,openIndex,ge
       }content.append(list);
     }
     const route=letter=>{const p=new URLSearchParams();if(query)p.set('q',query);p.set('letter',letter);return '#collection:'+collection.id+'?'+p;};
-    let activeLetter='';
+    let activeLetter='',suppressScrollSyncUntil=0;
     const setActiveLetter=(letter,{updateUrl=false}={})=>{if(!headings.has(letter)||letter===activeLetter)return;activeLetter=letter;alpha.querySelectorAll('a').forEach(a=>{if(a.dataset.letter===letter)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current');});if(updateUrl)history.replaceState(null,'',route(letter));};
-    const visibleLetter=()=>{const cutoff=alpha.getBoundingClientRect().bottom+6;let current='';for(const [initial,heading] of headings){if(heading.getBoundingClientRect().top<=cutoff+8)current=initial;else break;}return current||headings.keys().next().value||'';};
-    const jump=letter=>{const heading=headings.get(letter);if(!heading)return;setActiveLetter(letter,{updateUrl:true});let target=heading;
+    const visibleLetter=()=>{const cutoff=alpha.getBoundingClientRect().bottom+6;let current='',currentTop=-Infinity;for(const [initial,heading] of headings){const top=heading.getBoundingClientRect().top;if(top<=cutoff+8&&top>currentTop+1){current=initial;currentTop=top;}else if(top>cutoff+8)break;}return current||headings.keys().next().value||'';};
+    const jump=letter=>{const heading=headings.get(letter);if(!heading)return;suppressScrollSyncUntil=performance.now()+600;setActiveLetter(letter,{updateUrl:true});let target=heading;
       if(continuous&&heading.parentElement===continuousGallery){const rowTop=heading.offsetTop;target=[...continuousGallery.children].find(card=>card.offsetTop===rowTop)||heading;}
       target.scrollIntoView({block:'start'});heading.focus({preventScroll:true});};
     for(const initial of INDEX_LETTERS){
@@ -157,7 +157,7 @@ export function createCollectionViews({state,els,h,node,link,button,openIndex,ge
     alpha.hidden=!items.length&&!single.length;
     const measure=()=>content.style.setProperty('--index-alphabet-height',alpha.getBoundingClientRect().height+'px');
     alphabetObserver?.disconnect();alphabetObserver=new ResizeObserver(measure);alphabetObserver.observe(alpha);
-    let scrollFrame=0;const onScroll=()=>{if(scrollFrame)return;scrollFrame=requestAnimationFrame(()=>{scrollFrame=0;setActiveLetter(visibleLetter(),{updateUrl:true});});};
+    let scrollFrame=0;const onScroll=()=>{if(performance.now()<suppressScrollSyncUntil||scrollFrame)return;scrollFrame=requestAnimationFrame(()=>{scrollFrame=0;if(performance.now()>=suppressScrollSyncUntil)setActiveLetter(visibleLetter(),{updateUrl:true});});};
     alphabetScrollCleanup?.();window.addEventListener('scroll',onScroll,{passive:true});alphabetScrollCleanup=()=>{window.removeEventListener('scroll',onScroll);if(scrollFrame)cancelAnimationFrame(scrollFrame);};
     fitTitles(content);requestAnimationFrame(()=>{measure();const letter=new URLSearchParams(location.hash.split('?')[1]||'').get('letter');if(letter&&headings.has(letter))jump(letter);else setActiveLetter(visibleLetter(),{updateUrl:true});});
   }
