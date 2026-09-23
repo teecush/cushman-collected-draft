@@ -480,6 +480,13 @@ body.catalog-page #indexView.sticky-directory .index-filter-display small{
 .index-filter-label-mobile{display:none;}
 .filter-chip-remove{display:inline-block;margin-left:2px;font-size:19px;font-weight:900;line-height:.7;color:var(--ink);}
 @media(max-width:600px){
+  body.catalog-page #indexView.sticky-directory :is(.catalog-tabs,.index-controls,.index-alphabet),
+  body.catalog-page #indexView.sticky-collection :is(.catalog-tabs,.profiles-alphabet),
+  body.catalog-page #indexView.sticky-catalog .catalog-tabs,
+  body.catalog-page.search-open #archive>.catalog-tabs{
+    clip-path:inset(-8px -100vmax);
+    box-shadow:0 1px 0 var(--rule),0 0 0 100vmax var(--paper,#fff);
+  }
   body.catalog-page.search-open #archive{margin-top:12px;padding-top:12px;}
   body.catalog-page.search-open #archive .archive-heading h1{font-size:28px;}
   body.catalog-page.search-open #archive>.catalog-tabs{margin:12px 0;padding-bottom:8px;}
