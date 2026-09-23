@@ -65,8 +65,8 @@ body.catalog-page .index-alphabet :is(a,span) {
   min-width:27px;min-height:44px;padding:5px 4px;white-space:nowrap;border:1px solid var(--rule);border-bottom:0;
   border-radius:5px 5px 0 0;background:var(--panel);font:700 13px var(--sans);text-decoration:none;
 }
-body.catalog-page .index-alphabet a:hover,
 body.catalog-page .index-alphabet a[aria-current] { background:var(--blue-dark);color:#fff; }
+@media(hover:hover){body.catalog-page .index-alphabet a:hover{background:var(--blue-dark);color:#fff;}}
 body.catalog-page .index-alphabet span { color:var(--muted);background:transparent;border-color:transparent; }
 body.catalog-page .index-letter-section { margin:32px 0 48px; }
 body.catalog-page .index-letter-section > h2 {
