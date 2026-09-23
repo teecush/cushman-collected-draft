@@ -553,13 +553,13 @@ body.catalog-page #indexView.sticky-collection .index-letter-section>h2{
 
 /* Shaw and Stratford keep their selector beside the logo initially, then below the sticky catalog row. */
 body.catalog-page #indexView.festival-page #indexContent{
-  display:grid;grid-template-columns:minmax(0,1fr) 160px;column-gap:20px;align-items:center;
+  display:grid;grid-template-columns:minmax(0,1fr) 160px;column-gap:20px;row-gap:6px;align-items:center;
 }
 body.catalog-page #indexView.festival-page .festival-header{display:contents;}
 body.catalog-page #indexView.festival-page .festival-header h1{grid-column:1;grid-row:1;margin:0;max-width:100%;}
 body.catalog-page #indexView.festival-page .festival-header .festival-year{
   grid-column:2;grid-row:1;position:sticky;top:calc(var(--catalog-header-height,104px) + var(--directory-nav-height,50px));z-index:32;
-  width:160px;margin:0;background:var(--paper,#fff);padding:6px 0;
+  width:160px;margin:0;background:var(--paper,#fff);padding:6px 0 12px;align-self:start;
 }
 body.catalog-page #indexView.festival-page.festival-context-stuck .festival-header .festival-year{
   isolation:isolate;

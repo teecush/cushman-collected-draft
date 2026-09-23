@@ -1,6 +1,6 @@
 import {FIELDS, normalize, nameMatches, publicationYear, serialize, parse, articleForm, articleSubject} from './catalog-engine.js?v=173';
 import {makeCollections, COLLECTIONS} from './collections-engine.js?v=173';
-import {createCollectionViews} from './collection-views.js?v=202';
+import {createCollectionViews} from './collection-views.js?v=203';
 import {INDEX_LETTERS, indexOrder, indexEntries, indexSections} from './index-engine.js?v=173';
 export function createCatalog({state, els, h}) {
   let extra = {}, indexCache = new Map(), textIndex = null, textPromise = null, indexResizeObserver = null, indexScrollCleanup = null, archiveNavObserver = null, placesMap = null, collectionData = null;
@@ -435,19 +435,18 @@ export function createCatalog({state, els, h}) {
   }
   function timeline(params) {
     openIndex('Timeline', '');
-    const dated = new Map(), undated = [];
+    const dated = new Map();
     for (const record of state.records) {
       const key = publicationYear(record);
-      if (!key) { undated.push(record); continue; }
+      if (!key) continue;
       if (!dated.has(key)) dated.set(key, []);
       dated.get(key).push(record);
     }
     const available = [...dated.keys()].sort();
     const years = available.length ? Array.from({length: Number(available.at(-1)) - Number(available[0]) + 1}, (_, i) => String(Number(available[0]) + i)) : [];
-    let year = params.get('year') || years.at(-1) || 'undated';
-    if (!years.includes(year) && year !== 'undated') year = years.at(-1) || 'undated';
+    let year = params.get('year') || years.at(-1) || '';
+    if (!years.includes(year)) year = years.at(-1) || '';
     let shown = Math.max(36, Number(params.get('shown')) || 36);
-    els.indexContent.append(node('p', 'Choose a year’s bar to browse its articles. Taller bars mean more articles; years with no articles remain visible as gaps.', 'landing-intro'));
     const selected = node('div', undefined, 'timeline-selected-year'); selected.setAttribute('aria-live', 'polite');
     const rail = node('div', undefined, 'timeline-rail timeline-bar-chart');
     rail.setAttribute('role', 'region'); rail.setAttribute('aria-label', 'Articles by year');
@@ -474,8 +473,6 @@ export function createCatalog({state, els, h}) {
     const controls = node('div', undefined, 'timeline-year-controls');
     const move = step => { choose(years[Math.max(0, Math.min(years.length - 1, years.indexOf(year) + step))]); revealBar(); };
     const prev = button('Previous year', () => move(-1)), next = button('Next year', () => move(1)); controls.append(prev, next);
-    const undatedButton = button(`Undated writing (${undated.length})`, () => choose('undated'));
-    if (undated.length) controls.append(undatedButton);
     function revealBar() {
       const bar = bars.get(year); if (!bar) return;
       const left = bar.offsetLeft, right = left + bar.offsetWidth;
@@ -484,21 +481,20 @@ export function createCatalog({state, els, h}) {
     }
     function draw() {
       history.replaceState(null, '', `#timeline?year=${year}${shown > 36 ? '&shown=' + shown : ''}`);
-      const records = h.sortRecordsChronologically(year === 'undated' ? undated : dated.get(year) || []);
-      selected.replaceChildren(node('span', year === 'undated' ? 'Date not recorded' : 'Selected year'), node('strong', year === 'undated' ? 'Undated' : year), node('em', `${records.length.toLocaleString()} ${records.length === 1 ? 'article' : 'articles'}`));
+      const records = h.sortRecordsChronologically(dated.get(year) || []);
+      selected.replaceChildren(node('span', 'Selected year'), node('strong', year), node('em', `${records.length.toLocaleString()} ${records.length === 1 ? 'article' : 'articles'}`));
       for (const [key, bar] of bars) {
         bar.classList.toggle('is-active', key === year); bar.setAttribute('aria-pressed', String(key === year));
-        bar.tabIndex = key === year || (year === 'undated' && key === years[0]) ? 0 : -1;
+        bar.tabIndex = key === year ? 0 : -1;
       }
-      undatedButton.setAttribute('aria-pressed', String(year === 'undated'));
-      result.replaceChildren(node('h2', year === 'undated' ? 'Undated writing' : `Articles from ${year}`));
+      result.replaceChildren(node('h2', `Articles from ${year}`));
       result.id = 'timelineResults';
-      if (year !== 'undated') result.append(link('Search and filter this year', serialize({from: year, to: year, origin: window.location.hash})));
+      result.append(link('Search and filter this year', serialize({from: year, to: year, origin: window.location.hash})));
       const ctx = {records, backHref: window.location.hash, contextLabel: year, titleFirst: h.FEATURES.compactResults, visibleCount: shown};
       result.append(...records.slice(0, shown).map(r => h.safeResultCard(r, ctx)));
       if (!records.length) result.append(node('p', 'No articles from this year are currently in the catalog.'));
       if (shown < records.length) result.append(button(`Show more (${records.length - shown} remaining)`, () => { shown += 36; draw(); }, 'load-more'));
-      prev.disabled = !years.length || year === years[0]; next.disabled = !years.length || year === years.at(-1) || year === 'undated';
+      prev.disabled = !years.length || year === years[0]; next.disabled = !years.length || year === years.at(-1);
     }
     els.indexContent.append(selected, rail, controls, result); draw();
     requestAnimationFrame(revealBar);
