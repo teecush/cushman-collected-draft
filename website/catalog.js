@@ -1,6 +1,6 @@
 import {FIELDS, normalize, nameMatches, publicationYear, serialize, parse, articleForm, articleSubject} from './catalog-engine.js?v=173';
 import {makeCollections, COLLECTIONS} from './collections-engine.js?v=173';
-import {createCollectionViews} from './collection-views.js?v=203';
+import {createCollectionViews} from './collection-views.js?v=204';
 import {INDEX_LETTERS, indexOrder, indexEntries, indexSections} from './index-engine.js?v=173';
 export function createCatalog({state, els, h}) {
   let extra = {}, indexCache = new Map(), textIndex = null, textPromise = null, indexResizeObserver = null, indexScrollCleanup = null, archiveNavObserver = null, placesMap = null, collectionData = null;
@@ -260,9 +260,6 @@ export function createCatalog({state, els, h}) {
         filterKey = select.value; letter = anchorLetter; updateUrl();
         indexResizeObserver?.disconnect();
         indexPage(mode, new URLSearchParams(indexHref().split('?')[1]), type);
-        requestAnimationFrame(() => {
-          els.indexContent.querySelector('.index-controls select')?.focus({preventScroll: true});
-        });
       });
       field.append(select); controls.append(field);
     }
