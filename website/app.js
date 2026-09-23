@@ -1,8 +1,8 @@
 import {renderHomeCollections} from './home-collections.js?v=173';
 import {spotlightRecord} from './collections-engine.js?v=173';
-import { createCatalog } from "./catalog.js?v=205";
+import { createCatalog } from "./catalog.js?v=206";
 import { FEATURES } from "./features.js?v=173";
-const DATA_URL = new URL("../site_export/data/catalog.json?v=205", import.meta.url);
+const DATA_URL = new URL("../site_export/data/catalog.json?v=206", import.meta.url);
 const ALIASES_URL = new URL("../site_export/data/route_aliases.json?v=1", import.meta.url);
 const STANDALONE_CORRESPONDENCE_URL = new URL("../site_export/data/standalone_correspondence.json?v=4", import.meta.url);
 const CONTENT_ROOT = new URL("../site_export/content/reviews/", import.meta.url);
@@ -2285,20 +2285,12 @@ function renderShakespeareLanding() {
   const groups = document.createElement("div");
   groups.className = "landing-card-grid landing-card-grid-compact shakespeare-route-cards";
   groups.replaceChildren(...landingItems("shakespeare").slice(1).map(landingCard));
-  const playGroups = document.createElement("nav");
-  playGroups.className = "shakespeare-play-group-nav";
-  playGroups.setAttribute("aria-label", "Browse plays by category");
   const plays = document.createElement("div");
   plays.className = "shakespeare-play-sections";
   SHAKESPEARE_PLAY_GROUPS.forEach((group) => {
     const section = document.createElement("section");
     section.className = "shakespeare-play-group-section";
     section.id = `shakespeare-plays-${entitySlug(group.label)}`;
-    const jump = document.createElement("button");
-    jump.type = "button";
-    jump.innerHTML = `<strong>${group.label}</strong><span>${group.titles.length} plays</span>`;
-    jump.addEventListener("click", () => section.scrollIntoView({block: "start"}));
-    playGroups.append(jump);
     const groupTitle = document.createElement("h3");
     groupTitle.className = "shakespeare-play-heading";
     groupTitle.textContent = group.label;
@@ -2310,7 +2302,7 @@ function renderShakespeareLanding() {
     section.append(groupTitle, grid);
     plays.append(section);
   });
-  els.indexContent.replaceChildren(title, count, groups, playGroups, plays);
+  els.indexContent.replaceChildren(title, count, groups, plays);
 }
 
 function shakespeareArtTile(title, index) {
@@ -2322,7 +2314,6 @@ function shakespeareArtTile(title, index) {
     const image = document.createElement("img");
     image.src = tileImages[title];
     image.alt = title;
-    image.loading = "lazy";
     link.replaceChildren(image);
   } else {
     const heading = document.createElement("strong");
@@ -5703,7 +5694,7 @@ async function init() {
       fetch(DATA_URL),
       fetch(ALIASES_URL),
       fetch(STANDALONE_CORRESPONDENCE_URL).catch(() => null),
-      fetch(new URL('./collection-curation.json?v=205', import.meta.url)),
+      fetch(new URL('./collection-curation.json?v=206', import.meta.url)),
     ]);
     if (!response.ok) throw new Error(`Could not load records (${response.status})`);
     state.records = await response.json();
