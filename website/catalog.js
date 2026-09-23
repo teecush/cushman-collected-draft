@@ -1,6 +1,6 @@
 import {FIELDS, normalize, nameMatches, publicationYear, serialize, parse, articleForm, articleSubject} from './catalog-engine.js?v=173';
 import {makeCollections, COLLECTIONS} from './collections-engine.js?v=173';
-import {createCollectionViews} from './collection-views.js?v=197';
+import {createCollectionViews} from './collection-views.js?v=198';
 import {INDEX_LETTERS, indexOrder, indexEntries, indexSections} from './index-engine.js?v=173';
 export function createCatalog({state, els, h}) {
   let extra = {}, indexCache = new Map(), textIndex = null, textPromise = null, indexResizeObserver = null, indexScrollCleanup = null, archiveNavObserver = null, placesMap = null, collectionData = null;
@@ -79,7 +79,9 @@ export function createCatalog({state, els, h}) {
       let value=v[key];if(key==='shelf')value=getCollections().get(value)?.title||value;if(key==='item')value=getCollections().get(v.shelf)?.itemMap.get(value)?.title||value;if(value==='__unspecified__')value='Not recorded';if(key==='entity')value=h.entityMap(v.entityType).get(value)?.label||value;
       if(key==='type')value=h.TYPE_GROUPS.find(x=>x.value===value)?.label||value;
       if(key==='text')value='Included';
-      const b=button(`${label}: ${value} ×`,()=>{const next=values();delete next[key];if(key==='shelf')delete next.item;if(key==='collection')delete next.group;if(key==='entity')delete next.entityType;delete next.shown;setValues(next);apply();history.replaceState(null,'',href());});b.setAttribute('aria-label',`Remove ${label}: ${value}`);chips.append(b);
+      const b=button('',()=>{const next=values();delete next[key];if(key==='shelf')delete next.item;if(key==='collection')delete next.group;if(key==='entity')delete next.entityType;delete next.shown;setValues(next);apply();history.replaceState(null,'',href());});
+      const remove=node('span','×','filter-chip-remove');remove.setAttribute('aria-hidden','true');
+      b.append(document.createTextNode(`${label}: ${value} `),remove);b.setAttribute('aria-label',`Remove ${label}: ${value}`);chips.append(b);
     });
     if(chips.children.length)chips.append(button('Clear all',clear));
     document.querySelector('#exactMatches')?.remove();
@@ -133,7 +135,7 @@ export function createCatalog({state, els, h}) {
     const measureHeader = () => document.documentElement.style.setProperty('--catalog-header-height', header.getBoundingClientRect().height + 'px');
     new ResizeObserver(measureHeader).observe(header); measureHeader();
     const back = link('Back to home', '#home', 'back-link catalog-back'); els.archive.prepend(back);
-    els.archive.querySelector('h1').textContent=h.FEATURES.modernCatalogPresentation?'Catalog':'Search the Archive';els.searchInput.setAttribute('aria-label','Search titles, works, people and places');els.searchInput.placeholder='Title, work, person or place';
+    els.archive.querySelector('h1').textContent=h.FEATURES.modernCatalogPresentation?'Catalog':'Search the Archive';els.searchInput.setAttribute('aria-label','Search titles, works, people and places');els.searchInput.placeholder='';
     refreshArchiveTabs();
     const disclosure = node('details', undefined, 'advanced-search');
     const summary = node('summary', 'Advanced'); disclosure.append(summary);

@@ -478,7 +478,16 @@ body.catalog-page #indexView.sticky-directory .index-filter-display small{
   color:var(--muted);font:12px/1.2 var(--sans);white-space:nowrap;
 }
 .index-filter-label-mobile{display:none;}
+.filter-chip-remove{display:inline-block;margin-left:2px;font-size:19px;font-weight:900;line-height:.7;color:var(--ink);}
 @media(max-width:600px){
+  body.catalog-page.search-open #archive{margin-top:12px;padding-top:12px;}
+  body.catalog-page.search-open #archive .archive-heading h1{font-size:28px;}
+  body.catalog-page.search-open #archive>.catalog-tabs{margin:12px 0;padding-bottom:8px;}
+  body.catalog-page.search-open #archive .search-panel{padding:14px;margin-bottom:6px;}
+  body.catalog-page.search-open #archive .search-scope{margin-top:8px;}
+  body.catalog-page.search-open #archive .active-filters{gap:6px;margin:8px 0;}
+  body.catalog-page.search-open #archive .active-filters button{min-height:38px;padding:6px 10px;}
+  body.catalog-page.search-open #archive .scope-expand{margin:4px 0 8px;font-size:13px;}
   body.catalog-page #indexView.sticky-directory .index-filter-display{white-space:nowrap;overflow:hidden;}
   body.catalog-page #indexView.sticky-directory .index-filter-display>span{min-width:0;overflow:hidden;text-overflow:ellipsis;}
   .index-filter-label-full{display:none;}
