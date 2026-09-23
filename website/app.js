@@ -1,8 +1,8 @@
 import {renderHomeCollections} from './home-collections.js?v=173';
 import {spotlightRecord} from './collections-engine.js?v=173';
-import { createCatalog } from "./catalog.js?v=201";
+import { createCatalog } from "./catalog.js?v=202";
 import { FEATURES } from "./features.js?v=173";
-const DATA_URL = new URL("../site_export/data/catalog.json?v=201", import.meta.url);
+const DATA_URL = new URL("../site_export/data/catalog.json?v=202", import.meta.url);
 const ALIASES_URL = new URL("../site_export/data/route_aliases.json?v=1", import.meta.url);
 const STANDALONE_CORRESPONDENCE_URL = new URL("../site_export/data/standalone_correspondence.json?v=4", import.meta.url);
 const CONTENT_ROOT = new URL("../site_export/content/reviews/", import.meta.url);
@@ -18,17 +18,17 @@ const SHAKESPEARE_GROUPS = [
   },
   {
     value: "plays",
-    label: "Play Reviews",
+    label: "All Reviews",
     description: "Reviews of productions of Shakespeare plays.",
   },
   {
     value: "thoughts",
-    label: "Thoughts & Context",
+    label: "Thoughts",
     description: "Think pieces and Shakespeare-heavy critical writing.",
   },
   {
     value: "adaptations",
-    label: "Adaptations & Riffs",
+    label: "Riffs",
     description: "Adaptations, offshoots, and Shakespeare-inspired work.",
   },
 ];
@@ -2172,7 +2172,7 @@ function landingItems(kind) {
     return SHAKESPEARE_GROUPS.map((group) => {
       const href = group.value ? `#collection:shakespeare?group=${group.value}` : "#collection:shakespeare";
       const records = explicitShakespeareRecords().filter((record) => !group.value || shakespeareGroup(record) === group.value);
-      return landingItem(group.label, href, records.length, group.description, records);
+      return landingItem(group.label, href, records.length, group.description, records, "articles");
     });
   }
 
@@ -2282,18 +2282,23 @@ function renderShakespeareLanding() {
   const count = document.createElement("p");
   count.className = "index-count";
   count.textContent = countUnitText(countForTile("Shakespeare"), "article", "articles");
-  const intro = document.createElement("p");
-  intro.className = "landing-intro";
-  intro.textContent = "Browse Robert Cushman’s Shakespeare reviews and essays by play.";
   const groups = document.createElement("div");
-  groups.className = "landing-card-grid landing-card-grid-compact";
-  groups.replaceChildren(...landingItems("shakespeare").map(landingCard));
-  const playHeading = document.createElement("h2");
-  playHeading.className = "landing-subhead";
-  playHeading.textContent = "Browse by Play";
+  groups.className = "landing-card-grid landing-card-grid-compact shakespeare-route-cards";
+  groups.replaceChildren(...landingItems("shakespeare").slice(1).map(landingCard));
+  const playGroups = document.createElement("nav");
+  playGroups.className = "shakespeare-play-group-nav";
+  playGroups.setAttribute("aria-label", "Browse plays by category");
   const plays = document.createElement("div");
   plays.className = "shakespeare-play-sections";
   SHAKESPEARE_PLAY_GROUPS.forEach((group) => {
+    const section = document.createElement("section");
+    section.className = "shakespeare-play-group-section";
+    section.id = `shakespeare-plays-${entitySlug(group.label)}`;
+    const jump = document.createElement("button");
+    jump.type = "button";
+    jump.innerHTML = `<strong>${group.label}</strong><span>${group.titles.length} plays</span>`;
+    jump.addEventListener("click", () => section.scrollIntoView({block: "start"}));
+    playGroups.append(jump);
     const groupTitle = document.createElement("h3");
     groupTitle.className = "shakespeare-play-heading";
     groupTitle.textContent = group.label;
@@ -2302,9 +2307,10 @@ function renderShakespeareLanding() {
     grid.replaceChildren(
       ...group.titles.map((playTitle) => shakespeareArtTile(playTitle, browseTiles.shakespeare.indexOf(playTitle)))
     );
-    plays.append(groupTitle, grid);
+    section.append(groupTitle, grid);
+    plays.append(section);
   });
-  els.indexContent.replaceChildren(title, count, intro, groups, playHeading, plays);
+  els.indexContent.replaceChildren(title, count, groups, playGroups, plays);
 }
 
 function shakespeareArtTile(title, index) {
@@ -5697,7 +5703,7 @@ async function init() {
       fetch(DATA_URL),
       fetch(ALIASES_URL),
       fetch(STANDALONE_CORRESPONDENCE_URL).catch(() => null),
-      fetch(new URL('./collection-curation.json?v=201', import.meta.url)),
+      fetch(new URL('./collection-curation.json?v=202', import.meta.url)),
     ]);
     if (!response.ok) throw new Error(`Could not load records (${response.status})`);
     state.records = await response.json();
