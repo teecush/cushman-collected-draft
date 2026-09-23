@@ -1,6 +1,6 @@
 import {FIELDS, normalize, nameMatches, publicationYear, serialize, parse, articleForm, articleSubject} from './catalog-engine.js?v=173';
 import {makeCollections, COLLECTIONS} from './collections-engine.js?v=173';
-import {createCollectionViews} from './collection-views.js?v=199';
+import {createCollectionViews} from './collection-views.js?v=200';
 import {INDEX_LETTERS, indexOrder, indexEntries, indexSections} from './index-engine.js?v=173';
 export function createCatalog({state, els, h}) {
   let extra = {}, indexCache = new Map(), textIndex = null, textPromise = null, indexResizeObserver = null, indexScrollCleanup = null, archiveNavObserver = null, placesMap = null, collectionData = null;
@@ -110,7 +110,7 @@ export function createCatalog({state, els, h}) {
   function render() {
     if(!document.body.classList.contains('search-open')){els.results.replaceChildren();return;}
     const total=state.filtered.length, shown=Math.min(state.visible,total);
-    els.archiveCount.classList.remove('is-searching');els.archiveCount.textContent=total ? `Showing 1–${shown.toLocaleString()} of ${total.toLocaleString()} articles`:'No matching articles';
+    els.archiveCount.classList.remove('is-searching');els.archiveCount.textContent=total ? `${total.toLocaleString()} articles`:'No matching articles';
     const context={contextLabel:'catalog results',backHref:href(),records:state.filtered,query:state.query,titleFirst:h.FEATURES.compactResults || Boolean(state.query.trim()),visibleCount:state.visible};
     const fragment=document.createDocumentFragment();
     if(!total){const empty=node('div',undefined,'catalog-empty');empty.append(node('h2','No articles match these choices'),node('p',extra.text==='1'?'Try a shorter phrase or remove a filter.':'Search covers titles, works, credited people and places. Try fewer words, remove a filter, or include article text.'),button('Clear filters and browse all articles',clear));fragment.append(empty);}

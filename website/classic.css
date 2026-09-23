@@ -478,7 +478,7 @@ body.catalog-page #indexView.sticky-directory .index-filter-display small{
   color:var(--muted);font:12px/1.2 var(--sans);white-space:nowrap;
 }
 .index-filter-label-mobile{display:none;}
-.filter-chip-remove{display:inline-block;margin-left:2px;font-size:19px;font-weight:900;line-height:.7;color:var(--ink);}
+.filter-chip-remove{display:inline-block;margin-left:2px;font-size:16px;font-weight:700;line-height:.8;color:var(--ink);}
 @media(max-width:600px){
   body.catalog-page #indexView.sticky-directory :is(.catalog-tabs,.index-controls,.index-alphabet),
   body.catalog-page #indexView.sticky-collection :is(.catalog-tabs,.profiles-alphabet),
