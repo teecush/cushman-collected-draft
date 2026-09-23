@@ -1,6 +1,6 @@
 import {FIELDS, normalize, nameMatches, publicationYear, serialize, parse, articleForm, articleSubject} from './catalog-engine.js?v=173';
 import {makeCollections, COLLECTIONS} from './collections-engine.js?v=173';
-import {createCollectionViews} from './collection-views.js?v=194';
+import {createCollectionViews} from './collection-views.js?v=195';
 import {INDEX_LETTERS, indexOrder, indexEntries, indexSections} from './index-engine.js?v=173';
 export function createCatalog({state, els, h}) {
   let extra = {}, indexCache = new Map(), textIndex = null, textPromise = null, indexResizeObserver = null, indexScrollCleanup = null, archiveNavObserver = null, placesMap = null, collectionData = null;
@@ -240,7 +240,7 @@ export function createCatalog({state, els, h}) {
       display.append(filterDisplayLabel, filterDisplayCount); field.append(display);
       const select = filterSelect = node('select'); filters.forEach(f => select.append(new Option(f.label, f.key))); select.value = filterKey;
       select.addEventListener('change', () => {
-        const anchorLetter = order === 'alpha' ? (letter || viewportLetter || currentVisibleLetter()) : '';
+        const anchorLetter = order === 'alpha' ? (viewportLetter || letter || currentVisibleLetter()) : '';
         filterKey = select.value; letter = anchorLetter; updateUrl();
         indexResizeObserver?.disconnect();
         indexPage(mode, new URLSearchParams(indexHref().split('?')[1]), type);
@@ -383,7 +383,16 @@ export function createCatalog({state, els, h}) {
     {
       indexResizeObserver.observe(controls); indexResizeObserver.observe(nav);
       const onScroll = () => {
-        if (order === 'alpha') viewportLetter = currentVisibleLetter();
+        if (order === 'alpha') {
+          const visibleLetter = currentVisibleLetter();
+          if (visibleLetter && visibleLetter !== viewportLetter) {
+            viewportLetter = visibleLetter; letter = visibleLetter; updateUrl();
+            alpha.querySelectorAll('a').forEach(a => {
+              a.href = indexHref(a.dataset.letter);
+              if (a.dataset.letter === visibleLetter) a.setAttribute('aria-current', 'location'); else a.removeAttribute('aria-current');
+            });
+          }
+        }
         const stuck = controls.getBoundingClientRect().top <= parseFloat(getComputedStyle(controls).top) + 1;
         if (els.indexView.classList.contains('directory-scrolled') !== stuck) {
           els.indexView.classList.toggle('directory-scrolled', stuck); syncCompactCount();
@@ -513,7 +522,7 @@ export function createCatalog({state, els, h}) {
     if(base==='#section:chronology'){timeline(params);return true;}
     if(base==='#timeline'){timeline(params);return true;}
     if(base==='#explore'){explorer(params);return true;}
-    if(base==='#section:shakespeare'||base==='#collection:shakespeare'){openIndex('Shakespeare','');h.renderLandingPage('shakespeare');els.indexContent.prepend(tabs());collectionViews.frame();return true;}
+    if(base==='#section:shakespeare'||base==='#collection:shakespeare'){openIndex('Shakespeare','works');h.renderLandingPage('shakespeare');els.indexContent.querySelector('h1')?.after(tabs('works'));collectionViews.frame();return true;}
     if(base==='#section:collections'){collectionViews.directory();return true;}
     if(base.startsWith('#collection:')||base.startsWith('#browse-collection:')){const id=base.split(':')[1]==='musical'?'musicals':base.split(':')[1];if(getCollections().has(id)&&id!=='shakespeare'){collectionViews.show(id,params);return true;}}
     if(!h.FEATURES.modernBrowseLandings && ['#section:collections','#section:browse','#section:indexes','#section:current','#current'].includes(base)){

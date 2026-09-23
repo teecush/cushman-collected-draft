@@ -4,10 +4,10 @@ import {serialize, publicationYear, normalize} from './catalog-engine.js?v=173';
 import {COLLECTIONS,workKey} from './collections-engine.js?v=173';
 
 export function createCollectionViews({state,els,h,node,link,button,openIndex,getCollections}) {
-  let activeMap=null, generation=0, artObserver=null, alphabetObserver=null;
-  const dispose=()=>{alphabetObserver?.disconnect();alphabetObserver=null;artObserver?.disconnect();artObserver=null;els.indexView.classList.remove('collection-page','festival-page');generation++;activeMap?.remove();activeMap=null;document.querySelector('.collection-result-art')?.remove();};
+  let activeMap=null, generation=0, artObserver=null, alphabetObserver=null, alphabetScrollCleanup=null;
+  const dispose=()=>{alphabetScrollCleanup?.();alphabetScrollCleanup=null;alphabetObserver?.disconnect();alphabetObserver=null;artObserver?.disconnect();artObserver=null;els.indexView.classList.remove('collection-page','festival-page','sticky-collection','festival-context-stuck');generation++;activeMap?.remove();activeMap=null;document.querySelector('.collection-result-art')?.remove();};
   function frame() {
-    els.indexView.classList.add('collection-page');
+    els.indexView.classList.add('collection-page','sticky-catalog','sticky-collection');
     const back=els.indexView.querySelector(':scope > .back-link');
     back.href='#home';back.textContent='Back to home';
   }
@@ -50,7 +50,7 @@ export function createCollectionViews({state,els,h,node,link,button,openIndex,ge
     return a;
   }
   function directory() {
-    openIndex('Collections','');
+    openIndex('Collections','works');frame();
     els.indexContent.append(node('p','Explore a writer, a festival, or a shelf of discoveries.','landing-intro'));
     const cards=node('div',undefined,'collection-cards');
     for(const spec of COLLECTIONS){const collection=getCollections().get(spec.id);const a=link('',spec.href||'#collection:'+spec.id);a.append(node('h2',spec.title),node('p',spec.intro),node('strong',collection.records.length.toLocaleString()+' articles'));cards.append(a);}
@@ -90,7 +90,9 @@ export function createCollectionViews({state,els,h,node,link,button,openIndex,ge
     result.append(...h.sortRecordsChronologically(records).map(r=>h.safeResultCard(r,context)));return result;
   }
   function show(id,params) {
-    const collection=getCollections().get(id);openIndex(collection.title,'');frame();
+    const collection=getCollections().get(id);
+    const active=collection.kind==='festival'?'places':id==='profiles'?'people':id==='early'?'articles':'works';
+    openIndex(collection.title,active);frame();
     if(collection.kind==='festival'){festival(collection,params);return;}
     if(collection.kind==='early'){
       els.indexContent.append(recordList(collection.records,collection.title));
@@ -140,7 +142,10 @@ export function createCollectionViews({state,els,h,node,link,button,openIndex,ge
       }content.append(list);
     }
     const route=letter=>{const p=new URLSearchParams();if(query)p.set('q',query);p.set('letter',letter);return '#collection:'+collection.id+'?'+p;};
-    const jump=letter=>{const heading=headings.get(letter);if(!heading)return;history.replaceState(null,'',route(letter));alpha.querySelectorAll('a').forEach(a=>{if(a.dataset.letter===letter)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current');});let target=heading;
+    let activeLetter='';
+    const setActiveLetter=(letter,{updateUrl=false}={})=>{if(!headings.has(letter)||letter===activeLetter)return;activeLetter=letter;alpha.querySelectorAll('a').forEach(a=>{if(a.dataset.letter===letter)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current');});if(updateUrl)history.replaceState(null,'',route(letter));};
+    const visibleLetter=()=>{const cutoff=alpha.getBoundingClientRect().bottom+6;let current='';for(const [initial,heading] of headings){if(heading.getBoundingClientRect().top<=cutoff+8)current=initial;else break;}return current||headings.keys().next().value||'';};
+    const jump=letter=>{const heading=headings.get(letter);if(!heading)return;setActiveLetter(letter,{updateUrl:true});let target=heading;
       if(continuous&&heading.parentElement===continuousGallery){const rowTop=heading.offsetTop;target=[...continuousGallery.children].find(card=>card.offsetTop===rowTop)||heading;}
       target.scrollIntoView({block:'start'});heading.focus({preventScroll:true});};
     for(const initial of INDEX_LETTERS){
@@ -152,7 +157,9 @@ export function createCollectionViews({state,els,h,node,link,button,openIndex,ge
     alpha.hidden=!items.length&&!single.length;
     const measure=()=>content.style.setProperty('--index-alphabet-height',alpha.getBoundingClientRect().height+'px');
     alphabetObserver?.disconnect();alphabetObserver=new ResizeObserver(measure);alphabetObserver.observe(alpha);
-    fitTitles(content);requestAnimationFrame(()=>{measure();const letter=new URLSearchParams(location.hash.split('?')[1]||'').get('letter');if(letter)jump(letter);});
+    let scrollFrame=0;const onScroll=()=>{if(scrollFrame)return;scrollFrame=requestAnimationFrame(()=>{scrollFrame=0;setActiveLetter(visibleLetter(),{updateUrl:true});});};
+    alphabetScrollCleanup?.();window.addEventListener('scroll',onScroll,{passive:true});alphabetScrollCleanup=()=>{window.removeEventListener('scroll',onScroll);if(scrollFrame)cancelAnimationFrame(scrollFrame);};
+    fitTitles(content);requestAnimationFrame(()=>{measure();const letter=new URLSearchParams(location.hash.split('?')[1]||'').get('letter');if(letter&&headings.has(letter))jump(letter);else setActiveLetter(visibleLetter(),{updateUrl:true});});
   }
   function festival(collection,params) {
     els.indexView.classList.add('festival-page');
@@ -169,6 +176,8 @@ export function createCollectionViews({state,els,h,node,link,button,openIndex,ge
     const list=node('div',undefined,'festival-venues'),all=link('',resultsHref(collection),'primary-action');
     const header=node('div',undefined,'festival-header');heading.before(header);header.append(heading,field);
     els.indexContent.append(map,node('p','Select a theatre to browse its articles. ≈ marks an approximate location.','festival-map-note'),all,list);
+    const syncStickyContext=()=>{const top=parseFloat(getComputedStyle(field).top)||0;els.indexView.classList.toggle('festival-context-stuck',scrollY>0&&field.getBoundingClientRect().top<=top+1);};
+    alphabetScrollCleanup?.();window.addEventListener('scroll',syncStickyContext,{passive:true});alphabetScrollCleanup=()=>window.removeEventListener('scroll',syncStickyContext);requestAnimationFrame(syncStickyContext);
     const draw=async({scrollToReviews=true}={})=>{
       const token=++generation;activeMap?.remove();activeMap=null;
       const extra=year?{from:year,to:year}:{};
