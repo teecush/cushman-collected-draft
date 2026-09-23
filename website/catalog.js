@@ -1,6 +1,6 @@
 import {FIELDS, normalize, nameMatches, publicationYear, serialize, parse, articleForm, articleSubject} from './catalog-engine.js?v=173';
 import {makeCollections, COLLECTIONS} from './collections-engine.js?v=173';
-import {createCollectionViews} from './collection-views.js?v=196';
+import {createCollectionViews} from './collection-views.js?v=197';
 import {INDEX_LETTERS, indexOrder, indexEntries, indexSections} from './index-engine.js?v=173';
 export function createCatalog({state, els, h}) {
   let extra = {}, indexCache = new Map(), textIndex = null, textPromise = null, indexResizeObserver = null, indexScrollCleanup = null, archiveNavObserver = null, placesMap = null, collectionData = null;
@@ -135,7 +135,9 @@ export function createCatalog({state, els, h}) {
     const back = link('Back to home', '#home', 'back-link catalog-back'); els.archive.prepend(back);
     els.archive.querySelector('h1').textContent=h.FEATURES.modernCatalogPresentation?'Catalog':'Search the Archive';els.searchInput.setAttribute('aria-label','Search titles, works, people and places');els.searchInput.placeholder='Title, work, person or place';
     refreshArchiveTabs();
-    const scope=node('div',undefined,'search-scope');const label=node('label');const check=node('input');check.type='checkbox';check.id='searchArticleText';check.addEventListener('change',()=>{extra.text=check.checked?'1':'';apply();history.replaceState(null,'',href());});label.append(check,document.createTextNode(' Search article text'));scope.append(els.archiveCount,label);els.archive.querySelector('.search-panel').append(scope);
+    const disclosure = node('details', undefined, 'advanced-search');
+    const summary = node('summary', 'Advanced'); disclosure.append(summary);
+    const scope=node('div',undefined,'search-scope');const label=node('label');const check=node('input');check.type='checkbox';check.id='searchArticleText';check.addEventListener('change',()=>{extra.text=check.checked?'1':'';apply();history.replaceState(null,'',href());});label.append(check,document.createTextNode(' Search article text'));scope.append(els.archiveCount,label,disclosure);els.archive.querySelector('.search-panel').append(scope);
     els.archive.querySelector('.search-label-row').remove();
     const panel = els.archive.querySelector('.search-panel');
     const form = node('form', undefined, 'archive-search-form'); form.setAttribute('role', 'search');
@@ -148,9 +150,7 @@ export function createCatalog({state, els, h}) {
       if (query !== state.query) state.sort = query ? 'relevance' : 'newest';
       state.query = query; apply(); history.replaceState(null, '', href());
     });
-    const disclosure = node('details', undefined, 'advanced-search');
-    const summary = node('summary', 'Advanced search'); disclosure.append(summary);
-    els.filterToggle.hidden = true; els.filterControls.before(disclosure); disclosure.append(els.filterControls);
+    els.filterToggle.hidden = true; disclosure.append(els.filterControls);
     const grid=node('div',undefined,'catalog-filter-grid');
     for(const [labelText,key] of [['From year','from'],['To year','to']]){const label=node('label');label.append(node('span',labelText));const input=node('input');input.type='number';input.min='1963';input.max='2026';input.placeholder=key==='from'?'1963':'2026';input.dataset.catalogFilter=key;input.addEventListener('change',()=>{extra[key]=input.value;apply();history.replaceState(null,'',href());});label.append(input);grid.append(label);}
     selectField('Publication','publication',[...new Set(state.records.map(h.articlePublicationLabel))].sort(),grid,'All publications');
@@ -227,17 +227,31 @@ export function createCatalog({state, els, h}) {
       return base + '?' + p;
     }
     const updateUrl = () => history.replaceState(null, '', indexHref());
-    let filterSelect, filterDisplayLabel, filterDisplayCount, compactCount = '', viewportLetter = letter;
+    let filterSelect, filterDisplayLabel, filterDisplayMobileLabel, filterDisplayCount, compactCount = '', viewportLetter = letter;
+    const mobileFilterLabels = {
+      'composers-lyricists': 'Composers',
+      'musical-directors': 'Music dir.',
+      'choreographers': 'Choreography',
+      'assistant-directors': 'Asst. dir.',
+      'set-designers': 'Set design',
+      'costume-designers': 'Costume',
+      'lighting-designers': 'Lighting',
+      'sound-designers': 'Sound'
+    };
     const syncCompactCount = () => {
       if (!filterSelect) return;
-      filterDisplayLabel.textContent = filters.find(f => f.key === filterKey).label;
+      const fullLabel = filters.find(f => f.key === filterKey).label;
+      filterDisplayLabel.textContent = fullLabel;
+      filterDisplayMobileLabel.textContent = mobileFilterLabels[filterKey] || fullLabel;
       filterDisplayCount.textContent = compactCount;
     };
     if (people || works) {
       const field = node('label', undefined, 'index-filter-select'); field.append(node('span', people ? 'Role' : 'Kind of work'));
       const display = node('span', undefined, 'index-filter-display');
-      filterDisplayLabel = node('span'); filterDisplayCount = node('small');
-      display.append(filterDisplayLabel, filterDisplayCount); field.append(display);
+      filterDisplayLabel = node('span', undefined, 'index-filter-label-full');
+      filterDisplayMobileLabel = node('span', undefined, 'index-filter-label-mobile');
+      filterDisplayCount = node('small');
+      display.append(filterDisplayLabel, filterDisplayMobileLabel, filterDisplayCount); field.append(display);
       const select = filterSelect = node('select'); filters.forEach(f => select.append(new Option(f.label, f.key))); select.value = filterKey;
       select.addEventListener('change', () => {
         const anchorLetter = order === 'alpha' ? (viewportLetter || letter || currentVisibleLetter()) : '';
