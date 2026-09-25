@@ -1,6 +1,6 @@
 import {FIELDS, normalize, nameMatches, publicationYear, serialize, parse, articleForm, articleSubject} from './catalog-engine.js?v=173';
-import {makeCollections, COLLECTIONS} from './collections-engine.js?v=173';
-import {createCollectionViews} from './collection-views.js?v=207';
+import {makeCollections, COLLECTIONS} from './collections-engine.js?v=213';
+import {createCollectionViews} from './collection-views.js?v=213';
 import {INDEX_LETTERS, indexOrder, indexEntries, indexSections} from './index-engine.js?v=173';
 export function createCatalog({state, els, h}) {
   let extra = {}, indexCache = new Map(), textIndex = null, textPromise = null, indexResizeObserver = null, indexScrollCleanup = null, archiveNavObserver = null, placesMap = null, collectionData = null;
@@ -536,6 +536,7 @@ export function createCatalog({state, els, h}) {
     if(base==='#explore'){explorer(params);return true;}
     if(base==='#section:shakespeare'||base==='#collection:shakespeare'){openIndex('Shakespeare','works');h.renderLandingPage('shakespeare');els.indexContent.querySelector('h1')?.after(tabs('works'));collectionViews.frame();return true;}
     if(base==='#section:collections'){collectionViews.directory();return true;}
+    if(base==='#section:current'||base==='#current'){collectionViews.show('recent',params);return true;}
     if(base.startsWith('#collection:')||base.startsWith('#browse-collection:')){const id=base.split(':')[1]==='musical'?'musicals':base.split(':')[1];if(getCollections().has(id)&&id!=='shakespeare'){collectionViews.show(id,params);return true;}}
     if(!h.FEATURES.modernBrowseLandings && ['#section:collections','#section:browse','#section:indexes','#section:current','#current'].includes(base)){
       document.body.classList.add('index-open');els.indexView.hidden=false;

@@ -1,6 +1,6 @@
-import {renderHomeCollections} from './home-collections.js?v=173';
-import {spotlightRecord} from './collections-engine.js?v=173';
-import { createCatalog } from "./catalog.js?v=212";
+import {renderHomeCollections} from './home-collections.js?v=213';
+import {spotlightRecord} from './collections-engine.js?v=213';
+import { createCatalog } from "./catalog.js?v=213";
 import { FEATURES } from "./features.js?v=173";
 const DATA_URL = new URL("../site_export/data/catalog.json?v=207", import.meta.url);
 const ALIASES_URL = new URL("../site_export/data/route_aliases.json?v=1", import.meta.url);
@@ -5799,7 +5799,7 @@ window.addEventListener("hashchange", () => {
 });
 document.querySelector(".skip-link").addEventListener("click",event=>{event.preventDefault();const main=document.querySelector("main");main.focus();main.scrollIntoView({block:"start",behavior:"auto"});});
 
-const catalog = createCatalog({state, els, h: { FEATURES, TYPE_GROUPS, PUBLIC_COLLECTION_FILTERS, SHAKESPEARE_COLLECTION, MASTER_INDEX_PEOPLE_FILTERS, MASTER_INDEX_WORK_FILTERS, collectionNames, isExplicitShakespeareRecord, shakespeareGroup, typeGroup, articlePublicationLabel, isIncompleteArticle, entityValues, recordVenueCityPairs, entitySlug, masterIndexFilter, masterIndexEntries, recordMatchesQuery, sortRecords, sortRecordsChronologically, updateSortButtons, renderShakespeareNav, safeResultCard, storeArticleContext, restoreArchivePositionIfNeeded, archiveRestoreForHash, entityMap, entityType, indexSortText, indexDisplayLabel, renderCurrentFeature, renderTiles, renderFrontpageDirectory, renderClassicHome, renderLandingPage, collectionFromSlug, observerFarewellFeature, venueMapPoints, loadMapResources, renderArchiveMap, cityMapPoints, splitEntityList, formatDate }});
+const catalog = createCatalog({state, els, h: { FEATURES, TYPE_GROUPS, PUBLIC_COLLECTION_FILTERS, SHAKESPEARE_COLLECTION, MASTER_INDEX_PEOPLE_FILTERS, MASTER_INDEX_WORK_FILTERS, collectionNames, isExplicitShakespeareRecord, shakespeareGroup, typeGroup, articlePublicationLabel, isIncompleteArticle, entityValues, recordVenueCityPairs, entitySlug, masterIndexFilter, masterIndexEntries, recordMatchesQuery, sortRecords, sortRecordsChronologically, updateSortButtons, renderShakespeareNav, safeResultCard, storeArticleContext, restoreArchivePositionIfNeeded, archiveRestoreForHash, entityMap, entityType, indexSortText, indexDisplayLabel, renderCurrentFeature, renderTiles, renderFrontpageDirectory, renderClassicHome, renderLandingPage, collectionFromSlug, observerFarewellFeature, venueMapPoints, loadMapResources, renderArchiveMap, cityMapPoints, splitEntityList, formatDate, productionParts }});
 
 init().catch((error) => {
   els.archiveCount.textContent = "Content export unavailable";

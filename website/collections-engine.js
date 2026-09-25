@@ -1,5 +1,6 @@
 import {normalize, publicationYear} from './catalog-engine.js?v=173';
 export const COLLECTIONS = [
+  {id:'recent',title:'Recent',kind:'recent',href:'#collection:recent',intro:'Recent writing published for Cushman Collected.'},
   {id:'shakespeare',title:'Shakespeare',kind:'plays',href:'#section:shakespeare',intro:'The plays, the productions, and a lifetime of returning to Shakespeare.'},
   {id:'sondheim',title:'Sondheim',kind:'musicals',intro:'The musicals, the lyrics, and the art of Stephen Sondheim.'},
   {id:'musicals',title:'Musicals',kind:'musicals',intro:'Return to a favourite show, or discover one you have never seen.'},
@@ -48,6 +49,7 @@ export function makeCollections(records, h, curation = {}) {
   for (const record of records) {
     const fix=overrides[record.slug]||{}, names=h.collectionNames(record);
     const year=Number(publicationYear(record));
+    if(names.includes('Recent Collection')||names.includes('Current Collection'))add('recent',record,[]);
     if(year>=1963&&year<=1966)add('early',record,[]);
     if(h.isExplicitShakespeareRecord(record))add('shakespeare',record,[]);
     const son=sonTitles(record);

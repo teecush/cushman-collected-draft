@@ -1,5 +1,5 @@
 // Homepage previews reuse credited archive artwork; every card opens its collection.
-import {COLLECTIONS} from './collections-engine.js?v=173';
+import {COLLECTIONS} from './collections-engine.js?v=213';
 const examples = {
   books:['swing-time','all-or-nothing-at-all-a-life-of-frank-sinatra','broadway-anecdotes'],
   albums:['both-sides-now','art-of-romance','gypsy'],
@@ -17,6 +17,13 @@ export function renderHomeCollections(root,curation,collections){
     const visual=element('span','home-collection-visual');visual.setAttribute('aria-hidden','true');
     let assets=(examples[spec.id]||[]).map(key=>curation.artwork?.[spec.id+':'+key]).filter(Boolean);
     if(examples[spec.id]&&assets.length<3)assets=Object.entries(curation.artwork||{}).filter(([key])=>key.startsWith(spec.id+':')).slice(0,3).map(([,value])=>value);
+    if(spec.id==='recent'){
+      assets=[...(collections?.get('recent')?.records||[])]
+        .filter(record=>record.media?.[0]?.thumbnail_path)
+        .sort((a,b)=>String(b.date||'').localeCompare(String(a.date||'')))
+        .slice(0,3)
+        .map(record=>({src:'../site_export/content/'+record.media[0].thumbnail_path}));
+    }
     if(spec.id==='television'){
       const shows=[...(collections?.get('television')?.items||[])].sort((a,b)=>b.records.length-a.records.length||a.title.localeCompare(b.title)).slice(0,3);
       card.setAttribute('aria-label','TV Reviews — featuring '+shows.map(item=>item.title).join(', '));

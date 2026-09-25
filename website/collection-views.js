@@ -1,7 +1,7 @@
 import {INDEX_LETTERS,indexSections} from './index-engine.js?v=173';
 import {theatreIllustration, renderFestivalMap, festivalLocation} from './festival-map.js?v=173';
 import {serialize, publicationYear, normalize} from './catalog-engine.js?v=173';
-import {COLLECTIONS,workKey} from './collections-engine.js?v=173';
+import {COLLECTIONS,workKey} from './collections-engine.js?v=213';
 
 export function createCollectionViews({state,els,h,node,link,button,openIndex,getCollections}) {
   let activeMap=null, generation=0, artObserver=null, alphabetObserver=null, alphabetScrollCleanup=null;
@@ -89,10 +89,26 @@ export function createCollectionViews({state,els,h,node,link,button,openIndex,ge
     const context={records,backHref:window.location.hash,contextLabel:label,titleFirst:h.FEATURES.compactResults,visibleCount:records.length};
     result.append(...h.sortRecordsChronologically(records).map(r=>h.safeResultCard(r,context)));return result;
   }
+  function recent(collection) {
+    const records=[...collection.records].sort((a,b)=>String(b.date||'').localeCompare(String(a.date||'')));
+    const grid=node('div',undefined,'current-landing-grid');
+    records.forEach((record,index)=>{
+      const a=link('',`#review:${record.slug}`,`current-landing-card${index===0?' is-latest':''}`);
+      a.addEventListener('click',event=>h.storeArticleContext(event,record,{records,contextLabel:collection.title,backHref:'#collection:recent'}));
+      const media=record.media?.[0];
+      if(media?.local_path){const img=node('img');img.src=new URL('../site_export/content/'+media.local_path,import.meta.url).href;img.alt=media.alt||media.caption||record.title;img.loading='lazy';a.append(img);}
+      const copy=node('div');copy.append(node('span',h.formatDate(record)),node('strong',record.title));
+      const context=h.productionParts(record);
+      if(context.length)copy.append(node('p',context.join(' / ')));
+      a.append(copy);grid.append(a);
+    });
+    els.indexContent.append(grid);
+  }
   function show(id,params) {
     const collection=getCollections().get(id);
-    const active=collection.kind==='festival'?'places':id==='profiles'?'people':id==='early'?'articles':'works';
+    const active=collection.kind==='festival'?'places':id==='profiles'?'people':['early','recent'].includes(id)?'articles':'works';
     openIndex(collection.title,active);frame();
+    if(collection.kind==='recent'){recent(collection);return;}
     if(collection.kind==='festival'){festival(collection,params);return;}
     if(collection.kind==='early'){
       els.indexContent.append(recordList(collection.records,collection.title));

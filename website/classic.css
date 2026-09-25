@@ -212,6 +212,8 @@ body:not(.feature-redesignedHome):not(.search-open) #archive .advanced-search[op
 .home-collection-label strong{font:700 21px/1.2 var(--serif);}
 .home-collection-label>span{font:12px/1.4 var(--sans);color:var(--muted);}
 .home-collection-card.books .home-collection-visual{border-bottom:7px solid #a59076;background:#eae0ce;}
+.home-collection-card.recent .home-collection-visual{gap:7px;padding:10px;background:linear-gradient(135deg,#d8e2e4,#f1e8d8);border-top:5px solid var(--blue-dark);}
+.home-collection-card.recent .home-collection-visual img{width:32%;height:88%;object-fit:cover;filter:none;border:3px solid var(--paper);box-shadow:0 3px 8px #0003;}
 .home-collection-card.albums .home-collection-visual{background:radial-gradient(circle at 70% 50%,#272c30 0 28%,transparent 29%),#d4dfe0;}
 .home-collection-card.profiles .home-collection-visual{background:#e6e3df;gap:5px;}
 .home-collection-card.profiles img{height:auto;aspect-ratio:3/4;object-fit:cover;object-position:50% 20%;border-radius:48% 48% 0 0;filter:grayscale(1);transform:none;}
