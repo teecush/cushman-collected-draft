@@ -115,18 +115,21 @@ body.catalog-page .timeline-year-controls { flex-wrap:wrap;margin-bottom:24px; }
 .search-panel{--search-submit-width:112px;padding-block:24px;}
 .search-submit-row { display:grid;grid-template-columns:minmax(0,1fr) var(--search-submit-width);gap:20px;align-items:end; }
 .search-submit-row .primary-action { width:100%;margin:0;min-height:46px;padding:10px 14px;border:0; }
-body #archive .search-scope { display:grid;grid-template-columns:auto minmax(0,1fr) auto auto calc(var(--search-submit-width) + 4px);align-items:center;column-gap:16px;row-gap:10px;margin-top:16px; }
+.search-field-wrap{position:relative;min-width:0;}
+.search-field-wrap .search-field input{padding-right:170px;}
+body #archive .search-field-wrap>.search-text-scope{position:absolute;right:0;bottom:8px;display:flex;align-items:center;gap:7px;margin:0;background:var(--panel);padding-left:10px;color:#555;font:400 14px/20px var(--sans);text-transform:none;white-space:nowrap;}
+body #archive .search-field-wrap>.search-text-scope input{width:18px;height:18px;min-height:0;margin:0;}
+body #archive .search-scope { display:grid;grid-template-columns:auto minmax(0,1fr) calc(var(--search-submit-width) + 20px);align-items:center;column-gap:16px;row-gap:2px;margin-top:12px; }
 body #archive .search-scope p { margin:0; }
 body #archive .search-scope label { display:flex;align-items:center;gap:7px;margin:0;text-transform:none;white-space:nowrap; }
 body #archive .search-scope input { width:18px;height:18px;min-height:0;margin:0; }
 .advanced-search { margin:18px 0 24px;border-bottom:1px solid var(--rule);padding-bottom:16px; }
 .advanced-search > summary { cursor:pointer;font:700 12px/24px var(--sans);text-transform:uppercase;letter-spacing:.04em; }
-body #archive .search-scope>p{grid-column:1;justify-self:start;}
-body #archive .search-scope>label{grid-column:3;justify-self:end;}
+body #archive .search-scope>p{grid-column:1;grid-row:1;justify-self:start;}
 body #archive .search-scope .advanced-search { display:none;grid-column:1/-1;box-sizing:border-box;width:100%;margin:0;border:0;padding:0; }
 body #archive .search-scope .advanced-search[open] { display:block; }
 body #archive .search-scope .advanced-search > summary { display:none; }
-body #archive .search-scope .advanced-search-toggle { grid-column:4;grid-row:1;justify-self:end;margin:0;border:0;background:transparent;padding:0;cursor:pointer;font:700 12px/24px var(--sans);letter-spacing:.04em;color:var(--ink);white-space:nowrap; }
+body #archive .search-scope .advanced-search-toggle { grid-column:1;grid-row:2;justify-self:start;margin:0;border:0;background:transparent;padding:0;cursor:pointer;font:700 12px/24px var(--sans);letter-spacing:.04em;color:var(--ink);white-space:nowrap; }
 body #archive .search-scope .advanced-search-toggle::before { content:"▸ "; }
 body #archive .search-scope .advanced-search-toggle[aria-expanded="true"]::before { content:"▾ "; }
 body #archive .search-scope .advanced-search > .filter-controls { box-sizing:border-box;width:100%;border-top:1px solid var(--rule);padding-top:16px; }
@@ -141,10 +144,12 @@ body:not(.feature-modernCatalogPresentation) #archive .advanced-search[open] .ca
 button, .primary-action, .current-read-link, .current-page-link { text-transform:uppercase; }
 @media(max-width:600px) {
  .search-panel{--search-submit-width:92px;}
- body #archive .search-scope { grid-template-columns:auto minmax(0,1fr) auto auto;column-gap:10px;row-gap:10px; }
+ .search-field-wrap .search-field input{padding-right:122px;}
+ body #archive .search-field-wrap>.search-text-scope{bottom:9px;gap:3px;padding-left:6px;font-size:10px;line-height:18px;}
+ body #archive .search-field-wrap>.search-text-scope input{width:15px;height:15px;}
+ body #archive .search-scope { grid-template-columns:auto minmax(0,1fr);column-gap:10px;row-gap:0; }
  body #archive .search-scope>p { grid-column:1;justify-self:start;min-width:0;white-space:nowrap; }
- body #archive .search-scope>label { grid-column:3;justify-self:end;font-size:10px;gap:3px; }
- body #archive .search-scope>.advanced-search-toggle { grid-column:4;justify-self:end;min-width:0;font-size:10px;letter-spacing:0; }
+ body #archive .search-scope>.advanced-search-toggle { grid-column:1;grid-row:2;justify-self:start;min-width:0;font-size:10px;letter-spacing:0; }
  .search-submit-row { gap:10px; }
  .search-submit-row .primary-action { padding-inline:14px; }
 }
@@ -365,8 +370,16 @@ body.catalog-page #indexView.navigation-hub-page{display:block;}
 .navigation-hub-letters{display:flex;width:88%;justify-content:center;gap:5px;}
 .navigation-hub-letters i{display:grid;flex:1;aspect-ratio:1;place-items:center;max-width:43px;border:1px solid #cfd2d3;border-radius:4px;background:#fafafa;color:var(--blue-dark);font:800 clamp(14px,2vw,22px)/1 var(--sans);font-style:normal;box-shadow:0 2px 0 #c7c8c8;}
 .navigation-hub-letters i.is-active{border-color:var(--blue-dark);background:var(--blue-dark);color:#fff;}
-.navigation-hub-visual.people{background:radial-gradient(circle at 30% 50%,#aeb8bc 0 18%,transparent 19%),radial-gradient(circle at 70% 50%,#738793 0 18%,transparent 19%),#e6e2dc;}
-.navigation-hub-visual.places{background:linear-gradient(35deg,transparent 47%,#92a9a2 48% 50%,transparent 51%),linear-gradient(145deg,transparent 47%,#c4a97c 48% 50%,transparent 51%),#dce5dc;}
+.navigation-hub-visual.people{background:#ece8e1;}
+.navigation-hub-people-art,.navigation-hub-places-art{width:84%;height:82%;overflow:visible;}
+.navigation-hub-people-art path{fill:none;stroke:#a9b7b9;stroke-width:3;stroke-linecap:round;}
+.navigation-hub-people-art circle{fill:#2c6287;stroke:#f7f5f0;stroke-width:5;}
+.navigation-hub-people-art circle:nth-of-type(2),.navigation-hub-people-art circle:nth-of-type(5){fill:#b85631;}
+.navigation-hub-visual.places{background:#e4ebe5;}
+.navigation-hub-places-art path{fill:none;stroke:#8ca5a0;stroke-width:5;stroke-linecap:round;opacity:.88;}
+.navigation-hub-places-art path:nth-of-type(2){stroke:#c5ab7f;stroke-width:7;}
+.navigation-hub-places-art path:nth-of-type(3){stroke:#cbd4ce;stroke-width:3;}
+.navigation-hub-places-art circle{fill:#b85631;stroke:#fff;stroke-width:4;}
 .navigation-hub-visual.map{background:#e6e8e2;}
 .navigation-hub-route,.navigation-hub-controls{width:78%;height:78%;overflow:visible;}
 .navigation-hub-route path{fill:none;stroke:#557978;stroke-width:6;stroke-linecap:round;}

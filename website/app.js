@@ -3539,6 +3539,10 @@ function renderNavigationHub(kind) {
       box.append(letters);
     } else if(type==='map'){
       box.innerHTML='<svg class="navigation-hub-route" viewBox="0 0 240 120" focusable="false"><path d="M18 91 C52 23 87 101 121 55 S184 16 222 58"/><circle cx="18" cy="91" r="7"/><circle cx="121" cy="55" r="7"/><circle cx="222" cy="58" r="7"/></svg>';
+    } else if(type==='places'){
+      box.innerHTML='<svg class="navigation-hub-places-art" viewBox="0 0 240 120" focusable="false"><path d="M8 91C45 72 72 80 103 54S171 37 232 12"/><path d="M18 18C61 40 88 36 126 61S190 93 229 101"/><path d="M64 5L74 115M159 4L149 116"/><circle cx="57" cy="70" r="7"/><circle cx="126" cy="61" r="8"/><circle cx="187" cy="54" r="6"/></svg>';
+    } else if(type==='people'){
+      box.innerHTML='<svg class="navigation-hub-people-art" viewBox="0 0 240 120" focusable="false"><path d="M34 82L76 37L119 70L165 28L207 76"/><path d="M76 37L165 28M119 70L207 76"/><circle cx="34" cy="82" r="13"/><circle cx="76" cy="37" r="19"/><circle cx="119" cy="70" r="11"/><circle cx="165" cy="28" r="15"/><circle cx="207" cy="76" r="20"/></svg>';
     } else if(type==='explorer'){
       box.innerHTML='<svg class="navigation-hub-controls" viewBox="0 0 240 120" focusable="false"><path d="M30 30H210M30 60H210M30 90H210"/><circle cx="78" cy="30" r="9"/><circle cx="163" cy="60" r="9"/><circle cx="111" cy="90" r="9"/></svg>';
     } else {
