@@ -249,7 +249,7 @@ body:not(.feature-redesignedHome):not(.search-open) #archive .advanced-search[op
 .intro .lede::first-letter{font-size:52px;}
 body #archive .search-scope{align-items:center;row-gap:10px;}
 #archiveCount{font:400 14px/20px var(--sans);font-style:normal;}
-body:not(.search-open) .frontpage-browse-heading{margin-top:22px;border-top:1px solid var(--rule);padding-top:24px;}
+body:not(.search-open) .frontpage-browse-heading{margin:22px 0 22px;border-top:1px solid var(--rule);padding-top:32px;}
 body:not(.catalog-page) #archive>.catalog-tabs{margin-bottom:20px;padding-bottom:10px;}
 body:not(.search-open) .site-index-heading{border-top:1px solid var(--rule);padding-top:18px;}
 body:not(.search-open) :is(.home-map,.frontpage-directory){border-top:0;}
