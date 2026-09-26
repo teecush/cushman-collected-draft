@@ -328,6 +328,39 @@ body.map-open .leaflet-jump-control{display:flex;}
 .home-collection-card.television .home-mini-tv img{transform:none;filter:none;}
 .home-collection-card.television .home-mini-tv::after{width:5px;height:5px;right:-10px;border-width:1px;box-shadow:0 10px 0 -1px #202729,0 10px 0 0 #919798;}
 
+/* Visual overview pages for the four primary navigation routes. */
+body.catalog-page #indexView.navigation-hub-page{display:block;}
+.navigation-hub-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:20px;margin-top:26px;}
+.navigation-hub-card{display:flex;min-width:0;flex-direction:column;border:1px solid var(--rule);background:var(--paper);color:var(--ink);text-decoration:none;transition:border-color 150ms ease,box-shadow 150ms ease;}
+.navigation-hub-card:hover,.navigation-hub-card:focus-visible{border-color:var(--blue-dark);box-shadow:0 4px 16px #162e421c;}
+.navigation-hub-card:focus-visible{outline:2px solid var(--blue-dark);outline-offset:3px;}
+.navigation-hub-visual{position:relative;display:flex;align-items:center;justify-content:center;gap:7px;aspect-ratio:1.65;overflow:hidden;background:#e8e3da;border-top:5px solid var(--blue-dark);}
+.navigation-hub-copy{display:flex;flex:1;flex-direction:column;gap:8px;padding:16px;}
+.navigation-hub-copy strong{font:700 23px/1.15 var(--serif);}
+.navigation-hub-copy>span{font:13px/1.45 var(--sans);color:var(--muted);}
+.navigation-hub-mark{font:800 clamp(27px,4vw,52px)/1 var(--sans);letter-spacing:.05em;color:var(--blue-dark);white-space:nowrap;}
+.navigation-hub-visual.collections{padding:10px;background:linear-gradient(135deg,#e8dfce,#d6e0df);}
+.navigation-hub-visual.collections img{width:29%;height:84%;object-fit:cover;border:3px solid white;box-shadow:0 3px 8px #0003;}
+.navigation-hub-visual.collections img:first-child{transform:rotate(-7deg);}.navigation-hub-visual.collections img:nth-child(2){z-index:1;transform:scale(1.08);}.navigation-hub-visual.collections img:last-child{transform:rotate(7deg);}
+.navigation-hub-visual.publications{flex-direction:column;gap:10px;padding:14px;background:#f5f2eb;}
+.navigation-hub-visual.publications img{width:82%;height:22%;object-fit:contain;}
+.navigation-hub-visual.correspondence{padding:10px;background:#d9d0c0;}
+.navigation-hub-visual.correspondence img{width:30%;height:82%;object-fit:cover;border:3px solid white;box-shadow:0 2px 7px #0004;}
+.navigation-hub-visual.biography{background:#f0eee9;}
+.navigation-hub-visual.biography img{width:88%;height:88%;object-fit:contain;}
+.navigation-hub-visual.indexes,.navigation-hub-visual.works{background:repeating-linear-gradient(90deg,#f1f1f1 0 46px,#d8d8d8 47px,#f1f1f1 48px);}
+.navigation-hub-visual.people{background:radial-gradient(circle at 30% 50%,#aeb8bc 0 18%,transparent 19%),radial-gradient(circle at 70% 50%,#738793 0 18%,transparent 19%),#e6e2dc;}
+.navigation-hub-visual.places,.navigation-hub-visual.map{background:linear-gradient(35deg,transparent 47%,#92a9a2 48% 50%,transparent 51%),linear-gradient(145deg,transparent 47%,#c4a97c 48% 50%,transparent 51%),#dce5dc;}
+.navigation-hub-visual.timeline{align-items:flex-end;padding-bottom:20px;background:#f2eee5;}
+.navigation-hub-visual.timeline .navigation-hub-mark{color:#3b7ba0;letter-spacing:.12em;}
+.navigation-hub-visual.explorer{background:linear-gradient(#f3f0eb 0 34%,#d5dce0 35% 37%,#f3f0eb 38% 64%,#d5dce0 65% 67%,#f3f0eb 68%);}
+.navigation-hub-visual.explorer .navigation-hub-mark{font-size:clamp(22px,2.7vw,34px);}
+.navigation-hub-visual.critics{background:#243f4d;}.navigation-hub-visual.critics .navigation-hub-mark{color:#fff;font-family:var(--serif);}
+.navigation-hub-visual.donate{background:#efe1d3;}.navigation-hub-visual.donate .navigation-hub-mark{color:#a3412d;}
+.navigation-hub-visual.contact{background:#dfe8e8;}
+#collectionDirectoryCards{margin-top:24px;}#collectionDirectoryCards #homeCollections{margin:0;}
+@media(max-width:600px){.navigation-hub-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 12px;margin-top:18px;}.navigation-hub-visual{aspect-ratio:1.3;}.navigation-hub-copy{padding:12px 10px;}.navigation-hub-copy strong{font-size:18px;}.navigation-hub-copy>span{font-size:11px;line-height:1.35;}.navigation-hub-mark{font-size:27px;}.navigation-hub-visual.collections,.navigation-hub-visual.correspondence{padding:7px;}}
+
 /* Listing artwork is a compact identifier, not a gallery-sized image. */
 .collection-result-art{gap:16px;margin:16px 0;min-width:0;}
 .collection-result-art .collection-art{box-sizing:border-box;width:96px;max-width:96px;flex:0 0 auto;padding:6px;}

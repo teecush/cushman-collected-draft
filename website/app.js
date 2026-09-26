@@ -1,6 +1,6 @@
-import {renderHomeCollections} from './home-collections.js?v=213';
+import {renderHomeCollections} from './home-collections.js?v=214';
 import {spotlightRecord} from './collections-engine.js?v=213';
-import { createCatalog } from "./catalog.js?v=213";
+import { createCatalog } from "./catalog.js?v=214";
 import { FEATURES } from "./features.js?v=173";
 const DATA_URL = new URL("../site_export/data/catalog.json?v=207", import.meta.url);
 const ALIASES_URL = new URL("../site_export/data/route_aliases.json?v=1", import.meta.url);
@@ -3473,7 +3473,7 @@ function renderTimelineToolV2() {
 
 function renderAboutPage() {
   const title = document.createElement("h1");
-  title.textContent = FEATURES.revisedEditorialCopy ? "About Robert and the archive" : "Biography";
+  title.textContent = FEATURES.revisedEditorialCopy ? "About Robert and the archive" : "About Robert Cushman";
   const page = document.createElement("div");
   page.className = "about-page";
   const image = document.createElement("figure");
@@ -3495,9 +3495,61 @@ function renderAboutPage() {
   els.indexContent.replaceChildren(title, page);
 }
 
+function renderNavigationHub(kind) {
+  const configs={
+    browse:{title:'Browse',cards:[
+      ['Collections','#section:collections','collections','Shakespeare, festivals, musicals, books, television, profiles, recent writing, and more.'],
+      ['Indexes','#section:indexes','indexes','Find works, people, and places through the archive’s complete indexes.'],
+      ['Publications','#index:publications','publications','Browse every newspaper and magazine represented in the archive.'],
+    ]},
+    indexes:{title:'Indexes',cards:[
+      ['All Works','#works','works','Browse productions, books, recordings, television programmes, and other works A–Z.'],
+      ['All People','#people','people','Find actors, directors, writers, designers, musicians, and other artists A–Z.'],
+      ['Places','#places','places','Explore cities and venues through the geographic index and archive map.'],
+      ['Publications','#index:publications','publications','Browse the newspapers and magazines in which the writing appeared.'],
+    ]},
+    explore:{title:'Explore',cards:[
+      ['Map','#map','map','Browse the archive through cities, venues, and festival theatres.'],
+      ['Timeline','#timeline','timeline','Move year by year through more than four decades of writing.'],
+      ['Article Explorer','#explore','explorer','Combine subject, collection, publication, year, and keyword filters.'],
+      ['Correspondence','#correspondence','correspondence','Read letters and notes preserved with the articles.'],
+    ]},
+    about:{title:'About',cards:[
+      ['Robert Cushman','#about','biography','Biography, career, awards, and the story behind the archive.'],
+      ["Critic’s Circle",'#critics-circle','critics','Acknowledgements for the people supporting this family archive.'],
+      ['Donate','https://www.cushmancollected.com/checkout/donate?donatePageId=5c9b8016652dea361e5feb7d','donate','Support the preservation and expansion of Cushman Collected.'],
+      ['Contact & Newsletter','#contact','contact','Send a correction, ask a question, or find newsletter details.'],
+    ]},
+  }[kind];
+  if(!configs)return;
+  const visual=(type)=>{
+    const box=document.createElement('span');box.className=`navigation-hub-visual ${type}`;box.setAttribute('aria-hidden','true');
+    if(type==='collections'){
+      const sources=[state.collectionCuration?.homeArtwork?.shakespeare,state.collectionCuration?.artwork?.['musicals:gypsy'],state.collectionCuration?.artwork?.['profiles:christopher-plummer']].filter(Boolean);
+      sources.forEach(asset=>{const img=document.createElement('img');img.src=asset.src;img.alt='';box.append(img);});
+    } else if(type==='publications'){
+      ['national-post','the-observer','the-globe-and-mail'].map(key=>state.collectionCuration?.publications?.[key]).filter(Boolean).forEach(asset=>{const img=document.createElement('img');img.src=asset.src;img.alt='';box.append(img);});
+    } else if(type==='correspondence'){
+      ['the-roman-invasion/lk-ensor-1973-10-28.jpg','a-famous-thane/clive-donner-1974-11-04.jpg','lament-for-a-little-night-music/sammy-cahn-1974-09-30.jpg'].forEach(file=>{const img=document.createElement('img');img.src='../site_export/content/media/correspondence/'+file;img.alt='';box.append(img);});
+    } else if(type==='biography'){
+      const img=document.createElement('img');img.src='assets/cushman-collected-logo.webp';img.alt='';box.append(img);
+    } else {
+      const mark=document.createElement('span');mark.className='navigation-hub-mark';mark.textContent={indexes:'A–Z',works:'A–Z',people:'● ● ●',places:'⌖',map:'⌖',timeline:'▂▅▇▄▆',explorer:'＋ FILTERS',critics:'“ ”',donate:'♥',contact:'✉'}[type]||'→';box.append(mark);
+    }
+    return box;
+  };
+  const title=document.createElement('h1');title.textContent=configs.title;
+  const grid=document.createElement('div');grid.className=`navigation-hub-grid ${kind}`;
+  configs.cards.forEach(([label,href,type,description])=>{
+    const a=document.createElement('a');a.className='navigation-hub-card';a.href=href;if(/^https?:/.test(href)){a.target='_blank';a.rel='noopener';}
+    const copy=document.createElement('span');copy.className='navigation-hub-copy';const strong=document.createElement('strong');strong.textContent=label;const p=document.createElement('span');p.textContent=description;copy.append(strong,p);a.append(visual(type),copy);grid.append(a);
+  });
+  els.indexContent.replaceChildren(title,grid);
+}
+
 function renderSubscribePage() {
   const title = document.createElement("h1");
-  title.textContent = FEATURES.revisedEditorialCopy ? "Contact" : "Subscribe & Contact";
+  title.textContent = FEATURES.revisedEditorialCopy ? "Contact" : "Contact & Newsletter";
   const page = document.createElement("div");
   page.className = "contact-page";
   page.innerHTML = `
@@ -5799,7 +5851,7 @@ window.addEventListener("hashchange", () => {
 });
 document.querySelector(".skip-link").addEventListener("click",event=>{event.preventDefault();const main=document.querySelector("main");main.focus();main.scrollIntoView({block:"start",behavior:"auto"});});
 
-const catalog = createCatalog({state, els, h: { FEATURES, TYPE_GROUPS, PUBLIC_COLLECTION_FILTERS, SHAKESPEARE_COLLECTION, MASTER_INDEX_PEOPLE_FILTERS, MASTER_INDEX_WORK_FILTERS, collectionNames, isExplicitShakespeareRecord, shakespeareGroup, typeGroup, articlePublicationLabel, isIncompleteArticle, entityValues, recordVenueCityPairs, entitySlug, masterIndexFilter, masterIndexEntries, recordMatchesQuery, sortRecords, sortRecordsChronologically, updateSortButtons, renderShakespeareNav, safeResultCard, storeArticleContext, restoreArchivePositionIfNeeded, archiveRestoreForHash, entityMap, entityType, indexSortText, indexDisplayLabel, renderCurrentFeature, renderTiles, renderFrontpageDirectory, renderClassicHome, renderLandingPage, collectionFromSlug, observerFarewellFeature, venueMapPoints, loadMapResources, renderArchiveMap, cityMapPoints, splitEntityList, formatDate, productionParts }});
+const catalog = createCatalog({state, els, h: { FEATURES, TYPE_GROUPS, PUBLIC_COLLECTION_FILTERS, SHAKESPEARE_COLLECTION, MASTER_INDEX_PEOPLE_FILTERS, MASTER_INDEX_WORK_FILTERS, collectionNames, isExplicitShakespeareRecord, shakespeareGroup, typeGroup, articlePublicationLabel, isIncompleteArticle, entityValues, recordVenueCityPairs, entitySlug, masterIndexFilter, masterIndexEntries, recordMatchesQuery, sortRecords, sortRecordsChronologically, updateSortButtons, renderShakespeareNav, safeResultCard, storeArticleContext, restoreArchivePositionIfNeeded, archiveRestoreForHash, entityMap, entityType, indexSortText, indexDisplayLabel, renderCurrentFeature, renderTiles, renderFrontpageDirectory, renderClassicHome, renderLandingPage, renderNavigationHub, renderHomeCollections, collectionFromSlug, observerFarewellFeature, venueMapPoints, loadMapResources, renderArchiveMap, cityMapPoints, splitEntityList, formatDate, productionParts }});
 
 init().catch((error) => {
   els.archiveCount.textContent = "Content export unavailable";

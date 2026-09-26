@@ -51,10 +51,8 @@ export function createCollectionViews({state,els,h,node,link,button,openIndex,ge
   }
   function directory() {
     openIndex('Collections','works');frame();
-    els.indexContent.append(node('p','Explore a writer, a festival, or a shelf of discoveries.','landing-intro'));
-    const cards=node('div',undefined,'collection-cards');
-    for(const spec of COLLECTIONS){const collection=getCollections().get(spec.id);const a=link('',spec.href||'#collection:'+spec.id);a.append(node('h2',spec.title),node('p',spec.intro),node('strong',collection.records.length.toLocaleString()+' articles'));cards.append(a);}
-    els.indexContent.append(cards);
+    const cards=node('section');cards.id='collectionDirectoryCards';cards.setAttribute('aria-label','Archive collections');els.indexContent.append(cards);
+    h.renderHomeCollections(cards,state.collectionCuration,getCollections(),{includePublications:false});
   }
   async function credits() {
     openIndex('Image credits','');

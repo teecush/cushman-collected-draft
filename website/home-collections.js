@@ -8,10 +8,10 @@ const examples = {
   musicals:['gypsy','into-the-woods','west-side-story'],
 };
 function element(tag,cls,text){const el=document.createElement(tag);el.className=cls;if(text)el.textContent=text;return el;}
-export function renderHomeCollections(root,curation,collections){
+export function renderHomeCollections(root,curation,collections,{includePublications=true}={}){
   if(!root)return;
   const grid=element('div','home-collection-grid');
-  const specs=[...COLLECTIONS,{id:'publications',title:'Publications',href:'#index:publications'}];
+  const specs=[...COLLECTIONS,...(includePublications?[{id:'publications',title:'Publications',href:'#index:publications'}]:[])];
   for(const spec of specs){
     const card=element('a','home-collection-card '+spec.id);card.href=spec.href||'#collection:'+spec.id;
     const visual=element('span','home-collection-visual');visual.setAttribute('aria-hidden','true');

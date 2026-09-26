@@ -1,6 +1,6 @@
 import {FIELDS, normalize, nameMatches, publicationYear, serialize, parse, articleForm, articleSubject} from './catalog-engine.js?v=173';
 import {makeCollections, COLLECTIONS} from './collections-engine.js?v=213';
-import {createCollectionViews} from './collection-views.js?v=213';
+import {createCollectionViews} from './collection-views.js?v=214';
 import {INDEX_LETTERS, indexOrder, indexEntries, indexSections} from './index-engine.js?v=173';
 export function createCatalog({state, els, h}) {
   let extra = {}, indexCache = new Map(), textIndex = null, textPromise = null, indexResizeObserver = null, indexScrollCleanup = null, archiveNavObserver = null, placesMap = null, collectionData = null;
@@ -33,7 +33,7 @@ export function createCatalog({state, els, h}) {
   }
   function focusHeading(root=els.indexContent) { const heading=root.querySelector('h1'); if(heading){heading.tabIndex=-1; heading.focus({preventScroll:true});} }
   function openIndex(title, active) {
-    els.indexView.classList.remove('directory-page', 'sticky-directory', 'sticky-catalog');
+    els.indexView.classList.remove('directory-page', 'sticky-directory', 'sticky-catalog', 'navigation-hub-page');
     indexScrollCleanup?.(); indexScrollCleanup = null;
     document.body.classList.add('index-open', 'catalog-page'); els.indexView.hidden=false;
     const heading=node('h1',title); const nav=tabs(active); els.indexContent.replaceChildren(heading,nav);
@@ -43,6 +43,9 @@ export function createCatalog({state, els, h}) {
     indexResizeObserver.observe(nav);
     const back=els.indexView.querySelector(':scope > .back-link'); back.href='#archive';back.textContent='Back to catalog';
     requestAnimationFrame(()=>{window.scrollTo(0,0);focusHeading();});
+  }
+  function navigationHub(kind,title) {
+    openIndex(title,'');indexResizeObserver?.disconnect();els.indexContent.querySelector('.catalog-tabs')?.remove();els.indexView.classList.add('navigation-hub-page');h.renderNavigationHub(kind);
   }
   function matches(record,v=values(), omitQuery=false) {
     if(v.shelf && !getCollections().get(v.shelf)?.recordIds.has(record.slug))return false;
@@ -535,6 +538,10 @@ export function createCatalog({state, els, h}) {
     if(base==='#timeline'){timeline(params);return true;}
     if(base==='#explore'){explorer(params);return true;}
     if(base==='#section:shakespeare'||base==='#collection:shakespeare'){openIndex('Shakespeare','works');h.renderLandingPage('shakespeare');els.indexContent.querySelector('h1')?.after(tabs('works'));collectionViews.frame();return true;}
+    if(base==='#section:browse'){navigationHub('browse','Browse');return true;}
+    if(base==='#section:indexes'){navigationHub('indexes','Indexes');return true;}
+    if(base==='#section:explore'){navigationHub('explore','Explore');return true;}
+    if(base==='#section:about'){navigationHub('about','About');return true;}
     if(base==='#section:collections'){collectionViews.directory();return true;}
     if(base==='#section:current'||base==='#current'){collectionViews.show('recent',params);return true;}
     if(base.startsWith('#collection:')||base.startsWith('#browse-collection:')){const id=base.split(':')[1]==='musical'?'musicals':base.split(':')[1];if(getCollections().has(id)&&id!=='shakespeare'){collectionViews.show(id,params);return true;}}
