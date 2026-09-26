@@ -145,13 +145,13 @@ export function createCatalog({state, els, h}) {
     const advancedToggle = node('button', 'Advanced', 'advanced-search-toggle'); advancedToggle.type = 'button'; advancedToggle.setAttribute('aria-expanded', 'false');
     advancedToggle.addEventListener('click', () => { disclosure.open = !disclosure.open; });
     disclosure.addEventListener('toggle', () => advancedToggle.setAttribute('aria-expanded', disclosure.open ? 'true' : 'false'));
-    const scope=node('div',undefined,'search-scope');const label=node('label');label.className='search-text-scope';const check=node('input');check.type='checkbox';check.id='searchArticleText';check.addEventListener('change',()=>{extra.text=check.checked?'1':'';apply();history.replaceState(null,'',href());});label.append(check,document.createTextNode(' Search article text'));scope.append(els.archiveCount,advancedToggle,disclosure);els.archive.querySelector('.search-panel').append(scope);
+    const scope=node('div',undefined,'search-scope');const label=node('label');label.className='search-text-scope';const check=node('input');check.type='checkbox';check.id='searchArticleText';check.addEventListener('change',()=>{extra.text=check.checked?'1':'';apply();history.replaceState(null,'',href());});label.append(check,document.createTextNode(' Search article text'));scope.append(els.archiveCount,label,advancedToggle,disclosure);els.archive.querySelector('.search-panel').append(scope);
     els.archive.querySelector('.search-label-row').remove();
     const panel = els.archive.querySelector('.search-panel');
     const form = node('form', undefined, 'archive-search-form'); form.setAttribute('role', 'search');
     const row = node('div', undefined, 'search-submit-row');
     const submit = node('button', 'Search', 'primary-action'); submit.type = 'submit';
-    const fieldWrap=node('div',undefined,'search-field-wrap');fieldWrap.append(panel.querySelector('.search-field'),label);
+    const fieldWrap=node('div',undefined,'search-field-wrap');fieldWrap.append(panel.querySelector('.search-field'));
     row.append(fieldWrap, submit); form.append(row); panel.prepend(form);
     form.addEventListener('submit', event => {
       event.preventDefault();
