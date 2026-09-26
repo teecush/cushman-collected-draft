@@ -1,6 +1,6 @@
 import {renderHomeCollections} from './home-collections.js?v=214';
 import {spotlightRecord} from './collections-engine.js?v=213';
-import { createCatalog } from "./catalog.js?v=214";
+import { createCatalog } from "./catalog.js?v=215";
 import { FEATURES } from "./features.js?v=173";
 const DATA_URL = new URL("../site_export/data/catalog.json?v=207", import.meta.url);
 const ALIASES_URL = new URL("../site_export/data/route_aliases.json?v=1", import.meta.url);
