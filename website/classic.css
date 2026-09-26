@@ -112,18 +112,21 @@ body.catalog-page .timeline-year-controls { flex-wrap:wrap;margin-bottom:24px; }
 }
 
 .archive-search-form { margin:0; }
-.search-submit-row { display:grid;grid-template-columns:minmax(0,1fr) auto;gap:20px;align-items:end; }
-.search-submit-row .primary-action { margin:0;min-height:46px;padding:10px 24px;border:0; }
-body #archive .search-scope { display:grid;grid-template-columns:minmax(0,1fr) auto auto;align-items:center;gap:14px;margin-top:14px; }
+.search-panel{--search-submit-width:112px;padding-block:24px;}
+.search-submit-row { display:grid;grid-template-columns:minmax(0,1fr) var(--search-submit-width);gap:20px;align-items:end; }
+.search-submit-row .primary-action { width:100%;margin:0;min-height:46px;padding:10px 14px;border:0; }
+body #archive .search-scope { display:grid;grid-template-columns:auto minmax(0,1fr) auto calc(var(--search-submit-width) + 4px);align-items:center;column-gap:16px;row-gap:10px;margin-top:16px; }
 body #archive .search-scope p { margin:0; }
 body #archive .search-scope label { display:flex;align-items:center;gap:7px;margin:0;text-transform:none;white-space:nowrap; }
 body #archive .search-scope input { width:18px;height:18px;min-height:0;margin:0; }
 .advanced-search { margin:18px 0 24px;border-bottom:1px solid var(--rule);padding-bottom:16px; }
 .advanced-search > summary { cursor:pointer;font:700 12px/24px var(--sans);text-transform:uppercase;letter-spacing:.04em; }
+body #archive .search-scope>p{grid-column:2;justify-self:center;}
+body #archive .search-scope>label{grid-column:3;justify-self:end;}
 body #archive .search-scope .advanced-search { display:none;grid-column:1/-1;box-sizing:border-box;width:100%;margin:0;border:0;padding:0; }
 body #archive .search-scope .advanced-search[open] { display:block; }
 body #archive .search-scope .advanced-search > summary { display:none; }
-body #archive .search-scope .advanced-search-toggle { justify-self:end;margin:0;border:0;background:transparent;padding:0;cursor:pointer;font:700 12px/24px var(--sans);letter-spacing:.04em;color:var(--ink);white-space:nowrap; }
+body #archive .search-scope .advanced-search-toggle { grid-column:1;grid-row:1;justify-self:start;margin:0;border:0;background:transparent;padding:0;cursor:pointer;font:700 12px/24px var(--sans);letter-spacing:.04em;color:var(--ink);white-space:nowrap; }
 body #archive .search-scope .advanced-search-toggle::before { content:"▸ "; }
 body #archive .search-scope .advanced-search-toggle[aria-expanded="true"]::before { content:"▾ "; }
 body #archive .search-scope .advanced-search > .filter-controls { box-sizing:border-box;width:100%;border-top:1px solid var(--rule);padding-top:16px; }
@@ -137,10 +140,11 @@ body:not(.feature-modernCatalogPresentation) #archive .advanced-search[open] .ca
 body:not(.feature-modernCatalogPresentation) #archive .advanced-search[open] .catalog-filter-grid select:focus{border-color:var(--blue-dark);background-color:#fff;outline:2px solid rgba(35,82,118,.15);outline-offset:1px;}
 button, .primary-action, .current-read-link, .current-page-link { text-transform:uppercase; }
 @media(max-width:600px) {
- body #archive .search-scope { display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:5px; }
- body #archive .search-scope>p { justify-self:start;min-width:0;white-space:nowrap; }
- body #archive .search-scope>label { justify-self:center;font-size:10px;gap:3px; }
- body #archive .search-scope>.advanced-search-toggle { justify-self:end;min-width:0;font-size:10px;letter-spacing:0; }
+ .search-panel{--search-submit-width:92px;}
+ body #archive .search-scope { grid-template-columns:auto minmax(0,1fr) auto;column-gap:6px;row-gap:10px; }
+ body #archive .search-scope>p { grid-column:2;justify-self:center;min-width:0;white-space:nowrap; }
+ body #archive .search-scope>label { grid-column:3;justify-self:end;font-size:10px;gap:3px; }
+ body #archive .search-scope>.advanced-search-toggle { grid-column:1;justify-self:start;min-width:0;font-size:10px;letter-spacing:0; }
  .search-submit-row { gap:10px; }
  .search-submit-row .primary-action { padding-inline:14px; }
 }
@@ -240,7 +244,7 @@ body:not(.feature-redesignedHome):not(.search-open) #archive .advanced-search[op
 /* September family review: compact introductions and clearer collection browsing. */
 .intro p.lede{font-size:16px;line-height:1.5;}
 .intro .lede::first-letter{font-size:52px;}
-body #archive .search-scope{align-items:center;gap:10px;}
+body #archive .search-scope{align-items:center;row-gap:10px;}
 #archiveCount{font:12px/1.4 var(--sans);font-style:normal;}
 body:not(.search-open) .frontpage-browse-heading{margin-top:22px;padding-top:12px;}
 .home-collection-card.shakespeare .home-collection-visual{padding:0;border:0;}
