@@ -3530,9 +3530,17 @@ function renderNavigationHub(kind) {
     } else if(type==='publications'){
       ['national-post','the-observer','the-globe-and-mail'].map(key=>state.collectionCuration?.publications?.[key]).filter(Boolean).forEach(asset=>{const img=document.createElement('img');img.src=asset.src;img.alt='';box.append(img);});
     } else if(type==='correspondence'){
-      ['the-roman-invasion/lk-ensor-1973-10-28.jpg','a-famous-thane/clive-donner-1974-11-04.jpg','lament-for-a-little-night-music/sammy-cahn-1974-09-30.jpg'].forEach(file=>{const img=document.createElement('img');img.src='../site_export/content/media/correspondence/'+file;img.alt='';box.append(img);});
+      ['the-roman-invasion/lk-ensor-1973-10-28.jpg','lament-for-a-little-night-music/sammy-cahn-1974-09-30.jpg','a-famous-thane/clive-donner-1974-11-04.jpg'].forEach(file=>{const img=document.createElement('img');img.src='../site_export/content/media/correspondence/'+file;img.alt='';box.append(img);});
     } else if(type==='biography'){
       const img=document.createElement('img');img.src='assets/cushman-collected-logo.webp';img.alt='';box.append(img);
+    } else if(type==='indexes'){
+      const letters=document.createElement('span');letters.className='navigation-hub-letters';
+      ['A','D','H','M','R','W'].forEach((letter,index)=>{const key=document.createElement('i');key.textContent=letter;if(index===2)key.className='is-active';letters.append(key);});
+      box.append(letters);
+    } else if(type==='map'){
+      box.innerHTML='<svg class="navigation-hub-route" viewBox="0 0 240 120" focusable="false"><path d="M18 91 C52 23 87 101 121 55 S184 16 222 58"/><circle cx="18" cy="91" r="7"/><circle cx="121" cy="55" r="7"/><circle cx="222" cy="58" r="7"/></svg>';
+    } else if(type==='explorer'){
+      box.innerHTML='<svg class="navigation-hub-controls" viewBox="0 0 240 120" focusable="false"><path d="M30 30H210M30 60H210M30 90H210"/><circle cx="78" cy="30" r="9"/><circle cx="163" cy="60" r="9"/><circle cx="111" cy="90" r="9"/></svg>';
     } else {
       const mark=document.createElement('span');mark.className='navigation-hub-mark';mark.textContent={indexes:'A–Z',works:'A–Z',people:'● ● ●',places:'⌖',map:'⌖',timeline:'▂▅▇▄▆',explorer:'＋ FILTERS',critics:'“ ”',donate:'♥',contact:'✉'}[type]||'→';box.append(mark);
     }

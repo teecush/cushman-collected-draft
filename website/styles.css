@@ -74,11 +74,10 @@ select {
 }
 
 .site-nav {
-  width: min(420px, 100%);
-  justify-content: space-between;
+  width: min(300px, 100%);
   display: flex;
   align-items: center;
-  gap: clamp(18px, 2.8vw, 42px);
+  gap: clamp(44px, 4.5vw, 68px);
   font-family: var(--sans);
   font-size: 13px;
   font-weight: 700;
@@ -98,13 +97,14 @@ select {
 
 .site-nav-left {
   justify-self: end;
+  justify-content: flex-end;
   padding-right: clamp(10px, 2vw, 24px);
 }
 
 .site-nav-right {
   justify-self: start;
+  justify-content: flex-start;
   padding-left: clamp(10px, 2vw, 24px);
-  justify-content: space-around;
 }
 
 .site-nav > a,
