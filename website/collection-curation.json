@@ -1,9 +1,25 @@
 {
   "records": {
-    "2008-02-25-jon-stewart-s-amiable-double-bind-host-performed-well-in-spite-of-nicholson-s": {"tvTitles": ["Academy Awards"]},
-    "2009-02-23-this-made-australia-look-good-hugh-jackman-let-down-by-some-lousy-material": {"tvTitles": ["Academy Awards"]},
-    "2009-02-23-wolverine-sang-some-real-howlers-hugh-jackman-let-down-by-weak-opening-material": {"tvTitles": ["Academy Awards"]},
-    "2010-03-08-a-wild-and-crazy-guy-a-mild-and-lazy-guy-steve-martin-outpaces-alec-baldwin": {"tvTitles": ["Academy Awards"]},
+    "2008-02-25-jon-stewart-s-amiable-double-bind-host-performed-well-in-spite-of-nicholson-s": {
+      "tvTitles": [
+        "Academy Awards"
+      ]
+    },
+    "2009-02-23-this-made-australia-look-good-hugh-jackman-let-down-by-some-lousy-material": {
+      "tvTitles": [
+        "Academy Awards"
+      ]
+    },
+    "2009-02-23-wolverine-sang-some-real-howlers-hugh-jackman-let-down-by-weak-opening-material": {
+      "tvTitles": [
+        "Academy Awards"
+      ]
+    },
+    "2010-03-08-a-wild-and-crazy-guy-a-mild-and-lazy-guy-steve-martin-outpaces-alec-baldwin": {
+      "tvTitles": [
+        "Academy Awards"
+      ]
+    },
     "1976-07-03-good-time-music": {
       "albumTitles": []
     },
@@ -2886,6 +2902,206 @@
       "src": "../site_export/content/media/waitress/01.jpg",
       "alt": "Melody A Betts, Christine Dwyer and Ephie Aardema in Waitress (2019)",
       "fit": "cover"
+    },
+    "musicals:billy-elliot-the-musical": {
+      "src": "assets/collections/mirvish-pass4-billy-elliot-the-musical.jpg",
+      "alt": "Billy Elliot The Musical",
+      "fit": "contain"
+    },
+    "musicals:book-of-mormon": {
+      "src": "assets/collections/mirvish-pass4-book-of-mormon.jpg",
+      "alt": "The Book of Mormon",
+      "fit": "contain"
+    },
+    "musicals:cats": {
+      "src": "assets/collections/mirvish-pass4-cats.jpg",
+      "alt": "Cats",
+      "fit": "contain"
+    },
+    "musicals:chitty-chitty-bang-bang": {
+      "src": "assets/collections/mirvish-pass4-chitty-chitty-bang-bang.jpg",
+      "alt": "Chitty Chitty Bang Bang",
+      "fit": "contain"
+    },
+    "musicals:color-purple": {
+      "src": "assets/collections/mirvish-pass4-color-purple.jpg",
+      "alt": "The Color Purple",
+      "fit": "contain"
+    },
+    "musicals:come-from-away": {
+      "src": "assets/collections/mirvish-pass4-come-from-away.jpg",
+      "alt": "Come From Away",
+      "fit": "contain"
+    },
+    "musicals:contact": {
+      "src": "assets/collections/mirvish-pass4-contact.jpg",
+      "alt": "Contact",
+      "fit": "contain"
+    },
+    "musicals:fela": {
+      "src": "assets/collections/mirvish-pass4-fela.jpg",
+      "alt": "Fela!",
+      "fit": "contain"
+    },
+    "musicals:harder-they-come": {
+      "src": "assets/collections/mirvish-pass4-harder-they-come.jpg",
+      "alt": "The Harder They Come",
+      "fit": "contain"
+    },
+    "musicals:high-school-musical": {
+      "src": "assets/collections/mirvish-pass4-high-school-musical.jpg",
+      "alt": "High School Musical",
+      "fit": "contain"
+    },
+    "musicals:kinky-boots": {
+      "src": "assets/collections/mirvish-pass4-kinky-boots.jpg",
+      "alt": "Kinky Boots",
+      "fit": "contain"
+    },
+    "musicals:la-cage-aux-folles": {
+      "src": "assets/collections/mirvish-pass4-la-cage-aux-folles.jpg",
+      "alt": "La Cage aux Folles",
+      "fit": "contain"
+    },
+    "musicals:lion-king": {
+      "src": "assets/collections/mirvish-pass4-lion-king.jpg",
+      "alt": "The Lion King",
+      "fit": "contain"
+    },
+    "musicals:little-house-on-the-prairie": {
+      "src": "assets/collections/mirvish-pass4-little-house-on-the-prairie.jpg",
+      "alt": "Little House on the Prairie",
+      "fit": "contain"
+    },
+    "musicals:mary-poppins": {
+      "src": "assets/collections/mirvish-pass4-mary-poppins.jpg",
+      "alt": "Mary Poppins",
+      "fit": "contain"
+    },
+    "musicals:my-mother-s-lesbian-jewish-wiccan-wedding": {
+      "src": "assets/collections/mirvish-pass4-my-mother-s-lesbian-jewish-wiccan-wedding.jpg",
+      "alt": "My Mother's Lesbian Jewish Wiccan Wedding",
+      "fit": "contain"
+    },
+    "musicals:notre-dame-de-paris": {
+      "src": "assets/collections/mirvish-pass4-notre-dame-de-paris.jpg",
+      "alt": "Notre Dame De Paris",
+      "fit": "contain"
+    },
+    "musicals:priscilla-queen-of-the-desert": {
+      "src": "assets/collections/mirvish-pass4-priscilla-queen-of-the-desert.jpg",
+      "alt": "Priscilla Queen of the Desert",
+      "fit": "contain"
+    },
+    "musicals:rock-of-ages": {
+      "src": "assets/collections/mirvish-pass4-rock-of-ages.jpg",
+      "alt": "Rock Of Ages",
+      "fit": "contain"
+    },
+    "musicals:saturday-night-fever": {
+      "src": "assets/collections/mirvish-pass4-saturday-night-fever.jpg",
+      "alt": "Saturday Night Fever",
+      "fit": "contain"
+    },
+    "musicals:sister-act": {
+      "src": "assets/collections/mirvish-pass4-sister-act.jpg",
+      "alt": "Sister Act",
+      "fit": "contain"
+    },
+    "musicals:we-will-rock-you": {
+      "src": "assets/collections/mirvish-pass4-we-will-rock-you.jpg",
+      "alt": "We Will Rock You",
+      "fit": "contain"
+    },
+    "musicals:without-you": {
+      "src": "assets/collections/mirvish-pass4-without-you.jpg",
+      "alt": "Without You",
+      "fit": "contain"
+    },
+    "musicals:25th-annual-putnam-county-spelling-bee": {
+      "src": "assets/collections/commons-pass4-25th-annual-putnam-county-spelling-bee.jpg",
+      "alt": "The 25th Annual Putnam County Spelling Bee",
+      "fit": "contain"
+    },
+    "musicals:addams-family": {
+      "src": "assets/collections/commons-pass4-addams-family.jpg",
+      "alt": "The Addams Family",
+      "fit": "contain"
+    },
+    "musicals:american-idiot": {
+      "src": "assets/collections/commons-pass4-american-idiot.jpg",
+      "alt": "American Idiot",
+      "fit": "contain"
+    },
+    "musicals:bye-bye-birdie": {
+      "src": "assets/collections/commons-pass4-bye-bye-birdie.webp",
+      "alt": "Bye Bye Birdie",
+      "fit": "contain"
+    },
+    "musicals:evil-dead-the-musical": {
+      "src": "assets/collections/commons-pass4-evil-dead-the-musical.jpg",
+      "alt": "Evil Dead the Musical",
+      "fit": "contain"
+    },
+    "musicals:falsettos": {
+      "src": "assets/collections/commons-pass4-falsettos.png",
+      "alt": "Falsettos",
+      "fit": "contain"
+    },
+    "musicals:godspell": {
+      "src": "assets/collections/commons-pass4-godspell.jpg",
+      "alt": "Godspell",
+      "fit": "contain"
+    },
+    "musicals:hedwig-and-the-angry-inch": {
+      "src": "assets/collections/commons-pass4-hedwig-and-the-angry-inch.jpg",
+      "alt": "Hedwig And The Angry Inch",
+      "fit": "contain"
+    },
+    "musicals:42nd-street": {
+      "src": "assets/collections/stratford-pass4-42nd-street-2012.png",
+      "alt": "42nd Street",
+      "fit": "contain"
+    },
+    "television:triple-sensation": {
+      "src": "assets/collections/tvpass4-triple-sensation.jpg",
+      "alt": "Triple Sensation",
+      "fit": "contain",
+      "screenColor": "#202329"
+    },
+    "television:wal-town": {
+      "src": "assets/collections/tvpass4-wal-town.jpg",
+      "alt": "Wal-Town",
+      "fit": "contain",
+      "screenColor": "#202329"
+    },
+    "musicals:gentlemen-prefer-blondes": {
+      "src": "assets/collections/extra-ac099ff4955e3d54.jpg",
+      "alt": "Gentlemen Prefer Blondes"
+    },
+    "musicals:marry-me-a-little": {
+      "src": "assets/collections/wiki-afd1602c3cf36017.jpg",
+      "alt": "Marry Me a Little"
+    },
+    "musicals:merrily-we-roll-along": {
+      "src": "assets/collections/wiki-d3ff2a4738302efe.jpg",
+      "alt": "Merrily We Roll Along"
+    },
+    "musicals:pacific-overtures": {
+      "src": "assets/collections/wiki-fe910f72b43c91d6.jpg",
+      "alt": "Pacific Overtures"
+    },
+    "musicals:passion": {
+      "src": "assets/collections/wiki-a82db211edb97ea1.jpg",
+      "alt": "Passion"
+    },
+    "musicals:road-show": {
+      "src": "assets/collections/wiki-b12ddd268d9a5761.jpg",
+      "alt": "Road Show"
+    },
+    "musicals:sondheim-on-sondheim": {
+      "src": "assets/collections/wiki-d83238e769420afa.jpg",
+      "alt": "Sondheim on Sondheim"
     }
   },
   "excludedMusicalTitles": [

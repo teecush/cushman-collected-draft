@@ -1,6 +1,6 @@
 import {renderHomeCollections} from './home-collections.js?v=233';
 import {spotlightRecord} from './collections-engine.js?v=233';
-import { createCatalog } from "./catalog.js?v=233";
+import { createCatalog } from "./catalog.js?v=234";
 import { FEATURES } from "./features.js?v=173";
 const DATA_URL = new URL("../site_export/data/catalog.json?v=233", import.meta.url);
 const ALIASES_URL = new URL("../site_export/data/route_aliases.json?v=1", import.meta.url);
@@ -5878,7 +5878,7 @@ async function init() {
       fetch(DATA_URL),
       fetch(ALIASES_URL),
       fetch(STANDALONE_CORRESPONDENCE_URL).catch(() => null),
-      fetch(new URL('./collection-curation.json?v=233', import.meta.url)),
+      fetch(new URL('./collection-curation.json?v=234', import.meta.url)),
     ]);
     if (!response.ok) throw new Error(`Could not load records (${response.status})`);
     state.records = await response.json();
