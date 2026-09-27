@@ -3,7 +3,7 @@
     {
       "slug": "famous-letters",
       "title": "Famous Letters",
-      "date_label": "39 letters · 51 scanned pages · 1968–2001, with several undated letters",
+      "date_label": "37 letters · 49 scanned pages · 1968–2001, with several undated letters",
       "description": "Personal letters, notes, and a telegram sent to Robert Cushman by leading figures in theatre, film, and musical theatre. The scans are grouped as complete letters; dates are shown where they appear on the documents.",
       "groups": [
         {
@@ -495,28 +495,6 @@
                   "local_path": "media/correspondence/famous-letters/stephen-sondheim/1982-06-18-p01.jpg",
                   "alt": "Stephen Sondheim letter to Robert Cushman, 18 June 1982, page 1 of 1",
                   "caption": "Stephen Sondheim — 18 June 1982"
-                }
-              ]
-            },
-            {
-              "date": "21 October 1982",
-              "institution": "Personal letter",
-              "media": [
-                {
-                  "local_path": "media/correspondence/famous-letters/stephen-sondheim/1982-10-21-p01.jpg",
-                  "alt": "Stephen Sondheim letter to Robert Cushman, 21 October 1982, page 1 of 1",
-                  "caption": "Stephen Sondheim — 21 October 1982"
-                }
-              ]
-            },
-            {
-              "date": "23 November 1982",
-              "institution": "Personal letter",
-              "media": [
-                {
-                  "local_path": "media/correspondence/famous-letters/stephen-sondheim/1982-11-23-p01.jpg",
-                  "alt": "Stephen Sondheim letter to Robert Cushman, 23 November 1982, page 1 of 1",
-                  "caption": "Stephen Sondheim — 23 November 1982"
                 }
               ]
             },

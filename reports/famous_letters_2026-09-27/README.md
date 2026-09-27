@@ -4,14 +4,16 @@
 
 Built the temporary **Famous Letters** collection from the 15 user-provided PDFs in `incoming/Famous Letters`.
 
-- 39 separate letters, notes, or telegrams
-- 51 readable page images
+- 37 separate letters, notes, or telegrams
+- 49 readable page images
 - 14 correspondents / correspondent groups
 - Document dates range from 1968 to 2001; several scans are undated
 
 ## Preservation and editorial treatment
 
 The source PDFs were not edited. `source_manifest.json` records each source path, byte size, page count, and SHA-256 digest. The site uses JPEG reading derivatives under `site_export/content/media/correspondence/famous-letters/`.
+
+The 21 October and 23 November 1982 Sondheim letters are intentionally omitted from the public site at the user’s request; their source PDF remains preserved in the private intake folder. The remaining 16 Sondheim letters also have a dedicated page linked prominently from the Sondheim article collection.
 
 The 8 November 2001 Stephen Sondheim scan contained two sideways pages in one image. Its web reading copy was rotated and split into two pages; the original PDF remains unchanged.
 
@@ -29,7 +31,7 @@ The material is user-provided family archive content. No external source, accoun
 
 ## Validation
 
-- JSON structure and all 51 media paths validated.
+- JSON structure and all 49 media paths validated.
 - `git diff --check` passed.
 - `node --check website/app.js` passed.
 - `node --check website/home-collections.js` passed.

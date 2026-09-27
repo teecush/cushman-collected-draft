@@ -115,6 +115,14 @@ export function createCollectionViews({state,els,h,node,link,button,openIndex,ge
       if(related.length)els.indexContent.append(node('h2','Undated Cambridge clippings'),node('p','Related student-publication clippings whose dates have not been established.'),recordList(related,'Undated Cambridge clippings'));
       return;
     }
+    if(id==='sondheim'){
+      const feature=link('','#correspondence:stephen-sondheim','sondheim-letters-feature');
+      const copy=node('span',undefined,'sondheim-letters-feature-copy');
+      copy.append(node('span','From the archive'),node('strong','Letters from Stephen Sondheim'),node('em','16 letters · 23 scanned pages · 1972–2001'));
+      const pages=node('span',undefined,'sondheim-letters-feature-pages');
+      ['1972-06-15-p01.jpg','2001-11-08-p01.jpg'].forEach(file=>{const image=node('img');image.src=new URL('../site_export/content/media/correspondence/famous-letters/stephen-sondheim/'+file,import.meta.url).href;image.alt='';image.loading='lazy';pages.append(image);});
+      feature.append(copy,pages);els.indexContent.append(feature);
+    }
     const field=node('label',undefined,'collection-find collection-find-compact');
     const search=node('input');search.type='search';search.setAttribute('aria-label',id==='profiles'?'Search for a person':'Search this collection');search.placeholder='Search this collection';search.value=params.get('q')||'';field.append(search);els.indexContent.append(field);
     const content=node('div');els.indexContent.append(content);

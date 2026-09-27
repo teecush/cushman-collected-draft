@@ -1,6 +1,6 @@
 import {renderHomeCollections} from './home-collections.js?v=215';
 import {spotlightRecord} from './collections-engine.js?v=213';
-import { createCatalog } from "./catalog.js?v=215";
+import { createCatalog } from "./catalog.js?v=216";
 import { FEATURES } from "./features.js?v=173";
 const DATA_URL = new URL("../site_export/data/catalog.json?v=207", import.meta.url);
 const ALIASES_URL = new URL("../site_export/data/route_aliases.json?v=1", import.meta.url);
@@ -2153,7 +2153,7 @@ function landingItems(kind) {
 
   if (kind === "collections") {
     return [
-      landingItem("Famous Letters", "#correspondence:famous-letters", 39, "Personal letters, notes, and a telegram sent to Robert Cushman by leading figures in theatre, film, and musical theatre.", [], "letters"),
+      landingItem("Famous Letters", "#correspondence:famous-letters", 37, "Personal letters, notes, and a telegram sent to Robert Cushman by leading figures in theatre, film, and musical theatre.", [], "letters"),
       landingItem("Shakespeare", "#section:shakespeare", countForTile("Shakespeare"), tileDescription("Shakespeare"), explicitShakespeareRecords()),
       ...SECONDARY_COLLECTION_TILES.map((title) => {
         const collection = collectionFromSlug(slugForCollection(title));
@@ -5154,24 +5154,40 @@ function articleCorrespondenceSection(record) {
   return section;
 }
 
-function renderCorrespondencePage() {
+function renderCorrespondencePage({ focusSender = "" } = {}) {
   const entries = state.records
     .flatMap((record) => correspondenceItems(record).map((item) => ({ record, item })))
     .sort((a, b) => String(a.item.date || a.record.date || "").localeCompare(String(b.item.date || b.record.date || "")));
   const page = document.createElement("section");
   page.className = "landing-page correspondence-page";
+  const shellBack = els.indexView.querySelector(":scope > .back-link");
+  if (shellBack) {
+    shellBack.href = focusSender ? "#correspondence:famous-letters" : "#home";
+    shellBack.textContent = focusSender ? "Back to Famous Letters" : "Back to home";
+  }
   const back = document.createElement("a");
   back.className = "back-link";
-  back.href = "#section:browse";
-  back.textContent = "Back to browse";
+  back.href = focusSender ? "#correspondence:famous-letters" : "#section:browse";
+  back.textContent = focusSender ? "Back to Famous Letters" : "Back to browse";
   const title = document.createElement("h1");
-  title.textContent = "Correspondence";
+  title.textContent = focusSender ? `${focusSender} Letters` : "Correspondence";
   const intro = document.createElement("p");
   intro.className = "landing-intro";
-  intro.textContent = "Letters and notes from Robert Cushman’s archive, including standalone collections and correspondence preserved with individual articles.";
+  intro.textContent = focusSender
+    ? "A dedicated reading page for Stephen Sondheim’s letters to Robert Cushman. These documents also remain part of the Famous Letters collection."
+    : "Letters and notes from Robert Cushman’s archive, including standalone collections and correspondence preserved with individual articles.";
   const standalone = document.createElement("div");
   standalone.className = "standalone-correspondence-list";
-  state.standaloneCorrespondence.forEach((collection) => {
+  const standaloneCollections = focusSender
+    ? state.standaloneCorrespondence.filter((collection) => collection.slug === "famous-letters").map((collection) => ({
+        ...collection,
+        title: "Stephen Sondheim Letters",
+        date_label: "16 letters · 23 scanned pages · 1972–2001",
+        description: "Stephen Sondheim’s letters to Robert Cushman, presented as complete dated sequences where multiple pages survive.",
+        groups: asArray(collection.groups).filter((group) => group.sender === focusSender),
+      }))
+    : state.standaloneCorrespondence;
+  standaloneCollections.forEach((collection) => {
     const section = document.createElement("section");
     section.className = "standalone-correspondence";
     if (collection.slug === "famous-letters") section.classList.add("famous-letters-collection");
@@ -5225,11 +5241,13 @@ function renderCorrespondencePage() {
       const card = renderStandaloneCard(item);
       if (card) gallery.append(card);
     });
-    section.replaceChildren(heading);
+    section.replaceChildren();
+    if (!focusSender) section.append(heading);
     if (date.textContent) section.append(date);
     if (description.textContent) section.append(description);
     const groups = asArray(collection.groups);
     if (groups.length) {
+      if (!focusSender) {
       const index = document.createElement("nav");
       index.className = "correspondent-index";
       index.setAttribute("aria-label", `${collection.title || "Correspondence"} correspondents`);
@@ -5245,6 +5263,9 @@ function renderCorrespondencePage() {
         index.append(link);
       });
       section.append(index, instruction);
+      } else {
+        section.append(instruction);
+      }
       groups.forEach((group) => {
         const groupSection = document.createElement("section");
         groupSection.className = "correspondent-group";
@@ -5302,9 +5323,9 @@ function renderCorrespondencePage() {
     link.append(copy);
     list.append(link);
   });
-  page.replaceChildren(back, title, intro);
+  page.replaceChildren(...(focusSender ? [title, intro] : [back, title, intro]));
   if (standalone.childElementCount) page.append(standalone);
-  if (entries.length) page.append(linkedHeading, list);
+  if (!focusSender && entries.length) page.append(linkedHeading, list);
   els.indexContent.replaceChildren(page);
 }
 
@@ -5685,6 +5706,14 @@ function route() {
     renderTimelineToolV2();
     els.indexView.hidden = false;
     els.indexView.scrollIntoView({ behavior: "auto", block: "start" });
+    return;
+  }
+
+  if (hash === "#correspondence:stephen-sondheim") {
+    document.body.classList.add("index-open");
+    renderCorrespondencePage({ focusSender: "Stephen Sondheim" });
+    els.indexView.hidden = false;
+    requestAnimationFrame(() => els.indexView.scrollIntoView({ behavior: "auto", block: "start" }));
     return;
   }
 

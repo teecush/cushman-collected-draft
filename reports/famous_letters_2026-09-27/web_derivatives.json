@@ -1,6 +1,6 @@
 {
-  "count": 51,
-  "total_bytes": 13753017,
+  "count": 49,
+  "total_bytes": 13210991,
   "files": [
     {
       "path": "site_export/content/media/correspondence/famous-letters/betty-comden-and-adolph-green/1980-06-15-p01.jpg",
@@ -226,16 +226,6 @@
       "path": "site_export/content/media/correspondence/famous-letters/stephen-sondheim/1982-06-18-p01.jpg",
       "bytes": 145492,
       "sha256": "9a0f3a76fc28311686717b602da20fe57fdc208c65b107486b840772da1808a8"
-    },
-    {
-      "path": "site_export/content/media/correspondence/famous-letters/stephen-sondheim/1982-10-21-p01.jpg",
-      "bytes": 270474,
-      "sha256": "33357c2a59bd6a17e43208d27d37b7cd68f0367946e84000ed1638194b80166d"
-    },
-    {
-      "path": "site_export/content/media/correspondence/famous-letters/stephen-sondheim/1982-11-23-p01.jpg",
-      "bytes": 271552,
-      "sha256": "6d10e733a4ea29050863dd10be7c2e346952e2d51e261ee106e1c24ef9a78672"
     },
     {
       "path": "site_export/content/media/correspondence/famous-letters/stephen-sondheim/1982-12-20-p01.jpg",
