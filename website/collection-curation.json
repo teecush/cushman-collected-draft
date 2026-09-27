@@ -3102,6 +3102,176 @@
     "musicals:sondheim-on-sondheim": {
       "src": "assets/collections/wiki-d83238e769420afa.jpg",
       "alt": "Sondheim on Sondheim"
+    },
+    "stoppard:arcadia": {
+      "src": "assets/collections/stoppard-pass5-arcadia.jpg",
+      "alt": "Arcadia play edition cover",
+      "fit": "contain"
+    },
+    "stoppard:coast-of-utopia": {
+      "src": "assets/collections/stoppard-pass5-coast-of-utopia.jpg",
+      "alt": "The Coast of Utopia play edition cover",
+      "fit": "contain"
+    },
+    "stoppard:every-good-boy-deserves-favour": {
+      "src": "assets/collections/stoppard-pass5-every-good-boy-deserves-favour.jpg",
+      "alt": "Every Good Boy Deserves Favour play edition cover",
+      "fit": "contain"
+    },
+    "stoppard:heroes": {
+      "src": "assets/collections/stoppard-pass5-heroes.jpg",
+      "alt": "Heroes play edition cover",
+      "fit": "contain"
+    },
+    "stoppard:indian-ink": {
+      "src": "assets/collections/stoppard-pass5-indian-ink.jpg",
+      "alt": "Indian Ink play edition cover",
+      "fit": "contain"
+    },
+    "stoppard:jumpers": {
+      "src": "assets/collections/stoppard-pass5-jumpers.jpg",
+      "alt": "Jumpers play edition cover",
+      "fit": "contain"
+    },
+    "stoppard:real-inspector-hound": {
+      "src": "assets/collections/stoppard-pass5-real-inspector-hound.jpg",
+      "alt": "The Real Inspector Hound play edition cover",
+      "fit": "contain"
+    },
+    "stoppard:real-thing": {
+      "src": "assets/collections/stoppard-pass5-real-thing.jpg",
+      "alt": "The Real Thing play edition cover",
+      "fit": "contain"
+    },
+    "stoppard:rock-n-roll": {
+      "src": "assets/collections/stoppard-pass5-rock-n-roll.jpg",
+      "alt": "Rock 'n' Roll play edition cover",
+      "fit": "contain"
+    },
+    "stoppard:rosencrantz-and-guildenstern-are-dead": {
+      "src": "assets/collections/stoppard-pass5-rosencrantz-and-guildenstern-are-dead.jpg",
+      "alt": "Rosencrantz and Guildenstern Are Dead play edition cover",
+      "fit": "contain"
+    },
+    "stoppard:travesties": {
+      "src": "assets/collections/stoppard-pass5-travesties.jpg",
+      "alt": "Travesties play edition cover",
+      "fit": "contain"
+    },
+    "musicals:9-to-5-the-musical": {
+      "src": "assets/collections/cast-pass5-9-to-5-the-musical.jpg",
+      "alt": "9 to 5 The Musical cast-recording cover",
+      "fit": "contain"
+    },
+    "musicals:avenue-q": {
+      "src": "assets/collections/cast-pass5-avenue-q.jpg",
+      "alt": "Avenue Q cast-recording cover",
+      "fit": "contain"
+    },
+    "musicals:damn-yankees": {
+      "src": "assets/collections/cast-pass5-damn-yankees.jpg",
+      "alt": "Damn Yankees cast-recording cover",
+      "fit": "contain"
+    },
+    "musicals:fantasticks": {
+      "src": "assets/collections/cast-pass5-fantasticks.jpg",
+      "alt": "The Fantasticks cast-recording cover",
+      "fit": "contain"
+    },
+    "musicals:full-monty": {
+      "src": "assets/collections/cast-pass5-full-monty.jpg",
+      "alt": "The Full Monty cast-recording cover",
+      "fit": "contain"
+    },
+    "musicals:in-the-heights": {
+      "src": "assets/collections/cast-pass5-in-the-heights.jpg",
+      "alt": "In the Heights cast-recording cover",
+      "fit": "contain"
+    },
+    "musicals:legally-blonde-the-musical": {
+      "src": "assets/collections/cast-pass5-legally-blonde-the-musical.jpg",
+      "alt": "Legally Blonde The Musical cast-recording cover",
+      "fit": "contain"
+    },
+    "musicals:newsies": {
+      "src": "assets/collections/cast-pass5-newsies.jpg",
+      "alt": "Newsies cast-recording cover",
+      "fit": "contain"
+    },
+    "musicals:ride-the-cyclone": {
+      "src": "assets/collections/cast-pass5-ride-the-cyclone.jpg",
+      "alt": "Ride the Cyclone cast-recording cover",
+      "fit": "contain"
+    },
+    "musicals:shrek-the-musical": {
+      "src": "assets/collections/cast-pass5-shrek-the-musical.jpg",
+      "alt": "Shrek the Musical cast-recording cover",
+      "fit": "contain"
+    },
+    "musicals:sweet-charity": {
+      "src": "assets/collections/cast-pass5-sweet-charity.jpg",
+      "alt": "Sweet Charity cast-recording cover",
+      "fit": "contain"
+    },
+    "musicals:young-frankenstein": {
+      "src": "assets/collections/cast-pass5-young-frankenstein.jpg",
+      "alt": "Young Frankenstein cast-recording cover",
+      "fit": "contain"
+    },
+    "musicals:bring-in-da-noise-bring-in-da-funk": {
+      "src": "assets/collections/cast-pass5-bring-in-da-noise-bring-in-da-funk.jpg",
+      "alt": "Bring in 'Da Noise, Bring in 'Da Funk cast-recording cover",
+      "fit": "contain"
+    },
+    "musicals:fosse": {
+      "src": "assets/collections/cast-pass5-fosse.jpg",
+      "alt": "Fosse cast-recording cover",
+      "fit": "contain"
+    },
+    "musicals:hms-pinafore": {
+      "src": "assets/collections/cast-pass5-hms-pinafore.jpg",
+      "alt": "HMS Pinafore cast-recording cover",
+      "fit": "contain"
+    },
+    "musicals:jacques-brel-is-alive-and-well-and-living-in-paris": {
+      "src": "assets/collections/cast-pass5-jacques-brel-is-alive-and-well-and-living-in-paris.jpg",
+      "alt": "Jacques Brel is Alive and Well and Living in Paris cast-recording cover",
+      "fit": "contain"
+    },
+    "musicals:joseph-and-the-amazing-technicolor-dreamcoat": {
+      "src": "assets/collections/cast-pass5-joseph-and-the-amazing-technicolor-dreamcoat.jpg",
+      "alt": "Joseph And The Amazing Technicolor Dreamcoat cast-recording cover",
+      "fit": "contain"
+    },
+    "musicals:life": {
+      "src": "assets/collections/cast-pass5-life.jpg",
+      "alt": "The Life cast-recording cover",
+      "fit": "contain"
+    },
+    "musicals:mystery-of-edwin-drood": {
+      "src": "assets/collections/cast-pass5-mystery-of-edwin-drood.jpg",
+      "alt": "The Mystery Of Edwin Drood cast-recording cover",
+      "fit": "contain"
+    },
+    "musicals:new-brain": {
+      "src": "assets/collections/cast-pass5-new-brain.jpg",
+      "alt": "A New Brain cast-recording cover",
+      "fit": "contain"
+    },
+    "musicals:pajama-game": {
+      "src": "assets/collections/cast-pass5-pajama-game.jpg",
+      "alt": "The Pajama Game cast-recording cover",
+      "fit": "contain"
+    },
+    "musicals:steel-pier": {
+      "src": "assets/collections/cast-pass5-steel-pier.jpg",
+      "alt": "Steel Pier cast-recording cover",
+      "fit": "contain"
+    },
+    "musicals:will-rogers-follies": {
+      "src": "assets/collections/cast-pass5-will-rogers-follies.jpg",
+      "alt": "The Will Rogers Follies cast-recording cover",
+      "fit": "contain"
     }
   },
   "excludedMusicalTitles": [

@@ -40,7 +40,9 @@ export function renderHomeCollections(root,curation,collections,{includePublicat
     }
     if(spec.id==='stoppard'){
       const plays=[...(collections?.get('stoppard')?.items||[])].sort((a,b)=>b.records.length-a.records.length||a.title.localeCompare(b.title)).slice(0,3);
-      for(const play of plays)visual.append(element('span','stoppard-preview',play.title));
+      assets=plays.map(play=>curation.artwork?.['stoppard:'+play.id]).filter(Boolean);
+      card.setAttribute('aria-label',`Stoppard collection — featuring ${plays.map(play=>play.title).join(', ')}`);
+      if(!assets.length)for(const play of plays)visual.append(element('span','stoppard-preview',play.title));
     }
     if(spec.id==='television'){
       const shows=[...(collections?.get('television')?.items||[])].sort((a,b)=>b.records.length-a.records.length||a.title.localeCompare(b.title)).slice(0,3);
