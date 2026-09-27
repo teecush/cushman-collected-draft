@@ -1,10 +1,10 @@
-import {renderHomeCollections} from './home-collections.js?v=214';
+import {renderHomeCollections} from './home-collections.js?v=215';
 import {spotlightRecord} from './collections-engine.js?v=213';
 import { createCatalog } from "./catalog.js?v=215";
 import { FEATURES } from "./features.js?v=173";
 const DATA_URL = new URL("../site_export/data/catalog.json?v=207", import.meta.url);
 const ALIASES_URL = new URL("../site_export/data/route_aliases.json?v=1", import.meta.url);
-const STANDALONE_CORRESPONDENCE_URL = new URL("../site_export/data/standalone_correspondence.json?v=4", import.meta.url);
+const STANDALONE_CORRESPONDENCE_URL = new URL("../site_export/data/standalone_correspondence.json?v=5", import.meta.url);
 const CONTENT_ROOT = new URL("../site_export/content/reviews/", import.meta.url);
 const MEDIA_ASSET_VERSION = "site-audit-20260909";
 const PAGE_SIZE = 36;
@@ -2153,6 +2153,7 @@ function landingItems(kind) {
 
   if (kind === "collections") {
     return [
+      landingItem("Famous Letters", "#correspondence:famous-letters", 39, "Personal letters, notes, and a telegram sent to Robert Cushman by leading figures in theatre, film, and musical theatre.", [], "letters"),
       landingItem("Shakespeare", "#section:shakespeare", countForTile("Shakespeare"), tileDescription("Shakespeare"), explicitShakespeareRecords()),
       ...SECONDARY_COLLECTION_TILES.map((title) => {
         const collection = collectionFromSlug(slugForCollection(title));
@@ -5173,6 +5174,7 @@ function renderCorrespondencePage() {
   state.standaloneCorrespondence.forEach((collection) => {
     const section = document.createElement("section");
     section.className = "standalone-correspondence";
+    if (collection.slug === "famous-letters") section.classList.add("famous-letters-collection");
     section.id = collection.slug || "standalone-correspondence";
     const heading = document.createElement("h2");
     heading.textContent = collection.title || "Correspondence collection";
@@ -5184,40 +5186,88 @@ function renderCorrespondencePage() {
     description.textContent = collection.description || "";
     const instruction = document.createElement("p");
     instruction.className = "standalone-correspondence-instruction";
-    instruction.textContent = "Select any document to open the full-size reading copy.";
+    instruction.textContent = "Select any page to open its full-size reading copy.";
     const gallery = document.createElement("div");
     gallery.className = "standalone-correspondence-gallery";
-    asArray(collection.items).forEach((item) => {
-      const src = correspondenceMediaUrl(item.media);
-      if (!src) return;
+    const renderStandaloneCard = (item, senderName = item.sender || "Correspondence") => {
+      const mediaItems = asArray(item.media);
+      if (!mediaItems.length) return null;
       const card = document.createElement("article");
       card.className = "standalone-correspondence-card";
       const meta = document.createElement("p");
       meta.className = "correspondence-meta";
-      meta.textContent = [item.institution, item.date].filter(Boolean).join(" / ");
+      meta.textContent = [item.institution, senderName === item.date ? "" : item.date].filter(Boolean).join(" / ");
       const sender = document.createElement("h3");
-      sender.textContent = item.sender || "Correspondence";
-      const link = document.createElement("a");
-      link.href = src;
-      link.target = "_blank";
-      link.rel = "noopener";
-      link.setAttribute("aria-label", `Open full-size document: ${item.media?.caption || item.sender || "correspondence"}`);
-      const image = document.createElement("img");
-      image.loading = "lazy";
-      image.src = src;
-      image.alt = item.media?.alt || item.media?.caption || item.sender || "Correspondence document";
-      link.append(image);
-      const caption = document.createElement("p");
-      caption.textContent = item.media?.caption || "";
-      card.replaceChildren(meta, sender, link);
-      if (caption.textContent) card.append(caption);
+      sender.textContent = senderName;
+      const documents = document.createElement("div");
+      documents.className = "standalone-document-pages";
+      mediaItems.forEach((media, index) => {
+        const src = correspondenceMediaUrl(media);
+        if (!src) return;
+        const link = document.createElement("a");
+        link.className = "standalone-document-link";
+        link.href = src;
+        link.target = "_blank";
+        link.rel = "noopener";
+        link.setAttribute("aria-label", `Open full-size document: ${media?.caption || senderName}${mediaItems.length > 1 ? `, page ${index + 1}` : ""}`);
+        const image = document.createElement("img");
+        image.loading = "lazy";
+        image.src = src;
+        image.alt = media?.alt || media?.caption || senderName || "Correspondence document";
+        link.append(image);
+        documents.append(link);
+      });
+      card.replaceChildren(meta, sender, documents);
       const transcript=correspondenceTranscript(item);if(transcript)card.append(transcript);
-      gallery.append(card);
+      return card;
+    };
+    asArray(collection.items).forEach((item) => {
+      const card = renderStandaloneCard(item);
+      if (card) gallery.append(card);
     });
     section.replaceChildren(heading);
     if (date.textContent) section.append(date);
     if (description.textContent) section.append(description);
-    section.append(instruction, gallery);
+    const groups = asArray(collection.groups);
+    if (groups.length) {
+      const index = document.createElement("nav");
+      index.className = "correspondent-index";
+      index.setAttribute("aria-label", `${collection.title || "Correspondence"} correspondents`);
+      groups.forEach((group) => {
+        const link = document.createElement("a");
+        const senderSlug = String(group.sender || "correspondent").toLowerCase().normalize("NFKD").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+        link.href = `#${collection.slug}-${senderSlug}`;
+        link.textContent = group.sender || "Correspondent";
+        link.addEventListener("click", (event) => {
+          event.preventDefault();
+          document.getElementById(`${collection.slug}-${senderSlug}`)?.scrollIntoView({ behavior: "smooth", block: "start" });
+        });
+        index.append(link);
+      });
+      section.append(index, instruction);
+      groups.forEach((group) => {
+        const groupSection = document.createElement("section");
+        groupSection.className = "correspondent-group";
+        const senderSlug = String(group.sender || "correspondent").toLowerCase().normalize("NFKD").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+        groupSection.id = `${collection.slug}-${senderSlug}`;
+        const groupHeading = document.createElement("h3");
+        const groupItems = asArray(group.items);
+        groupHeading.textContent = group.sender || "Correspondent";
+        const count = document.createElement("span");
+        count.textContent = `${groupItems.length} ${groupItems.length === 1 ? "letter" : "letters"}`;
+        groupHeading.append(count);
+        const groupGallery = document.createElement("div");
+        groupGallery.className = "standalone-correspondence-gallery";
+        groupItems.forEach((item) => {
+          const card = renderStandaloneCard(item, item.date || group.sender);
+          if (card) groupGallery.append(card);
+        });
+        groupSection.append(groupHeading, groupGallery);
+        section.append(groupSection);
+      });
+    } else {
+      section.append(instruction, gallery);
+    }
     standalone.append(section);
   });
   const linkedHeading = document.createElement("h2");
@@ -5638,11 +5688,12 @@ function route() {
     return;
   }
 
-  if (hash === "#correspondence") {
+  if (hash === "#correspondence" || hash.startsWith("#correspondence:")) {
     document.body.classList.add("index-open");
     renderCorrespondencePage();
     els.indexView.hidden = false;
-    els.indexView.scrollIntoView({ behavior: "auto", block: "start" });
+    const collectionSlug = hash.split(":")[1];
+    requestAnimationFrame(() => (collectionSlug ? document.getElementById(collectionSlug) : els.indexView)?.scrollIntoView({ behavior: "auto", block: "start" }));
     return;
   }
 

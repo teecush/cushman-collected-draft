@@ -1,0 +1,187 @@
+[
+  {
+    "file": "incoming/Famous Letters/Betty Comden & Adolph Green.pdf",
+    "slug": "betty-comden-adolph-green",
+    "bytes": 3593047,
+    "sha256": "11181c6a3faf480055355868cbf645293c8a3f4fd91e160560c7707933d7c623",
+    "pages": 1,
+    "renders": [
+      "/tmp/famous_letters_renders/betty-comden-adolph-green-1.jpg"
+    ]
+  },
+  {
+    "file": "incoming/Famous Letters/Chita Rivera Letter.pdf",
+    "slug": "chita-rivera-letter",
+    "bytes": 2183350,
+    "sha256": "e342737db8fe228ddc72e212f7a5f8914460afdccea29b7b2fccb9a76beae164",
+    "pages": 1,
+    "renders": [
+      "/tmp/famous_letters_renders/chita-rivera-letter-1.jpg"
+    ]
+  },
+  {
+    "file": "incoming/Famous Letters/Diana Rigg Letter.pdf",
+    "slug": "diana-rigg-letter",
+    "bytes": 2710246,
+    "sha256": "e7fb67eb94fe30ef6636bab0894cf659f657723d7bc064ead58f5a6f654e67be",
+    "pages": 2,
+    "renders": [
+      "/tmp/famous_letters_renders/diana-rigg-letter-1.jpg",
+      "/tmp/famous_letters_renders/diana-rigg-letter-2.jpg"
+    ]
+  },
+  {
+    "file": "incoming/Famous Letters/Hal Prince Letters.pdf",
+    "slug": "hal-prince-letters",
+    "bytes": 11964711,
+    "sha256": "7a0310b16d9798b91dafbeb085baaac71bb201967ba9ff41d04260196140ae83",
+    "pages": 3,
+    "renders": [
+      "/tmp/famous_letters_renders/hal-prince-letters-1.jpg",
+      "/tmp/famous_letters_renders/hal-prince-letters-2.jpg",
+      "/tmp/famous_letters_renders/hal-prince-letters-3.jpg"
+    ]
+  },
+  {
+    "file": "incoming/Famous Letters/Harold Pinter Letter.pdf",
+    "slug": "harold-pinter-letter",
+    "bytes": 9608472,
+    "sha256": "dca08229248c4dd2f048f08524f204806b13251f11974c037b81aabeb58047b1",
+    "pages": 2,
+    "renders": [
+      "/tmp/famous_letters_renders/harold-pinter-letter-1.jpg",
+      "/tmp/famous_letters_renders/harold-pinter-letter-2.jpg"
+    ]
+  },
+  {
+    "file": "incoming/Famous Letters/Harold Pinter Telegram.pdf",
+    "slug": "harold-pinter-telegram",
+    "bytes": 5785663,
+    "sha256": "910235760b55e40395971e297abbef3fa69a8b03e4de18428c3f86196c69ef8f",
+    "pages": 1,
+    "renders": [
+      "/tmp/famous_letters_renders/harold-pinter-telegram-1.jpg"
+    ]
+  },
+  {
+    "file": "incoming/Famous Letters/JOHN OSBORNE Letter.pdf",
+    "slug": "john-osborne-letter",
+    "bytes": 2815668,
+    "sha256": "13f8969e79b8d5759c74a234dcb73fe908d89a390fa9c3343eb246bac0cb5cda",
+    "pages": 1,
+    "renders": [
+      "/tmp/famous_letters_renders/john-osborne-letter-1.jpg"
+    ]
+  },
+  {
+    "file": "incoming/Famous Letters/John Cleese Letters.pdf",
+    "slug": "john-cleese-letters",
+    "bytes": 6204432,
+    "sha256": "7d13440da83cea435ceed46927cbf8d29273f1ac4b09fc39dbb002f00e1b109c",
+    "pages": 2,
+    "renders": [
+      "/tmp/famous_letters_renders/john-cleese-letters-1.jpg",
+      "/tmp/famous_letters_renders/john-cleese-letters-2.jpg"
+    ]
+  },
+  {
+    "file": "incoming/Famous Letters/KENNETH TYNAN Letter.pdf",
+    "slug": "kenneth-tynan-letter",
+    "bytes": 3293901,
+    "sha256": "34babf4ad59126a8700e61093bb946ea09160ba69d770d35c333ce6ba845ea97",
+    "pages": 1,
+    "renders": [
+      "/tmp/famous_letters_renders/kenneth-tynan-letter-1.jpg"
+    ]
+  },
+  {
+    "file": "incoming/Famous Letters/LAURENCE OLIVIER..pdf",
+    "slug": "laurence-olivier",
+    "bytes": 4342208,
+    "sha256": "401190c1787ce81413805b15773fc3ebf7d60d281cdc444b16b567b5f9a7411e",
+    "pages": 2,
+    "renders": [
+      "/tmp/famous_letters_renders/laurence-olivier-1.jpg",
+      "/tmp/famous_letters_renders/laurence-olivier-2.jpg"
+    ]
+  },
+  {
+    "file": "incoming/Famous Letters/Michael Blakemore Letter.pdf",
+    "slug": "michael-blakemore-letter",
+    "bytes": 9112006,
+    "sha256": "bb6b7c82151affe09b5e3f6957861e84289a77ccb144e5f45d2d13104b5dcb7e",
+    "pages": 3,
+    "renders": [
+      "/tmp/famous_letters_renders/michael-blakemore-letter-1.jpg",
+      "/tmp/famous_letters_renders/michael-blakemore-letter-2.jpg",
+      "/tmp/famous_letters_renders/michael-blakemore-letter-3.jpg"
+    ]
+  },
+  {
+    "file": "incoming/Famous Letters/Michael Frayn Letters.pdf",
+    "slug": "michael-frayn-letters",
+    "bytes": 12340985,
+    "sha256": "de7d8b1fbe410f256ec2ebcd81616067cf6b73499d8eb9209d575ca1fa45b2f7",
+    "pages": 4,
+    "renders": [
+      "/tmp/famous_letters_renders/michael-frayn-letters-1.jpg",
+      "/tmp/famous_letters_renders/michael-frayn-letters-2.jpg",
+      "/tmp/famous_letters_renders/michael-frayn-letters-3.jpg",
+      "/tmp/famous_letters_renders/michael-frayn-letters-4.jpg"
+    ]
+  },
+  {
+    "file": "incoming/Famous Letters/Peter Hall letters.pdf",
+    "slug": "peter-hall-letters",
+    "bytes": 4384819,
+    "sha256": "5494ed340d37660b1e75a7696135ca84ac2095995bf338b95d6d1d6cde30cfdc",
+    "pages": 2,
+    "renders": [
+      "/tmp/famous_letters_renders/peter-hall-letters-1.jpg",
+      "/tmp/famous_letters_renders/peter-hall-letters-2.jpg"
+    ]
+  },
+  {
+    "file": "incoming/Famous Letters/Sondheim Letters.pdf",
+    "slug": "sondheim-letters",
+    "bytes": 85129956,
+    "sha256": "4dd09ac63710288fdc3286db453a8d1cc18948bcd2f6041e9f9b1b2ad1c2966f",
+    "pages": 24,
+    "renders": [
+      "/tmp/famous_letters_renders/sondheim-letters-01.jpg",
+      "/tmp/famous_letters_renders/sondheim-letters-02.jpg",
+      "/tmp/famous_letters_renders/sondheim-letters-03.jpg",
+      "/tmp/famous_letters_renders/sondheim-letters-04.jpg",
+      "/tmp/famous_letters_renders/sondheim-letters-05.jpg",
+      "/tmp/famous_letters_renders/sondheim-letters-06.jpg",
+      "/tmp/famous_letters_renders/sondheim-letters-07.jpg",
+      "/tmp/famous_letters_renders/sondheim-letters-08.jpg",
+      "/tmp/famous_letters_renders/sondheim-letters-09.jpg",
+      "/tmp/famous_letters_renders/sondheim-letters-10.jpg",
+      "/tmp/famous_letters_renders/sondheim-letters-11.jpg",
+      "/tmp/famous_letters_renders/sondheim-letters-12.jpg",
+      "/tmp/famous_letters_renders/sondheim-letters-13.jpg",
+      "/tmp/famous_letters_renders/sondheim-letters-14.jpg",
+      "/tmp/famous_letters_renders/sondheim-letters-15.jpg",
+      "/tmp/famous_letters_renders/sondheim-letters-16.jpg",
+      "/tmp/famous_letters_renders/sondheim-letters-17.jpg",
+      "/tmp/famous_letters_renders/sondheim-letters-18.jpg",
+      "/tmp/famous_letters_renders/sondheim-letters-19.jpg",
+      "/tmp/famous_letters_renders/sondheim-letters-20.jpg",
+      "/tmp/famous_letters_renders/sondheim-letters-21.jpg",
+      "/tmp/famous_letters_renders/sondheim-letters-22.jpg",
+      "/tmp/famous_letters_renders/sondheim-letters-23.jpg",
+      "/tmp/famous_letters_renders/sondheim-letters-24.jpg"
+    ]
+  },
+  {
+    "file": "incoming/Famous Letters/Yip Harburg Letter.pdf",
+    "slug": "yip-harburg-letter",
+    "bytes": 4783325,
+    "sha256": "0e38d74da5aba857c8dfe681bfb42e36a58c316a21fae224ffcabe3a516a5294",
+    "pages": 1,
+    "renders": [
+      "/tmp/famous_letters_renders/yip-harburg-letter-1.jpg"
+    ]
+  }
+]

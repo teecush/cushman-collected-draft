@@ -1,0 +1,261 @@
+{
+  "count": 51,
+  "total_bytes": 13753017,
+  "files": [
+    {
+      "path": "site_export/content/media/correspondence/famous-letters/betty-comden-and-adolph-green/1980-06-15-p01.jpg",
+      "bytes": 310166,
+      "sha256": "53659dfa7d2880936f6035d3e96532b76c3a339c8b146216cd665aa38521d184"
+    },
+    {
+      "path": "site_export/content/media/correspondence/famous-letters/chita-rivera/undated-p01.jpg",
+      "bytes": 211335,
+      "sha256": "51558e7eeeaa1f30a6c2a3748363ea9f061d4fcbc27386a2ef9c50d7224bbf79"
+    },
+    {
+      "path": "site_export/content/media/correspondence/famous-letters/diana-rigg/undated-p01.jpg",
+      "bytes": 215579,
+      "sha256": "8add6b461fbb83dea4face9dcefd89a2e73bfaa0ad9979dae8d8a5b12e28631a"
+    },
+    {
+      "path": "site_export/content/media/correspondence/famous-letters/diana-rigg/undated-p02.jpg",
+      "bytes": 163726,
+      "sha256": "ba22dba4f4171eb5ff8eb7c94b3556de2f8ce30209a56ad5b9aea9a3beb559cb"
+    },
+    {
+      "path": "site_export/content/media/correspondence/famous-letters/hal-prince/1976-11-16-p01.jpg",
+      "bytes": 333198,
+      "sha256": "250b8fd21a7d50abfd507daac43f48f63ce92744c9edf6788d4aaac31ce90949"
+    },
+    {
+      "path": "site_export/content/media/correspondence/famous-letters/hal-prince/1976-12-15-p01.jpg",
+      "bytes": 303538,
+      "sha256": "dc796a48ac3f95c0e9cbe0e76745961a323b7d1b97da5f5974e65fc1790e3118"
+    },
+    {
+      "path": "site_export/content/media/correspondence/famous-letters/hal-prince/1977-04-22-p01.jpg",
+      "bytes": 253996,
+      "sha256": "df7db29bd01a7eab0d21205507c6fca7aeebc843c2896606da6fc18ff2f7399e"
+    },
+    {
+      "path": "site_export/content/media/correspondence/famous-letters/harold-pinter/1976-04-07-p01.jpg",
+      "bytes": 418206,
+      "sha256": "033d0c5c3ead0811b06a95aab9973a15f8504cb6fbb58a3d9194b54c74a9db42"
+    },
+    {
+      "path": "site_export/content/media/correspondence/famous-letters/harold-pinter/2001-11-09-p01.jpg",
+      "bytes": 186512,
+      "sha256": "1269a75c70187579589d4ea01656093131b6bca40250e8dca959bffa8e76e54d"
+    },
+    {
+      "path": "site_export/content/media/correspondence/famous-letters/harold-pinter/2001-11-09-p02.jpg",
+      "bytes": 206731,
+      "sha256": "d5250a5b6bb26db9693e86646501d8022ec20eb4825f58eae98b15ab5344b643"
+    },
+    {
+      "path": "site_export/content/media/correspondence/famous-letters/john-cleese/1977-08-19-p01.jpg",
+      "bytes": 254627,
+      "sha256": "9be7e6cbeb98bae821548931e1bb0d83059ccf7bec711cd6552f2f5b6861613f"
+    },
+    {
+      "path": "site_export/content/media/correspondence/famous-letters/john-cleese/1981-09-15-p01.jpg",
+      "bytes": 260242,
+      "sha256": "e65cc08b7c23d254bb24bf799a46e985603f5a4000e9b2eecd980421908ade06"
+    },
+    {
+      "path": "site_export/content/media/correspondence/famous-letters/john-osborne/1974-12-19-p01.jpg",
+      "bytes": 172281,
+      "sha256": "495d2ccdc639678d1dbd537aef03c0dec53f8081d35de302330cd6b8845c73fa"
+    },
+    {
+      "path": "site_export/content/media/correspondence/famous-letters/kenneth-tynan/undated-p01.jpg",
+      "bytes": 288044,
+      "sha256": "f06a8ab1df53fdae2b56ac87405b58749eb6302be685698418d246675378e9f6"
+    },
+    {
+      "path": "site_export/content/media/correspondence/famous-letters/laurence-olivier/1976-11-15-p01.jpg",
+      "bytes": 254383,
+      "sha256": "262083f13da0771ec6355d11cac427cdc9bda8193631d5dd3549faa4c7c25366"
+    },
+    {
+      "path": "site_export/content/media/correspondence/famous-letters/laurence-olivier/1976-11-15-p02.jpg",
+      "bytes": 251779,
+      "sha256": "d053ff0617e290f18d2f2ea6aa63631843a9441918e5fa9b7beec4c06bc47573"
+    },
+    {
+      "path": "site_export/content/media/correspondence/famous-letters/michael-blakemore/1968-12-24-p01.jpg",
+      "bytes": 232264,
+      "sha256": "f91bdffdf518b8efdc75c1cef9c65657ef3444580d2ca4604d54651575363558"
+    },
+    {
+      "path": "site_export/content/media/correspondence/famous-letters/michael-blakemore/1968-12-24-p02.jpg",
+      "bytes": 242010,
+      "sha256": "d9d8ba9212aeb080756f0c1de1826099b170b2329afd3e3c0730f2f5b64c369c"
+    },
+    {
+      "path": "site_export/content/media/correspondence/famous-letters/michael-blakemore/1968-12-24-p03.jpg",
+      "bytes": 235424,
+      "sha256": "b45a6f55823b7a8d40eff332e3cbb2a53bc9d51f4cac68f1024afd3db82f8ce4"
+    },
+    {
+      "path": "site_export/content/media/correspondence/famous-letters/michael-frayn/1974-11-10-p01.jpg",
+      "bytes": 181188,
+      "sha256": "8ea3c405ea91f448f3192a0f1b852f279514dde625649a7247437d4e0b6855ad"
+    },
+    {
+      "path": "site_export/content/media/correspondence/famous-letters/michael-frayn/1979-09-21-p01.jpg",
+      "bytes": 251601,
+      "sha256": "c002ea8de4348dce7c832667621c845fde3efb31924a15ce8c9bc1d633506464"
+    },
+    {
+      "path": "site_export/content/media/correspondence/famous-letters/michael-frayn/1983-12-30-p01.jpg",
+      "bytes": 264967,
+      "sha256": "c5f91e4d18ec8c2938c82a2533f7c4858efdadd7d56e7a66cdc3f4cce1a8443b"
+    },
+    {
+      "path": "site_export/content/media/correspondence/famous-letters/michael-frayn/1984-01-09-p01.jpg",
+      "bytes": 234563,
+      "sha256": "9d3647904b6ada758cd5a0035f3c78c0d63084eebba7a6368d07e3ab22e29bb5"
+    },
+    {
+      "path": "site_export/content/media/correspondence/famous-letters/peter-hall/1975-11-17-p01.jpg",
+      "bytes": 182913,
+      "sha256": "cc71baf5607b505701ed02a7f15fec0b6da3b8874af1da084f9a8f59c8eb14ca"
+    },
+    {
+      "path": "site_export/content/media/correspondence/famous-letters/peter-hall/undated-p01.jpg",
+      "bytes": 496109,
+      "sha256": "73772dc64e218f024927e075e3f503f541033ba3c38abb87396d26c63bc4253e"
+    },
+    {
+      "path": "site_export/content/media/correspondence/famous-letters/stephen-sondheim/1972-06-15-p01.jpg",
+      "bytes": 384000,
+      "sha256": "ec8515e5ef3d85433c1737b623c43e02b5957110d078df8622db0060ecd50508"
+    },
+    {
+      "path": "site_export/content/media/correspondence/famous-letters/stephen-sondheim/1972-06-15-p02.jpg",
+      "bytes": 336905,
+      "sha256": "e67261cb99a5e914ab77daa48c9bf7d122b6de61dd2e41ef3b67324a251eafe2"
+    },
+    {
+      "path": "site_export/content/media/correspondence/famous-letters/stephen-sondheim/1976-11-19-p01.jpg",
+      "bytes": 254384,
+      "sha256": "7dc179479c70cf6b3f1a90b795ccc72d5bb3e6c1941a8f11a121000d8e75b18d"
+    },
+    {
+      "path": "site_export/content/media/correspondence/famous-letters/stephen-sondheim/1976-12-14-p01.jpg",
+      "bytes": 180790,
+      "sha256": "ae060a19cb6d461fc39adae4965b5b3aca698da9c43bb0d2c5748d9ec50761ba"
+    },
+    {
+      "path": "site_export/content/media/correspondence/famous-letters/stephen-sondheim/1979-03-07-p01.jpg",
+      "bytes": 230588,
+      "sha256": "2e012c0b1a1a1fde64800d27ad61dde253a33f58ef20f212ccc1d5d86ce722f7"
+    },
+    {
+      "path": "site_export/content/media/correspondence/famous-letters/stephen-sondheim/1979-03-16-p01.jpg",
+      "bytes": 357533,
+      "sha256": "a6db98abd5b3e03919b23ae5378a00712fd84688eee717b15481f6bef86a5e55"
+    },
+    {
+      "path": "site_export/content/media/correspondence/famous-letters/stephen-sondheim/1979-03-16-p02.jpg",
+      "bytes": 428681,
+      "sha256": "d9f8d68a3239da976c5031633052fb206e369e68c72a3d7819d3edeb217e7c06"
+    },
+    {
+      "path": "site_export/content/media/correspondence/famous-letters/stephen-sondheim/1979-03-16-p03.jpg",
+      "bytes": 318524,
+      "sha256": "505d64f50a1243a18d6e592f874341c5e21d0c2e221df7b7065970dd0c9f422e"
+    },
+    {
+      "path": "site_export/content/media/correspondence/famous-letters/stephen-sondheim/1979-05-01-p01.jpg",
+      "bytes": 357479,
+      "sha256": "b5107288c45db79b0292bb1a921afb65841a9e1983eb2526d63048f7c69b78cf"
+    },
+    {
+      "path": "site_export/content/media/correspondence/famous-letters/stephen-sondheim/1979-05-01-p02.jpg",
+      "bytes": 167813,
+      "sha256": "57dd096b74baac25dc8d34208f56d17b0d42ec8cfbc11083c5dd69cfdd0c6f13"
+    },
+    {
+      "path": "site_export/content/media/correspondence/famous-letters/stephen-sondheim/1979-05-09-p01.jpg",
+      "bytes": 347562,
+      "sha256": "4135ed3097065f06038df80ae098a6c668feca3310b15720417e1361b283e23b"
+    },
+    {
+      "path": "site_export/content/media/correspondence/famous-letters/stephen-sondheim/1979-05-09-p02.jpg",
+      "bytes": 390858,
+      "sha256": "b3e8c9e7f0671d0bb5764c49a9a88859fd6062accade929ed545c06dcb8990c2"
+    },
+    {
+      "path": "site_export/content/media/correspondence/famous-letters/stephen-sondheim/1979-05-09-p03.jpg",
+      "bytes": 251124,
+      "sha256": "ba6c07706d87b850d1663ded15c42ca4f6d684a586fe6a2c6c4339f73909d924"
+    },
+    {
+      "path": "site_export/content/media/correspondence/famous-letters/stephen-sondheim/1979-05-29-p01.jpg",
+      "bytes": 198657,
+      "sha256": "3562ea857acf7367676d2e72d6f90ba24f44383246cd20e0250d2cdf371b0f2c"
+    },
+    {
+      "path": "site_export/content/media/correspondence/famous-letters/stephen-sondheim/1979-08-13-p01.jpg",
+      "bytes": 244903,
+      "sha256": "b9216e75c5a4def55dc603d42fb97aa44c3487bd37e20aed9cbc1fc430356ee5"
+    },
+    {
+      "path": "site_export/content/media/correspondence/famous-letters/stephen-sondheim/1980-05-19-p01.jpg",
+      "bytes": 267486,
+      "sha256": "201896197f568fc228a486ed7c044fedd91c53d9274260f6f0b75320504dc58f"
+    },
+    {
+      "path": "site_export/content/media/correspondence/famous-letters/stephen-sondheim/1982-04-23-p01.jpg",
+      "bytes": 343290,
+      "sha256": "ca23d0192195ede9af8732199c5f1afb5dfdeb427ef6db5f3d3d15c17e7bbbc1"
+    },
+    {
+      "path": "site_export/content/media/correspondence/famous-letters/stephen-sondheim/1982-04-27-p01.jpg",
+      "bytes": 206829,
+      "sha256": "34685bd18beef4bfd46961adab17ba97a36fd1850e8483bc023ec23580575caf"
+    },
+    {
+      "path": "site_export/content/media/correspondence/famous-letters/stephen-sondheim/1982-05-07-p01.jpg",
+      "bytes": 201358,
+      "sha256": "f2bd9f8bb1c1b8de4a5df3f6e09634ba7a1a58c306bdecb872742872981fbcf1"
+    },
+    {
+      "path": "site_export/content/media/correspondence/famous-letters/stephen-sondheim/1982-06-18-p01.jpg",
+      "bytes": 145492,
+      "sha256": "9a0f3a76fc28311686717b602da20fe57fdc208c65b107486b840772da1808a8"
+    },
+    {
+      "path": "site_export/content/media/correspondence/famous-letters/stephen-sondheim/1982-10-21-p01.jpg",
+      "bytes": 270474,
+      "sha256": "33357c2a59bd6a17e43208d27d37b7cd68f0367946e84000ed1638194b80166d"
+    },
+    {
+      "path": "site_export/content/media/correspondence/famous-letters/stephen-sondheim/1982-11-23-p01.jpg",
+      "bytes": 271552,
+      "sha256": "6d10e733a4ea29050863dd10be7c2e346952e2d51e261ee106e1c24ef9a78672"
+    },
+    {
+      "path": "site_export/content/media/correspondence/famous-letters/stephen-sondheim/1982-12-20-p01.jpg",
+      "bytes": 157058,
+      "sha256": "983605f10d982ff31c22056b717c8612a208c210ff63ddb6f38fef843ee315a1"
+    },
+    {
+      "path": "site_export/content/media/correspondence/famous-letters/stephen-sondheim/2001-11-08-p01.jpg",
+      "bytes": 291107,
+      "sha256": "352f25571e2db8c16596e6c50afa7ad2e99a69123baff96570c03b346f795b9e"
+    },
+    {
+      "path": "site_export/content/media/correspondence/famous-letters/stephen-sondheim/2001-11-08-p02.jpg",
+      "bytes": 219457,
+      "sha256": "50e1d66b1fb2cf3e19f37cf33541ccd858a16978b705484a7037bc5cac1293fe"
+    },
+    {
+      "path": "site_export/content/media/correspondence/famous-letters/yip-harburg/1980-08-18-p01.jpg",
+      "bytes": 523731,
+      "sha256": "8fcf6d8bebfbcb1a7b1dcdf62245821faaf2b76708afb95f6d3e208f5909f70e"
+    }
+  ]
+}

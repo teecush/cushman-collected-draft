@@ -2054,7 +2054,18 @@ h1 {
 .standalone-correspondence-card a {
   display: block;
   margin-top: 4px;
-  background: var(--cream);
+}
+
+.standalone-document-pages {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr));
+  gap: 12px;
+}
+
+.standalone-document-link {
+  padding: clamp(10px, 2vw, 22px);
+  border: 1px solid #c4bfb4;
+  background: #dedbd3;
 }
 
 .standalone-correspondence-card img {
@@ -2062,6 +2073,9 @@ h1 {
   width: 100%;
   max-height: 920px;
   object-fit: contain;
+  border: 1px solid #c9c6bf;
+  background: #fff;
+  box-shadow: 0 5px 14px rgb(42 38 31 / 18%);
 }
 
 .standalone-correspondence-card > p:last-child {
@@ -2076,6 +2090,56 @@ h1 {
   margin-top: 48px;
   border-top: 3px solid var(--ink);
   padding-top: 18px;
+}
+
+.famous-letters-collection {
+  scroll-margin-top: 112px;
+}
+
+.correspondent-index {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 22px 0 8px;
+}
+
+.correspondent-index a {
+  padding: 7px 10px;
+  border: 1px solid var(--rule);
+  color: var(--blue-dark);
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.correspondent-group {
+  scroll-margin-top: 112px;
+  margin-top: 34px;
+}
+
+.correspondent-group > h3 {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  margin: 0 0 14px;
+  border-bottom: 2px solid var(--ink);
+  padding-bottom: 8px;
+  font-size: clamp(25px, 3vw, 36px);
+}
+
+.correspondent-group > h3 span {
+  flex: 0 0 auto;
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.correspondent-group .standalone-correspondence-card h3 {
+  font-size: 20px;
 }
 
 @media (max-width: 720px) {

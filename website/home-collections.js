@@ -11,7 +11,8 @@ function element(tag,cls,text){const el=document.createElement(tag);el.className
 export function renderHomeCollections(root,curation,collections,{includePublications=true}={}){
   if(!root)return;
   const grid=element('div','home-collection-grid');
-  const specs=[...COLLECTIONS,...(includePublications?[{id:'publications',title:'Publications',href:'#index:publications'}]:[])];
+  const famousLetters={id:'famous-letters',title:'Famous Letters',href:'#correspondence:famous-letters'};
+  const specs=[COLLECTIONS[0],famousLetters,...COLLECTIONS.slice(1),...(includePublications?[{id:'publications',title:'Publications',href:'#index:publications'}]:[])];
   for(const spec of specs){
     const card=element('a','home-collection-card '+spec.id);card.href=spec.href||'#collection:'+spec.id;
     const visual=element('span','home-collection-visual');visual.setAttribute('aria-hidden','true');
@@ -23,6 +24,13 @@ export function renderHomeCollections(root,curation,collections,{includePublicat
         .sort((a,b)=>String(b.date||'').localeCompare(String(a.date||'')))
         .slice(0,3)
         .map(record=>({src:'../site_export/content/'+record.media[0].thumbnail_path}));
+    }
+    if(spec.id==='famous-letters'){
+      assets=[
+        {src:'../site_export/content/media/correspondence/famous-letters/stephen-sondheim/1972-06-15-p01.jpg'},
+        {src:'../site_export/content/media/correspondence/famous-letters/laurence-olivier/1976-11-15-p01.jpg'},
+        {src:'../site_export/content/media/correspondence/famous-letters/john-cleese/1981-09-15-p01.jpg'},
+      ];
     }
     if(spec.id==='television'){
       const shows=[...(collections?.get('television')?.items||[])].sort((a,b)=>b.records.length-a.records.length||a.title.localeCompare(b.title)).slice(0,3);
