@@ -13,31 +13,33 @@
     <link rel="apple-touch-icon" href="../apple-touch-icon.svg">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Rubik:wght@400;600;700;800;900&display=swap">
-    <link rel="stylesheet" href="./styles.css?v=173">
+    <link rel="stylesheet" href="./styles.css?v=174">
     <link rel="stylesheet" href="./catalog.css?v=194">
-    <link rel="stylesheet" href="./classic.css?v=194">
+    <link rel="stylesheet" href="./classic.css?v=233">
   </head>
   <body class="article-open">
     <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="site-header">
       <nav class="site-nav site-nav-left" id="siteNavLeft" aria-label="Primary navigation left">
-        <a class="nav-search" href="#search" aria-label="Search the archive"><span></span></a>
-        <a href="#section:current">Recent</a>
+        <a href="#search">Search</a>
         <div class="nav-folder nav-folder-wide">
           <a href="#section:browse">Browse</a>
           <div class="nav-dropdown nav-mega">
             <div class="nav-subfolder">
               <a href="#section:collections">Collections</a>
               <div class="nav-side-menu">
+                <a href="#collection:recent">Recent</a>
+                <a href="#correspondence:famous-letters">Special Letters</a>
                 <a href="#section:shakespeare">Shakespeare</a>
                 <a href="#collection:sondheim">Sondheim</a>
+                <a href="#collection:stoppard">Stoppard</a>
                 <a href="#collection:musicals">Musicals</a>
                 <a href="#collection:stratford">Stratford</a>
                 <a href="#collection:shaw">Shaw</a>
                 <a href="#collection:television">TV Reviews</a>
                 <a href="#collection:albums">Music Reviews</a>
                 <a href="#collection:books">Book Reviews</a>
-                <a href="#collection:profiles">Profiles &amp; Obits</a>
+                <a href="#collection:profiles">Artist Profiles</a>
                 <a href="#collection:early">Early Writing</a>
               </div>
             </div>
@@ -46,7 +48,6 @@
               <div class="nav-side-menu">
                 <a href="#works">All Works</a>
                 <a href="#people">All People</a>
-                <a href="#index:publications">Publications</a>
                 <a href="#places">Places</a>
               </div>
             </div>
@@ -72,21 +73,21 @@
       </a>
       <nav class="site-nav site-nav-right" id="siteNavRight" aria-label="Primary navigation right">
         <div class="nav-folder">
-          <a href="#explore">Explore</a>
+          <a href="#section:explore">Explore</a>
           <div class="nav-dropdown">
-            <a href="#explore">Article Explorer</a>
             <a href="#map">Map</a>
             <a href="#timeline">Timeline</a>
+            <a href="#explore">Article Explorer</a>
             <a href="#correspondence">Correspondence</a>
           </div>
         </div>
         <div class="nav-folder">
-          <a href="#about">About</a>
+          <a href="#section:about">About</a>
           <div class="nav-dropdown">
             <a href="#about">About Robert Cushman</a>
             <a href="#critics-circle">Critic's Circle</a>
             <a href="https://www.cushmancollected.com/checkout/donate?donatePageId=5c9b8016652dea361e5feb7d" target="_blank" rel="noopener">Donate</a>
-            <a href="#subscribe">Subscribe</a>
+            <a href="#contact">Contact &amp; Newsletter</a>
           </div>
         </div>
       </nav>
@@ -102,10 +103,25 @@
 
     <nav class="drawer" id="drawer" aria-label="Site navigation">
       <a href="#search">Search the Archive</a>
-      <a href="#section:current">Recent</a>
       <details>
         <summary>Browse</summary>
-        <a href="#section:collections">Collections</a>
+        <a href="#section:browse">Browse overview</a>
+        <details class="drawer-collection-menu">
+          <summary>Collections</summary>
+          <a href="#collection:recent">Recent</a>
+          <a href="#correspondence:famous-letters">Special Letters</a>
+          <a href="#section:shakespeare">Shakespeare</a>
+          <a href="#collection:sondheim">Sondheim</a>
+          <a href="#collection:stoppard">Stoppard</a>
+          <a href="#collection:musicals">Musicals</a>
+          <a href="#collection:stratford">Stratford</a>
+          <a href="#collection:shaw">Shaw</a>
+          <a href="#collection:television">TV Reviews</a>
+          <a href="#collection:albums">Music Reviews</a>
+          <a href="#collection:books">Book Reviews</a>
+          <a href="#collection:profiles">Artist Profiles</a>
+          <a href="#collection:early">Early Writing</a>
+        </details>
         <a href="#master-index:all-works">All Works</a>
         <a href="#master-index:all-people">All People</a>
         <a href="#index:publications">Publications</a>
@@ -113,17 +129,19 @@
       </details>
       <details>
         <summary>Explore</summary>
-        <a href="#explore">Article Explorer</a>
+        <a href="#section:explore">Explore overview</a>
         <a href="#map">Map</a>
         <a href="#timeline">Timeline</a>
+        <a href="#explore">Article Explorer</a>
         <a href="#correspondence">Correspondence</a>
       </details>
       <details>
         <summary>About</summary>
+        <a href="#section:about">About overview</a>
         <a href="#about">About Robert Cushman</a>
         <a href="#critics-circle">Critic's Circle</a>
         <a href="https://www.cushmancollected.com/checkout/donate?donatePageId=5c9b8016652dea361e5feb7d" target="_blank" rel="noopener">Donate</a>
-        <a href="#subscribe">Contact &amp; Newsletter</a>
+        <a href="#contact">Contact &amp; Newsletter</a>
       </details>
     </nav>
 
@@ -225,7 +243,11 @@
         </a>
       </section>
 
-      <section class="frontpage-directory" id="frontpageDirectory" aria-label="Primary site paths"></section>
+      <section class="browse-heading site-index-heading">
+        <h2>Site Index</h2>
+      </section>
+
+      <section class="frontpage-directory" id="frontpageDirectory" aria-label="Site index"></section>
 
       <section class="browse-heading home-secondary-nav" id="browse">
         <h2>Browse the Archive</h2>
@@ -248,7 +270,9 @@
       <section class="article-view" id="articleView">
         <a class="back-link" href="#archive">Back to archive</a>
         <article id="article"><time>Apr 5, 2014</time><h1>When Irish Guys Are Singin&#x27;; A Trio Of Magnificent Performances Ground Soulpepper&#x27;s</h1><p class="article-meta">Robert Cushman · National Post</p><div class="article-body" id="article-text"><p>Irishmen are possessed by an overwhelming passion to sing like their idols. So, at least, Irish drama would have us believe. Recently Mark O&#x27;Rowe&#x27;s Terminus introduced us to a fella who sold his soul to the devil in exchange for the ability to channel Bette Midler doing &quot;Wind Beneath My Wings.&quot; Soulpepper now brings us Tom Murphy&#x27;s 1983 play The Gigli Concert, one of whose characters takes less drastic measures in pursuit of a conceivably nobler ambition. He wants to sound like the classical Italian tenor who gives the play its name, and he seeks the assistance of a &quot;dynamatologist,&quot; a species of self-help merchant invented by the playwright and one who demands only cash in advance. That at least is the only tangible payment he wants. It turns out that the physician is as much in need of healing as the patient - probably more.</p>
-<p>The first thing to be said about the play, at least in Nancy Palk&#x27;s production, is that it is magnificently acted. Diego Matamoros, who has set his bar impossibly high in a string of previous performances, may even clear it as JPW King, the English-born dynamatologist who lives in one-room bachelor squalor and who admits to having had only one previous client. Stuart Hughes is a figure of dark-suited bowler-hatted menace as the aspiring tenor, a self-made building magnate in private life, whose name we never learn and whom the cast-list identifies only as &quot;Irish Man&quot;; King calls him &quot;Beniamillo,&quot; a presumably affectionate reduction of his hero&#x27;s first name of Beniamino. Irene Poole completes the cast as Mona, a buxom married woman from whom we learn that the J in JPW stands for Jimmy, and who seeks solace in his pull-out bed, attentions for which he seems insufficiently grateful. All three actors make what would seem to be indelible physical impressions at their first impressions, and then do superb jobs of demolishing their own facades. Thomas Murphy is best known in these parts for his first play A Whistle in the Dark, whose belated Canadian premiere, at the hands of Company Theatre, was one of the great events of Toronto&#x27;s last decade. That was a play with a clear and exciting storyline whose characters, in equal parts pitiless and pitiful, revealed themselves through their own violent actions. The Gigli Concert was written some 25 years later, and in the interim Murphy seems to have crossed over into his compatriot Brian Friel&#x27;s territory: more inward, more indirect. I have to say I prefer him in his earlier mode; this play has some rich writing but it suffers, in direct contrast to its transfixing predecessor, from a woolliness of construction. The play be may taken as a sustained riff on the term &quot;transference&quot;; the two men, apparently like their author, disdain psychiatry, though Jimmy at least is not above resorting to both its practitioners and their practices. He takes on Irish Man&#x27;s problems so that they blend into his own. The relationship between the two men, which is most of the play, takes place over the course of half-a-dozen sessions, but much of it seems to happen in the gaps between, assumed rather than demonstrated: They may be ships that pass in the night, but here they hardly even touch. This may conceivably be the fault of the production, which delights in giving the actors their individual heads, but I remember feeling much the same about the &#x27;83 original, which I happened to catch at that year&#x27;s Dublin Festival (and which was, as far as I can trust my memory, less spectacularly performed).</p>
+<p>The first thing to be said about the play, at least in Nancy Palk&#x27;s production, is that it is magnificently acted. Diego Matamoros, who has set his bar impossibly high in a string of previous performances, may even clear it as JPW King, the English-born dynamatologist who lives in one-room bachelor squalor and who admits to having had only one previous client. Stuart Hughes is a figure of dark-suited bowler-hatted menace as the aspiring tenor, a self-made building magnate in private life, whose name we never learn and whom the cast-list identifies only as &quot;Irish Man&quot;; King calls him &quot;Beniamillo,&quot; a presumably affectionate reduction of his hero&#x27;s first name of Beniamino. Irene Poole completes the cast as Mona, a buxom married woman from whom we learn that the J in JPW stands for Jimmy, and who seeks solace in his pull-out bed, attentions for which he seems insufficiently grateful.</p>
+<p>All three actors make what would seem to be indelible physical impressions at their first impressions, and then do superb jobs of demolishing their own facades. Thomas Murphy is best known in these parts for his first play A Whistle in the Dark, whose belated Canadian premiere, at the hands of Company Theatre, was one of the great events of Toronto&#x27;s last decade. That was a play with a clear and exciting storyline whose characters, in equal parts pitiless and pitiful, revealed themselves through their own violent actions. The Gigli Concert was written some 25 years later, and in the interim Murphy seems to have crossed over into his compatriot Brian Friel&#x27;s territory: more inward, more indirect. I have to say I prefer him in his earlier mode; this play has some rich writing but it suffers, in direct contrast to its transfixing predecessor, from a woolliness of construction.</p>
+<p>The play be may taken as a sustained riff on the term &quot;transference&quot;; the two men, apparently like their author, disdain psychiatry, though Jimmy at least is not above resorting to both its practitioners and their practices. He takes on Irish Man&#x27;s problems so that they blend into his own. The relationship between the two men, which is most of the play, takes place over the course of half-a-dozen sessions, but much of it seems to happen in the gaps between, assumed rather than demonstrated: They may be ships that pass in the night, but here they hardly even touch. This may conceivably be the fault of the production, which delights in giving the actors their individual heads, but I remember feeling much the same about the &#x27;83 original, which I happened to catch at that year&#x27;s Dublin Festival (and which was, as far as I can trust my memory, less spectacularly performed).</p>
 <p>Irish Man traces his love of singing, and some talent for it, to when he was Italian Boy, the youngest of a large family that emigrated early. So, at least, he says; none of the characters exactly qualifies as a reliable narrator. In the present tense, he is proud of his ability to stand on his own financial feet and seems to have a marriage that is troubled, but perhaps not irreparably.</p>
 <p>We get a closer look at JPW&#x27;s personal life, partly because the play happens at his place. It seems that &quot;Steve,&quot; the founder of dynamatology, whose picture is the sole adornment of Jimmy&#x27;s wall, split the scene long ago, leaving Jimmy his one remaining disciple. Jimmy claims, initially and unconvincingly, to be married; we see him making telephone contact with a lost idealized love; once, startlingly, he gets a call back.</p>
 <p>Both men drink heavily (who, in an Irish play, doesn&#x27;t?) but Jimmy is the further gone. Matamoros, red-cardiganed and white-undershirted, starts his day and the play in an alcoholic haze. His gait is a semicomatose trudge, a miraculous contrast to the spring that gets into his step when his spirits and his fortunes lift. He has a breakdown beyond anything I have seen him do before (he hasn&#x27;t, in other roles, been much of a crier) and he has a near-to-closing sequence that is, to use his own word in an ironically different context, &quot;transcendent.&quot; (The lighting helps). Its import, though, is ambiguous; I hope I&#x27;m not giving too much away in saying it depends on whether it&#x27;s the actor or the character who&#x27;s very good at miming to records. He has a smaller moment of triumph earlier when he puts on Hughes&#x27; hat, his opponent having been largely defined by his domineering dapperness; this Irish Man can threaten, alarmingly, and he can crack, movingly, but his physical guard hardly ever drops. Poole has far less to do than the two men, but her appearances are always welcome (actually they&#x27;re a relief ); inclined to push too hard in other roles, she&#x27;s beautifully contained in this one, with no loss of emotional impact - maybe the Irish accent is its own emollient. For two characters out of three, the play ends on a note of qualified hope, for the audience on one of enthusiasm tempered by frustration; one would like to have heard less, know more.</p>
@@ -287,6 +311,6 @@
       </section>
     </footer>
 
-    <script src="./app.js?v=194" type="module"></script>
+    <script src="./app.js?v=233" type="module"></script>
   </body>
 </html>

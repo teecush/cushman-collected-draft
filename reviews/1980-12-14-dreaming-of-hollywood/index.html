@@ -13,31 +13,33 @@
     <link rel="apple-touch-icon" href="../apple-touch-icon.svg">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Rubik:wght@400;600;700;800;900&display=swap">
-    <link rel="stylesheet" href="./styles.css?v=173">
+    <link rel="stylesheet" href="./styles.css?v=174">
     <link rel="stylesheet" href="./catalog.css?v=194">
-    <link rel="stylesheet" href="./classic.css?v=194">
+    <link rel="stylesheet" href="./classic.css?v=233">
   </head>
   <body class="article-open">
     <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="site-header">
       <nav class="site-nav site-nav-left" id="siteNavLeft" aria-label="Primary navigation left">
-        <a class="nav-search" href="#search" aria-label="Search the archive"><span></span></a>
-        <a href="#section:current">Recent</a>
+        <a href="#search">Search</a>
         <div class="nav-folder nav-folder-wide">
           <a href="#section:browse">Browse</a>
           <div class="nav-dropdown nav-mega">
             <div class="nav-subfolder">
               <a href="#section:collections">Collections</a>
               <div class="nav-side-menu">
+                <a href="#collection:recent">Recent</a>
+                <a href="#correspondence:famous-letters">Special Letters</a>
                 <a href="#section:shakespeare">Shakespeare</a>
                 <a href="#collection:sondheim">Sondheim</a>
+                <a href="#collection:stoppard">Stoppard</a>
                 <a href="#collection:musicals">Musicals</a>
                 <a href="#collection:stratford">Stratford</a>
                 <a href="#collection:shaw">Shaw</a>
                 <a href="#collection:television">TV Reviews</a>
                 <a href="#collection:albums">Music Reviews</a>
                 <a href="#collection:books">Book Reviews</a>
-                <a href="#collection:profiles">Profiles &amp; Obits</a>
+                <a href="#collection:profiles">Artist Profiles</a>
                 <a href="#collection:early">Early Writing</a>
               </div>
             </div>
@@ -46,7 +48,6 @@
               <div class="nav-side-menu">
                 <a href="#works">All Works</a>
                 <a href="#people">All People</a>
-                <a href="#index:publications">Publications</a>
                 <a href="#places">Places</a>
               </div>
             </div>
@@ -72,21 +73,21 @@
       </a>
       <nav class="site-nav site-nav-right" id="siteNavRight" aria-label="Primary navigation right">
         <div class="nav-folder">
-          <a href="#explore">Explore</a>
+          <a href="#section:explore">Explore</a>
           <div class="nav-dropdown">
-            <a href="#explore">Article Explorer</a>
             <a href="#map">Map</a>
             <a href="#timeline">Timeline</a>
+            <a href="#explore">Article Explorer</a>
             <a href="#correspondence">Correspondence</a>
           </div>
         </div>
         <div class="nav-folder">
-          <a href="#about">About</a>
+          <a href="#section:about">About</a>
           <div class="nav-dropdown">
             <a href="#about">About Robert Cushman</a>
             <a href="#critics-circle">Critic's Circle</a>
             <a href="https://www.cushmancollected.com/checkout/donate?donatePageId=5c9b8016652dea361e5feb7d" target="_blank" rel="noopener">Donate</a>
-            <a href="#subscribe">Subscribe</a>
+            <a href="#contact">Contact &amp; Newsletter</a>
           </div>
         </div>
       </nav>
@@ -102,10 +103,25 @@
 
     <nav class="drawer" id="drawer" aria-label="Site navigation">
       <a href="#search">Search the Archive</a>
-      <a href="#section:current">Recent</a>
       <details>
         <summary>Browse</summary>
-        <a href="#section:collections">Collections</a>
+        <a href="#section:browse">Browse overview</a>
+        <details class="drawer-collection-menu">
+          <summary>Collections</summary>
+          <a href="#collection:recent">Recent</a>
+          <a href="#correspondence:famous-letters">Special Letters</a>
+          <a href="#section:shakespeare">Shakespeare</a>
+          <a href="#collection:sondheim">Sondheim</a>
+          <a href="#collection:stoppard">Stoppard</a>
+          <a href="#collection:musicals">Musicals</a>
+          <a href="#collection:stratford">Stratford</a>
+          <a href="#collection:shaw">Shaw</a>
+          <a href="#collection:television">TV Reviews</a>
+          <a href="#collection:albums">Music Reviews</a>
+          <a href="#collection:books">Book Reviews</a>
+          <a href="#collection:profiles">Artist Profiles</a>
+          <a href="#collection:early">Early Writing</a>
+        </details>
         <a href="#master-index:all-works">All Works</a>
         <a href="#master-index:all-people">All People</a>
         <a href="#index:publications">Publications</a>
@@ -113,17 +129,19 @@
       </details>
       <details>
         <summary>Explore</summary>
-        <a href="#explore">Article Explorer</a>
+        <a href="#section:explore">Explore overview</a>
         <a href="#map">Map</a>
         <a href="#timeline">Timeline</a>
+        <a href="#explore">Article Explorer</a>
         <a href="#correspondence">Correspondence</a>
       </details>
       <details>
         <summary>About</summary>
+        <a href="#section:about">About overview</a>
         <a href="#about">About Robert Cushman</a>
         <a href="#critics-circle">Critic's Circle</a>
         <a href="https://www.cushmancollected.com/checkout/donate?donatePageId=5c9b8016652dea361e5feb7d" target="_blank" rel="noopener">Donate</a>
-        <a href="#subscribe">Contact &amp; Newsletter</a>
+        <a href="#contact">Contact &amp; Newsletter</a>
       </details>
     </nav>
 
@@ -225,7 +243,11 @@
         </a>
       </section>
 
-      <section class="frontpage-directory" id="frontpageDirectory" aria-label="Primary site paths"></section>
+      <section class="browse-heading site-index-heading">
+        <h2>Site Index</h2>
+      </section>
+
+      <section class="frontpage-directory" id="frontpageDirectory" aria-label="Site index"></section>
 
       <section class="browse-heading home-secondary-nav" id="browse">
         <h2>Browse the Archive</h2>
@@ -261,7 +283,10 @@
 <p>Gigi (Haymarket, Leicester) is the stage version of the film musical of the dramatisation of Colette&#x27;s novel. The first two stages are perhaps beyond recall, but the transition from film to theatre is always threatening. Stage performances, however good, can be replaced; but we know that Leslie Caron, Louis Jourdan, Hermione Gingold, Maurice Chevalier are still there on celluloid, and almost impossible to dislodge. Only one scene here imposes itself; Betty Marsden and Hugh Paddick sing I Remember It Well (as, with all their radio years together, they presumably do) with leisured, affectionate grace.</p>
 <p>Everywhere else the production hurries, as if trying to catch some unattainable bus. There is style in Terry Parsons&#x27;s settings but nowhere else; and on stage this American tourist&#x27;s view of Paris -- so elegant, so vivacious, so naughty -- is cloying. (The Belle Epoque that Feydeau caricatured had the right idea.) The film got by uplifting views of fountains and statues; having David Firth walk round a post is no real substitute. There is one interesting addition to the score: a song of surrender for Gigi (Janet Shaw), the reluctant courtesan, that may be the most adventurous number Alan Jay Lerner and Frederick Loewe have written.</p>
 <p><em> </em> *</p>
-<p>On the bank of London&#x27;s river Stands a theatre built of concrete, Built of louring, greying concrete; Where, to greet the festive season, Actors who appeared but lately Dressed as Celts, undressed as Druids Now have changed their pigmentation, Now assumed another warpaint. (Body makeup by Max Factor? Hard to tell; there is no credit. Could this be the Hidden Factor?) On they run in crouching posture, Bending double, at the double; (Which is quite a trick to master, Guaranteed to put your back out); Tell the tale of Hiawatha, From the pen of Henry Wadsworth, He the Fellow, he the Long One; Though no longer than his poem, Written in trochaic metre With no rhyme but lots of rhythm, As is known to every schoolboy (Though it seems -- I blush to say it -- Not to every theatre critic); And no longer than this sentence. (Can you hear me, Bernard Levin?) Three the stages in this complex, In this highly complex complex; And the play of Hiawatha, Every afternoon and morning, Currently adorns the largest: The Olivier they named it, Named it for our greatest actor, He the baron, late of Brighton, He the Moor and Jew of Venice, Star of stage and magic lantern Where he plays sadistic dentist Or -- I cannot wait to see it -- Ailing father of Al Jolson In remake of early talkie. Very big and grand this actor; Very big and grand his theatre; And -- despite a smallish cast-list And, I&#x27;d guess, a smallish cost-list -- This production big and grand too. The adaptor and director -- First name Michael, last Bogdanov -- Specialises in such ventures: Mystic poems, active poems, Told for children but not childish. Some reviewers brought their offspring; Some brought other people&#x27;s offspring. Your reporter, Scrooge incarnate, Sat without a young companion; Noted, surly but approving, How impeccable the silence, How they watched and did not chatter, How they listened without coughing. Plot was not the main attraction; For the tale was episodic, Leaving you to muse and wonder Why his tribe loved Hiawatha, Just what made him so important. Spectacle it was that held them, From the farandole of kerchiefs -- Blue and green and white and yellow -- Through the fingers of the West Wind (He was Hiawatha&#x27;s papa) To the figure of the white prophet, Posed against a fiery circle, Gun in hand and set to use it. (There&#x27;s a thought to send you home with.) So to Marty Flood, designer. Commendations for the teepee That enveloped all the action, Gave a focus and a meaning. Hail the Great Bear, Mishe Mokwa, Black and huge and slain in combat (Though if we were meant to triumph In the death of one so furry, They don&#x27;t know the British public:) There was joking, there was dancing, And a pretty Minnehaha, She the interest romantic; Plus the odd interpolation -- Nothing though to vex the spirit. &#x27;Hiya, Minnie.&#x27; &#x27;Hiya, Watha.&#x27; This variety of crassness Was conspicuous by absence. I&#x27;m surprised you raised the question. Let me end with something joyful. Merry Christmas. No, that&#x27;s next week. Hang this up outside the theatre: I enjoyed it. Honest Injun.</p></div></article>
+<p>On the bank of London&#x27;s river Stands a theatre built of concrete, Built of louring, greying concrete; Where, to greet the festive season, Actors who appeared but lately Dressed as Celts, undressed as Druids Now have changed their pigmentation, Now assumed another warpaint. (Body makeup by Max Factor? Hard to tell; there is no credit. Could this be the Hidden Factor?) On they run in crouching posture, Bending double, at the double; (Which is quite a trick to master, Guaranteed to put your back out); Tell the tale of Hiawatha, From the pen of Henry Wadsworth, He the Fellow, he the Long One; Though no longer than his poem, Written in trochaic metre With no rhyme but lots of rhythm, As is known to every schoolboy (Though it seems -- I blush to say it -- Not to every theatre critic); And no longer than this sentence.</p>
+<p>(Can you hear me, Bernard Levin?) Three the stages in this complex, In this highly complex complex; And the play of Hiawatha, Every afternoon and morning, Currently adorns the largest: The Olivier they named it, Named it for our greatest actor, He the baron, late of Brighton, He the Moor and Jew of Venice, Star of stage and magic lantern Where he plays sadistic dentist Or -- I cannot wait to see it -- Ailing father of Al Jolson In remake of early talkie. Very big and grand this actor; Very big and grand his theatre; And -- despite a smallish cast-list And, I&#x27;d guess, a smallish cost-list -- This production big and grand too. The adaptor and director -- First name Michael, last Bogdanov -- Specialises in such ventures: Mystic poems, active poems, Told for children but not childish. Some reviewers brought their offspring; Some brought other people&#x27;s offspring.</p>
+<p>Your reporter, Scrooge incarnate, Sat without a young companion; Noted, surly but approving, How impeccable the silence, How they watched and did not chatter, How they listened without coughing. Plot was not the main attraction; For the tale was episodic, Leaving you to muse and wonder Why his tribe loved Hiawatha, Just what made him so important. Spectacle it was that held them, From the farandole of kerchiefs -- Blue and green and white and yellow -- Through the fingers of the West Wind (He was Hiawatha&#x27;s papa) To the figure of the white prophet, Posed against a fiery circle, Gun in hand and set to use it. (There&#x27;s a thought to send you home with.) So to Marty Flood, designer. Commendations for the teepee That enveloped all the action, Gave a focus and a meaning. Hail the Great Bear, Mishe Mokwa, Black and huge and slain in combat (Though if we were meant to triumph In the death of one so furry, They don&#x27;t know the British public:) There was joking, there was dancing, And a pretty Minnehaha, She the interest romantic; Plus the odd interpolation -- Nothing though to vex the spirit.</p>
+<p>&#x27;Hiya, Minnie.&#x27; &#x27;Hiya, Watha.&#x27; This variety of crassness Was conspicuous by absence. I&#x27;m surprised you raised the question. Let me end with something joyful. Merry Christmas. No, that&#x27;s next week. Hang this up outside the theatre: I enjoyed it. Honest Injun.</p></div></article>
       </section>
 
       <section class="index-view" id="indexView" hidden>
@@ -295,6 +320,6 @@
       </section>
     </footer>
 
-    <script src="./app.js?v=194" type="module"></script>
+    <script src="./app.js?v=233" type="module"></script>
   </body>
 </html>

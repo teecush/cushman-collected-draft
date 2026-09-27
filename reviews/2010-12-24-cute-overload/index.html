@@ -13,31 +13,33 @@
     <link rel="apple-touch-icon" href="../apple-touch-icon.svg">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Rubik:wght@400;600;700;800;900&display=swap">
-    <link rel="stylesheet" href="./styles.css?v=173">
+    <link rel="stylesheet" href="./styles.css?v=174">
     <link rel="stylesheet" href="./catalog.css?v=194">
-    <link rel="stylesheet" href="./classic.css?v=194">
+    <link rel="stylesheet" href="./classic.css?v=233">
   </head>
   <body class="article-open">
     <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="site-header">
       <nav class="site-nav site-nav-left" id="siteNavLeft" aria-label="Primary navigation left">
-        <a class="nav-search" href="#search" aria-label="Search the archive"><span></span></a>
-        <a href="#section:current">Recent</a>
+        <a href="#search">Search</a>
         <div class="nav-folder nav-folder-wide">
           <a href="#section:browse">Browse</a>
           <div class="nav-dropdown nav-mega">
             <div class="nav-subfolder">
               <a href="#section:collections">Collections</a>
               <div class="nav-side-menu">
+                <a href="#collection:recent">Recent</a>
+                <a href="#correspondence:famous-letters">Special Letters</a>
                 <a href="#section:shakespeare">Shakespeare</a>
                 <a href="#collection:sondheim">Sondheim</a>
+                <a href="#collection:stoppard">Stoppard</a>
                 <a href="#collection:musicals">Musicals</a>
                 <a href="#collection:stratford">Stratford</a>
                 <a href="#collection:shaw">Shaw</a>
                 <a href="#collection:television">TV Reviews</a>
                 <a href="#collection:albums">Music Reviews</a>
                 <a href="#collection:books">Book Reviews</a>
-                <a href="#collection:profiles">Profiles &amp; Obits</a>
+                <a href="#collection:profiles">Artist Profiles</a>
                 <a href="#collection:early">Early Writing</a>
               </div>
             </div>
@@ -46,7 +48,6 @@
               <div class="nav-side-menu">
                 <a href="#works">All Works</a>
                 <a href="#people">All People</a>
-                <a href="#index:publications">Publications</a>
                 <a href="#places">Places</a>
               </div>
             </div>
@@ -72,21 +73,21 @@
       </a>
       <nav class="site-nav site-nav-right" id="siteNavRight" aria-label="Primary navigation right">
         <div class="nav-folder">
-          <a href="#explore">Explore</a>
+          <a href="#section:explore">Explore</a>
           <div class="nav-dropdown">
-            <a href="#explore">Article Explorer</a>
             <a href="#map">Map</a>
             <a href="#timeline">Timeline</a>
+            <a href="#explore">Article Explorer</a>
             <a href="#correspondence">Correspondence</a>
           </div>
         </div>
         <div class="nav-folder">
-          <a href="#about">About</a>
+          <a href="#section:about">About</a>
           <div class="nav-dropdown">
             <a href="#about">About Robert Cushman</a>
             <a href="#critics-circle">Critic's Circle</a>
             <a href="https://www.cushmancollected.com/checkout/donate?donatePageId=5c9b8016652dea361e5feb7d" target="_blank" rel="noopener">Donate</a>
-            <a href="#subscribe">Subscribe</a>
+            <a href="#contact">Contact &amp; Newsletter</a>
           </div>
         </div>
       </nav>
@@ -102,10 +103,25 @@
 
     <nav class="drawer" id="drawer" aria-label="Site navigation">
       <a href="#search">Search the Archive</a>
-      <a href="#section:current">Recent</a>
       <details>
         <summary>Browse</summary>
-        <a href="#section:collections">Collections</a>
+        <a href="#section:browse">Browse overview</a>
+        <details class="drawer-collection-menu">
+          <summary>Collections</summary>
+          <a href="#collection:recent">Recent</a>
+          <a href="#correspondence:famous-letters">Special Letters</a>
+          <a href="#section:shakespeare">Shakespeare</a>
+          <a href="#collection:sondheim">Sondheim</a>
+          <a href="#collection:stoppard">Stoppard</a>
+          <a href="#collection:musicals">Musicals</a>
+          <a href="#collection:stratford">Stratford</a>
+          <a href="#collection:shaw">Shaw</a>
+          <a href="#collection:television">TV Reviews</a>
+          <a href="#collection:albums">Music Reviews</a>
+          <a href="#collection:books">Book Reviews</a>
+          <a href="#collection:profiles">Artist Profiles</a>
+          <a href="#collection:early">Early Writing</a>
+        </details>
         <a href="#master-index:all-works">All Works</a>
         <a href="#master-index:all-people">All People</a>
         <a href="#index:publications">Publications</a>
@@ -113,17 +129,19 @@
       </details>
       <details>
         <summary>Explore</summary>
-        <a href="#explore">Article Explorer</a>
+        <a href="#section:explore">Explore overview</a>
         <a href="#map">Map</a>
         <a href="#timeline">Timeline</a>
+        <a href="#explore">Article Explorer</a>
         <a href="#correspondence">Correspondence</a>
       </details>
       <details>
         <summary>About</summary>
+        <a href="#section:about">About overview</a>
         <a href="#about">About Robert Cushman</a>
         <a href="#critics-circle">Critic's Circle</a>
         <a href="https://www.cushmancollected.com/checkout/donate?donatePageId=5c9b8016652dea361e5feb7d" target="_blank" rel="noopener">Donate</a>
-        <a href="#subscribe">Contact &amp; Newsletter</a>
+        <a href="#contact">Contact &amp; Newsletter</a>
       </details>
     </nav>
 
@@ -225,7 +243,11 @@
         </a>
       </section>
 
-      <section class="frontpage-directory" id="frontpageDirectory" aria-label="Primary site paths"></section>
+      <section class="browse-heading site-index-heading">
+        <h2>Site Index</h2>
+      </section>
+
+      <section class="frontpage-directory" id="frontpageDirectory" aria-label="Site index"></section>
 
       <section class="browse-heading home-secondary-nav" id="browse">
         <h2>Browse the Archive</h2>
@@ -250,7 +272,9 @@
         <article id="article"><time>Dec 24, 2010</time><h1>Cute Overload</h1><p class="article-meta">Robert Cushman · National Post</p><div class="article-body" id="article-text"><p>Just like everybody ought to have a maid, everybody ought to have a favourite number in A Funny Thing Happened on the Way to the Forum. It&#x27;s a tough decision, given the delights of Stephen Sondheims score, but mine has always, in fact, been Everybody Ought To Have a Maid. This elegantly lascivious celebration -- a cumulative quartet that adds a performer with every refrain -- is almost guaranteed to delight. It did so in last years Stratford production, but in that production&#x27;s transfer to the Canon, it doesn&#x27;t so much stop the show as stop it dead. The whispering game thats been inserted between each chorus, and that used to build tension by delaying it, has now swollen to destructive proportions. Im no metronome, but the actual musical tempo seems to have</p>
 <p>slackened disastrously, too; while the opening up of the number to include the corps of courtesans is now, more than ever, the height of unnecessary. The number has nothing to do with them. It&#x27;s about four low comedians -- four dirty youngish-to-old men -- connecting and conniving with the audience. That, in various formations, is how this Broadway tribute, both to old Roman comedy and old American burlesque, is meant to work. Even when, as in this case, a number is irrelevant to the plot, it&#x27;s planned, delightful irrelevance. The show is a brilliantly economical piece of work. The last thing it needs is bloat. It gets a lot of it here.</p>
 <p>Des McAnuffs production, as at Stratford, works when it trusts the material and doesnt when it doesn&#x27;t, but the level of trust seems to have declined precipitously. Two actors now alternate in the leading role of Pseudolus, the slave who undertakes to unite his young master to the virginal courtesan next door, in exchange for his own freedom. I saw Sean Cullen, who at Stratford took over from Bruce Dow when Dow became ill, and who by and large looks better than he sounds. Pseudolus drives the plot, coming up with a new scheme every minute; and whether he&#x27;s doing it for fun (as in Plautus, the Roman source) or for liberty (as in Burt Shevelove and Larry Gelbart, the American adaptors), he needs urgency. Cullen doesnt have it, or much connection with the other actors or the very funny text, so the show drags and dawdles. What he does, by way of an assumed speech impediment and a muffler, to the scripts most inspired exchange ( You asked for a soothsayer? &quot;How did you know that?&quot; &quot;I&#x27;d be a fine soothsayer if I didn&#x27;t&quot;) deserves condign punishment: maybe, as Pseudolus himself suggests in another context, being trampled to death by a female water-buffalo in heat. On the other hand -- and feet, and the rest of him -- he wears a Roman tunic as to the manner born, or enslaved, and physically he can be inspired. One applauded his elaborate mime of pretended death even while wishing it to be over so we could get back to the show. Hes a nimble dancer, too; his dainty stepping in Free (a number thats Wayne Cilento&#x27;s best contribution as choreographer) is delightful.</p>
-<p>He shares the routine with Mike Nadajewski who plays Hero, the hero, opposite the equally enchanting Philia of Chilina Kennedy. These two -- he gauche and gobsmacked, she dumb and demure -- apart from being terrific singers, came close last year to being funnier than any of the designated comics. This year they truly are, partly owing to the absence of Stephen Ouimette, a genius clown. He&#x27;s been replaced as Hysterium-slave-of-slaves by Steven Sutcliffe whos a very good actor, which isnt quite the same thing. He&#x27;s also, at the risk of offending previous Hysteria, too good looking for the role; when he&#x27;s forced into drag in the second act, theres nothing grotesque about it, hence nothing very hilarious. Randy Hughson as old man Senex is efficient and endearing, if not ideally cast; Brian Tree as other-old-man Erronius is ideally cast, and his seven increasingly exhausted circuits around the seven hills of Rome punctuate the action with the charming unexpectedness thats expected of them. Cliff Saunders&#x27; Lycus, buyer and seller of the flesh of beautiful women (for those of you who have no interest in pirates), wafts through the action, more inexplicably than ever; he&#x27;s supposed to be a grasping merchant, not some kind of sprite. Dan Chameroys Miles Gloriosus is still undercut by the productions determination to make him look a fool before he can do it for himself, but he fights back more authoritatively than before. He&#x27;s also the first Miles I&#x27;ve seen young enough to be almost credible as Philias twin. Damn, Ive given away the denouement, but I don&#x27;t think you&#x27;ll hold it against me. And, to be both fair and honest, this production is the first in which Ive been able to follow all the twists, involving the transfer of a ring from one finger to another to another, that makes the revelations possible. John Arnones set does all kinds of cute things, none of them necessary or even helpful. Forum is a farce, one of the best, and farces aren&#x27;t meant to do cute. They&#x27;re meant to mean business.</p>
+<p>He shares the routine with Mike Nadajewski who plays Hero, the hero, opposite the equally enchanting Philia of Chilina Kennedy. These two -- he gauche and gobsmacked, she dumb and demure -- apart from being terrific singers, came close last year to being funnier than any of the designated comics. This year they truly are, partly owing to the absence of Stephen Ouimette, a genius clown. He&#x27;s been replaced as Hysterium-slave-of-slaves by Steven Sutcliffe whos a very good actor, which isnt quite the same thing. He&#x27;s also, at the risk of offending previous Hysteria, too good looking for the role; when he&#x27;s forced into drag in the second act, theres nothing grotesque about it, hence nothing very hilarious. Randy Hughson as old man Senex is efficient and endearing, if not ideally cast; Brian Tree as other-old-man Erronius is ideally cast, and his seven increasingly exhausted circuits around the seven hills of Rome punctuate the action with the charming unexpectedness thats expected of them.</p>
+<p>Cliff Saunders&#x27; Lycus, buyer and seller of the flesh of beautiful women (for those of you who have no interest in pirates), wafts through the action, more inexplicably than ever; he&#x27;s supposed to be a grasping merchant, not some kind of sprite. Dan Chameroys Miles Gloriosus is still undercut by the productions determination to make him look a fool before he can do it for himself, but he fights back more authoritatively than before. He&#x27;s also the first Miles I&#x27;ve seen young enough to be almost credible as Philias twin. Damn, Ive given away the denouement, but I don&#x27;t think you&#x27;ll hold it against me. And, to be both fair and honest, this production is the first in which Ive been able to follow all the twists, involving the transfer of a ring from one finger to another to another, that makes the revelations possible.</p>
+<p>John Arnones set does all kinds of cute things, none of them necessary or even helpful. Forum is a farce, one of the best, and farces aren&#x27;t meant to do cute. They&#x27;re meant to mean business.</p>
 <p>- A Funny Thing Happened on the Way to the Forum runs through Jan. 16 at the Canon Theatre. Visit mirvish.comor call 416-872-1212 for ticket information. robert.cushman@hotmail.com</p>
 <p>Color Photo: Cylla Von Tiedemann / Pseudolus, played by Bruce Dow, takes life by the teeth.;; Caption:</p></div></article>
       </section>
@@ -286,6 +310,6 @@
       </section>
     </footer>
 
-    <script src="./app.js?v=194" type="module"></script>
+    <script src="./app.js?v=233" type="module"></script>
   </body>
 </html>

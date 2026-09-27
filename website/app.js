@@ -1,10 +1,10 @@
-import {renderHomeCollections} from './home-collections.js?v=215';
-import {spotlightRecord} from './collections-engine.js?v=213';
-import { createCatalog } from "./catalog.js?v=216";
+import {renderHomeCollections} from './home-collections.js?v=233';
+import {spotlightRecord} from './collections-engine.js?v=233';
+import { createCatalog } from "./catalog.js?v=233";
 import { FEATURES } from "./features.js?v=173";
-const DATA_URL = new URL("../site_export/data/catalog.json?v=207", import.meta.url);
+const DATA_URL = new URL("../site_export/data/catalog.json?v=233", import.meta.url);
 const ALIASES_URL = new URL("../site_export/data/route_aliases.json?v=1", import.meta.url);
-const STANDALONE_CORRESPONDENCE_URL = new URL("../site_export/data/standalone_correspondence.json?v=5", import.meta.url);
+const STANDALONE_CORRESPONDENCE_URL = new URL("../site_export/data/standalone_correspondence.json?v=233", import.meta.url);
 const CONTENT_ROOT = new URL("../site_export/content/reviews/", import.meta.url);
 const MEDIA_ASSET_VERSION = "site-audit-20260909";
 const PAGE_SIZE = 36;
@@ -2153,7 +2153,7 @@ function landingItems(kind) {
 
   if (kind === "collections") {
     return [
-      landingItem("Famous Letters", "#correspondence:famous-letters", 37, "Personal letters, notes, and a telegram sent to Robert Cushman by leading figures in theatre, film, and musical theatre.", [], "letters"),
+      landingItem("Special Letters collection", "#correspondence:famous-letters", 37, "Personal letters, notes, and a telegram sent to Robert Cushman by leading figures in theatre, film, and musical theatre.", [], "letters"),
       landingItem("Shakespeare", "#section:shakespeare", countForTile("Shakespeare"), tileDescription("Shakespeare"), explicitShakespeareRecords()),
       ...SECONDARY_COLLECTION_TILES.map((title) => {
         const collection = collectionFromSlug(slugForCollection(title));
@@ -2279,7 +2279,7 @@ function renderCurrentLanding() {
 
 function renderShakespeareLanding() {
   const title = document.createElement("h1");
-  title.textContent = "Shakespeare";
+  title.textContent = "Shakespeare collection";
   const count = document.createElement("p");
   count.className = "index-count";
   count.textContent = countUnitText(countForTile("Shakespeare"), "article", "articles");
@@ -2349,11 +2349,13 @@ function landingCard(item) {
 
 function renderFrontpageDirectory() {
   const collectionLinks = [
-    { label: "Shakespeare Collection", href: "#section:shakespeare", count: countForTile("Shakespeare"), featured: true },
-    { label: "Canadian Collection", href: "#browse-collection:canadian", count: collectionCount("The Canadian Collection") },
-    { label: "UK Collection", href: "#browse-collection:uk", count: collectionCount("UK Collection") },
-    { label: "Stratford Collection", href: "#browse-collection:stratford", count: collectionCount("The Stratford Collection") },
-    { label: "Shaw Collection", href: "#browse-collection:shaw", count: collectionCount("The Shaw Collection") },
+    ...[...catalog.getCollections().values()].map((collection) => ({
+      label: collection.title,
+      href: collection.href || `#collection:${collection.id}`,
+      count: collection.records.length,
+      featured: collection.id === "shakespeare",
+    })),
+    {label:"Special Letters collection",href:"#correspondence:famous-letters",count:37},
   ];
 
   const indexLinks = MASTER_INDEX_FILTERS
@@ -2400,9 +2402,9 @@ function renderFrontpageDirectory() {
     {
       id: "indexStart",
       className: "frontpage-section",
-      label: "Master index",
-      title: "Works & People",
-      titleHref: "#master-index",
+      label: "Alphabetical browsing",
+      title: "Indexes",
+      titleHref: "#section:indexes",
       links: homepageIndexLabels
         .map((label) => indexLinks.find((item) => item.label === label))
         .filter(Boolean),
@@ -2415,21 +2417,23 @@ function renderFrontpageDirectory() {
       title: "Collections",
       titleHref: "#section:collections",
       links: collectionLinks,
-      limit: 6,
+      limit: collectionLinks.length,
     },
     {
       id: "publicationStart",
       className: "frontpage-section",
-      label: "Map & sources",
+      label: "Tools & sources",
       title: "Explore",
-      titleHref: "#map",
+      titleHref: "#section:explore",
       links: [
         { label: "Archive Map", href: "#map", count: venueMapPoints().length, featured: true },
-        { label: "Chronology", href: "#section:chronology", count: state.records.length },
+        { label: "Timeline", href: "#timeline", count: state.records.length },
+        { label: "Article Explorer", href: "#explore", count: state.records.length },
+        { label: "Correspondence", href: "#correspondence", count: state.standaloneCorrespondence.length },
         { label: "Publications", href: "#index:publications", count: publicationLinks.length },
         ...publicationLinks.slice(0, 3),
       ],
-      limit: 7,
+      limit: 8,
     },
   ];
 
@@ -3170,13 +3174,14 @@ function renderExploreToolV2() {
   };
 
   const filteredRecords = () => path.reduce((records, step) => records.filter((record) => step.test(record)), state.records);
+  const currentCollections = [...catalog.getCollections().values()].filter((collection) => collection.records.length);
   const valuesForBranch = (records, branch) => {
     const counts = new Map();
     records.forEach((record) => {
       let values = [];
       if (branch === "type") values = [typeLabel(record)];
       if (branch === "era") values = [record.year ? `${String(record.year).slice(0, 3)}0s` : ""];
-      if (branch === "collection") values = collectionNames(record);
+      if (branch === "collection") values = currentCollections.filter((collection) => collection.recordIds.has(record.slug)).map((collection) => collection.title);
       if (branch === "company") values = entityValues(record, "companies");
       if (branch === "city") values = entityValues(record, "cities");
       if (branch === "production") values = entityValues(record, "productions");
@@ -3191,7 +3196,7 @@ function renderExploreToolV2() {
         test: (record) => {
           if (branch === "type") return typeLabel(record) === label;
           if (branch === "era") return record.year && `${String(record.year).slice(0, 3)}0s` === label;
-          if (branch === "collection") return collectionNames(record).includes(label);
+          if (branch === "collection") return currentCollections.find((collection) => collection.title === label)?.recordIds.has(record.slug) || false;
           if (branch === "company") return entityValues(record, "companies").includes(label);
           if (branch === "city") return entityValues(record, "cities").includes(label);
           if (branch === "production") return entityValues(record, "productions").includes(label);
@@ -3219,6 +3224,7 @@ function renderExploreToolV2() {
     const button = document.createElement("button");
     button.type = "button";
     button.className = `explore-pill explore-pill-${options.color ?? 0}${options.active ? " is-active" : ""}`.trim();
+    button.disabled = Boolean(options.disabled);
     const label = document.createElement("span");
     label.textContent = item.label;
     const count = document.createElement("em");
@@ -3277,12 +3283,13 @@ function renderExploreToolV2() {
       renderTree();
     }, { color: 0, active: !path.length }));
     branches.forEach((branch, index) => {
-      startColumn.append(makePill({ label: branch.label, count: state.records.length }, () => {
+      const available = valuesForBranch(records, branch.key);
+      startColumn.append(makePill({ label: branch.label, count: records.length }, () => {
         openBranch = branch.key;
         pendingScroll = "options";
         pushHistory();
         renderTree();
-      }, { color: index, active: !path.length && openBranch === branch.key }));
+      }, { color: index, active: openBranch === branch.key, disabled: !available.length }));
     });
     columns.append(startColumn);
 
@@ -5154,7 +5161,7 @@ function articleCorrespondenceSection(record) {
   return section;
 }
 
-function renderCorrespondencePage({ focusSender = "" } = {}) {
+function renderCorrespondencePage({ focusSender = "", focusCollection = "" } = {}) {
   const entries = state.records
     .flatMap((record) => correspondenceItems(record).map((item) => ({ record, item })))
     .sort((a, b) => String(a.item.date || a.record.date || "").localeCompare(String(b.item.date || b.record.date || "")));
@@ -5163,30 +5170,53 @@ function renderCorrespondencePage({ focusSender = "" } = {}) {
   const shellBack = els.indexView.querySelector(":scope > .back-link");
   if (shellBack) {
     shellBack.href = focusSender ? "#correspondence:famous-letters" : "#home";
-    shellBack.textContent = focusSender ? "Back to Famous Letters" : "Back to home";
+    shellBack.textContent = focusSender ? "Back to Special Letters" : "Back to home";
   }
   const back = document.createElement("a");
   back.className = "back-link";
-  back.href = focusSender ? "#correspondence:famous-letters" : "#section:browse";
-  back.textContent = focusSender ? "Back to Famous Letters" : "Back to browse";
+  back.href = focusSender ? "#correspondence:famous-letters" : focusCollection ? "#home" : "#section:browse";
+  back.textContent = focusSender ? "Back to Special Letters" : focusCollection ? "Back to home" : "Back to browse";
   const title = document.createElement("h1");
-  title.textContent = focusSender ? `${focusSender} Letters` : "Correspondence";
+  title.textContent = focusSender ? "Sondheim Letters collection" : focusCollection ? "Special Letters collection" : "Correspondence";
   const intro = document.createElement("p");
   intro.className = "landing-intro";
   intro.textContent = focusSender
-    ? "A dedicated reading page for Stephen Sondheim’s letters to Robert Cushman. These documents also remain part of the Famous Letters collection."
+    ? "A dedicated reading page for Stephen Sondheim’s letters to Robert Cushman. These documents also remain part of the Special Letters collection."
     : "Letters and notes from Robert Cushman’s archive, including standalone collections and correspondence preserved with individual articles.";
   const standalone = document.createElement("div");
   standalone.className = "standalone-correspondence-list";
   const standaloneCollections = focusSender
     ? state.standaloneCorrespondence.filter((collection) => collection.slug === "famous-letters").map((collection) => ({
         ...collection,
-        title: "Stephen Sondheim Letters",
+        title: "Sondheim Letters collection",
         date_label: "16 letters · 23 scanned pages · 1972–2001",
         description: "Stephen Sondheim’s letters to Robert Cushman, presented as complete dated sequences where multiple pages survive.",
         groups: asArray(collection.groups).filter((group) => group.sender === focusSender),
       }))
-    : state.standaloneCorrespondence;
+    : focusCollection ? state.standaloneCorrespondence.filter((collection) => collection.slug === focusCollection) : state.standaloneCorrespondence;
+  const readingPages = (focusSender || focusCollection) ? standaloneCollections.flatMap((collection) => asArray(collection.groups).filter((group) => group.sender === "Stephen Sondheim").flatMap((group) => asArray(group.items).flatMap((item) => asArray(item.media).map((media, page) => ({item,media,page,total:asArray(item.media).length}))))) : [];
+  const viewer = readingPages.length ? document.createElement("dialog") : null;
+  let viewerIndex = 0;
+  if (viewer) {
+    viewer.className = "letter-carousel";
+    const close = document.createElement("button");close.type="button";close.className="letter-carousel-close";close.textContent="Close";
+    const previous = document.createElement("button");previous.type="button";previous.className="letter-carousel-previous";previous.setAttribute("aria-label","Previous page");previous.textContent="‹";
+    const next = document.createElement("button");next.type="button";next.className="letter-carousel-next";next.setAttribute("aria-label","Next page");next.textContent="›";
+    const image = document.createElement("img");image.alt="";
+    const caption = document.createElement("p");caption.className="letter-carousel-caption";
+    const draw = () => {
+      const entry=readingPages[viewerIndex];if(!entry)return;
+      image.src=correspondenceMediaUrl(entry.media);
+      image.alt=entry.media.alt||entry.media.caption||`Stephen Sondheim letter, page ${entry.page+1}`;
+      caption.textContent=`Stephen Sondheim · ${entry.item.date||"Undated"} · page ${entry.page+1} of ${entry.total} · ${viewerIndex+1} of ${readingPages.length} scans`;
+      previous.disabled=viewerIndex===0;next.disabled=viewerIndex===readingPages.length-1;
+    };
+    const move=step=>{viewerIndex=Math.max(0,Math.min(readingPages.length-1,viewerIndex+step));draw();};
+    previous.addEventListener("click",()=>move(-1));next.addEventListener("click",()=>move(1));close.addEventListener("click",()=>viewer.close());
+    viewer.addEventListener("keydown",event=>{if(event.key==="ArrowLeft"){event.preventDefault();move(-1);}if(event.key==="ArrowRight"){event.preventDefault();move(1);}});
+    viewer.append(close,previous,image,next,caption);
+    viewer.openPage=(src)=>{const index=readingPages.findIndex(entry=>correspondenceMediaUrl(entry.media)===src);if(index<0)return;viewerIndex=index;draw();viewer.showModal();};
+  }
   standaloneCollections.forEach((collection) => {
     const section = document.createElement("section");
     section.className = "standalone-correspondence";
@@ -5205,7 +5235,7 @@ function renderCorrespondencePage({ focusSender = "" } = {}) {
     instruction.textContent = "Select any page to open its full-size reading copy.";
     const gallery = document.createElement("div");
     gallery.className = "standalone-correspondence-gallery";
-    const renderStandaloneCard = (item, senderName = item.sender || "Correspondence") => {
+    const renderStandaloneCard = (item, senderName = item.sender || "Correspondence", isSondheim = false) => {
       const mediaItems = asArray(item.media);
       if (!mediaItems.length) return null;
       const card = document.createElement("article");
@@ -5226,6 +5256,7 @@ function renderCorrespondencePage({ focusSender = "" } = {}) {
         link.target = "_blank";
         link.rel = "noopener";
         link.setAttribute("aria-label", `Open full-size document: ${media?.caption || senderName}${mediaItems.length > 1 ? `, page ${index + 1}` : ""}`);
+        if(viewer && isSondheim)link.addEventListener("click",event=>{event.preventDefault();viewer.openPage(src);});
         const image = document.createElement("img");
         image.loading = "lazy";
         image.src = src;
@@ -5242,7 +5273,7 @@ function renderCorrespondencePage({ focusSender = "" } = {}) {
       if (card) gallery.append(card);
     });
     section.replaceChildren();
-    if (!focusSender) section.append(heading);
+    if (!focusSender && !focusCollection) section.append(heading);
     if (date.textContent) section.append(date);
     if (description.textContent) section.append(description);
     const groups = asArray(collection.groups);
@@ -5280,7 +5311,7 @@ function renderCorrespondencePage({ focusSender = "" } = {}) {
         const groupGallery = document.createElement("div");
         groupGallery.className = "standalone-correspondence-gallery";
         groupItems.forEach((item) => {
-          const card = renderStandaloneCard(item, item.date || group.sender);
+          const card = renderStandaloneCard(item, item.date || group.sender, group.sender === "Stephen Sondheim");
           if (card) groupGallery.append(card);
         });
         groupSection.append(groupHeading, groupGallery);
@@ -5323,9 +5354,10 @@ function renderCorrespondencePage({ focusSender = "" } = {}) {
     link.append(copy);
     list.append(link);
   });
-  page.replaceChildren(...(focusSender ? [title, intro] : [back, title, intro]));
+  page.replaceChildren(...(focusSender ? [title, intro] : focusCollection ? [title] : [back, title, intro]));
   if (standalone.childElementCount) page.append(standalone);
-  if (!focusSender && entries.length) page.append(linkedHeading, list);
+  if (!focusSender && !focusCollection && entries.length) page.append(linkedHeading, list);
+  if (viewer) page.append(viewer);
   els.indexContent.replaceChildren(page);
 }
 
@@ -5717,6 +5749,14 @@ function route() {
     return;
   }
 
+  if (hash === "#correspondence:famous-letters") {
+    document.body.classList.add("index-open");
+    renderCorrespondencePage({ focusCollection: "famous-letters" });
+    els.indexView.hidden = false;
+    requestAnimationFrame(() => els.indexView.scrollIntoView({ behavior: "auto", block: "start" }));
+    return;
+  }
+
   if (hash === "#correspondence" || hash.startsWith("#correspondence:")) {
     document.body.classList.add("index-open");
     renderCorrespondencePage();
@@ -5838,7 +5878,7 @@ async function init() {
       fetch(DATA_URL),
       fetch(ALIASES_URL),
       fetch(STANDALONE_CORRESPONDENCE_URL).catch(() => null),
-      fetch(new URL('./collection-curation.json?v=207', import.meta.url)),
+      fetch(new URL('./collection-curation.json?v=233', import.meta.url)),
     ]);
     if (!response.ok) throw new Error(`Could not load records (${response.status})`);
     state.records = await response.json();

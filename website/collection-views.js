@@ -1,7 +1,7 @@
 import {INDEX_LETTERS,indexSections} from './index-engine.js?v=173';
 import {theatreIllustration, renderFestivalMap, festivalLocation} from './festival-map.js?v=173';
 import {serialize, publicationYear, normalize} from './catalog-engine.js?v=173';
-import {COLLECTIONS,workKey} from './collections-engine.js?v=213';
+import {COLLECTIONS,workKey} from './collections-engine.js?v=233';
 
 export function createCollectionViews({state,els,h,node,link,button,openIndex,getCollections}) {
   let activeMap=null, generation=0, artObserver=null, alphabetObserver=null, alphabetScrollCleanup=null;
@@ -25,6 +25,12 @@ export function createCollectionViews({state,els,h,node,link,button,openIndex,ge
   function artwork(collection,item,cls='') {
     const wrapper=node('div',undefined,'collection-art '+collection.kind+' '+cls);
     const asset=state.collectionCuration?.artwork?.[collection.id+':'+item.id];
+    if(!asset?.src && ['musicals','television'].includes(collection.id)){
+      const palettes=['#19384b','#543940','#37504b','#4d4560','#624630','#344858'];
+      const index=[...item.id].reduce((sum,char)=>sum+char.charCodeAt(0),0)%palettes.length;
+      wrapper.classList.add('curated-typography');
+      wrapper.style.setProperty('--fallback-color',palettes[index]);
+    }
     const screen=collection.kind==='television'?node('div',undefined,'television-screen'):wrapper;
     if(screen!==wrapper){wrapper.append(screen);screen.style.backgroundColor=asset?.screenColor||'#e1e9df';}
     if(asset?.src){
@@ -84,7 +90,7 @@ export function createCollectionViews({state,els,h,node,link,button,openIndex,ge
   }
   function recordList(records,label) {
     const result=node('div',undefined,'results collection-articles');
-    const context={records,backHref:window.location.hash,contextLabel:label,titleFirst:h.FEATURES.compactResults,visibleCount:records.length};
+    const context={records,backHref:window.location.hash,contextLabel:label,titleFirst:true,visibleCount:records.length};
     result.append(...h.sortRecordsChronologically(records).map(r=>h.safeResultCard(r,context)));return result;
   }
   function recent(collection) {
@@ -128,10 +134,9 @@ export function createCollectionViews({state,els,h,node,link,button,openIndex,ge
     const content=node('div');els.indexContent.append(content);
     const draw=()=>{
       const query=normalize(search.value);const items=collection.items.filter(item=>normalize(item.title).includes(query));
-      const featured=items.filter(item=>id!=='musicals'||item.records.length>=2);
-      const single=items.filter(item=>id==='musicals'&&item.records.length<2);
+      const featured=items;
       content.replaceChildren();
-      if(id==='profiles'||id==='musicals')alphabetGallery(collection,featured,content,search.value,single);
+      if(id==='profiles'||id==='musicals')alphabetGallery(collection,featured,content,search.value);
       else {const gallery=node('div',undefined,'collection-gallery '+collection.kind);gallery.append(...featured.map(item=>itemCard(collection,item)));content.append(gallery);fitTitles(gallery);}
       if(!items.length)content.append(node('p','No titles match this search.'));
       if(collection.ungrouped.length&&!query){content.append(node('h2',id==='sondheim'?'Essays, profiles and other writing':'More writing'),recordList(collection.ungrouped,collection.title));}
@@ -140,7 +145,8 @@ export function createCollectionViews({state,els,h,node,link,button,openIndex,ge
   }
   function alphabetGallery(collection,items,content,query,single=[]) {
     const continuous=collection.id==='musicals';
-    const sortText=item=>continuous?workKey(item.title):h.indexSortText(item.title,'people');
+    const surnameKey=name=>{const parts=String(name).trim().split(/\s+/);if(parts.length<2)return parts[0]||'';const suffix=/^(Jr\.?|Sr\.?|I{2,3}|IV)$/i.test(parts.at(-1))?parts.pop():'';const surname=parts.pop();return `${surname}, ${parts.join(' ')} ${suffix}`.trim();};
+    const sortText=item=>continuous?workKey(item.title):surnameKey(item.title);
     const sorted=[...items].sort((a,b)=>sortText(a).localeCompare(sortText(b)));
     const alpha=node('nav',undefined,'index-alphabet profiles-alphabet');alpha.setAttribute('aria-label',continuous?'Jump to a musical title':'Jump to a surname');
     content.append(alpha);const headings=new Map();
@@ -156,13 +162,6 @@ export function createCollectionViews({state,els,h,node,link,button,openIndex,ge
       section.setAttribute('aria-labelledby',heading.id);headings.set(initial,heading);
       const gallery=node('div',undefined,'collection-gallery portraits');gallery.append(...group.map(item=>itemCard(collection,item)));section.append(heading,gallery);content.append(section);
     }
-    if(continuous&&single.length){
-      content.append(node('h2','More musicals, A–Z'));const list=node('div',undefined,'catalog-index-list collection-alphabet-list');
-      for(const [initial,group] of indexSections(single,item=>workKey(item.title))){
-        const links=group.map(item=>itemLink(collection,item,item.title));
-        if(!headings.has(initial))headings.set(initial,links[0]);list.append(...links);
-      }content.append(list);
-    }
     const route=letter=>{const p=new URLSearchParams();if(query)p.set('q',query);p.set('letter',letter);return '#collection:'+collection.id+'?'+p;};
     let activeLetter='',suppressScrollSyncUntil=0;
     const setActiveLetter=(letter,{updateUrl=false}={})=>{if(!headings.has(letter)||letter===activeLetter)return;activeLetter=letter;alpha.querySelectorAll('a').forEach(a=>{if(a.dataset.letter===letter)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current');});if(updateUrl)history.replaceState(null,'',route(letter));};
@@ -176,7 +175,7 @@ export function createCollectionViews({state,els,h,node,link,button,openIndex,ge
       const a=link(initial,route(initial));a.dataset.letter=initial;a.setAttribute('aria-label','Jump to '+initial);
       a.addEventListener('click',event=>{if(event.button||event.metaKey||event.ctrlKey||event.shiftKey||event.altKey)return;event.preventDefault();jump(initial);});alpha.append(a);
     }
-    alpha.hidden=!items.length&&!single.length;
+    alpha.hidden=!items.length;
     const measure=()=>content.style.setProperty('--index-alphabet-height',alpha.getBoundingClientRect().height+'px');
     alphabetObserver?.disconnect();alphabetObserver=new ResizeObserver(measure);alphabetObserver.observe(alpha);
     let scrollFrame=0;const onScroll=()=>{if(performance.now()<suppressScrollSyncUntil||scrollFrame)return;scrollFrame=requestAnimationFrame(()=>{scrollFrame=0;if(performance.now()>=suppressScrollSyncUntil)setActiveLetter(visibleLetter(),{updateUrl:true});});};
@@ -187,7 +186,7 @@ export function createCollectionViews({state,els,h,node,link,button,openIndex,ge
     els.indexView.classList.add('festival-page');
     const heading=els.indexContent.querySelector('h1');
     const logo=state.collectionCuration?.homeArtwork?.[collection.id];
-    if(logo?.src){const img=node('img');img.src=logo.src;img.alt=collection.title;heading.replaceChildren(img);heading.classList.add('festival-heading');}
+    if(logo?.src){const img=node('img');img.src=logo.src;img.alt=collection.id==='shaw'?'Shaw Festival':'Stratford Festival';const label=node('span','collection','festival-heading-label');heading.replaceChildren(img,label);heading.classList.add('festival-heading');}
     const years=[...new Set(collection.records.map(publicationYear).filter(Boolean))].sort().reverse();
     let year=years.includes(params.get('year'))?params.get('year'):'';
     const selectedTheatre=params.get('theatre')||'';
@@ -211,7 +210,7 @@ export function createCollectionViews({state,els,h,node,link,button,openIndex,ge
       map.replaceChildren(node('p','Loading the festival map…'));
       // Match the Canadian festival city, not venues with the same name elsewhere.
       const cityMatches=value=>collection.id==='stratford'?/^stratford(?: ontario| on canada)?$/.test(normalize(value)):/^niagara on the lake(?: ontario| on canada)?$/.test(normalize(value));
-      const isFestivalVenue=label=>collection.id==='stratford'?/^(festival theatre|stratford festival theatre|avon theatre|tom patterson theatre|studio theatre|third stage|masonic concert hall|studio annex)$/.test(normalize(label)):/^(festival theatre|shaw festival theatre|court house theatre|royal george theatre|studio theatre|jackie maxwell studio(?: theatre)?)$/.test(normalize(label));
+      const isFestivalVenue=label=>collection.id==='stratford'?/^(festival theatre|stratford festival theatre|avon theatre|tom patterson theatre|studio theatre|third stage)$/.test(normalize(label)):/^(festival theatre|shaw festival theatre|court house theatre|royal george theatre|studio theatre|jackie maxwell studio(?: theatre)?)$/.test(normalize(label));
       const venueAliases=h.venueMapPoints().filter(p=>cityMatches(p.city)&&isFestivalVenue(p.label)).map(p=>({...p,records:p.records.filter(r=>ids.has(r.slug)&&h.recordVenueCityPairs(r).some(pair=>normalize(pair.venue)===normalize(p.label)&&normalize(pair.city)===normalize(p.city)))})).map(p=>festivalLocation(collection.id,{...p,count:p.records.length}));
       // Group historical/alternate names only in this view; preserve source metadata.
       const groups=new Map();

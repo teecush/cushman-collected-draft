@@ -13,31 +13,33 @@
     <link rel="apple-touch-icon" href="../apple-touch-icon.svg">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Rubik:wght@400;600;700;800;900&display=swap">
-    <link rel="stylesheet" href="./styles.css?v=173">
+    <link rel="stylesheet" href="./styles.css?v=174">
     <link rel="stylesheet" href="./catalog.css?v=194">
-    <link rel="stylesheet" href="./classic.css?v=194">
+    <link rel="stylesheet" href="./classic.css?v=233">
   </head>
   <body class="article-open">
     <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="site-header">
       <nav class="site-nav site-nav-left" id="siteNavLeft" aria-label="Primary navigation left">
-        <a class="nav-search" href="#search" aria-label="Search the archive"><span></span></a>
-        <a href="#section:current">Recent</a>
+        <a href="#search">Search</a>
         <div class="nav-folder nav-folder-wide">
           <a href="#section:browse">Browse</a>
           <div class="nav-dropdown nav-mega">
             <div class="nav-subfolder">
               <a href="#section:collections">Collections</a>
               <div class="nav-side-menu">
+                <a href="#collection:recent">Recent</a>
+                <a href="#correspondence:famous-letters">Special Letters</a>
                 <a href="#section:shakespeare">Shakespeare</a>
                 <a href="#collection:sondheim">Sondheim</a>
+                <a href="#collection:stoppard">Stoppard</a>
                 <a href="#collection:musicals">Musicals</a>
                 <a href="#collection:stratford">Stratford</a>
                 <a href="#collection:shaw">Shaw</a>
                 <a href="#collection:television">TV Reviews</a>
                 <a href="#collection:albums">Music Reviews</a>
                 <a href="#collection:books">Book Reviews</a>
-                <a href="#collection:profiles">Profiles &amp; Obits</a>
+                <a href="#collection:profiles">Artist Profiles</a>
                 <a href="#collection:early">Early Writing</a>
               </div>
             </div>
@@ -46,7 +48,6 @@
               <div class="nav-side-menu">
                 <a href="#works">All Works</a>
                 <a href="#people">All People</a>
-                <a href="#index:publications">Publications</a>
                 <a href="#places">Places</a>
               </div>
             </div>
@@ -72,21 +73,21 @@
       </a>
       <nav class="site-nav site-nav-right" id="siteNavRight" aria-label="Primary navigation right">
         <div class="nav-folder">
-          <a href="#explore">Explore</a>
+          <a href="#section:explore">Explore</a>
           <div class="nav-dropdown">
-            <a href="#explore">Article Explorer</a>
             <a href="#map">Map</a>
             <a href="#timeline">Timeline</a>
+            <a href="#explore">Article Explorer</a>
             <a href="#correspondence">Correspondence</a>
           </div>
         </div>
         <div class="nav-folder">
-          <a href="#about">About</a>
+          <a href="#section:about">About</a>
           <div class="nav-dropdown">
             <a href="#about">About Robert Cushman</a>
             <a href="#critics-circle">Critic's Circle</a>
             <a href="https://www.cushmancollected.com/checkout/donate?donatePageId=5c9b8016652dea361e5feb7d" target="_blank" rel="noopener">Donate</a>
-            <a href="#subscribe">Subscribe</a>
+            <a href="#contact">Contact &amp; Newsletter</a>
           </div>
         </div>
       </nav>
@@ -102,10 +103,25 @@
 
     <nav class="drawer" id="drawer" aria-label="Site navigation">
       <a href="#search">Search the Archive</a>
-      <a href="#section:current">Recent</a>
       <details>
         <summary>Browse</summary>
-        <a href="#section:collections">Collections</a>
+        <a href="#section:browse">Browse overview</a>
+        <details class="drawer-collection-menu">
+          <summary>Collections</summary>
+          <a href="#collection:recent">Recent</a>
+          <a href="#correspondence:famous-letters">Special Letters</a>
+          <a href="#section:shakespeare">Shakespeare</a>
+          <a href="#collection:sondheim">Sondheim</a>
+          <a href="#collection:stoppard">Stoppard</a>
+          <a href="#collection:musicals">Musicals</a>
+          <a href="#collection:stratford">Stratford</a>
+          <a href="#collection:shaw">Shaw</a>
+          <a href="#collection:television">TV Reviews</a>
+          <a href="#collection:albums">Music Reviews</a>
+          <a href="#collection:books">Book Reviews</a>
+          <a href="#collection:profiles">Artist Profiles</a>
+          <a href="#collection:early">Early Writing</a>
+        </details>
         <a href="#master-index:all-works">All Works</a>
         <a href="#master-index:all-people">All People</a>
         <a href="#index:publications">Publications</a>
@@ -113,17 +129,19 @@
       </details>
       <details>
         <summary>Explore</summary>
-        <a href="#explore">Article Explorer</a>
+        <a href="#section:explore">Explore overview</a>
         <a href="#map">Map</a>
         <a href="#timeline">Timeline</a>
+        <a href="#explore">Article Explorer</a>
         <a href="#correspondence">Correspondence</a>
       </details>
       <details>
         <summary>About</summary>
+        <a href="#section:about">About overview</a>
         <a href="#about">About Robert Cushman</a>
         <a href="#critics-circle">Critic's Circle</a>
         <a href="https://www.cushmancollected.com/checkout/donate?donatePageId=5c9b8016652dea361e5feb7d" target="_blank" rel="noopener">Donate</a>
-        <a href="#subscribe">Contact &amp; Newsletter</a>
+        <a href="#contact">Contact &amp; Newsletter</a>
       </details>
     </nav>
 
@@ -225,7 +243,11 @@
         </a>
       </section>
 
-      <section class="frontpage-directory" id="frontpageDirectory" aria-label="Primary site paths"></section>
+      <section class="browse-heading site-index-heading">
+        <h2>Site Index</h2>
+      </section>
+
+      <section class="frontpage-directory" id="frontpageDirectory" aria-label="Site index"></section>
 
       <section class="browse-heading home-secondary-nav" id="browse">
         <h2>Browse the Archive</h2>
@@ -259,7 +281,9 @@
 <p>Lillian Groag, the American author of The Magic Fire, takes the opposite tack. She does fit her story into a limited time-span, but she fills her stage with characters, most of them from the same family. She actually chooses to sprawl. She tried, she tells us, to write &quot;a novel directly for the stage,&quot; which considering the difficulties of putting a novel on stage in any circumstances, seems foolhardy. I share her preference for large-cast plays over small (they are, for obvious reasons, generally less boring) but when the cast consists of the authors own relatives, the form is an open invitation to self-indulgence.</p>
 <p>Groag, in her program note, is coy about the extent to which her play actually is autobiographical, but there seems little reason for it to exist if it isnt. We are told that Groag was born and grew up in Argentina and then moved to the United States. This is also the trajectory described by her narrating character, who has the not dissimilar name of Lise Berg and who spends the evening looking back on a two-month period in Buenos Aires in 1952, in the course of which she turned seven and Eva Peron died. Lise has an Austrian immigrant father and an Italian immigrant mother, plus a stageful of aunts, uncles and grandparents, who in turn spend a lot of time reminiscing and squabbling over their extremely cultural roots; they are all heavily into opera. The audience in its turn spends a lot of time trying to work out which of the characters is related to whom, and how. Meanwhile the play lacks a central character or, if that&#x27;s too old-fashioned a concept or a focus. The grown-up Lise talks as if the point of it all is the effect it had on her and on her subsequent development, but we learn virtually nothing of what that development was. We&#x27;re told, in passing and with no details, that she became an actress and was twice unhappily married; thats all. Tara Rosling, who plays her, is reduced to patrollling the edges of the stage, trying not to sound literary and occasionally succeeding. Sometimes she gets to harangue her younger self, who is peppily played by Lila Bata-Walsh but seems no different from the precocious kid of a hundred other plays. There are hints that her recollections are mere nostalgia and not to be trusted, but unreliable memory is only an interesting subject when you care about the person doing the misremembering.</p>
 <p>It ties in, though, with the conversation of Lises elders, who, as the play hardly ever stops informing us, are nostalgics to a person. How many times -- it feels like hundreds -- do we need to be told that their devotion to high European culture is a defence mechanism that encourages them to shut out the world around them? (The title refers to the ring of fire that surrounds Wagner&#x27;s Brunnhilde, and there are hints that Lise is in some way similarly encircled, but that&#x27;s just something the characters say; its never dramatized.)</p>
-<p>We are in the last stretch of a three-hour evening before it occurs to Lises father to compare the dictatorship in his adopted country to the one that he fled Austria to escape. The Bergs refer to Eva as &quot;that woman,&quot; and there is an unintentionally hilarious moment when, without so much as coming in on the middle of a sentence, they turn on the radio at the precise moment her death is announced. It&#x27;s like a Tom Stoppard parody. Lise, in her own emigre&#x27;s epilogue, speaks of the U.S. as a country where Fascist dictatorships are the stuff of Broadway musicals. The implicit condescension seems doubly unwarranted when you consider a) that the play tells us less about Peronism than Evita does; and b) that when the author has one of her characters say &quot;its all just politics, nothing to do with us&quot;, shes quoting that more celebrated escapist, Sally Bowles from Cabaret, practically verbatim. It&#x27;s a dim, self- important play; and though Jackie Maxwell stages it well, especially a long dinner-table scene that&#x27;s something of a tour de force, the acting is all over the place. A bevy of the Shaw Festivals top character ladies (Sharry Flett, Goldie Semple, Patricia Hamilton, Donna Belleville) do their stuff in self-contained little bursts, going on and off like light-bulbs. Each seems to be in a play of her own. Jennifer Phipps is in a world of her own, which is something quite different; shes also in a class of her own, which is something else again. She follows her saintly Rebecca Nurse, an unsentimental jewel of a performance that got squeezed out of my review of The Crucible, by playing an irascible old lady from the Italian side of the family who seems to have selective dementia and is still furious with Mussolini; she can exude wit, just by thrusting out her chin. She shares an accent with Michael Ball who, as her son, alternates entertainingly between long-suffering and explosive. Both these actors are flesh and blood, as, more quietly, is Waneta Storms as a maid whose brother is a political fugitive; she only falters when her professional competence overcomes her sisterly concern too efficiently to be credible.</p>
+<p>We are in the last stretch of a three-hour evening before it occurs to Lises father to compare the dictatorship in his adopted country to the one that he fled Austria to escape. The Bergs refer to Eva as &quot;that woman,&quot; and there is an unintentionally hilarious moment when, without so much as coming in on the middle of a sentence, they turn on the radio at the precise moment her death is announced. It&#x27;s like a Tom Stoppard parody. Lise, in her own emigre&#x27;s epilogue, speaks of the U.S. as a country where Fascist dictatorships are the stuff of Broadway musicals. The implicit condescension seems doubly unwarranted when you consider a) that the play tells us less about Peronism than Evita does; and b) that when the author has one of her characters say &quot;its all just politics, nothing to do with us&quot;, shes quoting that more celebrated escapist, Sally Bowles from Cabaret, practically verbatim.</p>
+<p>It&#x27;s a dim, self- important play; and though Jackie Maxwell stages it well, especially a long dinner-table scene that&#x27;s something of a tour de force, the acting is all over the place. A bevy of the Shaw Festivals top character ladies (Sharry Flett, Goldie Semple, Patricia Hamilton, Donna Belleville) do their stuff in self-contained little bursts, going on and off like light-bulbs. Each seems to be in a play of her own. Jennifer Phipps is in a world of her own, which is something quite different; shes also in a class of her own, which is something else again. She follows her saintly Rebecca Nurse, an unsentimental jewel of a performance that got squeezed out of my review of The Crucible, by playing an irascible old lady from the Italian side of the family who seems to have selective dementia and is still furious with Mussolini; she can exude wit, just by thrusting out her chin.</p>
+<p>She shares an accent with Michael Ball who, as her son, alternates entertainingly between long-suffering and explosive. Both these actors are flesh and blood, as, more quietly, is Waneta Storms as a maid whose brother is a political fugitive; she only falters when her professional competence overcomes her sisterly concern too efficiently to be credible.</p>
 <p>Other compensations include Ric Reid, a quiet tower of strength as Berg pere, and Dan Chameroy who, as a high-up fascist moonlighting as family friend, continues his impressive progress from musical-comedy hunk to subtle and authoritative dramatic actor. As his opponent, an outspoken liberal journalist, Jay Turvey is cruelly miscast but puts up a good fight. The play violates the Shaw&#x27;s supposed policy of producing plays written either during or about their patron&#x27;s lifetime. So of course, and more spectacularly, does The Crucible. But thats worth breaking the rules for. This isnt.</p>
 <p>- Love Among the Russians is in repertory until Sept. 24. The Magic Fire is in repertory until Oct. 8. 1-800-511-SHAW.</p>
 <p>Black &amp; White Photo: Shaw Festival / Blair Williams as Grigory and Diana Donnely as Elena in Chekhov&#x27;s The Bear. How can such a perfect couple dislike one another so much? ;</p></div></article>
@@ -296,6 +320,6 @@
       </section>
     </footer>
 
-    <script src="./app.js?v=194" type="module"></script>
+    <script src="./app.js?v=233" type="module"></script>
   </body>
 </html>

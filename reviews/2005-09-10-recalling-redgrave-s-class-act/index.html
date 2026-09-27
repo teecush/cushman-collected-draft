@@ -13,31 +13,33 @@
     <link rel="apple-touch-icon" href="../apple-touch-icon.svg">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Rubik:wght@400;600;700;800;900&display=swap">
-    <link rel="stylesheet" href="./styles.css?v=173">
+    <link rel="stylesheet" href="./styles.css?v=174">
     <link rel="stylesheet" href="./catalog.css?v=194">
-    <link rel="stylesheet" href="./classic.css?v=194">
+    <link rel="stylesheet" href="./classic.css?v=233">
   </head>
   <body class="article-open">
     <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="site-header">
       <nav class="site-nav site-nav-left" id="siteNavLeft" aria-label="Primary navigation left">
-        <a class="nav-search" href="#search" aria-label="Search the archive"><span></span></a>
-        <a href="#section:current">Recent</a>
+        <a href="#search">Search</a>
         <div class="nav-folder nav-folder-wide">
           <a href="#section:browse">Browse</a>
           <div class="nav-dropdown nav-mega">
             <div class="nav-subfolder">
               <a href="#section:collections">Collections</a>
               <div class="nav-side-menu">
+                <a href="#collection:recent">Recent</a>
+                <a href="#correspondence:famous-letters">Special Letters</a>
                 <a href="#section:shakespeare">Shakespeare</a>
                 <a href="#collection:sondheim">Sondheim</a>
+                <a href="#collection:stoppard">Stoppard</a>
                 <a href="#collection:musicals">Musicals</a>
                 <a href="#collection:stratford">Stratford</a>
                 <a href="#collection:shaw">Shaw</a>
                 <a href="#collection:television">TV Reviews</a>
                 <a href="#collection:albums">Music Reviews</a>
                 <a href="#collection:books">Book Reviews</a>
-                <a href="#collection:profiles">Profiles &amp; Obits</a>
+                <a href="#collection:profiles">Artist Profiles</a>
                 <a href="#collection:early">Early Writing</a>
               </div>
             </div>
@@ -46,7 +48,6 @@
               <div class="nav-side-menu">
                 <a href="#works">All Works</a>
                 <a href="#people">All People</a>
-                <a href="#index:publications">Publications</a>
                 <a href="#places">Places</a>
               </div>
             </div>
@@ -72,21 +73,21 @@
       </a>
       <nav class="site-nav site-nav-right" id="siteNavRight" aria-label="Primary navigation right">
         <div class="nav-folder">
-          <a href="#explore">Explore</a>
+          <a href="#section:explore">Explore</a>
           <div class="nav-dropdown">
-            <a href="#explore">Article Explorer</a>
             <a href="#map">Map</a>
             <a href="#timeline">Timeline</a>
+            <a href="#explore">Article Explorer</a>
             <a href="#correspondence">Correspondence</a>
           </div>
         </div>
         <div class="nav-folder">
-          <a href="#about">About</a>
+          <a href="#section:about">About</a>
           <div class="nav-dropdown">
             <a href="#about">About Robert Cushman</a>
             <a href="#critics-circle">Critic's Circle</a>
             <a href="https://www.cushmancollected.com/checkout/donate?donatePageId=5c9b8016652dea361e5feb7d" target="_blank" rel="noopener">Donate</a>
-            <a href="#subscribe">Subscribe</a>
+            <a href="#contact">Contact &amp; Newsletter</a>
           </div>
         </div>
       </nav>
@@ -102,10 +103,25 @@
 
     <nav class="drawer" id="drawer" aria-label="Site navigation">
       <a href="#search">Search the Archive</a>
-      <a href="#section:current">Recent</a>
       <details>
         <summary>Browse</summary>
-        <a href="#section:collections">Collections</a>
+        <a href="#section:browse">Browse overview</a>
+        <details class="drawer-collection-menu">
+          <summary>Collections</summary>
+          <a href="#collection:recent">Recent</a>
+          <a href="#correspondence:famous-letters">Special Letters</a>
+          <a href="#section:shakespeare">Shakespeare</a>
+          <a href="#collection:sondheim">Sondheim</a>
+          <a href="#collection:stoppard">Stoppard</a>
+          <a href="#collection:musicals">Musicals</a>
+          <a href="#collection:stratford">Stratford</a>
+          <a href="#collection:shaw">Shaw</a>
+          <a href="#collection:television">TV Reviews</a>
+          <a href="#collection:albums">Music Reviews</a>
+          <a href="#collection:books">Book Reviews</a>
+          <a href="#collection:profiles">Artist Profiles</a>
+          <a href="#collection:early">Early Writing</a>
+        </details>
         <a href="#master-index:all-works">All Works</a>
         <a href="#master-index:all-people">All People</a>
         <a href="#index:publications">Publications</a>
@@ -113,17 +129,19 @@
       </details>
       <details>
         <summary>Explore</summary>
-        <a href="#explore">Article Explorer</a>
+        <a href="#section:explore">Explore overview</a>
         <a href="#map">Map</a>
         <a href="#timeline">Timeline</a>
+        <a href="#explore">Article Explorer</a>
         <a href="#correspondence">Correspondence</a>
       </details>
       <details>
         <summary>About</summary>
+        <a href="#section:about">About overview</a>
         <a href="#about">About Robert Cushman</a>
         <a href="#critics-circle">Critic's Circle</a>
         <a href="https://www.cushmancollected.com/checkout/donate?donatePageId=5c9b8016652dea361e5feb7d" target="_blank" rel="noopener">Donate</a>
-        <a href="#subscribe">Contact &amp; Newsletter</a>
+        <a href="#contact">Contact &amp; Newsletter</a>
       </details>
     </nav>
 
@@ -225,7 +243,11 @@
         </a>
       </section>
 
-      <section class="frontpage-directory" id="frontpageDirectory" aria-label="Primary site paths"></section>
+      <section class="browse-heading site-index-heading">
+        <h2>Site Index</h2>
+      </section>
+
+      <section class="frontpage-directory" id="frontpageDirectory" aria-label="Site index"></section>
 
       <section class="browse-heading home-secondary-nav" id="browse">
         <h2>Browse the Archive</h2>
@@ -255,7 +277,9 @@
 <p>The rest of the cast was all-round fantastic: Rosemary Harris, Joan Plowright and the legendary Sybil Thorndike were all in it, and all at their best. Harris and Plowright, playing a brief scene of happiness, cruelly dashed, seemed to be living rather than acting. You&#x27;ll understand that when, a few seasons ago, I described Soulpepper&#x27;s Uncle Vanya as the second-best I had seen, I was giving very high praise. I had always assumed that it was the product of a group of star actors who had arrived at ensemble by mutual consent; Strachan&#x27;s book persuades me that I had greatly underrated the force of Olivier&#x27;s direction, and he reminds me how superb was his staging of the shooting scene, all over the open stage.</p>
 <p>Olivier himself played Astrov, and though he was seldom my favourite actor I vividly remember the weariness (&quot;I shall have to perform your autopsy -- do you think I shall find that interesting?&quot;) with which he signalled that the two men were brothers under the skin, both worn out before their time. And overlaying that, of course, was the mutual respect of two great actors. Twenty-five years earlier, Redgrave had played Laertes to Olivier&#x27;s Hamlet; Redgrave&#x27;s eldest daughter, Vanessa, was born during the run, and Olivier famously announced the event at the curtain call with the words &quot;A great actress has been born&quot; -- speaking, Strachan notes, &quot;with what then must have seemed emotional hyperbole but which now seems extraordinary prescience.&quot;</p>
 <p>Olivier wasn&#x27;t always that generous, and Redgrave&#x27;s first and only season at the National was unhappy. His memory began to fail him, a painful circumstance that it took years to diagnose as the onset of Parkinson&#x27;s disease, a condition that slowly but inexorably removed him from the stage and even from the screen. His Vanya turned out to be not only the summit of his career but its climax, and it&#x27;s possible to see its overflowing nervous energy as both a herald of his illness and an index to his psychological condition. Strachan, whose book is exemplary in its linking of its subject&#x27;s personal and professional life, identifies Redgrave&#x27;s twin demons as drink and guilt over his bisexuality -- not the condition itself but the pain it must have caused his wife, the fine actress Rachel Kempson. They stayed married, though, and devotedly -- her late career blossomed as his faded -- and they did, after all, found an acting dynasty. It may, unfairly, be what Michael Redgrave is now best known for. When we think of &quot;the Redgraves,&quot; we think of Michael&#x27;s son, Corin, and his daughters Lynn and Vanessa and their offspring, though in fact both of Michael&#x27;s parents were actors, and the family tradition stretches back even further.</p>
-<p>Vanya, a frightening portrait of a failure, might be called the great anti-heroic role. But Redgrave also played all the heroic ones; and though I never saw his Lear, Hamlet or Antony, I think I may well have concurred with those who thought them the best of our time. He also, of course, had a major film career that stretched from The Lady Vanishes to The Go-Between by way of The Stars Look Down, Dead of Night and The Dam Busters. Strachan reminds me that in the &#x27;50s it was customary to speak of Redgrave, along with Olivier and John Gielgud, as one of Britain&#x27;s three greatest actors. By the time of his death he had been supplanted in that pantheon by Ralph Richardson, though, actually, all four belonged there. Redgrave also seems to have suffered from being dubbed &quot;an intellectual actor&quot;; if that means &quot;emotionally cold,&quot; then he wasn&#x27;t -- he was the most moving of them all, far more so than Olivier. He was certainly an intellectual man: university-educated, a former schoolteacher, a great reader and a fine writer. He wrote probably the two best English books on the craft of acting (The Actor&#x27;s Ways and Means and Mask or Face), a nightmarish novella on the same theme (The Mountebank&#x27;s Tale), a couple of unmade screenplays, including an Antony and Cleopatra that sounds as though it would have been wonderful and a first-rate dramatization of Henry James&#x27;s The Aspern Papers -- natural-born Shaw Festival material if ever I saw it. He must indeed be the best documented of all modern actors, both by himself and others. British critic Richard Findlater wrote an excellent study of him (Michael Redgrave, Actor) in the &#x27;50s. Redgrave himself, with Corin&#x27;s assistance, wrote a rather disappointing autobiography (In My Mind&#x27;s Eye), and now Strachan has both completed the story and enormously filled it out. The result is the best biography of an actor since Simon Callow&#x27;s of the similarly conflicted Charles Laughton. And though Strachan is a less graceful writer than Callow -- or than Redgrave -- his intelligence, his sympathy and his wide-ranging sense of theatrical history could hardly be bettered.</p>
+<p>Vanya, a frightening portrait of a failure, might be called the great anti-heroic role. But Redgrave also played all the heroic ones; and though I never saw his Lear, Hamlet or Antony, I think I may well have concurred with those who thought them the best of our time. He also, of course, had a major film career that stretched from The Lady Vanishes to The Go-Between by way of The Stars Look Down, Dead of Night and The Dam Busters. Strachan reminds me that in the &#x27;50s it was customary to speak of Redgrave, along with Olivier and John Gielgud, as one of Britain&#x27;s three greatest actors. By the time of his death he had been supplanted in that pantheon by Ralph Richardson, though, actually, all four belonged there. Redgrave also seems to have suffered from being dubbed &quot;an intellectual actor&quot;; if that means &quot;emotionally cold,&quot; then he wasn&#x27;t -- he was the most moving of them all, far more so than Olivier.</p>
+<p>He was certainly an intellectual man: university-educated, a former schoolteacher, a great reader and a fine writer. He wrote probably the two best English books on the craft of acting (The Actor&#x27;s Ways and Means and Mask or Face), a nightmarish novella on the same theme (The Mountebank&#x27;s Tale), a couple of unmade screenplays, including an Antony and Cleopatra that sounds as though it would have been wonderful and a first-rate dramatization of Henry James&#x27;s The Aspern Papers -- natural-born Shaw Festival material if ever I saw it. He must indeed be the best documented of all modern actors, both by himself and others. British critic Richard Findlater wrote an excellent study of him (Michael Redgrave, Actor) in the &#x27;50s. Redgrave himself, with Corin&#x27;s assistance, wrote a rather disappointing autobiography (In My Mind&#x27;s Eye), and now Strachan has both completed the story and enormously filled it out.</p>
+<p>The result is the best biography of an actor since Simon Callow&#x27;s of the similarly conflicted Charles Laughton. And though Strachan is a less graceful writer than Callow -- or than Redgrave -- his intelligence, his sympathy and his wide-ranging sense of theatrical history could hardly be bettered.</p>
 <p>Black &amp; White Photo: Michael Redgrave, pictured with Joan Bennett in Fritz Lang&#x27;s Secret Beyond the Door, had a long and illustrious career that spanned both theatre and film, a fact that&#x27;s often overlooked when one thinks of &quot;the Redgraves.&quot; He is the subject of a biography that has just been released in paperback.; Black &amp; White Photo: (Book cover of Secret Dreams.)</p></div></article>
       </section>
 
@@ -290,6 +314,6 @@
       </section>
     </footer>
 
-    <script src="./app.js?v=194" type="module"></script>
+    <script src="./app.js?v=233" type="module"></script>
   </body>
 </html>

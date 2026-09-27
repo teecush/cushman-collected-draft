@@ -1,5 +1,9 @@
 {
   "records": {
+    "2008-02-25-jon-stewart-s-amiable-double-bind-host-performed-well-in-spite-of-nicholson-s": {"tvTitles": ["Academy Awards"]},
+    "2009-02-23-this-made-australia-look-good-hugh-jackman-let-down-by-some-lousy-material": {"tvTitles": ["Academy Awards"]},
+    "2009-02-23-wolverine-sang-some-real-howlers-hugh-jackman-let-down-by-weak-opening-material": {"tvTitles": ["Academy Awards"]},
+    "2010-03-08-a-wild-and-crazy-guy-a-mild-and-lazy-guy-steve-martin-outpaces-alec-baldwin": {"tvTitles": ["Academy Awards"]},
     "1976-07-03-good-time-music": {
       "albumTitles": []
     },
@@ -148,16 +152,20 @@
       ]
     },
     "2002-06-05-all-s-well-that-starts-well-stratford-festival-began-in-1953-under-the": {
-      "subjects": []
+      "subjects": [],
+      "excludeProfiles": true
     },
     "2004-01-31-everything-going-for-it-except-god-royal-shakespeare-company-has-made-an": {
-      "subjects": []
+      "subjects": [],
+      "excludeProfiles": true
     },
     "2004-02-02-everything-going-for-it-except-god-royal-shakespeare-company-has-made": {
-      "subjects": []
+      "subjects": [],
+      "excludeProfiles": true
     },
     "2014-07-16-theatrebooks-last-bow-online-means-curtains-for-niche-market": {
-      "subjects": []
+      "subjects": [],
+      "excludeProfiles": true
     },
     "2024-02-03-in-memoriam": {
       "subjects": [
@@ -2873,6 +2881,11 @@
       "src": "assets/collections/musicpass3-last-empress-1996.gif",
       "alt": "The Last Empress",
       "fit": "contain"
+    },
+    "musicals:waitress": {
+      "src": "../site_export/content/media/waitress/01.jpg",
+      "alt": "Melody A Betts, Christine Dwyer and Ephie Aardema in Waitress (2019)",
+      "fit": "cover"
     }
   },
   "excludedMusicalTitles": [

@@ -13,31 +13,33 @@
     <link rel="apple-touch-icon" href="../apple-touch-icon.svg">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Rubik:wght@400;600;700;800;900&display=swap">
-    <link rel="stylesheet" href="./styles.css?v=173">
+    <link rel="stylesheet" href="./styles.css?v=174">
     <link rel="stylesheet" href="./catalog.css?v=194">
-    <link rel="stylesheet" href="./classic.css?v=194">
+    <link rel="stylesheet" href="./classic.css?v=233">
   </head>
   <body class="article-open">
     <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="site-header">
       <nav class="site-nav site-nav-left" id="siteNavLeft" aria-label="Primary navigation left">
-        <a class="nav-search" href="#search" aria-label="Search the archive"><span></span></a>
-        <a href="#section:current">Recent</a>
+        <a href="#search">Search</a>
         <div class="nav-folder nav-folder-wide">
           <a href="#section:browse">Browse</a>
           <div class="nav-dropdown nav-mega">
             <div class="nav-subfolder">
               <a href="#section:collections">Collections</a>
               <div class="nav-side-menu">
+                <a href="#collection:recent">Recent</a>
+                <a href="#correspondence:famous-letters">Special Letters</a>
                 <a href="#section:shakespeare">Shakespeare</a>
                 <a href="#collection:sondheim">Sondheim</a>
+                <a href="#collection:stoppard">Stoppard</a>
                 <a href="#collection:musicals">Musicals</a>
                 <a href="#collection:stratford">Stratford</a>
                 <a href="#collection:shaw">Shaw</a>
                 <a href="#collection:television">TV Reviews</a>
                 <a href="#collection:albums">Music Reviews</a>
                 <a href="#collection:books">Book Reviews</a>
-                <a href="#collection:profiles">Profiles &amp; Obits</a>
+                <a href="#collection:profiles">Artist Profiles</a>
                 <a href="#collection:early">Early Writing</a>
               </div>
             </div>
@@ -46,7 +48,6 @@
               <div class="nav-side-menu">
                 <a href="#works">All Works</a>
                 <a href="#people">All People</a>
-                <a href="#index:publications">Publications</a>
                 <a href="#places">Places</a>
               </div>
             </div>
@@ -72,21 +73,21 @@
       </a>
       <nav class="site-nav site-nav-right" id="siteNavRight" aria-label="Primary navigation right">
         <div class="nav-folder">
-          <a href="#explore">Explore</a>
+          <a href="#section:explore">Explore</a>
           <div class="nav-dropdown">
-            <a href="#explore">Article Explorer</a>
             <a href="#map">Map</a>
             <a href="#timeline">Timeline</a>
+            <a href="#explore">Article Explorer</a>
             <a href="#correspondence">Correspondence</a>
           </div>
         </div>
         <div class="nav-folder">
-          <a href="#about">About</a>
+          <a href="#section:about">About</a>
           <div class="nav-dropdown">
             <a href="#about">About Robert Cushman</a>
             <a href="#critics-circle">Critic's Circle</a>
             <a href="https://www.cushmancollected.com/checkout/donate?donatePageId=5c9b8016652dea361e5feb7d" target="_blank" rel="noopener">Donate</a>
-            <a href="#subscribe">Subscribe</a>
+            <a href="#contact">Contact &amp; Newsletter</a>
           </div>
         </div>
       </nav>
@@ -102,10 +103,25 @@
 
     <nav class="drawer" id="drawer" aria-label="Site navigation">
       <a href="#search">Search the Archive</a>
-      <a href="#section:current">Recent</a>
       <details>
         <summary>Browse</summary>
-        <a href="#section:collections">Collections</a>
+        <a href="#section:browse">Browse overview</a>
+        <details class="drawer-collection-menu">
+          <summary>Collections</summary>
+          <a href="#collection:recent">Recent</a>
+          <a href="#correspondence:famous-letters">Special Letters</a>
+          <a href="#section:shakespeare">Shakespeare</a>
+          <a href="#collection:sondheim">Sondheim</a>
+          <a href="#collection:stoppard">Stoppard</a>
+          <a href="#collection:musicals">Musicals</a>
+          <a href="#collection:stratford">Stratford</a>
+          <a href="#collection:shaw">Shaw</a>
+          <a href="#collection:television">TV Reviews</a>
+          <a href="#collection:albums">Music Reviews</a>
+          <a href="#collection:books">Book Reviews</a>
+          <a href="#collection:profiles">Artist Profiles</a>
+          <a href="#collection:early">Early Writing</a>
+        </details>
         <a href="#master-index:all-works">All Works</a>
         <a href="#master-index:all-people">All People</a>
         <a href="#index:publications">Publications</a>
@@ -113,17 +129,19 @@
       </details>
       <details>
         <summary>Explore</summary>
-        <a href="#explore">Article Explorer</a>
+        <a href="#section:explore">Explore overview</a>
         <a href="#map">Map</a>
         <a href="#timeline">Timeline</a>
+        <a href="#explore">Article Explorer</a>
         <a href="#correspondence">Correspondence</a>
       </details>
       <details>
         <summary>About</summary>
+        <a href="#section:about">About overview</a>
         <a href="#about">About Robert Cushman</a>
         <a href="#critics-circle">Critic's Circle</a>
         <a href="https://www.cushmancollected.com/checkout/donate?donatePageId=5c9b8016652dea361e5feb7d" target="_blank" rel="noopener">Donate</a>
-        <a href="#subscribe">Contact &amp; Newsletter</a>
+        <a href="#contact">Contact &amp; Newsletter</a>
       </details>
     </nav>
 
@@ -225,7 +243,11 @@
         </a>
       </section>
 
-      <section class="frontpage-directory" id="frontpageDirectory" aria-label="Primary site paths"></section>
+      <section class="browse-heading site-index-heading">
+        <h2>Site Index</h2>
+      </section>
+
+      <section class="frontpage-directory" id="frontpageDirectory" aria-label="Site index"></section>
 
       <section class="browse-heading home-secondary-nav" id="browse">
         <h2>Browse the Archive</h2>
@@ -247,7 +269,13 @@
 
       <section class="article-view" id="articleView">
         <a class="back-link" href="#archive">Back to archive</a>
-        <article id="article"><time>Sep 24, 1994</time><h1>APPRECIATION / Jule Styne An infectious delight in song</h1><p class="article-meta">Robert Cushman · The Globe and Mail</p><div class="article-body" id="article-text"><p>APPRECIATION / Jule Styne An infectious delight in songSaturday, September 24, 1994ROBERT CUSHMANBY ROBERT CUSHMAN Special to The Globe and Mail IN 1974, a memorable production of Gypsy, starring Angela Lansbury, was passing through Toronto, en route from London to New York. So, perhaps less memorably, was I. I saw a performance, applauded my hands off, and afterwards went backstage. Apparently there had been trouble over tempo, and the composer had been summoned from Manhattan. He was a five-foot- tall, copper-haired man, middle-aged by the look of him and incredibly energetic, physically and vocally. He was exploding all over the star&#x27;s dressing-room, pounding out - without benefit of a piano - the rhythms that the conductor should have been keeping. It was an awesome display, my first personal sighting of Jule Styne.In New York the following week I described the scene to a friend of Styne&#x27;s, expressing both my admiration and my concern for the composer&#x27;s health. If he kept up that level of nervous tension, he was surely going to have a heart attack. I was reassured that Styne was not, as I had assumed, in his late 50s. He was 70, and that high-pressure manner was habitual. He thrived on it.Four years later he wrote the score for a London musical, Bar Mitzvah Boy, his 20th show. I reviewed it, not too enthusiastically. But he didn&#x27;t seem to hold that against me. &quot;We&#x27;re going,&quot; he said, &quot;to be friends.&quot;That never really happened, but we did have dinner in New York. He talked quietly but propulsively, always about his own work, in which he took infectious, childlike delight. There was nothing offensive about this; he seemed to have boundless ego without conceit. (Besides, it was what I wanted to hear about, and it certainly made conversation easy.) He painted glowing word-pictures of future projects, and spoke of rehabilitating work that had failed in the past. A few days later I met E.Y. (Over the Rainbow) Harburg, who had written the lyrics for one of those flop shows, and mentioned that Styne was talking about reviving it. &quot;Of course,&quot; I said, as tactfully as I could, &quot;Jule is a great optimist.&quot; &quot;You are,&quot; said Harburg, &quot;a master of understatement.&quot;Styne&#x27;s buoyant spirit got him through two virtually separate composing careers - one in Hollywood, one on Broadway. Having ideas was never a problem for him; impatience was. Stephen Sondheim and other lyricists have testified that Styne would always rather write a completely new tune than tinker with an existing one. His impulsiveness on the job, and his habit of discussing three or four matters at one time, found expression in a personal language that his faithful collaborators, Betty Comden and Adolph Green, labeled &quot;Stynese,&quot; and of which they once supplied the following example: &quot;What we in the theatre call &#x27;dynamics&#x27; is - well - fast . . . but not - you can&#x27;t do that - a slower tempo would - together - that&#x27;s not how, well, if two - not right away - but - Dorothy, let&#x27;s go have a cup of coffee.&quot;Dorothy was Dorothy Dicker, Styne&#x27;s long-serving assistant, whose overriding task was to bring some order into his life. This involved keeping an eye on his finances, and keeping at bay both the IRS and the bookies. Styne was a compulsive gambler whose habit kept him on the verge of bankruptcy when he should have been making several fortunes.His best work did not always bring him the best rewards. He won an Oscar for Three Coins in the Fountain, a really turgid film title-song, rather than for such genuinely distinguished movie ballads as Time after Time or I Fall in Love Too Easily, both of them fashioned, as indeed was Three Coins, for Frank Sinatra in his gentle period. (In the forties Styne and lyricist Sammy Cahn were virtually Sinatra&#x27;s private songwriters.) He got his only Best Musical Tony for Hallelujah Baby, a show he himself knew to be inferior. Shows of his that had been passed over in previous years included Gentlemen Prefer Blondes, Bells Are Ringing, Gypsy and Funny Girl. &quot;There comes a time when you say, &#x27;We ought to be fair and give it to him this year,&#x27; &quot; he said at the award ceremony: marks for honesty.The whole score of Blondes came up delightfully fresh at last year&#x27;s Shaw Festival. Bells Are Ringing, apart from the standards Just in Time and The Party&#x27;s Over, includes character songs like Judy Holliday&#x27;s It&#x27;s a Perfect Relationship that are actually musical. Gypsy is one of the half- dozen best musicals, and seems infinitely revivable; having given Ethel Merman her best role, it has worked for Lansbury, Tyne Daly and Bette Midler. Funny Girl, structurally something of a rerun of Gypsy, may have even better individual tunes: not the irritatingly homiletic People (a hit that has long since faded), but the jazzy Cornet Man, the driving Don&#x27;t Rain on My Parade, and the sweeping torch-song The Music That Makes Me Dance, Styne&#x27;s second-best individual melody. The very best was Time after Time, which he claimed was improvised at a party as a pastiche of Jerome Kern. As a melodist he did not generally have the originality of Kern, or of Rodgers, Arlen or Sondheim. Their best songs transcend a given genre; Styne&#x27;s sound more like competent examples of it. But he knew how to bring a theatre alive. Only four years younger than Rodgers, he came to the theatre 20 years later, but he went on to dominate his generation. &quot;Jule,&quot; somebody once said, &quot;thinks of himself as a doyen.&quot; But he had earned the right.I last saw him two years ago, ostensibly to talk about Comden and Green but really to listen to him talking about himself. At 86, he was obviously flagging, and his conversation wandered more than ever, but his concentration wonderfully improved when he focused on an imminent revue of his work at the Rainbow Room, or on a musical he was planning of The Red Shoes which was going - of course - to be his biggest hit in years. He hadn&#x27;t had a show in New York since 1980, and I didn&#x27;t expect this one to materialize, but it did. It was a disaster, but I am somehow glad that in his last year he still managed to get a show on. I doubt if any other composer his age has managed it. I hardly knew him, but I am going to miss him. Robert Cushman writes and broadcasts on theatre music in Canada and the U.K.Word count: 1118</p></div></article>
+        <article id="article"><time>Sep 24, 1994</time><h1>APPRECIATION / Jule Styne An infectious delight in song</h1><p class="article-meta">Robert Cushman · The Globe and Mail</p><div class="article-body" id="article-text"><p>APPRECIATION / Jule Styne An infectious delight in songSaturday, September 24, 1994ROBERT CUSHMANBY ROBERT CUSHMAN Special to The Globe and Mail IN 1974, a memorable production of Gypsy, starring Angela Lansbury, was passing through Toronto, en route from London to New York. So, perhaps less memorably, was I. I saw a performance, applauded my hands off, and afterwards went backstage. Apparently there had been trouble over tempo, and the composer had been summoned from Manhattan. He was a five-foot- tall, copper-haired man, middle-aged by the look of him and incredibly energetic, physically and vocally. He was exploding all over the star&#x27;s dressing-room, pounding out - without benefit of a piano - the rhythms that the conductor should have been keeping. It was an awesome display, my first personal sighting of Jule Styne.In New York the following week I described the scene to a friend of Styne&#x27;s, expressing both my admiration and my concern for the composer&#x27;s health.</p>
+<p>If he kept up that level of nervous tension, he was surely going to have a heart attack. I was reassured that Styne was not, as I had assumed, in his late 50s. He was 70, and that high-pressure manner was habitual. He thrived on it.Four years later he wrote the score for a London musical, Bar Mitzvah Boy, his 20th show. I reviewed it, not too enthusiastically. But he didn&#x27;t seem to hold that against me. &quot;We&#x27;re going,&quot; he said, &quot;to be friends.&quot;That never really happened, but we did have dinner in New York. He talked quietly but propulsively, always about his own work, in which he took infectious, childlike delight. There was nothing offensive about this; he seemed to have boundless ego without conceit. (Besides, it was what I wanted to hear about, and it certainly made conversation easy.) He painted glowing word-pictures of future projects, and spoke of rehabilitating work that had failed in the past.</p>
+<p>A few days later I met E.Y. (Over the Rainbow) Harburg, who had written the lyrics for one of those flop shows, and mentioned that Styne was talking about reviving it. &quot;Of course,&quot; I said, as tactfully as I could, &quot;Jule is a great optimist.&quot; &quot;You are,&quot; said Harburg, &quot;a master of understatement.&quot;Styne&#x27;s buoyant spirit got him through two virtually separate composing careers - one in Hollywood, one on Broadway. Having ideas was never a problem for him; impatience was. Stephen Sondheim and other lyricists have testified that Styne would always rather write a completely new tune than tinker with an existing one. His impulsiveness on the job, and his habit of discussing three or four matters at one time, found expression in a personal language that his faithful collaborators, Betty Comden and Adolph Green, labeled &quot;Stynese,&quot; and of which they once supplied the following example: &quot;What we in the theatre call &#x27;dynamics&#x27; is - well - fast . . . but not - you can&#x27;t do that - a slower tempo would - together - that&#x27;s not how, well, if two - not right away - but - Dorothy, let&#x27;s go have a cup of coffee.&quot;Dorothy was Dorothy Dicker, Styne&#x27;s long-serving assistant, whose overriding task was to bring some order into his life.</p>
+<p>This involved keeping an eye on his finances, and keeping at bay both the IRS and the bookies. Styne was a compulsive gambler whose habit kept him on the verge of bankruptcy when he should have been making several fortunes.His best work did not always bring him the best rewards. He won an Oscar for Three Coins in the Fountain, a really turgid film title-song, rather than for such genuinely distinguished movie ballads as Time after Time or I Fall in Love Too Easily, both of them fashioned, as indeed was Three Coins, for Frank Sinatra in his gentle period. (In the forties Styne and lyricist Sammy Cahn were virtually Sinatra&#x27;s private songwriters.) He got his only Best Musical Tony for Hallelujah Baby, a show he himself knew to be inferior. Shows of his that had been passed over in previous years included Gentlemen Prefer Blondes, Bells Are Ringing, Gypsy and Funny Girl.</p>
+<p>&quot;There comes a time when you say, &#x27;We ought to be fair and give it to him this year,&#x27; &quot; he said at the award ceremony: marks for honesty.The whole score of Blondes came up delightfully fresh at last year&#x27;s Shaw Festival. Bells Are Ringing, apart from the standards Just in Time and The Party&#x27;s Over, includes character songs like Judy Holliday&#x27;s It&#x27;s a Perfect Relationship that are actually musical. Gypsy is one of the half- dozen best musicals, and seems infinitely revivable; having given Ethel Merman her best role, it has worked for Lansbury, Tyne Daly and Bette Midler. Funny Girl, structurally something of a rerun of Gypsy, may have even better individual tunes: not the irritatingly homiletic People (a hit that has long since faded), but the jazzy Cornet Man, the driving Don&#x27;t Rain on My Parade, and the sweeping torch-song The Music That Makes Me Dance, Styne&#x27;s second-best individual melody.</p>
+<p>The very best was Time after Time, which he claimed was improvised at a party as a pastiche of Jerome Kern. As a melodist he did not generally have the originality of Kern, or of Rodgers, Arlen or Sondheim. Their best songs transcend a given genre; Styne&#x27;s sound more like competent examples of it. But he knew how to bring a theatre alive. Only four years younger than Rodgers, he came to the theatre 20 years later, but he went on to dominate his generation. &quot;Jule,&quot; somebody once said, &quot;thinks of himself as a doyen.&quot; But he had earned the right.I last saw him two years ago, ostensibly to talk about Comden and Green but really to listen to him talking about himself. At 86, he was obviously flagging, and his conversation wandered more than ever, but his concentration wonderfully improved when he focused on an imminent revue of his work at the Rainbow Room, or on a musical he was planning of The Red Shoes which was going - of course - to be his biggest hit in years.</p>
+<p>He hadn&#x27;t had a show in New York since 1980, and I didn&#x27;t expect this one to materialize, but it did. It was a disaster, but I am somehow glad that in his last year he still managed to get a show on. I doubt if any other composer his age has managed it. I hardly knew him, but I am going to miss him. Robert Cushman writes and broadcasts on theatre music in Canada and the U.K.Word count: 1118</p></div></article>
       </section>
 
       <section class="index-view" id="indexView" hidden>
@@ -281,6 +309,6 @@
       </section>
     </footer>
 
-    <script src="./app.js?v=194" type="module"></script>
+    <script src="./app.js?v=233" type="module"></script>
   </body>
 </html>

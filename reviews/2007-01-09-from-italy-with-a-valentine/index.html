@@ -13,31 +13,33 @@
     <link rel="apple-touch-icon" href="../apple-touch-icon.svg">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Rubik:wght@400;600;700;800;900&display=swap">
-    <link rel="stylesheet" href="./styles.css?v=173">
+    <link rel="stylesheet" href="./styles.css?v=174">
     <link rel="stylesheet" href="./catalog.css?v=194">
-    <link rel="stylesheet" href="./classic.css?v=194">
+    <link rel="stylesheet" href="./classic.css?v=233">
   </head>
   <body class="article-open">
     <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="site-header">
       <nav class="site-nav site-nav-left" id="siteNavLeft" aria-label="Primary navigation left">
-        <a class="nav-search" href="#search" aria-label="Search the archive"><span></span></a>
-        <a href="#section:current">Recent</a>
+        <a href="#search">Search</a>
         <div class="nav-folder nav-folder-wide">
           <a href="#section:browse">Browse</a>
           <div class="nav-dropdown nav-mega">
             <div class="nav-subfolder">
               <a href="#section:collections">Collections</a>
               <div class="nav-side-menu">
+                <a href="#collection:recent">Recent</a>
+                <a href="#correspondence:famous-letters">Special Letters</a>
                 <a href="#section:shakespeare">Shakespeare</a>
                 <a href="#collection:sondheim">Sondheim</a>
+                <a href="#collection:stoppard">Stoppard</a>
                 <a href="#collection:musicals">Musicals</a>
                 <a href="#collection:stratford">Stratford</a>
                 <a href="#collection:shaw">Shaw</a>
                 <a href="#collection:television">TV Reviews</a>
                 <a href="#collection:albums">Music Reviews</a>
                 <a href="#collection:books">Book Reviews</a>
-                <a href="#collection:profiles">Profiles &amp; Obits</a>
+                <a href="#collection:profiles">Artist Profiles</a>
                 <a href="#collection:early">Early Writing</a>
               </div>
             </div>
@@ -46,7 +48,6 @@
               <div class="nav-side-menu">
                 <a href="#works">All Works</a>
                 <a href="#people">All People</a>
-                <a href="#index:publications">Publications</a>
                 <a href="#places">Places</a>
               </div>
             </div>
@@ -72,21 +73,21 @@
       </a>
       <nav class="site-nav site-nav-right" id="siteNavRight" aria-label="Primary navigation right">
         <div class="nav-folder">
-          <a href="#explore">Explore</a>
+          <a href="#section:explore">Explore</a>
           <div class="nav-dropdown">
-            <a href="#explore">Article Explorer</a>
             <a href="#map">Map</a>
             <a href="#timeline">Timeline</a>
+            <a href="#explore">Article Explorer</a>
             <a href="#correspondence">Correspondence</a>
           </div>
         </div>
         <div class="nav-folder">
-          <a href="#about">About</a>
+          <a href="#section:about">About</a>
           <div class="nav-dropdown">
             <a href="#about">About Robert Cushman</a>
             <a href="#critics-circle">Critic's Circle</a>
             <a href="https://www.cushmancollected.com/checkout/donate?donatePageId=5c9b8016652dea361e5feb7d" target="_blank" rel="noopener">Donate</a>
-            <a href="#subscribe">Subscribe</a>
+            <a href="#contact">Contact &amp; Newsletter</a>
           </div>
         </div>
       </nav>
@@ -102,10 +103,25 @@
 
     <nav class="drawer" id="drawer" aria-label="Site navigation">
       <a href="#search">Search the Archive</a>
-      <a href="#section:current">Recent</a>
       <details>
         <summary>Browse</summary>
-        <a href="#section:collections">Collections</a>
+        <a href="#section:browse">Browse overview</a>
+        <details class="drawer-collection-menu">
+          <summary>Collections</summary>
+          <a href="#collection:recent">Recent</a>
+          <a href="#correspondence:famous-letters">Special Letters</a>
+          <a href="#section:shakespeare">Shakespeare</a>
+          <a href="#collection:sondheim">Sondheim</a>
+          <a href="#collection:stoppard">Stoppard</a>
+          <a href="#collection:musicals">Musicals</a>
+          <a href="#collection:stratford">Stratford</a>
+          <a href="#collection:shaw">Shaw</a>
+          <a href="#collection:television">TV Reviews</a>
+          <a href="#collection:albums">Music Reviews</a>
+          <a href="#collection:books">Book Reviews</a>
+          <a href="#collection:profiles">Artist Profiles</a>
+          <a href="#collection:early">Early Writing</a>
+        </details>
         <a href="#master-index:all-works">All Works</a>
         <a href="#master-index:all-people">All People</a>
         <a href="#index:publications">Publications</a>
@@ -113,17 +129,19 @@
       </details>
       <details>
         <summary>Explore</summary>
-        <a href="#explore">Article Explorer</a>
+        <a href="#section:explore">Explore overview</a>
         <a href="#map">Map</a>
         <a href="#timeline">Timeline</a>
+        <a href="#explore">Article Explorer</a>
         <a href="#correspondence">Correspondence</a>
       </details>
       <details>
         <summary>About</summary>
+        <a href="#section:about">About overview</a>
         <a href="#about">About Robert Cushman</a>
         <a href="#critics-circle">Critic's Circle</a>
         <a href="https://www.cushmancollected.com/checkout/donate?donatePageId=5c9b8016652dea361e5feb7d" target="_blank" rel="noopener">Donate</a>
-        <a href="#subscribe">Contact &amp; Newsletter</a>
+        <a href="#contact">Contact &amp; Newsletter</a>
       </details>
     </nav>
 
@@ -225,7 +243,11 @@
         </a>
       </section>
 
-      <section class="frontpage-directory" id="frontpageDirectory" aria-label="Primary site paths"></section>
+      <section class="browse-heading site-index-heading">
+        <h2>Site Index</h2>
+      </section>
+
+      <section class="frontpage-directory" id="frontpageDirectory" aria-label="Site index"></section>
 
       <section class="browse-heading home-secondary-nav" id="browse">
         <h2>Browse the Archive</h2>
@@ -254,7 +276,9 @@
 <p>Into town, into the store and into her life comes Val Xavier, a glamorous young vagrant of 30, who might be the Williams dream male personified. Hes a reformed stud; he wears a snakeskin jacket thats his most treasured possession save only for his guitar, which carries autographs of idols from Leadbelly to Satchmo; and he claims, among other picturesque things, that his temperature is always a couple of degrees above normal, &quot;same as a dog&#x27;s. He also claims an impressive track record in warming up women. Lady, who could use some warming, eyes him at first with sardonic distrust, an emotion that McKenna communicates superbly.</p>
 <p>In fact, she does everything superbly. Hers is as complete a performance as ever I have seen in Toronto, distinguished by the way it blends wit with passion. She lives each moment with full-blooded intensity, and links each to the next with flawless logic. She melts to Val of course, as he to her, but her knife-edge never dulls. The play&#x27;s climax takes her on a rattletrap progress from vengeance to triumph to tragedy, and her end, after she has been so fully alive, could hardly hurt more. Its impossible while watching her to imagine the part played by anybody else. The contact between her and Jonathan Goads Val, especially in their first long scene of approach and avoidance, is exemplary in its tautness and variety.</p>
 <p>Miles Potter&#x27;s production, announced in the program as based on the 2005 Stratford Festival production,&quot; is that same terrific staging with a re-angled set and a handful of cast changes. Peter Hartwell has straightened out the bar counter that dominated his set on the platform stage of the Tom Patterson, from horseshoe to horizontal. We lose some surprise entrances but, surprisingly in a larger theatre, we gain concentration; and the counter now makes an even more effective platform for Val&#x27;s humiliation at the hands of the local yokels. Goads performance, always good, is now even better. Val is probably a harder role than Lady -- shes a person with a documented history, he&#x27;s an ideal whose past is kept determinedly cloudy -- but Goad earths him with unassuming self- confidence. (Critics love to be oxymoronic, but this time it fits.)</p>
-<p>As at Stratford, I kept changing my mind about the play itself, thinking it at one moment Williams&#x27; masterpiece, and at the next a supreme act of unwitting self-parody. Potter admits in his program note, &quot;its not clean, its not neat, it doesn&#x27;t tie up, but says that&#x27;s its glory. In fact, though, his triumph has been to take a piece that doesnt make logical sense and to treat it as if, at least moment by moment, it does. Hence it also makes emotional sense; more than a slapdash, self consciously bold&quot; production could hope to do. This is an ensemble show with all the connecting lines in place. Disconnected parts of the Orpheus myth -- his musicianship, his descent into a Hell here identified with darkest Dixie, his final immolation -- are scrambled together and fastened onto Val, who is less a characterization than a collage. It may also have too many characters, or at least too many given intriguing traits that arent developed. The most persistent and alluring is Carol, the county tramp who sees Val as a kindred lost, or freed, soul; she&#x27;s given an electrically bedraggled performance by Dana Green. But all the actors seize their chances. Michelle Fisk and Brigit Wilson are delightfully censorious as the town biddies who complain in their turn of other citizens indulging in &quot;hypocriticism -- another thread that&#x27;s left undeveloped. Catherine Fitch is haunting as the sheriff s wife, who paints visionary pictures while going progressively blind, and Thom Marriott powerfully impassive as her husband who claims, ambiguously, to hate violence. Walter Borden irrupts periodically as the painted-faced Uncle Pleasant with his Choctaw call&quot; that serves as both Vals fanfare and his epitaph, and David Francis, with monstrously protruding eyebrows, conveys all the hatred festering in the dying Jabe, though not all the murderous power -- though this is the one point at which the production itself falters. Costumes, music, lighting and sound are all ideal. This is as close to a definitive performance as we will see, anywhere. Grab it.</p>
+<p>As at Stratford, I kept changing my mind about the play itself, thinking it at one moment Williams&#x27; masterpiece, and at the next a supreme act of unwitting self-parody. Potter admits in his program note, &quot;its not clean, its not neat, it doesn&#x27;t tie up, but says that&#x27;s its glory. In fact, though, his triumph has been to take a piece that doesnt make logical sense and to treat it as if, at least moment by moment, it does. Hence it also makes emotional sense; more than a slapdash, self consciously bold&quot; production could hope to do. This is an ensemble show with all the connecting lines in place. Disconnected parts of the Orpheus myth -- his musicianship, his descent into a Hell here identified with darkest Dixie, his final immolation -- are scrambled together and fastened onto Val, who is less a characterization than a collage.</p>
+<p>It may also have too many characters, or at least too many given intriguing traits that arent developed. The most persistent and alluring is Carol, the county tramp who sees Val as a kindred lost, or freed, soul; she&#x27;s given an electrically bedraggled performance by Dana Green. But all the actors seize their chances. Michelle Fisk and Brigit Wilson are delightfully censorious as the town biddies who complain in their turn of other citizens indulging in &quot;hypocriticism -- another thread that&#x27;s left undeveloped. Catherine Fitch is haunting as the sheriff s wife, who paints visionary pictures while going progressively blind, and Thom Marriott powerfully impassive as her husband who claims, ambiguously, to hate violence. Walter Borden irrupts periodically as the painted-faced Uncle Pleasant with his Choctaw call&quot; that serves as both Vals fanfare and his epitaph, and David Francis, with monstrously protruding eyebrows, conveys all the hatred festering in the dying Jabe, though not all the murderous power -- though this is the one point at which the production itself falters.</p>
+<p>Costumes, music, lighting and sound are all ideal. This is as close to a definitive performance as we will see, anywhere. Grab it.</p>
 <p>- Until Feb. 11. For tickets call 416-872- 1212.</p>
 <p>Black &amp; White Photo : Mirvish Productions / &quot;Here&#x27;s Leadbelly&#x27;s autograph!&quot; Jonathan Goad&#x27;s Val shows off his treasured possession to Lady Torrance, Seana McKenna.;</p></div></article>
       </section>
@@ -290,6 +314,6 @@
       </section>
     </footer>
 
-    <script src="./app.js?v=194" type="module"></script>
+    <script src="./app.js?v=233" type="module"></script>
   </body>
 </html>

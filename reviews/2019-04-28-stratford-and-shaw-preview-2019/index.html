@@ -13,31 +13,33 @@
     <link rel="apple-touch-icon" href="../apple-touch-icon.svg">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Rubik:wght@400;600;700;800;900&display=swap">
-    <link rel="stylesheet" href="./styles.css?v=173">
+    <link rel="stylesheet" href="./styles.css?v=174">
     <link rel="stylesheet" href="./catalog.css?v=194">
-    <link rel="stylesheet" href="./classic.css?v=194">
+    <link rel="stylesheet" href="./classic.css?v=233">
   </head>
   <body class="article-open">
     <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="site-header">
       <nav class="site-nav site-nav-left" id="siteNavLeft" aria-label="Primary navigation left">
-        <a class="nav-search" href="#search" aria-label="Search the archive"><span></span></a>
-        <a href="#section:current">Recent</a>
+        <a href="#search">Search</a>
         <div class="nav-folder nav-folder-wide">
           <a href="#section:browse">Browse</a>
           <div class="nav-dropdown nav-mega">
             <div class="nav-subfolder">
               <a href="#section:collections">Collections</a>
               <div class="nav-side-menu">
+                <a href="#collection:recent">Recent</a>
+                <a href="#correspondence:famous-letters">Special Letters</a>
                 <a href="#section:shakespeare">Shakespeare</a>
                 <a href="#collection:sondheim">Sondheim</a>
+                <a href="#collection:stoppard">Stoppard</a>
                 <a href="#collection:musicals">Musicals</a>
                 <a href="#collection:stratford">Stratford</a>
                 <a href="#collection:shaw">Shaw</a>
                 <a href="#collection:television">TV Reviews</a>
                 <a href="#collection:albums">Music Reviews</a>
                 <a href="#collection:books">Book Reviews</a>
-                <a href="#collection:profiles">Profiles &amp; Obits</a>
+                <a href="#collection:profiles">Artist Profiles</a>
                 <a href="#collection:early">Early Writing</a>
               </div>
             </div>
@@ -46,7 +48,6 @@
               <div class="nav-side-menu">
                 <a href="#works">All Works</a>
                 <a href="#people">All People</a>
-                <a href="#index:publications">Publications</a>
                 <a href="#places">Places</a>
               </div>
             </div>
@@ -72,21 +73,21 @@
       </a>
       <nav class="site-nav site-nav-right" id="siteNavRight" aria-label="Primary navigation right">
         <div class="nav-folder">
-          <a href="#explore">Explore</a>
+          <a href="#section:explore">Explore</a>
           <div class="nav-dropdown">
-            <a href="#explore">Article Explorer</a>
             <a href="#map">Map</a>
             <a href="#timeline">Timeline</a>
+            <a href="#explore">Article Explorer</a>
             <a href="#correspondence">Correspondence</a>
           </div>
         </div>
         <div class="nav-folder">
-          <a href="#about">About</a>
+          <a href="#section:about">About</a>
           <div class="nav-dropdown">
             <a href="#about">About Robert Cushman</a>
             <a href="#critics-circle">Critic's Circle</a>
             <a href="https://www.cushmancollected.com/checkout/donate?donatePageId=5c9b8016652dea361e5feb7d" target="_blank" rel="noopener">Donate</a>
-            <a href="#subscribe">Subscribe</a>
+            <a href="#contact">Contact &amp; Newsletter</a>
           </div>
         </div>
       </nav>
@@ -102,10 +103,25 @@
 
     <nav class="drawer" id="drawer" aria-label="Site navigation">
       <a href="#search">Search the Archive</a>
-      <a href="#section:current">Recent</a>
       <details>
         <summary>Browse</summary>
-        <a href="#section:collections">Collections</a>
+        <a href="#section:browse">Browse overview</a>
+        <details class="drawer-collection-menu">
+          <summary>Collections</summary>
+          <a href="#collection:recent">Recent</a>
+          <a href="#correspondence:famous-letters">Special Letters</a>
+          <a href="#section:shakespeare">Shakespeare</a>
+          <a href="#collection:sondheim">Sondheim</a>
+          <a href="#collection:stoppard">Stoppard</a>
+          <a href="#collection:musicals">Musicals</a>
+          <a href="#collection:stratford">Stratford</a>
+          <a href="#collection:shaw">Shaw</a>
+          <a href="#collection:television">TV Reviews</a>
+          <a href="#collection:albums">Music Reviews</a>
+          <a href="#collection:books">Book Reviews</a>
+          <a href="#collection:profiles">Artist Profiles</a>
+          <a href="#collection:early">Early Writing</a>
+        </details>
         <a href="#master-index:all-works">All Works</a>
         <a href="#master-index:all-people">All People</a>
         <a href="#index:publications">Publications</a>
@@ -113,17 +129,19 @@
       </details>
       <details>
         <summary>Explore</summary>
-        <a href="#explore">Article Explorer</a>
+        <a href="#section:explore">Explore overview</a>
         <a href="#map">Map</a>
         <a href="#timeline">Timeline</a>
+        <a href="#explore">Article Explorer</a>
         <a href="#correspondence">Correspondence</a>
       </details>
       <details>
         <summary>About</summary>
+        <a href="#section:about">About overview</a>
         <a href="#about">About Robert Cushman</a>
         <a href="#critics-circle">Critic's Circle</a>
         <a href="https://www.cushmancollected.com/checkout/donate?donatePageId=5c9b8016652dea361e5feb7d" target="_blank" rel="noopener">Donate</a>
-        <a href="#subscribe">Contact &amp; Newsletter</a>
+        <a href="#contact">Contact &amp; Newsletter</a>
       </details>
     </nav>
 
@@ -225,7 +243,11 @@
         </a>
       </section>
 
-      <section class="frontpage-directory" id="frontpageDirectory" aria-label="Primary site paths"></section>
+      <section class="browse-heading site-index-heading">
+        <h2>Site Index</h2>
+      </section>
+
+      <section class="frontpage-directory" id="frontpageDirectory" aria-label="Site index"></section>
 
       <section class="browse-heading home-secondary-nav" id="browse">
         <h2>Browse the Archive</h2>
@@ -260,14 +282,20 @@
 <figure><img loading="lazy" src="../site_export/content/media/stratford-and-shaw-preview-2019/02.jpg" alt="Tom Rooney in Cyrano de Bergerac. Shaw Festival 2019. Photo by Peter Andrew Lusztyk."></figure>
 <p><em>Tom Rooney in Cyrano de Bergerac. Shaw Festival 2019. Photo by Peter Andrew Lusztyk.</em></p>
 <p>Still, if you’re looking to shed tears, there could hardly be a more promising prospect than Edmond Rostand’s Cyrano de Bergerac, the classiest of all hard-luck dramas. The story of the consummate cavalier and poet, whose self-consciousness about his disfiguringly long nose prevented him from telling his love until the very last moment, speaks to the romantic masochist in all of us. Cyrano is the character actor’s dream romantic role, and it’s being played at the Shaw by Tom Rooney whose track record - in Ottawa, Toronto, and most of all Stratford – has been one of unbounded versatility and almost unbroken excellence. (His casting here was foreshadowed perhaps by his superb Don Quixote, the redeeming feature of Stratford’s Man of La Mancha.) This will be his Niagara debut, and it will also be that of his director, the comparably accomplished Chris Abraham. They have already had a productive working relationship on several shows, most recently on Stratford’s controversial Tartuffe. Other attractions include Deborah Hay as the brainy and beautiful Roxane, Cyrano’s unattainable beloved who turns out not to be so unattainable after all, but only when it’s too late. (Rostand really twists the knife; or, given his hero’s invincible swordsmanship, the rapier.) Two other noteworthy features; the play, usually a spectacular, is being given in one of the Shaw’s smaller houses, the Royal George; and it’s been “translated and adapted for the stage” by the deservedly ubiquitous Kate Hennig, the Shaw’s associate artistic director. Though I’m not sure what “adapted for the stage” means; wasn’t it written for the stage in the first place?</p>
-<p>As to the matter of Kate Hennig’s ubiquity: as an actress, she’s already had a major Toronto appearance this year in A Doll’s House, Part 2; as a playwright, she has a new piece premiering at Stratford. This is Mother’s Daughter, the last instalment of her trilogy about the Tudor queens Mary and Elizabeth, Stratford’s greatest success in the new-play area in years. In The Last Wife we saw the two of them growing up in the household of their final stepmother Katherine Parr. In The Virgin Trial Mary had an enjoyable (for the audience) sideline role, as a supportive if generally disapproving counsellor to her decidedly bratty younger sister. In the new one those roles, from the looks of things, are reversed. It’s Bess’s turn to observe from the wings (or so I guess from the fact that her role is being doubled with someone else’s) and Mary’s to take centre stage. Sara Farb’s acerbic Mary in the preceding segments could be a hard act to follow but the excellent Shannon Taylor should be well up to it. And it will be fascinating to see how the play deals with “Bloody Mary”, the Catholic zealot celebrated for the number of Protestants she had burned at the stake; the blurb in the brochure, not to mention the title, hints that the bloodiness was the fault of her devout mother Katherine of Aragon, divorced first wife of Henry VIII, or at least of Mary’s devotion to her memory. There are two neglected Victorian works (Tennyson’s play Queen Mary and Harrison Ainsworth’s novel The Tower of London) that present Mary as quite a sympathetic young lady, apart from all that bigotry. Certainly her childless marriage to Philip II of Spain, a chilling figure by all historical accounts, would seem to merit sympathy, though apparently Philip doesn’t appear in the play; only one man does and it isn’t him. The supporting female line-up is formidable, and the director, as for the two preceding plays, is Alan Dilworth. We may even find ourselves yearning for a fourth helping with Bess enthroned: not that there’s any shortage of plays, movies and TV series about her already.</p>
-<p>It can’t be a coincidence that one of Stratford’s Shakespeares this year is Henry VIII, a play that ends with the christening of the future Elizabeth I, and one of whose principal figures is Mother’s Daughter’s mother Queen Katharine. Her defiant trial and subsequent poignant death furnish two of the play’s four famous set-piece scenes; the others are the execution of the Duke of Buckingham and the fall (“farewell, a long farewell, to all my greatness”) of the man who framed him, Cardinal Wolsey. Interestingly, at least two of these are generally believed to be the work of John Fletcher; authorship theories about other plays may come and go, but this one is universally agreed to have been a collaboration. Other scenes present a vivid picture of Tudor court manners, dog enthusiastically eating dog. This is the only one of the history plays without even the rumour of a battle; the nasty things happen indoors. There have been only three previous productions of the play at Stratford and they have all been done on the main Festival stage, as might seem fitting for a play full of processions. This year, though, the physical scale will likely be even smaller than that of the Shaw’s Cyrano, as Martha Henry’s production is being staged in the Studio, which should give a chance to batten down on the characters and their intrigues: bloodless but merciless. Katharine gives Irene Poole a well-merited chance at a great Shakespearean female role; Rod Beattie gets to inhabit the two faces of Wolsey, known to his faithful associates as the great lord cardinal and to the aristocracy as “the butcher’s cur”; and Jonathan Goad has the title role. It’s also the longest role, and a tricky one, and an ambiguous one; the authors, probably nervous about how they present their late queen’s father without doing too much violence to history, seem to vacillate between criticising and celebrating him. Henry has an unhelpful habit of being absent from the big scenes. But he’s responsible for what happens in them and his conflicted presence has to be felt. He has to unify what could be a sprawling play.</p>
+<p>As to the matter of Kate Hennig’s ubiquity: as an actress, she’s already had a major Toronto appearance this year in A Doll’s House, Part 2; as a playwright, she has a new piece premiering at Stratford. This is Mother’s Daughter, the last instalment of her trilogy about the Tudor queens Mary and Elizabeth, Stratford’s greatest success in the new-play area in years. In The Last Wife we saw the two of them growing up in the household of their final stepmother Katherine Parr. In The Virgin Trial Mary had an enjoyable (for the audience) sideline role, as a supportive if generally disapproving counsellor to her decidedly bratty younger sister. In the new one those roles, from the looks of things, are reversed. It’s Bess’s turn to observe from the wings (or so I guess from the fact that her role is being doubled with someone else’s) and Mary’s to take centre stage.</p>
+<p>Sara Farb’s acerbic Mary in the preceding segments could be a hard act to follow but the excellent Shannon Taylor should be well up to it. And it will be fascinating to see how the play deals with “Bloody Mary”, the Catholic zealot celebrated for the number of Protestants she had burned at the stake; the blurb in the brochure, not to mention the title, hints that the bloodiness was the fault of her devout mother Katherine of Aragon, divorced first wife of Henry VIII, or at least of Mary’s devotion to her memory. There are two neglected Victorian works (Tennyson’s play Queen Mary and Harrison Ainsworth’s novel The Tower of London) that present Mary as quite a sympathetic young lady, apart from all that bigotry. Certainly her childless marriage to Philip II of Spain, a chilling figure by all historical accounts, would seem to merit sympathy, though apparently Philip doesn’t appear in the play; only one man does and it isn’t him.</p>
+<p>The supporting female line-up is formidable, and the director, as for the two preceding plays, is Alan Dilworth. We may even find ourselves yearning for a fourth helping with Bess enthroned: not that there’s any shortage of plays, movies and TV series about her already.</p>
+<p>It can’t be a coincidence that one of Stratford’s Shakespeares this year is Henry VIII, a play that ends with the christening of the future Elizabeth I, and one of whose principal figures is Mother’s Daughter’s mother Queen Katharine. Her defiant trial and subsequent poignant death furnish two of the play’s four famous set-piece scenes; the others are the execution of the Duke of Buckingham and the fall (“farewell, a long farewell, to all my greatness”) of the man who framed him, Cardinal Wolsey. Interestingly, at least two of these are generally believed to be the work of John Fletcher; authorship theories about other plays may come and go, but this one is universally agreed to have been a collaboration. Other scenes present a vivid picture of Tudor court manners, dog enthusiastically eating dog. This is the only one of the history plays without even the rumour of a battle; the nasty things happen indoors.</p>
+<p>There have been only three previous productions of the play at Stratford and they have all been done on the main Festival stage, as might seem fitting for a play full of processions. This year, though, the physical scale will likely be even smaller than that of the Shaw’s Cyrano, as Martha Henry’s production is being staged in the Studio, which should give a chance to batten down on the characters and their intrigues: bloodless but merciless. Katharine gives Irene Poole a well-merited chance at a great Shakespearean female role; Rod Beattie gets to inhabit the two faces of Wolsey, known to his faithful associates as the great lord cardinal and to the aristocracy as “the butcher’s cur”; and Jonathan Goad has the title role. It’s also the longest role, and a tricky one, and an ambiguous one; the authors, probably nervous about how they present their late queen’s father without doing too much violence to history, seem to vacillate between criticising and celebrating him.</p>
+<p>Henry has an unhelpful habit of being absent from the big scenes. But he’s responsible for what happens in them and his conflicted presence has to be felt. He has to unify what could be a sprawling play.</p>
 <figure><img loading="lazy" src="../site_export/content/media/stratford-and-shaw-preview-2019/03.jpg" alt="Michael Blake in Othello. Stratford Festival 2019."></figure>
 <p><em>Michael Blake in Othello. Stratford Festival 2019.</em></p>
 <p>The season’s other two Shakespeare plays are on the Festival stage and far more familiar. Both as it happens are plays about jealousy, or at least plays in which jealousy figures prominently. One of course is Othello for which the auguries are excellent. The Moor is played by Michael Blake whose stature at Stratford has steadily increased, starting with his electric performance as the avenger in All My Sons. (He’s previously played Othello at Bard on the Beach in Vancouver.) Iago is Gordon S. Miller whose trajectory at Stratford has been even more heartening. I first really noticed him eleven years and two Othellos ago, playing Roderigo, a juicy performance of a juicy supporting role. He made a delightful gull. But he was never cast in any role more serious or more central than that until last season but one when he gave a superb tragic performance, though not without comic elements, as the doomed presumptuous Pentheus in The Bacchae. I wouldn’t say that his promotion from Roderigo, the villain’s dupe, to the arch-villain himself brings the wheel full circle, because I hope it has more revolutions to go, but it’s certainly satisfying. So are the prospects of seeing Amelia Sargisson, last year’s eye-catching Eve in Paradise Lost, as Desdemona and Laura Condlin in the plum role of Emilia. The director, following his success with To Kill a Mockingbird, is Nigel Shawn Williams.</p>
 <p>Othello’s jealousy is deadly serious and has a deadly outcome. The jealousy of Master Ford, citizen of Windsor, suspecting his merry wife of deceiving him with Sir John Falstaff, is farcical in its development and peaceful in its resolution. (If they were doing The Winter’s Tale as well, we could have had the complete triptych of Shakespeare’s imaginary cuckolds.) Ford has occasioned some great comic performances in previous productions of The Merry Wives of Windsor, and Graham Abbey, after his virtuoso turn in Tartuffe, seems the ideal man to continue the tradition. Geraint Wyn Davies, who grew into an excellent Falstaff in Stratford’s last, rather erratic production of the play, returns to the role, having in the interim polished off the richer Sir John of Henry IV aka Breath of Kings. Brigit Wilson and Sophia Walker are the wives while Lucy Peacock, Mrs Ford last time around, is now Miss Quickly. “Mrs” and “Miss”, you will note, rather than the customary “Mistress” (but couldn’t Quickly be a widow?). The change accords with Antoni Cimolino’s directorial decision to set the play “in the 1950s, in a town not unlike Stratford, Ontario.” There’s good theatrical precedent for this; the Royal Shakespeare Company, some twenty years ago, mounted a highly-praised production set in the 1950s in a town not unlike Stratford, Warwickshire. On which topic: Wyn Davies appears in the brochure in respectable drag, and casting primly suspicious glances at the real wives from under a hair-dryer; he looks wonderful, and the script does indeed call on Falstaff at one point to dress as a woman, but I don’t see how they’re going to work in the dryer.</p>
 <p>And on the subject of gender-reversal: Diane Flacks, new to Stratford, is playing the title role in Gotthold Ephraim Lessing’s Nathan the Wise, a remarkably humane eighteenth-century play set in twelfth-century Jerusalem. In that charged setting it envisions a reconciliation of the three Abrahamic religions: a more sensitive Merchant of Venice in which a rich Jew’s daughter falls for a Christian with the added complication that they’re all under Muslim rule. Lessing’s play (he was a great critic as well, by the way) has had a sparse but quite distinguished performance record in English; in my youth I saw a good production of it at the Mermaid Theatre, and more recently it was done, also well, by Soulpepper. So, good old reliable Nathan. I have never encountered any production of Lessing’s other notable play, the comedy Minna von Barnhelm. Anyone?</p>
-<p>Meanwhile the Stratford program is buzzing with twentieth-century classics. Two of them may fairly be described, like The Glass Menagerie, as standbys: both done at least once before at Stratford and no strangers to other established companies in Canada. Or of course elsewhere. Private Lives seems to be Noel Coward’s most durable play, possibly rivalled by Hay Fever. (Though I have a personal fondness for Present Laughter and even, thanks to a scintillating Shaw production, Design for Living.) Geraint Wyn Davies and Lucy Peacock are the can’t-live-with-or-without-one-another couple in a production by San Francisco’s Carey Perloff. When I was living in England The Crucible seemed to crop up in regular rotation between the National Theatre and the RSC, far more than any other American play. I finally figured out why; it’s the one American classic that doesn’t require American accents. Also it’s a history play, which always commends itself to classical companies. And of course Arthur Miller’s Salem witchcraft drama packs an almost infallible punch, however you interpret it. From the brochure: “[John Proctor’s] refusal to take responsibility for his actions leads to an epidemic of fear and suspicion that engulfs the guilty and the innocent alike.” Umm, no; as Miller tells it the epidemic is sparked by the attempt of Abigail Williams and the other Salem girls to evade the heinous charge of having danced in the woods; John Proctor and his wife are collateral damage, only dragged into the inferno after it has started blazing. And just who are “the guilty” who get engulfed; does this mean there really were devil-worshippers among those hanged in Salem? (Actually, Miller thought there probably were, just as there really were subversives in the McCarthy-crazy America for which his play is a metaphor. But that’s in his preface, not his play.) Anyway, with Tim Campbell and Shannon Taylor playing them, I expect to root for the Proctors; and I expect to silently but admiringly hiss Scott Wentworth as the Reverend Samuel Parris who in history, Miller says, “cut a villainous path”. But you could hardly say he got engulfed.</p>
+<p>Meanwhile the Stratford program is buzzing with twentieth-century classics. Two of them may fairly be described, like The Glass Menagerie, as standbys: both done at least once before at Stratford and no strangers to other established companies in Canada. Or of course elsewhere. Private Lives seems to be Noel Coward’s most durable play, possibly rivalled by Hay Fever. (Though I have a personal fondness for Present Laughter and even, thanks to a scintillating Shaw production, Design for Living.) Geraint Wyn Davies and Lucy Peacock are the can’t-live-with-or-without-one-another couple in a production by San Francisco’s Carey Perloff. When I was living in England The Crucible seemed to crop up in regular rotation between the National Theatre and the RSC, far more than any other American play. I finally figured out why; it’s the one American classic that doesn’t require American accents. Also it’s a history play, which always commends itself to classical companies.</p>
+<p>And of course Arthur Miller’s Salem witchcraft drama packs an almost infallible punch, however you interpret it. From the brochure: “[John Proctor’s] refusal to take responsibility for his actions leads to an epidemic of fear and suspicion that engulfs the guilty and the innocent alike.” Umm, no; as Miller tells it the epidemic is sparked by the attempt of Abigail Williams and the other Salem girls to evade the heinous charge of having danced in the woods; John Proctor and his wife are collateral damage, only dragged into the inferno after it has started blazing. And just who are “the guilty” who get engulfed; does this mean there really were devil-worshippers among those hanged in Salem? (Actually, Miller thought there probably were, just as there really were subversives in the McCarthy-crazy America for which his play is a metaphor. But that’s in his preface, not his play.) Anyway, with Tim Campbell and Shannon Taylor playing them, I expect to root for the Proctors; and I expect to silently but admiringly hiss Scott Wentworth as the Reverend Samuel Parris who in history, Miller says, “cut a villainous path”.</p>
+<p>But you could hardly say he got engulfed.</p>
 <p>Jonathan Goad, who might have made a good John Proctor himself, directs The Crucible, following his triumphant Toronto production of Annie Baker’s John. His acting peer Graham Abbey matches him by making his own Stratford directing debut with Ben Hecht and Charles MacArthur’s The Front Page, the Chicago newspaper play (need one say more?) that lit up Broadway in 1928 and did the same when it received its long-delayed British premiere some fifty years later. Part farce, part melodrama, part affectionate genre picture, part cynical social commentary, The Front Page has been cited by Tom Stoppard, no less, as his favourite American play. Well, he was once a journalist himself; he did concede, under pressure, that it might not be quite as fine as Long Day’s Journey Into Night. Stratford has commissioned a new adaptation from Michael Healey; his version, like the immortal film adaptation His Girl Friday changes the sex of one of the two main characters, only here it’s the other one. Ace reporter Hildy Johnson remains a man; his editor-boss Walter Burns is now a woman, first name Penelope. The movie of course didn’t have to change Hildy’s name to have her played by Rosalind Russell, starring opposite Cary Grant in maybe his greatest and certainly his fastest-talking role. Stratford has Ben Carlson and Maev Beaty, and for them I can’t wait.</p>
 <figure><img loading="lazy" src="../site_export/content/media/stratford-and-shaw-preview-2019/04.png" alt="Ben Carlson and Maev Beaty in The Front Page. Stratford 2019."></figure>
 <p><em>Ben Carlson and Maev Beaty in The Front Page. Stratford 2019.</em></p>
@@ -307,6 +335,6 @@
       </section>
     </footer>
 
-    <script src="./app.js?v=194" type="module"></script>
+    <script src="./app.js?v=233" type="module"></script>
   </body>
 </html>

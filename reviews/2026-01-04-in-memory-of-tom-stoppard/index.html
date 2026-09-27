@@ -13,31 +13,33 @@
     <link rel="apple-touch-icon" href="../apple-touch-icon.svg">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Rubik:wght@400;600;700;800;900&display=swap">
-    <link rel="stylesheet" href="./styles.css?v=173">
+    <link rel="stylesheet" href="./styles.css?v=174">
     <link rel="stylesheet" href="./catalog.css?v=194">
-    <link rel="stylesheet" href="./classic.css?v=194">
+    <link rel="stylesheet" href="./classic.css?v=233">
   </head>
   <body class="article-open">
     <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="site-header">
       <nav class="site-nav site-nav-left" id="siteNavLeft" aria-label="Primary navigation left">
-        <a class="nav-search" href="#search" aria-label="Search the archive"><span></span></a>
-        <a href="#section:current">Recent</a>
+        <a href="#search">Search</a>
         <div class="nav-folder nav-folder-wide">
           <a href="#section:browse">Browse</a>
           <div class="nav-dropdown nav-mega">
             <div class="nav-subfolder">
               <a href="#section:collections">Collections</a>
               <div class="nav-side-menu">
+                <a href="#collection:recent">Recent</a>
+                <a href="#correspondence:famous-letters">Special Letters</a>
                 <a href="#section:shakespeare">Shakespeare</a>
                 <a href="#collection:sondheim">Sondheim</a>
+                <a href="#collection:stoppard">Stoppard</a>
                 <a href="#collection:musicals">Musicals</a>
                 <a href="#collection:stratford">Stratford</a>
                 <a href="#collection:shaw">Shaw</a>
                 <a href="#collection:television">TV Reviews</a>
                 <a href="#collection:albums">Music Reviews</a>
                 <a href="#collection:books">Book Reviews</a>
-                <a href="#collection:profiles">Profiles &amp; Obits</a>
+                <a href="#collection:profiles">Artist Profiles</a>
                 <a href="#collection:early">Early Writing</a>
               </div>
             </div>
@@ -46,7 +48,6 @@
               <div class="nav-side-menu">
                 <a href="#works">All Works</a>
                 <a href="#people">All People</a>
-                <a href="#index:publications">Publications</a>
                 <a href="#places">Places</a>
               </div>
             </div>
@@ -72,21 +73,21 @@
       </a>
       <nav class="site-nav site-nav-right" id="siteNavRight" aria-label="Primary navigation right">
         <div class="nav-folder">
-          <a href="#explore">Explore</a>
+          <a href="#section:explore">Explore</a>
           <div class="nav-dropdown">
-            <a href="#explore">Article Explorer</a>
             <a href="#map">Map</a>
             <a href="#timeline">Timeline</a>
+            <a href="#explore">Article Explorer</a>
             <a href="#correspondence">Correspondence</a>
           </div>
         </div>
         <div class="nav-folder">
-          <a href="#about">About</a>
+          <a href="#section:about">About</a>
           <div class="nav-dropdown">
             <a href="#about">About Robert Cushman</a>
             <a href="#critics-circle">Critic's Circle</a>
             <a href="https://www.cushmancollected.com/checkout/donate?donatePageId=5c9b8016652dea361e5feb7d" target="_blank" rel="noopener">Donate</a>
-            <a href="#subscribe">Subscribe</a>
+            <a href="#contact">Contact &amp; Newsletter</a>
           </div>
         </div>
       </nav>
@@ -102,10 +103,25 @@
 
     <nav class="drawer" id="drawer" aria-label="Site navigation">
       <a href="#search">Search the Archive</a>
-      <a href="#section:current">Recent</a>
       <details>
         <summary>Browse</summary>
-        <a href="#section:collections">Collections</a>
+        <a href="#section:browse">Browse overview</a>
+        <details class="drawer-collection-menu">
+          <summary>Collections</summary>
+          <a href="#collection:recent">Recent</a>
+          <a href="#correspondence:famous-letters">Special Letters</a>
+          <a href="#section:shakespeare">Shakespeare</a>
+          <a href="#collection:sondheim">Sondheim</a>
+          <a href="#collection:stoppard">Stoppard</a>
+          <a href="#collection:musicals">Musicals</a>
+          <a href="#collection:stratford">Stratford</a>
+          <a href="#collection:shaw">Shaw</a>
+          <a href="#collection:television">TV Reviews</a>
+          <a href="#collection:albums">Music Reviews</a>
+          <a href="#collection:books">Book Reviews</a>
+          <a href="#collection:profiles">Artist Profiles</a>
+          <a href="#collection:early">Early Writing</a>
+        </details>
         <a href="#master-index:all-works">All Works</a>
         <a href="#master-index:all-people">All People</a>
         <a href="#index:publications">Publications</a>
@@ -113,17 +129,19 @@
       </details>
       <details>
         <summary>Explore</summary>
-        <a href="#explore">Article Explorer</a>
+        <a href="#section:explore">Explore overview</a>
         <a href="#map">Map</a>
         <a href="#timeline">Timeline</a>
+        <a href="#explore">Article Explorer</a>
         <a href="#correspondence">Correspondence</a>
       </details>
       <details>
         <summary>About</summary>
+        <a href="#section:about">About overview</a>
         <a href="#about">About Robert Cushman</a>
         <a href="#critics-circle">Critic's Circle</a>
         <a href="https://www.cushmancollected.com/checkout/donate?donatePageId=5c9b8016652dea361e5feb7d" target="_blank" rel="noopener">Donate</a>
-        <a href="#subscribe">Contact &amp; Newsletter</a>
+        <a href="#contact">Contact &amp; Newsletter</a>
       </details>
     </nav>
 
@@ -225,7 +243,11 @@
         </a>
       </section>
 
-      <section class="frontpage-directory" id="frontpageDirectory" aria-label="Primary site paths"></section>
+      <section class="browse-heading site-index-heading">
+        <h2>Site Index</h2>
+      </section>
+
+      <section class="frontpage-directory" id="frontpageDirectory" aria-label="Site index"></section>
 
       <section class="browse-heading home-secondary-nav" id="browse">
         <h2>Browse the Archive</h2>
@@ -266,7 +288,9 @@
 <p>The ineluctable tendency of things to go wrong, and the human inability to come to terms with it. That’s what Travesties is about, and what Stoppard is about, and really what drama is about, whether tragedy or farce or – Stoppard’s own favoured genre – tragi-farce. There’s a flaw, however, in the way it’s worked out here. Tynan once decreed that all first-rate drama - again whether tragic or farcical - depicts a character driven by a logical process to a state of desperation. He restated this principle in a New Yorker profile, and said that Travesties, for all its delights, failed to qualify. He was right. Stoppard has always had a fondness for the people on the sidelines, whether they’re philosophy professors or Shakespearean nonentities or – taking this to extremes – the two theatre critics of The Real Inspector Hound (1968). But all these characters have something at stake; for them it’s a matter of life and death, sometimes literally. For Henry Carr, nothing’s at stake except his memories of rubbing shoulders with the great: the earnestness of feeling important. But he doesn’t seem too fussed about it. I enjoyed the first night of Travesties so much that I went back on the second. I would gladly see it again, any time. But it is, ultimately, unsatisfying.</p>
 <p>The presence of Lenin means that Travesties is inescapably about politics. Lenin is actually treated with surprising sympathy, given that Stoppard was regarded at the time by the theatrical left as a dangerously amusing reactionary. (The group of self-defined revolutionaries who ran the Royal Court Theatre once described their policy as never putting on a play by Tom Stoppard.) In an interview around this time Stoppard said that Stalin had continued what Lenin began, and that to believe otherwise was “an absurd and foolish untruth”, one that “much of the left” insisted on believing. Times and beliefs have changed, and it’s now difficult to see Stoppard, who once described himself as a traditional conservative, as being anything other than a traditional liberal. It’s certainly hard to find fault with his claim in the same interview that political actions without a moral foundation are merely “attempts to put the boot on some other foot”.</p>
 <p>Stoppard started his professional life as a journalist, quite a lowly one, and in Night and Day (1978) he paid tribute to his former calling: to its principles if not its practice. This half-successful play is set in an invented African country whose newly-booted president boasts of “a relatively free press”, meaning a press edited by one of his relatives. It’s also the first Stoppard play to have a woman as its presiding consciousness. Diana Rigg, the original Dotty in Jumpers, was here in rangy and needle-sharp form as a mine-owner’s wife, disowning a past encounter with a case-hardened left-wing reporter (“you think I’m the kind of woman who goes to bed with strange men in hotels just because I went to bed with a strange man in a hotel”) while dreaming of a future love with his starry-eyed opposite number. Her major relationship, though, is with the audience whom she treats to a running commentary on her states of mind. She also has a scorching grief-propelled denunciation of the idea that the principles of a newspaper – any newspaper – might be worth dying for. The tirade prompts a response from a photographer who says that he’s been around and that, yes, “people do terrible things” but that it’s worse in places where it’s all kept under wraps. “Information, all by itself, is light. That’s all you can say really.” In his profession he should know about light. He’s undoubtedly speaking for his author.</p>
-<p>The shining of light onto darkness is very much the subject of the TV play Professional Foul (1977) which I take to be the turning point in Stoppard’s work, politically and emotionally. It’s a companion piece to Jumpers. Once again we have a philosophy professor who would like to stay above the fray but finds that he can’t. It’s also the play in which Stoppard, a self-described “bounced Czech” – born of Czechoslovak parents, he was brought to England as a child when his widowed mother married an Englishman – begins to reckon with his own heritage. His Professor Anderson (immortally incarnated by Peter Barkworth in the BBC production) attends an academic conference in communist Prague. Initially suave and unruffled, his composure is disturbed when a Czech former student, now reduced to cleaning lavatories, asks for his help and is thoroughly shattered when he meets the man’s son, who is shocked – as only a child can be - that there should be evil and injustice in the world. The death of George’s tortoise was shocking but still comic; this conversation with a questioning boy is moving, and not funny at all. Not that comedy has been banished: the dialogue sparkles, especially among the professors, and there is superb wit in the play’s structure, including its title. Anderson’s real reason for coming to Prague was to see a World Cup soccer match: Czechoslovakia vs. England. A professional foul in soccer is “a calculated risk where the potential benefit of stopping a certain goal outweighs the punishment”. (I googled it.) Anderson undertakes to smuggle the dissident’s banned thesis out of the country. He also rewrites his initially innocuous conference address so that it becomes a defence of free speech, smooth but barbed. This makes him an obvious candidate for a baggage-search on his way home. So he quietly plants the document in the luggage of a smugly unconventional leftist colleague (“I sail pretty close to the wind, Marx-wise”, a line unforgettably delivered by John Shrapnel) who is not pleased when this professional foul is revealed to him. It seems that the end may not after all justify the means when you are the means. This bit of petard-hoisting rounds the play off beautifully.</p>
+<p>The shining of light onto darkness is very much the subject of the TV play Professional Foul (1977) which I take to be the turning point in Stoppard’s work, politically and emotionally. It’s a companion piece to Jumpers. Once again we have a philosophy professor who would like to stay above the fray but finds that he can’t. It’s also the play in which Stoppard, a self-described “bounced Czech” – born of Czechoslovak parents, he was brought to England as a child when his widowed mother married an Englishman – begins to reckon with his own heritage. His Professor Anderson (immortally incarnated by Peter Barkworth in the BBC production) attends an academic conference in communist Prague. Initially suave and unruffled, his composure is disturbed when a Czech former student, now reduced to cleaning lavatories, asks for his help and is thoroughly shattered when he meets the man’s son, who is shocked – as only a child can be - that there should be evil and injustice in the world.</p>
+<p>The death of George’s tortoise was shocking but still comic; this conversation with a questioning boy is moving, and not funny at all. Not that comedy has been banished: the dialogue sparkles, especially among the professors, and there is superb wit in the play’s structure, including its title. Anderson’s real reason for coming to Prague was to see a World Cup soccer match: Czechoslovakia vs. England. A professional foul in soccer is “a calculated risk where the potential benefit of stopping a certain goal outweighs the punishment”. (I googled it.) Anderson undertakes to smuggle the dissident’s banned thesis out of the country. He also rewrites his initially innocuous conference address so that it becomes a defence of free speech, smooth but barbed. This makes him an obvious candidate for a baggage-search on his way home. So he quietly plants the document in the luggage of a smugly unconventional leftist colleague (“I sail pretty close to the wind, Marx-wise”, a line unforgettably delivered by John Shrapnel) who is not pleased when this professional foul is revealed to him.</p>
+<p>It seems that the end may not after all justify the means when you are the means. This bit of petard-hoisting rounds the play off beautifully.</p>
 <p>Stoppard used jokes to make points. But he also used jokes to make jokes. He could do it for a whole evening, almost to the exclusion of anything else. On the Razzle (1981) is his adaptation of a nineteenth-century Austrian comedy by Johann Nestroy, a play that in another line of descent begat Thornton Wilder’s The Matchmaker which in turn begat Hello, Dolly! In any form, it’s a piece rife with mistaken identities and cunningly engineered chance encounters. “One false move” says a character early on in Stoppard’s version “and we could have a farce on our hands”: a wonderfully brazen acknowledgment to the audience that it is going to get precisely what it came for. Actually it gets more; it gets a text as giddy as its action, a script in which every line is some kind of gag. “This”, I wrote of the original National Theatre production “is not how plays usually get written, though we might all be a lot happier if it were”. The hitch is that it requires a company of expert vaudevillians. Mere actors can have trouble measuring up. The strongest performance in the original was given by Felicity Kendal, the actress generally regarded as Stoppard’s most reliable muse. She played a male role, a young apprentice out on the town (or “on the razzle”), and the cross-gender casting lent just the right distancing effect. She was delectably insouciant. Cross casting was also, come to think of it, a major factor in Shakespeare in Love (1998), one of Stoppard’s two great movie screenplays (the other was The Russia House), whose climax is the premiere performance of Romeo and Juliet with an Elizabethan court lady self-shoehorned into the role of Juliet: a woman pretending to be a man (or boy) pretending to be a woman. Gwyneth Paltrow was in effect playing the Felicity Kendal role.</p>
 <p>Unlike On the Razzle, Shakespeare in Love has an emotional component. Still, much of its delight comes from the jokes, especially the anachronistic ones where characters from England’s first Elizabethan age pre-echo the concerns and idioms of its second. (Stoppard shares his screenwriter’s credit with Marc Norman but I think we can assume the laughs are his.) One remembers the Thames boatman, an aspiring author, pressing a manuscript on his passenger Shakespeare with “hey, I bet you know all the booksellers”. Or of Will telling his outmatched contemporary Kit Marlowe “I loved your early stuff”. Or the stammering origin of the phrase “the show must…go on” (sorry, you had to be there). Or – the same pun shamelessly but irresistibly repeated – the Puritan’s denunciation of the players “Their business is show!” Or, moving the goalposts a bit, the same preacher’s being swept with the crowd into R&amp;J’s Globe Theatre premiere and bursting into the same wild applause at the end, as if none of them had seen anything like it before. Which, on the surviving evidence of all earlier English love-tragedies, they wouldn’t have. The film, I now realise, is Stoppard’s love-letter to the theatre.</p>
 <p>(It&#x27;s also the counterpart, or counterpoint, to Rosencrantz and Guildenstern Are Dead. I once came across a scholarly reference to a talk Stoppard gave called “Is It True What They Say About Shakespeare?”. I’ve never been able to track it down. I would love to.)</p>
@@ -311,6 +335,6 @@
       </section>
     </footer>
 
-    <script src="./app.js?v=194" type="module"></script>
+    <script src="./app.js?v=233" type="module"></script>
   </body>
 </html>

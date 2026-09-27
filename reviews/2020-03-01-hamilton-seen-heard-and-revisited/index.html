@@ -13,31 +13,33 @@
     <link rel="apple-touch-icon" href="../apple-touch-icon.svg">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Rubik:wght@400;600;700;800;900&display=swap">
-    <link rel="stylesheet" href="./styles.css?v=173">
+    <link rel="stylesheet" href="./styles.css?v=174">
     <link rel="stylesheet" href="./catalog.css?v=194">
-    <link rel="stylesheet" href="./classic.css?v=194">
+    <link rel="stylesheet" href="./classic.css?v=233">
   </head>
   <body class="article-open">
     <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="site-header">
       <nav class="site-nav site-nav-left" id="siteNavLeft" aria-label="Primary navigation left">
-        <a class="nav-search" href="#search" aria-label="Search the archive"><span></span></a>
-        <a href="#section:current">Recent</a>
+        <a href="#search">Search</a>
         <div class="nav-folder nav-folder-wide">
           <a href="#section:browse">Browse</a>
           <div class="nav-dropdown nav-mega">
             <div class="nav-subfolder">
               <a href="#section:collections">Collections</a>
               <div class="nav-side-menu">
+                <a href="#collection:recent">Recent</a>
+                <a href="#correspondence:famous-letters">Special Letters</a>
                 <a href="#section:shakespeare">Shakespeare</a>
                 <a href="#collection:sondheim">Sondheim</a>
+                <a href="#collection:stoppard">Stoppard</a>
                 <a href="#collection:musicals">Musicals</a>
                 <a href="#collection:stratford">Stratford</a>
                 <a href="#collection:shaw">Shaw</a>
                 <a href="#collection:television">TV Reviews</a>
                 <a href="#collection:albums">Music Reviews</a>
                 <a href="#collection:books">Book Reviews</a>
-                <a href="#collection:profiles">Profiles &amp; Obits</a>
+                <a href="#collection:profiles">Artist Profiles</a>
                 <a href="#collection:early">Early Writing</a>
               </div>
             </div>
@@ -46,7 +48,6 @@
               <div class="nav-side-menu">
                 <a href="#works">All Works</a>
                 <a href="#people">All People</a>
-                <a href="#index:publications">Publications</a>
                 <a href="#places">Places</a>
               </div>
             </div>
@@ -72,21 +73,21 @@
       </a>
       <nav class="site-nav site-nav-right" id="siteNavRight" aria-label="Primary navigation right">
         <div class="nav-folder">
-          <a href="#explore">Explore</a>
+          <a href="#section:explore">Explore</a>
           <div class="nav-dropdown">
-            <a href="#explore">Article Explorer</a>
             <a href="#map">Map</a>
             <a href="#timeline">Timeline</a>
+            <a href="#explore">Article Explorer</a>
             <a href="#correspondence">Correspondence</a>
           </div>
         </div>
         <div class="nav-folder">
-          <a href="#about">About</a>
+          <a href="#section:about">About</a>
           <div class="nav-dropdown">
             <a href="#about">About Robert Cushman</a>
             <a href="#critics-circle">Critic's Circle</a>
             <a href="https://www.cushmancollected.com/checkout/donate?donatePageId=5c9b8016652dea361e5feb7d" target="_blank" rel="noopener">Donate</a>
-            <a href="#subscribe">Subscribe</a>
+            <a href="#contact">Contact &amp; Newsletter</a>
           </div>
         </div>
       </nav>
@@ -102,10 +103,25 @@
 
     <nav class="drawer" id="drawer" aria-label="Site navigation">
       <a href="#search">Search the Archive</a>
-      <a href="#section:current">Recent</a>
       <details>
         <summary>Browse</summary>
-        <a href="#section:collections">Collections</a>
+        <a href="#section:browse">Browse overview</a>
+        <details class="drawer-collection-menu">
+          <summary>Collections</summary>
+          <a href="#collection:recent">Recent</a>
+          <a href="#correspondence:famous-letters">Special Letters</a>
+          <a href="#section:shakespeare">Shakespeare</a>
+          <a href="#collection:sondheim">Sondheim</a>
+          <a href="#collection:stoppard">Stoppard</a>
+          <a href="#collection:musicals">Musicals</a>
+          <a href="#collection:stratford">Stratford</a>
+          <a href="#collection:shaw">Shaw</a>
+          <a href="#collection:television">TV Reviews</a>
+          <a href="#collection:albums">Music Reviews</a>
+          <a href="#collection:books">Book Reviews</a>
+          <a href="#collection:profiles">Artist Profiles</a>
+          <a href="#collection:early">Early Writing</a>
+        </details>
         <a href="#master-index:all-works">All Works</a>
         <a href="#master-index:all-people">All People</a>
         <a href="#index:publications">Publications</a>
@@ -113,17 +129,19 @@
       </details>
       <details>
         <summary>Explore</summary>
-        <a href="#explore">Article Explorer</a>
+        <a href="#section:explore">Explore overview</a>
         <a href="#map">Map</a>
         <a href="#timeline">Timeline</a>
+        <a href="#explore">Article Explorer</a>
         <a href="#correspondence">Correspondence</a>
       </details>
       <details>
         <summary>About</summary>
+        <a href="#section:about">About overview</a>
         <a href="#about">About Robert Cushman</a>
         <a href="#critics-circle">Critic's Circle</a>
         <a href="https://www.cushmancollected.com/checkout/donate?donatePageId=5c9b8016652dea361e5feb7d" target="_blank" rel="noopener">Donate</a>
-        <a href="#subscribe">Contact &amp; Newsletter</a>
+        <a href="#contact">Contact &amp; Newsletter</a>
       </details>
     </nav>
 
@@ -225,7 +243,11 @@
         </a>
       </section>
 
-      <section class="frontpage-directory" id="frontpageDirectory" aria-label="Primary site paths"></section>
+      <section class="browse-heading site-index-heading">
+        <h2>Site Index</h2>
+      </section>
+
+      <section class="frontpage-directory" id="frontpageDirectory" aria-label="Site index"></section>
 
       <section class="browse-heading home-secondary-nav" id="browse">
         <h2>Browse the Archive</h2>
@@ -277,7 +299,9 @@
 <p>The story told is of war and peace, war before the intermission, peace after it; though peace turns out to be, as was said of diplomacy, war by other means. We watch Hamilton covering himself with glory as George Washington’s aide-de-camp in the American War of Independence; we then see him navigating the trickier shoals of partisan politics before there were even parties. He establishes the new country’s financial system, getting little thanks and fierce opposition in his lifetime and fulsome tributes after he’s gone. On another level, finance is what undoes him; he falls victim to a blackmailing scheme, precipitated by his extreme susceptibility to beautiful women; we’ve been told early on that Martha Washington named a feral tomcat after him. (‘That’s true’ says our hero in one of the few, and thereby effective, spoken lines that dot the evening.) And we’ve seen him paying court to two of the rich and intelligent Schuyler sisters, of whom one becomes his lifelong confidante while the other becomes his wife. The show gives us a third sister as well, but she seems to be there mainly to complete the trio. “Look around” sing the three sisters as they venture, star-struck but clear-eyed, into glamorous dangerous New York when it was actually new. They reprise the phrase in various contexts throughout the evening, and it seems more haunting, musically and verbally, at each recurrence.</p>
 <p>Repetition and expansion bind this show together. There are three duels spread out across the evening, culminating in the fatal one between Hamilton and Burr. (No spoiler there; Burr ‘fesses up in the opening number.) The fact that ‘Burr’ rhymes with ‘sir’ furnishes a running gag that becomes less funny, more ominous at each repetition. The show starts with rap, and keeps returning to it, but to call it a rap or hip-hop musical is to underestimate it. Rap has obviously nourished Miranda’s talent for meaningful wordplay but that talent spreads here through multiple styles, occasionally overreaching itself as in Angelica Schuyler’s ‘You want a revolution? I want a revelation’ which is pop-song glib. The score is rife with verbal homages to earlier theatre composers, from Noel Coward (likely unconscious) to Rodgers and Hammerstein (definitely conscious). Of the three most immediately effective numbers one is infectious rhythm-and-blues: Jefferson’s “What’d I Miss?”, on his return from Paris to join America’s first cabinet and to make trouble for our hero. King George III’s “You’ll Be Back” is, with delicious irony and as everyone has noted, pure British Invasion, musically a virtual paraphrase of All You Need Is Love though with a lyrical bite that’s far beyond it. (I never believed The Beatles meant that song seriously anyway.) And “The Room Where It Happens”, Burr’s musical paroxysm over being perpetually left out, is a traditional Broadway show-stopper, with a percussive thrust that Frank Loesser or Cy Coleman might have claimed for their own, though with politicised lyrics that echo the Sondheim of Pacific Overtures (an acknowledged inspiration) and Assassins.</p>
 <p>Somewhat unconventionally, all three of these knockout numbers appear in the second half, two of them for the first time, George’s as a reprise that, as reprises should, tops its previous iterations. (On Washington’s retirement from power: ‘I wasn’t aware that was something a person could do’. Though he should have checked his English history; at least one of his predecessors had abdicated, admittedly under duress.) In fact I found, this second time around, that the second act, with its mordantly rendered political in-fighting and its poignant person tragedies, wore better than the first with its battles and its hope.</p>
-<p>The show as a whole, though, is less enjoyable in the road-company production that’s come to the Ed Mirvish than it was in New York. This may have to do with the subject-matter seeming less urgent than it did in its country of origin. (The producers tactfully acknowledge this by dropping the subtitle “An American Musical” for Toronto and presumably for other un-American locations.) But it has more to do with sound-and-performance levels. On the Toronto first night the reception, for a show so eagerly awaited, was surprisingly tepid; people applauded when they were supposed to but they didn’t go wild; there was the statutory standing ovation at the end but just one curtain call. With only one preview behind them the orchestra swamped the singers while also sounding pretty swampy itself. In a show as verbally dense as this one, that’s a serious handicap. As for the performers: obviously it isn’t Joseph Morales’ fault that he isn’t Lin-Manuel Miranda. I was lucky enough to see Hamilton a week or so into its Broadway run when it was just on the verge of becoming a phenomenon. So when Miranda as Hamilton let out that opening line of his, the house fell apart; we were saluting both the character and the creator, thrilled to be on their team. And how often is the author also the star? We applauded Morales too, and in fact he gets the blend of modesty and assurance in that line exactly right, but of course it can’t be the same. Morales has abundant boyish charm, and it carries him through the opening scenes when Hamilton is the new kid in town, but he can’t muster the confidence, the charisma, for when he becomes a powerful man among men. Jared Dixon’s Burr is okay, though “The Room Where It Happens” lacks its proper dynamism; Marcus Choi’s Washington is better than okay, better in fact than the Broadway original. There are also a couple of outrageously overdone performances that come near to destroying great material: Warren Egypt Franklin, self-admiring and vocally incoherent as Jefferson, does in fact destroy “What’d I Miss?”; Neil Haskell doesn’t destroy King George’s three numbers, since they’re indestructible, but his flouncing around certainly spoils them.</p>
+<p>The show as a whole, though, is less enjoyable in the road-company production that’s come to the Ed Mirvish than it was in New York. This may have to do with the subject-matter seeming less urgent than it did in its country of origin. (The producers tactfully acknowledge this by dropping the subtitle “An American Musical” for Toronto and presumably for other un-American locations.) But it has more to do with sound-and-performance levels. On the Toronto first night the reception, for a show so eagerly awaited, was surprisingly tepid; people applauded when they were supposed to but they didn’t go wild; there was the statutory standing ovation at the end but just one curtain call. With only one preview behind them the orchestra swamped the singers while also sounding pretty swampy itself. In a show as verbally dense as this one, that’s a serious handicap.</p>
+<p>As for the performers: obviously it isn’t Joseph Morales’ fault that he isn’t Lin-Manuel Miranda. I was lucky enough to see Hamilton a week or so into its Broadway run when it was just on the verge of becoming a phenomenon. So when Miranda as Hamilton let out that opening line of his, the house fell apart; we were saluting both the character and the creator, thrilled to be on their team. And how often is the author also the star? We applauded Morales too, and in fact he gets the blend of modesty and assurance in that line exactly right, but of course it can’t be the same. Morales has abundant boyish charm, and it carries him through the opening scenes when Hamilton is the new kid in town, but he can’t muster the confidence, the charisma, for when he becomes a powerful man among men.</p>
+<p>Jared Dixon’s Burr is okay, though “The Room Where It Happens” lacks its proper dynamism; Marcus Choi’s Washington is better than okay, better in fact than the Broadway original. There are also a couple of outrageously overdone performances that come near to destroying great material: Warren Egypt Franklin, self-admiring and vocally incoherent as Jefferson, does in fact destroy “What’d I Miss?”; Neil Haskell doesn’t destroy King George’s three numbers, since they’re indestructible, but his flouncing around certainly spoils them.</p>
 <p>The English king, admonishing the ungrateful colonials not to ‘change the subject/cuz you’re my favorite subject’ is the only non-American character in the show (the Marquis de Lafayette must count as honorary American) and the only one to be played by a white actor: a witty and satisfying rounding off of the casting pattern. The famous line about immigrants getting the job done was greeted politely but didn’t raise the roof; by contrast a previously unremarked but now timely reference to a quid pro quo received plenty of enthusiastic chuckles. You take ‘em where you find ‘em. The musical is a stylised form, almost by definition, and this one invents its own conventions to go along with the ones that come with the territory. But it never goes meta-theatrical on us. It sticks to its story. In more than one sense, it makes history.</p></div></article>
       </section>
 
@@ -312,6 +336,6 @@
       </section>
     </footer>
 
-    <script src="./app.js?v=194" type="module"></script>
+    <script src="./app.js?v=233" type="module"></script>
   </body>
 </html>

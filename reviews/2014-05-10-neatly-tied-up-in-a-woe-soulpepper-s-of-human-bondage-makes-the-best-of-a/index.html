@@ -13,31 +13,33 @@
     <link rel="apple-touch-icon" href="../apple-touch-icon.svg">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Rubik:wght@400;600;700;800;900&display=swap">
-    <link rel="stylesheet" href="./styles.css?v=173">
+    <link rel="stylesheet" href="./styles.css?v=174">
     <link rel="stylesheet" href="./catalog.css?v=194">
-    <link rel="stylesheet" href="./classic.css?v=194">
+    <link rel="stylesheet" href="./classic.css?v=233">
   </head>
   <body class="article-open">
     <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="site-header">
       <nav class="site-nav site-nav-left" id="siteNavLeft" aria-label="Primary navigation left">
-        <a class="nav-search" href="#search" aria-label="Search the archive"><span></span></a>
-        <a href="#section:current">Recent</a>
+        <a href="#search">Search</a>
         <div class="nav-folder nav-folder-wide">
           <a href="#section:browse">Browse</a>
           <div class="nav-dropdown nav-mega">
             <div class="nav-subfolder">
               <a href="#section:collections">Collections</a>
               <div class="nav-side-menu">
+                <a href="#collection:recent">Recent</a>
+                <a href="#correspondence:famous-letters">Special Letters</a>
                 <a href="#section:shakespeare">Shakespeare</a>
                 <a href="#collection:sondheim">Sondheim</a>
+                <a href="#collection:stoppard">Stoppard</a>
                 <a href="#collection:musicals">Musicals</a>
                 <a href="#collection:stratford">Stratford</a>
                 <a href="#collection:shaw">Shaw</a>
                 <a href="#collection:television">TV Reviews</a>
                 <a href="#collection:albums">Music Reviews</a>
                 <a href="#collection:books">Book Reviews</a>
-                <a href="#collection:profiles">Profiles &amp; Obits</a>
+                <a href="#collection:profiles">Artist Profiles</a>
                 <a href="#collection:early">Early Writing</a>
               </div>
             </div>
@@ -46,7 +48,6 @@
               <div class="nav-side-menu">
                 <a href="#works">All Works</a>
                 <a href="#people">All People</a>
-                <a href="#index:publications">Publications</a>
                 <a href="#places">Places</a>
               </div>
             </div>
@@ -72,21 +73,21 @@
       </a>
       <nav class="site-nav site-nav-right" id="siteNavRight" aria-label="Primary navigation right">
         <div class="nav-folder">
-          <a href="#explore">Explore</a>
+          <a href="#section:explore">Explore</a>
           <div class="nav-dropdown">
-            <a href="#explore">Article Explorer</a>
             <a href="#map">Map</a>
             <a href="#timeline">Timeline</a>
+            <a href="#explore">Article Explorer</a>
             <a href="#correspondence">Correspondence</a>
           </div>
         </div>
         <div class="nav-folder">
-          <a href="#about">About</a>
+          <a href="#section:about">About</a>
           <div class="nav-dropdown">
             <a href="#about">About Robert Cushman</a>
             <a href="#critics-circle">Critic's Circle</a>
             <a href="https://www.cushmancollected.com/checkout/donate?donatePageId=5c9b8016652dea361e5feb7d" target="_blank" rel="noopener">Donate</a>
-            <a href="#subscribe">Subscribe</a>
+            <a href="#contact">Contact &amp; Newsletter</a>
           </div>
         </div>
       </nav>
@@ -102,10 +103,25 @@
 
     <nav class="drawer" id="drawer" aria-label="Site navigation">
       <a href="#search">Search the Archive</a>
-      <a href="#section:current">Recent</a>
       <details>
         <summary>Browse</summary>
-        <a href="#section:collections">Collections</a>
+        <a href="#section:browse">Browse overview</a>
+        <details class="drawer-collection-menu">
+          <summary>Collections</summary>
+          <a href="#collection:recent">Recent</a>
+          <a href="#correspondence:famous-letters">Special Letters</a>
+          <a href="#section:shakespeare">Shakespeare</a>
+          <a href="#collection:sondheim">Sondheim</a>
+          <a href="#collection:stoppard">Stoppard</a>
+          <a href="#collection:musicals">Musicals</a>
+          <a href="#collection:stratford">Stratford</a>
+          <a href="#collection:shaw">Shaw</a>
+          <a href="#collection:television">TV Reviews</a>
+          <a href="#collection:albums">Music Reviews</a>
+          <a href="#collection:books">Book Reviews</a>
+          <a href="#collection:profiles">Artist Profiles</a>
+          <a href="#collection:early">Early Writing</a>
+        </details>
         <a href="#master-index:all-works">All Works</a>
         <a href="#master-index:all-people">All People</a>
         <a href="#index:publications">Publications</a>
@@ -113,17 +129,19 @@
       </details>
       <details>
         <summary>Explore</summary>
-        <a href="#explore">Article Explorer</a>
+        <a href="#section:explore">Explore overview</a>
         <a href="#map">Map</a>
         <a href="#timeline">Timeline</a>
+        <a href="#explore">Article Explorer</a>
         <a href="#correspondence">Correspondence</a>
       </details>
       <details>
         <summary>About</summary>
+        <a href="#section:about">About overview</a>
         <a href="#about">About Robert Cushman</a>
         <a href="#critics-circle">Critic's Circle</a>
         <a href="https://www.cushmancollected.com/checkout/donate?donatePageId=5c9b8016652dea361e5feb7d" target="_blank" rel="noopener">Donate</a>
-        <a href="#subscribe">Contact &amp; Newsletter</a>
+        <a href="#contact">Contact &amp; Newsletter</a>
       </details>
     </nav>
 
@@ -225,7 +243,11 @@
         </a>
       </section>
 
-      <section class="frontpage-directory" id="frontpageDirectory" aria-label="Primary site paths"></section>
+      <section class="browse-heading site-index-heading">
+        <h2>Site Index</h2>
+      </section>
+
+      <section class="frontpage-directory" id="frontpageDirectory" aria-label="Site index"></section>
 
       <section class="browse-heading home-secondary-nav" id="browse">
         <h2>Browse the Archive</h2>
@@ -247,8 +269,12 @@
 
       <section class="article-view" id="articleView">
         <a class="back-link" href="#archive">Back to archive</a>
-        <article id="article"><time>May 10, 2014</time><h1>Neatly Tied Up In A Woe; Soulpepper&#x27;s Of Human Bondage Makes The Best Of A</h1><p class="article-meta">Robert Cushman · National Post</p><div class="article-body" id="article-text"><p>Gregory Prest makes his first appearance in Of Human Bondage, in which he plays the hero, through a trap door in a blaze of red light. He looks as if hes just ascended from hell. As things turn out, it seems likelier hes just arrived there. In more prosaic terms, his character, Philip Carey, is attending a lecture at the London medical school where he is a student. A little later his professor will display a slide and announce it as &quot;the crosssection of a diseased heart. He isn&#x27;t actually referring to Philip&#x27;s own mental and emotional condition, which is exacerbated by a club foot, but he very well might be Of Human Bondage is adapted by Vern Thiessen from the 1915 novel by Somerset Maugham, a book generally accepted as being partly autobiographical. Philip, like his author, is a young man of modest means who has turned to medicine despite deep longings to be an artist. Maugham, of course, was to become an immensely successful novelist and playwright; Philip, when we me meet him in this dramatized version (which starts later than the book) has behind him a failed fling as a painter in Paris. In Albert Schultzs Soulpepper production, visually his most striking and imaginative to date, both of Philips two worlds are continuously present. Lorenzo Savoini&#x27;s set is dominated by a human skeleton, the emblem of Philip&#x27;s medical career. His artistic aspirations are represented by a set of human-size picture frames, behind which members of the company function as live models. Or the frames can be empty, so that Philip may gaze into them as if into a mirror. Savoinis lighting does as much as his scenery to move time and place, and Mike Ross contributes an equally compelling music and sound score, the music mainly merry, the sound atmospherically grim. I did wonder why, when Philip takes his girl to The Belle of New York, an American musical, the number they actually see performed is the old British music-hall favourite Waiting at the Church. Philip chooses the show because its the kind of entertainment favoured by Mildred, the tea-shop waitress with whom he is unbreakably besotted. When he takes out a ladyfriend with more elevated tastes, they head for The Importance of Being Earnest in which, to judge from the offstage noises, Oliver Dennis is playing Lady Bracknell.</p>
-<p>Philip and Mildred are what everyone remembers from the novel. She taunts and ignores him, says he physically repels her, takes his gifts and money while despising his dependence on her, leaves him for other men, even destroys his paintings. But she is no less dependent on him, and not just financially; the human bonds tie both ways. They may also stand for the murderous poverty that swallows Mildred, nearly engulfs Philip, and is shown to have most of the population in its grip. Prest makes Philip&#x27;s emotional servitude, along with his other mental and physical struggles, hauntingly credible. Michelle Monteith does the same for Mildred, the shadow of her flirtatiousness persisting even in the direst circumstances; hers is a matter-of-fact attractiveness, one that she takes completely for granted, which is why Philip is so defenceless against it. Their relationship takes up much of the stagetime (and theirs are the only roles that aren&#x27;t doubled) but it never quite becomes the centre of the action. Nothing does. Its decades since I read the book, but I wouldnt doubt that Thiessen&#x27;s dramatization is the best and cleverest possible. It still isn&#x27;t tightly wound enough to be a play. That isnt a condemnation (Of Human Bondage makes a better evening than many plays) but it does indicate a frustration. Philips story never comes to a point; he has experiences, he suffers, and he has a kind of redemption that&#x27;s thought rather than felt, but there&#x27;s no definite climax: something a novel can do without but a play cant. The various supporting characters, Philips fellow students and old bohemian associates, are presumably meant to echo and complement him, but they remain shadowy. They are also unevenly acted, both collectively and individually; the extreme case is Dan Chameroy whose alcoholic poet is overdrawn when we first meet him but whose eventual deathscene is the most moving thing in the production. Paolo Santalucia does well as an apprentice medic who&#x27;s both aristocratic and disadvantaged, as do Sarah Wilson and Courtney Ch&#x27;ng Lancaster as the more suitable women who precede and follow Mildred in Philips affections. The adaptations refusal to go Hollywood, to be just a love story and neglect the broader social canvas, is obviously praiseworthy; but it does come at a price.</p>
+        <article id="article"><time>May 10, 2014</time><h1>Neatly Tied Up In A Woe; Soulpepper&#x27;s Of Human Bondage Makes The Best Of A</h1><p class="article-meta">Robert Cushman · National Post</p><div class="article-body" id="article-text"><p>Gregory Prest makes his first appearance in Of Human Bondage, in which he plays the hero, through a trap door in a blaze of red light. He looks as if hes just ascended from hell. As things turn out, it seems likelier hes just arrived there. In more prosaic terms, his character, Philip Carey, is attending a lecture at the London medical school where he is a student. A little later his professor will display a slide and announce it as &quot;the crosssection of a diseased heart. He isn&#x27;t actually referring to Philip&#x27;s own mental and emotional condition, which is exacerbated by a club foot, but he very well might be Of Human Bondage is adapted by Vern Thiessen from the 1915 novel by Somerset Maugham, a book generally accepted as being partly autobiographical. Philip, like his author, is a young man of modest means who has turned to medicine despite deep longings to be an artist.</p>
+<p>Maugham, of course, was to become an immensely successful novelist and playwright; Philip, when we me meet him in this dramatized version (which starts later than the book) has behind him a failed fling as a painter in Paris. In Albert Schultzs Soulpepper production, visually his most striking and imaginative to date, both of Philips two worlds are continuously present. Lorenzo Savoini&#x27;s set is dominated by a human skeleton, the emblem of Philip&#x27;s medical career. His artistic aspirations are represented by a set of human-size picture frames, behind which members of the company function as live models. Or the frames can be empty, so that Philip may gaze into them as if into a mirror. Savoinis lighting does as much as his scenery to move time and place, and Mike Ross contributes an equally compelling music and sound score, the music mainly merry, the sound atmospherically grim.</p>
+<p>I did wonder why, when Philip takes his girl to The Belle of New York, an American musical, the number they actually see performed is the old British music-hall favourite Waiting at the Church. Philip chooses the show because its the kind of entertainment favoured by Mildred, the tea-shop waitress with whom he is unbreakably besotted. When he takes out a ladyfriend with more elevated tastes, they head for The Importance of Being Earnest in which, to judge from the offstage noises, Oliver Dennis is playing Lady Bracknell.</p>
+<p>Philip and Mildred are what everyone remembers from the novel. She taunts and ignores him, says he physically repels her, takes his gifts and money while despising his dependence on her, leaves him for other men, even destroys his paintings. But she is no less dependent on him, and not just financially; the human bonds tie both ways. They may also stand for the murderous poverty that swallows Mildred, nearly engulfs Philip, and is shown to have most of the population in its grip. Prest makes Philip&#x27;s emotional servitude, along with his other mental and physical struggles, hauntingly credible. Michelle Monteith does the same for Mildred, the shadow of her flirtatiousness persisting even in the direst circumstances; hers is a matter-of-fact attractiveness, one that she takes completely for granted, which is why Philip is so defenceless against it. Their relationship takes up much of the stagetime (and theirs are the only roles that aren&#x27;t doubled) but it never quite becomes the centre of the action.</p>
+<p>Nothing does. Its decades since I read the book, but I wouldnt doubt that Thiessen&#x27;s dramatization is the best and cleverest possible. It still isn&#x27;t tightly wound enough to be a play. That isnt a condemnation (Of Human Bondage makes a better evening than many plays) but it does indicate a frustration. Philips story never comes to a point; he has experiences, he suffers, and he has a kind of redemption that&#x27;s thought rather than felt, but there&#x27;s no definite climax: something a novel can do without but a play cant. The various supporting characters, Philips fellow students and old bohemian associates, are presumably meant to echo and complement him, but they remain shadowy. They are also unevenly acted, both collectively and individually; the extreme case is Dan Chameroy whose alcoholic poet is overdrawn when we first meet him but whose eventual deathscene is the most moving thing in the production.</p>
+<p>Paolo Santalucia does well as an apprentice medic who&#x27;s both aristocratic and disadvantaged, as do Sarah Wilson and Courtney Ch&#x27;ng Lancaster as the more suitable women who precede and follow Mildred in Philips affections. The adaptations refusal to go Hollywood, to be just a love story and neglect the broader social canvas, is obviously praiseworthy; but it does come at a price.</p>
 <p>Soulpepper&#x27;s other new production is a play, but one that takes a long time to offer any kind of satisfaction. Athol Fugard is so admirable a figure that one wishes he were a more effective dramatist. His The Road to Mecca (1987, set in South Africa in 1974) takes a long, discursive first act to set up its situation. Miss Helen, an Afrikaner widow living in a remote village in the Cape, faces being eased out of her house, apparently because her neighbours dislike the statues and other art-objects that she has devoted the last 15 years to creating, and that she collectively calls her Mecca&quot; though from what we see their inspiration seems more pagan than Islamic. But they sure ain&#x27;t Christian. A young friend, a schoolteacher from comparatively enlightened Cape Town, to offer her vociferous support; meantime they fill us, and one another, in on their recent life stories. At the very end of the first act there appears Pastor Marius, from all appearances the chief of Helens persecutors. Mercifully, he stays for most of the second, lifting the play and David Storchs production to a new and thrilling level. David Fox gives him a massive, and massively complicated, presence. He also brings out the best in Diana Leblanc, who has previously seemed like ideal birdlike casting for Helen and now proves to be so.</p>
 <p>Fugard needs his third actor, though, to force a denouement, and force it he does; Shannon Taylor can hardly be blamed for shouting much of her role, but she doesn&#x27;t have to be quite so ceaselessly exclamatory. The context, the sheer isolation of the community, might be richer, too, if Helen and the pastor actually sounded Afrikaans, though it&#x27;s admittedly hard to wish Foxs personal speech rhythms, pausing in the middle of a sentence before hurtling with maximum force through the rest of it, any other than what they are. I wonder if Fugard is consciously echoing Ibsens Ghosts, another play in which a blinkered pastor tries to rein in a self-liberating lady, whose name is also Helen. His own play is a hard slog, but it&#x27;s ultimately a rewarding one.</p>
 <p>Weekend Post robert.cushman@hotmail.com Of Human Bondage runs at the Young Centre through May 24; The Road to Mecca is onstage</p>
@@ -286,6 +312,6 @@
       </section>
     </footer>
 
-    <script src="./app.js?v=194" type="module"></script>
+    <script src="./app.js?v=233" type="module"></script>
   </body>
 </html>

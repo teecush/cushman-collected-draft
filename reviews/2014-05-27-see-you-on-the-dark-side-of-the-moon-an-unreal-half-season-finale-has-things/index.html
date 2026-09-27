@@ -13,31 +13,33 @@
     <link rel="apple-touch-icon" href="../apple-touch-icon.svg">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Rubik:wght@400;600;700;800;900&display=swap">
-    <link rel="stylesheet" href="./styles.css?v=173">
+    <link rel="stylesheet" href="./styles.css?v=174">
     <link rel="stylesheet" href="./catalog.css?v=194">
-    <link rel="stylesheet" href="./classic.css?v=194">
+    <link rel="stylesheet" href="./classic.css?v=233">
   </head>
   <body class="article-open">
     <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="site-header">
       <nav class="site-nav site-nav-left" id="siteNavLeft" aria-label="Primary navigation left">
-        <a class="nav-search" href="#search" aria-label="Search the archive"><span></span></a>
-        <a href="#section:current">Recent</a>
+        <a href="#search">Search</a>
         <div class="nav-folder nav-folder-wide">
           <a href="#section:browse">Browse</a>
           <div class="nav-dropdown nav-mega">
             <div class="nav-subfolder">
               <a href="#section:collections">Collections</a>
               <div class="nav-side-menu">
+                <a href="#collection:recent">Recent</a>
+                <a href="#correspondence:famous-letters">Special Letters</a>
                 <a href="#section:shakespeare">Shakespeare</a>
                 <a href="#collection:sondheim">Sondheim</a>
+                <a href="#collection:stoppard">Stoppard</a>
                 <a href="#collection:musicals">Musicals</a>
                 <a href="#collection:stratford">Stratford</a>
                 <a href="#collection:shaw">Shaw</a>
                 <a href="#collection:television">TV Reviews</a>
                 <a href="#collection:albums">Music Reviews</a>
                 <a href="#collection:books">Book Reviews</a>
-                <a href="#collection:profiles">Profiles &amp; Obits</a>
+                <a href="#collection:profiles">Artist Profiles</a>
                 <a href="#collection:early">Early Writing</a>
               </div>
             </div>
@@ -46,7 +48,6 @@
               <div class="nav-side-menu">
                 <a href="#works">All Works</a>
                 <a href="#people">All People</a>
-                <a href="#index:publications">Publications</a>
                 <a href="#places">Places</a>
               </div>
             </div>
@@ -72,21 +73,21 @@
       </a>
       <nav class="site-nav site-nav-right" id="siteNavRight" aria-label="Primary navigation right">
         <div class="nav-folder">
-          <a href="#explore">Explore</a>
+          <a href="#section:explore">Explore</a>
           <div class="nav-dropdown">
-            <a href="#explore">Article Explorer</a>
             <a href="#map">Map</a>
             <a href="#timeline">Timeline</a>
+            <a href="#explore">Article Explorer</a>
             <a href="#correspondence">Correspondence</a>
           </div>
         </div>
         <div class="nav-folder">
-          <a href="#about">About</a>
+          <a href="#section:about">About</a>
           <div class="nav-dropdown">
             <a href="#about">About Robert Cushman</a>
             <a href="#critics-circle">Critic's Circle</a>
             <a href="https://www.cushmancollected.com/checkout/donate?donatePageId=5c9b8016652dea361e5feb7d" target="_blank" rel="noopener">Donate</a>
-            <a href="#subscribe">Subscribe</a>
+            <a href="#contact">Contact &amp; Newsletter</a>
           </div>
         </div>
       </nav>
@@ -102,10 +103,25 @@
 
     <nav class="drawer" id="drawer" aria-label="Site navigation">
       <a href="#search">Search the Archive</a>
-      <a href="#section:current">Recent</a>
       <details>
         <summary>Browse</summary>
-        <a href="#section:collections">Collections</a>
+        <a href="#section:browse">Browse overview</a>
+        <details class="drawer-collection-menu">
+          <summary>Collections</summary>
+          <a href="#collection:recent">Recent</a>
+          <a href="#correspondence:famous-letters">Special Letters</a>
+          <a href="#section:shakespeare">Shakespeare</a>
+          <a href="#collection:sondheim">Sondheim</a>
+          <a href="#collection:stoppard">Stoppard</a>
+          <a href="#collection:musicals">Musicals</a>
+          <a href="#collection:stratford">Stratford</a>
+          <a href="#collection:shaw">Shaw</a>
+          <a href="#collection:television">TV Reviews</a>
+          <a href="#collection:albums">Music Reviews</a>
+          <a href="#collection:books">Book Reviews</a>
+          <a href="#collection:profiles">Artist Profiles</a>
+          <a href="#collection:early">Early Writing</a>
+        </details>
         <a href="#master-index:all-works">All Works</a>
         <a href="#master-index:all-people">All People</a>
         <a href="#index:publications">Publications</a>
@@ -113,17 +129,19 @@
       </details>
       <details>
         <summary>Explore</summary>
-        <a href="#explore">Article Explorer</a>
+        <a href="#section:explore">Explore overview</a>
         <a href="#map">Map</a>
         <a href="#timeline">Timeline</a>
+        <a href="#explore">Article Explorer</a>
         <a href="#correspondence">Correspondence</a>
       </details>
       <details>
         <summary>About</summary>
+        <a href="#section:about">About overview</a>
         <a href="#about">About Robert Cushman</a>
         <a href="#critics-circle">Critic's Circle</a>
         <a href="https://www.cushmancollected.com/checkout/donate?donatePageId=5c9b8016652dea361e5feb7d" target="_blank" rel="noopener">Donate</a>
-        <a href="#subscribe">Contact &amp; Newsletter</a>
+        <a href="#contact">Contact &amp; Newsletter</a>
       </details>
     </nav>
 
@@ -225,7 +243,11 @@
         </a>
       </section>
 
-      <section class="frontpage-directory" id="frontpageDirectory" aria-label="Primary site paths"></section>
+      <section class="browse-heading site-index-heading">
+        <h2>Site Index</h2>
+      </section>
+
+      <section class="frontpage-directory" id="frontpageDirectory" aria-label="Site index"></section>
 
       <section class="browse-heading home-secondary-nav" id="browse">
         <h2>Browse the Archive</h2>
@@ -253,7 +275,9 @@
 <p>Now, obviously, this scene was not realistic, and not just because recently deceased CEOs dont generally pop up from the beyond and do a number. Of course it was a fantasy; but it didn&#x27;t seem the kind of fantasy that Don, who&#x27;s never even seemed particularly close to Bert, would have. Now, if it were Roger having it ... and indeed, if youre looking for a psychological crutch, Roger had confessed to Don that his last words to the living Bert had been a rather bitter quotation from a song of slightly later vintage (Depression, that is, rather than pre-): Irving Berlins &quot;Let&#x27;s Have Another Cup o&#x27; Coffee.&quot; But then, the whole episode had been a stylistic departure; a show that had previously, like every other highflying TV drama since The Sopranos, scorned the use of extraneous music, was suddenly loaded with it. Tense or sorrowful scenes were underscored as in a soap-opera. Meredith, Dons new secretary, threw herself at him as if they were in a soap opera, or maybe a 1930s movie. It seems unlikely that Matthew Weiner (the shows creator and, on this occasion, cowriter and director) had lost his nerve or his marbles. We were being tipped off that the episode was not to be believed. Or at least, that its happy ending was not to be trusted.</p>
 <p>About that happy ending. When we left him Don was back on top. At the beginning of the season he had been at the lowest of ebbs, on indefinite leave from the agency that had he had helped form and that had born his name. The start of that great second episode found Don dragging himself out of bed and into a suit in order to receive his former secretary whose devoted conveyance of news from the office provided him with his only purchase on his former identity. By the end of the episode he&#x27;d began to clamber back, a process signalled by his reconciliation with his daughter Sally, who kissed him, wished him a happy Valentine&#x27;s Day, and said she loved him.</p>
 <p>He gained re-admission to the firm, on terms that were meant to be humiliating and that he spiked his opponents guns by accepting. The agency has now undergone what, by my count, is its fourth restructuring, with Dons restoration an essential part of the deal. Admittedly, his marriage to Megan finally fell apart, by telephone, in a finely conceived scene in which she told him it was over by not telling him anything. But it&#x27;ll be nice for him, and for us, to be spared all those trips to California.</p>
-<p>Personally, I&#x27;ve been rooting for him all along. People keep saying, or writing, that he represents the dinosaur male of the 50s and 60s, and that we should be disgusted by his drinking and his womanizing, not to mention his having stolen another man&#x27;s identity, thus rendering his whole life a lie. I don&#x27;t buy it. Don remains in many ways unknowable, and one of the strengths of Jon Hamms performance is that he doesnt try to indicate or explain; one is never aware of the actor behind the character. But he has a better moral record than most people on the show. His treatment of his brother was indeed appalling, and if it&#x27;s still haunting him, we haven&#x27;t seen it.. But his non-sexual friendship with his alter egos widow was the most loving relationship weve seen on the show, and he seems considerate of people generally. Compare him to his enemies - the cold-fish Jim and loathsome Lou, both of them charmless and, even worse, humourless - and you can see why Dawn would stay loyal. He was the only member of the team to be shocked by the prostitution of Joan, though he didn&#x27;t find out in time to do anything about it. Not that her behaviour to him this season has suggested that she&#x27;s grateful - a disappointment to those of us whove always loved her - but then she was, by her own account, aggrieved that he was costing the company money, and shes always been the efficiency expert. Her ascent upstairs (literally and metaphorically) has been a major feature of one of the show&#x27;s main subjects: the advancement of female people. The most complex carrier of this theme is of course Peggy, so good at her job, so steady in her rise, and yet so insecure: far more so, it seems, than Dawn and her fellow coloured person, Shirley, who came on the scene later and are far less inhibited about telling the bosses, male and female, what they think of them. Don and Peggy have typically had one unguarded scene together per season (this season there have been two) but the reticence is what makes their relationship so sympathetic, even passionate; it&#x27;s expressed in the demands he makes on her and in the encouragement he gives her, and this season shes had the chance to reciprocate both, culminating in her triumphant presentation to Burger Chef. Though the way in which she got to announce that theyd landed the contract also seemed strangely unreal, naive even. Like something out of a film.</p>
+<p>Personally, I&#x27;ve been rooting for him all along. People keep saying, or writing, that he represents the dinosaur male of the 50s and 60s, and that we should be disgusted by his drinking and his womanizing, not to mention his having stolen another man&#x27;s identity, thus rendering his whole life a lie. I don&#x27;t buy it. Don remains in many ways unknowable, and one of the strengths of Jon Hamms performance is that he doesnt try to indicate or explain; one is never aware of the actor behind the character. But he has a better moral record than most people on the show. His treatment of his brother was indeed appalling, and if it&#x27;s still haunting him, we haven&#x27;t seen it.. But his non-sexual friendship with his alter egos widow was the most loving relationship weve seen on the show, and he seems considerate of people generally.</p>
+<p>Compare him to his enemies - the cold-fish Jim and loathsome Lou, both of them charmless and, even worse, humourless - and you can see why Dawn would stay loyal. He was the only member of the team to be shocked by the prostitution of Joan, though he didn&#x27;t find out in time to do anything about it. Not that her behaviour to him this season has suggested that she&#x27;s grateful - a disappointment to those of us whove always loved her - but then she was, by her own account, aggrieved that he was costing the company money, and shes always been the efficiency expert. Her ascent upstairs (literally and metaphorically) has been a major feature of one of the show&#x27;s main subjects: the advancement of female people. The most complex carrier of this theme is of course Peggy, so good at her job, so steady in her rise, and yet so insecure: far more so, it seems, than Dawn and her fellow coloured person, Shirley, who came on the scene later and are far less inhibited about telling the bosses, male and female, what they think of them.</p>
+<p>Don and Peggy have typically had one unguarded scene together per season (this season there have been two) but the reticence is what makes their relationship so sympathetic, even passionate; it&#x27;s expressed in the demands he makes on her and in the encouragement he gives her, and this season shes had the chance to reciprocate both, culminating in her triumphant presentation to Burger Chef. Though the way in which she got to announce that theyd landed the contract also seemed strangely unreal, naive even. Like something out of a film.</p>
 <p>Of course it can&#x27;t last. Not with another six episodes to be filled when the show returns next year for its final spurt. Don&#x27;s demons are still there. (And Peggys. And Rogers. And ... everybody&#x27;s really, except those too dull to have any.) I doubt that the show would be crass enough to have Don and Peggy actually pair off; theirs has to remain one of the great unrealized romances. Nor do I see any real necessity for it to end with Don&#x27;s death, and certainly not by his throwing himself from a great height, as supposedly foreshadowed in the opening credits. (That really would count as spelling things out in black and white. And for a very long time too.) I don&#x27;t see him as a tragic hero. Neither do I see him as the hollow man on whom his critics insist, but if he is - well, hollow men have a habit of surviving.</p>
 <p>Frank Ockenfels 3, AMC /</p></div></article>
       </section>
@@ -289,6 +313,6 @@
       </section>
     </footer>
 
-    <script src="./app.js?v=194" type="module"></script>
+    <script src="./app.js?v=233" type="module"></script>
   </body>
 </html>

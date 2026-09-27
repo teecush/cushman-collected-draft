@@ -13,31 +13,33 @@
     <link rel="apple-touch-icon" href="../apple-touch-icon.svg">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Rubik:wght@400;600;700;800;900&display=swap">
-    <link rel="stylesheet" href="./styles.css?v=173">
+    <link rel="stylesheet" href="./styles.css?v=174">
     <link rel="stylesheet" href="./catalog.css?v=194">
-    <link rel="stylesheet" href="./classic.css?v=194">
+    <link rel="stylesheet" href="./classic.css?v=233">
   </head>
   <body class="article-open">
     <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="site-header">
       <nav class="site-nav site-nav-left" id="siteNavLeft" aria-label="Primary navigation left">
-        <a class="nav-search" href="#search" aria-label="Search the archive"><span></span></a>
-        <a href="#section:current">Recent</a>
+        <a href="#search">Search</a>
         <div class="nav-folder nav-folder-wide">
           <a href="#section:browse">Browse</a>
           <div class="nav-dropdown nav-mega">
             <div class="nav-subfolder">
               <a href="#section:collections">Collections</a>
               <div class="nav-side-menu">
+                <a href="#collection:recent">Recent</a>
+                <a href="#correspondence:famous-letters">Special Letters</a>
                 <a href="#section:shakespeare">Shakespeare</a>
                 <a href="#collection:sondheim">Sondheim</a>
+                <a href="#collection:stoppard">Stoppard</a>
                 <a href="#collection:musicals">Musicals</a>
                 <a href="#collection:stratford">Stratford</a>
                 <a href="#collection:shaw">Shaw</a>
                 <a href="#collection:television">TV Reviews</a>
                 <a href="#collection:albums">Music Reviews</a>
                 <a href="#collection:books">Book Reviews</a>
-                <a href="#collection:profiles">Profiles &amp; Obits</a>
+                <a href="#collection:profiles">Artist Profiles</a>
                 <a href="#collection:early">Early Writing</a>
               </div>
             </div>
@@ -46,7 +48,6 @@
               <div class="nav-side-menu">
                 <a href="#works">All Works</a>
                 <a href="#people">All People</a>
-                <a href="#index:publications">Publications</a>
                 <a href="#places">Places</a>
               </div>
             </div>
@@ -72,21 +73,21 @@
       </a>
       <nav class="site-nav site-nav-right" id="siteNavRight" aria-label="Primary navigation right">
         <div class="nav-folder">
-          <a href="#explore">Explore</a>
+          <a href="#section:explore">Explore</a>
           <div class="nav-dropdown">
-            <a href="#explore">Article Explorer</a>
             <a href="#map">Map</a>
             <a href="#timeline">Timeline</a>
+            <a href="#explore">Article Explorer</a>
             <a href="#correspondence">Correspondence</a>
           </div>
         </div>
         <div class="nav-folder">
-          <a href="#about">About</a>
+          <a href="#section:about">About</a>
           <div class="nav-dropdown">
             <a href="#about">About Robert Cushman</a>
             <a href="#critics-circle">Critic's Circle</a>
             <a href="https://www.cushmancollected.com/checkout/donate?donatePageId=5c9b8016652dea361e5feb7d" target="_blank" rel="noopener">Donate</a>
-            <a href="#subscribe">Subscribe</a>
+            <a href="#contact">Contact &amp; Newsletter</a>
           </div>
         </div>
       </nav>
@@ -102,10 +103,25 @@
 
     <nav class="drawer" id="drawer" aria-label="Site navigation">
       <a href="#search">Search the Archive</a>
-      <a href="#section:current">Recent</a>
       <details>
         <summary>Browse</summary>
-        <a href="#section:collections">Collections</a>
+        <a href="#section:browse">Browse overview</a>
+        <details class="drawer-collection-menu">
+          <summary>Collections</summary>
+          <a href="#collection:recent">Recent</a>
+          <a href="#correspondence:famous-letters">Special Letters</a>
+          <a href="#section:shakespeare">Shakespeare</a>
+          <a href="#collection:sondheim">Sondheim</a>
+          <a href="#collection:stoppard">Stoppard</a>
+          <a href="#collection:musicals">Musicals</a>
+          <a href="#collection:stratford">Stratford</a>
+          <a href="#collection:shaw">Shaw</a>
+          <a href="#collection:television">TV Reviews</a>
+          <a href="#collection:albums">Music Reviews</a>
+          <a href="#collection:books">Book Reviews</a>
+          <a href="#collection:profiles">Artist Profiles</a>
+          <a href="#collection:early">Early Writing</a>
+        </details>
         <a href="#master-index:all-works">All Works</a>
         <a href="#master-index:all-people">All People</a>
         <a href="#index:publications">Publications</a>
@@ -113,17 +129,19 @@
       </details>
       <details>
         <summary>Explore</summary>
-        <a href="#explore">Article Explorer</a>
+        <a href="#section:explore">Explore overview</a>
         <a href="#map">Map</a>
         <a href="#timeline">Timeline</a>
+        <a href="#explore">Article Explorer</a>
         <a href="#correspondence">Correspondence</a>
       </details>
       <details>
         <summary>About</summary>
+        <a href="#section:about">About overview</a>
         <a href="#about">About Robert Cushman</a>
         <a href="#critics-circle">Critic's Circle</a>
         <a href="https://www.cushmancollected.com/checkout/donate?donatePageId=5c9b8016652dea361e5feb7d" target="_blank" rel="noopener">Donate</a>
-        <a href="#subscribe">Contact &amp; Newsletter</a>
+        <a href="#contact">Contact &amp; Newsletter</a>
       </details>
     </nav>
 
@@ -225,7 +243,11 @@
         </a>
       </section>
 
-      <section class="frontpage-directory" id="frontpageDirectory" aria-label="Primary site paths"></section>
+      <section class="browse-heading site-index-heading">
+        <h2>Site Index</h2>
+      </section>
+
+      <section class="frontpage-directory" id="frontpageDirectory" aria-label="Site index"></section>
 
       <section class="browse-heading home-secondary-nav" id="browse">
         <h2>Browse the Archive</h2>
@@ -253,7 +275,9 @@
 <p>There&#x27;s nobody in the cast from outside the family, so we have to rely on them for information about the outside world: a tactic that works surprisingly well. It&#x27;s the stuff about the Steeles themselves that can feel forced.We&#x27;re told that when Greg and Molly got married they were subjected to parental pressures because one of them was Catholic and the other wasn&#x27;t; but the subject, once raised, is so completely dropped that I can&#x27;t even</p>
 <p>remember which was which. There&#x27;s the same paint-by numbers approach to characterization in Molly&#x27;s fear that her genes have caused her sons&#x27; condition; amoment&#x27;s anguish, powerfully expressed, and then never mentioned again. Also, the author&#x27;s ear seems fallible, and the characters sometimes talk more like mouthpieces than like people.</p>
 <p>The actors though, under Vikki Anderson&#x27;s direction, rescue them. Maria Vacratsis gives a seamless, titanic performance as Molly, a mother confronted by one disaster after another; Vacratsis finds a truthful response for every one of them, without a moment of either exaggeration or avoidance. She&#x27;s a constant presence in the play as written; her husband tends to come and go, both physically and emotionally. It&#x27;s he, though, who gives us the most concentrated account of the Steeles&#x27; encounters with other people; Richard Greenblatt brings this off splendidly, creating a whole man and a moral perspective, both at the same time. Owen Mason starts the play off as Leo - this is where the charm comes in - practising a speech about his puppy love for a lady lifeguard. This amazingly natural child actor has in the past been one of Soulpepper&#x27;s long line of Tiny Tims: useful practice for a role in which, with help from some discreet writing, he gets to break our hearts without insulting our minds. Alex Furber (Albert in War Horse) also has charm, and more than that, as Scotty. Jeff, sarcastically angry at everyone, seems at first an impossible character-in both senses, incredible and unlikeable - but Gord Rand saves him, giving his bitterness passionate expression, and showing too how it fits into the total pattern; unlike the comparable hero of The Normal Heart, he isn&#x27;t presented as the centre of everything, and the play&#x27;s the better for it. Claire Calnan and P. J. Prudat do warm work as the brothers&#x27; partners. The ensemble work grows steadily in strength and responsiveness throughout the evening; by the end you really feel that you have met a family - even that you&#x27;re part of it yourself.</p>
-<p>The Flood Thereafter is as woolly a performance as Tainted is precise. Sarah Berthiaume&#x27;s play (originating in Quebec and translated by Nadine Desrochers) is a mash-up of motifs from The Odyssey, though if it wasn&#x27;t for the fact that one character is called Homere and another Penelope and that a program-note mentions the Sirens, I might not have noticed. It takes place in a village where the main entertainment is a perfunctory strip, performed nightly by a young lady named June whose effect on her audience - consisting, as far as can be seen, of the barman and one customer, but we&#x27;re probably meant to imagine others - is to have them cover their heads and cry. This, it seems, is because any one of them might be her father; her mother, who owed her arrival years earlier to being caught in a fisherman&#x27;s net, having proved irresistibly attractive to every man in town. (She now works in a diner and shows few signs of her earlier self.) Visitors are discouraged, though when a young trucker passes through town and is detained by a malfunctioning vehicle, June takes an interest in him and he in her, though he still professes devotion to the girlfriend back home, which makes June jealous. So he&#x27;s Odysseus, and she&#x27;s Circe as well as a Siren. As June, Courtney Ch&#x27;ng Lancaster, who was excellent in Soulpepper&#x27;s The Crucible and even survived The Barber of Seville, is dogged but defeated - especially by a long speech that demands intensity without furnishing the tools to achieve it.Maggie Huculak is similarly undone by incessant speechifying, even though she proved in Divisadero that she can do narration better than anyone; she only comes to life here when as Penelope, who despite her name is not the trucker&#x27;s girl, she&#x27;s allowed to stop intoning and start acting, in a well-written scene of jealous resentment with her husband (W. Joseph Matheson) who of course isn&#x27;t Odysseus but is Homere. The only character in whose fate I felt interested was the trucking intruder (Kevin Macdonald) though we aren&#x27;t told what that fate is. Yannik Larivee&#x27;s set is one of those that assembles elements of various scenes and piles them up in a big collage at the back of the stage. KerWells&#x27; production must be aiming at stylization but merely looks awkward. People have to edge around the stage just to get to where they&#x27;re going.</p>
+<p>The Flood Thereafter is as woolly a performance as Tainted is precise. Sarah Berthiaume&#x27;s play (originating in Quebec and translated by Nadine Desrochers) is a mash-up of motifs from The Odyssey, though if it wasn&#x27;t for the fact that one character is called Homere and another Penelope and that a program-note mentions the Sirens, I might not have noticed. It takes place in a village where the main entertainment is a perfunctory strip, performed nightly by a young lady named June whose effect on her audience - consisting, as far as can be seen, of the barman and one customer, but we&#x27;re probably meant to imagine others - is to have them cover their heads and cry. This, it seems, is because any one of them might be her father; her mother, who owed her arrival years earlier to being caught in a fisherman&#x27;s net, having proved irresistibly attractive to every man in town.</p>
+<p>(She now works in a diner and shows few signs of her earlier self.) Visitors are discouraged, though when a young trucker passes through town and is detained by a malfunctioning vehicle, June takes an interest in him and he in her, though he still professes devotion to the girlfriend back home, which makes June jealous. So he&#x27;s Odysseus, and she&#x27;s Circe as well as a Siren. As June, Courtney Ch&#x27;ng Lancaster, who was excellent in Soulpepper&#x27;s The Crucible and even survived The Barber of Seville, is dogged but defeated - especially by a long speech that demands intensity without furnishing the tools to achieve it.Maggie Huculak is similarly undone by incessant speechifying, even though she proved in Divisadero that she can do narration better than anyone; she only comes to life here when as Penelope, who despite her name is not the trucker&#x27;s girl, she&#x27;s allowed to stop intoning and start acting, in a well-written scene of jealous resentment with her husband (W.</p>
+<p>Joseph Matheson) who of course isn&#x27;t Odysseus but is Homere. The only character in whose fate I felt interested was the trucking intruder (Kevin Macdonald) though we aren&#x27;t told what that fate is. Yannik Larivee&#x27;s set is one of those that assembles elements of various scenes and piles them up in a big collage at the back of the stage. KerWells&#x27; production must be aiming at stylization but merely looks awkward. People have to edge around the stage just to get to where they&#x27;re going.</p>
 <p>Tainted runs through Oct. 12 at the Daniels Spectrum (1-800-204-0855); The Flood Thereafter is on through Oct. 6 at the Berkeley Street Theatre.</p>
 <p>Maria Vacratsis and Richard Greenblatt holding on in Tainted.; Caption:</p></div></article>
       </section>
@@ -289,6 +313,6 @@
       </section>
     </footer>
 
-    <script src="./app.js?v=194" type="module"></script>
+    <script src="./app.js?v=233" type="module"></script>
   </body>
 </html>

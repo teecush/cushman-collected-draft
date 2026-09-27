@@ -13,31 +13,33 @@
     <link rel="apple-touch-icon" href="../apple-touch-icon.svg">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Rubik:wght@400;600;700;800;900&display=swap">
-    <link rel="stylesheet" href="./styles.css?v=173">
+    <link rel="stylesheet" href="./styles.css?v=174">
     <link rel="stylesheet" href="./catalog.css?v=194">
-    <link rel="stylesheet" href="./classic.css?v=194">
+    <link rel="stylesheet" href="./classic.css?v=233">
   </head>
   <body class="article-open">
     <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="site-header">
       <nav class="site-nav site-nav-left" id="siteNavLeft" aria-label="Primary navigation left">
-        <a class="nav-search" href="#search" aria-label="Search the archive"><span></span></a>
-        <a href="#section:current">Recent</a>
+        <a href="#search">Search</a>
         <div class="nav-folder nav-folder-wide">
           <a href="#section:browse">Browse</a>
           <div class="nav-dropdown nav-mega">
             <div class="nav-subfolder">
               <a href="#section:collections">Collections</a>
               <div class="nav-side-menu">
+                <a href="#collection:recent">Recent</a>
+                <a href="#correspondence:famous-letters">Special Letters</a>
                 <a href="#section:shakespeare">Shakespeare</a>
                 <a href="#collection:sondheim">Sondheim</a>
+                <a href="#collection:stoppard">Stoppard</a>
                 <a href="#collection:musicals">Musicals</a>
                 <a href="#collection:stratford">Stratford</a>
                 <a href="#collection:shaw">Shaw</a>
                 <a href="#collection:television">TV Reviews</a>
                 <a href="#collection:albums">Music Reviews</a>
                 <a href="#collection:books">Book Reviews</a>
-                <a href="#collection:profiles">Profiles &amp; Obits</a>
+                <a href="#collection:profiles">Artist Profiles</a>
                 <a href="#collection:early">Early Writing</a>
               </div>
             </div>
@@ -46,7 +48,6 @@
               <div class="nav-side-menu">
                 <a href="#works">All Works</a>
                 <a href="#people">All People</a>
-                <a href="#index:publications">Publications</a>
                 <a href="#places">Places</a>
               </div>
             </div>
@@ -72,21 +73,21 @@
       </a>
       <nav class="site-nav site-nav-right" id="siteNavRight" aria-label="Primary navigation right">
         <div class="nav-folder">
-          <a href="#explore">Explore</a>
+          <a href="#section:explore">Explore</a>
           <div class="nav-dropdown">
-            <a href="#explore">Article Explorer</a>
             <a href="#map">Map</a>
             <a href="#timeline">Timeline</a>
+            <a href="#explore">Article Explorer</a>
             <a href="#correspondence">Correspondence</a>
           </div>
         </div>
         <div class="nav-folder">
-          <a href="#about">About</a>
+          <a href="#section:about">About</a>
           <div class="nav-dropdown">
             <a href="#about">About Robert Cushman</a>
             <a href="#critics-circle">Critic's Circle</a>
             <a href="https://www.cushmancollected.com/checkout/donate?donatePageId=5c9b8016652dea361e5feb7d" target="_blank" rel="noopener">Donate</a>
-            <a href="#subscribe">Subscribe</a>
+            <a href="#contact">Contact &amp; Newsletter</a>
           </div>
         </div>
       </nav>
@@ -102,10 +103,25 @@
 
     <nav class="drawer" id="drawer" aria-label="Site navigation">
       <a href="#search">Search the Archive</a>
-      <a href="#section:current">Recent</a>
       <details>
         <summary>Browse</summary>
-        <a href="#section:collections">Collections</a>
+        <a href="#section:browse">Browse overview</a>
+        <details class="drawer-collection-menu">
+          <summary>Collections</summary>
+          <a href="#collection:recent">Recent</a>
+          <a href="#correspondence:famous-letters">Special Letters</a>
+          <a href="#section:shakespeare">Shakespeare</a>
+          <a href="#collection:sondheim">Sondheim</a>
+          <a href="#collection:stoppard">Stoppard</a>
+          <a href="#collection:musicals">Musicals</a>
+          <a href="#collection:stratford">Stratford</a>
+          <a href="#collection:shaw">Shaw</a>
+          <a href="#collection:television">TV Reviews</a>
+          <a href="#collection:albums">Music Reviews</a>
+          <a href="#collection:books">Book Reviews</a>
+          <a href="#collection:profiles">Artist Profiles</a>
+          <a href="#collection:early">Early Writing</a>
+        </details>
         <a href="#master-index:all-works">All Works</a>
         <a href="#master-index:all-people">All People</a>
         <a href="#index:publications">Publications</a>
@@ -113,17 +129,19 @@
       </details>
       <details>
         <summary>Explore</summary>
-        <a href="#explore">Article Explorer</a>
+        <a href="#section:explore">Explore overview</a>
         <a href="#map">Map</a>
         <a href="#timeline">Timeline</a>
+        <a href="#explore">Article Explorer</a>
         <a href="#correspondence">Correspondence</a>
       </details>
       <details>
         <summary>About</summary>
+        <a href="#section:about">About overview</a>
         <a href="#about">About Robert Cushman</a>
         <a href="#critics-circle">Critic's Circle</a>
         <a href="https://www.cushmancollected.com/checkout/donate?donatePageId=5c9b8016652dea361e5feb7d" target="_blank" rel="noopener">Donate</a>
-        <a href="#subscribe">Contact &amp; Newsletter</a>
+        <a href="#contact">Contact &amp; Newsletter</a>
       </details>
     </nav>
 
@@ -225,7 +243,11 @@
         </a>
       </section>
 
-      <section class="frontpage-directory" id="frontpageDirectory" aria-label="Primary site paths"></section>
+      <section class="browse-heading site-index-heading">
+        <h2>Site Index</h2>
+      </section>
+
+      <section class="frontpage-directory" id="frontpageDirectory" aria-label="Site index"></section>
 
       <section class="browse-heading home-secondary-nav" id="browse">
         <h2>Browse the Archive</h2>
@@ -259,7 +281,9 @@
 <p>Penhall, like other young British playwrights, is an avowed fan of David Mamet. In the program for the National production of Mamet&#x27;s Edmond, he describes the play as a response to all those worthy drones bemoaning the end of socialism. It was the end of worthiness. He and his peers have apparently turned their backs on the sermonizing of the David Hare-Howard Barker generation, just as that lot rejected the soft-centred nostalgia of John Osborne and Arnold Wesker, who also thought they were rebels. Each generation thinks it&#x27;s the toughest until a new lot comes along, at which point the incumbents turn all sensitive and rebuke the intruders for their lack of finer feelings. Its pathetic, really.</p>
 <p>For the moment, though, Penhall and company are writing political drama that isnt doctrinaire; please note that failing to make the expected liberal noises is not the same thing as being right wing. For what they&#x27;re doing, Mamet, with his electric sense of personal confrontation on society&#x27;s margins, is the best reference. Theres a brief bit in Blue/Orange, celebrating an offstage characters cooking skills, that recalls one in Glengarry Glen Ross; maybe it&#x27;s an homage.</p>
 <p>Structurally, the play shapes up like a three-sided role- shifting Oleanna, with a similar final movement. A character -- Bruce, in this case -- finds that what he thought were casual remarks have been taken out of context and used as evidence against him.</p>
-<p>It&#x27;s a continuously exciting play, building conflicts that never let up in dialogue, that is both stinging and believable. This too is our youth, not just in London; and numerically more representative of it than is the play upstairs. Its also skewed. Most of it is a struggle between the two physicians, and the audience is inevitably going to take the side of the younger; hes up against authority, therefore vulnerable, and he also seems to be talking sense. At least he isn&#x27;t talking nonsense on the scale of Robert, who is still quoting R. D. Laing on madness being the real sanity and who also seems grammatically impaired. (He recites a line by Allen Ginsberg: &quot;Human is not a noun, he is a verb.&quot;) I have no desire to knock Chris Abraham&#x27;s production, which is very tense and, within its limits, visually striking; note the use of the sets single doorway, especially in relation to the perpetually hovering senior shrink. But it does accentuate the imbalance. In the first scene R. H. Thomsons Robert is a psychiatrist as one of the Monty Python team (probably the late Graham Chapman) might have presented; his beard, cords and sports jacket are impeccably realistic, but he seems to be on speed: tic-ridden, manipulative, and a bully. He&#x27;s the paranoid, obsessively defensive about his own position and his own research. Is the play really telling us that the lunatics have taken over the asylum? It seems, at this date, a bit simplistic (though it might ironically confirm some of Robert&#x27;s own wilder theories.) In itself its a riveting display, and Thomson does quieten down considerably in the later scenes, but the damage has been done; we simply dont credit a thing he says. Except one thing: He speaks of the damage Christopher will suffer simply by being locked up with older and undoubted psychotics. And after the play is over, a few more of his arguments feel more convincing than they did at the time. It&#x27;s to the play&#x27;s credit that it nags at you like this, but we could, I think, have had more of that at the time.</p>
+<p>It&#x27;s a continuously exciting play, building conflicts that never let up in dialogue, that is both stinging and believable. This too is our youth, not just in London; and numerically more representative of it than is the play upstairs. Its also skewed. Most of it is a struggle between the two physicians, and the audience is inevitably going to take the side of the younger; hes up against authority, therefore vulnerable, and he also seems to be talking sense. At least he isn&#x27;t talking nonsense on the scale of Robert, who is still quoting R. D. Laing on madness being the real sanity and who also seems grammatically impaired. (He recites a line by Allen Ginsberg: &quot;Human is not a noun, he is a verb.&quot;) I have no desire to knock Chris Abraham&#x27;s production, which is very tense and, within its limits, visually striking; note the use of the sets single doorway, especially in relation to the perpetually hovering senior shrink.</p>
+<p>But it does accentuate the imbalance. In the first scene R. H. Thomsons Robert is a psychiatrist as one of the Monty Python team (probably the late Graham Chapman) might have presented; his beard, cords and sports jacket are impeccably realistic, but he seems to be on speed: tic-ridden, manipulative, and a bully. He&#x27;s the paranoid, obsessively defensive about his own position and his own research. Is the play really telling us that the lunatics have taken over the asylum? It seems, at this date, a bit simplistic (though it might ironically confirm some of Robert&#x27;s own wilder theories.) In itself its a riveting display, and Thomson does quieten down considerably in the later scenes, but the damage has been done; we simply dont credit a thing he says. Except one thing: He speaks of the damage Christopher will suffer simply by being locked up with older and undoubted psychotics.</p>
+<p>And after the play is over, a few more of his arguments feel more convincing than they did at the time. It&#x27;s to the play&#x27;s credit that it nags at you like this, but we could, I think, have had more of that at the time.</p>
 <p>Kevin Hanchards Chris is as real as acting gets. His accent, for starters, is dead to rights (credit to Ned Vukovic, the dialect coach, for the sound of all three performances) and he manages a role that is one outburst after another without ever losing his own control. He is febrile, obviously, and tortured, and surprisingly funny; apparent innocence is mixed in him with a residue of slyness, and however much he contradicts himself he always seems, at that moment, to be telling the truth. Darren Keay as Bruce has the unenviable task of playing straight guy to a couple of crazies (Im speaking theatrically, not clinically) but he does it with increasing confidence and also with increasing ambiguity; he suggests, by the end, that he can, when cornered, be as petty as anyone else. This isn&#x27;t a perfect show, but it&#x27;s alive.</p>
 <p>Black &amp; White Photo: John Hryniuk, Canstage / R.H. Thomson, left, as Robert, Darren Keay, standing, as Bruce and Kevin Hanchard as Christopher.</p></div></article>
       </section>
@@ -295,6 +319,6 @@
       </section>
     </footer>
 
-    <script src="./app.js?v=194" type="module"></script>
+    <script src="./app.js?v=233" type="module"></script>
   </body>
 </html>

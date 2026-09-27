@@ -43956,11 +43956,11 @@
     "people": [
       "Albert Finney",
       "Ben Kingsley",
-      "Bernard Shaw",
       "David Rabe",
       "Denis Quilley",
       "Dorothy Tutin",
       "Eileen Atkins",
+      "George Bernard Shaw",
       "Gordon Chater",
       "Michael Frayn",
       "Nigel Hawthorne",
@@ -43983,7 +43983,7 @@
       "playwright": [
         "Michael Frayn",
         "Peter Nichols",
-        "Bernard Shaw",
+        "George Bernard Shaw",
         "Simon Gray",
         "David Rabe"
       ],
@@ -44041,11 +44041,11 @@
       "people": [
         "Albert Finney",
         "Ben Kingsley",
-        "Bernard Shaw",
         "David Rabe",
         "Denis Quilley",
         "Dorothy Tutin",
         "Eileen Atkins",
+        "George Bernard Shaw",
         "Gordon Chater",
         "Michael Frayn",
         "Nigel Hawthorne",
@@ -72834,6 +72834,7 @@
     "source_publication": "The Observer",
     "article_category": "Theatre Review",
     "collections": [
+      "The Musical Collection",
       "UK Collection"
     ],
     "publication_status": "publish",
@@ -86123,6 +86124,7 @@
     "source_publication": "The Observer",
     "article_category": "Theatre Review",
     "collections": [
+      "The Musical Collection",
       "UK Collection"
     ],
     "publication_status": "publish",
@@ -94996,7 +94998,7 @@
     "slug": "1983-12-11-fraynand-farce-go-hand-in-hand",
     "route": "/reviews/1983-12-11-fraynand-farce-go-hand-in-hand/",
     "source_file": "1983.12.11.The_New_York_Times.Fraynand_Farce_Go_Hand_In_Hand.md",
-    "title": "Fraynand Farce Go Hand In Hand",
+    "title": "Frayn and Farce Go Hand in Hand",
     "date": "1983-12-11",
     "date_precision": "day",
     "date_note": "",
@@ -95051,7 +95053,7 @@
     "production_groups": [],
     "media": [],
     "correspondence": [],
-    "word_count": 1920,
+    "word_count": 1923,
     "coordinate_points": [],
     "display_schema": {
       "work_type": "subjects",
@@ -101107,13 +101109,13 @@
       "-79.0677"
     ],
     "people": [
-      "Bernard Shaw"
+      "George Bernard Shaw"
     ],
     "roles": {
       "director": [],
       "actors": [],
       "playwright": [
-        "Bernard Shaw"
+        "George Bernard Shaw"
       ],
       "composer_lyricist": [],
       "musical_director": [],
@@ -101176,7 +101178,7 @@
         "Niagara-on-the-Lake"
       ],
       "people": [
-        "Bernard Shaw"
+        "George Bernard Shaw"
       ]
     }
   },
@@ -114982,10 +114984,10 @@
       "-79.0719"
     ],
     "people": [
-      "Bernard Shaw",
       "Christopher Newton",
       "Duncan Ollerenshaw",
       "Elizabeth Brown",
+      "George Bernard Shaw",
       "Jim Mezon",
       "Sandy Webster",
       "Seana McKenna"
@@ -115002,7 +115004,7 @@
         "Elizabeth Brown"
       ],
       "playwright": [
-        "Bernard Shaw"
+        "George Bernard Shaw"
       ],
       "composer_lyricist": [],
       "musical_director": [],
@@ -115067,10 +115069,10 @@
         "Niagara-on-the-Lake"
       ],
       "people": [
-        "Bernard Shaw",
         "Christopher Newton",
         "Duncan Ollerenshaw",
         "Elizabeth Brown",
+        "George Bernard Shaw",
         "Jim Mezon",
         "Sandy Webster",
         "Seana McKenna"
@@ -116971,7 +116973,7 @@
     "slug": "1994-06-04-passion-flowers-theatre-review-stephen-sondheim-has-his-humour-on-a-very",
     "route": "/reviews/1994-06-04-passion-flowers-theatre-review-stephen-sondheim-has-his-humour-on-a-very/",
     "source_file": "1994.06.04.The_Globe_and_Mail.Passion_Flowers_Theatre_Review_Stephen_Sondheim_Has_His_Humour_On_A_Ve.md",
-    "title": "Passion Flowers Theatre Review / Stephen Sondheim Has His Humour On A Very",
+    "title": "Passion Flowers",
     "date": "1994-06-04",
     "date_precision": "day",
     "date_note": "",
@@ -117051,21 +117053,7 @@
     "production_groups": [],
     "media": [],
     "correspondence": [],
-    "word_count": 1065,
-    "subject_role_map": [
-      {
-        "person": "Stephen Sondheim",
-        "roles": [
-          "playwright",
-          "composer_lyricist"
-        ],
-        "labels": [
-          "Playwright",
-          "Composer/Lyricist"
-        ]
-      }
-    ],
-    "subject_people": "Stephen Sondheim",
+    "word_count": 1023,
     "coordinate_points": [],
     "display_schema": {
       "work_type": "productions",
@@ -117079,9 +117067,7 @@
       "productions": [
         "Passion / Broken Glass"
       ],
-      "subjects": [
-        "Stephen Sondheim"
-      ],
+      "subjects": [],
       "book_authors": [],
       "publishers": [],
       "topics": [],
@@ -119491,7 +119477,8 @@
     "source_publication": "The Globe and Mail",
     "article_category": "Musical Review",
     "collections": [
-      "The Stratford Collection"
+      "The Stratford Collection",
+      "The Musical Collection"
     ],
     "publication_status": "publish",
     "editorial_status": "done",
@@ -125643,9 +125630,9 @@
       "-79.4129"
     ],
     "people": [
-      "Bernard Shaw",
       "Colleen Williams",
       "Deborah Lambie",
+      "George Bernard Shaw",
       "Greg Kramer",
       "Jim Jones",
       "John Blackwood",
@@ -125663,7 +125650,7 @@
         "Greg Kramer"
       ],
       "playwright": [
-        "Bernard Shaw"
+        "George Bernard Shaw"
       ],
       "composer_lyricist": [],
       "musical_director": [],
@@ -125728,9 +125715,9 @@
         "Toronto"
       ],
       "people": [
-        "Bernard Shaw",
         "Colleen Williams",
         "Deborah Lambie",
+        "George Bernard Shaw",
         "Greg Kramer",
         "Jim Jones",
         "John Blackwood",
@@ -130100,7 +130087,8 @@
     "source_publication": "National Post",
     "article_category": "Musical Review",
     "collections": [
-      "The Canadian Collection"
+      "The Canadian Collection",
+      "The Musical Collection"
     ],
     "publication_status": "publish",
     "editorial_status": "done",
@@ -134244,7 +134232,9 @@
     "publication": "National Post",
     "source_publication": "National Post",
     "article_category": "Musical Review",
-    "collections": [],
+    "collections": [
+      "The Musical Collection"
+    ],
     "publication_status": "publish",
     "editorial_status": "done",
     "editorial_issue_type": "",
@@ -135550,10 +135540,10 @@
     ],
     "people": [
       "Barry MacGregor",
-      "Bernard Shaw",
       "David Schurmann",
       "Douglas Rain",
       "Fiona Byrne",
+      "George Bernard Shaw",
       "Gordon Rand",
       "Jim Mezon",
       "Kelli Fox",
@@ -135580,7 +135570,7 @@
         "Patricia Hamilton"
       ],
       "playwright": [
-        "Bernard Shaw"
+        "George Bernard Shaw"
       ],
       "composer_lyricist": [],
       "musical_director": [],
@@ -135648,10 +135638,10 @@
       ],
       "people": [
         "Barry MacGregor",
-        "Bernard Shaw",
         "David Schurmann",
         "Douglas Rain",
         "Fiona Byrne",
+        "George Bernard Shaw",
         "Gordon Rand",
         "Jim Mezon",
         "Kelli Fox",
@@ -146135,7 +146125,8 @@
     "source_publication": "National Post",
     "article_category": "Musical Review",
     "collections": [
-      "The Canadian Collection"
+      "The Canadian Collection",
+      "The Musical Collection"
     ],
     "publication_status": "publish",
     "editorial_status": "done",
@@ -147090,7 +147081,8 @@
     "source_publication": "National Post",
     "article_category": "Musical Review",
     "collections": [
-      "The Canadian Collection"
+      "The Canadian Collection",
+      "The Musical Collection"
     ],
     "publication_status": "publish",
     "editorial_status": "done",
@@ -154921,10 +154913,10 @@
     ],
     "people": [
       "Bernard Behrens",
-      "Bernard Shaw",
       "Blair Williams",
       "Catherine McGregor",
       "Christopher Newton",
+      "George Bernard Shaw",
       "Guy Bannerman",
       "Jennifer Phipps",
       "Jim Mezon",
@@ -154951,7 +154943,7 @@
         "Jennifer Phipps"
       ],
       "playwright": [
-        "Bernard Shaw"
+        "George Bernard Shaw"
       ],
       "composer_lyricist": [],
       "musical_director": [],
@@ -155019,10 +155011,10 @@
       ],
       "people": [
         "Bernard Behrens",
-        "Bernard Shaw",
         "Blair Williams",
         "Catherine McGregor",
         "Christopher Newton",
+        "George Bernard Shaw",
         "Guy Bannerman",
         "Jennifer Phipps",
         "Jim Mezon",
@@ -158214,7 +158206,8 @@
     "source_publication": "National Post",
     "article_category": "Musical Review",
     "collections": [
-      "The Canadian Collection"
+      "The Canadian Collection",
+      "The Musical Collection"
     ],
     "publication_status": "publish",
     "editorial_status": "done",
@@ -158346,12 +158339,12 @@
     "city": "Niagara-on-the-Lake",
     "coordinates": [],
     "people": [
-      "Bernard Shaw",
       "Corinne Koslo",
       "Craig Erickson",
       "David Schurmann",
       "Dennis Garnhum",
       "Dylan Trowbridge",
+      "George Bernard Shaw",
       "Jan Alexandra Smith",
       "Kelly Wolf",
       "Lynne Cormack",
@@ -158420,7 +158413,7 @@
           "Lynne Cormack"
         ],
         "playwright": [
-          "Bernard Shaw"
+          "George Bernard Shaw"
         ],
         "set_designer": [
           "Kelly Wolf"
@@ -158516,12 +158509,12 @@
         "Niagara-on-the-Lake"
       ],
       "people": [
-        "Bernard Shaw",
         "Corinne Koslo",
         "Craig Erickson",
         "David Schurmann",
         "Dennis Garnhum",
         "Dylan Trowbridge",
+        "George Bernard Shaw",
         "Jan Alexandra Smith",
         "Kelly Wolf",
         "Lynne Cormack",
@@ -166972,7 +166965,8 @@
     "source_publication": "National Post",
     "article_category": "Musical Review",
     "collections": [
-      "The Canadian Collection"
+      "The Canadian Collection",
+      "The Musical Collection"
     ],
     "publication_status": "publish",
     "editorial_status": "done",
@@ -168316,7 +168310,9 @@
     "publication": "National Post",
     "source_publication": "National Post",
     "article_category": "Musical Review",
-    "collections": [],
+    "collections": [
+      "The Musical Collection"
+    ],
     "publication_status": "publish",
     "editorial_status": "done",
     "editorial_issue_type": "",
@@ -172378,7 +172374,9 @@
     "publication": "National Post",
     "source_publication": "National Post",
     "article_category": "Musical Review",
-    "collections": [],
+    "collections": [
+      "The Musical Collection"
+    ],
     "publication_status": "publish",
     "editorial_status": "done",
     "editorial_issue_type": "body_restored_from_source",
@@ -173731,9 +173729,9 @@
     ],
     "people": [
       "Allen MacInnis",
-      "Bernard Shaw",
       "David Schurmann",
       "Donna Belleville",
+      "George Bernard Shaw",
       "Nigel Shawn Williams",
       "Peter Krantz",
       "Peter Millard",
@@ -173757,7 +173755,7 @@
         "Donna Belleville"
       ],
       "playwright": [
-        "Bernard Shaw"
+        "George Bernard Shaw"
       ],
       "composer_lyricist": [],
       "musical_director": [],
@@ -173825,9 +173823,9 @@
       ],
       "people": [
         "Allen MacInnis",
-        "Bernard Shaw",
         "David Schurmann",
         "Donna Belleville",
+        "George Bernard Shaw",
         "Nigel Shawn Williams",
         "Peter Krantz",
         "Peter Millard",
@@ -186707,7 +186705,8 @@
     "source_publication": "National Post",
     "article_category": "Musical Review",
     "collections": [
-      "The Canadian Collection"
+      "The Canadian Collection",
+      "The Musical Collection"
     ],
     "publication_status": "publish",
     "editorial_status": "done",
@@ -188359,7 +188358,8 @@
     "source_publication": "National Post",
     "article_category": "Musical Review",
     "collections": [
-      "The Shaw Collection"
+      "The Shaw Collection",
+      "The Musical Collection"
     ],
     "publication_status": "publish",
     "editorial_status": "done",
@@ -204328,7 +204328,9 @@
     "publication": "National Post",
     "source_publication": "National Post",
     "article_category": "Musical Review",
-    "collections": [],
+    "collections": [
+      "The Musical Collection"
+    ],
     "publication_status": "publish",
     "editorial_status": "done",
     "editorial_issue_type": "body_restored_from_source",
@@ -209423,7 +209425,8 @@
     "source_publication": "National Post",
     "article_category": "Musical Review",
     "collections": [
-      "The Canadian Collection"
+      "The Canadian Collection",
+      "The Musical Collection"
     ],
     "publication_status": "publish",
     "editorial_status": "done",
@@ -215101,7 +215104,8 @@
     "source_publication": "National Post",
     "article_category": "Musical Review",
     "collections": [
-      "The Canadian Collection"
+      "The Canadian Collection",
+      "The Musical Collection"
     ],
     "publication_status": "publish",
     "editorial_status": "done",
@@ -215228,7 +215232,9 @@
     "publication": "National Post",
     "source_publication": "National Post",
     "article_category": "Musical Review",
-    "collections": [],
+    "collections": [
+      "The Musical Collection"
+    ],
     "publication_status": "publish",
     "editorial_status": "done",
     "editorial_issue_type": "",
@@ -215352,7 +215358,8 @@
     "source_publication": "National Post",
     "article_category": "Musical Review",
     "collections": [
-      "The Canadian Collection"
+      "The Canadian Collection",
+      "The Musical Collection"
     ],
     "publication_status": "publish",
     "editorial_status": "done",
@@ -215485,7 +215492,9 @@
     "publication": "National Post",
     "source_publication": "National Post",
     "article_category": "Musical Review",
-    "collections": [],
+    "collections": [
+      "The Musical Collection"
+    ],
     "publication_status": "publish",
     "editorial_status": "done",
     "editorial_issue_type": "",
@@ -216591,7 +216600,9 @@
     "publication": "National Post",
     "source_publication": "National Post",
     "article_category": "Musical Review",
-    "collections": [],
+    "collections": [
+      "The Musical Collection"
+    ],
     "publication_status": "publish",
     "editorial_status": "done",
     "editorial_issue_type": "body_restored_from_source",
@@ -221289,7 +221300,8 @@
     "source_publication": "National Post",
     "article_category": "Musical Review",
     "collections": [
-      "The Canadian Collection"
+      "The Canadian Collection",
+      "The Musical Collection"
     ],
     "publication_status": "publish",
     "editorial_status": "done",
@@ -221628,7 +221640,9 @@
     "publication": "National Post",
     "source_publication": "National Post",
     "article_category": "Musical Review",
-    "collections": [],
+    "collections": [
+      "The Musical Collection"
+    ],
     "publication_status": "publish",
     "editorial_status": "done",
     "editorial_issue_type": "",
@@ -230563,9 +230577,9 @@
     "people": [
       "Ben Carlson",
       "Benedict Campbell",
-      "Bernard Shaw",
       "David Schurmann",
       "Fiona Byrne",
+      "George Bernard Shaw",
       "Graeme Somerville",
       "Guy Bannerman",
       "Jennifer Phipps",
@@ -230592,7 +230606,7 @@
         "Benedict Campbell"
       ],
       "playwright": [
-        "Bernard Shaw"
+        "George Bernard Shaw"
       ],
       "composer_lyricist": [],
       "musical_director": [],
@@ -230661,9 +230675,9 @@
       "people": [
         "Ben Carlson",
         "Benedict Campbell",
-        "Bernard Shaw",
         "David Schurmann",
         "Fiona Byrne",
+        "George Bernard Shaw",
         "Graeme Somerville",
         "Guy Bannerman",
         "Jennifer Phipps",
@@ -233484,7 +233498,9 @@
     "publication": "National Post",
     "source_publication": "National Post",
     "article_category": "Musical Review",
-    "collections": [],
+    "collections": [
+      "The Musical Collection"
+    ],
     "publication_status": "publish",
     "editorial_status": "done",
     "editorial_issue_type": "",
@@ -242299,7 +242315,9 @@
     "publication": "National Post",
     "source_publication": "National Post",
     "article_category": "Musical Review",
-    "collections": [],
+    "collections": [
+      "The Musical Collection"
+    ],
     "publication_status": "publish",
     "editorial_status": "done",
     "editorial_issue_type": "body_restored_from_source",
@@ -258996,7 +259014,9 @@
     "publication": "National Post",
     "source_publication": "National Post",
     "article_category": "Musical Review",
-    "collections": [],
+    "collections": [
+      "The Musical Collection"
+    ],
     "publication_status": "publish",
     "editorial_status": "done",
     "editorial_issue_type": "body_restored_from_source",
@@ -279036,9 +279056,9 @@
       "-79.0711"
     ],
     "people": [
-      "Bernard Shaw",
       "Catherine McGregor",
       "Diana Donnelly",
+      "George Bernard Shaw",
       "Jackie Maxwell",
       "Mike Shara",
       "Nora McLellan",
@@ -279062,7 +279082,7 @@
         "Nora McLellan"
       ],
       "playwright": [
-        "Bernard Shaw"
+        "George Bernard Shaw"
       ],
       "composer_lyricist": [],
       "musical_director": [],
@@ -279131,9 +279151,9 @@
         "Niagara-on-the-Lake"
       ],
       "people": [
-        "Bernard Shaw",
         "Catherine McGregor",
         "Diana Donnelly",
+        "George Bernard Shaw",
         "Jackie Maxwell",
         "Mike Shara",
         "Nora McLellan",
@@ -280942,8 +280962,8 @@
     "people": [
       "Andrew Bunker",
       "Benedict Campbell",
-      "Bernard Shaw",
       "Blair Williams",
+      "George Bernard Shaw",
       "Jim Mezon",
       "Kelli Fox",
       "Nicole Underhay",
@@ -280962,7 +280982,7 @@
         "William Vickers"
       ],
       "playwright": [
-        "Bernard Shaw"
+        "George Bernard Shaw"
       ],
       "composer_lyricist": [],
       "musical_director": [],
@@ -281029,8 +281049,8 @@
       "people": [
         "Andrew Bunker",
         "Benedict Campbell",
-        "Bernard Shaw",
         "Blair Williams",
+        "George Bernard Shaw",
         "Jim Mezon",
         "Kelli Fox",
         "Nicole Underhay",
@@ -281741,7 +281761,8 @@
     "source_publication": "National Post",
     "article_category": "Musical Review",
     "collections": [
-      "The Stratford Collection"
+      "The Stratford Collection",
+      "The Musical Collection"
     ],
     "publication_status": "publish",
     "editorial_status": "done",
@@ -292284,7 +292305,8 @@
     "source_publication": "National Post",
     "article_category": "Musical Review",
     "collections": [
-      "The Canadian Collection"
+      "The Canadian Collection",
+      "The Musical Collection"
     ],
     "publication_status": "publish",
     "editorial_status": "done",
@@ -294634,7 +294656,9 @@
     "publication": "National Post",
     "source_publication": "National Post",
     "article_category": "Musical Review",
-    "collections": [],
+    "collections": [
+      "The Musical Collection"
+    ],
     "publication_status": "publish",
     "editorial_status": "done",
     "editorial_issue_type": "",
@@ -295166,7 +295190,9 @@
     "publication": "National Post",
     "source_publication": "National Post",
     "article_category": "Musical Review",
-    "collections": [],
+    "collections": [
+      "The Musical Collection"
+    ],
     "publication_status": "publish",
     "editorial_status": "done",
     "editorial_issue_type": "",
@@ -300378,7 +300404,8 @@
     "source_publication": "National Post",
     "article_category": "Musical Review",
     "collections": [
-      "The Shaw Collection"
+      "The Shaw Collection",
+      "The Musical Collection"
     ],
     "publication_status": "publish",
     "editorial_status": "done",
@@ -326396,7 +326423,9 @@
     "publication": "National Post",
     "source_publication": "National Post",
     "article_category": "Musical Review",
-    "collections": [],
+    "collections": [
+      "The Musical Collection"
+    ],
     "publication_status": "publish",
     "editorial_status": "done",
     "editorial_issue_type": "",
@@ -331747,7 +331776,8 @@
     "source_publication": "National Post",
     "article_category": "Musical Review",
     "collections": [
-      "The Shaw Collection"
+      "The Shaw Collection",
+      "The Musical Collection"
     ],
     "publication_status": "publish",
     "editorial_status": "done",
@@ -334910,7 +334940,7 @@
     "production_groups": [],
     "media": [],
     "correspondence": [],
-    "word_count": 1073,
+    "word_count": 1063,
     "coordinate_points": [
       {
         "label": "Public Theater",
@@ -338220,9 +338250,9 @@
       "-80.9686"
     ],
     "people": [
-      "Bernard Shaw",
       "Christopher Plummer",
       "Des McAnuff",
+      "George Bernard Shaw",
       "Nikki M. James"
     ],
     "roles": {
@@ -338234,7 +338264,7 @@
         "Nikki M. James"
       ],
       "playwright": [
-        "Bernard Shaw"
+        "George Bernard Shaw"
       ],
       "composer_lyricist": [],
       "musical_director": [],
@@ -338301,9 +338331,9 @@
         "Stratford, Ontario"
       ],
       "people": [
-        "Bernard Shaw",
         "Christopher Plummer",
         "Des McAnuff",
+        "George Bernard Shaw",
         "Nikki M. James"
       ]
     }
@@ -344269,10 +344299,10 @@
     "people": [
       "Andrew Bunker",
       "Benedict Campbell",
-      "Bernard Shaw",
       "Camellia Koo",
       "Claire Jullien",
       "Eda Holmes",
+      "George Bernard Shaw",
       "Graeme Somerville",
       "Ken James Stewart",
       "Laurie Paton",
@@ -344298,7 +344328,7 @@
         "Ken James Stewart"
       ],
       "playwright": [
-        "Bernard Shaw"
+        "George Bernard Shaw"
       ],
       "composer_lyricist": [],
       "musical_director": [],
@@ -344367,10 +344397,10 @@
       "people": [
         "Andrew Bunker",
         "Benedict Campbell",
-        "Bernard Shaw",
         "Camellia Koo",
         "Claire Jullien",
         "Eda Holmes",
+        "George Bernard Shaw",
         "Graeme Somerville",
         "Ken James Stewart",
         "Laurie Paton",
@@ -354050,7 +354080,8 @@
     "source_publication": "National Post",
     "article_category": "Musical Review",
     "collections": [
-      "The Canadian Collection"
+      "The Canadian Collection",
+      "The Musical Collection"
     ],
     "publication_status": "publish",
     "editorial_status": "done",
@@ -379918,10 +379949,10 @@
     ],
     "people": [
       "Benedict Campbell",
-      "Bernard Shaw",
       "Blair Williams",
       "Christopher Newton",
       "Deborah Hay",
+      "George Bernard Shaw",
       "Laurie Paton",
       "Leslie Frankish",
       "Michael Ball",
@@ -379948,7 +379979,7 @@
         "William Vickers"
       ],
       "playwright": [
-        "Bernard Shaw"
+        "George Bernard Shaw"
       ],
       "composer_lyricist": [],
       "musical_director": [],
@@ -380016,10 +380047,10 @@
       ],
       "people": [
         "Benedict Campbell",
-        "Bernard Shaw",
         "Blair Williams",
         "Christopher Newton",
         "Deborah Hay",
+        "George Bernard Shaw",
         "Laurie Paton",
         "Leslie Frankish",
         "Michael Ball",
@@ -381338,10 +381369,10 @@
     "coordinates": [],
     "people": [
       "Andrew Bunker",
-      "Bernard Shaw",
       "Claire Jullien",
       "Corrine Koslo",
       "Craig Pike",
+      "George Bernard Shaw",
       "Graeme Somerville",
       "Jackie Maxwell",
       "Krista Colosimo",
@@ -381375,7 +381406,7 @@
       ],
       "playwright": [
         "Lennox Robinson",
-        "Bernard Shaw"
+        "George Bernard Shaw"
       ],
       "composer_lyricist": [],
       "musical_director": [],
@@ -381427,7 +381458,7 @@
           "Tadeusz Bradecki"
         ],
         "playwright": [
-          "Bernard Shaw"
+          "George Bernard Shaw"
         ],
         "actors": [
           "Nigel Shawn Williams",
@@ -381474,10 +381505,10 @@
       ],
       "people": [
         "Andrew Bunker",
-        "Bernard Shaw",
         "Claire Jullien",
         "Corrine Koslo",
         "Craig Pike",
+        "George Bernard Shaw",
         "Graeme Somerville",
         "Jackie Maxwell",
         "Krista Colosimo",
@@ -396970,8 +397001,8 @@
     "coordinates": [],
     "people": [
       "Alisa Palmer",
-      "Bernard Shaw",
       "Eda Holmes",
+      "George Bernard Shaw",
       "Githa Sowerby",
       "Graeme Somerville",
       "Jeff Meadows",
@@ -396999,7 +397030,7 @@
       ],
       "playwright": [
         "Githa Sowerby",
-        "Bernard Shaw"
+        "George Bernard Shaw"
       ],
       "composer_lyricist": [],
       "musical_director": [],
@@ -397046,7 +397077,7 @@
           "Eda Holmes"
         ],
         "playwright": [
-          "Bernard Shaw"
+          "George Bernard Shaw"
         ],
         "actors": [
           "Graeme Somerville",
@@ -397095,8 +397126,8 @@
       ],
       "people": [
         "Alisa Palmer",
-        "Bernard Shaw",
         "Eda Holmes",
+        "George Bernard Shaw",
         "Githa Sowerby",
         "Graeme Somerville",
         "Jeff Meadows",
@@ -411503,13 +411534,13 @@
     "people": [
       "Andrew Bunker",
       "Benedict Campbell",
-      "Bernard Shaw",
       "Blair Williams",
       "Camellia Koo",
       "Claire Jullien",
       "Corinne Koslo",
       "Diana Donnelly",
       "Eugene O'Neill",
+      "George Bernard Shaw",
       "Gray Powell",
       "Jeff Meadows",
       "Jim Mezon",
@@ -411564,7 +411595,7 @@
       ],
       "playwright": [
         "Oscar Wilde",
-        "Bernard Shaw",
+        "George Bernard Shaw",
         "John Murrell",
         "Susan Glaspell",
         "Eugene O'Neill"
@@ -411659,7 +411690,7 @@
           "Sanjay Talwar"
         ],
         "playwright": [
-          "Bernard Shaw",
+          "George Bernard Shaw",
           "John Murrell"
         ]
       },
@@ -411763,13 +411794,13 @@
       "people": [
         "Andrew Bunker",
         "Benedict Campbell",
-        "Bernard Shaw",
         "Blair Williams",
         "Camellia Koo",
         "Claire Jullien",
         "Corinne Koslo",
         "Diana Donnelly",
         "Eugene O'Neill",
+        "George Bernard Shaw",
         "Gray Powell",
         "Jeff Meadows",
         "Jim Mezon",
@@ -432567,7 +432598,8 @@
     "source_publication": "National Post",
     "article_category": "Musical Review",
     "collections": [
-      "The Shaw Collection"
+      "The Shaw Collection",
+      "The Musical Collection"
     ],
     "publication_status": "publish",
     "editorial_status": "done",
@@ -433373,7 +433405,8 @@
     "source_publication": "National Post",
     "article_category": "Musical Review",
     "collections": [
-      "The Stratford Collection"
+      "The Stratford Collection",
+      "The Musical Collection"
     ],
     "publication_status": "publish",
     "editorial_status": "done",
@@ -456137,7 +456170,7 @@
       "-79.0719"
     ],
     "people": [
-      "Bernard Shaw",
+      "George Bernard Shaw",
       "Jay Turvey",
       "Jeff Irving",
       "Jenny L. Wright",
@@ -456165,7 +456198,7 @@
         "Jenny L. Wright"
       ],
       "playwright": [
-        "Bernard Shaw"
+        "George Bernard Shaw"
       ],
       "composer_lyricist": [],
       "musical_director": [],
@@ -456230,7 +456263,7 @@
         "Niagara-on-the-Lake"
       ],
       "people": [
-        "Bernard Shaw",
+        "George Bernard Shaw",
         "Jay Turvey",
         "Jeff Irving",
         "Jenny L. Wright",
@@ -458283,7 +458316,7 @@
     "coordinates": [],
     "people": [
       "Ben Carlson",
-      "Bernard Shaw",
+      "George Bernard Shaw",
       "Gray Powell",
       "Martha Burns",
       "Sanjay Talwar",
@@ -458304,7 +458337,7 @@
         "Tom McCamus"
       ],
       "playwright": [
-        "Bernard Shaw"
+        "George Bernard Shaw"
       ],
       "composer_lyricist": [],
       "musical_director": [],
@@ -458372,7 +458405,7 @@
       ],
       "people": [
         "Ben Carlson",
-        "Bernard Shaw",
+        "George Bernard Shaw",
         "Gray Powell",
         "Martha Burns",
         "Sanjay Talwar",

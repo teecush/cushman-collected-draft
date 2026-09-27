@@ -13,31 +13,33 @@
     <link rel="apple-touch-icon" href="../apple-touch-icon.svg">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Rubik:wght@400;600;700;800;900&display=swap">
-    <link rel="stylesheet" href="./styles.css?v=173">
+    <link rel="stylesheet" href="./styles.css?v=174">
     <link rel="stylesheet" href="./catalog.css?v=194">
-    <link rel="stylesheet" href="./classic.css?v=194">
+    <link rel="stylesheet" href="./classic.css?v=233">
   </head>
   <body class="article-open">
     <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="site-header">
       <nav class="site-nav site-nav-left" id="siteNavLeft" aria-label="Primary navigation left">
-        <a class="nav-search" href="#search" aria-label="Search the archive"><span></span></a>
-        <a href="#section:current">Recent</a>
+        <a href="#search">Search</a>
         <div class="nav-folder nav-folder-wide">
           <a href="#section:browse">Browse</a>
           <div class="nav-dropdown nav-mega">
             <div class="nav-subfolder">
               <a href="#section:collections">Collections</a>
               <div class="nav-side-menu">
+                <a href="#collection:recent">Recent</a>
+                <a href="#correspondence:famous-letters">Special Letters</a>
                 <a href="#section:shakespeare">Shakespeare</a>
                 <a href="#collection:sondheim">Sondheim</a>
+                <a href="#collection:stoppard">Stoppard</a>
                 <a href="#collection:musicals">Musicals</a>
                 <a href="#collection:stratford">Stratford</a>
                 <a href="#collection:shaw">Shaw</a>
                 <a href="#collection:television">TV Reviews</a>
                 <a href="#collection:albums">Music Reviews</a>
                 <a href="#collection:books">Book Reviews</a>
-                <a href="#collection:profiles">Profiles &amp; Obits</a>
+                <a href="#collection:profiles">Artist Profiles</a>
                 <a href="#collection:early">Early Writing</a>
               </div>
             </div>
@@ -46,7 +48,6 @@
               <div class="nav-side-menu">
                 <a href="#works">All Works</a>
                 <a href="#people">All People</a>
-                <a href="#index:publications">Publications</a>
                 <a href="#places">Places</a>
               </div>
             </div>
@@ -72,21 +73,21 @@
       </a>
       <nav class="site-nav site-nav-right" id="siteNavRight" aria-label="Primary navigation right">
         <div class="nav-folder">
-          <a href="#explore">Explore</a>
+          <a href="#section:explore">Explore</a>
           <div class="nav-dropdown">
-            <a href="#explore">Article Explorer</a>
             <a href="#map">Map</a>
             <a href="#timeline">Timeline</a>
+            <a href="#explore">Article Explorer</a>
             <a href="#correspondence">Correspondence</a>
           </div>
         </div>
         <div class="nav-folder">
-          <a href="#about">About</a>
+          <a href="#section:about">About</a>
           <div class="nav-dropdown">
             <a href="#about">About Robert Cushman</a>
             <a href="#critics-circle">Critic's Circle</a>
             <a href="https://www.cushmancollected.com/checkout/donate?donatePageId=5c9b8016652dea361e5feb7d" target="_blank" rel="noopener">Donate</a>
-            <a href="#subscribe">Subscribe</a>
+            <a href="#contact">Contact &amp; Newsletter</a>
           </div>
         </div>
       </nav>
@@ -102,10 +103,25 @@
 
     <nav class="drawer" id="drawer" aria-label="Site navigation">
       <a href="#search">Search the Archive</a>
-      <a href="#section:current">Recent</a>
       <details>
         <summary>Browse</summary>
-        <a href="#section:collections">Collections</a>
+        <a href="#section:browse">Browse overview</a>
+        <details class="drawer-collection-menu">
+          <summary>Collections</summary>
+          <a href="#collection:recent">Recent</a>
+          <a href="#correspondence:famous-letters">Special Letters</a>
+          <a href="#section:shakespeare">Shakespeare</a>
+          <a href="#collection:sondheim">Sondheim</a>
+          <a href="#collection:stoppard">Stoppard</a>
+          <a href="#collection:musicals">Musicals</a>
+          <a href="#collection:stratford">Stratford</a>
+          <a href="#collection:shaw">Shaw</a>
+          <a href="#collection:television">TV Reviews</a>
+          <a href="#collection:albums">Music Reviews</a>
+          <a href="#collection:books">Book Reviews</a>
+          <a href="#collection:profiles">Artist Profiles</a>
+          <a href="#collection:early">Early Writing</a>
+        </details>
         <a href="#master-index:all-works">All Works</a>
         <a href="#master-index:all-people">All People</a>
         <a href="#index:publications">Publications</a>
@@ -113,17 +129,19 @@
       </details>
       <details>
         <summary>Explore</summary>
-        <a href="#explore">Article Explorer</a>
+        <a href="#section:explore">Explore overview</a>
         <a href="#map">Map</a>
         <a href="#timeline">Timeline</a>
+        <a href="#explore">Article Explorer</a>
         <a href="#correspondence">Correspondence</a>
       </details>
       <details>
         <summary>About</summary>
+        <a href="#section:about">About overview</a>
         <a href="#about">About Robert Cushman</a>
         <a href="#critics-circle">Critic's Circle</a>
         <a href="https://www.cushmancollected.com/checkout/donate?donatePageId=5c9b8016652dea361e5feb7d" target="_blank" rel="noopener">Donate</a>
-        <a href="#subscribe">Contact &amp; Newsletter</a>
+        <a href="#contact">Contact &amp; Newsletter</a>
       </details>
     </nav>
 
@@ -225,7 +243,11 @@
         </a>
       </section>
 
-      <section class="frontpage-directory" id="frontpageDirectory" aria-label="Primary site paths"></section>
+      <section class="browse-heading site-index-heading">
+        <h2>Site Index</h2>
+      </section>
+
+      <section class="frontpage-directory" id="frontpageDirectory" aria-label="Site index"></section>
 
       <section class="browse-heading home-secondary-nav" id="browse">
         <h2>Browse the Archive</h2>
@@ -252,7 +274,9 @@
 <p>Lev&#x27;s political position is harder to work out. Maybe his &quot;rehabilitation&quot; actually took; maybe, in a postStalinist but still Communist Russia, he&#x27;s keeping his head down; maybe his experiences have soured him on all ideological positions. He certainly takes great sour pleasure in debunking the American&#x27;s humanist idealism. Undoubtedly he has earned his bitterness, something that Eric Goulem, who plays him, conveys fullforce. Gaunt and mocking, he looks and initially sounds exactly right. But, as he goes on, his performance hardens into a machine-gun monotony, unvaried even in the flashbacks to his 20-years younger self.</p>
 <p>The heart of the play is in the debates, increasingly keyed up, between Lev and Alan, a role that finally gives Paul Dunn the chance to play a grown-up; he even has a beard. He&#x27;s still boyish; Alan, who comes bearing a tape recorder, has some growing up to do. His default position, presented by Dunn with brilliantly articulated back-to-the-wall lucidity, is that, yes, Anna failed Lev personally, but that she did something more important by creating art that will fix and outlast the entire period, and to which Stalin himself will be &quot;merely a footnote.&quot; Nice, but I have my doubts; the evil that men do has a habit of living after them.</p>
 <p>I suspect the author&#x27;s intellectual sympathies are with Alan and her emotional with Lev who forces Alan, and us with him, into seeing the arrests and interrogations through his eyes. There are some clever strokes of theatre here, but the discusssion never quite connects with Anna herself or with the dramatic scenes from the terror, excellent though these are in their own right. In Alan Dilworth&#x27;s stark, tactful production we feel the hunger, the cold and the fear. Sarah Orenstein has the full measure of Anna&#x27;s flinty far-sightedness and emotional myopia, while as her fellow poet and her son&#x27;s fellow victim Osip Mandelstam, Richard McMillan, one of our finest actors, gives one of his finest performances. In his early appearances, as a gentle mentor, he&#x27;s pure secular Russian saint; his final scene in which his wife quietly feeds him an egg before he&#x27;s dragged off by the police, is extraordinarily moving. Caroline Gillis, who plays the wife, is also fine as the old woman, lined up outside a prison in hopeless hope of glimpsing her own son, who inspires Akhmatova to write Requiem. Claire Calnan seems wasted as Anna&#x27;s confidante, but it&#x27;s nice to have her around.</p>
-<p>From A to Z: after After Akhmatova, Zero Hour. This is a one-man show, written and performed by American actor Jim Brochu, brought in by the Harold Green Theatre, about Zero Mostel, actor, comedian, painter (his favourite pursuit), &quot;giant talent and giant pain in the ass&quot; (I quote, though not from the play). He was also a victim of the 1950s blacklist, which if hardly comparable to the Gulag, was an atrocity real enough and stupid enough in its own right. The late Jack Gilford, Mostel&#x27;s friend and fellow victim, once told me how it felt to face the Un-American Activities Committee: &quot;They wanted you dead.&quot; He also told me how it felt to share a stage with Zero himself, after Mostel had secured him a role in his own comeback show A Funny Thing Happened on the Way to the Forum. It was a different kind of persecution: &quot;I thought, if he&#x27;s doing this to me when I&#x27;m his friend, how would he treat me if I was his enemy?&quot; (I suggested that if they&#x27;d been enemies, Zero would have left him alone. Jack seemed to think there was something in that.) In short, Mostel was hardly just a teddy bear with a paintbrush; Brochu compromises at making him amiably rude. The show has many of the familiar faults of its genre. It has the needless framework of an imaginary interview with an invisible journalist. It drags stuff in (Billie Holiday&#x27;s appearance with Zero on a nightclub bill is mentioned, just so we can hear a soundbite from one of her records) and it leaves stuff out; Zero&#x27;s disowning by his parents when he married a Gentile is mentioned, then forgotten until needed for tearjerking purposes. Jerome Robbins&#x27; future status as an informer is given away too early, and though we&#x27;re told that Mostel hated making The Producers, we&#x27;re never told why. There are, though, some very good jokes, whether or not they&#x27;re authentic Zero; I especially liked the one about the Hasidic rabbi and the parrot, and I laughed aloud at the revelation that the Torah allows us to eat pork and shellfish &quot;only in Chinese restaurants.&quot; And, as well as perfectly reproducing Mostel&#x27;s physical and vocal bulk, Brochu does deliver a performance that stands in its own right. He may be trying on another man&#x27;s suit, but he isn&#x27;t just hanging on to his coattails.</p>
+<p>From A to Z: after After Akhmatova, Zero Hour. This is a one-man show, written and performed by American actor Jim Brochu, brought in by the Harold Green Theatre, about Zero Mostel, actor, comedian, painter (his favourite pursuit), &quot;giant talent and giant pain in the ass&quot; (I quote, though not from the play). He was also a victim of the 1950s blacklist, which if hardly comparable to the Gulag, was an atrocity real enough and stupid enough in its own right. The late Jack Gilford, Mostel&#x27;s friend and fellow victim, once told me how it felt to face the Un-American Activities Committee: &quot;They wanted you dead.&quot; He also told me how it felt to share a stage with Zero himself, after Mostel had secured him a role in his own comeback show A Funny Thing Happened on the Way to the Forum. It was a different kind of persecution: &quot;I thought, if he&#x27;s doing this to me when I&#x27;m his friend, how would he treat me if I was his enemy?&quot; (I suggested that if they&#x27;d been enemies, Zero would have left him alone.</p>
+<p>Jack seemed to think there was something in that.) In short, Mostel was hardly just a teddy bear with a paintbrush; Brochu compromises at making him amiably rude. The show has many of the familiar faults of its genre. It has the needless framework of an imaginary interview with an invisible journalist. It drags stuff in (Billie Holiday&#x27;s appearance with Zero on a nightclub bill is mentioned, just so we can hear a soundbite from one of her records) and it leaves stuff out; Zero&#x27;s disowning by his parents when he married a Gentile is mentioned, then forgotten until needed for tearjerking purposes. Jerome Robbins&#x27; future status as an informer is given away too early, and though we&#x27;re told that Mostel hated making The Producers, we&#x27;re never told why. There are, though, some very good jokes, whether or not they&#x27;re authentic Zero; I especially liked the one about the Hasidic rabbi and the parrot, and I laughed aloud at the revelation that the Torah allows us to eat pork and shellfish &quot;only in Chinese restaurants.&quot; And, as well as perfectly reproducing Mostel&#x27;s physical and vocal bulk, Brochu does deliver a performance that stands in its own right.</p>
+<p>He may be trying on another man&#x27;s suit, but he isn&#x27;t just hanging on to his coattails.</p>
 <p>After Akhmatova runs through May 1 at the Tarragon Extra Space. Call 416-531-1827 or visit tarragontheatre.com for details; Zero Hour runs through April 16 at the Al Green Theatre. Call 416-366-7723 or visit stlc.com for more information.</p>
 <p>Handout / Jim Brochu as Zero Mostel.;; Caption:</p></div></article>
       </section>
@@ -288,6 +312,6 @@
       </section>
     </footer>
 
-    <script src="./app.js?v=194" type="module"></script>
+    <script src="./app.js?v=233" type="module"></script>
   </body>
 </html>

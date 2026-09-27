@@ -13,31 +13,33 @@
     <link rel="apple-touch-icon" href="../apple-touch-icon.svg">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Rubik:wght@400;600;700;800;900&display=swap">
-    <link rel="stylesheet" href="./styles.css?v=173">
+    <link rel="stylesheet" href="./styles.css?v=174">
     <link rel="stylesheet" href="./catalog.css?v=194">
-    <link rel="stylesheet" href="./classic.css?v=194">
+    <link rel="stylesheet" href="./classic.css?v=233">
   </head>
   <body class="article-open">
     <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="site-header">
       <nav class="site-nav site-nav-left" id="siteNavLeft" aria-label="Primary navigation left">
-        <a class="nav-search" href="#search" aria-label="Search the archive"><span></span></a>
-        <a href="#section:current">Recent</a>
+        <a href="#search">Search</a>
         <div class="nav-folder nav-folder-wide">
           <a href="#section:browse">Browse</a>
           <div class="nav-dropdown nav-mega">
             <div class="nav-subfolder">
               <a href="#section:collections">Collections</a>
               <div class="nav-side-menu">
+                <a href="#collection:recent">Recent</a>
+                <a href="#correspondence:famous-letters">Special Letters</a>
                 <a href="#section:shakespeare">Shakespeare</a>
                 <a href="#collection:sondheim">Sondheim</a>
+                <a href="#collection:stoppard">Stoppard</a>
                 <a href="#collection:musicals">Musicals</a>
                 <a href="#collection:stratford">Stratford</a>
                 <a href="#collection:shaw">Shaw</a>
                 <a href="#collection:television">TV Reviews</a>
                 <a href="#collection:albums">Music Reviews</a>
                 <a href="#collection:books">Book Reviews</a>
-                <a href="#collection:profiles">Profiles &amp; Obits</a>
+                <a href="#collection:profiles">Artist Profiles</a>
                 <a href="#collection:early">Early Writing</a>
               </div>
             </div>
@@ -46,7 +48,6 @@
               <div class="nav-side-menu">
                 <a href="#works">All Works</a>
                 <a href="#people">All People</a>
-                <a href="#index:publications">Publications</a>
                 <a href="#places">Places</a>
               </div>
             </div>
@@ -72,21 +73,21 @@
       </a>
       <nav class="site-nav site-nav-right" id="siteNavRight" aria-label="Primary navigation right">
         <div class="nav-folder">
-          <a href="#explore">Explore</a>
+          <a href="#section:explore">Explore</a>
           <div class="nav-dropdown">
-            <a href="#explore">Article Explorer</a>
             <a href="#map">Map</a>
             <a href="#timeline">Timeline</a>
+            <a href="#explore">Article Explorer</a>
             <a href="#correspondence">Correspondence</a>
           </div>
         </div>
         <div class="nav-folder">
-          <a href="#about">About</a>
+          <a href="#section:about">About</a>
           <div class="nav-dropdown">
             <a href="#about">About Robert Cushman</a>
             <a href="#critics-circle">Critic's Circle</a>
             <a href="https://www.cushmancollected.com/checkout/donate?donatePageId=5c9b8016652dea361e5feb7d" target="_blank" rel="noopener">Donate</a>
-            <a href="#subscribe">Subscribe</a>
+            <a href="#contact">Contact &amp; Newsletter</a>
           </div>
         </div>
       </nav>
@@ -102,10 +103,25 @@
 
     <nav class="drawer" id="drawer" aria-label="Site navigation">
       <a href="#search">Search the Archive</a>
-      <a href="#section:current">Recent</a>
       <details>
         <summary>Browse</summary>
-        <a href="#section:collections">Collections</a>
+        <a href="#section:browse">Browse overview</a>
+        <details class="drawer-collection-menu">
+          <summary>Collections</summary>
+          <a href="#collection:recent">Recent</a>
+          <a href="#correspondence:famous-letters">Special Letters</a>
+          <a href="#section:shakespeare">Shakespeare</a>
+          <a href="#collection:sondheim">Sondheim</a>
+          <a href="#collection:stoppard">Stoppard</a>
+          <a href="#collection:musicals">Musicals</a>
+          <a href="#collection:stratford">Stratford</a>
+          <a href="#collection:shaw">Shaw</a>
+          <a href="#collection:television">TV Reviews</a>
+          <a href="#collection:albums">Music Reviews</a>
+          <a href="#collection:books">Book Reviews</a>
+          <a href="#collection:profiles">Artist Profiles</a>
+          <a href="#collection:early">Early Writing</a>
+        </details>
         <a href="#master-index:all-works">All Works</a>
         <a href="#master-index:all-people">All People</a>
         <a href="#index:publications">Publications</a>
@@ -113,17 +129,19 @@
       </details>
       <details>
         <summary>Explore</summary>
-        <a href="#explore">Article Explorer</a>
+        <a href="#section:explore">Explore overview</a>
         <a href="#map">Map</a>
         <a href="#timeline">Timeline</a>
+        <a href="#explore">Article Explorer</a>
         <a href="#correspondence">Correspondence</a>
       </details>
       <details>
         <summary>About</summary>
+        <a href="#section:about">About overview</a>
         <a href="#about">About Robert Cushman</a>
         <a href="#critics-circle">Critic's Circle</a>
         <a href="https://www.cushmancollected.com/checkout/donate?donatePageId=5c9b8016652dea361e5feb7d" target="_blank" rel="noopener">Donate</a>
-        <a href="#subscribe">Contact &amp; Newsletter</a>
+        <a href="#contact">Contact &amp; Newsletter</a>
       </details>
     </nav>
 
@@ -225,7 +243,11 @@
         </a>
       </section>
 
-      <section class="frontpage-directory" id="frontpageDirectory" aria-label="Primary site paths"></section>
+      <section class="browse-heading site-index-heading">
+        <h2>Site Index</h2>
+      </section>
+
+      <section class="frontpage-directory" id="frontpageDirectory" aria-label="Site index"></section>
 
       <section class="browse-heading home-secondary-nav" id="browse">
         <h2>Browse the Archive</h2>
@@ -284,9 +306,13 @@
 <p>RC: But do you think the National Theatre by definition has to be so large?</p>
 <p>PH: But the whole virtue of what I&#x27;m doing is that it isn&#x27;t large. If we were going to take on that space, run 3 theatres 7 nights a week and tour we would need about 150/160 actors, and a repertoire of 40 plays. That is impossible.</p>
 <p>RC: That&#x27;s not what I&#x27;m saying. I&#x27;m saying really does the National Theatre need to have that number of spaces, that many touring commitments.</p>
-<p>PH: No, I don&#x27;t think it does, but I am glad in the event that it has. Let me explain. When I was on the building committee of the National, there was a minority group of us who believed very passionately that the National Theatre should not have two main auditoria--it should have one. And if we weren&#x27;t prepared to commit ourselves to what a theatre was in 1970 we shouldn&#x27;t be doing it at all. A minority of us thought that the proscenium theatre was an insurance which was not necessary. Sir Laurence felt very strongly that if the National Theatre was to be a continuing facility for future generations it had to have a proscenium Theatre as well. And I think on reflection that he was right. If I was thinking of running a theatre in the way that I ran the RSC which, although I don&#x27;t mean in any way to diminish what my colleagues did to me and for me, was very much the expression of what I wanted, then I think one auditorium is enough. But I don&#x27;t think that way now. I think the National Theatre in this day and age means a company of actors who are very prejudiced and develop a particular aesthetic. But I also think a National theatre must be an expression of the whole nation&#x27;s theatre. Everybody who wants to should play there--other companies, other groups. The company itself should do a fairly small amount of work--there won&#x27;t be more than 6 productions at the Olivier, plus the possibility of touring and seasonal work in the other houses. And most important there will be a great deal coming in from the rest of the nation&#x27;s theatre or from overseas. That seems to me at this moment to represent National Theatre. I can of course be absolutely wrong about this. The company itself must be as small and lean as it possibly can be. And believe you me if I can do this with two groups instead of 4, I&#x27;ll do it. But all the rest of it, the ferment of theatrical activity, the cross-fertilisation by going out to the regions and the regions coming in to us, that represents National Theatre to me. It&#x27;s not an expression of my taste--it&#x27;s a facility. And I think that the building is primarily a facility in which a small National theatre company can function and the nation&#x27;s theatre can talk to the whole community. So that&#x27;s why I now think Olivier&#x27;s decision was right.</p>
+<p>PH: No, I don&#x27;t think it does, but I am glad in the event that it has. Let me explain. When I was on the building committee of the National, there was a minority group of us who believed very passionately that the National Theatre should not have two main auditoria--it should have one. And if we weren&#x27;t prepared to commit ourselves to what a theatre was in 1970 we shouldn&#x27;t be doing it at all. A minority of us thought that the proscenium theatre was an insurance which was not necessary. Sir Laurence felt very strongly that if the National Theatre was to be a continuing facility for future generations it had to have a proscenium Theatre as well. And I think on reflection that he was right. If I was thinking of running a theatre in the way that I ran the RSC which, although I don&#x27;t mean in any way to diminish what my colleagues did to me and for me, was very much the expression of what I wanted, then I think one auditorium is enough.</p>
+<p>But I don&#x27;t think that way now. I think the National Theatre in this day and age means a company of actors who are very prejudiced and develop a particular aesthetic. But I also think a National theatre must be an expression of the whole nation&#x27;s theatre. Everybody who wants to should play there--other companies, other groups. The company itself should do a fairly small amount of work--there won&#x27;t be more than 6 productions at the Olivier, plus the possibility of touring and seasonal work in the other houses. And most important there will be a great deal coming in from the rest of the nation&#x27;s theatre or from overseas. That seems to me at this moment to represent National Theatre. I can of course be absolutely wrong about this. The company itself must be as small and lean as it possibly can be. And believe you me if I can do this with two groups instead of 4, I&#x27;ll do it.</p>
+<p>But all the rest of it, the ferment of theatrical activity, the cross-fertilisation by going out to the regions and the regions coming in to us, that represents National Theatre to me. It&#x27;s not an expression of my taste--it&#x27;s a facility. And I think that the building is primarily a facility in which a small National theatre company can function and the nation&#x27;s theatre can talk to the whole community. So that&#x27;s why I now think Olivier&#x27;s decision was right.</p>
 <p>RC: With the great increase in the National&#x27;s own activity is the Aldwych going to seem a little redundant?</p>
-<p>PH: I wouldn&#x27;t have thought so. It seems to me that there are whole areas of drama which are the concern and interest of the RSC at this moment and which will remain so. I thought when I went to the National that, possibly, there were only about 500 plays in the Western repertoire which merited revival. I think I was wrong. I&#x27;ve had the benefit of 2 years of study and thought. There&#x27;s an enormous amount that needs to be done. German theatre&#x27;s virtually unexplored in this country. French theatre&#x27;s also unexplored in this country. As far as new writing is concerned I basically believe that the more opportunity there is to put on new writing, the more new writing will exist. Therefore if the Court, the Aldwych and the National are all presenting new plays there will be that much more new writing and the more new writing there is the more new writing there&#x27;ll be. And there&#x27;s one thing I would like to stress very strongly. There seems to be current, because the National Theatre is a modern theatre and it&#x27;s therefore, and why shouldn&#x27;t it be, full of modern equipment, that we are going to be engaged in large spectacular productions. That we will constantly be staging The Battle of Trafalgar with full scenic effects. The machinery that the National has been designed for one thing only: to make it possible for a play to be changed from the matinee to the evening performance and to make it possible for the actor to create his work on the stage in the set. There will therefore be more variety in the repertoire day by day. With the cost of raw materials and roaring inflation we are going to be driven and should be driven in my view into discovering ways of doing theatre with people in space and with light. No doubt about that whatsoever. And as two of our theatres out of the three are spaces where scenery is not necessary we are in a good position. I think there is hostility to the new National because it is the biggest and the glossiest and the most heavily endowed. I think also we&#x27;re going through a national nervous breakdown with a consequent lack of confidence. We like to think that everything we&#x27;re doing is disaster. I don&#x27;t just speak of the theatre.</p>
+<p>PH: I wouldn&#x27;t have thought so. It seems to me that there are whole areas of drama which are the concern and interest of the RSC at this moment and which will remain so. I thought when I went to the National that, possibly, there were only about 500 plays in the Western repertoire which merited revival. I think I was wrong. I&#x27;ve had the benefit of 2 years of study and thought. There&#x27;s an enormous amount that needs to be done. German theatre&#x27;s virtually unexplored in this country. French theatre&#x27;s also unexplored in this country. As far as new writing is concerned I basically believe that the more opportunity there is to put on new writing, the more new writing will exist. Therefore if the Court, the Aldwych and the National are all presenting new plays there will be that much more new writing and the more new writing there is the more new writing there&#x27;ll be.</p>
+<p>And there&#x27;s one thing I would like to stress very strongly. There seems to be current, because the National Theatre is a modern theatre and it&#x27;s therefore, and why shouldn&#x27;t it be, full of modern equipment, that we are going to be engaged in large spectacular productions. That we will constantly be staging The Battle of Trafalgar with full scenic effects. The machinery that the National has been designed for one thing only: to make it possible for a play to be changed from the matinee to the evening performance and to make it possible for the actor to create his work on the stage in the set. There will therefore be more variety in the repertoire day by day. With the cost of raw materials and roaring inflation we are going to be driven and should be driven in my view into discovering ways of doing theatre with people in space and with light.</p>
+<p>No doubt about that whatsoever. And as two of our theatres out of the three are spaces where scenery is not necessary we are in a good position. I think there is hostility to the new National because it is the biggest and the glossiest and the most heavily endowed. I think also we&#x27;re going through a national nervous breakdown with a consequent lack of confidence. We like to think that everything we&#x27;re doing is disaster. I don&#x27;t just speak of the theatre.</p>
 <p>RC: Isn&#x27;t there a more general disillusion with institutional theatre?</p>
 <p>PH: Yes, and that is a swing of the pendulum. I think it&#x27;s grossly exaggerated and wrong. I&#x27;d like to know what kind of life you&#x27;d lead as a critic if the institutional theatre did not exist.</p>
 <p>RC: I&#x27;d lead a dreary life. You said yourself, about a year ago, that you thought all three of the institutional theatres had got to a stage where they were very predictable.</p>
@@ -356,6 +382,6 @@
       </section>
     </footer>
 
-    <script src="./app.js?v=194" type="module"></script>
+    <script src="./app.js?v=233" type="module"></script>
   </body>
 </html>

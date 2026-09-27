@@ -188,8 +188,15 @@ body:not(.feature-redesignedHome):not(.search-open) #archive .advanced-search[op
 .collection-art {display:flex;align-items:center;justify-content:center;aspect-ratio:1;padding:20px;background:#eee8dc;color:var(--ink);text-align:center;border:1px solid #d9d1c0;overflow:hidden;}
 .collection-art img {width:100%;height:100%;object-fit:contain;}.collection-art .art-title {font:700 clamp(18px,2vw,26px)/1.25 var(--serif);overflow-wrap:anywhere;}
 .collection-art.musicals {background:#162e42;color:#fff;border:7px double #c3aa74;}
+.collection-art.musicals.curated-typography{position:relative;background:radial-gradient(ellipse 75% 48% at 50% 3%,#ffffff28,transparent 85%),linear-gradient(135deg,#0004,transparent 46%,#0005),var(--fallback-color);border-color:#c7ad75;box-shadow:inset 0 0 0 2px #f1dec033;}
+.collection-art.musicals.curated-typography::before{content:"";position:absolute;inset:10px;border:1px solid #f5e6ca5c;pointer-events:none;}
+.collection-art.musicals.curated-typography .art-title{position:relative;z-index:1;text-shadow:0 2px 5px #0008;}
 .collection-art.musicals.has-artwork {background:#faf7f0;}
+.collection-art.plays {background:#eee9df;border:7px double #304e61;color:#172e3c;}
+.collection-art.plays.has-artwork {padding:0;background:#f5f1e9;}
 .collection-art.television {border:12px solid #353b3d;border-right-width:30px;border-radius:20px;box-shadow:inset 0 0 0 3px #777;aspect-ratio:4/3;background:#e1e9df;}
+.collection-art.television.curated-typography .television-screen{display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at 72% 25%,#fff3,transparent 45%),var(--fallback-color)!important;color:#fff;padding:8px;}
+.collection-art.television.curated-typography .art-title{text-shadow:0 2px 4px #0009;}
 .collection-art.books {aspect-ratio:2/3;box-shadow:-6px 2px 0 #82725f,inset 6px 0 #d3c5ad;background:#f2e8d5;}
 .collection-art.albums {box-shadow:5px 5px 0 #292c30;background:#f0e7d8;}
 .collection-art.portraits {border-radius:50%;background:#f0eee9;}
@@ -202,12 +209,16 @@ body:not(.feature-redesignedHome):not(.search-open) #archive .advanced-search[op
 .image-credits h2 {font:22px/1.35 var(--serif);}
 .image-credits p,.image-credits a {font:14px/1.6 var(--sans);}
 .collection-gallery.books,.collection-gallery.albums {row-gap:42px;}
+.collection-gallery.portraits {grid-template-columns:repeat(6,minmax(0,1fr));gap:28px 18px;}
+.collection-gallery.portraits .collection-item > strong {font-size:16px;}
 .collection-gallery.books .collection-item,.collection-gallery.albums .collection-item {padding:0 8px 18px;border-bottom:10px solid #a59076;}
 .collection-result-art {display:flex;gap:24px;align-items:center;margin:24px 0;}.collection-result-art .collection-art{width:150px;flex-shrink:0;}.collection-result-art h2{font:28px/1.3 var(--serif);}
 .festival-venue-grid {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin:24px 0;}.festival-venue-card{padding:20px;border:1px solid var(--rule);text-decoration:none;}.festival-venue-card h3{margin:0 0 10px;font:22px var(--serif);}.festival-venue-card p{font:15px/1.6 var(--serif);}
 .collection-articles {margin-top:24px;}
 @media(max-width:800px){.collection-gallery{grid-template-columns:repeat(3,minmax(0,1fr));}}
+@media(max-width:800px){.collection-gallery.portraits{grid-template-columns:repeat(3,minmax(0,1fr));}}
 @media(max-width:550px){.collection-gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 16px;}.collection-art{padding:12px;}.collection-art.television{border-width:8px;border-right-width:18px;}.collection-art .art-title{font-size:18px;}.festival-venue-grid{grid-template-columns:1fr;}.collection-result-art .collection-art{width:100px;}.collection-result-art h2{font-size:22px;}}
+@media(max-width:550px){.collection-gallery.portraits{grid-template-columns:repeat(2,minmax(0,1fr));}}
 
 /* Compact illustrated entry points on the homepage. */
 #homeCollections{margin:0 0 42px;}
@@ -234,6 +245,8 @@ body:not(.feature-redesignedHome):not(.search-open) #archive .advanced-search[op
 .home-collection-card.profiles img{height:auto;aspect-ratio:3/4;object-fit:cover;object-position:50% 20%;border-radius:48% 48% 0 0;filter:grayscale(1);transform:none;}
 .home-collection-card.sondheim .home-collection-visual{background:#203b48;border-top:5px solid #bc9956;}
 .home-collection-card.musicals .home-collection-visual{background:linear-gradient(90deg,#742e35,#a85b62 50%,#742e35);}
+.home-collection-card.stoppard .home-collection-visual{gap:6px;padding:12px;background:#e6e0d5;border-top:5px solid #304e61;}
+.home-collection-card.stoppard .stoppard-preview{display:flex;align-items:center;justify-content:center;width:31%;height:86%;padding:4px;background:#f8f5ec;border:3px double #304e61;color:#172e3c;text-align:center;font:700 clamp(9px,1.1vw,16px)/1.15 var(--serif);}
 .home-collection-card.television .home-collection-visual{background:#b6c6bd;border:8px solid #353b3d;border-right-width:18px;border-radius:16px;}
 .home-collection-card.publications .home-collection-visual{flex-direction:column;gap:14px;background:#f5f2eb;}
 .home-collection-card.publications img{width:85%;height:23%;transform:none;filter:none;}
@@ -453,6 +466,7 @@ body.catalog-page #indexView.directory-page .index-controls label{gap:0;}
 
 /* Fixed, illustrated festival maps and matching theatre cards. */
 .festival-heading img{display:block;width:auto;max-width:min(340px,85%);height:80px;object-fit:contain;object-position:left center;}
+.festival-heading-label{display:block;margin-top:3px;color:var(--blue);font:800 12px/1.2 var(--sans);letter-spacing:.16em;text-transform:uppercase;}
 .festival-year{margin:20px 0;max-width:240px;}
 .festival-fixed-map{position:relative;height:470px;isolation:isolate;overflow:hidden;background:#eeeae0;}
 .festival-map-base{position:absolute;inset:0;height:100%;z-index:0;}
@@ -471,6 +485,20 @@ body.catalog-page #indexView.directory-page .index-controls label{gap:0;}
 .festival-venue-card h3{margin:0;}.festival-venue-card p{grid-column:2;margin:6px 0 0;}
 @media(max-width:600px){.festival-heading img{height:62px;max-width:260px;}.festival-fixed-map{height:500px;}.festival-year{margin:14px 0;}.festival-map-theatre{width:120px;}.festival-venue-card{padding:12px;grid-template-columns:80px 1fr;}.festival-venue-card h3{font-size:20px;}}
 .festival-map-base .leaflet-tile-pane{opacity:.72;}.festival-map-note{font:12px/1.5 var(--sans);color:var(--muted);margin:0 0 20px;}
+.festival-map-base .leaflet-tile-pane{opacity:1;}
+.festival-map-base .leaflet-tile{scale:1.02;outline:none;}
+
+.letter-carousel{position:fixed;inset:3vh 2vw;width:min(960px,96vw);max-width:96vw;height:94vh;max-height:94vh;margin:auto;padding:54px 54px 42px;border:1px solid #756e61;background:#e8e5dd;color:var(--ink);box-shadow:0 20px 80px #0008;}
+.letter-carousel::backdrop{background:#16232ed9;}
+.letter-carousel img{display:block;width:100%;height:calc(100% - 36px);object-fit:contain;}
+.letter-carousel button{position:absolute;z-index:1;border:1px solid #777;background:#fff;color:var(--ink);cursor:pointer;font:700 16px/1 var(--sans);}
+.letter-carousel button:disabled{opacity:.35;cursor:default;}
+.letter-carousel-close{top:12px;right:14px;padding:9px 13px;}
+.letter-carousel-previous,.letter-carousel-next{top:50%;width:42px;height:52px;font-size:36px!important;transform:translateY(-50%);}
+.letter-carousel-previous{left:6px;}.letter-carousel-next{right:6px;}
+.letter-carousel-caption{margin:8px 0 0;text-align:center;font:13px/1.4 var(--sans);}
+body.index-open .correspondence-page h1{font-size:clamp(26px,3.2vw,40px);line-height:1.15;margin:0 0 20px;}
+@media(max-width:600px){.home-collection-card.stoppard .stoppard-preview{font-size:9px;}.letter-carousel{inset:2vh 1vw;width:98vw;max-width:98vw;height:96vh;max-height:96vh;padding:52px 30px 42px;}.letter-carousel-previous,.letter-carousel-next{width:28px;height:46px;}}
 .festival-venue-card[aria-current],.festival-map-theatre[aria-current]{outline:2px solid var(--link);outline-offset:3px;}.festival-selected-articles{margin-top:32px;}.festival-selected-articles h2{scroll-margin-top:110px;}.festival-clear{display:inline-block;margin-bottom:20px;}
 
 /* Profiles share the index's sticky surname tabs, without hiding other letters. */

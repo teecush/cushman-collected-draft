@@ -13,31 +13,33 @@
     <link rel="apple-touch-icon" href="../apple-touch-icon.svg">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Rubik:wght@400;600;700;800;900&display=swap">
-    <link rel="stylesheet" href="./styles.css?v=173">
+    <link rel="stylesheet" href="./styles.css?v=174">
     <link rel="stylesheet" href="./catalog.css?v=194">
-    <link rel="stylesheet" href="./classic.css?v=194">
+    <link rel="stylesheet" href="./classic.css?v=233">
   </head>
   <body class="article-open">
     <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="site-header">
       <nav class="site-nav site-nav-left" id="siteNavLeft" aria-label="Primary navigation left">
-        <a class="nav-search" href="#search" aria-label="Search the archive"><span></span></a>
-        <a href="#section:current">Recent</a>
+        <a href="#search">Search</a>
         <div class="nav-folder nav-folder-wide">
           <a href="#section:browse">Browse</a>
           <div class="nav-dropdown nav-mega">
             <div class="nav-subfolder">
               <a href="#section:collections">Collections</a>
               <div class="nav-side-menu">
+                <a href="#collection:recent">Recent</a>
+                <a href="#correspondence:famous-letters">Special Letters</a>
                 <a href="#section:shakespeare">Shakespeare</a>
                 <a href="#collection:sondheim">Sondheim</a>
+                <a href="#collection:stoppard">Stoppard</a>
                 <a href="#collection:musicals">Musicals</a>
                 <a href="#collection:stratford">Stratford</a>
                 <a href="#collection:shaw">Shaw</a>
                 <a href="#collection:television">TV Reviews</a>
                 <a href="#collection:albums">Music Reviews</a>
                 <a href="#collection:books">Book Reviews</a>
-                <a href="#collection:profiles">Profiles &amp; Obits</a>
+                <a href="#collection:profiles">Artist Profiles</a>
                 <a href="#collection:early">Early Writing</a>
               </div>
             </div>
@@ -46,7 +48,6 @@
               <div class="nav-side-menu">
                 <a href="#works">All Works</a>
                 <a href="#people">All People</a>
-                <a href="#index:publications">Publications</a>
                 <a href="#places">Places</a>
               </div>
             </div>
@@ -72,21 +73,21 @@
       </a>
       <nav class="site-nav site-nav-right" id="siteNavRight" aria-label="Primary navigation right">
         <div class="nav-folder">
-          <a href="#explore">Explore</a>
+          <a href="#section:explore">Explore</a>
           <div class="nav-dropdown">
-            <a href="#explore">Article Explorer</a>
             <a href="#map">Map</a>
             <a href="#timeline">Timeline</a>
+            <a href="#explore">Article Explorer</a>
             <a href="#correspondence">Correspondence</a>
           </div>
         </div>
         <div class="nav-folder">
-          <a href="#about">About</a>
+          <a href="#section:about">About</a>
           <div class="nav-dropdown">
             <a href="#about">About Robert Cushman</a>
             <a href="#critics-circle">Critic's Circle</a>
             <a href="https://www.cushmancollected.com/checkout/donate?donatePageId=5c9b8016652dea361e5feb7d" target="_blank" rel="noopener">Donate</a>
-            <a href="#subscribe">Subscribe</a>
+            <a href="#contact">Contact &amp; Newsletter</a>
           </div>
         </div>
       </nav>
@@ -102,10 +103,25 @@
 
     <nav class="drawer" id="drawer" aria-label="Site navigation">
       <a href="#search">Search the Archive</a>
-      <a href="#section:current">Recent</a>
       <details>
         <summary>Browse</summary>
-        <a href="#section:collections">Collections</a>
+        <a href="#section:browse">Browse overview</a>
+        <details class="drawer-collection-menu">
+          <summary>Collections</summary>
+          <a href="#collection:recent">Recent</a>
+          <a href="#correspondence:famous-letters">Special Letters</a>
+          <a href="#section:shakespeare">Shakespeare</a>
+          <a href="#collection:sondheim">Sondheim</a>
+          <a href="#collection:stoppard">Stoppard</a>
+          <a href="#collection:musicals">Musicals</a>
+          <a href="#collection:stratford">Stratford</a>
+          <a href="#collection:shaw">Shaw</a>
+          <a href="#collection:television">TV Reviews</a>
+          <a href="#collection:albums">Music Reviews</a>
+          <a href="#collection:books">Book Reviews</a>
+          <a href="#collection:profiles">Artist Profiles</a>
+          <a href="#collection:early">Early Writing</a>
+        </details>
         <a href="#master-index:all-works">All Works</a>
         <a href="#master-index:all-people">All People</a>
         <a href="#index:publications">Publications</a>
@@ -113,17 +129,19 @@
       </details>
       <details>
         <summary>Explore</summary>
-        <a href="#explore">Article Explorer</a>
+        <a href="#section:explore">Explore overview</a>
         <a href="#map">Map</a>
         <a href="#timeline">Timeline</a>
+        <a href="#explore">Article Explorer</a>
         <a href="#correspondence">Correspondence</a>
       </details>
       <details>
         <summary>About</summary>
+        <a href="#section:about">About overview</a>
         <a href="#about">About Robert Cushman</a>
         <a href="#critics-circle">Critic's Circle</a>
         <a href="https://www.cushmancollected.com/checkout/donate?donatePageId=5c9b8016652dea361e5feb7d" target="_blank" rel="noopener">Donate</a>
-        <a href="#subscribe">Contact &amp; Newsletter</a>
+        <a href="#contact">Contact &amp; Newsletter</a>
       </details>
     </nav>
 
@@ -225,7 +243,11 @@
         </a>
       </section>
 
-      <section class="frontpage-directory" id="frontpageDirectory" aria-label="Primary site paths"></section>
+      <section class="browse-heading site-index-heading">
+        <h2>Site Index</h2>
+      </section>
+
+      <section class="frontpage-directory" id="frontpageDirectory" aria-label="Site index"></section>
 
       <section class="browse-heading home-secondary-nav" id="browse">
         <h2>Browse the Archive</h2>
@@ -250,7 +272,9 @@
         <article id="article"><time>Nov 26, 2011</time><h1>From Russia, About Love; Do You Turn Somersaults? Charms, Even Without Subtext</h1><p class="article-meta">Robert Cushman · National Post</p><div class="article-body" id="article-text"><p>The new Mady Centre for the Performing Arts in Barrie incorporates a black-box theatre that is to be home for the enterprising and previously peripatetic Talk Is Free company. The opening production is one of those shows in which the performance outclasses the material.</p>
 <p>Do You Turn Somersaults?, a line that turns up twice in the actual dialogue, is the whimsical title newly bestowed on a Russian two-hander originally called Old-Fashioned Comedy and written in 1975. In historical context, that former name was itself something of an act of defiance. Aleksei Arbuzov, the author, may have been the theatrical personification of the Soviet thaw; his plays, at least the ones I know about, draw on recent Russian history without being overtly, or even covertly, political. One of them, The Promise, was quite a hit in the West in the 1960s.</p>
 <p>Soviet Russian drama is generally reckoned a dead zone, governed by officially mandated simplicities. Arbuzov seems to have rebelled against that while falling into a simple-mindedness of his own. What&#x27;s especially startling, and eventually stultifying, is that everything about it is there on the surface. Thats not to say that the characters dont keep secrets from one another; they do, or there could hardly be a play. But they reveal them, explicitly and at times that are both personally and dramatically convenient. What&#x27;s remarkable is that they don&#x27;t seem to be keeping any secrets from themselves. This, amazingly from a compatriot of Chekhov, is a play totally innocent of subtext. And it makes you realize how much even the most insubstantial modern plays depend on the ambiguous and the unspoken. Without them, things seem very flat; though in this case some of the flatness may be due to a pedestrian translation.</p>
-<p>It does though provide a platform for an outstanding couple of actors. &quot;Do you turn somersaults?&quot; is a question asked by Rodion Nikolayevich, medical officer at a sanatorium, to Lidya Vasilyevna, an unruly patient who claims to be a circus performer. Later it transpires that, though she has been an actress in the past, her circus role is in the box office. Shes an eccentric and demanding lady who gets under Rodions skin; he&#x27;s a conscientious and imperturbable man who gets under hers. But of course, as time goes on and they keep bumping into one another inside and outside the institution, they grow to like one another. Both are late middle-aged people with past marital scars that need healing. It&#x27;s fairly obvious where this is heading, the only real suspense being whether time will catch up with them before romance does. But the advances, withdrawals and revelations are grist for the players. Lucy Peacock overdoes the imperiousness of her first scene, the more perplexingly in that its a quality that never reappears. She has, in effect, to start over; once she does, she gives a glowing performance thats brusque and funny; moving when dismissing her own pain and even more so when contemplating her partner&#x27;s. Geordie Johnson finds the right weary, humorous tone from the start, and never loses it. He&#x27;s especially delightful in a shameless but enjoyable scene in which he recalls, and demonstrates, how he used to dance the shimmy and even the Charleston. (Amazing that steps so complicated could ever have been dance-floor favourites. How civilization has declined.) More potently nostalgic, though, are both characters&#x27; reminiscences of how they got through the war: a genuine insight into the experiences of ordinary people in a catastrophic piece. The production far outclasses one I saw in a former life in London; the Royal Shakespeare Company did it on one of its main stages, under the title Old World, and despite having no less than Peggy Ashcroft and Anthony Quayle as its cast, it was dead on arrival. A small space lets it breathe more. Marti Maraden&#x27;s staging is visually drab beyond the call of economy, but she places one scene beautifully: Peacock sits behind Johnson on a bench and her face, tilted to the side, drinks in everything he has to tell her.</p>
+<p>It does though provide a platform for an outstanding couple of actors. &quot;Do you turn somersaults?&quot; is a question asked by Rodion Nikolayevich, medical officer at a sanatorium, to Lidya Vasilyevna, an unruly patient who claims to be a circus performer. Later it transpires that, though she has been an actress in the past, her circus role is in the box office. Shes an eccentric and demanding lady who gets under Rodions skin; he&#x27;s a conscientious and imperturbable man who gets under hers. But of course, as time goes on and they keep bumping into one another inside and outside the institution, they grow to like one another. Both are late middle-aged people with past marital scars that need healing. It&#x27;s fairly obvious where this is heading, the only real suspense being whether time will catch up with them before romance does. But the advances, withdrawals and revelations are grist for the players.</p>
+<p>Lucy Peacock overdoes the imperiousness of her first scene, the more perplexingly in that its a quality that never reappears. She has, in effect, to start over; once she does, she gives a glowing performance thats brusque and funny; moving when dismissing her own pain and even more so when contemplating her partner&#x27;s. Geordie Johnson finds the right weary, humorous tone from the start, and never loses it. He&#x27;s especially delightful in a shameless but enjoyable scene in which he recalls, and demonstrates, how he used to dance the shimmy and even the Charleston. (Amazing that steps so complicated could ever have been dance-floor favourites. How civilization has declined.) More potently nostalgic, though, are both characters&#x27; reminiscences of how they got through the war: a genuine insight into the experiences of ordinary people in a catastrophic piece. The production far outclasses one I saw in a former life in London; the Royal Shakespeare Company did it on one of its main stages, under the title Old World, and despite having no less than Peggy Ashcroft and Anthony Quayle as its cast, it was dead on arrival.</p>
+<p>A small space lets it breathe more. Marti Maraden&#x27;s staging is visually drab beyond the call of economy, but she places one scene beautifully: Peacock sits behind Johnson on a bench and her face, tilted to the side, drinks in everything he has to tell her.</p>
 <p>? Do You Turn Somersaults? closes today at the Mady Centre for the Performing Arts, Barrie. Visit tift.ca or call 705-792-1949 for ticket information.</p></div></article>
       </section>
 
@@ -285,6 +309,6 @@
       </section>
     </footer>
 
-    <script src="./app.js?v=194" type="module"></script>
+    <script src="./app.js?v=233" type="module"></script>
   </body>
 </html>

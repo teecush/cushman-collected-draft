@@ -13,31 +13,33 @@
     <link rel="apple-touch-icon" href="../apple-touch-icon.svg">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Rubik:wght@400;600;700;800;900&display=swap">
-    <link rel="stylesheet" href="./styles.css?v=173">
+    <link rel="stylesheet" href="./styles.css?v=174">
     <link rel="stylesheet" href="./catalog.css?v=194">
-    <link rel="stylesheet" href="./classic.css?v=194">
+    <link rel="stylesheet" href="./classic.css?v=233">
   </head>
   <body class="article-open">
     <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="site-header">
       <nav class="site-nav site-nav-left" id="siteNavLeft" aria-label="Primary navigation left">
-        <a class="nav-search" href="#search" aria-label="Search the archive"><span></span></a>
-        <a href="#section:current">Recent</a>
+        <a href="#search">Search</a>
         <div class="nav-folder nav-folder-wide">
           <a href="#section:browse">Browse</a>
           <div class="nav-dropdown nav-mega">
             <div class="nav-subfolder">
               <a href="#section:collections">Collections</a>
               <div class="nav-side-menu">
+                <a href="#collection:recent">Recent</a>
+                <a href="#correspondence:famous-letters">Special Letters</a>
                 <a href="#section:shakespeare">Shakespeare</a>
                 <a href="#collection:sondheim">Sondheim</a>
+                <a href="#collection:stoppard">Stoppard</a>
                 <a href="#collection:musicals">Musicals</a>
                 <a href="#collection:stratford">Stratford</a>
                 <a href="#collection:shaw">Shaw</a>
                 <a href="#collection:television">TV Reviews</a>
                 <a href="#collection:albums">Music Reviews</a>
                 <a href="#collection:books">Book Reviews</a>
-                <a href="#collection:profiles">Profiles &amp; Obits</a>
+                <a href="#collection:profiles">Artist Profiles</a>
                 <a href="#collection:early">Early Writing</a>
               </div>
             </div>
@@ -46,7 +48,6 @@
               <div class="nav-side-menu">
                 <a href="#works">All Works</a>
                 <a href="#people">All People</a>
-                <a href="#index:publications">Publications</a>
                 <a href="#places">Places</a>
               </div>
             </div>
@@ -72,21 +73,21 @@
       </a>
       <nav class="site-nav site-nav-right" id="siteNavRight" aria-label="Primary navigation right">
         <div class="nav-folder">
-          <a href="#explore">Explore</a>
+          <a href="#section:explore">Explore</a>
           <div class="nav-dropdown">
-            <a href="#explore">Article Explorer</a>
             <a href="#map">Map</a>
             <a href="#timeline">Timeline</a>
+            <a href="#explore">Article Explorer</a>
             <a href="#correspondence">Correspondence</a>
           </div>
         </div>
         <div class="nav-folder">
-          <a href="#about">About</a>
+          <a href="#section:about">About</a>
           <div class="nav-dropdown">
             <a href="#about">About Robert Cushman</a>
             <a href="#critics-circle">Critic's Circle</a>
             <a href="https://www.cushmancollected.com/checkout/donate?donatePageId=5c9b8016652dea361e5feb7d" target="_blank" rel="noopener">Donate</a>
-            <a href="#subscribe">Subscribe</a>
+            <a href="#contact">Contact &amp; Newsletter</a>
           </div>
         </div>
       </nav>
@@ -102,10 +103,25 @@
 
     <nav class="drawer" id="drawer" aria-label="Site navigation">
       <a href="#search">Search the Archive</a>
-      <a href="#section:current">Recent</a>
       <details>
         <summary>Browse</summary>
-        <a href="#section:collections">Collections</a>
+        <a href="#section:browse">Browse overview</a>
+        <details class="drawer-collection-menu">
+          <summary>Collections</summary>
+          <a href="#collection:recent">Recent</a>
+          <a href="#correspondence:famous-letters">Special Letters</a>
+          <a href="#section:shakespeare">Shakespeare</a>
+          <a href="#collection:sondheim">Sondheim</a>
+          <a href="#collection:stoppard">Stoppard</a>
+          <a href="#collection:musicals">Musicals</a>
+          <a href="#collection:stratford">Stratford</a>
+          <a href="#collection:shaw">Shaw</a>
+          <a href="#collection:television">TV Reviews</a>
+          <a href="#collection:albums">Music Reviews</a>
+          <a href="#collection:books">Book Reviews</a>
+          <a href="#collection:profiles">Artist Profiles</a>
+          <a href="#collection:early">Early Writing</a>
+        </details>
         <a href="#master-index:all-works">All Works</a>
         <a href="#master-index:all-people">All People</a>
         <a href="#index:publications">Publications</a>
@@ -113,17 +129,19 @@
       </details>
       <details>
         <summary>Explore</summary>
-        <a href="#explore">Article Explorer</a>
+        <a href="#section:explore">Explore overview</a>
         <a href="#map">Map</a>
         <a href="#timeline">Timeline</a>
+        <a href="#explore">Article Explorer</a>
         <a href="#correspondence">Correspondence</a>
       </details>
       <details>
         <summary>About</summary>
+        <a href="#section:about">About overview</a>
         <a href="#about">About Robert Cushman</a>
         <a href="#critics-circle">Critic's Circle</a>
         <a href="https://www.cushmancollected.com/checkout/donate?donatePageId=5c9b8016652dea361e5feb7d" target="_blank" rel="noopener">Donate</a>
-        <a href="#subscribe">Contact &amp; Newsletter</a>
+        <a href="#contact">Contact &amp; Newsletter</a>
       </details>
     </nav>
 
@@ -225,7 +243,11 @@
         </a>
       </section>
 
-      <section class="frontpage-directory" id="frontpageDirectory" aria-label="Primary site paths"></section>
+      <section class="browse-heading site-index-heading">
+        <h2>Site Index</h2>
+      </section>
+
+      <section class="frontpage-directory" id="frontpageDirectory" aria-label="Site index"></section>
 
       <section class="browse-heading home-secondary-nav" id="browse">
         <h2>Browse the Archive</h2>
@@ -249,7 +271,9 @@
         <a class="back-link" href="#archive">Back to archive</a>
         <article id="article"><time>Jun 8, 2013</time><h1>Made In The Arcade; Des Mcanuff Scores With His Version Of The Who&#x27;s Tommy,</h1><p class="article-meta">Robert Cushman · National Post</p><div class="article-body" id="article-text"><p>Des McAnuff&#x27;s Stratford production of Tommy is a superlative feat of visual storytelling. Returning to the piece 20 years after his original staging, McAnuff takes enthusiastic but perfectly disciplined advantage of his new technological opportunities. Sean Nieuwenhuis is credited as &quot;projection designer&quot; but that seems rather a niggling description of what amounts to a dazzling, constantly changing background, dovetailing perfectly with the bridges and catwalks of John Arnone&#x27;s more formal set, and also with Howell Binkley&#x27;s lighting and David C. Woolard&#x27;s perfect period costumes.</p>
 <p>The visuals, which here include the actors, are especially evocative in the early scenes. Pete Townshend was writing, again, about his generation, and the way in which the Second World War forever coloured the perceptions of those in Britain who were born into it without consciously remembering it. Also of their elders; the production leaves a lovely mostly unspoken impression of the meeting of the hero&#x27;s future parents on an English airfield, and a later breathtaking one of the mission that led to dad&#x27;s being missing, presumed dead. There is, too, the recurring presence, cunningly placed, of Steve Ross&#x27;s Uncle Ernie, beginning his limping progress from black marketeer to celebrity mouthpiece via child molester. Wayne Cilento&#x27;s jumping, jerking choreography -the best I&#x27;ve seen from him - comes into its own when we reach the 1950s and &#x27;60s, with the youth-clubbers and arcade dwellers, presided over by Paul Nolan&#x27;s magnificently nasty Cousin Kevin who mock the afflicted Tommy before his emergence as pinball wizard and then slobber over him. The direction overall is precisely tuned to the pulse and excitement of Townshend&#x27;s music. This is what McAnuff does best, and he&#x27;s never done it better.</p>
-<p>The word on the Stratford street is that the production is cold, but that can only be a disappointment if you think there&#x27;s anything in the story itself to get hot about. The libretto remains what it has always been: a sickly piece of rock-hero mythology, pinball here being an admitted metaphor for music, in which the fans are shocked by the revelation that their idol is not the Messiah. I yearned for Tommy&#x27;s long-suffering mother to tell them that he isn&#x27;t a pinball wizard, he&#x27;s just a very naughty boy. To be fair, Tommy himself comes to something like this conclusion when he finally opts for family over fame; it&#x27;s what the fans can&#x27;t forgive him for. So he does fulfill at least one traditional Messianic requirement: getting rejected. In the meantime, though, the show has played both sides by suggesting that his deaf-dumb-and-blindness really does make him mystically special. This is accentuated in the current version by having his older self (Robert Markus, who&#x27;s good) periodically descend to offer ethereal counsel to the four-and-10 year olds (who were, on the first night, even better, hauntingly so; there are alternate child performers for both roles). Even the set-up is suspect; Tommy is traumatized when his father, thought dead, shoots his wife&#x27;s new fiance. But dad was a POW; wouldn&#x27;t he have been allowed to write home? You&#x27;d think, too, that Tommy&#x27;s physical or psychosomatic disabilities, would be enough to gain our sympathy, without having him sexually assaulted and mercilessly bullied as well. Fine as Ross and Nolan are, these scenes come off as gratuitously nasty; like the interlude with Jewelle Blackman&#x27;s full-throated Acid Queen, they&#x27;re filler, incidents that don&#x27;t lead anywhere. The failure to make them add up can largely be blamed on the words; in a stand-alone number like Pinball Wizard they&#x27;re fine, but when it comes to developing narrative and character, the songs fall into vagueness, pretentiousness and banality: the unholy trinity of rock-lyric ineptitude. That&#x27;s without even mentioning the deafness to rhyme and scansion, which at one point have the crucial word &quot;mirror&quot; pronounced with the emphasis on the second syllable. The most feeling, touching parts of the score are the simplest: the loving, guilt-ridden attempts of Tommy&#x27;s parents (very well played by Kita Guiolen and Jeremy Kushnier) to reach their unreachable son. It&#x27;s nice at least that Tommy reconciles with them. Meanwhile the production keeps us thrilled, if not moved, to the very end.</p>
+<p>The word on the Stratford street is that the production is cold, but that can only be a disappointment if you think there&#x27;s anything in the story itself to get hot about. The libretto remains what it has always been: a sickly piece of rock-hero mythology, pinball here being an admitted metaphor for music, in which the fans are shocked by the revelation that their idol is not the Messiah. I yearned for Tommy&#x27;s long-suffering mother to tell them that he isn&#x27;t a pinball wizard, he&#x27;s just a very naughty boy. To be fair, Tommy himself comes to something like this conclusion when he finally opts for family over fame; it&#x27;s what the fans can&#x27;t forgive him for. So he does fulfill at least one traditional Messianic requirement: getting rejected. In the meantime, though, the show has played both sides by suggesting that his deaf-dumb-and-blindness really does make him mystically special.</p>
+<p>This is accentuated in the current version by having his older self (Robert Markus, who&#x27;s good) periodically descend to offer ethereal counsel to the four-and-10 year olds (who were, on the first night, even better, hauntingly so; there are alternate child performers for both roles). Even the set-up is suspect; Tommy is traumatized when his father, thought dead, shoots his wife&#x27;s new fiance. But dad was a POW; wouldn&#x27;t he have been allowed to write home? You&#x27;d think, too, that Tommy&#x27;s physical or psychosomatic disabilities, would be enough to gain our sympathy, without having him sexually assaulted and mercilessly bullied as well. Fine as Ross and Nolan are, these scenes come off as gratuitously nasty; like the interlude with Jewelle Blackman&#x27;s full-throated Acid Queen, they&#x27;re filler, incidents that don&#x27;t lead anywhere. The failure to make them add up can largely be blamed on the words; in a stand-alone number like Pinball Wizard they&#x27;re fine, but when it comes to developing narrative and character, the songs fall into vagueness, pretentiousness and banality: the unholy trinity of rock-lyric ineptitude.</p>
+<p>That&#x27;s without even mentioning the deafness to rhyme and scansion, which at one point have the crucial word &quot;mirror&quot; pronounced with the emphasis on the second syllable. The most feeling, touching parts of the score are the simplest: the loving, guilt-ridden attempts of Tommy&#x27;s parents (very well played by Kita Guiolen and Jeremy Kushnier) to reach their unreachable son. It&#x27;s nice at least that Tommy reconciles with them. Meanwhile the production keeps us thrilled, if not moved, to the very end.</p>
 <p>Miles Potter&#x27;s production of The Three Musketeers, though low-tech by comparison, shows a similar mastery of stagecraft, and a similar disproportion between style and content. Peter Raby&#x27;s adaptation, now getting its fourth Stratford airing, is something of a virtuoso job, in that it manages to get in nearly all the crowded plot of the Dumas novel. In saving the story, though, it has to sacrifice nearly everything else, notably the humour. The extended wit-combats of Dumas&#x27; musketeers are replaced by physical combats (fair enough, and up to fight-master John Stead&#x27;s best swashbuckling standards) and by a lot of horseplay, none of it involving actual horses. Luke Humphrey&#x27;s D&#x27;Artagnan keeps his end up well, and his three pals have been extravagantly strongly cast: Graham Abbey (D&#x27;Artagnan last time around) lending weight and a hint of real pain as Athos, Mike Shara delicately disdainful as Aramis the ladies&#x27; man with religious aspirations, and Jonathan Goad vigorous as Porthos, though the role might benefit from an actor who was, well, fatter: In the book he&#x27;s afar more flavourful buffoon. Stratford is rightly proud of its company strength, but that can have its downside: We notice when actors like these three aren&#x27;t given enough to chew on; when other major talents seem off-beam (Deborah Hay&#x27;s Milady more kittenish than viperfish, Steven Sutcliffe&#x27;s Cardinal a jellyfish); when still others turn up as glorified walk-ons or, at this production&#x27;s tempo, run-ons, while some more important roles are plain inadequate. The pace and vigour of Potter&#x27;s staging, plus the insouciant ability of Douglas Paraschuk&#x27;s sets to throw us a rope-bridge out of nowhere, plus my unquenchable affection for the material, kept my attention; but, especially in the second half, it&#x27;s hard to deny that though much is going on, nothing seems to be happening.</p>
 <p>Blithe Spirit, perhaps because it manifests itself so often, has become my least favourite of the four of five major Noel Coward comedies. It ploughs a discordant domestic field that was more fruitfully explored in Private Lives, splitting the female interest in half, between dead wife Elvira and living wife Ruth, which means a lot of bickering. Madame Arcati, the happy medium, almost invariably runs, or more accurately cycles, off with the play; it&#x27;s no detraction from Seana McKenna&#x27;s conqueringly sporty and practical performance (which, coming on the regal heels of her Elizabeth in Mary Stuart, makes her the doubles champion of Stratford&#x27;s opening week) that she benefits from being refreshingly free of past, or indeed any, romantic associations. The other major characters are throwing past entanglements - people of whom we&#x27;ve never heard and in whom we have no interest - at one another, right up to the final curtain. Ben Carlson, whether unruffled or ruffled, is pitch-perfect as the twice-haunted husband; Michelle Giroux has the traditional throaty charm of his revenant spouse; Sarah Topham as her replacement lets off some fiercely effective reproaches in her early scenes but then finds, please forgive me, that she can&#x27;t top &#x27;em, so that her exasperation becomes shrill and self-defeating. Brian Bedford&#x27;s direction is suave and traditional. Coward revivals always seem to bring out the atavism in audiences: the urge to applaud pretty scenery (Simon Higlett&#x27;s set here is a peach) and actresses&#x27; exits, especially when they deliver their parting shots while climbing stairs. One thing the production does bring out is how firmly rooted, though it never mentions it, the play is in wartime Britain: just like Tommy.</p>
 <p>Tommy is in repertory through October 19 at the Avon Theatre, Stratford; The Three Musketeers through October 19 at the Festival Theatre; Blithe Spirit through October 20 at the Avon.</p></div></article>
@@ -286,6 +310,6 @@
       </section>
     </footer>
 
-    <script src="./app.js?v=194" type="module"></script>
+    <script src="./app.js?v=233" type="module"></script>
   </body>
 </html>

@@ -13,31 +13,33 @@
     <link rel="apple-touch-icon" href="../apple-touch-icon.svg">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Rubik:wght@400;600;700;800;900&display=swap">
-    <link rel="stylesheet" href="./styles.css?v=173">
+    <link rel="stylesheet" href="./styles.css?v=174">
     <link rel="stylesheet" href="./catalog.css?v=194">
-    <link rel="stylesheet" href="./classic.css?v=194">
+    <link rel="stylesheet" href="./classic.css?v=233">
   </head>
   <body class="article-open">
     <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="site-header">
       <nav class="site-nav site-nav-left" id="siteNavLeft" aria-label="Primary navigation left">
-        <a class="nav-search" href="#search" aria-label="Search the archive"><span></span></a>
-        <a href="#section:current">Recent</a>
+        <a href="#search">Search</a>
         <div class="nav-folder nav-folder-wide">
           <a href="#section:browse">Browse</a>
           <div class="nav-dropdown nav-mega">
             <div class="nav-subfolder">
               <a href="#section:collections">Collections</a>
               <div class="nav-side-menu">
+                <a href="#collection:recent">Recent</a>
+                <a href="#correspondence:famous-letters">Special Letters</a>
                 <a href="#section:shakespeare">Shakespeare</a>
                 <a href="#collection:sondheim">Sondheim</a>
+                <a href="#collection:stoppard">Stoppard</a>
                 <a href="#collection:musicals">Musicals</a>
                 <a href="#collection:stratford">Stratford</a>
                 <a href="#collection:shaw">Shaw</a>
                 <a href="#collection:television">TV Reviews</a>
                 <a href="#collection:albums">Music Reviews</a>
                 <a href="#collection:books">Book Reviews</a>
-                <a href="#collection:profiles">Profiles &amp; Obits</a>
+                <a href="#collection:profiles">Artist Profiles</a>
                 <a href="#collection:early">Early Writing</a>
               </div>
             </div>
@@ -46,7 +48,6 @@
               <div class="nav-side-menu">
                 <a href="#works">All Works</a>
                 <a href="#people">All People</a>
-                <a href="#index:publications">Publications</a>
                 <a href="#places">Places</a>
               </div>
             </div>
@@ -72,21 +73,21 @@
       </a>
       <nav class="site-nav site-nav-right" id="siteNavRight" aria-label="Primary navigation right">
         <div class="nav-folder">
-          <a href="#explore">Explore</a>
+          <a href="#section:explore">Explore</a>
           <div class="nav-dropdown">
-            <a href="#explore">Article Explorer</a>
             <a href="#map">Map</a>
             <a href="#timeline">Timeline</a>
+            <a href="#explore">Article Explorer</a>
             <a href="#correspondence">Correspondence</a>
           </div>
         </div>
         <div class="nav-folder">
-          <a href="#about">About</a>
+          <a href="#section:about">About</a>
           <div class="nav-dropdown">
             <a href="#about">About Robert Cushman</a>
             <a href="#critics-circle">Critic's Circle</a>
             <a href="https://www.cushmancollected.com/checkout/donate?donatePageId=5c9b8016652dea361e5feb7d" target="_blank" rel="noopener">Donate</a>
-            <a href="#subscribe">Subscribe</a>
+            <a href="#contact">Contact &amp; Newsletter</a>
           </div>
         </div>
       </nav>
@@ -102,10 +103,25 @@
 
     <nav class="drawer" id="drawer" aria-label="Site navigation">
       <a href="#search">Search the Archive</a>
-      <a href="#section:current">Recent</a>
       <details>
         <summary>Browse</summary>
-        <a href="#section:collections">Collections</a>
+        <a href="#section:browse">Browse overview</a>
+        <details class="drawer-collection-menu">
+          <summary>Collections</summary>
+          <a href="#collection:recent">Recent</a>
+          <a href="#correspondence:famous-letters">Special Letters</a>
+          <a href="#section:shakespeare">Shakespeare</a>
+          <a href="#collection:sondheim">Sondheim</a>
+          <a href="#collection:stoppard">Stoppard</a>
+          <a href="#collection:musicals">Musicals</a>
+          <a href="#collection:stratford">Stratford</a>
+          <a href="#collection:shaw">Shaw</a>
+          <a href="#collection:television">TV Reviews</a>
+          <a href="#collection:albums">Music Reviews</a>
+          <a href="#collection:books">Book Reviews</a>
+          <a href="#collection:profiles">Artist Profiles</a>
+          <a href="#collection:early">Early Writing</a>
+        </details>
         <a href="#master-index:all-works">All Works</a>
         <a href="#master-index:all-people">All People</a>
         <a href="#index:publications">Publications</a>
@@ -113,17 +129,19 @@
       </details>
       <details>
         <summary>Explore</summary>
-        <a href="#explore">Article Explorer</a>
+        <a href="#section:explore">Explore overview</a>
         <a href="#map">Map</a>
         <a href="#timeline">Timeline</a>
+        <a href="#explore">Article Explorer</a>
         <a href="#correspondence">Correspondence</a>
       </details>
       <details>
         <summary>About</summary>
+        <a href="#section:about">About overview</a>
         <a href="#about">About Robert Cushman</a>
         <a href="#critics-circle">Critic's Circle</a>
         <a href="https://www.cushmancollected.com/checkout/donate?donatePageId=5c9b8016652dea361e5feb7d" target="_blank" rel="noopener">Donate</a>
-        <a href="#subscribe">Contact &amp; Newsletter</a>
+        <a href="#contact">Contact &amp; Newsletter</a>
       </details>
     </nav>
 
@@ -225,7 +243,11 @@
         </a>
       </section>
 
-      <section class="frontpage-directory" id="frontpageDirectory" aria-label="Primary site paths"></section>
+      <section class="browse-heading site-index-heading">
+        <h2>Site Index</h2>
+      </section>
+
+      <section class="frontpage-directory" id="frontpageDirectory" aria-label="Site index"></section>
 
       <section class="browse-heading home-secondary-nav" id="browse">
         <h2>Browse the Archive</h2>
@@ -250,7 +272,9 @@
         <article id="article"><time>Mar 26, 2011</time><h1>Of Models, Muses And Mistresses; Montparnasse Is A Work Of Art</h1><p class="article-meta">Robert Cushman · National Post</p><div class="article-body" id="article-text"><p>The theme and subject of Montparnasse is female nudity, and its most obvious attraction, though it has many others, is that it features two beautiful and talented women -the talent being part of the beauty -who spend a substantial portion of it with their clothes off.</p>
 <p>Maev Beaty, best known as an actress, and Erin Shields, best known as a playwright, wrote this play together and play all the roles, the chief ones being an artist and a model. The scene is Paris in the 1920s. Shields is Margaret, a young expat from Toronto who, after a brief period working in a sausage factory, opts for the more fulfilling and certainly more exciting job of posing for painters. She finds it both physically and psychologically liberating. Beaty is Amelia, her more reserved friend from back home, who takes a ship to join her. Amelia envisions a career on the other side of the easel, but that takes time as well as talent. Both women have amusing monologues in which they count off the things they have learned about Paris, such as the difficulty of finding your best friend&#x27;s lodging when you dont have the right address and the greater hardship of earning a living. Margaret, overbooked, suggests Amelia take over one of her modelling assignments. Amelia protests that she couldnt possibly, but necessity overrules, and she soon finds herself as much in demand as her friend if not more so. Success as a model doesn&#x27;t necessarily lead to success as an artist, but she does get to meet some interesting people.</p>
 <p>Natives or tourists, the famous Parisian painters of the &#x27;20s dont include any women. Montparnasse doesnt really get into the question of why this was the case, but it does leave it hanging intriguingly in the air. It&#x27;s far more forthcoming on the relationship of painter and subject. It&#x27;s inevitable, by the laws of drama if not of life, that Margaret will end up posing for Amelia when the latter gets a shot at a major exhibition. The resultant portrait is a stunner, or so were told (we never, of course, get to see it), but it brings to boiling point all the tensions and jealousies -personal, professional, sexual -that unavoidably simmer when two highly charged people in the same line of work share living quarters. Margaret likes to go to wild parties and bring people home; Amelia likes -needs -to use the same small space as her studio. Margaret claims the portrait wouldnt exist without her and that, morally if not legally, it&#x27;s as much hers as Amelia&#x27;s. Amelia, like artists through the ages, doesnt see it that way. And the play leaves us with a bittersweet question: If a work of art continues to find an audience, what actually survives, the subject or the object? (Mr. Keats, your Grecian urns agent is calling.)</p>
-<p>On a chattier level, Montparnasse functions as a quick guide to la vie de Boheme, post-war, pre-crash. Our imaginary heroines get to meet, and at the very least greet, their real-life heroes. It could be argued that when Margaret changed careers she went from one meat market to another; and indeed one of her lover-employers is Chaim Soutine, who sends her out to buy the bovine carcasses he paints. Amelia becomes the muse, model and mistress of Fernand Leger, to whom she offers expert advice on where to position his subjects. But what, after her first modelling experience, brings her further out of her shell is an affair with Sylvia Beach, proprietress of the legendary bookstore Shakespeare and Company. The French Mount Parnassus naturally has writers as well as painters nestling on its slopes; James Joyce, Sylvia&#x27;s particular protege, makes a fleeting appearance, and Henry Miller makes a less fleeting and rather riotous one. At its pyrotechnic highpoint, the show cross-cuts between two social gatherings, showing us Amelia briefly feted by the acclaimed and artistic, and Margaret drowning her resentments with the louche and the lively. The transitions are done at dizzying speed, the two performers in multiple impersonations daring us to keep up. It&#x27;s here that the differences between them come most fully into relief. Shields is emphatically there, glorying in Amelia, right from the nude soliloquy that, in opening the play, both charms and disarms. (And if you want to observe exactly how an actress breathes, youll never have a better chance.) She is more slapdash in her other roles. Beaty is more elusive: a lightning caricaturist, sharp and supple, who also digs deep and true into her main assignment. Unlike Margaret, Amelia develops, and Beaty fills in her whole progress. She can also, in delivering a sobering epilogue, step out of her role without abandoning it. She doesnt quite recapture the astonishing concentration of shyness with which she first appeared outside her friend&#x27;s door when the play was done at Summerworks two years ago. In other respects too, as often happens when fringe shows get promoted, Andrea Donaldson&#x27;s production has lost in impact what it&#x27;s gained in elaboration. A crucial scene, the destruction of a painting was more wrenching when more simply done. It still works though, as does the whole piece. A play celebrates another art form and in doing so glorifies its own.</p>
+<p>On a chattier level, Montparnasse functions as a quick guide to la vie de Boheme, post-war, pre-crash. Our imaginary heroines get to meet, and at the very least greet, their real-life heroes. It could be argued that when Margaret changed careers she went from one meat market to another; and indeed one of her lover-employers is Chaim Soutine, who sends her out to buy the bovine carcasses he paints. Amelia becomes the muse, model and mistress of Fernand Leger, to whom she offers expert advice on where to position his subjects. But what, after her first modelling experience, brings her further out of her shell is an affair with Sylvia Beach, proprietress of the legendary bookstore Shakespeare and Company. The French Mount Parnassus naturally has writers as well as painters nestling on its slopes; James Joyce, Sylvia&#x27;s particular protege, makes a fleeting appearance, and Henry Miller makes a less fleeting and rather riotous one.</p>
+<p>At its pyrotechnic highpoint, the show cross-cuts between two social gatherings, showing us Amelia briefly feted by the acclaimed and artistic, and Margaret drowning her resentments with the louche and the lively. The transitions are done at dizzying speed, the two performers in multiple impersonations daring us to keep up. It&#x27;s here that the differences between them come most fully into relief. Shields is emphatically there, glorying in Amelia, right from the nude soliloquy that, in opening the play, both charms and disarms. (And if you want to observe exactly how an actress breathes, youll never have a better chance.) She is more slapdash in her other roles. Beaty is more elusive: a lightning caricaturist, sharp and supple, who also digs deep and true into her main assignment. Unlike Margaret, Amelia develops, and Beaty fills in her whole progress. She can also, in delivering a sobering epilogue, step out of her role without abandoning it.</p>
+<p>She doesnt quite recapture the astonishing concentration of shyness with which she first appeared outside her friend&#x27;s door when the play was done at Summerworks two years ago. In other respects too, as often happens when fringe shows get promoted, Andrea Donaldson&#x27;s production has lost in impact what it&#x27;s gained in elaboration. A crucial scene, the destruction of a painting was more wrenching when more simply done. It still works though, as does the whole piece. A play celebrates another art form and in doing so glorifies its own.</p>
 <p>? Montparnasse runs through April 12 at Theatre Passe Muraille. Call 416-504-7529 or visit passemuraille. on.ca for ticket information.</p>
 <p>Aviva Armour Ostroff / Objects of beauty: Erin Shields, left, and Maev Beaty in Montparnasse.;; Caption:</p></div></article>
       </section>
@@ -286,6 +310,6 @@
       </section>
     </footer>
 
-    <script src="./app.js?v=194" type="module"></script>
+    <script src="./app.js?v=233" type="module"></script>
   </body>
 </html>

@@ -13,31 +13,33 @@
     <link rel="apple-touch-icon" href="../apple-touch-icon.svg">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Rubik:wght@400;600;700;800;900&display=swap">
-    <link rel="stylesheet" href="./styles.css?v=173">
+    <link rel="stylesheet" href="./styles.css?v=174">
     <link rel="stylesheet" href="./catalog.css?v=194">
-    <link rel="stylesheet" href="./classic.css?v=194">
+    <link rel="stylesheet" href="./classic.css?v=233">
   </head>
   <body class="article-open">
     <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="site-header">
       <nav class="site-nav site-nav-left" id="siteNavLeft" aria-label="Primary navigation left">
-        <a class="nav-search" href="#search" aria-label="Search the archive"><span></span></a>
-        <a href="#section:current">Recent</a>
+        <a href="#search">Search</a>
         <div class="nav-folder nav-folder-wide">
           <a href="#section:browse">Browse</a>
           <div class="nav-dropdown nav-mega">
             <div class="nav-subfolder">
               <a href="#section:collections">Collections</a>
               <div class="nav-side-menu">
+                <a href="#collection:recent">Recent</a>
+                <a href="#correspondence:famous-letters">Special Letters</a>
                 <a href="#section:shakespeare">Shakespeare</a>
                 <a href="#collection:sondheim">Sondheim</a>
+                <a href="#collection:stoppard">Stoppard</a>
                 <a href="#collection:musicals">Musicals</a>
                 <a href="#collection:stratford">Stratford</a>
                 <a href="#collection:shaw">Shaw</a>
                 <a href="#collection:television">TV Reviews</a>
                 <a href="#collection:albums">Music Reviews</a>
                 <a href="#collection:books">Book Reviews</a>
-                <a href="#collection:profiles">Profiles &amp; Obits</a>
+                <a href="#collection:profiles">Artist Profiles</a>
                 <a href="#collection:early">Early Writing</a>
               </div>
             </div>
@@ -46,7 +48,6 @@
               <div class="nav-side-menu">
                 <a href="#works">All Works</a>
                 <a href="#people">All People</a>
-                <a href="#index:publications">Publications</a>
                 <a href="#places">Places</a>
               </div>
             </div>
@@ -72,21 +73,21 @@
       </a>
       <nav class="site-nav site-nav-right" id="siteNavRight" aria-label="Primary navigation right">
         <div class="nav-folder">
-          <a href="#explore">Explore</a>
+          <a href="#section:explore">Explore</a>
           <div class="nav-dropdown">
-            <a href="#explore">Article Explorer</a>
             <a href="#map">Map</a>
             <a href="#timeline">Timeline</a>
+            <a href="#explore">Article Explorer</a>
             <a href="#correspondence">Correspondence</a>
           </div>
         </div>
         <div class="nav-folder">
-          <a href="#about">About</a>
+          <a href="#section:about">About</a>
           <div class="nav-dropdown">
             <a href="#about">About Robert Cushman</a>
             <a href="#critics-circle">Critic's Circle</a>
             <a href="https://www.cushmancollected.com/checkout/donate?donatePageId=5c9b8016652dea361e5feb7d" target="_blank" rel="noopener">Donate</a>
-            <a href="#subscribe">Subscribe</a>
+            <a href="#contact">Contact &amp; Newsletter</a>
           </div>
         </div>
       </nav>
@@ -102,10 +103,25 @@
 
     <nav class="drawer" id="drawer" aria-label="Site navigation">
       <a href="#search">Search the Archive</a>
-      <a href="#section:current">Recent</a>
       <details>
         <summary>Browse</summary>
-        <a href="#section:collections">Collections</a>
+        <a href="#section:browse">Browse overview</a>
+        <details class="drawer-collection-menu">
+          <summary>Collections</summary>
+          <a href="#collection:recent">Recent</a>
+          <a href="#correspondence:famous-letters">Special Letters</a>
+          <a href="#section:shakespeare">Shakespeare</a>
+          <a href="#collection:sondheim">Sondheim</a>
+          <a href="#collection:stoppard">Stoppard</a>
+          <a href="#collection:musicals">Musicals</a>
+          <a href="#collection:stratford">Stratford</a>
+          <a href="#collection:shaw">Shaw</a>
+          <a href="#collection:television">TV Reviews</a>
+          <a href="#collection:albums">Music Reviews</a>
+          <a href="#collection:books">Book Reviews</a>
+          <a href="#collection:profiles">Artist Profiles</a>
+          <a href="#collection:early">Early Writing</a>
+        </details>
         <a href="#master-index:all-works">All Works</a>
         <a href="#master-index:all-people">All People</a>
         <a href="#index:publications">Publications</a>
@@ -113,17 +129,19 @@
       </details>
       <details>
         <summary>Explore</summary>
-        <a href="#explore">Article Explorer</a>
+        <a href="#section:explore">Explore overview</a>
         <a href="#map">Map</a>
         <a href="#timeline">Timeline</a>
+        <a href="#explore">Article Explorer</a>
         <a href="#correspondence">Correspondence</a>
       </details>
       <details>
         <summary>About</summary>
+        <a href="#section:about">About overview</a>
         <a href="#about">About Robert Cushman</a>
         <a href="#critics-circle">Critic's Circle</a>
         <a href="https://www.cushmancollected.com/checkout/donate?donatePageId=5c9b8016652dea361e5feb7d" target="_blank" rel="noopener">Donate</a>
-        <a href="#subscribe">Contact &amp; Newsletter</a>
+        <a href="#contact">Contact &amp; Newsletter</a>
       </details>
     </nav>
 
@@ -225,7 +243,11 @@
         </a>
       </section>
 
-      <section class="frontpage-directory" id="frontpageDirectory" aria-label="Primary site paths"></section>
+      <section class="browse-heading site-index-heading">
+        <h2>Site Index</h2>
+      </section>
+
+      <section class="frontpage-directory" id="frontpageDirectory" aria-label="Site index"></section>
 
       <section class="browse-heading home-secondary-nav" id="browse">
         <h2>Browse the Archive</h2>
@@ -255,7 +277,9 @@
 <p>He also sang &quot;My Way&quot;, the bombastic dirge that he adopted as his own self-glorifying credo, and which the world, or part of it, seems to have bought as the centre-panel of his image. The second-best criticism of &quot;My Way&quot; that I have encountered was delivered by a lyricist friend who - shuddering at its abuses of rhyme, scansion and conversational English - named it as his least favourite song &quot;without exemption&quot;. The best came from Sinatra himself who, when it was first played for him, dismissed it as being &quot;too much on the nose&quot;. That hits it exactly on the nose. It is impossible to think of &quot;My Way&quot; as just another song sung by Sinatra. It comes to us as his autobiographical statement. He tells us, with embarrassing directness, how uncompromising he is; and compromises in doing so.</p>
 <p>The compromise is not just the singing of a bad song; if that&#x27;s a sin, all vocalists are damned. It lies in the desecration of his greatest gift: the gift of impersonality. Like any great actor - which is what, in song, he assuredly is - he speaks not about himself but from himself. He was put among us to tell us about us, drawing on his own experience but never flaunting it. He knows this himself; his on-stage patter proves it. He heralds &quot;One for My Baby&quot; with a portrait - almost a short story - of the heartbroken drunk who sings it. He tells us that &quot;Send In the Clowns&quot; is about a break-up - and, though it&#x27;s sung in the first person, &quot;whether it&#x27;s the man or the woman who left is unimportant&quot;.</p>
 <p>The Sinatra career is stuffed with paradox. He calls himself &quot;a saloon singer&quot; and appears mainly in concert halls and sports arenas - which he does bizarrely infuse with something resembling intimacy. He seems alternately to believe in his own hype and to decry it. (&quot;I&#x27;ve been overly rewarded in my lifetime, and that&#x27;s a fact.&quot;) And in writing of his &quot;impersonality&quot;, when everybody knows that he sings in the most individual voice of any popular singer, I am brushing up against the giant paradox of them all. Either that or I&#x27;m crazy.</p>
-<p>SINATRA SINGS what are loosely known as &quot;standards&quot;: a genre whose boundaries are difficult to define but whose centre consists of the best songs written for Broadway, Hollywood and Tin Pan Alley in the first half of this century. Personal taste apart, the chief male singers in this area pretty much choose themselves. Before Sinatra there were Bing Crosby and, I would say, Fred Astaire. Contemporary with or just after him are Nat King Cole, Tony Bennett, and Mel Torme. All but Torme have idiosyncratic, imperfect voices - which explains why he has had less popular success than the others; his voice is too beautiful to be human. His phrasing is impeccably colloquial but he never seems to be talking to you as intimately as do his peers. Crosby, Astaire, Cole and Bennett come over in their music as fairly uncomplicated good guys, whether rough-hewn or urbane. So, some of the time, does Sinatra; he can be extraordinarily likeable. But he is also more complex. He seems to suffer more. He gets angrier. He is more intelligent, certainly more sensitive, and he notices small things in lyrics. (So does Astaire, but he doesn&#x27;t have the same vocal resources to put them over.) He can also be exuberantly, intoxicatingly happy; and he can convey this without singing very loud or very fast. (He is the master of medium swing.) He has, in short, a temperament - the most interesting in popular music - and his songs are refracted through it. He once described himself, in a quote that&#x27;s been endlessly recycled, as &quot;an 18-carat manic depressive&quot;; and professionally it seems to have been an extremely useful affliction to have. Of course, his audience approaches his work with full awareness of his private life - the brawls, the affairs, the tempestuous marriages - and there is an assumption that the life has infected the work. But it&#x27;s just as likely to be the other way about. It doesn&#x27;t really matter much which it is. Another line from the same interview, even more frequently quoted because even more pertinent, says it best: &quot;Whatever has been said about me personally is unimportant. When I sing, I believe I&#x27;m honest.&quot; And this belief is communicated and shared.</p>
+<p>SINATRA SINGS what are loosely known as &quot;standards&quot;: a genre whose boundaries are difficult to define but whose centre consists of the best songs written for Broadway, Hollywood and Tin Pan Alley in the first half of this century. Personal taste apart, the chief male singers in this area pretty much choose themselves. Before Sinatra there were Bing Crosby and, I would say, Fred Astaire. Contemporary with or just after him are Nat King Cole, Tony Bennett, and Mel Torme. All but Torme have idiosyncratic, imperfect voices - which explains why he has had less popular success than the others; his voice is too beautiful to be human. His phrasing is impeccably colloquial but he never seems to be talking to you as intimately as do his peers. Crosby, Astaire, Cole and Bennett come over in their music as fairly uncomplicated good guys, whether rough-hewn or urbane.</p>
+<p>So, some of the time, does Sinatra; he can be extraordinarily likeable. But he is also more complex. He seems to suffer more. He gets angrier. He is more intelligent, certainly more sensitive, and he notices small things in lyrics. (So does Astaire, but he doesn&#x27;t have the same vocal resources to put them over.) He can also be exuberantly, intoxicatingly happy; and he can convey this without singing very loud or very fast. (He is the master of medium swing.) He has, in short, a temperament - the most interesting in popular music - and his songs are refracted through it. He once described himself, in a quote that&#x27;s been endlessly recycled, as &quot;an 18-carat manic depressive&quot;; and professionally it seems to have been an extremely useful affliction to have. Of course, his audience approaches his work with full awareness of his private life - the brawls, the affairs, the tempestuous marriages - and there is an assumption that the life has infected the work.</p>
+<p>But it&#x27;s just as likely to be the other way about. It doesn&#x27;t really matter much which it is. Another line from the same interview, even more frequently quoted because even more pertinent, says it best: &quot;Whatever has been said about me personally is unimportant. When I sing, I believe I&#x27;m honest.&quot; And this belief is communicated and shared.</p>
 <p>In the end, he&#x27;s a transparent singer. The temperament colours the songs, it may even transform them, but the songs take precedence. This has something to do with the way he pronounces the words. He actually contravenes one of the basic rules of popular singing: that the singing voice should be an extension of the speaking voice. More exactly, his singing is an extension of an idealised speaking voice. The TV mini-series Sinatra, produced by his daughter Tina, includes a scene in which a teacher approaches the fledgling vocalist with the advice that if he wants to do justice to the songs he sings, he had better get rid of his raw New Jersey accent. Presumably this, or something like it, actually happened. From the Forties to the Nineties Sinatra has had two voices - one raucous, one refined, to put it crudely - and hearing them alternate in live performance can be a bracing experience. By refined, I do not mean affected; he sings the purest American English, with no hint of classical voice production. He is fanatical - pedantic, actually - about final consonants. His very first hit song, &quot;All or Nothing at All&quot;, recorded with Harry James&#x27;s band in 1939, contains the line &quot;if your heart never could yield to me&quot;. He carefully separates &quot;yield&quot; from &quot;to&quot;, and has continued to do so in his several re-recordings of it. Probably, as that era of songwriting recedes from us, he has taken an added satisfaction in accenting a word as formal as &quot;yield&quot;. There is no question here of breaking the thought; the phrasing remains legato, and the care he takes actually adds to the ardour of the song. He has dealt as fastidiously with the recurring title-phrase of &quot;Night and Day&quot;, with &quot;don&#x27;t you love farce&quot; in &quot;Send In the Clowns&quot;, and with innumerable others.</p>
 <p>The effect of this passionate clarity is to make the familiar strange. Many of the songs Sinatra sings were classics before he got to them; most have been done by dozens of other people. But the sculptured deliberation with which he endows them (and this applies to up-tempo tunes as well as to slow ballads) leaves them hanging in space, three-dimensional. He is not telling us to listen to a song as if we had never heard it before; he is acknowledging that we know it by heart, and then persuading us that we had never really heard it at all. He explores its crevices, and takes us on the expedition; we get a highly interpreted performance from which the interpreter finally disappears. He can even give this classic weight to a new song (&quot;All the Way&quot;, for example) written specially for him. Indeed, when his enunciation slackens it&#x27;s a sign, maybe unconscious, that he doesn&#x27;t think the song is worth his while; a comforting thought when you listen to the soft-rock things that have infiltrated his repertoire since the late Sixties.</p>
 <p>Sometimes he can add a further layer of stylisation. His 1956 treatment of &quot;I&#x27;ve Got You Under My Skin&quot; (as arranged by Nelson Riddle on Songs for Swingin&#x27; Lovers) is an acknowledged masterpiece, infallibly exciting; subsequent performances recreate the old routine, but they also implicitly comment on it, and on our awareness of it. In &quot;Blues in the Night&quot; (from his most famous ballad collection, Only the Lonely) he makes no pretence of being a blues singer; he plays the idea of a man self- consciously toying with blues imagery and blues cadences as a means of exploring his own unhappiness, and from all these layers of artifice, truth emerges. It may not be a perfect account of the song but it works for him. His power is not limited to love songs. When he sings &quot;Ol&#x27; Man River&quot;, he cuts to the bleak heart of Oscar Hammerstein&#x27;s lyric (&quot;I&#x27;m tired of livin&#x27; an&#x27; scared of dyin&#x27; &quot;) more powerfully than any of the rolling bass-baritones who traditionally perform it. Unlike them, he actually sounds oppressed. (And Jerome Kern, the song&#x27;s composer, approved. He said he always wanted it sung by a small guy.)</p>
@@ -300,6 +324,6 @@
       </section>
     </footer>
 
-    <script src="./app.js?v=194" type="module"></script>
+    <script src="./app.js?v=233" type="module"></script>
   </body>
 </html>

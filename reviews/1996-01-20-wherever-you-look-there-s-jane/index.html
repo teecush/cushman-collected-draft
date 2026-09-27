@@ -13,31 +13,33 @@
     <link rel="apple-touch-icon" href="../apple-touch-icon.svg">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Rubik:wght@400;600;700;800;900&display=swap">
-    <link rel="stylesheet" href="./styles.css?v=173">
+    <link rel="stylesheet" href="./styles.css?v=174">
     <link rel="stylesheet" href="./catalog.css?v=194">
-    <link rel="stylesheet" href="./classic.css?v=194">
+    <link rel="stylesheet" href="./classic.css?v=233">
   </head>
   <body class="article-open">
     <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="site-header">
       <nav class="site-nav site-nav-left" id="siteNavLeft" aria-label="Primary navigation left">
-        <a class="nav-search" href="#search" aria-label="Search the archive"><span></span></a>
-        <a href="#section:current">Recent</a>
+        <a href="#search">Search</a>
         <div class="nav-folder nav-folder-wide">
           <a href="#section:browse">Browse</a>
           <div class="nav-dropdown nav-mega">
             <div class="nav-subfolder">
               <a href="#section:collections">Collections</a>
               <div class="nav-side-menu">
+                <a href="#collection:recent">Recent</a>
+                <a href="#correspondence:famous-letters">Special Letters</a>
                 <a href="#section:shakespeare">Shakespeare</a>
                 <a href="#collection:sondheim">Sondheim</a>
+                <a href="#collection:stoppard">Stoppard</a>
                 <a href="#collection:musicals">Musicals</a>
                 <a href="#collection:stratford">Stratford</a>
                 <a href="#collection:shaw">Shaw</a>
                 <a href="#collection:television">TV Reviews</a>
                 <a href="#collection:albums">Music Reviews</a>
                 <a href="#collection:books">Book Reviews</a>
-                <a href="#collection:profiles">Profiles &amp; Obits</a>
+                <a href="#collection:profiles">Artist Profiles</a>
                 <a href="#collection:early">Early Writing</a>
               </div>
             </div>
@@ -46,7 +48,6 @@
               <div class="nav-side-menu">
                 <a href="#works">All Works</a>
                 <a href="#people">All People</a>
-                <a href="#index:publications">Publications</a>
                 <a href="#places">Places</a>
               </div>
             </div>
@@ -72,21 +73,21 @@
       </a>
       <nav class="site-nav site-nav-right" id="siteNavRight" aria-label="Primary navigation right">
         <div class="nav-folder">
-          <a href="#explore">Explore</a>
+          <a href="#section:explore">Explore</a>
           <div class="nav-dropdown">
-            <a href="#explore">Article Explorer</a>
             <a href="#map">Map</a>
             <a href="#timeline">Timeline</a>
+            <a href="#explore">Article Explorer</a>
             <a href="#correspondence">Correspondence</a>
           </div>
         </div>
         <div class="nav-folder">
-          <a href="#about">About</a>
+          <a href="#section:about">About</a>
           <div class="nav-dropdown">
             <a href="#about">About Robert Cushman</a>
             <a href="#critics-circle">Critic's Circle</a>
             <a href="https://www.cushmancollected.com/checkout/donate?donatePageId=5c9b8016652dea361e5feb7d" target="_blank" rel="noopener">Donate</a>
-            <a href="#subscribe">Subscribe</a>
+            <a href="#contact">Contact &amp; Newsletter</a>
           </div>
         </div>
       </nav>
@@ -102,10 +103,25 @@
 
     <nav class="drawer" id="drawer" aria-label="Site navigation">
       <a href="#search">Search the Archive</a>
-      <a href="#section:current">Recent</a>
       <details>
         <summary>Browse</summary>
-        <a href="#section:collections">Collections</a>
+        <a href="#section:browse">Browse overview</a>
+        <details class="drawer-collection-menu">
+          <summary>Collections</summary>
+          <a href="#collection:recent">Recent</a>
+          <a href="#correspondence:famous-letters">Special Letters</a>
+          <a href="#section:shakespeare">Shakespeare</a>
+          <a href="#collection:sondheim">Sondheim</a>
+          <a href="#collection:stoppard">Stoppard</a>
+          <a href="#collection:musicals">Musicals</a>
+          <a href="#collection:stratford">Stratford</a>
+          <a href="#collection:shaw">Shaw</a>
+          <a href="#collection:television">TV Reviews</a>
+          <a href="#collection:albums">Music Reviews</a>
+          <a href="#collection:books">Book Reviews</a>
+          <a href="#collection:profiles">Artist Profiles</a>
+          <a href="#collection:early">Early Writing</a>
+        </details>
         <a href="#master-index:all-works">All Works</a>
         <a href="#master-index:all-people">All People</a>
         <a href="#index:publications">Publications</a>
@@ -113,17 +129,19 @@
       </details>
       <details>
         <summary>Explore</summary>
-        <a href="#explore">Article Explorer</a>
+        <a href="#section:explore">Explore overview</a>
         <a href="#map">Map</a>
         <a href="#timeline">Timeline</a>
+        <a href="#explore">Article Explorer</a>
         <a href="#correspondence">Correspondence</a>
       </details>
       <details>
         <summary>About</summary>
+        <a href="#section:about">About overview</a>
         <a href="#about">About Robert Cushman</a>
         <a href="#critics-circle">Critic's Circle</a>
         <a href="https://www.cushmancollected.com/checkout/donate?donatePageId=5c9b8016652dea361e5feb7d" target="_blank" rel="noopener">Donate</a>
-        <a href="#subscribe">Contact &amp; Newsletter</a>
+        <a href="#contact">Contact &amp; Newsletter</a>
       </details>
     </nav>
 
@@ -225,7 +243,11 @@
         </a>
       </section>
 
-      <section class="frontpage-directory" id="frontpageDirectory" aria-label="Primary site paths"></section>
+      <section class="browse-heading site-index-heading">
+        <h2>Site Index</h2>
+      </section>
+
+      <section class="frontpage-directory" id="frontpageDirectory" aria-label="Site index"></section>
 
       <section class="browse-heading home-secondary-nav" id="browse">
         <h2>Browse the Archive</h2>
@@ -255,7 +277,9 @@
 <p>I don&#x27;t deny that an Austen trend - or, more precisely, an Austen bandwagon - now exists, though the lady&#x27;s inconsiderately small output is going to make it a short-lived one. It&#x27;s a copycat phenomenon; artists produce work, journalists create trends, and executives, especially in the age of corporate nervousness, follow them. Emma, Austen&#x27;s masterpiece and the most deliciously ironic novel in the language, is said to be coming at us in three separate versions. No word yet of Mansfield Park; it has a puritanical heroine, opposed to a couple of sophisticates by no means as witty and sparkling as they are cracked up to be, so it must seem forbidding. The title could be a deterrent, though less of one than Northanger Abbey; how do you market that without making it sound like an educational short? But I&#x27;m sure they&#x27;ll turn up.</p>
 <p>How they turn up is going to depend, to state the obvious, on who does them; and there is plenty of variety within the current crop. The one-shot Persuasion, which jumps abruptly from scene to scene, is a far starker job than the six-pack P&amp;P, which is leisurely, flowing and comparatively lavish. (Though even here characters change their clothes far less frequently than used to be the case in that rich but indeterminate period known to the studios as History.) The contrast reflects the difference between the novels themselves - Pride and Prejudice an ebullient comedy, Persuasion a stoical one - but it is also a matter of house style. The BBC has a tradition of long classic serials; Channel 4 likes to keep things compact, as with their recent socially-conscious version of Dickens&#x27;s Hard Times. Length does not necessarily mean greater fidelity; indeed you could argue that Persuasion, like Sense and Sensibility, gets closer to the essence of its source precisely because it has to concentrate. P&amp;P has the space to indulge itself.</p>
 <p>Everybody knows that the hardest thing to preserve in the dramatization of a novel, especially a novel of wit, is the author&#x27;s voice. (Narrative voiceovers are generally, and I think rightly, regarded as a cop out.) The TV version finds a nifty excuse within the first five minutes for the heroine to tell us that &quot;It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.&quot; It is also universally acknowledged that that sentence is one of the three best known openings in the language (the others are &quot;It was the best of times, it was the worst of times,&quot; and &quot;Call me Ishmael&quot;). It is certainly the most copiously parodied. Giving it to Elizabeth Bennet sets her up as our point of reference; Jane wanted us to love her, and we do. That, however small a stroke, is creative adaptation. More of a stretch, but justified since her sexuality is a mainspring of the plot, is the endowment of Lydia, the Bennet daughter who elopes, with her own point of view, unrepentantly bedworthy right up to the closing credits. (Amusingly, she&#x27;s Julia Sawalha, the puritanical daughter of Edwina in Absolutely Fabulous.) What violations there are come in the dialogue. Andrew Davies, for whose adaptations and originals I usually have enormous respect, is surprisingly insensitive here: One moment the characters are spouting authentic Austen, the next they&#x27;re saying things like &quot;calm down.&quot;</p>
-<p>My introduction to Austen was a BBC Pride and Prejudice of the &#x27;50s, in which Elizabeth signalled her final triumph over Darcy by telling him, &quot;I have made you laugh.&quot; That isn&#x27;t authentic Austen either but it was satisfying, largely because Darcy was played by the late Alan Badel, a contemporary of Richard Burton and Paul Scofield who in his day was the British theatre&#x27;s heavyweight ironic stylist. His Darcy always looked capable of making a joke, if not initially of seeing one, and this imminence of wit created the necessary spark between him and Lizzie. In the current version, that isn&#x27;t there: Jennifer Ehle&#x27;s dancing eyes and obvious intelligence earned her my goodwill (it didn&#x27;t hurt that she&#x27;s the daughter of the wonderful Rosemary Harris) but Colin Firth&#x27;s Darcy merely rides around looking misunderstood. Greg Wise as the cad of S&amp;S is similarly dull. (But I do like Hugh Grant.) Which raises the question: how, today, do you cast these things? (A caveat: Anyone&#x27;s ideas of style are bound to depend on when they grew up. My own, formed in the &#x27;50s and &#x27;60s, would probably seem intolerably suburban to the previous generation. Vowel sounds that make me wince pass unnoticed by my juniors. You Canadians probably shouldn&#x27;t care at all, but if you watch Masterpiece Theatre you probably do. And Jane Austen, like most of English literature, is inescapably about class.) The older parts of course are easy. Between them, these films offer a feast of the character actors I grew up on. S&amp;S has Robert Hardy, encoring his jovial landowner performance from Middlemarch, and Elizabeth Spriggs, who must have played hundreds of variously comic gentlewomen but makes her effects seem fresh even when she repeats them; both these players are virtuosos of heartiness. Also hearty, but in a subtler way, is John Woodvine who plays the Admiral in Persuasion; he can be a great actor - anyone who watched him over the past six weeks as the God-finding godfather in Finney will know what I mean. In P&amp;P, the seniors are Barbara Leigh-Hunt, truly frightening as the dragon-Lady Catherine de Bourgh, and Benjamin Whitrow, Britain&#x27;s best actor of dry, donnish comedy, who confirms my belief that Mr. Bennet has all the best lines in the piece. Alison Steadman, who plays his wife (and is considerably younger, as well as attractive enough to explain why he married her) has been accused of Dickensian excess, as has David Bamber as the slimily absurd Mr. Collins, but it&#x27;s all in the book. Austen, like Dickens, drew on the eighteenth-century tradition of comic extravagance.</p>
+<p>My introduction to Austen was a BBC Pride and Prejudice of the &#x27;50s, in which Elizabeth signalled her final triumph over Darcy by telling him, &quot;I have made you laugh.&quot; That isn&#x27;t authentic Austen either but it was satisfying, largely because Darcy was played by the late Alan Badel, a contemporary of Richard Burton and Paul Scofield who in his day was the British theatre&#x27;s heavyweight ironic stylist. His Darcy always looked capable of making a joke, if not initially of seeing one, and this imminence of wit created the necessary spark between him and Lizzie. In the current version, that isn&#x27;t there: Jennifer Ehle&#x27;s dancing eyes and obvious intelligence earned her my goodwill (it didn&#x27;t hurt that she&#x27;s the daughter of the wonderful Rosemary Harris) but Colin Firth&#x27;s Darcy merely rides around looking misunderstood. Greg Wise as the cad of S&amp;S is similarly dull.</p>
+<p>(But I do like Hugh Grant.) Which raises the question: how, today, do you cast these things? (A caveat: Anyone&#x27;s ideas of style are bound to depend on when they grew up. My own, formed in the &#x27;50s and &#x27;60s, would probably seem intolerably suburban to the previous generation. Vowel sounds that make me wince pass unnoticed by my juniors. You Canadians probably shouldn&#x27;t care at all, but if you watch Masterpiece Theatre you probably do. And Jane Austen, like most of English literature, is inescapably about class.) The older parts of course are easy. Between them, these films offer a feast of the character actors I grew up on. S&amp;S has Robert Hardy, encoring his jovial landowner performance from Middlemarch, and Elizabeth Spriggs, who must have played hundreds of variously comic gentlewomen but makes her effects seem fresh even when she repeats them; both these players are virtuosos of heartiness.</p>
+<p>Also hearty, but in a subtler way, is John Woodvine who plays the Admiral in Persuasion; he can be a great actor - anyone who watched him over the past six weeks as the God-finding godfather in Finney will know what I mean. In P&amp;P, the seniors are Barbara Leigh-Hunt, truly frightening as the dragon-Lady Catherine de Bourgh, and Benjamin Whitrow, Britain&#x27;s best actor of dry, donnish comedy, who confirms my belief that Mr. Bennet has all the best lines in the piece. Alison Steadman, who plays his wife (and is considerably younger, as well as attractive enough to explain why he married her) has been accused of Dickensian excess, as has David Bamber as the slimily absurd Mr. Collins, but it&#x27;s all in the book. Austen, like Dickens, drew on the eighteenth-century tradition of comic extravagance.</p>
 <p>I could go on forever, tracing connections fortuitous and otherwise. The appearance of Sophie Thompson, Emma&#x27;s sister, as a hilarious paragon of self-pity in Persuasion; the arrival onstage in Toronto of Gemma Jones, playing a bereaved mother in The Master Builder to contrast with the delicately comic one she plays in S&amp;S; and the presence in both Persuasion and P&amp;P of Victoria Hamilton, who in The Master Builder achieves the extraordinary feat of making Ibsen&#x27;s Hilde Wangel believable and is, to put it mildly, promising; the strength brought to the central role in Persuasion by Amanda Root, who has an extraordinary quality of making the characters she plays live from moment to moment without seeming to pass judgment on them. I&#x27;ve seen her accomplish this as Shakespeare&#x27;s Cressida and as Chekhov&#x27;s Nina in The Seagull. In the latter, she shared a protege- and-guardian relationship with Susan Fleetwood, one that she repeats in Persuasion where Fleetwood plays the good but fallible Lady Russell. A warm and handsome actress with a wild streak, Fleetwood played most of the Shakespearean leads in her time, dying at the end of last year in her early 50s. It was perhaps the cruellest loss in a year that was full of them in classical British acting: Robert Stephens, Paul Eddington, Eric Porter and the great Michael Hordern. These are the people who turn the wheels of British theatre, and hence of its film and television. If there is such a thing as a Jane Austen phenomenon, they are it.</p></div></article>
       </section>
 
@@ -290,6 +314,6 @@
       </section>
     </footer>
 
-    <script src="./app.js?v=194" type="module"></script>
+    <script src="./app.js?v=233" type="module"></script>
   </body>
 </html>

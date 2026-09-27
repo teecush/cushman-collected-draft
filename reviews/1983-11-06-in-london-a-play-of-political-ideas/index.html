@@ -13,31 +13,33 @@
     <link rel="apple-touch-icon" href="../apple-touch-icon.svg">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Rubik:wght@400;600;700;800;900&display=swap">
-    <link rel="stylesheet" href="./styles.css?v=173">
+    <link rel="stylesheet" href="./styles.css?v=174">
     <link rel="stylesheet" href="./catalog.css?v=194">
-    <link rel="stylesheet" href="./classic.css?v=194">
+    <link rel="stylesheet" href="./classic.css?v=233">
   </head>
   <body class="article-open">
     <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="site-header">
       <nav class="site-nav site-nav-left" id="siteNavLeft" aria-label="Primary navigation left">
-        <a class="nav-search" href="#search" aria-label="Search the archive"><span></span></a>
-        <a href="#section:current">Recent</a>
+        <a href="#search">Search</a>
         <div class="nav-folder nav-folder-wide">
           <a href="#section:browse">Browse</a>
           <div class="nav-dropdown nav-mega">
             <div class="nav-subfolder">
               <a href="#section:collections">Collections</a>
               <div class="nav-side-menu">
+                <a href="#collection:recent">Recent</a>
+                <a href="#correspondence:famous-letters">Special Letters</a>
                 <a href="#section:shakespeare">Shakespeare</a>
                 <a href="#collection:sondheim">Sondheim</a>
+                <a href="#collection:stoppard">Stoppard</a>
                 <a href="#collection:musicals">Musicals</a>
                 <a href="#collection:stratford">Stratford</a>
                 <a href="#collection:shaw">Shaw</a>
                 <a href="#collection:television">TV Reviews</a>
                 <a href="#collection:albums">Music Reviews</a>
                 <a href="#collection:books">Book Reviews</a>
-                <a href="#collection:profiles">Profiles &amp; Obits</a>
+                <a href="#collection:profiles">Artist Profiles</a>
                 <a href="#collection:early">Early Writing</a>
               </div>
             </div>
@@ -46,7 +48,6 @@
               <div class="nav-side-menu">
                 <a href="#works">All Works</a>
                 <a href="#people">All People</a>
-                <a href="#index:publications">Publications</a>
                 <a href="#places">Places</a>
               </div>
             </div>
@@ -72,21 +73,21 @@
       </a>
       <nav class="site-nav site-nav-right" id="siteNavRight" aria-label="Primary navigation right">
         <div class="nav-folder">
-          <a href="#explore">Explore</a>
+          <a href="#section:explore">Explore</a>
           <div class="nav-dropdown">
-            <a href="#explore">Article Explorer</a>
             <a href="#map">Map</a>
             <a href="#timeline">Timeline</a>
+            <a href="#explore">Article Explorer</a>
             <a href="#correspondence">Correspondence</a>
           </div>
         </div>
         <div class="nav-folder">
-          <a href="#about">About</a>
+          <a href="#section:about">About</a>
           <div class="nav-dropdown">
             <a href="#about">About Robert Cushman</a>
             <a href="#critics-circle">Critic's Circle</a>
             <a href="https://www.cushmancollected.com/checkout/donate?donatePageId=5c9b8016652dea361e5feb7d" target="_blank" rel="noopener">Donate</a>
-            <a href="#subscribe">Subscribe</a>
+            <a href="#contact">Contact &amp; Newsletter</a>
           </div>
         </div>
       </nav>
@@ -102,10 +103,25 @@
 
     <nav class="drawer" id="drawer" aria-label="Site navigation">
       <a href="#search">Search the Archive</a>
-      <a href="#section:current">Recent</a>
       <details>
         <summary>Browse</summary>
-        <a href="#section:collections">Collections</a>
+        <a href="#section:browse">Browse overview</a>
+        <details class="drawer-collection-menu">
+          <summary>Collections</summary>
+          <a href="#collection:recent">Recent</a>
+          <a href="#correspondence:famous-letters">Special Letters</a>
+          <a href="#section:shakespeare">Shakespeare</a>
+          <a href="#collection:sondheim">Sondheim</a>
+          <a href="#collection:stoppard">Stoppard</a>
+          <a href="#collection:musicals">Musicals</a>
+          <a href="#collection:stratford">Stratford</a>
+          <a href="#collection:shaw">Shaw</a>
+          <a href="#collection:television">TV Reviews</a>
+          <a href="#collection:albums">Music Reviews</a>
+          <a href="#collection:books">Book Reviews</a>
+          <a href="#collection:profiles">Artist Profiles</a>
+          <a href="#collection:early">Early Writing</a>
+        </details>
         <a href="#master-index:all-works">All Works</a>
         <a href="#master-index:all-people">All People</a>
         <a href="#index:publications">Publications</a>
@@ -113,17 +129,19 @@
       </details>
       <details>
         <summary>Explore</summary>
-        <a href="#explore">Article Explorer</a>
+        <a href="#section:explore">Explore overview</a>
         <a href="#map">Map</a>
         <a href="#timeline">Timeline</a>
+        <a href="#explore">Article Explorer</a>
         <a href="#correspondence">Correspondence</a>
       </details>
       <details>
         <summary>About</summary>
+        <a href="#section:about">About overview</a>
         <a href="#about">About Robert Cushman</a>
         <a href="#critics-circle">Critic's Circle</a>
         <a href="https://www.cushmancollected.com/checkout/donate?donatePageId=5c9b8016652dea361e5feb7d" target="_blank" rel="noopener">Donate</a>
-        <a href="#subscribe">Contact &amp; Newsletter</a>
+        <a href="#contact">Contact &amp; Newsletter</a>
       </details>
     </nav>
 
@@ -225,7 +243,11 @@
         </a>
       </section>
 
-      <section class="frontpage-directory" id="frontpageDirectory" aria-label="Primary site paths"></section>
+      <section class="browse-heading site-index-heading">
+        <h2>Site Index</h2>
+      </section>
+
+      <section class="frontpage-directory" id="frontpageDirectory" aria-label="Site index"></section>
 
       <section class="browse-heading home-secondary-nav" id="browse">
         <h2>Browse the Archive</h2>
@@ -248,7 +270,11 @@
       <section class="article-view" id="articleView">
         <a class="back-link" href="#archive">Back to archive</a>
         <article id="article"><time>Nov 6, 1983</time><h1>In London, A Play Of Political Ideas</h1><p class="article-meta">Robert Cushman · The New York Times</p><div class="article-body" id="article-text"><p>IN LONDON, A PLAY OF POLITICAL IDEAS Date: 1983-11-06 LONDON</p>
-<p>Robert Cushman is theater critic of The Observer. The most eagerly awaited new play of the year in London has been David Edgar&#x27;s &#x27;&#x27;Maydays.&#x27;&#x27; There are several reasons. It is the first serious work to be given its world premiere by the Royal Shakespeare Company on their new main stage in the Barbican. Mr. Edgar&#x27;s last original piece, &#x27;&#x27;Destiny,&#x27;&#x27; was the most widely praised political play of recent years, and since then, he has been the adaptor of the RSC&#x27;s phenomenally successful &#x27;&#x27;Nicholas Nickleby.&#x27;&#x27; &#x27;&#x27;Destiny&#x27;&#x27; was a remarkably wide- ranging examination of the far right in British politics. &#x27;&#x27;Maydays&#x27;&#x27; is an even more ambitious project, dealing with the left, and especially with its disillusionment. It begins with the Labor Party victory after World War II and ends with the peace demonstrations on Greenham Common. It balances the move to the right of two British intellectuals, of different generations, against the struggles of a Russian dissident who spends years in a camp and eventually comes to the West to find himself being used by conservative forces who could be as authoritarian as those he has escaped. He makes a moving protest, and the play ends - having admitted all the failures of the proliferating Socialist groups - with two small images of hope: in Britain, women protesting the bomb, and in Russia, a new dissenting manifesto. Most reviewers here think Mr. Edgar has brought it off. The Financial Times called the play &#x27;&#x27;magnificent&#x27;&#x27; and &#x27;&#x27;epic.&#x27;&#x27; The Guardian critic wrote that this kind of public play is what the Barbican was meant for. The Times of London thought the three-and-a-half-hour piece slow going but the best scenes &#x27;&#x27;worth the wait.&#x27;&#x27; The Sunday Times pronounced the ending sentimental but &#x27;&#x27;found the evening most absorbing.&#x27;&#x27; My interest, too, was held throughout, yet I was deeply disappointed. Mr. Edgar is himself an active Socialist, with experience of this country&#x27;s splintering revolutionary parties. He has not defected, like his protagonists, but he obviously understands, and must to some extent have shared, their cynicism. And yet &#x27;&#x27;Destiny,&#x27;&#x27; in which he dealt with people whose views he detested, had more passion and sympathy than appears anywhere in this treatment of his own side. The merits of &#x27;&#x27;Maydays&#x27;&#x27; are technical: It maintains intelligence and coherence over a huge expanse of time and space; it balances its scenes and characters cleverly, and points up the correspondences between them with some ingenious verbal motifs. But it is a play about people changing their minds, and it fails at the difficult task of actually showing them doing it. Except when the Russian (finely played by Bob Peck) confronts his British hosts, the climaxes happen off-stage. Most of the characters are vehicles for ideas; attempts to give them a private life are perfunctory. Nor is there any sense of politics as it affects the population at large, rather than the fanatics. There is a paradox here: Mr. Edgar has tried honestly to distance himself from his own comrades, but not far enough to let anyone else into the picture. There has been a resurgence in the commercial theater. Earlier this year, 11 of the West End&#x27;s 39 theaters were dark - an unprecedented proportion. Now every house has a show playing, previewing or rehearsing in it. The historic Old Vic has been refurbished and reopened under the ownership of a Canadian retail millionaire, Ed Mirvish, with a special gala planned for Tuesday. A few long- running hits - &#x27;&#x27;Noises Off,&#x27;&#x27; &#x27;&#x27;The Real Thing,&#x27;&#x27; &#x27;&#x27;Daisy Pulls It Off&#x27;&#x27; - have created confidence. Producers are producing again, investors investing, and - thanks to a drop in the pound - foreign visitors are visiting. The West End remains a tourist theater, mainly for Americans and Scandinavians. The last two weeks have seen a profusion of openings, either middle-of-the-road new plays or starry revivals, among them &#x27;&#x27;The Cherry Orchard&#x27;&#x27; with Joan Plowright and &#x27;&#x27;Hay Fever&#x27;&#x27; with Penelope Keith. So far, the most interesting offering has been an off-beat piece called &#x27;&#x27;The Hard Shoulder,&#x27;&#x27; a cunning comedy about property developers with a moral, and rather shocking, ending that encompasses arson and possible murder. The most interesting phenomenon is an American invasion, to match the celebrated influx of Britons on Broadway. We have some straightforward imports: &#x27;&#x27;Little Shop of Horrors&#x27;&#x27; (greeted with unmerited frostiness) and - about to make a delayed arrival - Bob Fosse&#x27;s &#x27;&#x27;Dancin&#x27;.&#x27;&#x27; But London is also seeing the world premieres of American works. The best new play in town is David Mamet&#x27;s &#x27;&#x27;Glengarry Glen Ross&#x27;&#x27; at the National, which is also about to stage Marvin Hamlisch&#x27;s musical about, and indeed called, &#x27;&#x27;Jean Seberg.&#x27;&#x27; Meanwhile, there are revivals, commercial or subsidized, of &#x27;&#x27;You Can&#x27;t Take It With You,&#x27;&#x27; &#x27;&#x27;The Country Girl,&#x27;&#x27; &#x27;&#x27;A Moon for the Misbegotten&#x27;&#x27; and - of course - &#x27;&#x27;Guys and Dolls.&#x27;&#x27;</p></div></article>
+<p>Robert Cushman is theater critic of The Observer. The most eagerly awaited new play of the year in London has been David Edgar&#x27;s &#x27;&#x27;Maydays.&#x27;&#x27; There are several reasons. It is the first serious work to be given its world premiere by the Royal Shakespeare Company on their new main stage in the Barbican. Mr. Edgar&#x27;s last original piece, &#x27;&#x27;Destiny,&#x27;&#x27; was the most widely praised political play of recent years, and since then, he has been the adaptor of the RSC&#x27;s phenomenally successful &#x27;&#x27;Nicholas Nickleby.&#x27;&#x27; &#x27;&#x27;Destiny&#x27;&#x27; was a remarkably wide- ranging examination of the far right in British politics. &#x27;&#x27;Maydays&#x27;&#x27; is an even more ambitious project, dealing with the left, and especially with its disillusionment. It begins with the Labor Party victory after World War II and ends with the peace demonstrations on Greenham Common. It balances the move to the right of two British intellectuals, of different generations, against the struggles of a Russian dissident who spends years in a camp and eventually comes to the West to find himself being used by conservative forces who could be as authoritarian as those he has escaped.</p>
+<p>He makes a moving protest, and the play ends - having admitted all the failures of the proliferating Socialist groups - with two small images of hope: in Britain, women protesting the bomb, and in Russia, a new dissenting manifesto. Most reviewers here think Mr. Edgar has brought it off. The Financial Times called the play &#x27;&#x27;magnificent&#x27;&#x27; and &#x27;&#x27;epic.&#x27;&#x27; The Guardian critic wrote that this kind of public play is what the Barbican was meant for. The Times of London thought the three-and-a-half-hour piece slow going but the best scenes &#x27;&#x27;worth the wait.&#x27;&#x27; The Sunday Times pronounced the ending sentimental but &#x27;&#x27;found the evening most absorbing.&#x27;&#x27; My interest, too, was held throughout, yet I was deeply disappointed. Mr. Edgar is himself an active Socialist, with experience of this country&#x27;s splintering revolutionary parties. He has not defected, like his protagonists, but he obviously understands, and must to some extent have shared, their cynicism.</p>
+<p>And yet &#x27;&#x27;Destiny,&#x27;&#x27; in which he dealt with people whose views he detested, had more passion and sympathy than appears anywhere in this treatment of his own side. The merits of &#x27;&#x27;Maydays&#x27;&#x27; are technical: It maintains intelligence and coherence over a huge expanse of time and space; it balances its scenes and characters cleverly, and points up the correspondences between them with some ingenious verbal motifs. But it is a play about people changing their minds, and it fails at the difficult task of actually showing them doing it. Except when the Russian (finely played by Bob Peck) confronts his British hosts, the climaxes happen off-stage. Most of the characters are vehicles for ideas; attempts to give them a private life are perfunctory. Nor is there any sense of politics as it affects the population at large, rather than the fanatics. There is a paradox here: Mr.</p>
+<p>Edgar has tried honestly to distance himself from his own comrades, but not far enough to let anyone else into the picture. There has been a resurgence in the commercial theater. Earlier this year, 11 of the West End&#x27;s 39 theaters were dark - an unprecedented proportion. Now every house has a show playing, previewing or rehearsing in it. The historic Old Vic has been refurbished and reopened under the ownership of a Canadian retail millionaire, Ed Mirvish, with a special gala planned for Tuesday. A few long- running hits - &#x27;&#x27;Noises Off,&#x27;&#x27; &#x27;&#x27;The Real Thing,&#x27;&#x27; &#x27;&#x27;Daisy Pulls It Off&#x27;&#x27; - have created confidence. Producers are producing again, investors investing, and - thanks to a drop in the pound - foreign visitors are visiting. The West End remains a tourist theater, mainly for Americans and Scandinavians. The last two weeks have seen a profusion of openings, either middle-of-the-road new plays or starry revivals, among them &#x27;&#x27;The Cherry Orchard&#x27;&#x27; with Joan Plowright and &#x27;&#x27;Hay Fever&#x27;&#x27; with Penelope Keith.</p>
+<p>So far, the most interesting offering has been an off-beat piece called &#x27;&#x27;The Hard Shoulder,&#x27;&#x27; a cunning comedy about property developers with a moral, and rather shocking, ending that encompasses arson and possible murder. The most interesting phenomenon is an American invasion, to match the celebrated influx of Britons on Broadway. We have some straightforward imports: &#x27;&#x27;Little Shop of Horrors&#x27;&#x27; (greeted with unmerited frostiness) and - about to make a delayed arrival - Bob Fosse&#x27;s &#x27;&#x27;Dancin&#x27;.&#x27;&#x27; But London is also seeing the world premieres of American works. The best new play in town is David Mamet&#x27;s &#x27;&#x27;Glengarry Glen Ross&#x27;&#x27; at the National, which is also about to stage Marvin Hamlisch&#x27;s musical about, and indeed called, &#x27;&#x27;Jean Seberg.&#x27;&#x27; Meanwhile, there are revivals, commercial or subsidized, of &#x27;&#x27;You Can&#x27;t Take It With You,&#x27;&#x27; &#x27;&#x27;The Country Girl,&#x27;&#x27; &#x27;&#x27;A Moon for the Misbegotten&#x27;&#x27; and - of course - &#x27;&#x27;Guys and Dolls.&#x27;&#x27;</p></div></article>
       </section>
 
       <section class="index-view" id="indexView" hidden>
@@ -282,6 +308,6 @@
       </section>
     </footer>
 
-    <script src="./app.js?v=194" type="module"></script>
+    <script src="./app.js?v=233" type="module"></script>
   </body>
 </html>

@@ -13,31 +13,33 @@
     <link rel="apple-touch-icon" href="../apple-touch-icon.svg">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Rubik:wght@400;600;700;800;900&display=swap">
-    <link rel="stylesheet" href="./styles.css?v=173">
+    <link rel="stylesheet" href="./styles.css?v=174">
     <link rel="stylesheet" href="./catalog.css?v=194">
-    <link rel="stylesheet" href="./classic.css?v=194">
+    <link rel="stylesheet" href="./classic.css?v=233">
   </head>
   <body class="article-open">
     <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="site-header">
       <nav class="site-nav site-nav-left" id="siteNavLeft" aria-label="Primary navigation left">
-        <a class="nav-search" href="#search" aria-label="Search the archive"><span></span></a>
-        <a href="#section:current">Recent</a>
+        <a href="#search">Search</a>
         <div class="nav-folder nav-folder-wide">
           <a href="#section:browse">Browse</a>
           <div class="nav-dropdown nav-mega">
             <div class="nav-subfolder">
               <a href="#section:collections">Collections</a>
               <div class="nav-side-menu">
+                <a href="#collection:recent">Recent</a>
+                <a href="#correspondence:famous-letters">Special Letters</a>
                 <a href="#section:shakespeare">Shakespeare</a>
                 <a href="#collection:sondheim">Sondheim</a>
+                <a href="#collection:stoppard">Stoppard</a>
                 <a href="#collection:musicals">Musicals</a>
                 <a href="#collection:stratford">Stratford</a>
                 <a href="#collection:shaw">Shaw</a>
                 <a href="#collection:television">TV Reviews</a>
                 <a href="#collection:albums">Music Reviews</a>
                 <a href="#collection:books">Book Reviews</a>
-                <a href="#collection:profiles">Profiles &amp; Obits</a>
+                <a href="#collection:profiles">Artist Profiles</a>
                 <a href="#collection:early">Early Writing</a>
               </div>
             </div>
@@ -46,7 +48,6 @@
               <div class="nav-side-menu">
                 <a href="#works">All Works</a>
                 <a href="#people">All People</a>
-                <a href="#index:publications">Publications</a>
                 <a href="#places">Places</a>
               </div>
             </div>
@@ -72,21 +73,21 @@
       </a>
       <nav class="site-nav site-nav-right" id="siteNavRight" aria-label="Primary navigation right">
         <div class="nav-folder">
-          <a href="#explore">Explore</a>
+          <a href="#section:explore">Explore</a>
           <div class="nav-dropdown">
-            <a href="#explore">Article Explorer</a>
             <a href="#map">Map</a>
             <a href="#timeline">Timeline</a>
+            <a href="#explore">Article Explorer</a>
             <a href="#correspondence">Correspondence</a>
           </div>
         </div>
         <div class="nav-folder">
-          <a href="#about">About</a>
+          <a href="#section:about">About</a>
           <div class="nav-dropdown">
             <a href="#about">About Robert Cushman</a>
             <a href="#critics-circle">Critic's Circle</a>
             <a href="https://www.cushmancollected.com/checkout/donate?donatePageId=5c9b8016652dea361e5feb7d" target="_blank" rel="noopener">Donate</a>
-            <a href="#subscribe">Subscribe</a>
+            <a href="#contact">Contact &amp; Newsletter</a>
           </div>
         </div>
       </nav>
@@ -102,10 +103,25 @@
 
     <nav class="drawer" id="drawer" aria-label="Site navigation">
       <a href="#search">Search the Archive</a>
-      <a href="#section:current">Recent</a>
       <details>
         <summary>Browse</summary>
-        <a href="#section:collections">Collections</a>
+        <a href="#section:browse">Browse overview</a>
+        <details class="drawer-collection-menu">
+          <summary>Collections</summary>
+          <a href="#collection:recent">Recent</a>
+          <a href="#correspondence:famous-letters">Special Letters</a>
+          <a href="#section:shakespeare">Shakespeare</a>
+          <a href="#collection:sondheim">Sondheim</a>
+          <a href="#collection:stoppard">Stoppard</a>
+          <a href="#collection:musicals">Musicals</a>
+          <a href="#collection:stratford">Stratford</a>
+          <a href="#collection:shaw">Shaw</a>
+          <a href="#collection:television">TV Reviews</a>
+          <a href="#collection:albums">Music Reviews</a>
+          <a href="#collection:books">Book Reviews</a>
+          <a href="#collection:profiles">Artist Profiles</a>
+          <a href="#collection:early">Early Writing</a>
+        </details>
         <a href="#master-index:all-works">All Works</a>
         <a href="#master-index:all-people">All People</a>
         <a href="#index:publications">Publications</a>
@@ -113,17 +129,19 @@
       </details>
       <details>
         <summary>Explore</summary>
-        <a href="#explore">Article Explorer</a>
+        <a href="#section:explore">Explore overview</a>
         <a href="#map">Map</a>
         <a href="#timeline">Timeline</a>
+        <a href="#explore">Article Explorer</a>
         <a href="#correspondence">Correspondence</a>
       </details>
       <details>
         <summary>About</summary>
+        <a href="#section:about">About overview</a>
         <a href="#about">About Robert Cushman</a>
         <a href="#critics-circle">Critic's Circle</a>
         <a href="https://www.cushmancollected.com/checkout/donate?donatePageId=5c9b8016652dea361e5feb7d" target="_blank" rel="noopener">Donate</a>
-        <a href="#subscribe">Contact &amp; Newsletter</a>
+        <a href="#contact">Contact &amp; Newsletter</a>
       </details>
     </nav>
 
@@ -225,7 +243,11 @@
         </a>
       </section>
 
-      <section class="frontpage-directory" id="frontpageDirectory" aria-label="Primary site paths"></section>
+      <section class="browse-heading site-index-heading">
+        <h2>Site Index</h2>
+      </section>
+
+      <section class="frontpage-directory" id="frontpageDirectory" aria-label="Site index"></section>
 
       <section class="browse-heading home-secondary-nav" id="browse">
         <h2>Browse the Archive</h2>
@@ -253,7 +275,9 @@
 <p>- - -</p>
 <p>TORONTO - As Aida, the captive Nubian princess, and her Egyptian lover Radames, climb into the tomb in which they are to be buried alive, they sing the show&#x27;s big ballad at one another. We know it&#x27;s the big ballad because this is the second time they&#x27;ve done it; and they sing at, rather than to, one another because Aida is the kind of overblown and inhuman musical in which emotion is something you flaunt rather than something you feel. Still, you have to give the two characters credit. The song is about the need to simplify existence, which they are about to do in a big way; it&#x27;s called Elaborate Lives, and it must take remarkable fortitude to come out with such philosophical gems when you and your sweetheart have just been condemned to elaborate deaths. If they weren&#x27;t in the wrong civilization you&#x27;d call them Stoics.</p>
 <p>Aida is of course the Disney musical of the Verdi opera. It junks the original score (perhaps mindful of an earlier Broadway musical called My Darlin&#x27; Aida, which didn&#x27;t and flopped) but keeps close to the original narrative. Radames, Egypt&#x27;s military wonder boy, is in line to marry Amneris, the Pharoah&#x27;s daughter, and he makes her a present of Aida, of whose royal lineage he is unaware. Her identity is known, though, to her similarly enslaved compatriots for whom she becomes a rallying-point: a situation that escalates when her father, the king, joins them in jail. Meanwhile Radames&#x27; father plots to assassinate the Pharaoh, thus speeding his son&#x27;s accession to the throne; Radames and Aida fall gradually and inexorably in love; and Amneris wrestles with conflicting impulses of jealousy and nobility. Also, in this version, she has a vein of pampered silliness, played for laughs, which the authors pick up and then discard with amazing arbitrariness. The show was in terrible trouble pre-Broadway and it suffers now from a frantic uncertainty of tone. I would guess when they were patching it up all concerned just kept grabbing for the nearest effect.</p>
-<p>Apportioning responsibility for the musical&#x27;s book may be a matter for archeologists rather than critics; it seems to have been assembled in layers. The program credits Linda Woolverton (who wrote the stage version of Disney&#x27;s Beauty and the Beast), who gets a line all to herself; and then adds Robert Falls and David Henry Hwang, who are billed as a team; Falls is also the director. Their work here is, to put it as kindly as possible, utilitarian. I never thought I would mourn the demise of the through-sung pop-opera, but this is one show that might do better without dialogue. The gulf between text and songs is unbridgeable; they are different kinds of humdrum. The score is by Elton John, who writes music of no discernible merit, and Tim Rice, who is a slightly more interesting case. Rice was always a slapdash lyricist, but his work used to have sparks of humour and even of intelligence. (Compared to those here, his lyrics for Evita were works of slashing political insight.) Rice has written about Pharaohs and such before; a song here called Another Pyramid has a couple of lines that awaken faint echoes of his funny lyrics in Joseph and the Amazing Technicolor Dreamcoat, but that&#x27;s all. The show begins and ends with a solemnly intoned musical lecture called Every Story Is a Love Story. Actually, every story isn&#x27;t and musicals might do us a favour if they acknowledged the fact, or at least stopped preaching about it. It&#x27;s significant that pop music -- at least the kind of pop music that gets into theatres -- should have started to get heavy about love just when it lost the ability to imbue the subject with any tincture of romance, wit, sexuality or individual feeling. The bulk of this score is composed of power ballads as turgid as they are interchangeable. For a couple of numbers John and Rice go back to their presumed roots in rock &#x27;n&#x27; roll; a strange decision since the songs in question are the only ones that seem meant to advance the plot, so the fact that you can&#x27;t make out the words is exceptionally damaging. It&#x27;s also odd that they are also the only numbers to involve an older character, in this case Radames&#x27; villainous dad, but maybe the authors are acknowledging that rock is now seniors&#x27; music. The actor concerned is Mickey Dolenz, on whose performance I would prefer, if only for sentimental reasons, to remain silent: not so much in deference to his past as one of the Monkees (I&#x27;m not a believer), but because he once directed a stage version of Bugsy Malone, a show even worse than this one but which he came very near to rescuing.</p>
+<p>Apportioning responsibility for the musical&#x27;s book may be a matter for archeologists rather than critics; it seems to have been assembled in layers. The program credits Linda Woolverton (who wrote the stage version of Disney&#x27;s Beauty and the Beast), who gets a line all to herself; and then adds Robert Falls and David Henry Hwang, who are billed as a team; Falls is also the director. Their work here is, to put it as kindly as possible, utilitarian. I never thought I would mourn the demise of the through-sung pop-opera, but this is one show that might do better without dialogue. The gulf between text and songs is unbridgeable; they are different kinds of humdrum. The score is by Elton John, who writes music of no discernible merit, and Tim Rice, who is a slightly more interesting case. Rice was always a slapdash lyricist, but his work used to have sparks of humour and even of intelligence.</p>
+<p>(Compared to those here, his lyrics for Evita were works of slashing political insight.) Rice has written about Pharaohs and such before; a song here called Another Pyramid has a couple of lines that awaken faint echoes of his funny lyrics in Joseph and the Amazing Technicolor Dreamcoat, but that&#x27;s all. The show begins and ends with a solemnly intoned musical lecture called Every Story Is a Love Story. Actually, every story isn&#x27;t and musicals might do us a favour if they acknowledged the fact, or at least stopped preaching about it. It&#x27;s significant that pop music -- at least the kind of pop music that gets into theatres -- should have started to get heavy about love just when it lost the ability to imbue the subject with any tincture of romance, wit, sexuality or individual feeling. The bulk of this score is composed of power ballads as turgid as they are interchangeable.</p>
+<p>For a couple of numbers John and Rice go back to their presumed roots in rock &#x27;n&#x27; roll; a strange decision since the songs in question are the only ones that seem meant to advance the plot, so the fact that you can&#x27;t make out the words is exceptionally damaging. It&#x27;s also odd that they are also the only numbers to involve an older character, in this case Radames&#x27; villainous dad, but maybe the authors are acknowledging that rock is now seniors&#x27; music. The actor concerned is Mickey Dolenz, on whose performance I would prefer, if only for sentimental reasons, to remain silent: not so much in deference to his past as one of the Monkees (I&#x27;m not a believer), but because he once directed a stage version of Bugsy Malone, a show even worse than this one but which he came very near to rescuing.</p>
 <p>The only thing more heavy-handed than this Aida&#x27;s attempts at drama are its attempts at comedy. Amneris is handed an old- fashioned dress-parade number -- by a pool, yet -- that demonstrates what an empty-headed clothes horse she is. (Do I dare tell you that it&#x27;s called My Strongest Suit?) She later has a heavily innuendoed scene in which she tries to get Radames into bed. This is the same Amneris whom we are finally meant to accept as a figure of grace and mercy. Maybe this is the Disney tradition showing through; you could only get away with this kind of inconsistency in a cartoon. Aida is the first Disney stage show not to have started out as an animated feature, but old habits die hard, especially when they&#x27;ve proved lucrative. It&#x27;s a tribute to Lisa Brescia that her Amneris ends up dignified and even moving. The story itself helps; its closing sections made me want to see the opera again.</p>
 <p>Jeremy Kushnier is a Radames bland in bearing and strained in song. Paulette Ivory&#x27;s Aida can be vocally overbearing, but that seems to go with this musical territory; everybody wants to be a soul sister, however slight the provocation. Her acting, though, is admirably feisty and direct; she earns her place as both national and romantic heroine.</p>
 <p>Wayne Cilento contributes choreography whose only function seems to be to reassure the audience that they&#x27;re watching a musical. It makes the men look especially absurd; a cohort of archers, bidden to make all speed to the docks, waste valuable time by pausing centre stage and posing with their bows and arrows. The evening&#x27;s only trace of distinction comes from Bob Crowley&#x27;s sets and Natasha Katz&#x27;s lighting, superbly colourful co-conspirators. Much is the show is a symphony in red; one scene lines up Amneris in orange, Aida in pink, and Radames in basic tawny, all of them posed against a purple sky. There are also a couple of stunning trompes l&#x27;oeil. But even here there are lapses; young love is symbolized by a star- spangled firmament with a crescent moon slung so low that it might be awaiting the exertions of an especially unambitious cow. One of the few rules in movies, according to the late Pauline Kael, is that &quot;all pictures set in ancient Egypt are ridiculous&quot; and the show seems scared that the same rule might apply to the stage. The setting is chronologically and ethnically nondescript; it&#x27;s an approach but it isn&#x27;t a style. And Crowley&#x27;s costumes, apart from Amneris&#x27; authentic royal gown, are less good than his sets. An occasional scenic resemblance to The Lion King only points out the poverty of what&#x27;s going on in front: an attempt to please everyone while committing to nothing. I don&#x27;t know if the audience for musicals is as stupid as the show would like it to be; people stood and applauded on the second night but maybe they were being polite.</p>
@@ -291,6 +315,6 @@
       </section>
     </footer>
 
-    <script src="./app.js?v=194" type="module"></script>
+    <script src="./app.js?v=233" type="module"></script>
   </body>
 </html>

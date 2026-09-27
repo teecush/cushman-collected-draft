@@ -13,31 +13,33 @@
     <link rel="apple-touch-icon" href="../apple-touch-icon.svg">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Rubik:wght@400;600;700;800;900&display=swap">
-    <link rel="stylesheet" href="./styles.css?v=173">
+    <link rel="stylesheet" href="./styles.css?v=174">
     <link rel="stylesheet" href="./catalog.css?v=194">
-    <link rel="stylesheet" href="./classic.css?v=194">
+    <link rel="stylesheet" href="./classic.css?v=233">
   </head>
   <body class="article-open">
     <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="site-header">
       <nav class="site-nav site-nav-left" id="siteNavLeft" aria-label="Primary navigation left">
-        <a class="nav-search" href="#search" aria-label="Search the archive"><span></span></a>
-        <a href="#section:current">Recent</a>
+        <a href="#search">Search</a>
         <div class="nav-folder nav-folder-wide">
           <a href="#section:browse">Browse</a>
           <div class="nav-dropdown nav-mega">
             <div class="nav-subfolder">
               <a href="#section:collections">Collections</a>
               <div class="nav-side-menu">
+                <a href="#collection:recent">Recent</a>
+                <a href="#correspondence:famous-letters">Special Letters</a>
                 <a href="#section:shakespeare">Shakespeare</a>
                 <a href="#collection:sondheim">Sondheim</a>
+                <a href="#collection:stoppard">Stoppard</a>
                 <a href="#collection:musicals">Musicals</a>
                 <a href="#collection:stratford">Stratford</a>
                 <a href="#collection:shaw">Shaw</a>
                 <a href="#collection:television">TV Reviews</a>
                 <a href="#collection:albums">Music Reviews</a>
                 <a href="#collection:books">Book Reviews</a>
-                <a href="#collection:profiles">Profiles &amp; Obits</a>
+                <a href="#collection:profiles">Artist Profiles</a>
                 <a href="#collection:early">Early Writing</a>
               </div>
             </div>
@@ -46,7 +48,6 @@
               <div class="nav-side-menu">
                 <a href="#works">All Works</a>
                 <a href="#people">All People</a>
-                <a href="#index:publications">Publications</a>
                 <a href="#places">Places</a>
               </div>
             </div>
@@ -72,21 +73,21 @@
       </a>
       <nav class="site-nav site-nav-right" id="siteNavRight" aria-label="Primary navigation right">
         <div class="nav-folder">
-          <a href="#explore">Explore</a>
+          <a href="#section:explore">Explore</a>
           <div class="nav-dropdown">
-            <a href="#explore">Article Explorer</a>
             <a href="#map">Map</a>
             <a href="#timeline">Timeline</a>
+            <a href="#explore">Article Explorer</a>
             <a href="#correspondence">Correspondence</a>
           </div>
         </div>
         <div class="nav-folder">
-          <a href="#about">About</a>
+          <a href="#section:about">About</a>
           <div class="nav-dropdown">
             <a href="#about">About Robert Cushman</a>
             <a href="#critics-circle">Critic's Circle</a>
             <a href="https://www.cushmancollected.com/checkout/donate?donatePageId=5c9b8016652dea361e5feb7d" target="_blank" rel="noopener">Donate</a>
-            <a href="#subscribe">Subscribe</a>
+            <a href="#contact">Contact &amp; Newsletter</a>
           </div>
         </div>
       </nav>
@@ -102,10 +103,25 @@
 
     <nav class="drawer" id="drawer" aria-label="Site navigation">
       <a href="#search">Search the Archive</a>
-      <a href="#section:current">Recent</a>
       <details>
         <summary>Browse</summary>
-        <a href="#section:collections">Collections</a>
+        <a href="#section:browse">Browse overview</a>
+        <details class="drawer-collection-menu">
+          <summary>Collections</summary>
+          <a href="#collection:recent">Recent</a>
+          <a href="#correspondence:famous-letters">Special Letters</a>
+          <a href="#section:shakespeare">Shakespeare</a>
+          <a href="#collection:sondheim">Sondheim</a>
+          <a href="#collection:stoppard">Stoppard</a>
+          <a href="#collection:musicals">Musicals</a>
+          <a href="#collection:stratford">Stratford</a>
+          <a href="#collection:shaw">Shaw</a>
+          <a href="#collection:television">TV Reviews</a>
+          <a href="#collection:albums">Music Reviews</a>
+          <a href="#collection:books">Book Reviews</a>
+          <a href="#collection:profiles">Artist Profiles</a>
+          <a href="#collection:early">Early Writing</a>
+        </details>
         <a href="#master-index:all-works">All Works</a>
         <a href="#master-index:all-people">All People</a>
         <a href="#index:publications">Publications</a>
@@ -113,17 +129,19 @@
       </details>
       <details>
         <summary>Explore</summary>
-        <a href="#explore">Article Explorer</a>
+        <a href="#section:explore">Explore overview</a>
         <a href="#map">Map</a>
         <a href="#timeline">Timeline</a>
+        <a href="#explore">Article Explorer</a>
         <a href="#correspondence">Correspondence</a>
       </details>
       <details>
         <summary>About</summary>
+        <a href="#section:about">About overview</a>
         <a href="#about">About Robert Cushman</a>
         <a href="#critics-circle">Critic's Circle</a>
         <a href="https://www.cushmancollected.com/checkout/donate?donatePageId=5c9b8016652dea361e5feb7d" target="_blank" rel="noopener">Donate</a>
-        <a href="#subscribe">Contact &amp; Newsletter</a>
+        <a href="#contact">Contact &amp; Newsletter</a>
       </details>
     </nav>
 
@@ -225,7 +243,11 @@
         </a>
       </section>
 
-      <section class="frontpage-directory" id="frontpageDirectory" aria-label="Primary site paths"></section>
+      <section class="browse-heading site-index-heading">
+        <h2>Site Index</h2>
+      </section>
+
+      <section class="frontpage-directory" id="frontpageDirectory" aria-label="Site index"></section>
 
       <section class="browse-heading home-secondary-nav" id="browse">
         <h2>Browse the Archive</h2>
@@ -251,7 +273,9 @@
 <p>The title refers to a spot in Cape Breton to which two of three sisters once paid a fondly remembered childhood visit; the third, the youngest, got somehow left behind, as seems to have been her fate throughout life. She is the one still living with their mother, who is now at the point of death. So the others, in early middle age, come home to help out, or at least to be present. Agnes, the eldest, arrives from Toronto; she&#x27;s an unsuccessful actress with a drink problem. Theresa, the middle one, is a nun, from a good-works order in New Brunswick. Agnes, who fancies herself as a cynical wisecracker, has a lot of fun making jokes about Theresa&#x27;s calling. Louise, the stay-at-home and the only one not named after a saint, is in the process of memorizing a compensatory catalogue of the canonized. She&#x27;s gruff and abrupt and organizes her life around &quot;her show,&quot; a TV soap to which she&#x27;s addicted but which she later abandons when it gets too silly. Theresa, though, begins to get hooked on it.</p>
 <p>Their quirks are amusingly portrayed. I especially enjoyed the way Theresa picked up on Agnes&#x27;s fashionable use of the word &quot;whatever,&quot; going on to claim that the trouble with today&#x27;s world is that it&#x27;s become a &quot;whatever&quot; society. (There&#x27;s a neat reversal of this exchange at the end of the play.) Theresa, defending her vocation to the world and herself, is an interesting character. But Louise is little more than odd, and Agnes, with her block about entering her mother&#x27;s sickroom, adds nothing new to the familiar notion of the bruised sophisticate who returns and learns. The inevitable rapprochement between the sisters involves an offstage visit to their estranged father and his younger girlfriend which, as we hear about it, is sad-grotesquefunny but no kind of revelation, and a climactic return trip--by all three, this time -- to the fabled Marion Bridge, which isn&#x27;t as resonant as it&#x27;s presumably meant to be. In fact, it casts doubt on the validity of the title, and hence of the play. Each sister is afforded a lyrical soliloquy, and these accomplish even less.</p>
 <p>The author&#x27;s own production, for the Company Theatre, is expectedly well staged, and decently acted though, on the night I was there, Caroline Gillis as Agnes seemed both unsure and over- emphatic. Emmy Alcorn, whose Mulgrave Road company in Nova Scotia premiered the play in 1998, gives an arrestingly throaty account of Louise, banging around her own little world on emotional auto- pilot, but it&#x27;s Sarah Dodd (the one hold-over from Company Theatre&#x27;s previous show, A Whistle in the Dark) who gives the show its centre, making a perfect unpatronizing case for Theresa in both her doubts and her certainties.</p>
-<p>The Young Centre, down in the Distillery, is currently awash in small-town drama. Marion Bridge occupies one space, while Soulpepper&#x27;s Leaving Home, which I think of as a displaced small- towner, shares another with the same company&#x27;s revival of the Thornton Wilder play that explicitly maps out and sums up the whole genre. Joseph Ziegler&#x27;s production of Our Town, coming round now for the third time, is as lovely as ever, if not lovelier. Albert Schultz&#x27;s Stage Manager, beautifully pitched, embodies the play&#x27;s stance of detached compassion, while presiding (I assume with artistic director&#x27;s pride) over a stageful of sparkling, perfectly integrated performances. John Jarvis&#x27;s newspaper editor, reaching out in brow-mopping embarrassment to his about-to-be son-in-law, has actually improved since last year, more of a person, less of a turn. Richer, too, is Jeff Lillico, as the equally reluctant object of the man-to-man chat; in the great drugstore proposal scene, he practically bursts out of his skin to prove himself worthy of the girl he suddenly realizes he adores. Then there are the serene and chippy mothers of Nancy Palk and Jane Spidell; Oliver Dennis&#x27;s doctor, contented even to complacency; Martha MacIsaac&#x27;s bride, whose porcelain fragility conceals an even more touching strength; Diego Matamoros&#x27;s professor with topography on tap; and William Webster&#x27;s sodden choirmaster, fixing his fellow citizens with a silent despairing glare. As an exemplar of Soulpepper at its expansive best --casting in breadth, playing in depth -- this ranks second only to Platonov, which had the advantage of a richer text. Our Town is a string of cameos rather than a dynamic painting. It has you beguiled with its evocation of an America long gone, then irritated at yourself for succumbing to sentimentality, then reassured that Wilder sees the narrowness of Grover&#x27;s Corners, N.H., as acutely as you do yourself. For all the freedom of its stagecraft, it&#x27;s a play about limitations --humanity&#x27;s in the world, the world&#x27;s in the cosmos --and it&#x27;s both a celebration of those limits and a lament. The Stage Manager&#x27;s philosophizing have the accent of cracker-barrel, but he knows it and so does the play, of which he is the voice but not entirely the soul. This is the best imaginable production. - Marion Bridge closes tonight. Our Town is in repertoire through Aug 19, both at the Young Centre. For information, call 416-866-8666.</p>
+<p>The Young Centre, down in the Distillery, is currently awash in small-town drama. Marion Bridge occupies one space, while Soulpepper&#x27;s Leaving Home, which I think of as a displaced small- towner, shares another with the same company&#x27;s revival of the Thornton Wilder play that explicitly maps out and sums up the whole genre. Joseph Ziegler&#x27;s production of Our Town, coming round now for the third time, is as lovely as ever, if not lovelier. Albert Schultz&#x27;s Stage Manager, beautifully pitched, embodies the play&#x27;s stance of detached compassion, while presiding (I assume with artistic director&#x27;s pride) over a stageful of sparkling, perfectly integrated performances. John Jarvis&#x27;s newspaper editor, reaching out in brow-mopping embarrassment to his about-to-be son-in-law, has actually improved since last year, more of a person, less of a turn. Richer, too, is Jeff Lillico, as the equally reluctant object of the man-to-man chat; in the great drugstore proposal scene, he practically bursts out of his skin to prove himself worthy of the girl he suddenly realizes he adores.</p>
+<p>Then there are the serene and chippy mothers of Nancy Palk and Jane Spidell; Oliver Dennis&#x27;s doctor, contented even to complacency; Martha MacIsaac&#x27;s bride, whose porcelain fragility conceals an even more touching strength; Diego Matamoros&#x27;s professor with topography on tap; and William Webster&#x27;s sodden choirmaster, fixing his fellow citizens with a silent despairing glare. As an exemplar of Soulpepper at its expansive best --casting in breadth, playing in depth -- this ranks second only to Platonov, which had the advantage of a richer text. Our Town is a string of cameos rather than a dynamic painting. It has you beguiled with its evocation of an America long gone, then irritated at yourself for succumbing to sentimentality, then reassured that Wilder sees the narrowness of Grover&#x27;s Corners, N.H., as acutely as you do yourself. For all the freedom of its stagecraft, it&#x27;s a play about limitations --humanity&#x27;s in the world, the world&#x27;s in the cosmos --and it&#x27;s both a celebration of those limits and a lament.</p>
+<p>The Stage Manager&#x27;s philosophizing have the accent of cracker-barrel, but he knows it and so does the play, of which he is the voice but not entirely the soul. This is the best imaginable production. - Marion Bridge closes tonight. Our Town is in repertoire through Aug 19, both at the Young Centre. For information, call 416-866-8666.</p>
 <p>Color Photo: Guntar Kravis / Caroline Gills is Agnes, an unsuccessful actress from Toronto, in Marion Bridge. ;</p></div></article>
       </section>
 
@@ -286,6 +310,6 @@
       </section>
     </footer>
 
-    <script src="./app.js?v=194" type="module"></script>
+    <script src="./app.js?v=233" type="module"></script>
   </body>
 </html>

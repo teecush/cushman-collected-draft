@@ -13,31 +13,33 @@
     <link rel="apple-touch-icon" href="../apple-touch-icon.svg">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Rubik:wght@400;600;700;800;900&display=swap">
-    <link rel="stylesheet" href="./styles.css?v=173">
+    <link rel="stylesheet" href="./styles.css?v=174">
     <link rel="stylesheet" href="./catalog.css?v=194">
-    <link rel="stylesheet" href="./classic.css?v=194">
+    <link rel="stylesheet" href="./classic.css?v=233">
   </head>
   <body class="article-open">
     <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="site-header">
       <nav class="site-nav site-nav-left" id="siteNavLeft" aria-label="Primary navigation left">
-        <a class="nav-search" href="#search" aria-label="Search the archive"><span></span></a>
-        <a href="#section:current">Recent</a>
+        <a href="#search">Search</a>
         <div class="nav-folder nav-folder-wide">
           <a href="#section:browse">Browse</a>
           <div class="nav-dropdown nav-mega">
             <div class="nav-subfolder">
               <a href="#section:collections">Collections</a>
               <div class="nav-side-menu">
+                <a href="#collection:recent">Recent</a>
+                <a href="#correspondence:famous-letters">Special Letters</a>
                 <a href="#section:shakespeare">Shakespeare</a>
                 <a href="#collection:sondheim">Sondheim</a>
+                <a href="#collection:stoppard">Stoppard</a>
                 <a href="#collection:musicals">Musicals</a>
                 <a href="#collection:stratford">Stratford</a>
                 <a href="#collection:shaw">Shaw</a>
                 <a href="#collection:television">TV Reviews</a>
                 <a href="#collection:albums">Music Reviews</a>
                 <a href="#collection:books">Book Reviews</a>
-                <a href="#collection:profiles">Profiles &amp; Obits</a>
+                <a href="#collection:profiles">Artist Profiles</a>
                 <a href="#collection:early">Early Writing</a>
               </div>
             </div>
@@ -46,7 +48,6 @@
               <div class="nav-side-menu">
                 <a href="#works">All Works</a>
                 <a href="#people">All People</a>
-                <a href="#index:publications">Publications</a>
                 <a href="#places">Places</a>
               </div>
             </div>
@@ -72,21 +73,21 @@
       </a>
       <nav class="site-nav site-nav-right" id="siteNavRight" aria-label="Primary navigation right">
         <div class="nav-folder">
-          <a href="#explore">Explore</a>
+          <a href="#section:explore">Explore</a>
           <div class="nav-dropdown">
-            <a href="#explore">Article Explorer</a>
             <a href="#map">Map</a>
             <a href="#timeline">Timeline</a>
+            <a href="#explore">Article Explorer</a>
             <a href="#correspondence">Correspondence</a>
           </div>
         </div>
         <div class="nav-folder">
-          <a href="#about">About</a>
+          <a href="#section:about">About</a>
           <div class="nav-dropdown">
             <a href="#about">About Robert Cushman</a>
             <a href="#critics-circle">Critic's Circle</a>
             <a href="https://www.cushmancollected.com/checkout/donate?donatePageId=5c9b8016652dea361e5feb7d" target="_blank" rel="noopener">Donate</a>
-            <a href="#subscribe">Subscribe</a>
+            <a href="#contact">Contact &amp; Newsletter</a>
           </div>
         </div>
       </nav>
@@ -102,10 +103,25 @@
 
     <nav class="drawer" id="drawer" aria-label="Site navigation">
       <a href="#search">Search the Archive</a>
-      <a href="#section:current">Recent</a>
       <details>
         <summary>Browse</summary>
-        <a href="#section:collections">Collections</a>
+        <a href="#section:browse">Browse overview</a>
+        <details class="drawer-collection-menu">
+          <summary>Collections</summary>
+          <a href="#collection:recent">Recent</a>
+          <a href="#correspondence:famous-letters">Special Letters</a>
+          <a href="#section:shakespeare">Shakespeare</a>
+          <a href="#collection:sondheim">Sondheim</a>
+          <a href="#collection:stoppard">Stoppard</a>
+          <a href="#collection:musicals">Musicals</a>
+          <a href="#collection:stratford">Stratford</a>
+          <a href="#collection:shaw">Shaw</a>
+          <a href="#collection:television">TV Reviews</a>
+          <a href="#collection:albums">Music Reviews</a>
+          <a href="#collection:books">Book Reviews</a>
+          <a href="#collection:profiles">Artist Profiles</a>
+          <a href="#collection:early">Early Writing</a>
+        </details>
         <a href="#master-index:all-works">All Works</a>
         <a href="#master-index:all-people">All People</a>
         <a href="#index:publications">Publications</a>
@@ -113,17 +129,19 @@
       </details>
       <details>
         <summary>Explore</summary>
-        <a href="#explore">Article Explorer</a>
+        <a href="#section:explore">Explore overview</a>
         <a href="#map">Map</a>
         <a href="#timeline">Timeline</a>
+        <a href="#explore">Article Explorer</a>
         <a href="#correspondence">Correspondence</a>
       </details>
       <details>
         <summary>About</summary>
+        <a href="#section:about">About overview</a>
         <a href="#about">About Robert Cushman</a>
         <a href="#critics-circle">Critic's Circle</a>
         <a href="https://www.cushmancollected.com/checkout/donate?donatePageId=5c9b8016652dea361e5feb7d" target="_blank" rel="noopener">Donate</a>
-        <a href="#subscribe">Contact &amp; Newsletter</a>
+        <a href="#contact">Contact &amp; Newsletter</a>
       </details>
     </nav>
 
@@ -225,7 +243,11 @@
         </a>
       </section>
 
-      <section class="frontpage-directory" id="frontpageDirectory" aria-label="Primary site paths"></section>
+      <section class="browse-heading site-index-heading">
+        <h2>Site Index</h2>
+      </section>
+
+      <section class="frontpage-directory" id="frontpageDirectory" aria-label="Site index"></section>
 
       <section class="browse-heading home-secondary-nav" id="browse">
         <h2>Browse the Archive</h2>
@@ -253,7 +275,9 @@
 <p>This season&#x27;s opener gives us Colm Feore, whom we discover in the teaser yelling at his SRU protectors &quot;Where the hell&#x27;s my wife?&quot; (This could be his signature line of the year, given that he&#x27;s also playing the president&#x27;s husband in 24 and, at Stratford, Macbeth.)He&#x27;s a billionaire tycoon turned philanthropist (another overlap with Damages -- the pool of possible plots is limited) hosting a gathering at the Royal York Hotel; one of the pleasures of this show is seeing Toronto cast as Toronto. He turns his back for a moment and his wife is abducted. She&#x27;s held hostage as payment for misdeeds he committed while building his fortune in South America. (&quot;You don&#x27;t,&quot; he admits, &quot;become what I am by being nice to everybody.&quot;) It&#x27;s an unusual situation because, though SRU has no trouble finding the victim, they can&#x27;t touch her; she&#x27;s been fitted with a necklace bomb. Feore and Wendy Crewson, she especially, give noble performances as husband and wife.</p>
 <p>Ed functions here as their personal bodyguard, and they take to him so much that he gets offered a paid-for suite (corporate rate) to share with his wife, who we imagine gets very few treats. (&quot;When you&#x27;re rich,&quot; says Feore, &quot;you get things cheap.&quot; A truth for the ages.) But the events of</p>
 <p>the day sort of take the shine off that. Personal feelings come more vividly into play in the next episode where, instead of swarming over a hotel, the team members get to intone &quot;copy that&quot; while laying siege to a house. Inside it a woman (Kristin Booth, very intense), driven hysterical by infertility, holds a knife to the throat of another woman whom she suspects of being her husband&#x27;s mistress. Do they try to talk her down, or do they break in? There are good arguments on both sides, all professional, all coloured by personal experience.</p>
-<p>If Flashpoint is the kinder, gentler, more contemplative, more Canadian cop show, Howie Do It proves, from its title on, that we can be as crass as anyone else and maybe crasser. This is Howie Mandel (&quot;The best part of my job is you cheer just because I show up and work&quot;) resuscitating what he calls &quot;the hidden camera prank show&quot; -- as in Candid Camera, for those with long memories, and People Are Funny, for those with elephantine memories. He may even be parodying those shows, though such a thing may not be possible; indeed, they were probably more ingenious and sophisticated. The trick is that Mandel puts on a black wig and pretends to be a producer auditioning his victims for some other TV show; then, after they&#x27;ve humiliated themselves enough, he reveals himself in all his baldness, and they fall down and worship -- or at least in one case -- still look hurt. But presumably they all signed releases. Howie sprays water or blows gale force winds at guys auditioning to be weather reporters. He sends a gullible young man to pick up girls with ill-advised pick-up lines. (&quot;You have nice legs. What time do they open?&quot;) He has a fellow dress up in a bunny suit and sing greeting telegrams at a funeral. He has one man watch while someone else makes love to his wife. He ends each segment with by screeching &quot;This is Howie Do It!&quot; Each of the embarrassments is single-track; it&#x27;s impressed on us that all the participants in a scene except the one unctuously identified as &quot;the mark&quot; are professional actors, or otherwise in on the joke. This reminds me of an old comedian&#x27;s maxim: A civilian audience will laugh at a comic dressed up as an old lady hurtling towards a brick wall, but for an audience of comics, it has to be a real old lady. Howie Do It is definitely comedy for civilians. There&#x27;s a whole studio of them, convulsing themselves, even though all they&#x27;re looking at is film clips. I watched my review copy right through to the end. I&#x27;m a saint. Don&#x27;t copy that.</p>
+<p>If Flashpoint is the kinder, gentler, more contemplative, more Canadian cop show, Howie Do It proves, from its title on, that we can be as crass as anyone else and maybe crasser. This is Howie Mandel (&quot;The best part of my job is you cheer just because I show up and work&quot;) resuscitating what he calls &quot;the hidden camera prank show&quot; -- as in Candid Camera, for those with long memories, and People Are Funny, for those with elephantine memories. He may even be parodying those shows, though such a thing may not be possible; indeed, they were probably more ingenious and sophisticated. The trick is that Mandel puts on a black wig and pretends to be a producer auditioning his victims for some other TV show; then, after they&#x27;ve humiliated themselves enough, he reveals himself in all his baldness, and they fall down and worship -- or at least in one case -- still look hurt.</p>
+<p>But presumably they all signed releases. Howie sprays water or blows gale force winds at guys auditioning to be weather reporters. He sends a gullible young man to pick up girls with ill-advised pick-up lines. (&quot;You have nice legs. What time do they open?&quot;) He has a fellow dress up in a bunny suit and sing greeting telegrams at a funeral. He has one man watch while someone else makes love to his wife. He ends each segment with by screeching &quot;This is Howie Do It!&quot; Each of the embarrassments is single-track; it&#x27;s impressed on us that all the participants in a scene except the one unctuously identified as &quot;the mark&quot; are professional actors, or otherwise in on the joke. This reminds me of an old comedian&#x27;s maxim: A civilian audience will laugh at a comic dressed up as an old lady hurtling towards a brick wall, but for an audience of comics, it has to be a real old lady.</p>
+<p>Howie Do It is definitely comedy for civilians. There&#x27;s a whole studio of them, convulsing themselves, even though all they&#x27;re looking at is film clips. I watched my review copy right through to the end. I&#x27;m a saint. Don&#x27;t copy that.</p>
 <p>-The season premiere of Flashpoint airs tonight at 9 p. m. on CTV. The series premiere of Howie Do It airs tonight at 8 p. m. on Global.</p>
 <p>Black &amp; White Photo: Ctv / Colm Feore, background, guest stars on Flashpoint with Hugh Dillon as a business tycoon turned philanthropist whose wife is abducted. ;; Caption:</p></div></article>
       </section>
@@ -289,6 +313,6 @@
       </section>
     </footer>
 
-    <script src="./app.js?v=194" type="module"></script>
+    <script src="./app.js?v=233" type="module"></script>
   </body>
 </html>

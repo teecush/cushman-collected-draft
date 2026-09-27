@@ -13,31 +13,33 @@
     <link rel="apple-touch-icon" href="../apple-touch-icon.svg">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Rubik:wght@400;600;700;800;900&display=swap">
-    <link rel="stylesheet" href="./styles.css?v=173">
+    <link rel="stylesheet" href="./styles.css?v=174">
     <link rel="stylesheet" href="./catalog.css?v=194">
-    <link rel="stylesheet" href="./classic.css?v=194">
+    <link rel="stylesheet" href="./classic.css?v=233">
   </head>
   <body class="article-open">
     <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="site-header">
       <nav class="site-nav site-nav-left" id="siteNavLeft" aria-label="Primary navigation left">
-        <a class="nav-search" href="#search" aria-label="Search the archive"><span></span></a>
-        <a href="#section:current">Recent</a>
+        <a href="#search">Search</a>
         <div class="nav-folder nav-folder-wide">
           <a href="#section:browse">Browse</a>
           <div class="nav-dropdown nav-mega">
             <div class="nav-subfolder">
               <a href="#section:collections">Collections</a>
               <div class="nav-side-menu">
+                <a href="#collection:recent">Recent</a>
+                <a href="#correspondence:famous-letters">Special Letters</a>
                 <a href="#section:shakespeare">Shakespeare</a>
                 <a href="#collection:sondheim">Sondheim</a>
+                <a href="#collection:stoppard">Stoppard</a>
                 <a href="#collection:musicals">Musicals</a>
                 <a href="#collection:stratford">Stratford</a>
                 <a href="#collection:shaw">Shaw</a>
                 <a href="#collection:television">TV Reviews</a>
                 <a href="#collection:albums">Music Reviews</a>
                 <a href="#collection:books">Book Reviews</a>
-                <a href="#collection:profiles">Profiles &amp; Obits</a>
+                <a href="#collection:profiles">Artist Profiles</a>
                 <a href="#collection:early">Early Writing</a>
               </div>
             </div>
@@ -46,7 +48,6 @@
               <div class="nav-side-menu">
                 <a href="#works">All Works</a>
                 <a href="#people">All People</a>
-                <a href="#index:publications">Publications</a>
                 <a href="#places">Places</a>
               </div>
             </div>
@@ -72,21 +73,21 @@
       </a>
       <nav class="site-nav site-nav-right" id="siteNavRight" aria-label="Primary navigation right">
         <div class="nav-folder">
-          <a href="#explore">Explore</a>
+          <a href="#section:explore">Explore</a>
           <div class="nav-dropdown">
-            <a href="#explore">Article Explorer</a>
             <a href="#map">Map</a>
             <a href="#timeline">Timeline</a>
+            <a href="#explore">Article Explorer</a>
             <a href="#correspondence">Correspondence</a>
           </div>
         </div>
         <div class="nav-folder">
-          <a href="#about">About</a>
+          <a href="#section:about">About</a>
           <div class="nav-dropdown">
             <a href="#about">About Robert Cushman</a>
             <a href="#critics-circle">Critic's Circle</a>
             <a href="https://www.cushmancollected.com/checkout/donate?donatePageId=5c9b8016652dea361e5feb7d" target="_blank" rel="noopener">Donate</a>
-            <a href="#subscribe">Subscribe</a>
+            <a href="#contact">Contact &amp; Newsletter</a>
           </div>
         </div>
       </nav>
@@ -102,10 +103,25 @@
 
     <nav class="drawer" id="drawer" aria-label="Site navigation">
       <a href="#search">Search the Archive</a>
-      <a href="#section:current">Recent</a>
       <details>
         <summary>Browse</summary>
-        <a href="#section:collections">Collections</a>
+        <a href="#section:browse">Browse overview</a>
+        <details class="drawer-collection-menu">
+          <summary>Collections</summary>
+          <a href="#collection:recent">Recent</a>
+          <a href="#correspondence:famous-letters">Special Letters</a>
+          <a href="#section:shakespeare">Shakespeare</a>
+          <a href="#collection:sondheim">Sondheim</a>
+          <a href="#collection:stoppard">Stoppard</a>
+          <a href="#collection:musicals">Musicals</a>
+          <a href="#collection:stratford">Stratford</a>
+          <a href="#collection:shaw">Shaw</a>
+          <a href="#collection:television">TV Reviews</a>
+          <a href="#collection:albums">Music Reviews</a>
+          <a href="#collection:books">Book Reviews</a>
+          <a href="#collection:profiles">Artist Profiles</a>
+          <a href="#collection:early">Early Writing</a>
+        </details>
         <a href="#master-index:all-works">All Works</a>
         <a href="#master-index:all-people">All People</a>
         <a href="#index:publications">Publications</a>
@@ -113,17 +129,19 @@
       </details>
       <details>
         <summary>Explore</summary>
-        <a href="#explore">Article Explorer</a>
+        <a href="#section:explore">Explore overview</a>
         <a href="#map">Map</a>
         <a href="#timeline">Timeline</a>
+        <a href="#explore">Article Explorer</a>
         <a href="#correspondence">Correspondence</a>
       </details>
       <details>
         <summary>About</summary>
+        <a href="#section:about">About overview</a>
         <a href="#about">About Robert Cushman</a>
         <a href="#critics-circle">Critic's Circle</a>
         <a href="https://www.cushmancollected.com/checkout/donate?donatePageId=5c9b8016652dea361e5feb7d" target="_blank" rel="noopener">Donate</a>
-        <a href="#subscribe">Contact &amp; Newsletter</a>
+        <a href="#contact">Contact &amp; Newsletter</a>
       </details>
     </nav>
 
@@ -225,7 +243,11 @@
         </a>
       </section>
 
-      <section class="frontpage-directory" id="frontpageDirectory" aria-label="Primary site paths"></section>
+      <section class="browse-heading site-index-heading">
+        <h2>Site Index</h2>
+      </section>
+
+      <section class="frontpage-directory" id="frontpageDirectory" aria-label="Site index"></section>
 
       <section class="browse-heading home-secondary-nav" id="browse">
         <h2>Browse the Archive</h2>
@@ -251,7 +273,9 @@
 <p>Young Centre for the Performing Arts, Toronto</p>
 <p>- - -</p>
 <p>With the sole exception of William Hutt, no Canadian actor makes as powerful or as sharply-defined an impression the moment he sets foot upon a stage than Diego Matamoros. In Soulpepper&#x27;s revival of The Caretaker, the play that in 1960 instantly established Harold Pinter as a major dramatist and that remains his masterpiece, Matamoros plays Davies, the tramp who inveigles his way into a junk- laden West London flat owned or inhabited by two brothers and promptly becomes the cuckoo in their nest. In Albert Schultz&#x27;s production he&#x27;s a cuckoo in a crow&#x27;s nest; the play is performed in the round, or more accurately in the square, with the audience on four sides and the only entrance a hole in the floor, below which stretches, or so we assume, an invisible flight of steps. This bedsit is an attic -- the worst of two worlds.</p>
-<p>Davies is part wheedler and part bully, ruthless but also helpless. Matamoros keeps both his passive and his aggressive qualities going all the time. His British accent is impeccable; London rather than the Welsh that&#x27;s been traditional for the role ever since its creation by the late Donald Pleasence, but then Davies, a.k.a. Jenkins, is very cagey about where he&#x27;s from. &quot;I&#x27;ve been around,&quot; is all he&#x27;ll say when a challenger tries to pin him down on the subject. Much of the play&#x27;s comedy, and what used to be thought of as its mystery, comes from his habit of going off in tangents, generally of his own creation, whenever faced with a question he can&#x27;t or won&#x27;t answer, &quot;I was over there,&quot; he says eagerly when asked if he had served in the colonies. &quot;I was one of the first over there.&quot; (Matamoros underplays the bravura of this; maybe it does need to be Celtic.) The room&#x27;s impressive collection of objets trouves includes a store-bought Buddha. Asked his opinion of such things he says, vaguely, &quot;they&#x27;re all right, ain&#x27;t they?&quot; Telling his own stories, though, he can be richly specific, as witnessed in his account of the monastery to which he once trekked in quest of a pair of free shoes, only to be told by the monk on duty to &quot;piss off out of it.&quot; (Davies threatened to report him to his Mother Superior.) Davies is his own worst enemy. If he is offered a pair of shoes, he invariably finds something wrong with it. Offer him a bed and he&#x27;ll complain of the draft or of the chance of being asphyxiated by the (unplugged) gas stove alongside. Confide in him and he&#x27;ll betray you. Offer him the chance to stay on as caretaker -- practically a sinecure -- with a red smoking jacket to wear on the job, and he&#x27;ll use it to undermine you. Inevitably, he&#x27;ll overreach himself, and he is after all a homeless old man living on what remains of his wits. An English director once described him as the last great character to be created by a British playwright, the last one can imagine future actors thirsting to play (hence, in a nutshell, the subsequent decline of modern drama); and this accurate assessment is fully embodied in Matamoros&#x27; performance.</p>
+<p>Davies is part wheedler and part bully, ruthless but also helpless. Matamoros keeps both his passive and his aggressive qualities going all the time. His British accent is impeccable; London rather than the Welsh that&#x27;s been traditional for the role ever since its creation by the late Donald Pleasence, but then Davies, a.k.a. Jenkins, is very cagey about where he&#x27;s from. &quot;I&#x27;ve been around,&quot; is all he&#x27;ll say when a challenger tries to pin him down on the subject. Much of the play&#x27;s comedy, and what used to be thought of as its mystery, comes from his habit of going off in tangents, generally of his own creation, whenever faced with a question he can&#x27;t or won&#x27;t answer, &quot;I was over there,&quot; he says eagerly when asked if he had served in the colonies. &quot;I was one of the first over there.&quot; (Matamoros underplays the bravura of this; maybe it does need to be Celtic.) The room&#x27;s impressive collection of objets trouves includes a store-bought Buddha.</p>
+<p>Asked his opinion of such things he says, vaguely, &quot;they&#x27;re all right, ain&#x27;t they?&quot; Telling his own stories, though, he can be richly specific, as witnessed in his account of the monastery to which he once trekked in quest of a pair of free shoes, only to be told by the monk on duty to &quot;piss off out of it.&quot; (Davies threatened to report him to his Mother Superior.) Davies is his own worst enemy. If he is offered a pair of shoes, he invariably finds something wrong with it. Offer him a bed and he&#x27;ll complain of the draft or of the chance of being asphyxiated by the (unplugged) gas stove alongside. Confide in him and he&#x27;ll betray you. Offer him the chance to stay on as caretaker -- practically a sinecure -- with a red smoking jacket to wear on the job, and he&#x27;ll use it to undermine you.</p>
+<p>Inevitably, he&#x27;ll overreach himself, and he is after all a homeless old man living on what remains of his wits. An English director once described him as the last great character to be created by a British playwright, the last one can imagine future actors thirsting to play (hence, in a nutshell, the subsequent decline of modern drama); and this accurate assessment is fully embodied in Matamoros&#x27; performance.</p>
 <p>Aston, the brother who brings him home, is a gentle, enigmatic man who has undergone a lobotomy in a mental hospital; he tells Davies about this, or at least he talks about it when Davies is present, in the longest and most celebrated speech in the play. Here the production runs into trouble. Traditionally, Aston tells his story quietly while sitting on the side of his bed. He can&#x27;t do that here, because a quarter of the audience would be looking at his back; so Damien Atkins has to deliver it standing up and even moving around. This inevitably leads him into illustrative acting that is out of key, not only with the writing, but with the delicacy of the rest of his performance. Aston has built himself a cocoon, and it gives him strength. There are lines that cannot be crossed, and Davies crosses them. He taunts Aston with his incarceration (though when he desperately admits that he, too, once glimpsed the inside of such an institution, we start wondering just how much the two men may have in common), and then -- unforgivably -- sneers at his dream of building a shed. This illustrates Pinter&#x27;s own contention that the play is not about the impossibility of communication but about its dangers. The Caretaker is one of those modern plays, including The Wild Duck and The Iceman Cometh, about men enslaved to their illusions.</p>
 <p>Aston&#x27;s brother Mick, the only character who seems to have solid links to the outside world (a business of his own and even, as he insists, a van), has his own dreams, mainly concerned with interior decoration; it&#x27;s unclear to what extent his prose arias on the subject are merely ploys to bewitch, bother and bewilder, or how much he actually believes in them. But they&#x27;re virtuoso turns, as are his celebrations of London bus routes, and Matthew Edison&#x27;s delivery of them is beguiling if rather too subdued. (Pinter&#x27;s style, like his world, is not far removed from that of Steptoe and Son. It needs the same comic energy.) Where Edison excels is in his prowling around the stage, putting the fear of God into Davies. He does it, we realize, to protect his brother. It&#x27;s an irony that Mick, the wide boy, the one with the street smarts and the mental map of London, is also the most benevolent character in the play. The fact that he succeeds gives the play something of a happy ending. It comes with a cost; even Mick feels trapped and Davies is as pitiful as he was pitiless.</p>
 <p>The ending, and the whole set-up, were reprised by Pinter in the more polished surroundings of No Man&#x27;s Land but, dazzling exercise in high comedy though that is, The Caretaker is the greater play. It depends, of course, whether you prefer your Pinter smooth or scruffy. In this case, I&#x27;ll take the scruff.</p>
@@ -292,6 +316,6 @@
       </section>
     </footer>
 
-    <script src="./app.js?v=194" type="module"></script>
+    <script src="./app.js?v=233" type="module"></script>
   </body>
 </html>

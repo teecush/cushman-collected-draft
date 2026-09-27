@@ -13,31 +13,33 @@
     <link rel="apple-touch-icon" href="../apple-touch-icon.svg">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Rubik:wght@400;600;700;800;900&display=swap">
-    <link rel="stylesheet" href="./styles.css?v=173">
+    <link rel="stylesheet" href="./styles.css?v=174">
     <link rel="stylesheet" href="./catalog.css?v=194">
-    <link rel="stylesheet" href="./classic.css?v=194">
+    <link rel="stylesheet" href="./classic.css?v=233">
   </head>
   <body class="article-open">
     <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="site-header">
       <nav class="site-nav site-nav-left" id="siteNavLeft" aria-label="Primary navigation left">
-        <a class="nav-search" href="#search" aria-label="Search the archive"><span></span></a>
-        <a href="#section:current">Recent</a>
+        <a href="#search">Search</a>
         <div class="nav-folder nav-folder-wide">
           <a href="#section:browse">Browse</a>
           <div class="nav-dropdown nav-mega">
             <div class="nav-subfolder">
               <a href="#section:collections">Collections</a>
               <div class="nav-side-menu">
+                <a href="#collection:recent">Recent</a>
+                <a href="#correspondence:famous-letters">Special Letters</a>
                 <a href="#section:shakespeare">Shakespeare</a>
                 <a href="#collection:sondheim">Sondheim</a>
+                <a href="#collection:stoppard">Stoppard</a>
                 <a href="#collection:musicals">Musicals</a>
                 <a href="#collection:stratford">Stratford</a>
                 <a href="#collection:shaw">Shaw</a>
                 <a href="#collection:television">TV Reviews</a>
                 <a href="#collection:albums">Music Reviews</a>
                 <a href="#collection:books">Book Reviews</a>
-                <a href="#collection:profiles">Profiles &amp; Obits</a>
+                <a href="#collection:profiles">Artist Profiles</a>
                 <a href="#collection:early">Early Writing</a>
               </div>
             </div>
@@ -46,7 +48,6 @@
               <div class="nav-side-menu">
                 <a href="#works">All Works</a>
                 <a href="#people">All People</a>
-                <a href="#index:publications">Publications</a>
                 <a href="#places">Places</a>
               </div>
             </div>
@@ -72,21 +73,21 @@
       </a>
       <nav class="site-nav site-nav-right" id="siteNavRight" aria-label="Primary navigation right">
         <div class="nav-folder">
-          <a href="#explore">Explore</a>
+          <a href="#section:explore">Explore</a>
           <div class="nav-dropdown">
-            <a href="#explore">Article Explorer</a>
             <a href="#map">Map</a>
             <a href="#timeline">Timeline</a>
+            <a href="#explore">Article Explorer</a>
             <a href="#correspondence">Correspondence</a>
           </div>
         </div>
         <div class="nav-folder">
-          <a href="#about">About</a>
+          <a href="#section:about">About</a>
           <div class="nav-dropdown">
             <a href="#about">About Robert Cushman</a>
             <a href="#critics-circle">Critic's Circle</a>
             <a href="https://www.cushmancollected.com/checkout/donate?donatePageId=5c9b8016652dea361e5feb7d" target="_blank" rel="noopener">Donate</a>
-            <a href="#subscribe">Subscribe</a>
+            <a href="#contact">Contact &amp; Newsletter</a>
           </div>
         </div>
       </nav>
@@ -102,10 +103,25 @@
 
     <nav class="drawer" id="drawer" aria-label="Site navigation">
       <a href="#search">Search the Archive</a>
-      <a href="#section:current">Recent</a>
       <details>
         <summary>Browse</summary>
-        <a href="#section:collections">Collections</a>
+        <a href="#section:browse">Browse overview</a>
+        <details class="drawer-collection-menu">
+          <summary>Collections</summary>
+          <a href="#collection:recent">Recent</a>
+          <a href="#correspondence:famous-letters">Special Letters</a>
+          <a href="#section:shakespeare">Shakespeare</a>
+          <a href="#collection:sondheim">Sondheim</a>
+          <a href="#collection:stoppard">Stoppard</a>
+          <a href="#collection:musicals">Musicals</a>
+          <a href="#collection:stratford">Stratford</a>
+          <a href="#collection:shaw">Shaw</a>
+          <a href="#collection:television">TV Reviews</a>
+          <a href="#collection:albums">Music Reviews</a>
+          <a href="#collection:books">Book Reviews</a>
+          <a href="#collection:profiles">Artist Profiles</a>
+          <a href="#collection:early">Early Writing</a>
+        </details>
         <a href="#master-index:all-works">All Works</a>
         <a href="#master-index:all-people">All People</a>
         <a href="#index:publications">Publications</a>
@@ -113,17 +129,19 @@
       </details>
       <details>
         <summary>Explore</summary>
-        <a href="#explore">Article Explorer</a>
+        <a href="#section:explore">Explore overview</a>
         <a href="#map">Map</a>
         <a href="#timeline">Timeline</a>
+        <a href="#explore">Article Explorer</a>
         <a href="#correspondence">Correspondence</a>
       </details>
       <details>
         <summary>About</summary>
+        <a href="#section:about">About overview</a>
         <a href="#about">About Robert Cushman</a>
         <a href="#critics-circle">Critic's Circle</a>
         <a href="https://www.cushmancollected.com/checkout/donate?donatePageId=5c9b8016652dea361e5feb7d" target="_blank" rel="noopener">Donate</a>
-        <a href="#subscribe">Contact &amp; Newsletter</a>
+        <a href="#contact">Contact &amp; Newsletter</a>
       </details>
     </nav>
 
@@ -225,7 +243,11 @@
         </a>
       </section>
 
-      <section class="frontpage-directory" id="frontpageDirectory" aria-label="Primary site paths"></section>
+      <section class="browse-heading site-index-heading">
+        <h2>Site Index</h2>
+      </section>
+
+      <section class="frontpage-directory" id="frontpageDirectory" aria-label="Site index"></section>
 
       <section class="browse-heading home-secondary-nav" id="browse">
         <h2>Browse the Archive</h2>
@@ -290,7 +312,9 @@
 <p>John Shrapnel (1942 - 2020)</p>
 <p>The name John Shrapnel may not mean very much outside the United Kingdom but for some of us he ranked among the best British actors of his generation. That generation happened to be my own, more or less; in 1963/4, when I was in my first year at Cambridge, he was in his third and last, part of an intimidatingly accomplished senior line-up that also included Richard Eyre, future director of the National Theatre; Jonathan Lynn, future creator of Yes, Minister; and the brilliant actor-scholar Michael Pennington. John’s roles in his final year ranged from a gentle and moving Aston in The Caretaker to a commandingly funny Doctor in A Month in the Country (played with a brisk Scots accent for reasons mysterious even to his fellow-actors, of whom I was privileged to be one). But the performance I remember best from that year was given, for one Sunday night only, as the loquacious, mocking, ultimately suicidal vagrant in Albee’s The Zoo Story, with Johnny Lynn playing his hypnotised auditor, under the direction of Eric Idle. (You read that right.) John was spellbinding. Here, we felt, was a future great actor; at the very least, the next Albert Finney.</p>
 <p>It wasn’t to be. He had a very solid professional career, including honourable service with the RSC and the National Theatre. He was a recurring presence on television, and his very individual voice – a sensitive rasp – kept him in constant and I’m sure lucrative offscreen employment in commercials. It may even be that this last source of security blunted his ambition. Good as he nearly always was, he never scaled the heights we had anticipated or got the parts that might have allowed him to.</p>
-<p>Except once. He had always, it seemed, had an affinity for the Greeks. He had played Sophocles’ Oedipus at Cambridge and he was, against heavy odds, a fine Pentheus in a disastrous National production of The Bacchae. Later, whenever there was a production of Oedipus, on stage or TV, John was always the man they called to play Creon. His Athenian apotheosis, though, was reached in 1980 in a show called, simply, The Greeks. This was an all-day marathon (now there’s a good Greek word) assembled by RSC scholar-director John Barton from the extant Greek tragedies depicting the Trojan war, its origins, and its aftermath. (Bits of the Homeric narrative that the tragedians never got around to were filled in by Barton himself.) Shrapnel began his day as Agamemnon, sacrificing his daughter to secure a fair wind to carry the Greek ships to Troy; a monstrous deed but somehow he kept our respect, if not exactly our sympathy. Then, a few plays later, the war over, the victorious general came back to his kingdom in the Aeschylus play that bears his name. There his wife murders him, partly because she has taken a lover but mostly as retribution for what he did to their daughter. A ceremonial carpet is spread, to lure him to his doom. Stepping on this carpet was always taken to be a sign of overweening pride, an insult and challenge to the gods; and when Shrapnel mounted it, one really felt in touch with the ages. It was a performance of heroic stature. At the other end of the day he reached into the other, comedic side of his talent to play a legitimately camp version of the god Apollo who appears at the end of Eurpides’ Electra to promise that, after all the bloodshed, all will be made well: “But. Not. Yet”. The inhumanly taunting way in which he measured out those three words, conclusively denying a conclusion, was pure John. (It was pure Euripides as well, though too many critics failed to recognise it).</p>
+<p>Except once. He had always, it seemed, had an affinity for the Greeks. He had played Sophocles’ Oedipus at Cambridge and he was, against heavy odds, a fine Pentheus in a disastrous National production of The Bacchae. Later, whenever there was a production of Oedipus, on stage or TV, John was always the man they called to play Creon. His Athenian apotheosis, though, was reached in 1980 in a show called, simply, The Greeks. This was an all-day marathon (now there’s a good Greek word) assembled by RSC scholar-director John Barton from the extant Greek tragedies depicting the Trojan war, its origins, and its aftermath. (Bits of the Homeric narrative that the tragedians never got around to were filled in by Barton himself.) Shrapnel began his day as Agamemnon, sacrificing his daughter to secure a fair wind to carry the Greek ships to Troy; a monstrous deed but somehow he kept our respect, if not exactly our sympathy.</p>
+<p>Then, a few plays later, the war over, the victorious general came back to his kingdom in the Aeschylus play that bears his name. There his wife murders him, partly because she has taken a lover but mostly as retribution for what he did to their daughter. A ceremonial carpet is spread, to lure him to his doom. Stepping on this carpet was always taken to be a sign of overweening pride, an insult and challenge to the gods; and when Shrapnel mounted it, one really felt in touch with the ages. It was a performance of heroic stature. At the other end of the day he reached into the other, comedic side of his talent to play a legitimately camp version of the god Apollo who appears at the end of Eurpides’ Electra to promise that, after all the bloodshed, all will be made well: “But.</p>
+<p>Not. Yet”. The inhumanly taunting way in which he measured out those three words, conclusively denying a conclusion, was pure John. (It was pure Euripides as well, though too many critics failed to recognise it).</p>
 <p>Great actor or not, Shrap (as everybody, including Tony Sher, called him) was universally acknowledged to be a great guy: kind and warm and funny and sharp. That certainly is how I always knew him. And I treasure his crisp summary of the actor’s life: “You spend a lot of time working in crap, for fools.”</p>
 <figure><img loading="lazy" src="../site_export/content/media/in-memoriam/06.jpg" alt="In Memoriam"></figure>
 <p>Clive James (1939 - 2019)</p>
@@ -316,7 +340,9 @@
 <figure><img loading="lazy" src="../site_export/content/media/in-memoriam/11.jpg" alt="In Memoriam"></figure>
 <p>Peter Brook (1925 - 2022)</p>
 <p>Peter Brook. I first met him in 1974 in his office at the Bouffes-du-Nord, the old Parisian music-hall, gifted to him by the French government as a base for the cosmopolitan troupe of actors known as the International Centre of Theatre Research (ICTR). I was there to interview him, and my tape recorder broke down: not the kind of thing you want to happen in front of, conceivably, the most illustrious director in the western world. Brook, without a fuss, got down on his hands and knees and fixed it. Now that was a director.</p>
-<p>It must also count as an example of what the British critic Michael Ratcliffe, in a magnificent obituary in The Guardian, called “Brook’s sweet patience”. (There was a startling absence of obituaries in the Canadian press.) His move to France meant that I only got to review one of his English productions – a rather disappointing Antony and Cleopatra for the RSC – but I grew up on his work. He directed the first Hamlet I ever saw, at the Phoenix Theatre in London where it arrived, in 1956, after a much-publicised trip to Moscow. That, to be honest, was disappointing as well; Paul Scofield played the prince, and my recollection is that he sang, or at least chanted, large chunks of the text. It was a matinee; maybe he was bored. I expected more because the previous year I had read about, but not seen, Brook’s Stratford-on-Avon production of Titus Andronicus with Olivier in the title role: a play then so neglected (understandably) that this counted practically as a world premiere. He apparently dealt with the play’s horrors by ritualising them, a forecast of much of his work in future decades. That production too came to London a couple of years later, and I’ve never stopped kicking myself for missing it. Brook designed the sets and costumes himself and composed the incidental music (he had expert help in all departments), and he did the same for his next Shakespeare, The Tempest, which I saw at Stratford and greatly enjoyed. John Gielgud was an ascetically impressive Prospero, but the most memorable things, at least the ones I remember best, were the evocation of the opening shipwreck by a madly-spinning wheel atop the proscenium arch, and the funniest clown scenes I have ever beheld in this play, courtesy of two stellar Shakespearean comics, Patrick Wymark and Clive Revill. A sceptical cast member whom I worked with years later said that Brook had had nothing do with these and that all the credit should go to the actors; still Brook must have approved what they did and, at the very least, stayed out of their way. And in his next production, the West End musical Irma la Douce, he cast Revill as the barman-narrator, which is the best role in the show. (I know; I’ve played it.)</p>
+<p>It must also count as an example of what the British critic Michael Ratcliffe, in a magnificent obituary in The Guardian, called “Brook’s sweet patience”. (There was a startling absence of obituaries in the Canadian press.) His move to France meant that I only got to review one of his English productions – a rather disappointing Antony and Cleopatra for the RSC – but I grew up on his work. He directed the first Hamlet I ever saw, at the Phoenix Theatre in London where it arrived, in 1956, after a much-publicised trip to Moscow. That, to be honest, was disappointing as well; Paul Scofield played the prince, and my recollection is that he sang, or at least chanted, large chunks of the text. It was a matinee; maybe he was bored. I expected more because the previous year I had read about, but not seen, Brook’s Stratford-on-Avon production of Titus Andronicus with Olivier in the title role: a play then so neglected (understandably) that this counted practically as a world premiere.</p>
+<p>He apparently dealt with the play’s horrors by ritualising them, a forecast of much of his work in future decades. That production too came to London a couple of years later, and I’ve never stopped kicking myself for missing it. Brook designed the sets and costumes himself and composed the incidental music (he had expert help in all departments), and he did the same for his next Shakespeare, The Tempest, which I saw at Stratford and greatly enjoyed. John Gielgud was an ascetically impressive Prospero, but the most memorable things, at least the ones I remember best, were the evocation of the opening shipwreck by a madly-spinning wheel atop the proscenium arch, and the funniest clown scenes I have ever beheld in this play, courtesy of two stellar Shakespearean comics, Patrick Wymark and Clive Revill. A sceptical cast member whom I worked with years later said that Brook had had nothing do with these and that all the credit should go to the actors; still Brook must have approved what they did and, at the very least, stayed out of their way.</p>
+<p>And in his next production, the West End musical Irma la Douce, he cast Revill as the barman-narrator, which is the best role in the show. (I know; I’ve played it.)</p>
 <p>Peter Brook directing musicals? He did several, though Irma was the most successful, and a very good show. He also directed drawing-room comedies. His roots, or some of them, were in the West End commercial theatre, and in the 1950s he was one of its most in-demand directors. You can trace a direct line from there to his more socially conscious – or, perhaps better - artistically conscious – work of the 60s and thereafter. The Marat/Sade (at the RSC and then, significantly, on Broadway) was really a musical, at least in his virtuoso staging; the dialectical confrontations of the two title figures counted for far less than the choreographed movements of the Charenton asylum inmates and their surging, threatening vocal choruses.</p>
 <p>I think Brook would have claimed, not perhaps that it was all showbusiness, but that it was all theatre and that theatre could happen anywhere. That was the philosophy behind the ICTR, whether it was performing in its rundown (actually, quite expensively rehabilitated) Paris HQ, in an African village, or on a Persian mountainside. It’s there in the very title of his famous book The Empty Space. And it’s implicit in an earlier and shorter manifesto, and one that I prefer, an article entitled “Don’t Be Bamboozled by Theories” - his own, I like to think, included. It ends with the unchallengeable statement: “A performance lives or dies – in performance.”</p>
 <p>I was able in the 1970s to see quite a few of his Bouffes-du-Nord productions, most of them spare, limber stagings of classics: Timon of Athens, The Cherry Orchard (“La Cerisaie”) with his wife Natasha Parry as Madame Ranevsky, Ubu Roi. Most impressive, if also most contentious was The Ik, depicting a Ugandan tribe of secluded hunter-gatherers whom the play presented as in imminent danger of extinction; though in fact, they’re still there. This trifling inaccuracy apart, the performance by a multi-ethnic cast was a quiet triumph of discipline – or, more likely, self-discipline. It did create, as we’re always told theatre should, a world of its own. (I unhappily never saw what seems to have been the ICTR’s greatest triumph in this even vein, its day-long staging of the Indian epic, The Mahabharata.) My only disappointment at the Bouffes-du-Nord was Brook’s production of Measure for Measure, since his earlier staging of it, at Stratford in 1950, was legendary, establishing this previously neglected play at the heart of the modern Shakespeare repertory.</p>
@@ -374,6 +400,6 @@
       </section>
     </footer>
 
-    <script src="./app.js?v=194" type="module"></script>
+    <script src="./app.js?v=233" type="module"></script>
   </body>
 </html>

@@ -13,31 +13,33 @@
     <link rel="apple-touch-icon" href="../apple-touch-icon.svg">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Rubik:wght@400;600;700;800;900&display=swap">
-    <link rel="stylesheet" href="./styles.css?v=173">
+    <link rel="stylesheet" href="./styles.css?v=174">
     <link rel="stylesheet" href="./catalog.css?v=194">
-    <link rel="stylesheet" href="./classic.css?v=194">
+    <link rel="stylesheet" href="./classic.css?v=233">
   </head>
   <body class="article-open">
     <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="site-header">
       <nav class="site-nav site-nav-left" id="siteNavLeft" aria-label="Primary navigation left">
-        <a class="nav-search" href="#search" aria-label="Search the archive"><span></span></a>
-        <a href="#section:current">Recent</a>
+        <a href="#search">Search</a>
         <div class="nav-folder nav-folder-wide">
           <a href="#section:browse">Browse</a>
           <div class="nav-dropdown nav-mega">
             <div class="nav-subfolder">
               <a href="#section:collections">Collections</a>
               <div class="nav-side-menu">
+                <a href="#collection:recent">Recent</a>
+                <a href="#correspondence:famous-letters">Special Letters</a>
                 <a href="#section:shakespeare">Shakespeare</a>
                 <a href="#collection:sondheim">Sondheim</a>
+                <a href="#collection:stoppard">Stoppard</a>
                 <a href="#collection:musicals">Musicals</a>
                 <a href="#collection:stratford">Stratford</a>
                 <a href="#collection:shaw">Shaw</a>
                 <a href="#collection:television">TV Reviews</a>
                 <a href="#collection:albums">Music Reviews</a>
                 <a href="#collection:books">Book Reviews</a>
-                <a href="#collection:profiles">Profiles &amp; Obits</a>
+                <a href="#collection:profiles">Artist Profiles</a>
                 <a href="#collection:early">Early Writing</a>
               </div>
             </div>
@@ -46,7 +48,6 @@
               <div class="nav-side-menu">
                 <a href="#works">All Works</a>
                 <a href="#people">All People</a>
-                <a href="#index:publications">Publications</a>
                 <a href="#places">Places</a>
               </div>
             </div>
@@ -72,21 +73,21 @@
       </a>
       <nav class="site-nav site-nav-right" id="siteNavRight" aria-label="Primary navigation right">
         <div class="nav-folder">
-          <a href="#explore">Explore</a>
+          <a href="#section:explore">Explore</a>
           <div class="nav-dropdown">
-            <a href="#explore">Article Explorer</a>
             <a href="#map">Map</a>
             <a href="#timeline">Timeline</a>
+            <a href="#explore">Article Explorer</a>
             <a href="#correspondence">Correspondence</a>
           </div>
         </div>
         <div class="nav-folder">
-          <a href="#about">About</a>
+          <a href="#section:about">About</a>
           <div class="nav-dropdown">
             <a href="#about">About Robert Cushman</a>
             <a href="#critics-circle">Critic's Circle</a>
             <a href="https://www.cushmancollected.com/checkout/donate?donatePageId=5c9b8016652dea361e5feb7d" target="_blank" rel="noopener">Donate</a>
-            <a href="#subscribe">Subscribe</a>
+            <a href="#contact">Contact &amp; Newsletter</a>
           </div>
         </div>
       </nav>
@@ -102,10 +103,25 @@
 
     <nav class="drawer" id="drawer" aria-label="Site navigation">
       <a href="#search">Search the Archive</a>
-      <a href="#section:current">Recent</a>
       <details>
         <summary>Browse</summary>
-        <a href="#section:collections">Collections</a>
+        <a href="#section:browse">Browse overview</a>
+        <details class="drawer-collection-menu">
+          <summary>Collections</summary>
+          <a href="#collection:recent">Recent</a>
+          <a href="#correspondence:famous-letters">Special Letters</a>
+          <a href="#section:shakespeare">Shakespeare</a>
+          <a href="#collection:sondheim">Sondheim</a>
+          <a href="#collection:stoppard">Stoppard</a>
+          <a href="#collection:musicals">Musicals</a>
+          <a href="#collection:stratford">Stratford</a>
+          <a href="#collection:shaw">Shaw</a>
+          <a href="#collection:television">TV Reviews</a>
+          <a href="#collection:albums">Music Reviews</a>
+          <a href="#collection:books">Book Reviews</a>
+          <a href="#collection:profiles">Artist Profiles</a>
+          <a href="#collection:early">Early Writing</a>
+        </details>
         <a href="#master-index:all-works">All Works</a>
         <a href="#master-index:all-people">All People</a>
         <a href="#index:publications">Publications</a>
@@ -113,17 +129,19 @@
       </details>
       <details>
         <summary>Explore</summary>
-        <a href="#explore">Article Explorer</a>
+        <a href="#section:explore">Explore overview</a>
         <a href="#map">Map</a>
         <a href="#timeline">Timeline</a>
+        <a href="#explore">Article Explorer</a>
         <a href="#correspondence">Correspondence</a>
       </details>
       <details>
         <summary>About</summary>
+        <a href="#section:about">About overview</a>
         <a href="#about">About Robert Cushman</a>
         <a href="#critics-circle">Critic's Circle</a>
         <a href="https://www.cushmancollected.com/checkout/donate?donatePageId=5c9b8016652dea361e5feb7d" target="_blank" rel="noopener">Donate</a>
-        <a href="#subscribe">Contact &amp; Newsletter</a>
+        <a href="#contact">Contact &amp; Newsletter</a>
       </details>
     </nav>
 
@@ -225,7 +243,11 @@
         </a>
       </section>
 
-      <section class="frontpage-directory" id="frontpageDirectory" aria-label="Primary site paths"></section>
+      <section class="browse-heading site-index-heading">
+        <h2>Site Index</h2>
+      </section>
+
+      <section class="frontpage-directory" id="frontpageDirectory" aria-label="Site index"></section>
 
       <section class="browse-heading home-secondary-nav" id="browse">
         <h2>Browse the Archive</h2>
@@ -253,7 +275,9 @@
 <p>It&#x27;s hard to imagine The Drowsy Chaperone without Bob Martin&#x27;s glorious performance as the Man in Chair, and frankly I wouldn&#x27;t want to, but the thing has been known to happen. It&#x27;s happening right now in New York, where Martin has been released from the Broadway production on account of his chronic inability to be in two places at the same time. He&#x27;s now reprising his iconic role on the first leg of the road-company tour, though future further-flung destinations will have to do without him. And of course, as has often been told, the show actually started its life without him, at least on stage. Back in 1998, the musical, in miniature form, was his wedding-present from a group of friends. When he himself joined the group, as writer and performer, the show began its transforming journey from spoof musical to portrait of the kind of guy who loves, and indeed lives, spoof musicals.</p>
 <p>Of the four Chaperones I&#x27;ve encountered, my previous favourite, the happiest compromise between wits and glitz, was the version that Daniel Brooks directed in 2001 at the Winter Garden. But now that The Drowsy Chaperone has wafted downstairs (in her sleep, presumably) to the Elgin, all earlier bets are off. This is Casey Nicholaw&#x27;s superbly snappy Broadway staging, but with its heart more firmly in the right place, which is to say wherever Man in Chair happens to be sitting or, quite often, flitting.</p>
 <p>It&#x27;s quite a melancholy heart. The show&#x27;s now-famous conceit is that Martin&#x27;s narrator-figure plays us his prized original-cast album of an archetypally frothy 1920s musical, which promptly comes to life before our eyes, while our host scampers around its edges like a small boy begging desperately to be let in. Though he adores the piece, he&#x27;s frank about admitting the places where its enchanting silliness gives way to mere foolishness. As he says, musicals are what life should be like but never is. In life, as we see and hear for ourselves, records skip, phones ring and lives get wrecked -- the last point being illustrated in the enchanting capsule biographies that he provides of the show&#x27;s original performers and in what he lets slip concerning his own lonely existence and failed marriage. (Are we surprised that a solitary musical buff should have been married? Well, as he says himself, &quot;Don&#x27;t make assumptions.&quot;) These speeches were always there, but they&#x27;ve never struck home as wittily or as poignantly before. Martin&#x27;s character is also justifiably disenchanted with the modern theatre, which he sums up as &quot;Elton John, must we continue this charade?&quot;, a line that comes at us literally out of the dark -- The Drowsy Chaperone being, as far as I know, the only musical ever to start with a black-out. So this apparent tribute to the derrieregarde is actually a trail-blazer. Martin doesn&#x27;t merely lead it; he conducts it, with a perfect command of pitch and tempo. Has there ever been so winning a loser?</p>
-<p>He and Don McKellar wrote the book, Lisa Lambert and Greg Morrison the score. There&#x27;s little danger, I think, of anyone&#x27;s equating these pastiche songs with Golden Age originals, and Larry Blank&#x27;s wildfire big-band arrangements sound as if they were written for a 1960s revival rather than for the real thing. But then, as I never tire of pedantically pointing out, the whole premise is flawed because there were never original-cast recordings of 1920s shows, not in America (there were in England), and certainly none that included full dialogue, then, now or in-between. But the music is still energizing and the lyrics witty, though I refuse to believe that Ira Gershwin or P.G. Wodehouse, who seem to be the models here, would ever have been so stuck for a rhyme with &quot;stumble&quot; that they had cravenly to invent one. (Plum and Ira weren&#x27;t no stumble-bums.) But there&#x27;s one authentically wide-eyed line -- &quot;love has no intention to offend&quot; -- that&#x27;s enchanting, especially as softly delivered by Georgia Engel, who plays the show&#x27; shy chatelaine. Oh, didn&#x27;t I mention the plot-within-a-plot? It&#x27;s set in a country house and it involves a wedding, or several. Bride-in-chief is an actress who&#x27;s about to give up art for life (in both senses) and who has a standout number about it called (I Don&#x27;t Want To) Show Off, in which she does, extravagantly. Andrea Chamberlan carries this off stunningly, that being the only conceivable way to carry it. It&#x27;s the piece de resistance of Nicholaw&#x27;s choreography, meaning that you can&#x27;t resist it, but most of the numbers are tonics. So are David Gallo&#x27;s sets, which convert a one-room apartment to a wonderland, and Gregg Barnes&#x27; costumes. Question: Is Martin the show&#x27;s token Canadian or are all the others the token Americans? Anyway, bouquets to most of them, especially the women, including Nancy Opel&#x27;s contralto profunda in the title role. The intrusion of a number from a quite different musical with an Oriental setting remains a special joy, though the authors may not realize that they&#x27;ve fast-forwarded into the age of Rodgers and Hammerstein and Lerner and Loewe, with what looks like Eliza Doolittle post-transformation intruding on the court of Siam. This would be the second-half opener, except that the Man in Chair detests intermissions. Which is fair enough; his show couldn&#x27;t sustain one. It&#x27;s definitely in the little-jewel category, and it hardly stops flashing. - The Drowsy Chaperone is at the Elgin Theatre until Oct. 14. For tickets visit www.dancaptickets.com.</p>
+<p>He and Don McKellar wrote the book, Lisa Lambert and Greg Morrison the score. There&#x27;s little danger, I think, of anyone&#x27;s equating these pastiche songs with Golden Age originals, and Larry Blank&#x27;s wildfire big-band arrangements sound as if they were written for a 1960s revival rather than for the real thing. But then, as I never tire of pedantically pointing out, the whole premise is flawed because there were never original-cast recordings of 1920s shows, not in America (there were in England), and certainly none that included full dialogue, then, now or in-between. But the music is still energizing and the lyrics witty, though I refuse to believe that Ira Gershwin or P.G. Wodehouse, who seem to be the models here, would ever have been so stuck for a rhyme with &quot;stumble&quot; that they had cravenly to invent one. (Plum and Ira weren&#x27;t no stumble-bums.) But there&#x27;s one authentically wide-eyed line -- &quot;love has no intention to offend&quot; -- that&#x27;s enchanting, especially as softly delivered by Georgia Engel, who plays the show&#x27; shy chatelaine.</p>
+<p>Oh, didn&#x27;t I mention the plot-within-a-plot? It&#x27;s set in a country house and it involves a wedding, or several. Bride-in-chief is an actress who&#x27;s about to give up art for life (in both senses) and who has a standout number about it called (I Don&#x27;t Want To) Show Off, in which she does, extravagantly. Andrea Chamberlan carries this off stunningly, that being the only conceivable way to carry it. It&#x27;s the piece de resistance of Nicholaw&#x27;s choreography, meaning that you can&#x27;t resist it, but most of the numbers are tonics. So are David Gallo&#x27;s sets, which convert a one-room apartment to a wonderland, and Gregg Barnes&#x27; costumes. Question: Is Martin the show&#x27;s token Canadian or are all the others the token Americans? Anyway, bouquets to most of them, especially the women, including Nancy Opel&#x27;s contralto profunda in the title role. The intrusion of a number from a quite different musical with an Oriental setting remains a special joy, though the authors may not realize that they&#x27;ve fast-forwarded into the age of Rodgers and Hammerstein and Lerner and Loewe, with what looks like Eliza Doolittle post-transformation intruding on the court of Siam.</p>
+<p>This would be the second-half opener, except that the Man in Chair detests intermissions. Which is fair enough; his show couldn&#x27;t sustain one. It&#x27;s definitely in the little-jewel category, and it hardly stops flashing. - The Drowsy Chaperone is at the Elgin Theatre until Oct. 14. For tickets visit www.dancaptickets.com.</p>
 <p>Black &amp; White Photo: Joan Marcus, Dancap Productions / Bob Martin, left, has finally brought his Man in Chair character back to Toronto, the city of its birth. Could the Drowsy Chaperone exist without him? ;</p></div></article>
       </section>
 
@@ -288,6 +312,6 @@
       </section>
     </footer>
 
-    <script src="./app.js?v=194" type="module"></script>
+    <script src="./app.js?v=233" type="module"></script>
   </body>
 </html>

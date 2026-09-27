@@ -52,3 +52,24 @@ const revised=makeCollections([
 assert.deepEqual(revised.get('television').items.map(x=>x.title),['Zebra','The Apple','Banana'],'TV coverage precedes alphabetic ordering for ties');
 assert.deepEqual(revised.get('albums').records.map(x=>x.slug),['song'],'Verified song writing joins Music Reviews without including concerts');
 assert(revised.get('albums').itemMap.get('you-re-the-top').recordIds.has('song'));
+
+const editorial=makeCollections([
+ {slug:'cats',article_category:'Theatre Review',production_title:'Cats',people:[],collections:['The Musical Collection']},
+ {slug:'frogs-classical',article_category:'Musical Review',production_title:'The Frogs',people:['Aristophanes']},
+ {slug:'frogs-sondheim',article_category:'Musical Review',production_title:'The Frogs',people:['Stephen Sondheim']},
+ {slug:'stoppard',article_category:'Theatre Review',production_title:'Arcadia',people:['Tom Stoppard']},
+ {slug:'tv-24-a',article_category:'Television Review',production_title:'24'},
+ {slug:'tv-24-b',article_category:'Television Review',production_title:'24: Redemption'},
+ {slug:'tv-oscar-a',article_category:'Television Review',production_title:'80th Academy Awards'},
+ {slug:'tv-oscar-b',article_category:'Television Review',production_title:'81st Academy Awards'},
+ {slug:'frayn',article_category:'Profile',subject_people:'Michael Frayn'},
+ {slug:'institution',article_category:'Profile',subject_people:''},
+],h,{records:{institution:{excludeProfiles:true}}});
+assert(editorial.get('musicals').itemMap.get('cats').recordIds.has('cats'));
+assert(!editorial.get('sondheim').recordIds.has('frogs-classical'));
+assert(editorial.get('sondheim').recordIds.has('frogs-sondheim'));
+assert(editorial.get('stoppard').itemMap.get('arcadia').recordIds.has('stoppard'));
+assert.equal(editorial.get('television').itemMap.get('24').records.length,2);
+assert.equal(editorial.get('television').itemMap.get('academy-awards').records.length,2);
+assert(editorial.get('profiles').recordIds.has('frayn'));
+assert(!editorial.get('profiles').recordIds.has('institution'));

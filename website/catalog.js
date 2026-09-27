@@ -1,6 +1,6 @@
 import {FIELDS, normalize, nameMatches, publicationYear, serialize, parse, articleForm, articleSubject} from './catalog-engine.js?v=173';
-import {makeCollections, COLLECTIONS} from './collections-engine.js?v=213';
-import {createCollectionViews} from './collection-views.js?v=215';
+import {makeCollections, COLLECTIONS} from './collections-engine.js?v=233';
+import {createCollectionViews} from './collection-views.js?v=233';
 import {INDEX_LETTERS, indexOrder, indexEntries, indexSections} from './index-engine.js?v=173';
 export function createCatalog({state, els, h}) {
   let extra = {}, indexCache = new Map(), textIndex = null, textPromise = null, indexResizeObserver = null, indexScrollCleanup = null, archiveNavObserver = null, placesMap = null, collectionData = null;
@@ -114,7 +114,7 @@ export function createCatalog({state, els, h}) {
     if(!document.body.classList.contains('search-open')){els.results.replaceChildren();return;}
     const total=state.filtered.length, shown=Math.min(state.visible,total);
     els.archiveCount.classList.remove('is-searching');els.archiveCount.textContent=total ? `${total.toLocaleString()} articles`:'No matching articles';
-    const context={contextLabel:'catalog results',backHref:href(),records:state.filtered,query:state.query,titleFirst:h.FEATURES.compactResults || Boolean(state.query.trim()),visibleCount:state.visible};
+    const context={contextLabel:'catalog results',backHref:href(),records:state.filtered,query:state.query,titleFirst:h.FEATURES.compactResults || Boolean(state.query.trim()) || Boolean(extra.item),visibleCount:state.visible};
     const fragment=document.createDocumentFragment();
     if(!total){const empty=node('div',undefined,'catalog-empty');empty.append(node('h2','No articles match these choices'),node('p',extra.text==='1'?'Try a shorter phrase or remove a filter.':'Search covers titles, works, credited people and places. Try fewer words, remove a filter, or include article text.'),button('Clear filters and browse all articles',clear));fragment.append(empty);}
     state.filtered.slice(0,shown).forEach(record=>{
@@ -506,9 +506,37 @@ export function createCatalog({state, els, h}) {
   function explorer(params){
     openIndex('Article Explorer','');
     let v=parse('#explore?'+params);const controls=node('div',undefined,'catalog-filter-grid');const count=node('p',undefined,'index-count');const all=link('View all matching articles','#archive','primary-action');const preview=node('div',undefined,'results');
-    const draw=()=>{const records=state.records.filter(r=>matches(r,v));history.replaceState(null,'',serialize(v,'#explore'));count.textContent=`${records.length.toLocaleString()} matching articles · showing ${Math.min(18,records.length)} below`;all.href=serialize({...v,origin:window.location.hash});all.textContent=`View all ${records.length.toLocaleString()} matching articles`;preview.replaceChildren(...h.sortRecords(records).slice(0,18).map(r=>h.safeResultCard(r,{records,backHref:window.location.hash,contextLabel:'Article Explorer',titleFirst:h.FEATURES.compactResults})));};
-    for(const [labelText,key,options] of [['Subject','subject',[...new Set(state.records.map(r=>articleSubject(r.article_category)))].sort()],['Collection','collection',h.PUBLIC_COLLECTION_FILTERS.map(x=>typeof x==='string'?x:x.value)],['Publication','publication',[...new Set(state.records.map(h.articlePublicationLabel))].sort()],['Year','from',[...new Set(state.records.map(publicationYear))].filter(Boolean).sort()]]){
-      const label=node('label');label.append(node('span',labelText));const select=node('select');select.append(new Option('All',''));options.filter(Boolean).forEach(x=>select.append(new Option(x,x)));select.value=v[key]||'';select.addEventListener('change',()=>{v[key]=select.value;if(key==='from')v.to=select.value;draw();});label.append(select);controls.append(label);
+    const collections=[...getCollections().values()].filter(collection=>collection.records.length);
+    if(v.collection){
+      const legacy={
+        'Recent Collection':'recent','The Shakespeare Collection':'shakespeare','The Stratford Collection':'stratford',
+        'The Shaw Collection':'shaw','The Musical Collection':'musicals','The Television Collection':'television',
+      };
+      v.shelf ||= legacy[v.collection] || collections.find(collection=>collection.title.toLowerCase()===v.collection.toLowerCase())?.id || '';
+      delete v.collection;
+    }
+    const facets=[['Subject','subject'],['Collection','shelf'],['Publication','publication'],['Year','from']];
+    const facetControls=new Map();
+    const availableOptions=(key)=>{
+      const otherFilters={...v,[key]:''};
+      if(key==='from')otherFilters.to='';
+      const candidates=state.records.filter(record=>matches(record,otherFilters));
+      if(key==='shelf')return collections.filter(collection=>candidates.some(record=>collection.recordIds.has(record.slug))).map(collection=>[collection.id,collection.title]);
+      const values=candidates.map(record=>key==='subject'?articleSubject(record.article_category):key==='publication'?h.articlePublicationLabel(record):publicationYear(record));
+      return [...new Set(values.filter(Boolean))].sort((a,b)=>key==='from'?a.localeCompare(b):a.localeCompare(b,undefined,{sensitivity:'base'})).map(value=>[value,value]);
+    };
+    const updateFacets=()=>{
+      for(const [key,select] of facetControls){
+        const selected=v[key]||'';
+        const options=availableOptions(key);
+        if(selected&&!options.some(([value])=>value===selected))options.push([selected,collections.find(collection=>collection.id===selected)?.title||selected]);
+        select.replaceChildren(new Option('All',''),...options.map(([value,label])=>new Option(label,value)));
+        select.value=selected;
+      }
+    };
+    const draw=()=>{updateFacets();const records=state.records.filter(r=>matches(r,v));history.replaceState(null,'',serialize(v,'#explore'));count.textContent=`${records.length.toLocaleString()} matching articles · showing ${Math.min(18,records.length)} below`;all.href=serialize({...v,origin:window.location.hash});all.textContent=`View all ${records.length.toLocaleString()} matching articles`;preview.replaceChildren(...h.sortRecords(records).slice(0,18).map(r=>h.safeResultCard(r,{records,backHref:window.location.hash,contextLabel:'Article Explorer',titleFirst:h.FEATURES.compactResults})));};
+    for(const [labelText,key] of facets){
+      const label=node('label');label.append(node('span',labelText));const select=node('select');facetControls.set(key,select);select.addEventListener('change',()=>{v[key]=select.value;if(key==='from')v.to=select.value;draw();});label.append(select);controls.append(label);
     }
     const search=node('input');search.type='search';search.placeholder='Work, person, company or city';search.setAttribute('aria-label','Search within the selected path');search.value=v.q||'';search.addEventListener('input',()=>{v.q=search.value;draw();});controls.append(search);els.indexContent.append(controls,count,all,preview);draw();
   }

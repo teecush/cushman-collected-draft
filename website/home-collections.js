@@ -1,22 +1,28 @@
 // Homepage previews reuse credited archive artwork; every card opens its collection.
-import {COLLECTIONS} from './collections-engine.js?v=213';
+import {COLLECTIONS,SONDHEIM_SHOWS,workKey} from './collections-engine.js?v=233';
 const examples = {
   books:['swing-time','all-or-nothing-at-all-a-life-of-frank-sinatra','broadway-anecdotes'],
   albums:['both-sides-now','art-of-romance','gypsy'],
   profiles:['alan-rickman','angela-lansbury','christopher-plummer'],
   sondheim:['company','follies','assassins'],
-  musicals:['gypsy','into-the-woods','west-side-story'],
 };
 function element(tag,cls,text){const el=document.createElement(tag);el.className=cls;if(text)el.textContent=text;return el;}
 export function renderHomeCollections(root,curation,collections,{includePublications=true}={}){
   if(!root)return;
   const grid=element('div','home-collection-grid');
-  const famousLetters={id:'famous-letters',title:'Famous Letters',href:'#correspondence:famous-letters'};
+  const famousLetters={id:'famous-letters',title:'Special Letters collection',href:'#correspondence:famous-letters'};
   const specs=[COLLECTIONS[0],famousLetters,...COLLECTIONS.slice(1),...(includePublications?[{id:'publications',title:'Publications',href:'#index:publications'}]:[])];
   for(const spec of specs){
     const card=element('a','home-collection-card '+spec.id);card.href=spec.href||'#collection:'+spec.id;
     const visual=element('span','home-collection-visual');visual.setAttribute('aria-hidden','true');
     let assets=(examples[spec.id]||[]).map(key=>curation.artwork?.[spec.id+':'+key]).filter(Boolean);
+    if(spec.id==='musicals'){
+      const sondheim=new Set(SONDHEIM_SHOWS.map(workKey));
+      const top=[...(collections?.get('musicals')?.items||[])].filter(item=>!sondheim.has(workKey(item.title)))
+        .sort((a,b)=>b.records.length-a.records.length||a.title.localeCompare(b.title)).slice(0,3);
+      assets=top.map(item=>curation.artwork?.['musicals:'+item.id]).filter(Boolean);
+      card.setAttribute('aria-label',`Musicals collection — featuring ${top.map(item=>item.title).join(', ')}`);
+    }
     if(examples[spec.id]&&assets.length<3)assets=Object.entries(curation.artwork||{}).filter(([key])=>key.startsWith(spec.id+':')).slice(0,3).map(([,value])=>value);
     if(spec.id==='recent'){
       assets=[...(collections?.get('recent')?.records||[])]
@@ -32,9 +38,13 @@ export function renderHomeCollections(root,curation,collections,{includePublicat
         {src:'../site_export/content/media/correspondence/famous-letters/john-cleese/1981-09-15-p01.jpg'},
       ];
     }
+    if(spec.id==='stoppard'){
+      const plays=[...(collections?.get('stoppard')?.items||[])].sort((a,b)=>b.records.length-a.records.length||a.title.localeCompare(b.title)).slice(0,3);
+      for(const play of plays)visual.append(element('span','stoppard-preview',play.title));
+    }
     if(spec.id==='television'){
       const shows=[...(collections?.get('television')?.items||[])].sort((a,b)=>b.records.length-a.records.length||a.title.localeCompare(b.title)).slice(0,3);
-      card.setAttribute('aria-label','TV Reviews — featuring '+shows.map(item=>item.title).join(', '));
+      card.setAttribute('aria-label','TV Reviews collection — featuring '+shows.map(item=>item.title).join(', '));
       for(const item of shows){
         const asset=curation.artwork?.['television:'+item.id];
         const tv=element('span','collection-art television home-mini-tv');

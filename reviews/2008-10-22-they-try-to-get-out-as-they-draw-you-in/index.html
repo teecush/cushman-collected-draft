@@ -13,31 +13,33 @@
     <link rel="apple-touch-icon" href="../apple-touch-icon.svg">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Rubik:wght@400;600;700;800;900&display=swap">
-    <link rel="stylesheet" href="./styles.css?v=173">
+    <link rel="stylesheet" href="./styles.css?v=174">
     <link rel="stylesheet" href="./catalog.css?v=194">
-    <link rel="stylesheet" href="./classic.css?v=194">
+    <link rel="stylesheet" href="./classic.css?v=233">
   </head>
   <body class="article-open">
     <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="site-header">
       <nav class="site-nav site-nav-left" id="siteNavLeft" aria-label="Primary navigation left">
-        <a class="nav-search" href="#search" aria-label="Search the archive"><span></span></a>
-        <a href="#section:current">Recent</a>
+        <a href="#search">Search</a>
         <div class="nav-folder nav-folder-wide">
           <a href="#section:browse">Browse</a>
           <div class="nav-dropdown nav-mega">
             <div class="nav-subfolder">
               <a href="#section:collections">Collections</a>
               <div class="nav-side-menu">
+                <a href="#collection:recent">Recent</a>
+                <a href="#correspondence:famous-letters">Special Letters</a>
                 <a href="#section:shakespeare">Shakespeare</a>
                 <a href="#collection:sondheim">Sondheim</a>
+                <a href="#collection:stoppard">Stoppard</a>
                 <a href="#collection:musicals">Musicals</a>
                 <a href="#collection:stratford">Stratford</a>
                 <a href="#collection:shaw">Shaw</a>
                 <a href="#collection:television">TV Reviews</a>
                 <a href="#collection:albums">Music Reviews</a>
                 <a href="#collection:books">Book Reviews</a>
-                <a href="#collection:profiles">Profiles &amp; Obits</a>
+                <a href="#collection:profiles">Artist Profiles</a>
                 <a href="#collection:early">Early Writing</a>
               </div>
             </div>
@@ -46,7 +48,6 @@
               <div class="nav-side-menu">
                 <a href="#works">All Works</a>
                 <a href="#people">All People</a>
-                <a href="#index:publications">Publications</a>
                 <a href="#places">Places</a>
               </div>
             </div>
@@ -72,21 +73,21 @@
       </a>
       <nav class="site-nav site-nav-right" id="siteNavRight" aria-label="Primary navigation right">
         <div class="nav-folder">
-          <a href="#explore">Explore</a>
+          <a href="#section:explore">Explore</a>
           <div class="nav-dropdown">
-            <a href="#explore">Article Explorer</a>
             <a href="#map">Map</a>
             <a href="#timeline">Timeline</a>
+            <a href="#explore">Article Explorer</a>
             <a href="#correspondence">Correspondence</a>
           </div>
         </div>
         <div class="nav-folder">
-          <a href="#about">About</a>
+          <a href="#section:about">About</a>
           <div class="nav-dropdown">
             <a href="#about">About Robert Cushman</a>
             <a href="#critics-circle">Critic's Circle</a>
             <a href="https://www.cushmancollected.com/checkout/donate?donatePageId=5c9b8016652dea361e5feb7d" target="_blank" rel="noopener">Donate</a>
-            <a href="#subscribe">Subscribe</a>
+            <a href="#contact">Contact &amp; Newsletter</a>
           </div>
         </div>
       </nav>
@@ -102,10 +103,25 @@
 
     <nav class="drawer" id="drawer" aria-label="Site navigation">
       <a href="#search">Search the Archive</a>
-      <a href="#section:current">Recent</a>
       <details>
         <summary>Browse</summary>
-        <a href="#section:collections">Collections</a>
+        <a href="#section:browse">Browse overview</a>
+        <details class="drawer-collection-menu">
+          <summary>Collections</summary>
+          <a href="#collection:recent">Recent</a>
+          <a href="#correspondence:famous-letters">Special Letters</a>
+          <a href="#section:shakespeare">Shakespeare</a>
+          <a href="#collection:sondheim">Sondheim</a>
+          <a href="#collection:stoppard">Stoppard</a>
+          <a href="#collection:musicals">Musicals</a>
+          <a href="#collection:stratford">Stratford</a>
+          <a href="#collection:shaw">Shaw</a>
+          <a href="#collection:television">TV Reviews</a>
+          <a href="#collection:albums">Music Reviews</a>
+          <a href="#collection:books">Book Reviews</a>
+          <a href="#collection:profiles">Artist Profiles</a>
+          <a href="#collection:early">Early Writing</a>
+        </details>
         <a href="#master-index:all-works">All Works</a>
         <a href="#master-index:all-people">All People</a>
         <a href="#index:publications">Publications</a>
@@ -113,17 +129,19 @@
       </details>
       <details>
         <summary>Explore</summary>
-        <a href="#explore">Article Explorer</a>
+        <a href="#section:explore">Explore overview</a>
         <a href="#map">Map</a>
         <a href="#timeline">Timeline</a>
+        <a href="#explore">Article Explorer</a>
         <a href="#correspondence">Correspondence</a>
       </details>
       <details>
         <summary>About</summary>
+        <a href="#section:about">About overview</a>
         <a href="#about">About Robert Cushman</a>
         <a href="#critics-circle">Critic's Circle</a>
         <a href="https://www.cushmancollected.com/checkout/donate?donatePageId=5c9b8016652dea361e5feb7d" target="_blank" rel="noopener">Donate</a>
-        <a href="#subscribe">Contact &amp; Newsletter</a>
+        <a href="#contact">Contact &amp; Newsletter</a>
       </details>
     </nav>
 
@@ -225,7 +243,11 @@
         </a>
       </section>
 
-      <section class="frontpage-directory" id="frontpageDirectory" aria-label="Primary site paths"></section>
+      <section class="browse-heading site-index-heading">
+        <h2>Site Index</h2>
+      </section>
+
+      <section class="frontpage-directory" id="frontpageDirectory" aria-label="Site index"></section>
 
       <section class="browse-heading home-secondary-nav" id="browse">
         <h2>Browse the Archive</h2>
@@ -251,7 +273,9 @@
 <p>Lorraine Hansberry&#x27;s play, first seen in 1959, is famous as the first work by a black woman ever to be presented on Broadway. In most respects, it&#x27;s a traditional American domestic drama, with characters alternately oppressed by their social and familial circumstances and rising above them. The difference between it and its predecessors is that this family, the Youngers, is, in their own favoured word, &quot;coloured.&quot; They liveinacramped, roach-infested apartment on the south side of Chicago, which they have a chance to leave when the matriarchal Lena comes into $10,000 of insurance money from the death of her husband. She proposes to spend it on a house, an initiative approved by everyone except her son Walter Lee, a frustrated 35-year old chauffeur who wants to get rich quick by investing in a liquor store. An even grimmer complication arises when a delegate from the all-white neighbourhood into which the Youngers propose to move informs them, in the nicest possible way, that they will not be welcome and tries to bribe them to go elsewhere.</p>
 <p>There are side issues. Beneatha, Walter Lee&#x27;s younger sister, is studying to be a doctor, to the skepticism of her relatives who wonder why she can&#x27;t just settle for being a nurse. She has two suitors: a complacent rich boy, whom she treats with barely-concealed disdain, and a young Nigerian who wants her to go back to his homeland with him. (African trappings attract her and so, increasingly, does the African reality.) Walter&#x27;s wife Ruth is pregnant with their second child; she works as a cleaning lady all the hours, apparently, that God sends, plus a lot more hours that she spends chained to her own family&#x27;s ironing board. The play is about alternative methods of pulling free of an intolerable situation: out to the suburbs, up into business, back to roots.</p>
 <p>It has some familiar American flaws. Characters are inclined to stop in mid-scene and indulge in uplifting monologues drawn from their pasts, which no one ever seems to feel the urge to interrupt. The play pulls more domestic punches, and is sunnier in outlook, than its exemplars O&#x27;Neill and Miller at their best (though it&#x27;s a lot better than either of them at their worst) and its embattled optimism sometimes amounts to sentimentality. But if it&#x27;s dated, it&#x27;s only in a good way. It&#x27;s both sobering and inspiring to sit through these people&#x27;s travails with the words &quot;Barack Obama&quot; ringing through your mind. It&#x27;s also good to be reminded of a time when playwrights knew how to tell stories, and knew how to activate family tensions and family joys (and when producers could supply a sizeable cast to help them do it). This play brings its circumstances alive from the first moment, when we hear, casually, of a young boy obliged to sleep on the sofa because there&#x27;s nowhere else. Despite its abundance of plot, what really keeps the play in motion is its eye and ear for the seesawing of family feelings. It&#x27;s also the strength of Mengesha&#x27;s production, a joint presentation by Soulpepper and Theatre Calgary, whose keynote is emotional generosity.</p>
-<p>It even survives what could be a crippling weakness: an uneven performance by Charles Officer in the pivotal role of Walter. He has some very good scenes, including one in which he promises a bright future to his son (Kofi Payton, who&#x27;s delightful) and another in which he assails his mother for destroying his dreams. But he blurs his crucial transformations, which are also the play&#x27;s; the climax becomes something you want to believe in rather than something you can. Abena Malika&#x27;s Ruth also has her tentative moments, but she can be forgiven anything for the ecstatic aria with which she greets the news that at long last she&#x27;ll have a house to clean that&#x27;s actually her own. Alison Sealy-Smith brings to Lena an expansiveness -- vocal, physical and spiritual -- beyond anything I&#x27;ve seen from her before. She&#x27;s sometimes been a bossy actress; here she&#x27;s commanding, which is something else entirely. She summons, and surmounts, a family history of slavery and sharecropping; and she doesn&#x27;t scant the woman&#x27;s less lovable aspects, which include slapping her free-thinking daughter&#x27;s face to make her profess a belief in God. (How unlovable Hansberry meant this to be is an open question. She also treats Ruth&#x27;s threats to whop her young son as a source of comedy.) The younger Younger herself is Cara Ricketts, equally luminous whether being funny, flirtatious, dedicated or enraged. Michael Blake, casual and brash, and Awaovieyi Agie, humorous and intense, are the two young men in her life -- the two, you might say, who want to marry Beneatha. The white intruder, in a gloriously uncomfortable suit, is Diego Matamoros, his voice emerging from beneath his specs in a kind of benevolent sneer. Another bearer of bad news, even more traumatic, is played with vivid terror by Matthew Kabwe: a tiny role, but an example of how the production fills the play out to its edges. This is literally the case in Scott Reid&#x27;s admirable set, which shows not only the apartment itself but glimpses of the two on other side, providing ample illustration of why the family yearns, so desperately, to get out. - A Raisin in the Sun runs until Nov. 15. For tickets and information call 416-866-8666.</p>
+<p>It even survives what could be a crippling weakness: an uneven performance by Charles Officer in the pivotal role of Walter. He has some very good scenes, including one in which he promises a bright future to his son (Kofi Payton, who&#x27;s delightful) and another in which he assails his mother for destroying his dreams. But he blurs his crucial transformations, which are also the play&#x27;s; the climax becomes something you want to believe in rather than something you can. Abena Malika&#x27;s Ruth also has her tentative moments, but she can be forgiven anything for the ecstatic aria with which she greets the news that at long last she&#x27;ll have a house to clean that&#x27;s actually her own. Alison Sealy-Smith brings to Lena an expansiveness -- vocal, physical and spiritual -- beyond anything I&#x27;ve seen from her before. She&#x27;s sometimes been a bossy actress; here she&#x27;s commanding, which is something else entirely.</p>
+<p>She summons, and surmounts, a family history of slavery and sharecropping; and she doesn&#x27;t scant the woman&#x27;s less lovable aspects, which include slapping her free-thinking daughter&#x27;s face to make her profess a belief in God. (How unlovable Hansberry meant this to be is an open question. She also treats Ruth&#x27;s threats to whop her young son as a source of comedy.) The younger Younger herself is Cara Ricketts, equally luminous whether being funny, flirtatious, dedicated or enraged. Michael Blake, casual and brash, and Awaovieyi Agie, humorous and intense, are the two young men in her life -- the two, you might say, who want to marry Beneatha. The white intruder, in a gloriously uncomfortable suit, is Diego Matamoros, his voice emerging from beneath his specs in a kind of benevolent sneer. Another bearer of bad news, even more traumatic, is played with vivid terror by Matthew Kabwe: a tiny role, but an example of how the production fills the play out to its edges.</p>
+<p>This is literally the case in Scott Reid&#x27;s admirable set, which shows not only the apartment itself but glimpses of the two on other side, providing ample illustration of why the family yearns, so desperately, to get out. - A Raisin in the Sun runs until Nov. 15. For tickets and information call 416-866-8666.</p>
 <p>Black &amp; White Photo: Trudi Lee / Charles Officer as Walter and Abena Malika as Ruth. ;; Caption:</p></div></article>
       </section>
 
@@ -286,6 +310,6 @@
       </section>
     </footer>
 
-    <script src="./app.js?v=194" type="module"></script>
+    <script src="./app.js?v=233" type="module"></script>
   </body>
 </html>

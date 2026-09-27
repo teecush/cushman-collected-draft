@@ -13,31 +13,33 @@
     <link rel="apple-touch-icon" href="../apple-touch-icon.svg">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Rubik:wght@400;600;700;800;900&display=swap">
-    <link rel="stylesheet" href="./styles.css?v=173">
+    <link rel="stylesheet" href="./styles.css?v=174">
     <link rel="stylesheet" href="./catalog.css?v=194">
-    <link rel="stylesheet" href="./classic.css?v=194">
+    <link rel="stylesheet" href="./classic.css?v=233">
   </head>
   <body class="article-open">
     <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="site-header">
       <nav class="site-nav site-nav-left" id="siteNavLeft" aria-label="Primary navigation left">
-        <a class="nav-search" href="#search" aria-label="Search the archive"><span></span></a>
-        <a href="#section:current">Recent</a>
+        <a href="#search">Search</a>
         <div class="nav-folder nav-folder-wide">
           <a href="#section:browse">Browse</a>
           <div class="nav-dropdown nav-mega">
             <div class="nav-subfolder">
               <a href="#section:collections">Collections</a>
               <div class="nav-side-menu">
+                <a href="#collection:recent">Recent</a>
+                <a href="#correspondence:famous-letters">Special Letters</a>
                 <a href="#section:shakespeare">Shakespeare</a>
                 <a href="#collection:sondheim">Sondheim</a>
+                <a href="#collection:stoppard">Stoppard</a>
                 <a href="#collection:musicals">Musicals</a>
                 <a href="#collection:stratford">Stratford</a>
                 <a href="#collection:shaw">Shaw</a>
                 <a href="#collection:television">TV Reviews</a>
                 <a href="#collection:albums">Music Reviews</a>
                 <a href="#collection:books">Book Reviews</a>
-                <a href="#collection:profiles">Profiles &amp; Obits</a>
+                <a href="#collection:profiles">Artist Profiles</a>
                 <a href="#collection:early">Early Writing</a>
               </div>
             </div>
@@ -46,7 +48,6 @@
               <div class="nav-side-menu">
                 <a href="#works">All Works</a>
                 <a href="#people">All People</a>
-                <a href="#index:publications">Publications</a>
                 <a href="#places">Places</a>
               </div>
             </div>
@@ -72,21 +73,21 @@
       </a>
       <nav class="site-nav site-nav-right" id="siteNavRight" aria-label="Primary navigation right">
         <div class="nav-folder">
-          <a href="#explore">Explore</a>
+          <a href="#section:explore">Explore</a>
           <div class="nav-dropdown">
-            <a href="#explore">Article Explorer</a>
             <a href="#map">Map</a>
             <a href="#timeline">Timeline</a>
+            <a href="#explore">Article Explorer</a>
             <a href="#correspondence">Correspondence</a>
           </div>
         </div>
         <div class="nav-folder">
-          <a href="#about">About</a>
+          <a href="#section:about">About</a>
           <div class="nav-dropdown">
             <a href="#about">About Robert Cushman</a>
             <a href="#critics-circle">Critic's Circle</a>
             <a href="https://www.cushmancollected.com/checkout/donate?donatePageId=5c9b8016652dea361e5feb7d" target="_blank" rel="noopener">Donate</a>
-            <a href="#subscribe">Subscribe</a>
+            <a href="#contact">Contact &amp; Newsletter</a>
           </div>
         </div>
       </nav>
@@ -102,10 +103,25 @@
 
     <nav class="drawer" id="drawer" aria-label="Site navigation">
       <a href="#search">Search the Archive</a>
-      <a href="#section:current">Recent</a>
       <details>
         <summary>Browse</summary>
-        <a href="#section:collections">Collections</a>
+        <a href="#section:browse">Browse overview</a>
+        <details class="drawer-collection-menu">
+          <summary>Collections</summary>
+          <a href="#collection:recent">Recent</a>
+          <a href="#correspondence:famous-letters">Special Letters</a>
+          <a href="#section:shakespeare">Shakespeare</a>
+          <a href="#collection:sondheim">Sondheim</a>
+          <a href="#collection:stoppard">Stoppard</a>
+          <a href="#collection:musicals">Musicals</a>
+          <a href="#collection:stratford">Stratford</a>
+          <a href="#collection:shaw">Shaw</a>
+          <a href="#collection:television">TV Reviews</a>
+          <a href="#collection:albums">Music Reviews</a>
+          <a href="#collection:books">Book Reviews</a>
+          <a href="#collection:profiles">Artist Profiles</a>
+          <a href="#collection:early">Early Writing</a>
+        </details>
         <a href="#master-index:all-works">All Works</a>
         <a href="#master-index:all-people">All People</a>
         <a href="#index:publications">Publications</a>
@@ -113,17 +129,19 @@
       </details>
       <details>
         <summary>Explore</summary>
-        <a href="#explore">Article Explorer</a>
+        <a href="#section:explore">Explore overview</a>
         <a href="#map">Map</a>
         <a href="#timeline">Timeline</a>
+        <a href="#explore">Article Explorer</a>
         <a href="#correspondence">Correspondence</a>
       </details>
       <details>
         <summary>About</summary>
+        <a href="#section:about">About overview</a>
         <a href="#about">About Robert Cushman</a>
         <a href="#critics-circle">Critic's Circle</a>
         <a href="https://www.cushmancollected.com/checkout/donate?donatePageId=5c9b8016652dea361e5feb7d" target="_blank" rel="noopener">Donate</a>
-        <a href="#subscribe">Contact &amp; Newsletter</a>
+        <a href="#contact">Contact &amp; Newsletter</a>
       </details>
     </nav>
 
@@ -225,7 +243,11 @@
         </a>
       </section>
 
-      <section class="frontpage-directory" id="frontpageDirectory" aria-label="Primary site paths"></section>
+      <section class="browse-heading site-index-heading">
+        <h2>Site Index</h2>
+      </section>
+
+      <section class="frontpage-directory" id="frontpageDirectory" aria-label="Site index"></section>
 
       <section class="browse-heading home-secondary-nav" id="browse">
         <h2>Browse the Archive</h2>
@@ -251,13 +273,11 @@
 <p>Road Show</p>
 <p>Public Theater, New York City</p>
 <p>Wilson and Addison Mizner were brothers, born just over a year apart in California in the 1870s. During the later decades of that century and the earlier decades of the next, they led colourful lives and acquired colourful reputations: Addison as an architect, Wilson as a playwright, theatrical manager and all-round entrepreneur, and both of them as flim-flam men. They are the subjects of Road Show, a musical by Stephen Sondheim and John Weidman that has reached New York after more than 10 years of planning: much more in Sondheim&#x27;s case, since he&#x27;s on record as having been fascinated by the Mizners since the beginning of his own career in the 1950s.</p>
-<p>Road Show is the fourth title the current project has had; it was known in gestation as Wise Guys (still my own favourite title, but apparently abandoned because people thought it was about the Mafia), in workshop as Gold and in a production by Harold Prince that played Chicago and Washington a few years ago as Bounce. The current name refers not only to the brothers&#x27; constant travels but to an image much favoured by Wilson in particular: the more flamboyant and erratic of the two, he uses &quot;the road,&quot; in surprisingly Tolkienian terms, as an everlasting symbol of adventure, opportunity and get-rich-quickness. Near the end of the show, he has a booze-and-cocaine fuelled vision of a dazzling multi-lane highway that finally convinces Addison that his brother has lost it. They both die penniless; the closing number finds them reunited in some kind of afterlife (Heaven? They doubt it), Wilson still urging further exploration. &quot;Willie,&quot; sings an exasperated Addison, &quot;we&#x27;re dead&quot; --one of those laconic Sondheim lines that in dramatic context are funnier than any epigram. (Others, in other shows, are &quot;June&quot; and &quot;pay attention.&quot; Email your entries.)Wilson, though, is undeterred. He sees the road to eternity as &quot;the biggest opportunity there is.&quot;</p>
+<p>Road Show is the fourth title the current project has had; it was known in gestation as Wise Guys (still my own favourite title, but apparently abandoned because people thought it was about the Mafia), in workshop as Gold and in a production by Harold Prince that played Chicago and Washington a few years ago as Bounce. The current name refers not only to the brothers&#x27; constant travels but to an image much favoured by Wilson in particular: the more flamboyant and erratic of the two, he uses &quot;the road,&quot; in surprisingly Tolkienian terms, as an everlasting symbol of adventure, opportunity and get-rich-quickness. Near the end of the show, he has a booze-and-cocaine fuelled vision of a dazzling multi-lane highway that finally convinces Addison that his brother has lost it. They both die penniless; the closing number finds them reunited in some kind of afterlife (Heaven? They doubt it), Wilson still urging further exploration. &quot;Willie,&quot; sings an exasperated Addison, &quot;we&#x27;re dead&quot; --one of those laconic Sondheim lines that in dramatic context are funnier than any epigram. (Others, in other shows, are &quot;June&quot; and &quot;pay attention.&quot; Email your entries.) Wilson, though, is undeterred. He sees the road to eternity as &quot;the biggest opportunity there is.&quot;</p>
 <p>It&#x27;s a lovely ending, half sardonic and half exultant, to a show with a mostly excellent score and, on paper, a fascinating story. But it still doesn&#x27;t compute, and I suspect that the unfixable fault is history&#x27;s. We are offered, to put it broadly, Addison as the conscientious plodder who gets results and Wilson as the conscienceless scamp who blows in and screws everything and everybody. In their youth, they journey to the Yukon where they actually strike gold: Wilson then gambles their claim away. Much later, they&#x27;re involved in another gold-rush, the 1920s Florida land boom. Addison, with the support of a rich male lover who&#x27;s always dreamed about backing artists, finds his fortune by designing crazily eclectic mansions for the wealthy and pretentious. Then Wilson arrives, takes over and ruins it all. (A market crash--pre-1929 --helps him do it.)</p>
 <p>So there&#x27;s a pattern, played out at the beginning and end of the show. There might, I suppose, be a risk of repetition if it operated in the middle as well, but in fact what happens is that the brothers go their separate ways, which means that the show&#x27;s central dynamic gets suspended. There are, it&#x27;s true, some emotional underpinnings, deriving from their parents. Papa Mizner was a go-getter, whose deathbed bequests to his sons are ambition and the road metaphor. Mama is a loving emotional leech who on her deathbed sings a song called Isn&#x27;t He Something that&#x27;s ostensibly about how much she loves them both, but it is really about Wilson, who (typically) isn&#x27;t there, rather than Addison, who (typically) is, thus breeding more resentment. Mama is beautifully played by Alma Cuervo (who, both times the Sam Mendes production of Cabaret came through Toronto, was a superb Fraulein Schneider); she makes the song the emotional high point of the evening, both touching and troubling.</p>
 <p>Of course, once it&#x27;s over, she&#x27;s dead; though she does, like the rest of the company, stick around as part of a ominous ensemble, perched on and around a brownish construction of platforms and alcoves, artfully composed of trunks and suitcases. This setting has been designed by the show&#x27;s director, John Doyle, celebrated for his stripped-down actors-as-musicians revivals of Sondheim&#x27;s Sweeney Todd and Company. This time he has a full-time band to play Jonathan Tunick&#x27;s customarily fine orchestrations, but the production is still determinedly downbeat; there&#x27;s no choreographer, and the staging seems designed to head off any possibility of applause after a song.</p>
-<p>Each brother gets to head up a company number depicting his solo progress. Addison&#x27;s Trip shows its subject wandering the globe, investing in doomed ventures, and accumulating the bric-a-brac that will eventually form the foundation of his architectural style. It&#x27;s a slyly appropriate composition that glides beguilingly</p>
-<p>The road is a symbol of adventure, opportunity and get-rich-quickness</p>
-<p>and hopefully along, and then turns up the tension. Alexander Gemignani, who is both a fine character actor and one of the best singers in musical theatre, makes a charmingly ungainly Addison, though sometimes underplaying the moments when lightbulbs go off in his head. Michael Cerveris is good when Wilson goes to pieces, less adept at conveying raffish confidence. His major turn, That Was a Year, shows him in New York, marrying and living off a rich widow, writing plays, promoting jockeys and prize-fighters, and going bust. It&#x27;s here that the production&#x27;s austerity seems most at odds with the slam-bang careers it&#x27;s chronicling. It shouldn&#x27;t have to work so hard to convince us of its seriousness.</p>
+<p>Each brother gets to head up a company number depicting his solo progress. Addison&#x27;s Trip shows its subject wandering the globe, investing in doomed ventures, and accumulating the bric-a-brac that will eventually form the foundation of his architectural style. It&#x27;s a slyly appropriate composition that glides beguilingly and hopefully along, and then turns up the tension. Alexander Gemignani, who is both a fine character actor and one of the best singers in musical theatre, makes a charmingly ungainly Addison, though sometimes underplaying the moments when lightbulbs go off in his head. Michael Cerveris is good when Wilson goes to pieces, less adept at conveying raffish confidence. His major turn, That Was a Year, shows him in New York, marrying and living off a rich widow, writing plays, promoting jockeys and prize-fighters, and going bust. It&#x27;s here that the production&#x27;s austerity seems most at odds with the slam-bang careers it&#x27;s chronicling. It shouldn&#x27;t have to work so hard to convince us of its seriousness.</p>
 <p>Weidman&#x27;s script doesn&#x27;t overstress the story&#x27;s resonance as a representative American fable, but it&#x27;s inescapably there, especially now. Sondheim&#x27;s score, as intelligent and exploratory as expected, combines jagged with jaunty; it also includes a bewitching long-lined ballad (The Best Thing That Ever Has Happened) unlike anything in his previous work. But he hasn&#x27;t got as deeply inside his characters as usual. It&#x27;s far more Addison&#x27;s show than it&#x27;s Wilson&#x27;s -- the opening number is about him -- but in the end, we don&#x27;t know whether he&#x27;s his brother&#x27;s victim or the architect (sorry) of his own misfortune. If it is both, the proportions aren&#x27;t clear. I doubt, though, that this is the end of the road for Road Show. There&#x27;s too much gold there, too much bounce, for some theatre not to try it again. - Road Show is at the Public Theater in New York City until Dec. 28. Call 212-967-7555 for tickets and information.</p></div></article>
       </section>
 
@@ -292,6 +312,6 @@
       </section>
     </footer>
 
-    <script src="./app.js?v=194" type="module"></script>
+    <script src="./app.js?v=233" type="module"></script>
   </body>
 </html>

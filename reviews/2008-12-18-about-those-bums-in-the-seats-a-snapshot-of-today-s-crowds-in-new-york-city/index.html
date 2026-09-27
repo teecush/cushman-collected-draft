@@ -13,31 +13,33 @@
     <link rel="apple-touch-icon" href="../apple-touch-icon.svg">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Rubik:wght@400;600;700;800;900&display=swap">
-    <link rel="stylesheet" href="./styles.css?v=173">
+    <link rel="stylesheet" href="./styles.css?v=174">
     <link rel="stylesheet" href="./catalog.css?v=194">
-    <link rel="stylesheet" href="./classic.css?v=194">
+    <link rel="stylesheet" href="./classic.css?v=233">
   </head>
   <body class="article-open">
     <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="site-header">
       <nav class="site-nav site-nav-left" id="siteNavLeft" aria-label="Primary navigation left">
-        <a class="nav-search" href="#search" aria-label="Search the archive"><span></span></a>
-        <a href="#section:current">Recent</a>
+        <a href="#search">Search</a>
         <div class="nav-folder nav-folder-wide">
           <a href="#section:browse">Browse</a>
           <div class="nav-dropdown nav-mega">
             <div class="nav-subfolder">
               <a href="#section:collections">Collections</a>
               <div class="nav-side-menu">
+                <a href="#collection:recent">Recent</a>
+                <a href="#correspondence:famous-letters">Special Letters</a>
                 <a href="#section:shakespeare">Shakespeare</a>
                 <a href="#collection:sondheim">Sondheim</a>
+                <a href="#collection:stoppard">Stoppard</a>
                 <a href="#collection:musicals">Musicals</a>
                 <a href="#collection:stratford">Stratford</a>
                 <a href="#collection:shaw">Shaw</a>
                 <a href="#collection:television">TV Reviews</a>
                 <a href="#collection:albums">Music Reviews</a>
                 <a href="#collection:books">Book Reviews</a>
-                <a href="#collection:profiles">Profiles &amp; Obits</a>
+                <a href="#collection:profiles">Artist Profiles</a>
                 <a href="#collection:early">Early Writing</a>
               </div>
             </div>
@@ -46,7 +48,6 @@
               <div class="nav-side-menu">
                 <a href="#works">All Works</a>
                 <a href="#people">All People</a>
-                <a href="#index:publications">Publications</a>
                 <a href="#places">Places</a>
               </div>
             </div>
@@ -72,21 +73,21 @@
       </a>
       <nav class="site-nav site-nav-right" id="siteNavRight" aria-label="Primary navigation right">
         <div class="nav-folder">
-          <a href="#explore">Explore</a>
+          <a href="#section:explore">Explore</a>
           <div class="nav-dropdown">
-            <a href="#explore">Article Explorer</a>
             <a href="#map">Map</a>
             <a href="#timeline">Timeline</a>
+            <a href="#explore">Article Explorer</a>
             <a href="#correspondence">Correspondence</a>
           </div>
         </div>
         <div class="nav-folder">
-          <a href="#about">About</a>
+          <a href="#section:about">About</a>
           <div class="nav-dropdown">
             <a href="#about">About Robert Cushman</a>
             <a href="#critics-circle">Critic's Circle</a>
             <a href="https://www.cushmancollected.com/checkout/donate?donatePageId=5c9b8016652dea361e5feb7d" target="_blank" rel="noopener">Donate</a>
-            <a href="#subscribe">Subscribe</a>
+            <a href="#contact">Contact &amp; Newsletter</a>
           </div>
         </div>
       </nav>
@@ -102,10 +103,25 @@
 
     <nav class="drawer" id="drawer" aria-label="Site navigation">
       <a href="#search">Search the Archive</a>
-      <a href="#section:current">Recent</a>
       <details>
         <summary>Browse</summary>
-        <a href="#section:collections">Collections</a>
+        <a href="#section:browse">Browse overview</a>
+        <details class="drawer-collection-menu">
+          <summary>Collections</summary>
+          <a href="#collection:recent">Recent</a>
+          <a href="#correspondence:famous-letters">Special Letters</a>
+          <a href="#section:shakespeare">Shakespeare</a>
+          <a href="#collection:sondheim">Sondheim</a>
+          <a href="#collection:stoppard">Stoppard</a>
+          <a href="#collection:musicals">Musicals</a>
+          <a href="#collection:stratford">Stratford</a>
+          <a href="#collection:shaw">Shaw</a>
+          <a href="#collection:television">TV Reviews</a>
+          <a href="#collection:albums">Music Reviews</a>
+          <a href="#collection:books">Book Reviews</a>
+          <a href="#collection:profiles">Artist Profiles</a>
+          <a href="#collection:early">Early Writing</a>
+        </details>
         <a href="#master-index:all-works">All Works</a>
         <a href="#master-index:all-people">All People</a>
         <a href="#index:publications">Publications</a>
@@ -113,17 +129,19 @@
       </details>
       <details>
         <summary>Explore</summary>
-        <a href="#explore">Article Explorer</a>
+        <a href="#section:explore">Explore overview</a>
         <a href="#map">Map</a>
         <a href="#timeline">Timeline</a>
+        <a href="#explore">Article Explorer</a>
         <a href="#correspondence">Correspondence</a>
       </details>
       <details>
         <summary>About</summary>
+        <a href="#section:about">About overview</a>
         <a href="#about">About Robert Cushman</a>
         <a href="#critics-circle">Critic's Circle</a>
         <a href="https://www.cushmancollected.com/checkout/donate?donatePageId=5c9b8016652dea361e5feb7d" target="_blank" rel="noopener">Donate</a>
-        <a href="#subscribe">Contact &amp; Newsletter</a>
+        <a href="#contact">Contact &amp; Newsletter</a>
       </details>
     </nav>
 
@@ -225,7 +243,11 @@
         </a>
       </section>
 
-      <section class="frontpage-directory" id="frontpageDirectory" aria-label="Primary site paths"></section>
+      <section class="browse-heading site-index-heading">
+        <h2>Site Index</h2>
+      </section>
+
+      <section class="frontpage-directory" id="frontpageDirectory" aria-label="Site index"></section>
 
       <section class="browse-heading home-secondary-nav" id="browse">
         <h2>Browse the Archive</h2>
@@ -251,7 +273,9 @@
 <p>At a Sunday matinee of Road Show, the Stephen Sondheim-John Weidman musical at the Public Theatre, which I reviewed a couple of weeks ago, the house seemed made up of regular Public subscribers and upscale Sondheim fans. (Here there is a considerable overlap between groups.) These are older couples, probably from the East Side, in clothes from Barneys or Bergdorf&#x27;s; the wives, one felt, were the prime movers in getting the tickets bought. They seemed to be trying hard to love the show, but only partially succeeding; discussions on the way out (the show has no intermission) were intense but inconclusive. They were still glad to be there rather than on Broadway. Not that they couldn&#x27;t afford Broadway -- they all seemed comfortably heeled -- but that they knew it wouldn&#x27;t have much to offer them, certainly not in terms of musicals.</p>
 <p>Saturday night on Broadway itself reveals a much younger crowd. This is atypical, but the play, a revival of David Mamet&#x27;s Speed the Plow, may still count as cutting edge, and two of the cast of three are stars of TV niche-hits: Jeremy Piven (Entourage) and Elisabeth Moss (Mad Men). The play is small-potatoes Mamet, a sliver off his cutthroat masterpiece Glengarry Glen Ross, with the locale changed from the real-estate shark pools of Chicago to the back offices of Hollywood, and with a woman permitted on the premises. Here, a young producer (Piven), who has sold his soul to commerce, is tempted to reclaim it by an apparently idealistic intern (Moss) who turns out to have her own agenda. It&#x27;s well performed at dialogue level, though without the murderous elan it really needs. Piven&#x27;s performance never suggests that he may have any depths to be stirred, not that the play gives him much help in this respect. Moss, in a role whose trajectory is remarkably similar to her shy-but-ruthless Peggy on TV, does her familiar thing but makes it fresh, which may be a definition of star quality; she seems to be carefully thinking every moment, and she never stops being ambiguous. If hers is the most interesting presence, the most immediately electric, at least when he gets handed a tirade, is that of Raul Esparza.</p>
 <p>Esparza is the only actor whose resume is predominantly theatrical (he was Bobby in the recent revival of Company) as an aspiring hotshot who sees his one chance of a green light receding Fitzgerald-like into the distance and fights viciously, with both speech and fists, to get it back. The house, which was full of updated versions of the young execs who give Moss a tough time on Mad Men, audibly warmed to him. There was still a lingering sense of dissatisfaction, as of people being shortchanged by a short play that never really makes up in texture what it lacks in time. But even minor Mamet is better than anything else that&#x27;s likely to be found on Broadway.</p>
-<p>It is, for example, infinitely better than the approved dramatic hit August:Osage County, the most overrated American play since the last overrated American play. (There&#x27;s one most seasons.) In this marathon drama, the most acclaimed piece to be set in Oklahoma since Oklahoma!, generations of a family converge on a homestead much less than 24 hours from Tulsa, to commiserate over an unexpected loss and to compete enthusiastically in the old American sport of heaving skeletons out of closets. That Wikipedia calls it &quot;darkly comedic&quot; should be warning enough; the self-consciously brooding title (the significance of the month is never made clear) supplies the rest. After running for 18 months, the play has long exhausted the hard-core New York audience. It now -- I saw a matinee -- gets bused-in groups from the suburbs, eagerly lapping up what they&#x27;ve been told is good for them. They exploded , pleasantly shocked, at every cheerfully salacious line the author, Tracy Letts, had provided for their delectation; they gasped approvingly at each Gothic revelation. Major plot twist: A mild case of incest turns out to be a severe case of incest. Most of the performances are caricatures: You can see rather better direction, and infinitely better acting, any night of any week in Toronto. It makes you wonder, all over again, why we&#x27;re supposed to be so much in awe of New York: Why, for example, Dancap Productions tout the word &quot;Broadway&quot; in their publicity as if they were offering us a slice of the Holy Grail. To be fair, the original cast (from the highly-esteemed Steppenwolf company of Chicago) have taken themselves off to London; their replacements, with a few exceptions, are well below snuff. One of the exceptions is Estelle Parsons, who at a scarcely credible 81, plays a crop-haired and corrosive matriarch with a prescription-drug habit and selective memory loss. This is a role bound, in one of the flood of Canadian productions set to engulf us when the rights become available, to be played by Martha Henry, while the New York actress playing the most abrasive of the play&#x27;s statutory three daughters is a dead ringer for Seana McKenna with about a tenth of the talent.</p>
+<p>It is, for example, infinitely better than the approved dramatic hit August:Osage County, the most overrated American play since the last overrated American play. (There&#x27;s one most seasons.) In this marathon drama, the most acclaimed piece to be set in Oklahoma since Oklahoma!, generations of a family converge on a homestead much less than 24 hours from Tulsa, to commiserate over an unexpected loss and to compete enthusiastically in the old American sport of heaving skeletons out of closets. That Wikipedia calls it &quot;darkly comedic&quot; should be warning enough; the self-consciously brooding title (the significance of the month is never made clear) supplies the rest. After running for 18 months, the play has long exhausted the hard-core New York audience. It now -- I saw a matinee -- gets bused-in groups from the suburbs, eagerly lapping up what they&#x27;ve been told is good for them.</p>
+<p>They exploded , pleasantly shocked, at every cheerfully salacious line the author, Tracy Letts, had provided for their delectation; they gasped approvingly at each Gothic revelation. Major plot twist: A mild case of incest turns out to be a severe case of incest. Most of the performances are caricatures: You can see rather better direction, and infinitely better acting, any night of any week in Toronto. It makes you wonder, all over again, why we&#x27;re supposed to be so much in awe of New York: Why, for example, Dancap Productions tout the word &quot;Broadway&quot; in their publicity as if they were offering us a slice of the Holy Grail. To be fair, the original cast (from the highly-esteemed Steppenwolf company of Chicago) have taken themselves off to London; their replacements, with a few exceptions, are well below snuff. One of the exceptions is Estelle Parsons, who at a scarcely credible 81, plays a crop-haired and corrosive matriarch with a prescription-drug habit and selective memory loss.</p>
+<p>This is a role bound, in one of the flood of Canadian productions set to engulf us when the rights become available, to be played by Martha Henry, while the New York actress playing the most abrasive of the play&#x27;s statutory three daughters is a dead ringer for Seana McKenna with about a tenth of the talent.</p>
 <p>Downtown at the New York Theatre Workshop, the co-producers&#x27; handle is &quot;Theatre for a New Audience.&quot; They looked pretty familiar to me: students and middle-aged theatre buffs, possibly academics and with a sizeable European contingent,</p>
 <p>paying reverential homage to a Peter Brook production, from his Theatre des Bouffes du Nord in Paris, but performed in English. The one speaking actor in a cast of two is Bruce Myers, a long-time British member of Brook&#x27;s international troupe whom I once described (to his delight, I believe) as &quot;a Royal Shakespeare Company dropout.&quot; He&#x27;s now narrator and title character in The Grand Inquisitor, a faithful rendition of the famous encounter, fromDostoyevsky&#x27;s The Brothers Karamazov, between the persecuting ecclesiastic and a silent Christ returned to Earth and due for a second crucifixion. Myers has grown into a commanding, possibly a great actor, navigating long paragraphs with passion and logic and even wit, but beyond his presence there seems little point in putting onstage something that can as easily be read. And even on the page the Inquisitor seems to make a single point -- that mankind prefers the chains of authority to the responsibilities of freedom-- over and over again. Onstage and in the auditorium, the atmosphere was penitentially intense. Once again, the Theatre had found its Public.</p>
 <p>Color Photo: Lucas Jackson, Reuters / Tony award-nominated actor Raul Esparza. ;; Caption:</p></div></article>
@@ -288,6 +312,6 @@
       </section>
     </footer>
 
-    <script src="./app.js?v=194" type="module"></script>
+    <script src="./app.js?v=233" type="module"></script>
   </body>
 </html>

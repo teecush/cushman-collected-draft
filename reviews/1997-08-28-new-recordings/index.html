@@ -13,31 +13,33 @@
     <link rel="apple-touch-icon" href="../apple-touch-icon.svg">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Rubik:wght@400;600;700;800;900&display=swap">
-    <link rel="stylesheet" href="./styles.css?v=173">
+    <link rel="stylesheet" href="./styles.css?v=174">
     <link rel="stylesheet" href="./catalog.css?v=194">
-    <link rel="stylesheet" href="./classic.css?v=194">
+    <link rel="stylesheet" href="./classic.css?v=233">
   </head>
   <body class="article-open">
     <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="site-header">
       <nav class="site-nav site-nav-left" id="siteNavLeft" aria-label="Primary navigation left">
-        <a class="nav-search" href="#search" aria-label="Search the archive"><span></span></a>
-        <a href="#section:current">Recent</a>
+        <a href="#search">Search</a>
         <div class="nav-folder nav-folder-wide">
           <a href="#section:browse">Browse</a>
           <div class="nav-dropdown nav-mega">
             <div class="nav-subfolder">
               <a href="#section:collections">Collections</a>
               <div class="nav-side-menu">
+                <a href="#collection:recent">Recent</a>
+                <a href="#correspondence:famous-letters">Special Letters</a>
                 <a href="#section:shakespeare">Shakespeare</a>
                 <a href="#collection:sondheim">Sondheim</a>
+                <a href="#collection:stoppard">Stoppard</a>
                 <a href="#collection:musicals">Musicals</a>
                 <a href="#collection:stratford">Stratford</a>
                 <a href="#collection:shaw">Shaw</a>
                 <a href="#collection:television">TV Reviews</a>
                 <a href="#collection:albums">Music Reviews</a>
                 <a href="#collection:books">Book Reviews</a>
-                <a href="#collection:profiles">Profiles &amp; Obits</a>
+                <a href="#collection:profiles">Artist Profiles</a>
                 <a href="#collection:early">Early Writing</a>
               </div>
             </div>
@@ -46,7 +48,6 @@
               <div class="nav-side-menu">
                 <a href="#works">All Works</a>
                 <a href="#people">All People</a>
-                <a href="#index:publications">Publications</a>
                 <a href="#places">Places</a>
               </div>
             </div>
@@ -72,21 +73,21 @@
       </a>
       <nav class="site-nav site-nav-right" id="siteNavRight" aria-label="Primary navigation right">
         <div class="nav-folder">
-          <a href="#explore">Explore</a>
+          <a href="#section:explore">Explore</a>
           <div class="nav-dropdown">
-            <a href="#explore">Article Explorer</a>
             <a href="#map">Map</a>
             <a href="#timeline">Timeline</a>
+            <a href="#explore">Article Explorer</a>
             <a href="#correspondence">Correspondence</a>
           </div>
         </div>
         <div class="nav-folder">
-          <a href="#about">About</a>
+          <a href="#section:about">About</a>
           <div class="nav-dropdown">
             <a href="#about">About Robert Cushman</a>
             <a href="#critics-circle">Critic's Circle</a>
             <a href="https://www.cushmancollected.com/checkout/donate?donatePageId=5c9b8016652dea361e5feb7d" target="_blank" rel="noopener">Donate</a>
-            <a href="#subscribe">Subscribe</a>
+            <a href="#contact">Contact &amp; Newsletter</a>
           </div>
         </div>
       </nav>
@@ -102,10 +103,25 @@
 
     <nav class="drawer" id="drawer" aria-label="Site navigation">
       <a href="#search">Search the Archive</a>
-      <a href="#section:current">Recent</a>
       <details>
         <summary>Browse</summary>
-        <a href="#section:collections">Collections</a>
+        <a href="#section:browse">Browse overview</a>
+        <details class="drawer-collection-menu">
+          <summary>Collections</summary>
+          <a href="#collection:recent">Recent</a>
+          <a href="#correspondence:famous-letters">Special Letters</a>
+          <a href="#section:shakespeare">Shakespeare</a>
+          <a href="#collection:sondheim">Sondheim</a>
+          <a href="#collection:stoppard">Stoppard</a>
+          <a href="#collection:musicals">Musicals</a>
+          <a href="#collection:stratford">Stratford</a>
+          <a href="#collection:shaw">Shaw</a>
+          <a href="#collection:television">TV Reviews</a>
+          <a href="#collection:albums">Music Reviews</a>
+          <a href="#collection:books">Book Reviews</a>
+          <a href="#collection:profiles">Artist Profiles</a>
+          <a href="#collection:early">Early Writing</a>
+        </details>
         <a href="#master-index:all-works">All Works</a>
         <a href="#master-index:all-people">All People</a>
         <a href="#index:publications">Publications</a>
@@ -113,17 +129,19 @@
       </details>
       <details>
         <summary>Explore</summary>
-        <a href="#explore">Article Explorer</a>
+        <a href="#section:explore">Explore overview</a>
         <a href="#map">Map</a>
         <a href="#timeline">Timeline</a>
+        <a href="#explore">Article Explorer</a>
         <a href="#correspondence">Correspondence</a>
       </details>
       <details>
         <summary>About</summary>
+        <a href="#section:about">About overview</a>
         <a href="#about">About Robert Cushman</a>
         <a href="#critics-circle">Critic's Circle</a>
         <a href="https://www.cushmancollected.com/checkout/donate?donatePageId=5c9b8016652dea361e5feb7d" target="_blank" rel="noopener">Donate</a>
-        <a href="#subscribe">Contact &amp; Newsletter</a>
+        <a href="#contact">Contact &amp; Newsletter</a>
       </details>
     </nav>
 
@@ -225,7 +243,11 @@
         </a>
       </section>
 
-      <section class="frontpage-directory" id="frontpageDirectory" aria-label="Primary site paths"></section>
+      <section class="browse-heading site-index-heading">
+        <h2>Site Index</h2>
+      </section>
+
+      <section class="frontpage-directory" id="frontpageDirectory" aria-label="Site index"></section>
 
       <section class="browse-heading home-secondary-nav" id="browse">
         <h2>Browse the Archive</h2>
@@ -253,7 +275,9 @@
 <p>The Simpsons: Songs in the Key of Springfield</p>
 <p>Rhino</p>
 <p>Rating:***</p>
-<p>A few years ago there was a pointless CD called The Simpsons Sing the Blues in which the familiar characters were let loose on pre-existing songs; Homer, for example, got to moan Born Under a Bad Sign . This, by contrast, is the disc the world has been waiting for: a selection of musical highlights from the soundtrack of the TV show itself. There are more versions here of the Itchy and Scratchy theme and the final credits music than even devotees should require, and non-fans (I&#x27;m told they exist) may be confused by the rapid sequence of short songs, instrumentals, and dialogue snippets, but theyre unlikely to be listening anyway. The regular performers remain awe-inspiringly perfect, the writing fanatically and insouciantly inventive (this show has more and better jokes than the rest of American TV comedy put together) and the musical satire matches the social; sometimes we get both together as in The Amendment Song , introduced in disgusted tones by Krusty the Clown as a cartoon that tries to make learning fun. Its a spoof on condescending educational TV as it might be hi-jacked by the political Right, (&quot;there&#x27;s a lot of flag-burners who have got too much freedom/I&#x27;d like to make it legal for policemen to beat em&quot;) and featuring singing trumpeter Jack Sheldon. Other guests include Tony Bennett and Robert Goulet, though Goulet nearly fails to make it, a mischance to which Mr. Burns responds with the spectrally assured command very well, begin the thawing of Jim Nabors. And there is the Masonic triumphalism of The Stonecutters Song (&quot;who rigs every Oscar night? we do!&quot;), Apu rhetorically inquiring Who Needs the Kwik-e-Mart? (leading Homer to comment He lied to us through song. I hate when people do that), the muscial version of Planet of the Apes (&quot;I hate every ape I see/from Chimpan A to Chimpan Zee&quot;) with its echoes of Annie , and the even more inspired Oh, Streetcar! Not only does this come to us complete with Jon Lovitz&#x27;s unforgettable vocal portrait of a self-intoxicated director (perhaps we are all a little mad, we who don the cap and bells and tread beneath the proscenium arch), it also convinces us that a Broadway-influenced community musical of A Streetcar Named Desire would be exactly like this, from the melodramatic scene-setting (&quot;a city that the damned called New Orleans&quot;) to the hell-kicking finale You Can Always Depend on the Kindness of Strangers, Marge as Blanche DuBois chirping &quot;a stranger&#x27;s just a friend you havent met&quot; as the men in white cart her off to the asylum. The disk mysteriously omits everybodys most treasured Streetcar couplet (You&#x27;re a girl and I&#x27;m a fella/&quot;Stanley, stop or I&#x27;ll tell Stella&quot;). I also demand an explanation for the non-appearance of the Song of the Mediocre Presidents. Otherwise: a fine record of one of the peaks of Western civilisation.</p></div></article>
+<p>A few years ago there was a pointless CD called The Simpsons Sing the Blues in which the familiar characters were let loose on pre-existing songs; Homer, for example, got to moan Born Under a Bad Sign . This, by contrast, is the disc the world has been waiting for: a selection of musical highlights from the soundtrack of the TV show itself. There are more versions here of the Itchy and Scratchy theme and the final credits music than even devotees should require, and non-fans (I&#x27;m told they exist) may be confused by the rapid sequence of short songs, instrumentals, and dialogue snippets, but theyre unlikely to be listening anyway. The regular performers remain awe-inspiringly perfect, the writing fanatically and insouciantly inventive (this show has more and better jokes than the rest of American TV comedy put together) and the musical satire matches the social; sometimes we get both together as in The Amendment Song , introduced in disgusted tones by Krusty the Clown as a cartoon that tries to make learning fun.</p>
+<p>Its a spoof on condescending educational TV as it might be hi-jacked by the political Right, (&quot;there&#x27;s a lot of flag-burners who have got too much freedom/I&#x27;d like to make it legal for policemen to beat em&quot;) and featuring singing trumpeter Jack Sheldon. Other guests include Tony Bennett and Robert Goulet, though Goulet nearly fails to make it, a mischance to which Mr. Burns responds with the spectrally assured command very well, begin the thawing of Jim Nabors. And there is the Masonic triumphalism of The Stonecutters Song (&quot;who rigs every Oscar night? we do!&quot;), Apu rhetorically inquiring Who Needs the Kwik-e-Mart? (leading Homer to comment He lied to us through song. I hate when people do that), the muscial version of Planet of the Apes (&quot;I hate every ape I see/from Chimpan A to Chimpan Zee&quot;) with its echoes of Annie , and the even more inspired Oh, Streetcar!</p>
+<p>Not only does this come to us complete with Jon Lovitz&#x27;s unforgettable vocal portrait of a self-intoxicated director (perhaps we are all a little mad, we who don the cap and bells and tread beneath the proscenium arch), it also convinces us that a Broadway-influenced community musical of A Streetcar Named Desire would be exactly like this, from the melodramatic scene-setting (&quot;a city that the damned called New Orleans&quot;) to the hell-kicking finale You Can Always Depend on the Kindness of Strangers, Marge as Blanche DuBois chirping &quot;a stranger&#x27;s just a friend you havent met&quot; as the men in white cart her off to the asylum. The disk mysteriously omits everybodys most treasured Streetcar couplet (You&#x27;re a girl and I&#x27;m a fella/&quot;Stanley, stop or I&#x27;ll tell Stella&quot;). I also demand an explanation for the non-appearance of the Song of the Mediocre Presidents. Otherwise: a fine record of one of the peaks of Western civilisation.</p></div></article>
       </section>
 
       <section class="index-view" id="indexView" hidden>
@@ -287,6 +311,6 @@
       </section>
     </footer>
 
-    <script src="./app.js?v=194" type="module"></script>
+    <script src="./app.js?v=233" type="module"></script>
   </body>
 </html>

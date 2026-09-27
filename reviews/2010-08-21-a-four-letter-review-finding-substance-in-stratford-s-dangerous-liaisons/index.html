@@ -13,31 +13,33 @@
     <link rel="apple-touch-icon" href="../apple-touch-icon.svg">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Rubik:wght@400;600;700;800;900&display=swap">
-    <link rel="stylesheet" href="./styles.css?v=173">
+    <link rel="stylesheet" href="./styles.css?v=174">
     <link rel="stylesheet" href="./catalog.css?v=194">
-    <link rel="stylesheet" href="./classic.css?v=194">
+    <link rel="stylesheet" href="./classic.css?v=233">
   </head>
   <body class="article-open">
     <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="site-header">
       <nav class="site-nav site-nav-left" id="siteNavLeft" aria-label="Primary navigation left">
-        <a class="nav-search" href="#search" aria-label="Search the archive"><span></span></a>
-        <a href="#section:current">Recent</a>
+        <a href="#search">Search</a>
         <div class="nav-folder nav-folder-wide">
           <a href="#section:browse">Browse</a>
           <div class="nav-dropdown nav-mega">
             <div class="nav-subfolder">
               <a href="#section:collections">Collections</a>
               <div class="nav-side-menu">
+                <a href="#collection:recent">Recent</a>
+                <a href="#correspondence:famous-letters">Special Letters</a>
                 <a href="#section:shakespeare">Shakespeare</a>
                 <a href="#collection:sondheim">Sondheim</a>
+                <a href="#collection:stoppard">Stoppard</a>
                 <a href="#collection:musicals">Musicals</a>
                 <a href="#collection:stratford">Stratford</a>
                 <a href="#collection:shaw">Shaw</a>
                 <a href="#collection:television">TV Reviews</a>
                 <a href="#collection:albums">Music Reviews</a>
                 <a href="#collection:books">Book Reviews</a>
-                <a href="#collection:profiles">Profiles &amp; Obits</a>
+                <a href="#collection:profiles">Artist Profiles</a>
                 <a href="#collection:early">Early Writing</a>
               </div>
             </div>
@@ -46,7 +48,6 @@
               <div class="nav-side-menu">
                 <a href="#works">All Works</a>
                 <a href="#people">All People</a>
-                <a href="#index:publications">Publications</a>
                 <a href="#places">Places</a>
               </div>
             </div>
@@ -72,21 +73,21 @@
       </a>
       <nav class="site-nav site-nav-right" id="siteNavRight" aria-label="Primary navigation right">
         <div class="nav-folder">
-          <a href="#explore">Explore</a>
+          <a href="#section:explore">Explore</a>
           <div class="nav-dropdown">
-            <a href="#explore">Article Explorer</a>
             <a href="#map">Map</a>
             <a href="#timeline">Timeline</a>
+            <a href="#explore">Article Explorer</a>
             <a href="#correspondence">Correspondence</a>
           </div>
         </div>
         <div class="nav-folder">
-          <a href="#about">About</a>
+          <a href="#section:about">About</a>
           <div class="nav-dropdown">
             <a href="#about">About Robert Cushman</a>
             <a href="#critics-circle">Critic's Circle</a>
             <a href="https://www.cushmancollected.com/checkout/donate?donatePageId=5c9b8016652dea361e5feb7d" target="_blank" rel="noopener">Donate</a>
-            <a href="#subscribe">Subscribe</a>
+            <a href="#contact">Contact &amp; Newsletter</a>
           </div>
         </div>
       </nav>
@@ -102,10 +103,25 @@
 
     <nav class="drawer" id="drawer" aria-label="Site navigation">
       <a href="#search">Search the Archive</a>
-      <a href="#section:current">Recent</a>
       <details>
         <summary>Browse</summary>
-        <a href="#section:collections">Collections</a>
+        <a href="#section:browse">Browse overview</a>
+        <details class="drawer-collection-menu">
+          <summary>Collections</summary>
+          <a href="#collection:recent">Recent</a>
+          <a href="#correspondence:famous-letters">Special Letters</a>
+          <a href="#section:shakespeare">Shakespeare</a>
+          <a href="#collection:sondheim">Sondheim</a>
+          <a href="#collection:stoppard">Stoppard</a>
+          <a href="#collection:musicals">Musicals</a>
+          <a href="#collection:stratford">Stratford</a>
+          <a href="#collection:shaw">Shaw</a>
+          <a href="#collection:television">TV Reviews</a>
+          <a href="#collection:albums">Music Reviews</a>
+          <a href="#collection:books">Book Reviews</a>
+          <a href="#collection:profiles">Artist Profiles</a>
+          <a href="#collection:early">Early Writing</a>
+        </details>
         <a href="#master-index:all-works">All Works</a>
         <a href="#master-index:all-people">All People</a>
         <a href="#index:publications">Publications</a>
@@ -113,17 +129,19 @@
       </details>
       <details>
         <summary>Explore</summary>
-        <a href="#explore">Article Explorer</a>
+        <a href="#section:explore">Explore overview</a>
         <a href="#map">Map</a>
         <a href="#timeline">Timeline</a>
+        <a href="#explore">Article Explorer</a>
         <a href="#correspondence">Correspondence</a>
       </details>
       <details>
         <summary>About</summary>
+        <a href="#section:about">About overview</a>
         <a href="#about">About Robert Cushman</a>
         <a href="#critics-circle">Critic's Circle</a>
         <a href="https://www.cushmancollected.com/checkout/donate?donatePageId=5c9b8016652dea361e5feb7d" target="_blank" rel="noopener">Donate</a>
-        <a href="#subscribe">Contact &amp; Newsletter</a>
+        <a href="#contact">Contact &amp; Newsletter</a>
       </details>
     </nav>
 
@@ -225,7 +243,11 @@
         </a>
       </section>
 
-      <section class="frontpage-directory" id="frontpageDirectory" aria-label="Primary site paths"></section>
+      <section class="browse-heading site-index-heading">
+        <h2>Site Index</h2>
+      </section>
+
+      <section class="frontpage-directory" id="frontpageDirectory" aria-label="Site index"></section>
 
       <section class="browse-heading home-secondary-nav" id="browse">
         <h2>Browse the Archive</h2>
@@ -248,9 +270,13 @@
       <section class="article-view" id="articleView">
         <a class="back-link" href="#archive">Back to archive</a>
         <article id="article"><time>Aug 21, 2010</time><h1>A four-letter review; Finding substance in Stratford&#x27;s Dangerous Liaisons</h1><p class="article-meta">Robert Cushman · National Post</p><div class="article-body" id="article-text"><p>The Marquise de Merteuil to the Vicomte de Valmont, Stratford, Canada, August 2010</p>
-<p>Well, my dear Vicomte, how very pleasant and unexpected to see you again. And at the theatre, too. Of course, at the Paris Opera, one had better things to do than to pay attention to the cavortings on the stage. How the world has declined in--what is it? -- 230 years. Nor did I expect to find myself watching any kind of entertainment in a small town of which I had never heard, in a country which I remember, insofar as I remember it at all, being called something else entirely. Imagine, too, my perplexed delight at finding the entertainment which they call Dangerous Liaisons --and to which, I must confess, I paid rapt attention--actually had me as its principal character, and you in what, I believe, is known as a featured role. I knew, of course, that soon after our earthly departures, that artillery-officer fellow Choderlos de Laclos had had the effrontery to publish our correspondence, and that of some of our more intimate acquaintances, and that ever since the world has taken his volume to be a novel, fictions made up of letters having been the fashion at the time. As if any part-time scribbler could invent us. Or me, at any rate. Still, there is his book transformed into a play, and there are you, the self-proclaimed libertine, elaborately seducing that arch prude Madame de Tourvel, the judge&#x27;s wife; while also performing the more banal task of ruining that pert little idiot of a convent-girl, Cecile de Volanges. The latter, of course, undertaken at my behest, since I wished to avenge myself on one of my former lovers, who was to marry the little chit and to find her, on their wedding night, less or perhaps more than he would have wished. I confess, Vicomte, that you undertook her education very thoroughly, as is most delightfully and graphically conveyed in this theatrical adaptation. Well, I always knew how to pull your strings. Tell me, by what charitable dispensation were you released to see this play from wherever it is you are spending eternity? It can scarcely have been for good behaviour.</p>
+<p>Well, my dear Vicomte, how very pleasant and unexpected to see you again. And at the theatre, too. Of course, at the Paris Opera, one had better things to do than to pay attention to the cavortings on the stage. How the world has declined in--what is it? -- 230 years. Nor did I expect to find myself watching any kind of entertainment in a small town of which I had never heard, in a country which I remember, insofar as I remember it at all, being called something else entirely. Imagine, too, my perplexed delight at finding the entertainment which they call Dangerous Liaisons --and to which, I must confess, I paid rapt attention--actually had me as its principal character, and you in what, I believe, is known as a featured role. I knew, of course, that soon after our earthly departures, that artillery-officer fellow Choderlos de Laclos had had the effrontery to publish our correspondence, and that of some of our more intimate acquaintances, and that ever since the world has taken his volume to be a novel, fictions made up of letters having been the fashion at the time.</p>
+<p>As if any part-time scribbler could invent us. Or me, at any rate. Still, there is his book transformed into a play, and there are you, the self-proclaimed libertine, elaborately seducing that arch prude Madame de Tourvel, the judge&#x27;s wife; while also performing the more banal task of ruining that pert little idiot of a convent-girl, Cecile de Volanges. The latter, of course, undertaken at my behest, since I wished to avenge myself on one of my former lovers, who was to marry the little chit and to find her, on their wedding night, less or perhaps more than he would have wished. I confess, Vicomte, that you undertook her education very thoroughly, as is most delightfully and graphically conveyed in this theatrical adaptation. Well, I always knew how to pull your strings. Tell me, by what charitable dispensation were you released to see this play from wherever it is you are spending eternity?</p>
+<p>It can scarcely have been for good behaviour.</p>
 <p>The Vicomte de Valmont to the Marquise de Merteuil, Same Place, Same Time</p>
-<p>I might ask the same of you, Madame, and with the same impudent proviso. I confess that my earthly career was that of an impenitent and incorrigible rake, but I could never presume to compete with you in hypocrisy. However, my visit is easily explained. I have a permanent dispensation to check out, as they say, every new representation of our adventures, and there have been many. Since it is actually I who am the protagonist of this drama, and you the mere accessory, I have what are known as bragging rights. I even attended the premiere of the present drama, a quarter-century ago, at another town called Stratford, in England. I do not think that the language furnished by the British playwright Christopher Hampton approaches our own levels of style and raillery, but I must commend the skill with which he has fashioned M. Laclos&#x27; epistolary compilation into a series of dialogue scenes of accelerating excitement. It can have been no easy task. The play was billed then as Les Liaisons Dangereuses -- I cannot fathom why it has been altered in what I am told is a bilingual country -- and it was staged in a small cabin, barely a theatre at all. In mounting it upon a large platform the present metteur- en-scene, who goes by the exotic name of Ethan MacSweeny, has had both to coarsen and to over-decorate it. He begins his production by elevating a large chandelier from the floor to the ceiling, something I am positive has been done before. However, I have nothing but praise for the way in which I am portrayed by the actor Tom McCamus, who conveys all my irresistible humour and charm, together with my destructive ennui and my ambiguity of feeling. Did I actually love the prude Tourvel? Even I cannot tell. The actress Sara Topham lacks something of the inner radiance that first provoked me, but her surrender and decline are movingly enacted. Bethany Jillard is likewise a pleasure as Cecile. I do not recall her admirer Danceny as being altogether the booby embodied by Michael Therriault but he is certainly amusing; as, in a discreetly insolent way, is Paul Dunn as my valet. As my octogenarian aunt, Martha Henry, exudes both wit and charity while being, by the bye, the only person in the company who is actually too young for her role. As for the representation of yourself, I leave the verdict to you, only cautioning you that the player in question, Seana McKenna, is one of the most highly regarded in our former colony.</p>
+<p>I might ask the same of you, Madame, and with the same impudent proviso. I confess that my earthly career was that of an impenitent and incorrigible rake, but I could never presume to compete with you in hypocrisy. However, my visit is easily explained. I have a permanent dispensation to check out, as they say, every new representation of our adventures, and there have been many. Since it is actually I who am the protagonist of this drama, and you the mere accessory, I have what are known as bragging rights. I even attended the premiere of the present drama, a quarter-century ago, at another town called Stratford, in England. I do not think that the language furnished by the British playwright Christopher Hampton approaches our own levels of style and raillery, but I must commend the skill with which he has fashioned M.</p>
+<p>Laclos&#x27; epistolary compilation into a series of dialogue scenes of accelerating excitement. It can have been no easy task. The play was billed then as Les Liaisons Dangereuses -- I cannot fathom why it has been altered in what I am told is a bilingual country -- and it was staged in a small cabin, barely a theatre at all. In mounting it upon a large platform the present metteur- en-scene, who goes by the exotic name of Ethan MacSweeny, has had both to coarsen and to over-decorate it. He begins his production by elevating a large chandelier from the floor to the ceiling, something I am positive has been done before. However, I have nothing but praise for the way in which I am portrayed by the actor Tom McCamus, who conveys all my irresistible humour and charm, together with my destructive ennui and my ambiguity of feeling.</p>
+<p>Did I actually love the prude Tourvel? Even I cannot tell. The actress Sara Topham lacks something of the inner radiance that first provoked me, but her surrender and decline are movingly enacted. Bethany Jillard is likewise a pleasure as Cecile. I do not recall her admirer Danceny as being altogether the booby embodied by Michael Therriault but he is certainly amusing; as, in a discreetly insolent way, is Paul Dunn as my valet. As my octogenarian aunt, Martha Henry, exudes both wit and charity while being, by the bye, the only person in the company who is actually too young for her role. As for the representation of yourself, I leave the verdict to you, only cautioning you that the player in question, Seana McKenna, is one of the most highly regarded in our former colony.</p>
 <p>Merteuil to Valmont Justly so, I could tell. But she misses the mischief with which I always tempered my malice and which made my wiles so much the more deadly. Nor would I ever have appeared in so sombre a dress and wig. Indeed, the whole enterprise is excessively solemn. Why, in the last scene, the portentously ironic references to the 1780s and &#x27;90s, followed by the trundling on of a guillotine, when in truth we were all safely dead or in exile by the time of the Terror?.</p>
 <p>V toM</p>
 <p>Ah yes, the Jacobin curse of political correctness. The English production was equally judgmental at the close, though it confined itself to the mere sound of a descending blade. As I wafted my way out of the Canadian playhouse, I brushed up against one of the local scribblers and managed to decipher what he, with typical reviewer&#x27;s malice, had scrawled in his notebook: &quot;This has the trappings of a major production. It also has some of the substance. But not enough.&quot;</p>
@@ -288,6 +314,6 @@
       </section>
     </footer>
 
-    <script src="./app.js?v=194" type="module"></script>
+    <script src="./app.js?v=233" type="module"></script>
   </body>
 </html>

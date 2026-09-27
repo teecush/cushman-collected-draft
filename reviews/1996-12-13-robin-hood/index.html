@@ -13,31 +13,33 @@
     <link rel="apple-touch-icon" href="../apple-touch-icon.svg">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Rubik:wght@400;600;700;800;900&display=swap">
-    <link rel="stylesheet" href="./styles.css?v=173">
+    <link rel="stylesheet" href="./styles.css?v=174">
     <link rel="stylesheet" href="./catalog.css?v=194">
-    <link rel="stylesheet" href="./classic.css?v=194">
+    <link rel="stylesheet" href="./classic.css?v=233">
   </head>
   <body class="article-open">
     <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="site-header">
       <nav class="site-nav site-nav-left" id="siteNavLeft" aria-label="Primary navigation left">
-        <a class="nav-search" href="#search" aria-label="Search the archive"><span></span></a>
-        <a href="#section:current">Recent</a>
+        <a href="#search">Search</a>
         <div class="nav-folder nav-folder-wide">
           <a href="#section:browse">Browse</a>
           <div class="nav-dropdown nav-mega">
             <div class="nav-subfolder">
               <a href="#section:collections">Collections</a>
               <div class="nav-side-menu">
+                <a href="#collection:recent">Recent</a>
+                <a href="#correspondence:famous-letters">Special Letters</a>
                 <a href="#section:shakespeare">Shakespeare</a>
                 <a href="#collection:sondheim">Sondheim</a>
+                <a href="#collection:stoppard">Stoppard</a>
                 <a href="#collection:musicals">Musicals</a>
                 <a href="#collection:stratford">Stratford</a>
                 <a href="#collection:shaw">Shaw</a>
                 <a href="#collection:television">TV Reviews</a>
                 <a href="#collection:albums">Music Reviews</a>
                 <a href="#collection:books">Book Reviews</a>
-                <a href="#collection:profiles">Profiles &amp; Obits</a>
+                <a href="#collection:profiles">Artist Profiles</a>
                 <a href="#collection:early">Early Writing</a>
               </div>
             </div>
@@ -46,7 +48,6 @@
               <div class="nav-side-menu">
                 <a href="#works">All Works</a>
                 <a href="#people">All People</a>
-                <a href="#index:publications">Publications</a>
                 <a href="#places">Places</a>
               </div>
             </div>
@@ -72,21 +73,21 @@
       </a>
       <nav class="site-nav site-nav-right" id="siteNavRight" aria-label="Primary navigation right">
         <div class="nav-folder">
-          <a href="#explore">Explore</a>
+          <a href="#section:explore">Explore</a>
           <div class="nav-dropdown">
-            <a href="#explore">Article Explorer</a>
             <a href="#map">Map</a>
             <a href="#timeline">Timeline</a>
+            <a href="#explore">Article Explorer</a>
             <a href="#correspondence">Correspondence</a>
           </div>
         </div>
         <div class="nav-folder">
-          <a href="#about">About</a>
+          <a href="#section:about">About</a>
           <div class="nav-dropdown">
             <a href="#about">About Robert Cushman</a>
             <a href="#critics-circle">Critic's Circle</a>
             <a href="https://www.cushmancollected.com/checkout/donate?donatePageId=5c9b8016652dea361e5feb7d" target="_blank" rel="noopener">Donate</a>
-            <a href="#subscribe">Subscribe</a>
+            <a href="#contact">Contact &amp; Newsletter</a>
           </div>
         </div>
       </nav>
@@ -102,10 +103,25 @@
 
     <nav class="drawer" id="drawer" aria-label="Site navigation">
       <a href="#search">Search the Archive</a>
-      <a href="#section:current">Recent</a>
       <details>
         <summary>Browse</summary>
-        <a href="#section:collections">Collections</a>
+        <a href="#section:browse">Browse overview</a>
+        <details class="drawer-collection-menu">
+          <summary>Collections</summary>
+          <a href="#collection:recent">Recent</a>
+          <a href="#correspondence:famous-letters">Special Letters</a>
+          <a href="#section:shakespeare">Shakespeare</a>
+          <a href="#collection:sondheim">Sondheim</a>
+          <a href="#collection:stoppard">Stoppard</a>
+          <a href="#collection:musicals">Musicals</a>
+          <a href="#collection:stratford">Stratford</a>
+          <a href="#collection:shaw">Shaw</a>
+          <a href="#collection:television">TV Reviews</a>
+          <a href="#collection:albums">Music Reviews</a>
+          <a href="#collection:books">Book Reviews</a>
+          <a href="#collection:profiles">Artist Profiles</a>
+          <a href="#collection:early">Early Writing</a>
+        </details>
         <a href="#master-index:all-works">All Works</a>
         <a href="#master-index:all-people">All People</a>
         <a href="#index:publications">Publications</a>
@@ -113,17 +129,19 @@
       </details>
       <details>
         <summary>Explore</summary>
-        <a href="#explore">Article Explorer</a>
+        <a href="#section:explore">Explore overview</a>
         <a href="#map">Map</a>
         <a href="#timeline">Timeline</a>
+        <a href="#explore">Article Explorer</a>
         <a href="#correspondence">Correspondence</a>
       </details>
       <details>
         <summary>About</summary>
+        <a href="#section:about">About overview</a>
         <a href="#about">About Robert Cushman</a>
         <a href="#critics-circle">Critic's Circle</a>
         <a href="https://www.cushmancollected.com/checkout/donate?donatePageId=5c9b8016652dea361e5feb7d" target="_blank" rel="noopener">Donate</a>
-        <a href="#subscribe">Contact &amp; Newsletter</a>
+        <a href="#contact">Contact &amp; Newsletter</a>
       </details>
     </nav>
 
@@ -225,7 +243,11 @@
         </a>
       </section>
 
-      <section class="frontpage-directory" id="frontpageDirectory" aria-label="Primary site paths"></section>
+      <section class="browse-heading site-index-heading">
+        <h2>Site Index</h2>
+      </section>
+
+      <section class="frontpage-directory" id="frontpageDirectory" aria-label="Site index"></section>
 
       <section class="browse-heading home-secondary-nav" id="browse">
         <h2>Browse the Archive</h2>
@@ -247,7 +269,12 @@
 
       <section class="article-view" id="articleView">
         <a class="back-link" href="#archive">Back to archive</a>
-        <article id="article"><time>Dec 13, 1996</time><h1>Robin Hood</h1><p class="article-meta">Robert Cushman · The Globe and Mail</p><div class="article-body" id="article-text"><p>PANTOMIME / The villain as comic lead is a new idea in panto, and a glorious one. Ross Petty plays the part with elan. ROBIN HOODThief of Nottingham steals heartsPANTOMIME / The villain as comic lead is a new idea in panto, and a glorious one. Ross Petty plays the part with elan. ROBIN HOODFriday, December 13, 1996Directed by Trudy MoffattStarring Karen Kain,  Ross Petty and Frank Augustyn  RATING: *****************  and many, many moreSpecial to The Globe and Mail    THE first pantomime I ever saw -- actually the first show of any kind -- had Robin Hood for its hero, though he had to cede the title billing to his kid sister Red Riding. So Im glad to see that he now has his very own panto, though he doesn&#x27;t exactly come off as its main character. He is played by Dan R. Chameroy, who was lately the vainglorious Gaston of Beauty and the Beast and who carries on here, especially in song, as if he still were. He may not, of course, be doing it on purpose.He should really be a girl. Pantomime is an old English form of seasonal entertainment, not much used in the colonies and directed chiefly at children with a few off-colour scraps thrown to their parents. It takes some folk or fairy tale, and cheerfully travesties it. I mean travesty partly in the traditional sense of cross-dressing; the hero is traditionally played by a lady (or what we used to call a strapping lass) while the principal comedian -- a far more important role -- is customarily a man dressed as an extremely plain woman: the Pantomime Dame.Here at least tradition has not been tampered with, and we have David Walden, playing Maid Marian&#x27;s elderly Nurse Tickle. Dame is a tricky convention to animate unless the performer is exceptionally skillful, charming or delicate (delicacy and broad comedy are perfectly compatible), and Walden makes heavy weather of it. The running gags about Dame Tickles inability to get a man and consuming desire to do so become offensive: not because theyre sexist but because they&#x27;re mechanical. But then, the anonymous scriptwriter hasn&#x27;t given him any of the best lines.This may be because producer-star Ross Petty (who may well be the anonymous scriptwriter) has walked off with them. Or maybe its the way he tells them. Petty plays the Sheriff of Nottingham. The villain as comic lead is a new idea in panto, and a glorious one. Petty plays it with elan, éclat, and eh-look-out-hes-coming-up-behind-you. He&#x27;s especially good at rebuking the house for booing him with insufficient enthusiasm.Pantomime, while rigorously observing its own rules, is very free with everybody else&#x27;s; topical gags, ad libs, and general stepping out of character. The script allows Petty to levy GST (Grasping Sheriffs Tax) and he allows himself to rebuke the sound-man for messing with his miking: an opportunity which many performers in more prestigious musical productions must envy him. Mind you, he should worry; I thought I detected a pecking-order: the bigger the billing, the better the sound.The show has a good plot, as these things go. (They generally go as far as youll let them.) The Sheriff wants to marry Robin&#x27;s Maid (June Crowley, who was Marian the Librarian in The Music Man at Stratford, and is getting name-cast) for the sake of her inheritance. He&#x27;s foiled, partly by the Merry Men, but mainly by Karen Kain.She is the Spirit of the Forest and speaks in rhyming couplets. (Ive heard that they seize fairies in these parts/And turn them into tarts -- I havent remembered that quite right, but I promise you that was the rhyme and I haven&#x27;t murdered the meter; it was like that when I got there.) There is a dream sequence in which every man in the cast gets to act out the fantasy of dancing with Karen Kain. She also performs more elaborate routines with Frank Augustyn. So this is what ballerinas do on their holidays.She is a delight, a real presence, with twinkle and timing: not just a pair of pretty legs and not just a classical star being a good sport. I started wondering what shows Mr. and Mrs. Petty might do together after the lady has hung up her shoes. If only she could sing . . . Hey, what about Peter Pan?I never thought to hear a pantomime score with 1½ Sondheim songs. (The half is from Gypsy, on which he collaborated with Jule Styne.) The boss is clearly a closet sophisticate. But he doesn&#x27;t let it run away with him.The choreography when it isnt raising Kain (and sometimes when it is) might be described as primitive; at least it might if you were feeling charitable. The decor is far more attractively tacky, running to real old-fashioned borders, and real old-fashioned woodland cutouts. Its the kind of toy-theatre set you want to get up and play with. Speaking of which: Simon Bradbury magisterially presides over the audience-participation song-sheet sequence, which is mandatory. (It always comes just when you think you can go home.)Before this he plays the Sheriff&#x27;s henchman, showing us what classical actors do on their holidays (his employer addresses him as &quot;you Shaw Festival has-been&quot;), and exhibiting total mastery of gormless North of England comedy. Master and man make a great double act. (I crave an audience. &quot;You can have this one.&quot;)I promised my son that I&#x27;d give him a review if he got up on stage for the singalong. Well, he did; and he was terrribly good.    At the Elgin Theatre until Jan. 5  Word count: 1006</p></div></article>
+        <article id="article"><time>Dec 13, 1996</time><h1>Robin Hood</h1><p class="article-meta">Robert Cushman · The Globe and Mail</p><div class="article-body" id="article-text"><p>PANTOMIME / The villain as comic lead is a new idea in panto, and a glorious one. Ross Petty plays the part with elan. ROBIN HOODThief of Nottingham steals heartsPANTOMIME / The villain as comic lead is a new idea in panto, and a glorious one. Ross Petty plays the part with elan. ROBIN HOODFriday, December 13, 1996Directed by Trudy MoffattStarring Karen Kain,  Ross Petty and Frank Augustyn  RATING: *****************  and many, many moreSpecial to The Globe and Mail    THE first pantomime I ever saw -- actually the first show of any kind -- had Robin Hood for its hero, though he had to cede the title billing to his kid sister Red Riding. So Im glad to see that he now has his very own panto, though he doesn&#x27;t exactly come off as its main character. He is played by Dan R. Chameroy, who was lately the vainglorious Gaston of Beauty and the Beast and who carries on here, especially in song, as if he still were.</p>
+<p>He may not, of course, be doing it on purpose.He should really be a girl. Pantomime is an old English form of seasonal entertainment, not much used in the colonies and directed chiefly at children with a few off-colour scraps thrown to their parents. It takes some folk or fairy tale, and cheerfully travesties it. I mean travesty partly in the traditional sense of cross-dressing; the hero is traditionally played by a lady (or what we used to call a strapping lass) while the principal comedian -- a far more important role -- is customarily a man dressed as an extremely plain woman: the Pantomime Dame.Here at least tradition has not been tampered with, and we have David Walden, playing Maid Marian&#x27;s elderly Nurse Tickle. Dame is a tricky convention to animate unless the performer is exceptionally skillful, charming or delicate (delicacy and broad comedy are perfectly compatible), and Walden makes heavy weather of it.</p>
+<p>The running gags about Dame Tickles inability to get a man and consuming desire to do so become offensive: not because theyre sexist but because they&#x27;re mechanical. But then, the anonymous scriptwriter hasn&#x27;t given him any of the best lines.This may be because producer-star Ross Petty (who may well be the anonymous scriptwriter) has walked off with them. Or maybe its the way he tells them. Petty plays the Sheriff of Nottingham. The villain as comic lead is a new idea in panto, and a glorious one. Petty plays it with elan, éclat, and eh-look-out-hes-coming-up-behind-you. He&#x27;s especially good at rebuking the house for booing him with insufficient enthusiasm.Pantomime, while rigorously observing its own rules, is very free with everybody else&#x27;s; topical gags, ad libs, and general stepping out of character. The script allows Petty to levy GST (Grasping Sheriffs Tax) and he allows himself to rebuke the sound-man for messing with his miking: an opportunity which many performers in more prestigious musical productions must envy him.</p>
+<p>Mind you, he should worry; I thought I detected a pecking-order: the bigger the billing, the better the sound.The show has a good plot, as these things go. (They generally go as far as youll let them.) The Sheriff wants to marry Robin&#x27;s Maid (June Crowley, who was Marian the Librarian in The Music Man at Stratford, and is getting name-cast) for the sake of her inheritance. He&#x27;s foiled, partly by the Merry Men, but mainly by Karen Kain.She is the Spirit of the Forest and speaks in rhyming couplets. (Ive heard that they seize fairies in these parts/And turn them into tarts -- I havent remembered that quite right, but I promise you that was the rhyme and I haven&#x27;t murdered the meter; it was like that when I got there.) There is a dream sequence in which every man in the cast gets to act out the fantasy of dancing with Karen Kain.</p>
+<p>She also performs more elaborate routines with Frank Augustyn. So this is what ballerinas do on their holidays.She is a delight, a real presence, with twinkle and timing: not just a pair of pretty legs and not just a classical star being a good sport. I started wondering what shows Mr. and Mrs. Petty might do together after the lady has hung up her shoes. If only she could sing . . . Hey, what about Peter Pan?I never thought to hear a pantomime score with 1½ Sondheim songs. (The half is from Gypsy, on which he collaborated with Jule Styne.) The boss is clearly a closet sophisticate. But he doesn&#x27;t let it run away with him.The choreography when it isnt raising Kain (and sometimes when it is) might be described as primitive; at least it might if you were feeling charitable. The decor is far more attractively tacky, running to real old-fashioned borders, and real old-fashioned woodland cutouts.</p>
+<p>Its the kind of toy-theatre set you want to get up and play with. Speaking of which: Simon Bradbury magisterially presides over the audience-participation song-sheet sequence, which is mandatory. (It always comes just when you think you can go home.)Before this he plays the Sheriff&#x27;s henchman, showing us what classical actors do on their holidays (his employer addresses him as &quot;you Shaw Festival has-been&quot;), and exhibiting total mastery of gormless North of England comedy. Master and man make a great double act. (I crave an audience. &quot;You can have this one.&quot;)I promised my son that I&#x27;d give him a review if he got up on stage for the singalong. Well, he did; and he was terrribly good.    At the Elgin Theatre until Jan. 5  Word count: 1006</p></div></article>
       </section>
 
       <section class="index-view" id="indexView" hidden>
@@ -281,6 +308,6 @@
       </section>
     </footer>
 
-    <script src="./app.js?v=194" type="module"></script>
+    <script src="./app.js?v=233" type="module"></script>
   </body>
 </html>

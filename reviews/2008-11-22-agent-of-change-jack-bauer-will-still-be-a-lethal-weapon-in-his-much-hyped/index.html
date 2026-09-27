@@ -13,31 +13,33 @@
     <link rel="apple-touch-icon" href="../apple-touch-icon.svg">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Rubik:wght@400;600;700;800;900&display=swap">
-    <link rel="stylesheet" href="./styles.css?v=173">
+    <link rel="stylesheet" href="./styles.css?v=174">
     <link rel="stylesheet" href="./catalog.css?v=194">
-    <link rel="stylesheet" href="./classic.css?v=194">
+    <link rel="stylesheet" href="./classic.css?v=233">
   </head>
   <body class="article-open">
     <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="site-header">
       <nav class="site-nav site-nav-left" id="siteNavLeft" aria-label="Primary navigation left">
-        <a class="nav-search" href="#search" aria-label="Search the archive"><span></span></a>
-        <a href="#section:current">Recent</a>
+        <a href="#search">Search</a>
         <div class="nav-folder nav-folder-wide">
           <a href="#section:browse">Browse</a>
           <div class="nav-dropdown nav-mega">
             <div class="nav-subfolder">
               <a href="#section:collections">Collections</a>
               <div class="nav-side-menu">
+                <a href="#collection:recent">Recent</a>
+                <a href="#correspondence:famous-letters">Special Letters</a>
                 <a href="#section:shakespeare">Shakespeare</a>
                 <a href="#collection:sondheim">Sondheim</a>
+                <a href="#collection:stoppard">Stoppard</a>
                 <a href="#collection:musicals">Musicals</a>
                 <a href="#collection:stratford">Stratford</a>
                 <a href="#collection:shaw">Shaw</a>
                 <a href="#collection:television">TV Reviews</a>
                 <a href="#collection:albums">Music Reviews</a>
                 <a href="#collection:books">Book Reviews</a>
-                <a href="#collection:profiles">Profiles &amp; Obits</a>
+                <a href="#collection:profiles">Artist Profiles</a>
                 <a href="#collection:early">Early Writing</a>
               </div>
             </div>
@@ -46,7 +48,6 @@
               <div class="nav-side-menu">
                 <a href="#works">All Works</a>
                 <a href="#people">All People</a>
-                <a href="#index:publications">Publications</a>
                 <a href="#places">Places</a>
               </div>
             </div>
@@ -72,21 +73,21 @@
       </a>
       <nav class="site-nav site-nav-right" id="siteNavRight" aria-label="Primary navigation right">
         <div class="nav-folder">
-          <a href="#explore">Explore</a>
+          <a href="#section:explore">Explore</a>
           <div class="nav-dropdown">
-            <a href="#explore">Article Explorer</a>
             <a href="#map">Map</a>
             <a href="#timeline">Timeline</a>
+            <a href="#explore">Article Explorer</a>
             <a href="#correspondence">Correspondence</a>
           </div>
         </div>
         <div class="nav-folder">
-          <a href="#about">About</a>
+          <a href="#section:about">About</a>
           <div class="nav-dropdown">
             <a href="#about">About Robert Cushman</a>
             <a href="#critics-circle">Critic's Circle</a>
             <a href="https://www.cushmancollected.com/checkout/donate?donatePageId=5c9b8016652dea361e5feb7d" target="_blank" rel="noopener">Donate</a>
-            <a href="#subscribe">Subscribe</a>
+            <a href="#contact">Contact &amp; Newsletter</a>
           </div>
         </div>
       </nav>
@@ -102,10 +103,25 @@
 
     <nav class="drawer" id="drawer" aria-label="Site navigation">
       <a href="#search">Search the Archive</a>
-      <a href="#section:current">Recent</a>
       <details>
         <summary>Browse</summary>
-        <a href="#section:collections">Collections</a>
+        <a href="#section:browse">Browse overview</a>
+        <details class="drawer-collection-menu">
+          <summary>Collections</summary>
+          <a href="#collection:recent">Recent</a>
+          <a href="#correspondence:famous-letters">Special Letters</a>
+          <a href="#section:shakespeare">Shakespeare</a>
+          <a href="#collection:sondheim">Sondheim</a>
+          <a href="#collection:stoppard">Stoppard</a>
+          <a href="#collection:musicals">Musicals</a>
+          <a href="#collection:stratford">Stratford</a>
+          <a href="#collection:shaw">Shaw</a>
+          <a href="#collection:television">TV Reviews</a>
+          <a href="#collection:albums">Music Reviews</a>
+          <a href="#collection:books">Book Reviews</a>
+          <a href="#collection:profiles">Artist Profiles</a>
+          <a href="#collection:early">Early Writing</a>
+        </details>
         <a href="#master-index:all-works">All Works</a>
         <a href="#master-index:all-people">All People</a>
         <a href="#index:publications">Publications</a>
@@ -113,17 +129,19 @@
       </details>
       <details>
         <summary>Explore</summary>
-        <a href="#explore">Article Explorer</a>
+        <a href="#section:explore">Explore overview</a>
         <a href="#map">Map</a>
         <a href="#timeline">Timeline</a>
+        <a href="#explore">Article Explorer</a>
         <a href="#correspondence">Correspondence</a>
       </details>
       <details>
         <summary>About</summary>
+        <a href="#section:about">About overview</a>
         <a href="#about">About Robert Cushman</a>
         <a href="#critics-circle">Critic's Circle</a>
         <a href="https://www.cushmancollected.com/checkout/donate?donatePageId=5c9b8016652dea361e5feb7d" target="_blank" rel="noopener">Donate</a>
-        <a href="#subscribe">Contact &amp; Newsletter</a>
+        <a href="#contact">Contact &amp; Newsletter</a>
       </details>
     </nav>
 
@@ -225,7 +243,11 @@
         </a>
       </section>
 
-      <section class="frontpage-directory" id="frontpageDirectory" aria-label="Primary site paths"></section>
+      <section class="browse-heading site-index-heading">
+        <h2>Site Index</h2>
+      </section>
+
+      <section class="frontpage-directory" id="frontpageDirectory" aria-label="Site index"></section>
 
       <section class="browse-heading home-secondary-nav" id="browse">
         <h2>Browse the Archive</h2>
@@ -253,7 +275,9 @@
 <p>The country in which we and the U. S. legal system discover Jack bears the fictitious name of Sengala. In the past, 24 has left countries, mainly Middle Eastern ones, discreetly unnamed but this is the first time it has invented one, and it pokes a small hole in the show&#x27;s admittedly fragile credibility. Sengala sounds like an anagram but is more of an amalgam: It combines some of the more brutal aspects, recent past and present, of Congo, Uganda, Rwanda, and Zimbabwe. There&#x27;s a civil war on. A powerful prologue shows young boys being rounded up to serve in a rebel army, trained to regard their opponents as &quot;cockroaches&quot; (i. e. stooges for white oppressors) and to execute them. Jack is helping out an old buddy (Robert Carlyle) who&#x27;s running a school. First, the two men have to protect their charges from being rounded up and turned into cannon-fodder. Then, with minimal help from the U. S. government and none at all from the United Nations, they have to somehow shepherd them to the capital, before that old 24 real-time window closes shut and the embassy is evacuated. To make it happen, Jack may have to surrender himself.</p>
 <p>In the course of this self-imposed duty, Jack kills people (this is hardly a spoiler), but he doesn&#x27;t beat anybody up. So he may already be on the road to reform and eventual atonement. His previous activities have,</p>
 <p>of course, become notorious in the world outside TV fiction; his name has been bizarrely invoked to justify the current U. S. administration&#x27;s own coercion practices. As has often been pointed out, there&#x27;s a disconnect here; the &quot;ticking-bomb&quot; interrogation scenario favoured in 24 never seems to occur in the real world. What&#x27;s less often mentioned is that it works both ways. Jack&#x27;s fictitious activities can&#x27;t really be condemned by the standards of real political life. With him, it&#x27;s usually personal; the first time he brutalized anyone onscreen, it was to discover the whereabouts of his kidnapped wife and daughter, and I doubt if anybody blamed him. And in later examples, the situation has usually -- not quite always -- been engineered to show that he had no other choice. The show has found it convenient to portray him from time to time as weighed down by guilt, but it&#x27;s never been very specific about the causes. What Jack probably feels worst about is his wife&#x27;s death, which wasn&#x27;t his fault. Earlier this year, I talked with Jon Cassar, one of the show&#x27;s senior writer-producers, who admitted this vagueness, but promised it would be addressed in the coming season with Jack, the Dirty Harry of counterterrorism, emerging in his vaunted guise of tragic hero.</p>
-<p>What awaits him on the home front is anyone&#x27;s guess. The special is divided between the African action, exciting and self-contained, and the American, which seems to be a cryptic set-up for familiar things to come. Washington is as much of a cesspool as ever, though the show that pre-empted history by giving us a black president may be doing it again by giving us a female one. The episode shows us Cherry Jones, one of New York&#x27;s premier stage actresses, getting sworn in, with our own Colm Feore hovering as First Dude. The lady shows signs of being as idealistic a C-in-C as was the late David Palmer, but her immediate predecessor (Powers Boothe, still massively alarming) has warned her that things change once you&#x27;re in office. I don&#x27;t know whether we&#x27;ll be seeing more of him, but his right hand man (Peter MacNicol, the honourable weasel) will presumably still be around. We don&#x27;t as yet get to meet anyone else we know, but it seems certain that, though CTU itself is no more, the fabulous Chloe will return, one hopes with better material than last season, as will the beloved Tony Almeda. So what if we saw him decisively killed onscreen; if Prison Break can resurrect a beheaded heroine, anything is possible. The two shows have in fact become very similar; Prison Break has made increasing use of torture as a plot-device, and even as a cathartic one, and both pit a loner, or a small band of loners, against a conspiracy aiming at world domination and infiltrating the higher reaches of government; 24 has recruited Jon Voight as its new mastermind. Both seem to be written and constructed on a succession of whims, and believability flew out of both their casements a long time ago. Both have characters who at least started out interesting, and on whom one can never quite give up. Both, despite everything, are the pulp TV to which I remain most hopelessly addicted. Perhaps I, too, am awaiting redemption. - 24: Redemption airs tomorrow at 8 p. m. ET/PT on Global, E! and Fox. Prison Break airs Monday at 8 p. m. ET/PT on Global and Fox.</p>
+<p>What awaits him on the home front is anyone&#x27;s guess. The special is divided between the African action, exciting and self-contained, and the American, which seems to be a cryptic set-up for familiar things to come. Washington is as much of a cesspool as ever, though the show that pre-empted history by giving us a black president may be doing it again by giving us a female one. The episode shows us Cherry Jones, one of New York&#x27;s premier stage actresses, getting sworn in, with our own Colm Feore hovering as First Dude. The lady shows signs of being as idealistic a C-in-C as was the late David Palmer, but her immediate predecessor (Powers Boothe, still massively alarming) has warned her that things change once you&#x27;re in office. I don&#x27;t know whether we&#x27;ll be seeing more of him, but his right hand man (Peter MacNicol, the honourable weasel) will presumably still be around.</p>
+<p>We don&#x27;t as yet get to meet anyone else we know, but it seems certain that, though CTU itself is no more, the fabulous Chloe will return, one hopes with better material than last season, as will the beloved Tony Almeda. So what if we saw him decisively killed onscreen; if Prison Break can resurrect a beheaded heroine, anything is possible. The two shows have in fact become very similar; Prison Break has made increasing use of torture as a plot-device, and even as a cathartic one, and both pit a loner, or a small band of loners, against a conspiracy aiming at world domination and infiltrating the higher reaches of government; 24 has recruited Jon Voight as its new mastermind. Both seem to be written and constructed on a succession of whims, and believability flew out of both their casements a long time ago.</p>
+<p>Both have characters who at least started out interesting, and on whom one can never quite give up. Both, despite everything, are the pulp TV to which I remain most hopelessly addicted. Perhaps I, too, am awaiting redemption. - 24: Redemption airs tomorrow at 8 p. m. ET/PT on Global, E! and Fox. Prison Break airs Monday at 8 p. m. ET/PT on Global and Fox.</p>
 <p>Black &amp; White Photo: Global / Don&#x27;t worry, kid. He won&#x27;t hurt you. ;; Caption:</p></div></article>
       </section>
 
@@ -288,6 +312,6 @@
       </section>
     </footer>
 
-    <script src="./app.js?v=194" type="module"></script>
+    <script src="./app.js?v=233" type="module"></script>
   </body>
 </html>

@@ -13,31 +13,33 @@
     <link rel="apple-touch-icon" href="../apple-touch-icon.svg">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Rubik:wght@400;600;700;800;900&display=swap">
-    <link rel="stylesheet" href="./styles.css?v=173">
+    <link rel="stylesheet" href="./styles.css?v=174">
     <link rel="stylesheet" href="./catalog.css?v=194">
-    <link rel="stylesheet" href="./classic.css?v=194">
+    <link rel="stylesheet" href="./classic.css?v=233">
   </head>
   <body class="article-open">
     <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="site-header">
       <nav class="site-nav site-nav-left" id="siteNavLeft" aria-label="Primary navigation left">
-        <a class="nav-search" href="#search" aria-label="Search the archive"><span></span></a>
-        <a href="#section:current">Recent</a>
+        <a href="#search">Search</a>
         <div class="nav-folder nav-folder-wide">
           <a href="#section:browse">Browse</a>
           <div class="nav-dropdown nav-mega">
             <div class="nav-subfolder">
               <a href="#section:collections">Collections</a>
               <div class="nav-side-menu">
+                <a href="#collection:recent">Recent</a>
+                <a href="#correspondence:famous-letters">Special Letters</a>
                 <a href="#section:shakespeare">Shakespeare</a>
                 <a href="#collection:sondheim">Sondheim</a>
+                <a href="#collection:stoppard">Stoppard</a>
                 <a href="#collection:musicals">Musicals</a>
                 <a href="#collection:stratford">Stratford</a>
                 <a href="#collection:shaw">Shaw</a>
                 <a href="#collection:television">TV Reviews</a>
                 <a href="#collection:albums">Music Reviews</a>
                 <a href="#collection:books">Book Reviews</a>
-                <a href="#collection:profiles">Profiles &amp; Obits</a>
+                <a href="#collection:profiles">Artist Profiles</a>
                 <a href="#collection:early">Early Writing</a>
               </div>
             </div>
@@ -46,7 +48,6 @@
               <div class="nav-side-menu">
                 <a href="#works">All Works</a>
                 <a href="#people">All People</a>
-                <a href="#index:publications">Publications</a>
                 <a href="#places">Places</a>
               </div>
             </div>
@@ -72,21 +73,21 @@
       </a>
       <nav class="site-nav site-nav-right" id="siteNavRight" aria-label="Primary navigation right">
         <div class="nav-folder">
-          <a href="#explore">Explore</a>
+          <a href="#section:explore">Explore</a>
           <div class="nav-dropdown">
-            <a href="#explore">Article Explorer</a>
             <a href="#map">Map</a>
             <a href="#timeline">Timeline</a>
+            <a href="#explore">Article Explorer</a>
             <a href="#correspondence">Correspondence</a>
           </div>
         </div>
         <div class="nav-folder">
-          <a href="#about">About</a>
+          <a href="#section:about">About</a>
           <div class="nav-dropdown">
             <a href="#about">About Robert Cushman</a>
             <a href="#critics-circle">Critic's Circle</a>
             <a href="https://www.cushmancollected.com/checkout/donate?donatePageId=5c9b8016652dea361e5feb7d" target="_blank" rel="noopener">Donate</a>
-            <a href="#subscribe">Subscribe</a>
+            <a href="#contact">Contact &amp; Newsletter</a>
           </div>
         </div>
       </nav>
@@ -102,10 +103,25 @@
 
     <nav class="drawer" id="drawer" aria-label="Site navigation">
       <a href="#search">Search the Archive</a>
-      <a href="#section:current">Recent</a>
       <details>
         <summary>Browse</summary>
-        <a href="#section:collections">Collections</a>
+        <a href="#section:browse">Browse overview</a>
+        <details class="drawer-collection-menu">
+          <summary>Collections</summary>
+          <a href="#collection:recent">Recent</a>
+          <a href="#correspondence:famous-letters">Special Letters</a>
+          <a href="#section:shakespeare">Shakespeare</a>
+          <a href="#collection:sondheim">Sondheim</a>
+          <a href="#collection:stoppard">Stoppard</a>
+          <a href="#collection:musicals">Musicals</a>
+          <a href="#collection:stratford">Stratford</a>
+          <a href="#collection:shaw">Shaw</a>
+          <a href="#collection:television">TV Reviews</a>
+          <a href="#collection:albums">Music Reviews</a>
+          <a href="#collection:books">Book Reviews</a>
+          <a href="#collection:profiles">Artist Profiles</a>
+          <a href="#collection:early">Early Writing</a>
+        </details>
         <a href="#master-index:all-works">All Works</a>
         <a href="#master-index:all-people">All People</a>
         <a href="#index:publications">Publications</a>
@@ -113,17 +129,19 @@
       </details>
       <details>
         <summary>Explore</summary>
-        <a href="#explore">Article Explorer</a>
+        <a href="#section:explore">Explore overview</a>
         <a href="#map">Map</a>
         <a href="#timeline">Timeline</a>
+        <a href="#explore">Article Explorer</a>
         <a href="#correspondence">Correspondence</a>
       </details>
       <details>
         <summary>About</summary>
+        <a href="#section:about">About overview</a>
         <a href="#about">About Robert Cushman</a>
         <a href="#critics-circle">Critic's Circle</a>
         <a href="https://www.cushmancollected.com/checkout/donate?donatePageId=5c9b8016652dea361e5feb7d" target="_blank" rel="noopener">Donate</a>
-        <a href="#subscribe">Contact &amp; Newsletter</a>
+        <a href="#contact">Contact &amp; Newsletter</a>
       </details>
     </nav>
 
@@ -225,7 +243,11 @@
         </a>
       </section>
 
-      <section class="frontpage-directory" id="frontpageDirectory" aria-label="Primary site paths"></section>
+      <section class="browse-heading site-index-heading">
+        <h2>Site Index</h2>
+      </section>
+
+      <section class="frontpage-directory" id="frontpageDirectory" aria-label="Site index"></section>
 
       <section class="browse-heading home-secondary-nav" id="browse">
         <h2>Browse the Archive</h2>
@@ -254,7 +276,9 @@
 <p>I dont fool myself into thinking weve solved all the problems of a great play. Lear is huge. You can hardly make a dent in it. But we have a fantastic cast. It contains most of the actors who have appeared in different combinations at Soulpepper earlier this year, with the redoubtable William Webster in the title role. &quot;Bill&#x27;s been preparing for the part his entire life practically. It&#x27;s impossible to do, but were doin it.&quot; (Ziegler shares with his leading actor a conversational habit of dropping g&#x27;s when makin&#x27; a point.)</p>
 <p>As youd expect, Ziegler has acted in the play in the past; he was Edgar to Douglas Campbells Lear, in John Hirsch&#x27;s Stratford production of 1985. A lot has stuck with me from being in it and hearing it (and from seeing other productions over the years), but even late in rehearsals he&#x27;s found himself making new discoveries and asking new questions. The realization, for example, that Lear regrets his irrational fury over his daughter Cordelias &quot;most small fault&quot; far earlier in the play than anyone remembers: Its his early insight, it obviously gets lost, but he&#x27;s never afraid to look at himself.</p>
 <p>This is Soulpepper&#x27;s fourth Shakespeare production, and Ziegler has directed all but one of them. As an actor, he reckons that hes acted in some 25 or 30 Shakespeare productions. Hamlet, with Paul Gross at Stratford in 1999, was his first Shakespeare as a director, though he isnt certain that Stratford realized it at the time. He subsequently directed the play again, in a far more intimate production for Soulpepper, with the company&#x27;s artistic director Albert Schultz in the lead. Both Gross and Schultz were, for our times, remarkably gentle Hamlets, a coincidence that I attributed to Ziegler&#x27;s direction. He says now that &quot;Albert was wonderfully vulnerable&quot; in opening himself up to Hamlet, both in rehearsal and performance, but seemed surprised by my description of the performance as gentle. He does say &quot;if I had any influence on Albert, it was in the get thee to a nunnery scene with Ophelia. He thought that&#x27;s when Hamlet attacks Ophelia; I said &#x27;Hes trying save her here. &quot; And that&#x27;s how it played.</p>
-<p>It seems to have been pre-destined that Ziegler would spend his life working on classical and near-classical plays, and that he would do it in Canada, though he is in fact American. He grew up in Minneapolis, home of the Guthrie Theatre, founded by and named for the Stratford Festival&#x27;s first director and run in Zieglers boyhood by its second: The plays and people I grew up watching were those that Michael Langham brought there. Logically, then, he came to Canada in 1976 to attend the National Theatre School, intending to return home immediately afterwards. However, by the end of his time there, &quot;I knew I wanted to be here.&quot; Another Stratford veteran, the actor and teacher Douglas Rain, had instructed him, irrefutably, that if you can do Shakespeare, you can do anything. Ziegler himself went to Stratford, swiftly coming to notice there in juvenile roles, mainly with the festivals Young Company, which at that point, pleasingly enough, was run by the returning Langham. (Langham and Hirsch are the only Stratford chiefs never to have been actors. They were still, according to Ziegler, &quot;real actors&#x27; directors. It&#x27;s usually in TV that you work with directors who know nothing about acting.&quot;) His own break into directing came in 1991, when Robin Phillips, with whom he had worked at Stratford and elsewhere, took over the Citadel Theatre in Edmonton, and asked Ziegler and his wife, Nancy Palk, to come out for a season. Phillips instincts are unpredictable and, for the most part, impeccable. Most people whove been in the rehearsal hall with Robin will tell you that it&#x27;s one revelation after another. He said, &#x27;Should I think of you as a director? I said, I&#x27;d love to.&#x27;  His trial run, in the studio, was a two-hander about Jean-Paul Sartre and Simone de Beauvoir, with Bill Webster as Sartre and Phillips designing; the following year he did The Diary of Anne Frank &quot;on the thrust&quot; (an interesting challenge for a play that is, by definition, about confinement). He went on to direct for Theatre New Brunswick and did a couple of murder mysteries at the Shaw. And then came Soulpepper: &quot;They were kind enough, or rash enough, to ask me to direct.&quot; And theyve continued to. Albert is very loyal to the founding members. Ill suggest something to him, like I&#x27;d like to do Noel Coward&#x27;s Blithe Spirit, and hell say, why not Present Laughter instead. And Present Laugher is what they did. Ziegler presents himself, somewhat self-deprecatingly, as Soulpeppers voice of caution. &quot;I thought we should only do one play in our first season; Albert insisted on two. He thought we should do five in our second;&#x27; I thought that was too many.&quot; Nobody, including Zigeler, doubts now that in both cases Schultz was proved right.</p>
+<p>It seems to have been pre-destined that Ziegler would spend his life working on classical and near-classical plays, and that he would do it in Canada, though he is in fact American. He grew up in Minneapolis, home of the Guthrie Theatre, founded by and named for the Stratford Festival&#x27;s first director and run in Zieglers boyhood by its second: The plays and people I grew up watching were those that Michael Langham brought there. Logically, then, he came to Canada in 1976 to attend the National Theatre School, intending to return home immediately afterwards. However, by the end of his time there, &quot;I knew I wanted to be here.&quot; Another Stratford veteran, the actor and teacher Douglas Rain, had instructed him, irrefutably, that if you can do Shakespeare, you can do anything. Ziegler himself went to Stratford, swiftly coming to notice there in juvenile roles, mainly with the festivals Young Company, which at that point, pleasingly enough, was run by the returning Langham.</p>
+<p>(Langham and Hirsch are the only Stratford chiefs never to have been actors. They were still, according to Ziegler, &quot;real actors&#x27; directors. It&#x27;s usually in TV that you work with directors who know nothing about acting.&quot;) His own break into directing came in 1991, when Robin Phillips, with whom he had worked at Stratford and elsewhere, took over the Citadel Theatre in Edmonton, and asked Ziegler and his wife, Nancy Palk, to come out for a season. Phillips instincts are unpredictable and, for the most part, impeccable. Most people whove been in the rehearsal hall with Robin will tell you that it&#x27;s one revelation after another. He said, &#x27;Should I think of you as a director? I said, I&#x27;d love to.&#x27;  His trial run, in the studio, was a two-hander about Jean-Paul Sartre and Simone de Beauvoir, with Bill Webster as Sartre and Phillips designing; the following year he did The Diary of Anne Frank &quot;on the thrust&quot; (an interesting challenge for a play that is, by definition, about confinement).</p>
+<p>He went on to direct for Theatre New Brunswick and did a couple of murder mysteries at the Shaw. And then came Soulpepper: &quot;They were kind enough, or rash enough, to ask me to direct.&quot; And theyve continued to. Albert is very loyal to the founding members. Ill suggest something to him, like I&#x27;d like to do Noel Coward&#x27;s Blithe Spirit, and hell say, why not Present Laughter instead. And Present Laugher is what they did. Ziegler presents himself, somewhat self-deprecatingly, as Soulpeppers voice of caution. &quot;I thought we should only do one play in our first season; Albert insisted on two. He thought we should do five in our second;&#x27; I thought that was too many.&quot; Nobody, including Zigeler, doubts now that in both cases Schultz was proved right.</p>
 <p>The two parts of Ziegler&#x27;s career have of course affected and modified one another. I had a lot less patience as an actor than I do as a director. I am learning to think of theatre as a continuing process, rather than as just something on its way to a first night. When I act, I now think of the whole play a lot more; I used to be much more selfish as an actor -- in a way that actors ought to be. As a director -- I cant help but be affected by my work as an actor. Sometimes -- here he sounds a little bashful -- &quot;I ask an actor if hell let me play it for a minute,&quot; the idea being not to have the actor imitate him but to give himself the sense of how a scene feels from the inside. Like many -- but by no means all -- actor-directors, he is, by his own admission, more a verbal, less a visual director though he points out that even for Phillips, an acknowledged pictorial master, directing was a matter of &quot;text first, acting second, concept third.&quot; He himself spends &quot;a lot of time fixing the physical form of a scene -- actors do much better, more effortless acting when they&#x27;re in the right place.&quot; Major Barbara was visually very striking, and Our Town was beautifully choreographed. Those who work with Ziegler say that he&#x27;s growing all the time. Those of us watching have been getting the same impression.</p>
 <p>Colour Photo: Sandy Nicholson / Tackling the great King Lear? Hes doin it! Director Joseph Ziegler shares with his lead actor, William Webster, pictured, a conversational habit of dropping g&#x27;s when making a point.; Black &amp; White Photo: Joseph Ziegler.</p></div></article>
       </section>
@@ -290,6 +314,6 @@
       </section>
     </footer>
 
-    <script src="./app.js?v=194" type="module"></script>
+    <script src="./app.js?v=233" type="module"></script>
   </body>
 </html>

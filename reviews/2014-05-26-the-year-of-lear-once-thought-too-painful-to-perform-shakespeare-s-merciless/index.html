@@ -13,31 +13,33 @@
     <link rel="apple-touch-icon" href="../apple-touch-icon.svg">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Rubik:wght@400;600;700;800;900&display=swap">
-    <link rel="stylesheet" href="./styles.css?v=173">
+    <link rel="stylesheet" href="./styles.css?v=174">
     <link rel="stylesheet" href="./catalog.css?v=194">
-    <link rel="stylesheet" href="./classic.css?v=194">
+    <link rel="stylesheet" href="./classic.css?v=233">
   </head>
   <body class="article-open">
     <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="site-header">
       <nav class="site-nav site-nav-left" id="siteNavLeft" aria-label="Primary navigation left">
-        <a class="nav-search" href="#search" aria-label="Search the archive"><span></span></a>
-        <a href="#section:current">Recent</a>
+        <a href="#search">Search</a>
         <div class="nav-folder nav-folder-wide">
           <a href="#section:browse">Browse</a>
           <div class="nav-dropdown nav-mega">
             <div class="nav-subfolder">
               <a href="#section:collections">Collections</a>
               <div class="nav-side-menu">
+                <a href="#collection:recent">Recent</a>
+                <a href="#correspondence:famous-letters">Special Letters</a>
                 <a href="#section:shakespeare">Shakespeare</a>
                 <a href="#collection:sondheim">Sondheim</a>
+                <a href="#collection:stoppard">Stoppard</a>
                 <a href="#collection:musicals">Musicals</a>
                 <a href="#collection:stratford">Stratford</a>
                 <a href="#collection:shaw">Shaw</a>
                 <a href="#collection:television">TV Reviews</a>
                 <a href="#collection:albums">Music Reviews</a>
                 <a href="#collection:books">Book Reviews</a>
-                <a href="#collection:profiles">Profiles &amp; Obits</a>
+                <a href="#collection:profiles">Artist Profiles</a>
                 <a href="#collection:early">Early Writing</a>
               </div>
             </div>
@@ -46,7 +48,6 @@
               <div class="nav-side-menu">
                 <a href="#works">All Works</a>
                 <a href="#people">All People</a>
-                <a href="#index:publications">Publications</a>
                 <a href="#places">Places</a>
               </div>
             </div>
@@ -72,21 +73,21 @@
       </a>
       <nav class="site-nav site-nav-right" id="siteNavRight" aria-label="Primary navigation right">
         <div class="nav-folder">
-          <a href="#explore">Explore</a>
+          <a href="#section:explore">Explore</a>
           <div class="nav-dropdown">
-            <a href="#explore">Article Explorer</a>
             <a href="#map">Map</a>
             <a href="#timeline">Timeline</a>
+            <a href="#explore">Article Explorer</a>
             <a href="#correspondence">Correspondence</a>
           </div>
         </div>
         <div class="nav-folder">
-          <a href="#about">About</a>
+          <a href="#section:about">About</a>
           <div class="nav-dropdown">
             <a href="#about">About Robert Cushman</a>
             <a href="#critics-circle">Critic's Circle</a>
             <a href="https://www.cushmancollected.com/checkout/donate?donatePageId=5c9b8016652dea361e5feb7d" target="_blank" rel="noopener">Donate</a>
-            <a href="#subscribe">Subscribe</a>
+            <a href="#contact">Contact &amp; Newsletter</a>
           </div>
         </div>
       </nav>
@@ -102,10 +103,25 @@
 
     <nav class="drawer" id="drawer" aria-label="Site navigation">
       <a href="#search">Search the Archive</a>
-      <a href="#section:current">Recent</a>
       <details>
         <summary>Browse</summary>
-        <a href="#section:collections">Collections</a>
+        <a href="#section:browse">Browse overview</a>
+        <details class="drawer-collection-menu">
+          <summary>Collections</summary>
+          <a href="#collection:recent">Recent</a>
+          <a href="#correspondence:famous-letters">Special Letters</a>
+          <a href="#section:shakespeare">Shakespeare</a>
+          <a href="#collection:sondheim">Sondheim</a>
+          <a href="#collection:stoppard">Stoppard</a>
+          <a href="#collection:musicals">Musicals</a>
+          <a href="#collection:stratford">Stratford</a>
+          <a href="#collection:shaw">Shaw</a>
+          <a href="#collection:television">TV Reviews</a>
+          <a href="#collection:albums">Music Reviews</a>
+          <a href="#collection:books">Book Reviews</a>
+          <a href="#collection:profiles">Artist Profiles</a>
+          <a href="#collection:early">Early Writing</a>
+        </details>
         <a href="#master-index:all-works">All Works</a>
         <a href="#master-index:all-people">All People</a>
         <a href="#index:publications">Publications</a>
@@ -113,17 +129,19 @@
       </details>
       <details>
         <summary>Explore</summary>
-        <a href="#explore">Article Explorer</a>
+        <a href="#section:explore">Explore overview</a>
         <a href="#map">Map</a>
         <a href="#timeline">Timeline</a>
+        <a href="#explore">Article Explorer</a>
         <a href="#correspondence">Correspondence</a>
       </details>
       <details>
         <summary>About</summary>
+        <a href="#section:about">About overview</a>
         <a href="#about">About Robert Cushman</a>
         <a href="#critics-circle">Critic's Circle</a>
         <a href="https://www.cushmancollected.com/checkout/donate?donatePageId=5c9b8016652dea361e5feb7d" target="_blank" rel="noopener">Donate</a>
-        <a href="#subscribe">Contact &amp; Newsletter</a>
+        <a href="#contact">Contact &amp; Newsletter</a>
       </details>
     </nav>
 
@@ -225,7 +243,11 @@
         </a>
       </section>
 
-      <section class="frontpage-directory" id="frontpageDirectory" aria-label="Primary site paths"></section>
+      <section class="browse-heading site-index-heading">
+        <h2>Site Index</h2>
+      </section>
+
+      <section class="frontpage-directory" id="frontpageDirectory" aria-label="Site index"></section>
 
       <section class="browse-heading home-secondary-nav" id="browse">
         <h2>Browse the Archive</h2>
@@ -252,7 +274,9 @@
 <p>It can do the same for those who teach, study or write about it. There&#x27;s a passage that has always moved me in Great Books, the film critic David Denby&#x27;s account of a year spent as a mature student, re-taking the firstyear Literary and Humanities course at Columbia University. Lear is on the syllabus, and the man teaching it suddenly breaks off from textual analysis to say &quot;Nobody can lay a glove on this play. This is the greatest thing written by anyone, anytime, anywhere, and I don&#x27;t know what to do with it ... no one else knows what to do with it, either.&quot; This &quot;hipster wit&quot; is, Denby tells us, &quot;on the verge of tears.&quot;</p>
 <p>The play does that to you. It seems to have done it to Shakespeare. He took a source-play (King Leir, by Anonymous) with a happy ending, and made it merciless. (Not pitiless. There&#x27;s a difference.) He doesn&#x27;t just kill off the king, as tragedy might require. He has Cordelia, the good daughter of the king&#x27;s three, her father&#x27;s last refuge and only hope, hanged in prison, after Edmund, the man who ordered it, has had a deathbed change of heart and tried to stop it, but before Lear himself dies, so that he has to suffer this last agony too. &quot;Is this the promised end?&quot; asks one onlooker, invoking the end of the world. &quot;Or image of that horror?&quot; says another, agreeing. This is pretty nervy on Shakespeare&#x27;s part. The deaths of Hamlet or Othello provoke a few awed words from the survivors, but nothing suggesting this unparalleled level of tragedy. And we accept it. The rhythm of the last scene sweeps us along, as it must have swept its author. It&#x27;s a rhythm that shouldn&#x27;t be tampered with. Mendes&#x27; production is one of many that have made heavy cuts in this scene, including (perhaps because it&#x27;s thought sentimental) Edmund&#x27;s fruitless repentance. This is so wrong. Lear&#x27;s last despairing entrance, with the dead Cordelia cradled in his arms or (if the actor can&#x27;t manage that) dragged at his feet, needs to surprise us if it&#x27;s going to shock us. It did so superbly in the Brooklyn production where Pennington&#x27;s &quot;howl, howl, howl, howl&quot; issued from a promontory at the edge of the stage that had hardly been used before. We had to swivel our heads to see where it was coming from. Then we were caught.</p>
 <p>Lear fascinates as a ruler, as a father, and as an old man who misjudges his own strength and goes mad, discovering truths that he would never have faced when sane. Pennington, who in his early scenes made me think of a brisk English squire just back from hunting, brilliantly emphasized the man&#x27;s mercurial nature. He told me in an email that he&#x27;d discovered in Lear that &quot;nothing proceeds in a straight line ... he seems to shuttle between piercing good sense, riffs of madness, and a sort of overt mental torment.&quot; The Brooklyn production (directed by Arne Arbus) was a plain presentation, illumined by bolts of lightning: literally in the storm scene where a flash, and a pause in the thunder, set off Lear&#x27;s crucial declaration that &quot;my wits begin to turn&quot;.</p>
-<p>This production was in nonspecifically modern dress. The National Theatre&#x27;s is more elaborately (and expensively) modern and thus inescapably more political. Gloucester, excellently played by Stephen Boxer as a pinstriped bureaucrat, gets waterboarded before he gets blinded. Beale says, in an NT Live intermission interview, that Mendes&#x27; first instruction to him was to shave his head so that he would look &quot;less like Santa Claus.&quot; Thus bulletheaded, not to mention short and solid, Lear somewhat resembles the Stalin whom Beale played last year in the play Collaborators. In that performance, the dictator&#x27;s monstrosity was initially masked by modest self-deprecation; Lear, at least when we first meet him, wouldn&#x27;t know what self-deprecation meant. Beale makes a bluff no-nonsense entrance to preside over his daughters&#x27; loyaltycontest, staged with the three of them lined up a table, a microphone before each of them. Goneril delivers her script with satisfactory unction; Regan, feeling the need to one-up her sister, is literally all over her dad, and he loves it. (Later, she&#x27;s to take the same slinky tack - or tacky slink - with nearly every male in the cast. It&#x27;s an arresting idea, and certainly fun to watch, but it does lack variety.) When Cordelia refuses to join in the game, Lear&#x27;s fury is scarifying, as of an immense spoiled child. There was a famous moment in Peter Brook&#x27;s legendary 1960s production when Lear&#x27;s knights overturned a table, to show what rowdy houseguests they were. This Lear, at this moment, does his own table-turning. When the rebellious Kent confronts him, saying, &quot;Be Kent unmannerly, when Lear is mad&quot; he&#x27;s stopped momentarily in his tracks, then turns his fury up yet further. Has the fear of madness already been haunting him? Is this the first time he&#x27;s encountered it? Either way, it&#x27;s a fascinating prelude to Beale&#x27;s meticulous charting of how Lear comes to use, and even to embrace, the word. This fear rings through his scenes with his Fool, wonderfully played by Adrian Scarborough as a north-country comic in a Tyrolean hat: headgear that Lear himself appropriates for his most sustained mad scene, at Dover. Here we encounter both the power of modern dress and its limitations: I could take it when Lear&#x27;s attendants stuck a straitjacket on him; jabbing him with a hypodermic seemed an anachronism too far.</p>
+<p>This production was in nonspecifically modern dress. The National Theatre&#x27;s is more elaborately (and expensively) modern and thus inescapably more political. Gloucester, excellently played by Stephen Boxer as a pinstriped bureaucrat, gets waterboarded before he gets blinded. Beale says, in an NT Live intermission interview, that Mendes&#x27; first instruction to him was to shave his head so that he would look &quot;less like Santa Claus.&quot; Thus bulletheaded, not to mention short and solid, Lear somewhat resembles the Stalin whom Beale played last year in the play Collaborators. In that performance, the dictator&#x27;s monstrosity was initially masked by modest self-deprecation; Lear, at least when we first meet him, wouldn&#x27;t know what self-deprecation meant. Beale makes a bluff no-nonsense entrance to preside over his daughters&#x27; loyaltycontest, staged with the three of them lined up a table, a microphone before each of them. Goneril delivers her script with satisfactory unction; Regan, feeling the need to one-up her sister, is literally all over her dad, and he loves it.</p>
+<p>(Later, she&#x27;s to take the same slinky tack - or tacky slink - with nearly every male in the cast. It&#x27;s an arresting idea, and certainly fun to watch, but it does lack variety.) When Cordelia refuses to join in the game, Lear&#x27;s fury is scarifying, as of an immense spoiled child. There was a famous moment in Peter Brook&#x27;s legendary 1960s production when Lear&#x27;s knights overturned a table, to show what rowdy houseguests they were. This Lear, at this moment, does his own table-turning. When the rebellious Kent confronts him, saying, &quot;Be Kent unmannerly, when Lear is mad&quot; he&#x27;s stopped momentarily in his tracks, then turns his fury up yet further. Has the fear of madness already been haunting him? Is this the first time he&#x27;s encountered it? Either way, it&#x27;s a fascinating prelude to Beale&#x27;s meticulous charting of how Lear comes to use, and even to embrace, the word.</p>
+<p>This fear rings through his scenes with his Fool, wonderfully played by Adrian Scarborough as a north-country comic in a Tyrolean hat: headgear that Lear himself appropriates for his most sustained mad scene, at Dover. Here we encounter both the power of modern dress and its limitations: I could take it when Lear&#x27;s attendants stuck a straitjacket on him; jabbing him with a hypodermic seemed an anachronism too far.</p>
 <p>If Lear is a political play, it is so in a different way from most Shakespeare&#x27;s. It isn&#x27;t about the jockeying for power of rival kings and queens; that&#x27;s there but only for plot purposes. What resonates now - and probably always has, in different registers - is Lear&#x27;s prayer for the &quot;poor naked wretches&quot; of his kingdom, forced to endure the storm; he even uses the word &quot;homeless.&quot; Even more startling is his acknowledgment that when enthroned he had taken &quot;too little care of this&quot;: not that he was responsible for it, but that he should have done more to alleviate it. He moves on to a stunning attack on all levels of authority: &quot;a dog&#x27;s obeyed in office.&quot; There&#x27;s nothing else like it in Shakespeare. It&#x27;s been suggested that he had to make his protagonist mad to get away with such sentiments, and that may well be true. Both the two recent Lears make these speeches burn and sizzle. But then so do most Lears.</p>
 <p>In the post-madness reconciliation with Cordelia, Beale is very moving, partly because he plays it initially for anger and bewilderment rather than beatitude. Pennington had the edge, though, in their subsequent scene together - &quot;let&#x27;s away to prison ... we two will sing like birds in the cage.&quot; I agree with him that this is &quot;the emotional heart ... the real beauty of the reunion ... and that&#x27;s the last we see of them alive of course.&quot; Even if you&#x27;ve never seen the play before, it&#x27;s heartbreaking because you sense it can&#x27;t last. If you know what&#x27;s coming, it&#x27;s brutal. But, as with everything else in the play, you wouldn&#x27;t want it any different.</p>
 <p>National Post robert.cushman@hotmail.com National Post</p>
@@ -290,6 +314,6 @@
       </section>
     </footer>
 
-    <script src="./app.js?v=194" type="module"></script>
+    <script src="./app.js?v=233" type="module"></script>
   </body>
 </html>

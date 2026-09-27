@@ -13,31 +13,33 @@
     <link rel="apple-touch-icon" href="../apple-touch-icon.svg">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Rubik:wght@400;600;700;800;900&display=swap">
-    <link rel="stylesheet" href="./styles.css?v=173">
+    <link rel="stylesheet" href="./styles.css?v=174">
     <link rel="stylesheet" href="./catalog.css?v=194">
-    <link rel="stylesheet" href="./classic.css?v=194">
+    <link rel="stylesheet" href="./classic.css?v=233">
   </head>
   <body class="article-open">
     <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="site-header">
       <nav class="site-nav site-nav-left" id="siteNavLeft" aria-label="Primary navigation left">
-        <a class="nav-search" href="#search" aria-label="Search the archive"><span></span></a>
-        <a href="#section:current">Recent</a>
+        <a href="#search">Search</a>
         <div class="nav-folder nav-folder-wide">
           <a href="#section:browse">Browse</a>
           <div class="nav-dropdown nav-mega">
             <div class="nav-subfolder">
               <a href="#section:collections">Collections</a>
               <div class="nav-side-menu">
+                <a href="#collection:recent">Recent</a>
+                <a href="#correspondence:famous-letters">Special Letters</a>
                 <a href="#section:shakespeare">Shakespeare</a>
                 <a href="#collection:sondheim">Sondheim</a>
+                <a href="#collection:stoppard">Stoppard</a>
                 <a href="#collection:musicals">Musicals</a>
                 <a href="#collection:stratford">Stratford</a>
                 <a href="#collection:shaw">Shaw</a>
                 <a href="#collection:television">TV Reviews</a>
                 <a href="#collection:albums">Music Reviews</a>
                 <a href="#collection:books">Book Reviews</a>
-                <a href="#collection:profiles">Profiles &amp; Obits</a>
+                <a href="#collection:profiles">Artist Profiles</a>
                 <a href="#collection:early">Early Writing</a>
               </div>
             </div>
@@ -46,7 +48,6 @@
               <div class="nav-side-menu">
                 <a href="#works">All Works</a>
                 <a href="#people">All People</a>
-                <a href="#index:publications">Publications</a>
                 <a href="#places">Places</a>
               </div>
             </div>
@@ -72,21 +73,21 @@
       </a>
       <nav class="site-nav site-nav-right" id="siteNavRight" aria-label="Primary navigation right">
         <div class="nav-folder">
-          <a href="#explore">Explore</a>
+          <a href="#section:explore">Explore</a>
           <div class="nav-dropdown">
-            <a href="#explore">Article Explorer</a>
             <a href="#map">Map</a>
             <a href="#timeline">Timeline</a>
+            <a href="#explore">Article Explorer</a>
             <a href="#correspondence">Correspondence</a>
           </div>
         </div>
         <div class="nav-folder">
-          <a href="#about">About</a>
+          <a href="#section:about">About</a>
           <div class="nav-dropdown">
             <a href="#about">About Robert Cushman</a>
             <a href="#critics-circle">Critic's Circle</a>
             <a href="https://www.cushmancollected.com/checkout/donate?donatePageId=5c9b8016652dea361e5feb7d" target="_blank" rel="noopener">Donate</a>
-            <a href="#subscribe">Subscribe</a>
+            <a href="#contact">Contact &amp; Newsletter</a>
           </div>
         </div>
       </nav>
@@ -102,10 +103,25 @@
 
     <nav class="drawer" id="drawer" aria-label="Site navigation">
       <a href="#search">Search the Archive</a>
-      <a href="#section:current">Recent</a>
       <details>
         <summary>Browse</summary>
-        <a href="#section:collections">Collections</a>
+        <a href="#section:browse">Browse overview</a>
+        <details class="drawer-collection-menu">
+          <summary>Collections</summary>
+          <a href="#collection:recent">Recent</a>
+          <a href="#correspondence:famous-letters">Special Letters</a>
+          <a href="#section:shakespeare">Shakespeare</a>
+          <a href="#collection:sondheim">Sondheim</a>
+          <a href="#collection:stoppard">Stoppard</a>
+          <a href="#collection:musicals">Musicals</a>
+          <a href="#collection:stratford">Stratford</a>
+          <a href="#collection:shaw">Shaw</a>
+          <a href="#collection:television">TV Reviews</a>
+          <a href="#collection:albums">Music Reviews</a>
+          <a href="#collection:books">Book Reviews</a>
+          <a href="#collection:profiles">Artist Profiles</a>
+          <a href="#collection:early">Early Writing</a>
+        </details>
         <a href="#master-index:all-works">All Works</a>
         <a href="#master-index:all-people">All People</a>
         <a href="#index:publications">Publications</a>
@@ -113,17 +129,19 @@
       </details>
       <details>
         <summary>Explore</summary>
-        <a href="#explore">Article Explorer</a>
+        <a href="#section:explore">Explore overview</a>
         <a href="#map">Map</a>
         <a href="#timeline">Timeline</a>
+        <a href="#explore">Article Explorer</a>
         <a href="#correspondence">Correspondence</a>
       </details>
       <details>
         <summary>About</summary>
+        <a href="#section:about">About overview</a>
         <a href="#about">About Robert Cushman</a>
         <a href="#critics-circle">Critic's Circle</a>
         <a href="https://www.cushmancollected.com/checkout/donate?donatePageId=5c9b8016652dea361e5feb7d" target="_blank" rel="noopener">Donate</a>
-        <a href="#subscribe">Contact &amp; Newsletter</a>
+        <a href="#contact">Contact &amp; Newsletter</a>
       </details>
     </nav>
 
@@ -225,7 +243,11 @@
         </a>
       </section>
 
-      <section class="frontpage-directory" id="frontpageDirectory" aria-label="Primary site paths"></section>
+      <section class="browse-heading site-index-heading">
+        <h2>Site Index</h2>
+      </section>
+
+      <section class="frontpage-directory" id="frontpageDirectory" aria-label="Site index"></section>
 
       <section class="browse-heading home-secondary-nav" id="browse">
         <h2>Browse the Archive</h2>
@@ -259,7 +281,9 @@
 <p>There is also vigorous work, to say the least, from Akosua Amo-Adem and Lindsay Owen Pierre as the couple upstairs, whose fights and reconciliations are a reflection of the graver dynamic below. This casting, with her black and him Hispanic, must also count as an update; it’s unlikely that in 1940s Louisiana they would have been allowed in the building. It’s sobering to realise that in the play as written the victim of racism is Stanley, whom Blanche denigrates as “a Polack” and who understandably resents it. Kimberly Purtell’s lighting, Debashis Sinha’s sound design, and Mike Ross’ music direction all contribute mightily to a superbly orchestrated production.</p>
 <figure><img loading="lazy" src="../site_export/content/media/streetcars-to-soulpepper-past/02.jpg" alt="Virgilia Griffith and Ryan Hollyman in Betrayal (2019). Photo by Dahlia Katz."></figure>
 <p><em>Virgilia Griffith and Ryan Hollyman in Betrayal (2019). Photo by Dahlia Katz.</em></p>
-<p>Streetcar is the inaugural offering of Weyni Mengesha’s reign as Soulpepper’s artistic director. The preceding interregnum period, under Alan Dilworth, concluded with a revival of Betrayal, on which I would like to cast a brief backward glance, partly for extra-curricular reasons. Harold Pinter’s reverse-chronology sonata for eternal triangle was decently acted, especially by Jordan Pettle as the questionably wronged husband, though even some of his poisoned darts seemed blunted; the play as a whole arrived muted, possibly because the scenes, dotted around the composite set, never seemed to have enough space to establish themselves. What really arrested my attention though was the program’s declaration, largely echoed in the press, that the play is “widely considered [Pinter’s] masterpiece” and, what’s more, was greeted as such as its London premiere in 1978. Well, it wasn’t. Back then, the London critics generally scorned it as a conventional and colourless middle-class adultery drama, trying to get by with technical tricks. I should know; I (shameful confession number two) was one of those misguided reviewers. That we were misguided was proved by subsequent revivals, revealing the play to have some of its author’s most elegantly poisonous dialogue and characterisation. All the same, calling it his masterpiece seems odd to those of us who remember The Caretaker, whose characters haunt and whose language, from the days before Pinter embraced gentility, really sings. Also I recall that, some eight years before Betrayal, Pinter had given us another, even more mysterious triangle drama (one man, two women this time) called Old Times. This really was hailed as a masterpiece by the critics (not me that time; I was far too young) but since then seems to have fallen off the map. Maybe Soulpepper should let us have another look at it; the company’s record with Pinter has generally been pretty impressive, not least with Little Menace, the evening of sketches that was one of the interregnum’s finest achievements, featuring some of the best acting seen in Toronto. And long before that there was a previous fine Soulpepper production of Betrayal; the new one, unlike Streetcar, didn’t measure up to its predecessor. Indeed it left me feeling empty, and even wondering whether we philistine reviewers might not have been right the first time.</p></div></article>
+<p>Streetcar is the inaugural offering of Weyni Mengesha’s reign as Soulpepper’s artistic director. The preceding interregnum period, under Alan Dilworth, concluded with a revival of Betrayal, on which I would like to cast a brief backward glance, partly for extra-curricular reasons. Harold Pinter’s reverse-chronology sonata for eternal triangle was decently acted, especially by Jordan Pettle as the questionably wronged husband, though even some of his poisoned darts seemed blunted; the play as a whole arrived muted, possibly because the scenes, dotted around the composite set, never seemed to have enough space to establish themselves. What really arrested my attention though was the program’s declaration, largely echoed in the press, that the play is “widely considered [Pinter’s] masterpiece” and, what’s more, was greeted as such as its London premiere in 1978. Well, it wasn’t. Back then, the London critics generally scorned it as a conventional and colourless middle-class adultery drama, trying to get by with technical tricks.</p>
+<p>I should know; I (shameful confession number two) was one of those misguided reviewers. That we were misguided was proved by subsequent revivals, revealing the play to have some of its author’s most elegantly poisonous dialogue and characterisation. All the same, calling it his masterpiece seems odd to those of us who remember The Caretaker, whose characters haunt and whose language, from the days before Pinter embraced gentility, really sings. Also I recall that, some eight years before Betrayal, Pinter had given us another, even more mysterious triangle drama (one man, two women this time) called Old Times. This really was hailed as a masterpiece by the critics (not me that time; I was far too young) but since then seems to have fallen off the map. Maybe Soulpepper should let us have another look at it; the company’s record with Pinter has generally been pretty impressive, not least with Little Menace, the evening of sketches that was one of the interregnum’s finest achievements, featuring some of the best acting seen in Toronto.</p>
+<p>And long before that there was a previous fine Soulpepper production of Betrayal; the new one, unlike Streetcar, didn’t measure up to its predecessor. Indeed it left me feeling empty, and even wondering whether we philistine reviewers might not have been right the first time.</p></div></article>
       </section>
 
       <section class="index-view" id="indexView" hidden>
@@ -293,6 +317,6 @@
       </section>
     </footer>
 
-    <script src="./app.js?v=194" type="module"></script>
+    <script src="./app.js?v=233" type="module"></script>
   </body>
 </html>

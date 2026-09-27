@@ -13,31 +13,33 @@
     <link rel="apple-touch-icon" href="../apple-touch-icon.svg">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Rubik:wght@400;600;700;800;900&display=swap">
-    <link rel="stylesheet" href="./styles.css?v=173">
+    <link rel="stylesheet" href="./styles.css?v=174">
     <link rel="stylesheet" href="./catalog.css?v=194">
-    <link rel="stylesheet" href="./classic.css?v=194">
+    <link rel="stylesheet" href="./classic.css?v=233">
   </head>
   <body class="article-open">
     <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="site-header">
       <nav class="site-nav site-nav-left" id="siteNavLeft" aria-label="Primary navigation left">
-        <a class="nav-search" href="#search" aria-label="Search the archive"><span></span></a>
-        <a href="#section:current">Recent</a>
+        <a href="#search">Search</a>
         <div class="nav-folder nav-folder-wide">
           <a href="#section:browse">Browse</a>
           <div class="nav-dropdown nav-mega">
             <div class="nav-subfolder">
               <a href="#section:collections">Collections</a>
               <div class="nav-side-menu">
+                <a href="#collection:recent">Recent</a>
+                <a href="#correspondence:famous-letters">Special Letters</a>
                 <a href="#section:shakespeare">Shakespeare</a>
                 <a href="#collection:sondheim">Sondheim</a>
+                <a href="#collection:stoppard">Stoppard</a>
                 <a href="#collection:musicals">Musicals</a>
                 <a href="#collection:stratford">Stratford</a>
                 <a href="#collection:shaw">Shaw</a>
                 <a href="#collection:television">TV Reviews</a>
                 <a href="#collection:albums">Music Reviews</a>
                 <a href="#collection:books">Book Reviews</a>
-                <a href="#collection:profiles">Profiles &amp; Obits</a>
+                <a href="#collection:profiles">Artist Profiles</a>
                 <a href="#collection:early">Early Writing</a>
               </div>
             </div>
@@ -46,7 +48,6 @@
               <div class="nav-side-menu">
                 <a href="#works">All Works</a>
                 <a href="#people">All People</a>
-                <a href="#index:publications">Publications</a>
                 <a href="#places">Places</a>
               </div>
             </div>
@@ -72,21 +73,21 @@
       </a>
       <nav class="site-nav site-nav-right" id="siteNavRight" aria-label="Primary navigation right">
         <div class="nav-folder">
-          <a href="#explore">Explore</a>
+          <a href="#section:explore">Explore</a>
           <div class="nav-dropdown">
-            <a href="#explore">Article Explorer</a>
             <a href="#map">Map</a>
             <a href="#timeline">Timeline</a>
+            <a href="#explore">Article Explorer</a>
             <a href="#correspondence">Correspondence</a>
           </div>
         </div>
         <div class="nav-folder">
-          <a href="#about">About</a>
+          <a href="#section:about">About</a>
           <div class="nav-dropdown">
             <a href="#about">About Robert Cushman</a>
             <a href="#critics-circle">Critic's Circle</a>
             <a href="https://www.cushmancollected.com/checkout/donate?donatePageId=5c9b8016652dea361e5feb7d" target="_blank" rel="noopener">Donate</a>
-            <a href="#subscribe">Subscribe</a>
+            <a href="#contact">Contact &amp; Newsletter</a>
           </div>
         </div>
       </nav>
@@ -102,10 +103,25 @@
 
     <nav class="drawer" id="drawer" aria-label="Site navigation">
       <a href="#search">Search the Archive</a>
-      <a href="#section:current">Recent</a>
       <details>
         <summary>Browse</summary>
-        <a href="#section:collections">Collections</a>
+        <a href="#section:browse">Browse overview</a>
+        <details class="drawer-collection-menu">
+          <summary>Collections</summary>
+          <a href="#collection:recent">Recent</a>
+          <a href="#correspondence:famous-letters">Special Letters</a>
+          <a href="#section:shakespeare">Shakespeare</a>
+          <a href="#collection:sondheim">Sondheim</a>
+          <a href="#collection:stoppard">Stoppard</a>
+          <a href="#collection:musicals">Musicals</a>
+          <a href="#collection:stratford">Stratford</a>
+          <a href="#collection:shaw">Shaw</a>
+          <a href="#collection:television">TV Reviews</a>
+          <a href="#collection:albums">Music Reviews</a>
+          <a href="#collection:books">Book Reviews</a>
+          <a href="#collection:profiles">Artist Profiles</a>
+          <a href="#collection:early">Early Writing</a>
+        </details>
         <a href="#master-index:all-works">All Works</a>
         <a href="#master-index:all-people">All People</a>
         <a href="#index:publications">Publications</a>
@@ -113,17 +129,19 @@
       </details>
       <details>
         <summary>Explore</summary>
-        <a href="#explore">Article Explorer</a>
+        <a href="#section:explore">Explore overview</a>
         <a href="#map">Map</a>
         <a href="#timeline">Timeline</a>
+        <a href="#explore">Article Explorer</a>
         <a href="#correspondence">Correspondence</a>
       </details>
       <details>
         <summary>About</summary>
+        <a href="#section:about">About overview</a>
         <a href="#about">About Robert Cushman</a>
         <a href="#critics-circle">Critic's Circle</a>
         <a href="https://www.cushmancollected.com/checkout/donate?donatePageId=5c9b8016652dea361e5feb7d" target="_blank" rel="noopener">Donate</a>
-        <a href="#subscribe">Contact &amp; Newsletter</a>
+        <a href="#contact">Contact &amp; Newsletter</a>
       </details>
     </nav>
 
@@ -225,7 +243,11 @@
         </a>
       </section>
 
-      <section class="frontpage-directory" id="frontpageDirectory" aria-label="Primary site paths"></section>
+      <section class="browse-heading site-index-heading">
+        <h2>Site Index</h2>
+      </section>
+
+      <section class="frontpage-directory" id="frontpageDirectory" aria-label="Site index"></section>
 
       <section class="browse-heading home-secondary-nav" id="browse">
         <h2>Browse the Archive</h2>
@@ -253,7 +275,9 @@
 <p>Miss Trunchbull is the sadistic, sports-obsessed school principal to whose callous mercies the show&#x27;s five-year old heroine is consigned by her hateful parents. The actor who played this harridan in London and New York gave a performance of lip-licking grossness that, depressingly if unsurprisingly, won him raves and awards.</p>
 <p>Chameroy&#x27;s triumph is to be chilling but delicate. He comes to the role with extensive cross-dressing experience: for years he&#x27;s been the flirtatious Dame Plumbum in Ross Petty&#x27;s Toronto pantomimes. Flirtatiousness would be out of place for Trunchbull, whose clothes are aggressively drab, and whose hair is a tight and savage bun. But a soft and silky vocal tone comes in handy, especially when it turns to ice, the character&#x27;s preferred temperature for inspiring terror. Miss Trunchbull likes to invent misdeeds and then punish her pupils for committing them. Any child will do.</p>
 <p>She was an Olympic champion at throwing the hammer, and she likes to pick up a little boy, spin him around her head, and then hurl him into the great beyond. Don&#x27;t get too excited; the stage blacks out at the crucial moment. Underneath all this, and without strain, Chameroy shows us a terrible streak of insecurity. This is what drives her to inflict mental and physical tortures on the children she calls &quot;maggots,&quot; with Matilda Wormwood the most maggoty of them all.</p>
-<p>Matilda&#x27;s greatest crime, in Miss Trunchbull&#x27;s and her parents&#x27; eyes, is that she loves to read; she polished off Crime and Punishment, Nicholas Nickleby and halfa-dozen others in a week; like I said, the show doesn&#x27;t go for subtlety. Her parents also resent that she was born a girl, or indeed that she was born at all. Her birth begins the story, with her mother registering annoyed amazement at the news that she&#x27;s nine months pregnant and thus will not be able to participate in an upcoming ballroom dancing contest. Dennis Kelly&#x27;s script is based on the book by Roald Dahl whose children&#x27;s stories have always struck me as short on humour and long on gratuitous nastiness. Also, even within the limits of fantasy, short on believability. It&#x27;s fair enough that Matilda&#x27;s mum and dad, who loathe her, would send her to a hellhole of a school. But what about the other kids? There&#x27;s no indication that their parents don&#x27;t love them. Unlike the Dickensian Dotheboys Hall (the Nicholas Nickleby reference makes for a nice shout-out), Dahl&#x27;s Crunchem Hall is a day-school, presumably with holidays, so the children could easily tell their folks what was going on. As a librarian friend of Matilda&#x27;s (nicely played by Keisha T. Fraser) asks in a slightly different context, &quot;Why doesn&#x27;t somebody call the police?&quot; And what are we to make of Miss Honey, the nice teacher - indeed, as far as we can see, the only teacher - in the school? She turns out to have a double relationship with Miss Trunchbull that only makes sense if she&#x27;s a total idiot. But she&#x27;s presented to us as intelligent if timid. In London, she was the best thing in the show. As played here by Paula Brancati, she&#x27;s still good to have around; her song of self-doubt is the highlight of the score, neat and searching. Otherwise Tim Minchin&#x27;s lyrics, at least the ones you can hear, are uneven while his music is undistinguished; the ballads are static, the attempted showstoppers have no bounce to them.</p>
+<p>Matilda&#x27;s greatest crime, in Miss Trunchbull&#x27;s and her parents&#x27; eyes, is that she loves to read; she polished off Crime and Punishment, Nicholas Nickleby and halfa-dozen others in a week; like I said, the show doesn&#x27;t go for subtlety. Her parents also resent that she was born a girl, or indeed that she was born at all. Her birth begins the story, with her mother registering annoyed amazement at the news that she&#x27;s nine months pregnant and thus will not be able to participate in an upcoming ballroom dancing contest. Dennis Kelly&#x27;s script is based on the book by Roald Dahl whose children&#x27;s stories have always struck me as short on humour and long on gratuitous nastiness. Also, even within the limits of fantasy, short on believability. It&#x27;s fair enough that Matilda&#x27;s mum and dad, who loathe her, would send her to a hellhole of a school.</p>
+<p>But what about the other kids? There&#x27;s no indication that their parents don&#x27;t love them. Unlike the Dickensian Dotheboys Hall (the Nicholas Nickleby reference makes for a nice shout-out), Dahl&#x27;s Crunchem Hall is a day-school, presumably with holidays, so the children could easily tell their folks what was going on. As a librarian friend of Matilda&#x27;s (nicely played by Keisha T. Fraser) asks in a slightly different context, &quot;Why doesn&#x27;t somebody call the police?&quot; And what are we to make of Miss Honey, the nice teacher - indeed, as far as we can see, the only teacher - in the school? She turns out to have a double relationship with Miss Trunchbull that only makes sense if she&#x27;s a total idiot. But she&#x27;s presented to us as intelligent if timid. In London, she was the best thing in the show. As played here by Paula Brancati, she&#x27;s still good to have around; her song of self-doubt is the highlight of the score, neat and searching.</p>
+<p>Otherwise Tim Minchin&#x27;s lyrics, at least the ones you can hear, are uneven while his music is undistinguished; the ballads are static, the attempted showstoppers have no bounce to them.</p>
 <p>Matthew Warchus&#x27;s direction is fast and slick, on a set by Rob Howell largely composed of alphabetical building-blocks. Perhaps I&#x27;m the oly person who preferred their collaboration on The Lord of the Rings. The biggest production number is one in which the children are terrorized into a display of advanced PhysEd, the terror somewhat undercut by the fact that they look to be having the time of their lives.</p>
 <p>Three girls alternate as Matilda. Hannah Levinson, who played her on the first night, is a splendidly assured little know-it-all. It&#x27;s odd that, despite the build-up it&#x27;s given, her bookishness barely comes into play in defeating Miss Trunchbull. Instead, she has to develop occult powers that arrive late and depart early. The promised conflict hardly exists. But at least the headmistress is allowed a certain grandeur. Matilda&#x27;s working-class parents, vain or crooked and obsessed with &quot;the telly,&quot; are presented with odious condescension as screeching cockney caricatures. As Dad, a fruitlessly unscrupulous used-car merchant, Brandon McGibbon slips in a few moments of understated wit; Darcy Stewart as his lady has no truck with understatement, but she may well have felt it was pointless to try.</p>
 <p>Best supporting grownup: Eric Craig in a stylish last-minute cameo as a Russian mafia boss. (Don&#x27;t ask.) Best supporting tot: Isabella Stuebing, gleeful as Matilda&#x27;s self-anointed best friend. Best musical for which this one made me feel nostalgic: Annie. I&#x27;d be perfectly happy to see Chameroy play Miss Hannigan.</p></div></article>
@@ -290,6 +314,6 @@
       </section>
     </footer>
 
-    <script src="./app.js?v=194" type="module"></script>
+    <script src="./app.js?v=233" type="module"></script>
   </body>
 </html>

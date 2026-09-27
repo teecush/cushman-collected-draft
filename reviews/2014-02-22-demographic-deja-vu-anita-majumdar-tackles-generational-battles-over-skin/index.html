@@ -13,31 +13,33 @@
     <link rel="apple-touch-icon" href="../apple-touch-icon.svg">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Rubik:wght@400;600;700;800;900&display=swap">
-    <link rel="stylesheet" href="./styles.css?v=173">
+    <link rel="stylesheet" href="./styles.css?v=174">
     <link rel="stylesheet" href="./catalog.css?v=194">
-    <link rel="stylesheet" href="./classic.css?v=194">
+    <link rel="stylesheet" href="./classic.css?v=233">
   </head>
   <body class="article-open">
     <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="site-header">
       <nav class="site-nav site-nav-left" id="siteNavLeft" aria-label="Primary navigation left">
-        <a class="nav-search" href="#search" aria-label="Search the archive"><span></span></a>
-        <a href="#section:current">Recent</a>
+        <a href="#search">Search</a>
         <div class="nav-folder nav-folder-wide">
           <a href="#section:browse">Browse</a>
           <div class="nav-dropdown nav-mega">
             <div class="nav-subfolder">
               <a href="#section:collections">Collections</a>
               <div class="nav-side-menu">
+                <a href="#collection:recent">Recent</a>
+                <a href="#correspondence:famous-letters">Special Letters</a>
                 <a href="#section:shakespeare">Shakespeare</a>
                 <a href="#collection:sondheim">Sondheim</a>
+                <a href="#collection:stoppard">Stoppard</a>
                 <a href="#collection:musicals">Musicals</a>
                 <a href="#collection:stratford">Stratford</a>
                 <a href="#collection:shaw">Shaw</a>
                 <a href="#collection:television">TV Reviews</a>
                 <a href="#collection:albums">Music Reviews</a>
                 <a href="#collection:books">Book Reviews</a>
-                <a href="#collection:profiles">Profiles &amp; Obits</a>
+                <a href="#collection:profiles">Artist Profiles</a>
                 <a href="#collection:early">Early Writing</a>
               </div>
             </div>
@@ -46,7 +48,6 @@
               <div class="nav-side-menu">
                 <a href="#works">All Works</a>
                 <a href="#people">All People</a>
-                <a href="#index:publications">Publications</a>
                 <a href="#places">Places</a>
               </div>
             </div>
@@ -72,21 +73,21 @@
       </a>
       <nav class="site-nav site-nav-right" id="siteNavRight" aria-label="Primary navigation right">
         <div class="nav-folder">
-          <a href="#explore">Explore</a>
+          <a href="#section:explore">Explore</a>
           <div class="nav-dropdown">
-            <a href="#explore">Article Explorer</a>
             <a href="#map">Map</a>
             <a href="#timeline">Timeline</a>
+            <a href="#explore">Article Explorer</a>
             <a href="#correspondence">Correspondence</a>
           </div>
         </div>
         <div class="nav-folder">
-          <a href="#about">About</a>
+          <a href="#section:about">About</a>
           <div class="nav-dropdown">
             <a href="#about">About Robert Cushman</a>
             <a href="#critics-circle">Critic's Circle</a>
             <a href="https://www.cushmancollected.com/checkout/donate?donatePageId=5c9b8016652dea361e5feb7d" target="_blank" rel="noopener">Donate</a>
-            <a href="#subscribe">Subscribe</a>
+            <a href="#contact">Contact &amp; Newsletter</a>
           </div>
         </div>
       </nav>
@@ -102,10 +103,25 @@
 
     <nav class="drawer" id="drawer" aria-label="Site navigation">
       <a href="#search">Search the Archive</a>
-      <a href="#section:current">Recent</a>
       <details>
         <summary>Browse</summary>
-        <a href="#section:collections">Collections</a>
+        <a href="#section:browse">Browse overview</a>
+        <details class="drawer-collection-menu">
+          <summary>Collections</summary>
+          <a href="#collection:recent">Recent</a>
+          <a href="#correspondence:famous-letters">Special Letters</a>
+          <a href="#section:shakespeare">Shakespeare</a>
+          <a href="#collection:sondheim">Sondheim</a>
+          <a href="#collection:stoppard">Stoppard</a>
+          <a href="#collection:musicals">Musicals</a>
+          <a href="#collection:stratford">Stratford</a>
+          <a href="#collection:shaw">Shaw</a>
+          <a href="#collection:television">TV Reviews</a>
+          <a href="#collection:albums">Music Reviews</a>
+          <a href="#collection:books">Book Reviews</a>
+          <a href="#collection:profiles">Artist Profiles</a>
+          <a href="#collection:early">Early Writing</a>
+        </details>
         <a href="#master-index:all-works">All Works</a>
         <a href="#master-index:all-people">All People</a>
         <a href="#index:publications">Publications</a>
@@ -113,17 +129,19 @@
       </details>
       <details>
         <summary>Explore</summary>
-        <a href="#explore">Article Explorer</a>
+        <a href="#section:explore">Explore overview</a>
         <a href="#map">Map</a>
         <a href="#timeline">Timeline</a>
+        <a href="#explore">Article Explorer</a>
         <a href="#correspondence">Correspondence</a>
       </details>
       <details>
         <summary>About</summary>
+        <a href="#section:about">About overview</a>
         <a href="#about">About Robert Cushman</a>
         <a href="#critics-circle">Critic's Circle</a>
         <a href="https://www.cushmancollected.com/checkout/donate?donatePageId=5c9b8016652dea361e5feb7d" target="_blank" rel="noopener">Donate</a>
-        <a href="#subscribe">Contact &amp; Newsletter</a>
+        <a href="#contact">Contact &amp; Newsletter</a>
       </details>
     </nav>
 
@@ -225,7 +243,11 @@
         </a>
       </section>
 
-      <section class="frontpage-directory" id="frontpageDirectory" aria-label="Primary site paths"></section>
+      <section class="browse-heading site-index-heading">
+        <h2>Site Index</h2>
+      </section>
+
+      <section class="frontpage-directory" id="frontpageDirectory" aria-label="Site index"></section>
 
       <section class="browse-heading home-secondary-nav" id="browse">
         <h2>Browse the Archive</h2>
@@ -250,7 +272,9 @@
         <article id="article"><time>Feb 22, 2014</time><h1>Demographic Deja Vu; Anita Majumdar Tackles Generational Battles Over Skin</h1><p class="article-meta">Robert Cushman · National Post</p><div class="article-body" id="article-text"><p>Anita Majumdar&#x27;s new piece Same Same But Different consists of two thematically linked one-act plays, which may be a sly reason for that perplexing title. It also makes for a long evening.</p>
 <p>On a less fanciful level, the title refers to distinctions, especially racial and colour distinctions, in India and across the Indian diaspora. In the first piece, Majumdar, drawing on her own background and also on her own talents as a dancer, appears as Aisha, an Indian movie star who was born and grew up in Canada, and has now come back. Shes making a Bollywood musical, in Vancouver. Her director, who is unseen but very vocal, is overjoyed to have her in the picture, her being so famous, but he does keep interrupting her numbers and telling her to start again, which is entertaining for us, at least to begin with, but infuriating for her. And theres one other little thing: She&#x27;s too dark. Too dark, that is, for the Indian audience whose compatriot he is. He keeps pressing skin-lightening creams on her - creams, it turns out, that she has plugged in commercials, but that she is indignantly opposed to using herself. She is up, in fact, against the kind of prejudice now officially known as shadeism. (It ought to be possible to combat injustice without crucifying the English language, but there you go.) Aisha&#x27;s dance partner is Ben, who is Spanish-Filipino and to whom, perhaps because hes so pale, the director takes a fancy: so much so that he promotes him from chorusboy to leading man. This happens with improbable suddenness, but then the plays whole chronology is confusing. Its last section is an exact replay of its first, but it&#x27;s unclear whether this is meant to denote a flashback or demonstrate that nothing ever changes - or just to be a cute way of rounding things off. One thing does progress; Ben, once over his excitement at his new status, encourages Aisha, of whom he is a long-time fan, to stand by her principles. This is good of him, because she&#x27;s been exhibiting her own varieties of prejudice against him.</p>
 <p>The most enjoyable sections here are the dance numbers, which involve the performers in imitating stereotypically ancient Egyptians, complete with jutting elbow movements, and which Majumdar herself has choreographed. She executes them with great skill, while radiating a delightful sense of disgust at what she has got herself into. Her expressiveness does not, on this occasion, extend into her spoken bits. She does communicate star quality, both on her own account and Aishas, but what you might call her conversational range is limited. Then again, she has written herself a role that confines her to distinguishing between sundry shades of pique. Her partner, Nicco Lorenzo Garcia, has a pleasing personality but even less variety. Brian Quirt, doing double duty as director and dramaturge, lets things sag alarmingly in both capacities.</p>
-<p>The evenings second half both fulfills and betrays the title; it&#x27;s somewhat different, but too much same same. It takes us back to Bombay, and back in time to when the city had that name. We&#x27;re now in a recording studio, presided over by a sound engineer as dictatorial, as capricious and as invisible as the director from earlier (or later, depending on how youre counting). Garcia plays Felipe, a youthful but experienced session singer of the same ethnicity as his previous role, and Majumdar is Kabira, whos making both her professional debut and her professional farewell; she&#x27;s about to depart for an arranged marriage in, yes, Canada. She is in fact, or will be, Aisha&#x27;s mother; and some of the things we learn about her do connect with what weve heard of Aishas upbringing. But the links aren&#x27;t very urgent; the proceedings are too nerveless for us to care. This second part is more interesting than the first but also, coming so late, more boring. The social and political pressures discussed here, both in India and the Philippines, are more acute and more compelling than any amount of agonizing about Bollywood. But discussion is all they get; this playlet, like its predecessor, is mainly composed of repetitive conversation, with a wisp of a love-plot thrown in. This time they&#x27;re arent any dances, but there are songs: nicely disdainful covers of Michael Jackson numbers, which prompt a few more thoughts about skin tone. Theres also the sad, if hardly surprising, dashing of Kabira&#x27;s dreams of vocal stardom: another future legacy for her daughter. Felipe, meanwhile, has a more pressing deadline; he wants, in spite of the dilatory sound guy, to get the session over with so he can make a midnight meeting that will help him leave the country. This does contribute some suspense; or maybe it&#x27;s just that Felipes impatience is infectious. The best performance is given by Reza Jacobs, who plays both the director and the sound engineer, and who may not even be physically present; at least he didnt take a curtain-call. If his contribution was pre-recorded, then all concerned should be congratulated on a fine job of synchronization; though it may, on consideration, contribute to the overall deadness of the evening. Jacobs is one of Toronto&#x27;s best and busiest musical directors, so he may well have other places to be; that he should be able to act as well seems unfair. I can&#x27;t say he differentiates much between his two roles - both of them masters of sweet unreasonableness - but he takes full advantage of Majumdars best lines. On plagiarism: &quot;It isnt stealing if you admit that you&#x27;re doing it.&quot; And of an especially protracted Bollywood movie: &quot;I walked in a boy, I walked out a man.&quot; I sympathize.</p>
+<p>The evenings second half both fulfills and betrays the title; it&#x27;s somewhat different, but too much same same. It takes us back to Bombay, and back in time to when the city had that name. We&#x27;re now in a recording studio, presided over by a sound engineer as dictatorial, as capricious and as invisible as the director from earlier (or later, depending on how youre counting). Garcia plays Felipe, a youthful but experienced session singer of the same ethnicity as his previous role, and Majumdar is Kabira, whos making both her professional debut and her professional farewell; she&#x27;s about to depart for an arranged marriage in, yes, Canada. She is in fact, or will be, Aisha&#x27;s mother; and some of the things we learn about her do connect with what weve heard of Aishas upbringing. But the links aren&#x27;t very urgent; the proceedings are too nerveless for us to care.</p>
+<p>This second part is more interesting than the first but also, coming so late, more boring. The social and political pressures discussed here, both in India and the Philippines, are more acute and more compelling than any amount of agonizing about Bollywood. But discussion is all they get; this playlet, like its predecessor, is mainly composed of repetitive conversation, with a wisp of a love-plot thrown in. This time they&#x27;re arent any dances, but there are songs: nicely disdainful covers of Michael Jackson numbers, which prompt a few more thoughts about skin tone. Theres also the sad, if hardly surprising, dashing of Kabira&#x27;s dreams of vocal stardom: another future legacy for her daughter. Felipe, meanwhile, has a more pressing deadline; he wants, in spite of the dilatory sound guy, to get the session over with so he can make a midnight meeting that will help him leave the country.</p>
+<p>This does contribute some suspense; or maybe it&#x27;s just that Felipes impatience is infectious. The best performance is given by Reza Jacobs, who plays both the director and the sound engineer, and who may not even be physically present; at least he didnt take a curtain-call. If his contribution was pre-recorded, then all concerned should be congratulated on a fine job of synchronization; though it may, on consideration, contribute to the overall deadness of the evening. Jacobs is one of Toronto&#x27;s best and busiest musical directors, so he may well have other places to be; that he should be able to act as well seems unfair. I can&#x27;t say he differentiates much between his two roles - both of them masters of sweet unreasonableness - but he takes full advantage of Majumdars best lines. On plagiarism: &quot;It isnt stealing if you admit that you&#x27;re doing it.&quot; And of an especially protracted Bollywood movie: &quot;I walked in a boy, I walked out a man.&quot; I sympathize.</p>
 <p>robert.cushman@hotmail.com Same Same But Different runs through March 8 at Theatre Passe Muraille</p>
 <p>Michael Cooper / Anita Majumdar and Nicco Lorenzo Garcia dance in one of the numbers that Majumdar choreographed for the play.; Caption:</p></div></article>
       </section>
@@ -286,6 +310,6 @@
       </section>
     </footer>
 
-    <script src="./app.js?v=194" type="module"></script>
+    <script src="./app.js?v=233" type="module"></script>
   </body>
 </html>

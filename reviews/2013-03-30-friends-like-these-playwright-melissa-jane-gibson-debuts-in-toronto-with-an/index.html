@@ -13,31 +13,33 @@
     <link rel="apple-touch-icon" href="../apple-touch-icon.svg">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Rubik:wght@400;600;700;800;900&display=swap">
-    <link rel="stylesheet" href="./styles.css?v=173">
+    <link rel="stylesheet" href="./styles.css?v=174">
     <link rel="stylesheet" href="./catalog.css?v=194">
-    <link rel="stylesheet" href="./classic.css?v=194">
+    <link rel="stylesheet" href="./classic.css?v=233">
   </head>
   <body class="article-open">
     <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="site-header">
       <nav class="site-nav site-nav-left" id="siteNavLeft" aria-label="Primary navigation left">
-        <a class="nav-search" href="#search" aria-label="Search the archive"><span></span></a>
-        <a href="#section:current">Recent</a>
+        <a href="#search">Search</a>
         <div class="nav-folder nav-folder-wide">
           <a href="#section:browse">Browse</a>
           <div class="nav-dropdown nav-mega">
             <div class="nav-subfolder">
               <a href="#section:collections">Collections</a>
               <div class="nav-side-menu">
+                <a href="#collection:recent">Recent</a>
+                <a href="#correspondence:famous-letters">Special Letters</a>
                 <a href="#section:shakespeare">Shakespeare</a>
                 <a href="#collection:sondheim">Sondheim</a>
+                <a href="#collection:stoppard">Stoppard</a>
                 <a href="#collection:musicals">Musicals</a>
                 <a href="#collection:stratford">Stratford</a>
                 <a href="#collection:shaw">Shaw</a>
                 <a href="#collection:television">TV Reviews</a>
                 <a href="#collection:albums">Music Reviews</a>
                 <a href="#collection:books">Book Reviews</a>
-                <a href="#collection:profiles">Profiles &amp; Obits</a>
+                <a href="#collection:profiles">Artist Profiles</a>
                 <a href="#collection:early">Early Writing</a>
               </div>
             </div>
@@ -46,7 +48,6 @@
               <div class="nav-side-menu">
                 <a href="#works">All Works</a>
                 <a href="#people">All People</a>
-                <a href="#index:publications">Publications</a>
                 <a href="#places">Places</a>
               </div>
             </div>
@@ -72,21 +73,21 @@
       </a>
       <nav class="site-nav site-nav-right" id="siteNavRight" aria-label="Primary navigation right">
         <div class="nav-folder">
-          <a href="#explore">Explore</a>
+          <a href="#section:explore">Explore</a>
           <div class="nav-dropdown">
-            <a href="#explore">Article Explorer</a>
             <a href="#map">Map</a>
             <a href="#timeline">Timeline</a>
+            <a href="#explore">Article Explorer</a>
             <a href="#correspondence">Correspondence</a>
           </div>
         </div>
         <div class="nav-folder">
-          <a href="#about">About</a>
+          <a href="#section:about">About</a>
           <div class="nav-dropdown">
             <a href="#about">About Robert Cushman</a>
             <a href="#critics-circle">Critic's Circle</a>
             <a href="https://www.cushmancollected.com/checkout/donate?donatePageId=5c9b8016652dea361e5feb7d" target="_blank" rel="noopener">Donate</a>
-            <a href="#subscribe">Subscribe</a>
+            <a href="#contact">Contact &amp; Newsletter</a>
           </div>
         </div>
       </nav>
@@ -102,10 +103,25 @@
 
     <nav class="drawer" id="drawer" aria-label="Site navigation">
       <a href="#search">Search the Archive</a>
-      <a href="#section:current">Recent</a>
       <details>
         <summary>Browse</summary>
-        <a href="#section:collections">Collections</a>
+        <a href="#section:browse">Browse overview</a>
+        <details class="drawer-collection-menu">
+          <summary>Collections</summary>
+          <a href="#collection:recent">Recent</a>
+          <a href="#correspondence:famous-letters">Special Letters</a>
+          <a href="#section:shakespeare">Shakespeare</a>
+          <a href="#collection:sondheim">Sondheim</a>
+          <a href="#collection:stoppard">Stoppard</a>
+          <a href="#collection:musicals">Musicals</a>
+          <a href="#collection:stratford">Stratford</a>
+          <a href="#collection:shaw">Shaw</a>
+          <a href="#collection:television">TV Reviews</a>
+          <a href="#collection:albums">Music Reviews</a>
+          <a href="#collection:books">Book Reviews</a>
+          <a href="#collection:profiles">Artist Profiles</a>
+          <a href="#collection:early">Early Writing</a>
+        </details>
         <a href="#master-index:all-works">All Works</a>
         <a href="#master-index:all-people">All People</a>
         <a href="#index:publications">Publications</a>
@@ -113,17 +129,19 @@
       </details>
       <details>
         <summary>Explore</summary>
-        <a href="#explore">Article Explorer</a>
+        <a href="#section:explore">Explore overview</a>
         <a href="#map">Map</a>
         <a href="#timeline">Timeline</a>
+        <a href="#explore">Article Explorer</a>
         <a href="#correspondence">Correspondence</a>
       </details>
       <details>
         <summary>About</summary>
+        <a href="#section:about">About overview</a>
         <a href="#about">About Robert Cushman</a>
         <a href="#critics-circle">Critic's Circle</a>
         <a href="https://www.cushmancollected.com/checkout/donate?donatePageId=5c9b8016652dea361e5feb7d" target="_blank" rel="noopener">Donate</a>
-        <a href="#subscribe">Contact &amp; Newsletter</a>
+        <a href="#contact">Contact &amp; Newsletter</a>
       </details>
     </nav>
 
@@ -225,7 +243,11 @@
         </a>
       </section>
 
-      <section class="frontpage-directory" id="frontpageDirectory" aria-label="Primary site paths"></section>
+      <section class="browse-heading site-index-heading">
+        <h2>Site Index</h2>
+      </section>
+
+      <section class="frontpage-directory" id="frontpageDirectory" aria-label="Site index"></section>
 
       <section class="browse-heading home-secondary-nav" id="browse">
         <h2>Browse the Archive</h2>
@@ -252,7 +274,9 @@
 <p>We have an assortment of people in their late thirties, most of whom have known one another since college. They might all be called fringe artists. Tom is a sculptor and cabinetmaker; his wife, Marrell, is a jazz singer, and they have a drainingly sleepless baby. Alan calls himself a mnenemonist; he makes some kind of living by demonstrating his prodigious memory on TV talk-shows. He&#x27;s also gay, and has the lions share of the plays best jokes, something of which he&#x27;s very much aware. And then there&#x27;s Jane, whos officially a poet (one book, 15 years ago), but who divides her real professional life between teaching and officiating at exams. Shes also a widow; her husband died a year ago, leaving her with a daughter and a sharp-edged load of sadness. Jane&quot; she says &quot;hates games. (Jane likes to talk of herself in the third person, as in Jane is a terrible idea.&quot;)</p>
 <p>So, of course, right at the beginning of the play, she becomes the object of a game. At the end of a dinner-party (naturally) she has to ask questions about a story the others have made up. Only there isn&#x27;t any story; the rules have been rigged so that everything she says will reveal, perhaps predict, something about her. This is brilliant writing, which takes us almost into Noel Coward territory: imagine Hay Fever, but with consequences. Because in the next scene one prediction comes true: Jane and Tom have a one-night stand. (The stand part is literal; the night part isn&#x27;t.) This of course creates unspoken tensions between them and Merrell. They do not, however, stay unspoken.</p>
 <p>Theres already been plenty of domestic comedy in the play, some of it concerning the pronunciation of Brita, as in water-filter, and whose job it is to fill it. This gets quite explosive later on. A similar economy, worthy of the most expert farceur, ensures that Alans fabulous memory will play a crucial role, both uncomfortable and hilarious, in the play&#x27;s final showdown. Alan, who feels his life to be useless and says he wants to change it, also has an ambivalent attitude to the one character from outside the group, a Frenchman named Jean-Pierre whom the others are trying to set up with Jane. He&#x27;s a &quot;doctor without borders, a title that gives rise to some jokes and also some discomfort. He isnt above pointing out the disproportion between the disasters he has to deal with and the comparatively trivial agonies of his new friends. The play implicitly grants the point, while still managing to make the home-grown sufferings matter: to the sufferers and to us.</p>
-<p>Its a brilliant play, with a flaw. Jane is its central character, but she never quite comes into focus as such. Her relationship with her (offstage) daughter is forgotten for long periods, only to be made the subject of the last scene. Her late husband&#x27;s ashes are abruptly featured as what&#x27;s known in the trade as a powerful image, which seems self-indulgent both on her part and the plays. The problem is accentuated in Matthew Jocelyns Canadian Stage production, which is aggressively unlocalized. The houselights are on throughout, and some of the audience is seated on the stage, which itself is naked and wide open, right up to its back wall; we can even see passing traffic through the window. This kind of thing always looks impressive, at least initially, and so it does here. But it&#x27;s unhelpfully chilly, and it causes severe acoustical problems. Gibson&#x27;s text is spare of stage directions, but it has a detailed and very effective scheme of its own for denoting verbal orchestration. The actors may well be following the score, but its often hard to tell. Its also, on so rambling a set, hard to get a grip on the characters and their relationships. It looks like a Jason Byrne production, but without the psychological discipline. Laura Condlln&#x27;s Jane is very good in patches, the very image of a clever, passionate woman in crisis, but for the second time in as many months (the first was 4: 48 Psychosis) the momentum of her performance is shredded by the staging. The program states that the actors are allowed to choose their own costumes each night. On the first night Yanna McIntosh&#x27;s choices were especially stylish; the role of Marrell finds her at her near-best in other respects too, projecting a handsome worldly wisdom, or just world-weariness, that sizzles under pressure. (And who knew she could sing and play piano?) Jonathon Young complements her nicely as Tom, whose personal weaknesses dovetail with her strengths. In an unstructured staging, though, the limelight, figurative at least, has to settle on the performer with the best one-liners; this, obviously, is Alon Nashman who as his own near-namesake grabs it with an enjoyment that proves thoroughly infectious.</p>
+<p>Its a brilliant play, with a flaw. Jane is its central character, but she never quite comes into focus as such. Her relationship with her (offstage) daughter is forgotten for long periods, only to be made the subject of the last scene. Her late husband&#x27;s ashes are abruptly featured as what&#x27;s known in the trade as a powerful image, which seems self-indulgent both on her part and the plays. The problem is accentuated in Matthew Jocelyns Canadian Stage production, which is aggressively unlocalized. The houselights are on throughout, and some of the audience is seated on the stage, which itself is naked and wide open, right up to its back wall; we can even see passing traffic through the window. This kind of thing always looks impressive, at least initially, and so it does here. But it&#x27;s unhelpfully chilly, and it causes severe acoustical problems.</p>
+<p>Gibson&#x27;s text is spare of stage directions, but it has a detailed and very effective scheme of its own for denoting verbal orchestration. The actors may well be following the score, but its often hard to tell. Its also, on so rambling a set, hard to get a grip on the characters and their relationships. It looks like a Jason Byrne production, but without the psychological discipline. Laura Condlln&#x27;s Jane is very good in patches, the very image of a clever, passionate woman in crisis, but for the second time in as many months (the first was 4: 48 Psychosis) the momentum of her performance is shredded by the staging. The program states that the actors are allowed to choose their own costumes each night. On the first night Yanna McIntosh&#x27;s choices were especially stylish; the role of Marrell finds her at her near-best in other respects too, projecting a handsome worldly wisdom, or just world-weariness, that sizzles under pressure.</p>
+<p>(And who knew she could sing and play piano?) Jonathon Young complements her nicely as Tom, whose personal weaknesses dovetail with her strengths. In an unstructured staging, though, the limelight, figurative at least, has to settle on the performer with the best one-liners; this, obviously, is Alon Nashman who as his own near-namesake grabs it with an enjoyment that proves thoroughly infectious.</p>
 <p>I dont do well with no&#x27;&quot;, says a Canadian writer in Japan, suspecting a rebuff from his female interpreter. It turns out, though, that she&#x27;s referring to traditional Noh theatre, in which her brother, as we shortly see, is an actor. The exchange is almost the highlight of Daniel MacIvors Arigato, Tokyo, bettered only by David Storch as the writer, with the beard and something of the demeanour of Bernard Shaw, reading from his own reflections on the subject of love, which are reductive but awfully persuasive. The play, a low point for MacIvor, may be intended to confirm or deny the protagonists findings; it&#x27;s hard to tell as he bounces erotically and philosophically between sister, brother and a drag queen. None of them ever comes to anything resembling life; and here, far more even than in THIS, the words are obscured, in this case by the Japanese accents enforcedly adopted by Michael Dufays and Tyson James; Cara Gee, whose character is professionally obliged to speak expert English, fares better. The Noh elements, plus allusions to the classic novel Prince Genji, don&#x27;t help any but they do allow Brendan Healy to deliver another of his physically striking productions, with the usual invaluable assistance of Julie Fox (sets), Richard Feren (sound), and Kimberley Purtell (lights).</p>
 <p>THIS runs through April 13 at the Berkeley Street Theatre (416-368-1110); Arigato, Tokyo runs through April 14 at Buddies in Bad Times (416-975-8555).</p>
 <p>Bruce Zinger / Jonathon Young, Christian Laurin, Laura Condlln and Yanna McIntosh navigate unspoken tensions in THIS.; Caption:</p></div></article>
@@ -289,6 +313,6 @@
       </section>
     </footer>
 
-    <script src="./app.js?v=194" type="module"></script>
+    <script src="./app.js?v=233" type="module"></script>
   </body>
 </html>

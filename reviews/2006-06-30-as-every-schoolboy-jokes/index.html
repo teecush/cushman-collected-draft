@@ -13,31 +13,33 @@
     <link rel="apple-touch-icon" href="../apple-touch-icon.svg">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Rubik:wght@400;600;700;800;900&display=swap">
-    <link rel="stylesheet" href="./styles.css?v=173">
+    <link rel="stylesheet" href="./styles.css?v=174">
     <link rel="stylesheet" href="./catalog.css?v=194">
-    <link rel="stylesheet" href="./classic.css?v=194">
+    <link rel="stylesheet" href="./classic.css?v=233">
   </head>
   <body class="article-open">
     <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="site-header">
       <nav class="site-nav site-nav-left" id="siteNavLeft" aria-label="Primary navigation left">
-        <a class="nav-search" href="#search" aria-label="Search the archive"><span></span></a>
-        <a href="#section:current">Recent</a>
+        <a href="#search">Search</a>
         <div class="nav-folder nav-folder-wide">
           <a href="#section:browse">Browse</a>
           <div class="nav-dropdown nav-mega">
             <div class="nav-subfolder">
               <a href="#section:collections">Collections</a>
               <div class="nav-side-menu">
+                <a href="#collection:recent">Recent</a>
+                <a href="#correspondence:famous-letters">Special Letters</a>
                 <a href="#section:shakespeare">Shakespeare</a>
                 <a href="#collection:sondheim">Sondheim</a>
+                <a href="#collection:stoppard">Stoppard</a>
                 <a href="#collection:musicals">Musicals</a>
                 <a href="#collection:stratford">Stratford</a>
                 <a href="#collection:shaw">Shaw</a>
                 <a href="#collection:television">TV Reviews</a>
                 <a href="#collection:albums">Music Reviews</a>
                 <a href="#collection:books">Book Reviews</a>
-                <a href="#collection:profiles">Profiles &amp; Obits</a>
+                <a href="#collection:profiles">Artist Profiles</a>
                 <a href="#collection:early">Early Writing</a>
               </div>
             </div>
@@ -46,7 +48,6 @@
               <div class="nav-side-menu">
                 <a href="#works">All Works</a>
                 <a href="#people">All People</a>
-                <a href="#index:publications">Publications</a>
                 <a href="#places">Places</a>
               </div>
             </div>
@@ -72,21 +73,21 @@
       </a>
       <nav class="site-nav site-nav-right" id="siteNavRight" aria-label="Primary navigation right">
         <div class="nav-folder">
-          <a href="#explore">Explore</a>
+          <a href="#section:explore">Explore</a>
           <div class="nav-dropdown">
-            <a href="#explore">Article Explorer</a>
             <a href="#map">Map</a>
             <a href="#timeline">Timeline</a>
+            <a href="#explore">Article Explorer</a>
             <a href="#correspondence">Correspondence</a>
           </div>
         </div>
         <div class="nav-folder">
-          <a href="#about">About</a>
+          <a href="#section:about">About</a>
           <div class="nav-dropdown">
             <a href="#about">About Robert Cushman</a>
             <a href="#critics-circle">Critic's Circle</a>
             <a href="https://www.cushmancollected.com/checkout/donate?donatePageId=5c9b8016652dea361e5feb7d" target="_blank" rel="noopener">Donate</a>
-            <a href="#subscribe">Subscribe</a>
+            <a href="#contact">Contact &amp; Newsletter</a>
           </div>
         </div>
       </nav>
@@ -102,10 +103,25 @@
 
     <nav class="drawer" id="drawer" aria-label="Site navigation">
       <a href="#search">Search the Archive</a>
-      <a href="#section:current">Recent</a>
       <details>
         <summary>Browse</summary>
-        <a href="#section:collections">Collections</a>
+        <a href="#section:browse">Browse overview</a>
+        <details class="drawer-collection-menu">
+          <summary>Collections</summary>
+          <a href="#collection:recent">Recent</a>
+          <a href="#correspondence:famous-letters">Special Letters</a>
+          <a href="#section:shakespeare">Shakespeare</a>
+          <a href="#collection:sondheim">Sondheim</a>
+          <a href="#collection:stoppard">Stoppard</a>
+          <a href="#collection:musicals">Musicals</a>
+          <a href="#collection:stratford">Stratford</a>
+          <a href="#collection:shaw">Shaw</a>
+          <a href="#collection:television">TV Reviews</a>
+          <a href="#collection:albums">Music Reviews</a>
+          <a href="#collection:books">Book Reviews</a>
+          <a href="#collection:profiles">Artist Profiles</a>
+          <a href="#collection:early">Early Writing</a>
+        </details>
         <a href="#master-index:all-works">All Works</a>
         <a href="#master-index:all-people">All People</a>
         <a href="#index:publications">Publications</a>
@@ -113,17 +129,19 @@
       </details>
       <details>
         <summary>Explore</summary>
-        <a href="#explore">Article Explorer</a>
+        <a href="#section:explore">Explore overview</a>
         <a href="#map">Map</a>
         <a href="#timeline">Timeline</a>
+        <a href="#explore">Article Explorer</a>
         <a href="#correspondence">Correspondence</a>
       </details>
       <details>
         <summary>About</summary>
+        <a href="#section:about">About overview</a>
         <a href="#about">About Robert Cushman</a>
         <a href="#critics-circle">Critic's Circle</a>
         <a href="https://www.cushmancollected.com/checkout/donate?donatePageId=5c9b8016652dea361e5feb7d" target="_blank" rel="noopener">Donate</a>
-        <a href="#subscribe">Contact &amp; Newsletter</a>
+        <a href="#contact">Contact &amp; Newsletter</a>
       </details>
     </nav>
 
@@ -225,7 +243,11 @@
         </a>
       </section>
 
-      <section class="frontpage-directory" id="frontpageDirectory" aria-label="Primary site paths"></section>
+      <section class="browse-heading site-index-heading">
+        <h2>Site Index</h2>
+      </section>
+
+      <section class="frontpage-directory" id="frontpageDirectory" aria-label="Site index"></section>
 
       <section class="browse-heading home-secondary-nav" id="browse">
         <h2>Browse the Archive</h2>
@@ -255,7 +277,9 @@
 <p>I&#x27;ve seen it objected that children of the &#x27;80s would never have known those songs. The answer is, they would if Hector had been teaching them. (And they do sing Pet Shop Boys as well.) It&#x27;s not that the boys uncritically worship Hector -- far from it -- but he engages their curiosity and, most crucially, their sense of humour - - a faculty more acutely alive at that age than at any other; when you&#x27;re eighteen and intelligent, everything seems funny. It can drive adults mad and it can, when employed as a collective weapon, be cruel. Hector gets to feel the pain of that but also reap its benefits. In one glorious sequence he conducts a miniature experiment in French immersion; the boys get to improvise a scene in that language, set in any workplace they choose, but using only &quot;the conditional or the subjunctive.&quot; They choose a brothel. Then the headmaster walks in and, with supreme quick-wittedness and the absolute minimum of physical alteration, they change the scenario to a field-hospital from the First World War.</p>
 <p>As well as this, the funniest scene in ages, the play boasts what may be the most moving. Hector is conducting a one-on-one poetry class with a withdrawn boy named Posner. (&quot;I&#x27;m a Jew. I&#x27;m small. I&#x27;m homosexual. And I live in Sheffield. I&#x27;m fucked.&quot;) Shyly, Hector puts out his hand. The gesture isn&#x27;t reciprocated; Posner has his own doomed crush on the most confident boy in the class, Deakin. And in fact the real emotion in the scene is somewhere else; it&#x27;s in the passion Hector infuses into analyzing a poem by Thomas Hardy. It&#x27;s what he&#x27;s about, and it&#x27;s why he&#x27;s a good teacher in -- the play would have us believe -- a doomed tradition. Hector&#x27;s own gayness consists in giving selected students a lift on his motorbike and fumbling with them en route. Bennett himself, the laureate of frustration, has questioned how much gratification there could possibly be through gauntlets, but it&#x27;s enough to get Hector sacked.</p>
 <p>His successor is already in waiting, an ambitious young historian named Irwin, delegated to get the boys into Oxbridge. He seizes on their impressive store of Useless Knowledge -- what he, to Hector&#x27;s despair, calls &quot;gobbets&quot; -- and suggests they use them to spice up their essays. Despite appearances, the two men are not actually polar opposites. Both are more or less covertly gay -- though the scene in which Irwin is effectively seduced by Deakin, who prefers girls but is an all-around flirt, is the least convincing in the play. More significantly, Hector&#x27;s love of the subjunctive is reflected in Irwin&#x27;s recommendation to flout accepted conventional historical wisdom in favour of what might have happened; reflected, though, in a distorting mirror so that it becomes assembly-line contrarianism. It&#x27;s an approach, as we learn in a series of flash- forwards, that carries him far: into a career as a presenter of BBC history programs and then into politics, advising on the uses of paradox (as in &quot;the loss of liberty is the price we pay for freedom&quot;); taught under Thatcher, he flourishes under Blair.</p>
-<p>The play keeps jumping between past, present and future, between enactment and commentary. It keeps you on your toes, but it never confuses. Nicholas Hytner&#x27;s production backs up the onstage action with grainy video footage that brings the whole school indelibly, and often hilariously, to life. The fluency of this production, its quicksilver mastery of mood, is exhilarating, and so is the precision of the performances. There isn&#x27;t a false note in the show. Richard Griffiths, a master of quiet comedy that transpires of quiet heartbreak, is the embodiment of Hector, solid but sagging. Less spectacular but equally real is Stephen Campbell Moore&#x27;s Irwin; even his TV commentaries, an acting-trap, hit exactly the right understated note. As a female teacher (some things in British boys&#x27; schools have obviously progressed) Frances de la Tour, whose specialty as a young actress was being nasal and gawky, is now nasal and acidulous; she brings down the house practically every time she opens her mouth. But then she does have the wisest lines; take your choice between &quot;one of the hardest things for boys to learn is that a teacher is human, one of the hardest things for a teacher to learn is not to try and tell them,&quot; and &quot;I have not hitherto been allotted an inner voice&quot;, her comment on both the play she&#x27;s in and the system it&#x27;s in. Also, to Hector, &quot;a grope is a grope, it&#x27;s not the Annunciation;&quot; to the world in general, &quot;the chief enemy of culture in any school is always the Headmaster.&quot; That&#x27;s a bit sweeping, perhaps, but my own English experience suggests that it&#x27;s 66% true. Certainly Clive Merrison&#x27;s beleagured technocrat of a principal makes it seem very plausible, not least when paying tribute to Hector in words (&quot;he opened a deposit account in the bank of English literature&quot;) that desecrate everything Hector stands for. And not only is it hard to imagine this play done by non-British actors; it&#x27;s hard at the monent to imagine it done by British actors other than these. The eight boys are astonishingly good, individually and as a group.</p>
+<p>The play keeps jumping between past, present and future, between enactment and commentary. It keeps you on your toes, but it never confuses. Nicholas Hytner&#x27;s production backs up the onstage action with grainy video footage that brings the whole school indelibly, and often hilariously, to life. The fluency of this production, its quicksilver mastery of mood, is exhilarating, and so is the precision of the performances. There isn&#x27;t a false note in the show. Richard Griffiths, a master of quiet comedy that transpires of quiet heartbreak, is the embodiment of Hector, solid but sagging. Less spectacular but equally real is Stephen Campbell Moore&#x27;s Irwin; even his TV commentaries, an acting-trap, hit exactly the right understated note. As a female teacher (some things in British boys&#x27; schools have obviously progressed) Frances de la Tour, whose specialty as a young actress was being nasal and gawky, is now nasal and acidulous; she brings down the house practically every time she opens her mouth.</p>
+<p>But then she does have the wisest lines; take your choice between &quot;one of the hardest things for boys to learn is that a teacher is human, one of the hardest things for a teacher to learn is not to try and tell them,&quot; and &quot;I have not hitherto been allotted an inner voice&quot;, her comment on both the play she&#x27;s in and the system it&#x27;s in. Also, to Hector, &quot;a grope is a grope, it&#x27;s not the Annunciation;&quot; to the world in general, &quot;the chief enemy of culture in any school is always the Headmaster.&quot; That&#x27;s a bit sweeping, perhaps, but my own English experience suggests that it&#x27;s 66% true. Certainly Clive Merrison&#x27;s beleagured technocrat of a principal makes it seem very plausible, not least when paying tribute to Hector in words (&quot;he opened a deposit account in the bank of English literature&quot;) that desecrate everything Hector stands for.</p>
+<p>And not only is it hard to imagine this play done by non-British actors; it&#x27;s hard at the monent to imagine it done by British actors other than these. The eight boys are astonishingly good, individually and as a group.</p>
 <p>To be honest, the writing gives only four of them much chance to be individuals, so an epilogue in which we learn of their subsequent careers has only half its intended impact. Indeed, the entire state- of-the-nation aspect is only fitfully effective; as indeed was the case with Forty Years On. But the more immediate picture is perfect; and if the bittersweet ending doesn&#x27;t quite justify itself in terms of structure, it does so overwhelmingly in terms of character and atmosphere. It&#x27;s tempting to put the show in the embarrassment-of- riches category, except that there&#x27;s nothing embarrassing about it. But as for richness and sheer pleasure: I doubt that there is currently a better example, anywhere, of what the theatre is for.</p>
 <p>- Until Sept. 3. (212)-239-6200</p>
 <p>robertcushman@lycos.com</p>
@@ -293,6 +317,6 @@
       </section>
     </footer>
 
-    <script src="./app.js?v=194" type="module"></script>
+    <script src="./app.js?v=233" type="module"></script>
   </body>
 </html>

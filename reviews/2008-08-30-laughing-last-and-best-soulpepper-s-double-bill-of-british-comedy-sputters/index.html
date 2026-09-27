@@ -13,31 +13,33 @@
     <link rel="apple-touch-icon" href="../apple-touch-icon.svg">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Rubik:wght@400;600;700;800;900&display=swap">
-    <link rel="stylesheet" href="./styles.css?v=173">
+    <link rel="stylesheet" href="./styles.css?v=174">
     <link rel="stylesheet" href="./catalog.css?v=194">
-    <link rel="stylesheet" href="./classic.css?v=194">
+    <link rel="stylesheet" href="./classic.css?v=233">
   </head>
   <body class="article-open">
     <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="site-header">
       <nav class="site-nav site-nav-left" id="siteNavLeft" aria-label="Primary navigation left">
-        <a class="nav-search" href="#search" aria-label="Search the archive"><span></span></a>
-        <a href="#section:current">Recent</a>
+        <a href="#search">Search</a>
         <div class="nav-folder nav-folder-wide">
           <a href="#section:browse">Browse</a>
           <div class="nav-dropdown nav-mega">
             <div class="nav-subfolder">
               <a href="#section:collections">Collections</a>
               <div class="nav-side-menu">
+                <a href="#collection:recent">Recent</a>
+                <a href="#correspondence:famous-letters">Special Letters</a>
                 <a href="#section:shakespeare">Shakespeare</a>
                 <a href="#collection:sondheim">Sondheim</a>
+                <a href="#collection:stoppard">Stoppard</a>
                 <a href="#collection:musicals">Musicals</a>
                 <a href="#collection:stratford">Stratford</a>
                 <a href="#collection:shaw">Shaw</a>
                 <a href="#collection:television">TV Reviews</a>
                 <a href="#collection:albums">Music Reviews</a>
                 <a href="#collection:books">Book Reviews</a>
-                <a href="#collection:profiles">Profiles &amp; Obits</a>
+                <a href="#collection:profiles">Artist Profiles</a>
                 <a href="#collection:early">Early Writing</a>
               </div>
             </div>
@@ -46,7 +48,6 @@
               <div class="nav-side-menu">
                 <a href="#works">All Works</a>
                 <a href="#people">All People</a>
-                <a href="#index:publications">Publications</a>
                 <a href="#places">Places</a>
               </div>
             </div>
@@ -72,21 +73,21 @@
       </a>
       <nav class="site-nav site-nav-right" id="siteNavRight" aria-label="Primary navigation right">
         <div class="nav-folder">
-          <a href="#explore">Explore</a>
+          <a href="#section:explore">Explore</a>
           <div class="nav-dropdown">
-            <a href="#explore">Article Explorer</a>
             <a href="#map">Map</a>
             <a href="#timeline">Timeline</a>
+            <a href="#explore">Article Explorer</a>
             <a href="#correspondence">Correspondence</a>
           </div>
         </div>
         <div class="nav-folder">
-          <a href="#about">About</a>
+          <a href="#section:about">About</a>
           <div class="nav-dropdown">
             <a href="#about">About Robert Cushman</a>
             <a href="#critics-circle">Critic's Circle</a>
             <a href="https://www.cushmancollected.com/checkout/donate?donatePageId=5c9b8016652dea361e5feb7d" target="_blank" rel="noopener">Donate</a>
-            <a href="#subscribe">Subscribe</a>
+            <a href="#contact">Contact &amp; Newsletter</a>
           </div>
         </div>
       </nav>
@@ -102,10 +103,25 @@
 
     <nav class="drawer" id="drawer" aria-label="Site navigation">
       <a href="#search">Search the Archive</a>
-      <a href="#section:current">Recent</a>
       <details>
         <summary>Browse</summary>
-        <a href="#section:collections">Collections</a>
+        <a href="#section:browse">Browse overview</a>
+        <details class="drawer-collection-menu">
+          <summary>Collections</summary>
+          <a href="#collection:recent">Recent</a>
+          <a href="#correspondence:famous-letters">Special Letters</a>
+          <a href="#section:shakespeare">Shakespeare</a>
+          <a href="#collection:sondheim">Sondheim</a>
+          <a href="#collection:stoppard">Stoppard</a>
+          <a href="#collection:musicals">Musicals</a>
+          <a href="#collection:stratford">Stratford</a>
+          <a href="#collection:shaw">Shaw</a>
+          <a href="#collection:television">TV Reviews</a>
+          <a href="#collection:albums">Music Reviews</a>
+          <a href="#collection:books">Book Reviews</a>
+          <a href="#collection:profiles">Artist Profiles</a>
+          <a href="#collection:early">Early Writing</a>
+        </details>
         <a href="#master-index:all-works">All Works</a>
         <a href="#master-index:all-people">All People</a>
         <a href="#index:publications">Publications</a>
@@ -113,17 +129,19 @@
       </details>
       <details>
         <summary>Explore</summary>
-        <a href="#explore">Article Explorer</a>
+        <a href="#section:explore">Explore overview</a>
         <a href="#map">Map</a>
         <a href="#timeline">Timeline</a>
+        <a href="#explore">Article Explorer</a>
         <a href="#correspondence">Correspondence</a>
       </details>
       <details>
         <summary>About</summary>
+        <a href="#section:about">About overview</a>
         <a href="#about">About Robert Cushman</a>
         <a href="#critics-circle">Critic's Circle</a>
         <a href="https://www.cushmancollected.com/checkout/donate?donatePageId=5c9b8016652dea361e5feb7d" target="_blank" rel="noopener">Donate</a>
-        <a href="#subscribe">Contact &amp; Newsletter</a>
+        <a href="#contact">Contact &amp; Newsletter</a>
       </details>
     </nav>
 
@@ -225,7 +243,11 @@
         </a>
       </section>
 
-      <section class="frontpage-directory" id="frontpageDirectory" aria-label="Primary site paths"></section>
+      <section class="browse-heading site-index-heading">
+        <h2>Site Index</h2>
+      </section>
+
+      <section class="frontpage-directory" id="frontpageDirectory" aria-label="Site index"></section>
 
       <section class="browse-heading home-secondary-nav" id="browse">
         <h2>Browse the Archive</h2>
@@ -251,7 +273,9 @@
 <p>The two plays in order of appearance (and reverse order of composition) are Tom Stoppard&#x27;s The Real Inspector Hound and Peter Shaffer&#x27;s Black Comedy. Stoppard&#x27;s play is not, strictly speaking, a farce at all; farce has to play by earthbound rules, and Hound is a fantasia. Stoppard himself has said that it&#x27;s about wish-fulfillment; and the characters doing the wishing are a couple of theatre critics whom the author depicts with, I have to say, extraordinary charity. (But then Stoppard himself was a reviewer before becoming a practitioner). One, Birdboot, is a jovial type, probably writing for a popular daily; the other, Moon, has intellectual pretensions, not all of them caused by his being a perpetual second string whose appearances in public are invariably greeted by cries of &quot;Where&#x27;s Higgs?&quot; (We&#x27;re told that the paper, these being far-off days, even runs to a third string, named Puckeridge. &quot;What&#x27;s he like as a critic?&quot; Birdboot asks. &quot;Nobody knows,&quot; is Moon&#x27;s dark reply.)</p>
 <p>Birdboot and Moon are attending the first night of an impossibly bad country-house whodunit, one in which the cleaning-lady answers the phone and unspools the entire exposition (&quot;Hello, the drawing-room of Muldoon Manor&quot;) to persons unknown, and in which obligingly complete police announcements pour out of the radio every time it&#x27;s switched on. This isn&#x27;t parody; it&#x27;s burlesque. (Though I have to admit that the radio device was used in all seriousness by a highly praised new Canadian play just a couple of years ago.) The cast includes a pretty young actress to whom Birdboot has been paying offstage court and a glamorous older one to whom he transfers his affections at first sight. Let this be a lesson to all who would mix pleasure with business: First Birdboot, then Moon, are drawn into the action of the play they&#x27;re watching, with dire results. This, I have to say, is something that seldom or never happens in real life; but both men are drawn on by their dreams, Birdboot&#x27;s of romance, Moon&#x27;s of revenge. There is equally a sense (though it&#x27;s not too well worked out) that the play, or maybe the theatre in general, is taking its own revenge on them.</p>
 <p>This being Stoppard, the main fun is verbal, and Jim Warren&#x27;s production too often flubs the tone. It does so especially with the critics. Michael Simpson&#x27;s lip-licking Birdboot is almost completely off. Oliver Dennis&#x27;s shiny-pated Moon is better, especially in his opening silence and his closing shock, but the production makes the cardinal error of having the two recite their reviews-in-progress to one another rather than as complementary monologues. The play-within-the-play is easier meat, though not that easy; peopled as it is with conscious stereotypes, it calls for both boldness and finesse, a trick best turned by Corinne Koslo&#x27;s domestic drudge (named Drudge) and Mike Shara&#x27;s ostentatiously mysterious stranger. Sarah Wilson, tennis-racquet in the ascendant, is a properly ingenuous ingenue; Caroline Cave&#x27;s chatelaine is a stunner, but maybe too young for Birdboot&#x27;s fickleness to have its full effect. In the title role (which certainly isn&#x27;t the principal one),William Webster makes a spectacular entrance in waders but seems to be coming from the wrong end of the force-- super-sleuth rather than flatfoot. Small things such as this weigh down a play that&#x27;s a fragile to begin with.</p>
-<p>Black Comedy, by contrast, is cast-iron. If Hound is minor Stoppard, this is major Shaffer, indeed his best play, worth all the pseudo-profundities of Equus, Amadeus and The Royal Hunt of the Sun put together. Brindsley, a feckless young sculptor, waits in his flat for the arrival of the two men whom he needs to impress: a millionaire art-collector and the military father of his hyper-debutante fiancee. Then a fuse blows, and everything goes dark; except that, in a device Shaffer borrowed from the Classical Theatre of China, from the audience&#x27;s point-of-view it&#x27;s bright. This simple reversal, with gradations between, is fanatically maintained throughout, with results for which &quot;hilarious&quot; seems a pitiful understatement. Brin has borrowed furniture from the house-proud antique-dealer next door, and when this friend returns he has stealthily to re-turn it: in pitch darkness, with people present. (At one sublime point he takes out the wrong thing and has to bring it back.) Warren&#x27;s direction this time is magnificent, and the actors slip into the highest of gear. Shara is the kind of youngish leading man Soulpepper has needed since... well, since he left the company in 1999; as a farce&#x27;s essential, the-person-to whom-this-could-not-have-happened-at-a-worse-time, he not only manages the physical pirouettes sublimely, but he also manages to create a character who needs saving from himself. Cave, as his intended, is a perfect scream; as, in a different key, is Dennis as the floppy-haired-andwristed neighbour. (Quite a contrast in coiffures, his evening--of accents, too.) Koslo could hardly be better than in Hound, but as a teetotaller embracing tipsiness in the dark, she&#x27;s every bit as good. Wilson is delectable as Brindsley&#x27;s former lover and future salvation, though her brief impersonation of (in effect) Koslo&#x27;s character in Hound is the half-evening&#x27;s only spot of heavy-handedness. C. David Johnson gives much the same performance in both plays, but it&#x27;s a good one. Like most Shaffers, Black Comedy has moments of being too big for its boots, or too long for its johns, but they pass, leaving tears of joy behind. - The Real Inspector Hound and Black Comedy run through Sept. 20 at the Young Centre for the Performing Arts. Call 416-866-8666 for more information.</p>
+<p>Black Comedy, by contrast, is cast-iron. If Hound is minor Stoppard, this is major Shaffer, indeed his best play, worth all the pseudo-profundities of Equus, Amadeus and The Royal Hunt of the Sun put together. Brindsley, a feckless young sculptor, waits in his flat for the arrival of the two men whom he needs to impress: a millionaire art-collector and the military father of his hyper-debutante fiancee. Then a fuse blows, and everything goes dark; except that, in a device Shaffer borrowed from the Classical Theatre of China, from the audience&#x27;s point-of-view it&#x27;s bright. This simple reversal, with gradations between, is fanatically maintained throughout, with results for which &quot;hilarious&quot; seems a pitiful understatement. Brin has borrowed furniture from the house-proud antique-dealer next door, and when this friend returns he has stealthily to re-turn it: in pitch darkness, with people present. (At one sublime point he takes out the wrong thing and has to bring it back.) Warren&#x27;s direction this time is magnificent, and the actors slip into the highest of gear.</p>
+<p>Shara is the kind of youngish leading man Soulpepper has needed since... well, since he left the company in 1999; as a farce&#x27;s essential, the-person-to whom-this-could-not-have-happened-at-a-worse-time, he not only manages the physical pirouettes sublimely, but he also manages to create a character who needs saving from himself. Cave, as his intended, is a perfect scream; as, in a different key, is Dennis as the floppy-haired-andwristed neighbour. (Quite a contrast in coiffures, his evening--of accents, too.) Koslo could hardly be better than in Hound, but as a teetotaller embracing tipsiness in the dark, she&#x27;s every bit as good. Wilson is delectable as Brindsley&#x27;s former lover and future salvation, though her brief impersonation of (in effect) Koslo&#x27;s character in Hound is the half-evening&#x27;s only spot of heavy-handedness. C. David Johnson gives much the same performance in both plays, but it&#x27;s a good one. Like most Shaffers, Black Comedy has moments of being too big for its boots, or too long for its johns, but they pass, leaving tears of joy behind. - The Real Inspector Hound and Black Comedy run through Sept. 20 at the Young Centre for the Performing Arts.</p>
+<p>Call 416-866-8666 for more information.</p>
 <p>Color Photo: Sandy Nicholson / David Johnson in Black Comedy. ;; Caption:</p></div></article>
       </section>
 
@@ -286,6 +310,6 @@
       </section>
     </footer>
 
-    <script src="./app.js?v=194" type="module"></script>
+    <script src="./app.js?v=233" type="module"></script>
   </body>
 </html>

@@ -13,31 +13,33 @@
     <link rel="apple-touch-icon" href="../apple-touch-icon.svg">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Rubik:wght@400;600;700;800;900&display=swap">
-    <link rel="stylesheet" href="./styles.css?v=173">
+    <link rel="stylesheet" href="./styles.css?v=174">
     <link rel="stylesheet" href="./catalog.css?v=194">
-    <link rel="stylesheet" href="./classic.css?v=194">
+    <link rel="stylesheet" href="./classic.css?v=233">
   </head>
   <body class="article-open">
     <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="site-header">
       <nav class="site-nav site-nav-left" id="siteNavLeft" aria-label="Primary navigation left">
-        <a class="nav-search" href="#search" aria-label="Search the archive"><span></span></a>
-        <a href="#section:current">Recent</a>
+        <a href="#search">Search</a>
         <div class="nav-folder nav-folder-wide">
           <a href="#section:browse">Browse</a>
           <div class="nav-dropdown nav-mega">
             <div class="nav-subfolder">
               <a href="#section:collections">Collections</a>
               <div class="nav-side-menu">
+                <a href="#collection:recent">Recent</a>
+                <a href="#correspondence:famous-letters">Special Letters</a>
                 <a href="#section:shakespeare">Shakespeare</a>
                 <a href="#collection:sondheim">Sondheim</a>
+                <a href="#collection:stoppard">Stoppard</a>
                 <a href="#collection:musicals">Musicals</a>
                 <a href="#collection:stratford">Stratford</a>
                 <a href="#collection:shaw">Shaw</a>
                 <a href="#collection:television">TV Reviews</a>
                 <a href="#collection:albums">Music Reviews</a>
                 <a href="#collection:books">Book Reviews</a>
-                <a href="#collection:profiles">Profiles &amp; Obits</a>
+                <a href="#collection:profiles">Artist Profiles</a>
                 <a href="#collection:early">Early Writing</a>
               </div>
             </div>
@@ -46,7 +48,6 @@
               <div class="nav-side-menu">
                 <a href="#works">All Works</a>
                 <a href="#people">All People</a>
-                <a href="#index:publications">Publications</a>
                 <a href="#places">Places</a>
               </div>
             </div>
@@ -72,21 +73,21 @@
       </a>
       <nav class="site-nav site-nav-right" id="siteNavRight" aria-label="Primary navigation right">
         <div class="nav-folder">
-          <a href="#explore">Explore</a>
+          <a href="#section:explore">Explore</a>
           <div class="nav-dropdown">
-            <a href="#explore">Article Explorer</a>
             <a href="#map">Map</a>
             <a href="#timeline">Timeline</a>
+            <a href="#explore">Article Explorer</a>
             <a href="#correspondence">Correspondence</a>
           </div>
         </div>
         <div class="nav-folder">
-          <a href="#about">About</a>
+          <a href="#section:about">About</a>
           <div class="nav-dropdown">
             <a href="#about">About Robert Cushman</a>
             <a href="#critics-circle">Critic's Circle</a>
             <a href="https://www.cushmancollected.com/checkout/donate?donatePageId=5c9b8016652dea361e5feb7d" target="_blank" rel="noopener">Donate</a>
-            <a href="#subscribe">Subscribe</a>
+            <a href="#contact">Contact &amp; Newsletter</a>
           </div>
         </div>
       </nav>
@@ -102,10 +103,25 @@
 
     <nav class="drawer" id="drawer" aria-label="Site navigation">
       <a href="#search">Search the Archive</a>
-      <a href="#section:current">Recent</a>
       <details>
         <summary>Browse</summary>
-        <a href="#section:collections">Collections</a>
+        <a href="#section:browse">Browse overview</a>
+        <details class="drawer-collection-menu">
+          <summary>Collections</summary>
+          <a href="#collection:recent">Recent</a>
+          <a href="#correspondence:famous-letters">Special Letters</a>
+          <a href="#section:shakespeare">Shakespeare</a>
+          <a href="#collection:sondheim">Sondheim</a>
+          <a href="#collection:stoppard">Stoppard</a>
+          <a href="#collection:musicals">Musicals</a>
+          <a href="#collection:stratford">Stratford</a>
+          <a href="#collection:shaw">Shaw</a>
+          <a href="#collection:television">TV Reviews</a>
+          <a href="#collection:albums">Music Reviews</a>
+          <a href="#collection:books">Book Reviews</a>
+          <a href="#collection:profiles">Artist Profiles</a>
+          <a href="#collection:early">Early Writing</a>
+        </details>
         <a href="#master-index:all-works">All Works</a>
         <a href="#master-index:all-people">All People</a>
         <a href="#index:publications">Publications</a>
@@ -113,17 +129,19 @@
       </details>
       <details>
         <summary>Explore</summary>
-        <a href="#explore">Article Explorer</a>
+        <a href="#section:explore">Explore overview</a>
         <a href="#map">Map</a>
         <a href="#timeline">Timeline</a>
+        <a href="#explore">Article Explorer</a>
         <a href="#correspondence">Correspondence</a>
       </details>
       <details>
         <summary>About</summary>
+        <a href="#section:about">About overview</a>
         <a href="#about">About Robert Cushman</a>
         <a href="#critics-circle">Critic's Circle</a>
         <a href="https://www.cushmancollected.com/checkout/donate?donatePageId=5c9b8016652dea361e5feb7d" target="_blank" rel="noopener">Donate</a>
-        <a href="#subscribe">Contact &amp; Newsletter</a>
+        <a href="#contact">Contact &amp; Newsletter</a>
       </details>
     </nav>
 
@@ -225,7 +243,11 @@
         </a>
       </section>
 
-      <section class="frontpage-directory" id="frontpageDirectory" aria-label="Primary site paths"></section>
+      <section class="browse-heading site-index-heading">
+        <h2>Site Index</h2>
+      </section>
+
+      <section class="frontpage-directory" id="frontpageDirectory" aria-label="Site index"></section>
 
       <section class="browse-heading home-secondary-nav" id="browse">
         <h2>Browse the Archive</h2>
@@ -256,7 +278,9 @@
 <p>It has been possible in the past to make a Shakespeare movie that glorified war, or at least the war effort. Like Laurence Olivier and Kenneth Branagh before him, Fiennes has made his film directing debut with a Shakespeare play in which he also acts, in a role that he’s already played on stage. For both Olivier and Branagh the film was Henry V, another war-piece that each interpreted according to the tenor of his times; for Olivier, in World War Two, it was a patriotic rallying-cry; for Branagh, post-Falklands, it was blood and guts and scepticism. Both went on to make films of Hamlet; and in a final turn of the screw, Branagh, having dogged the footsteps of Olivier’s career, has now actually played him in My Week with Marilyn: the least mannered of actors impersonating one of the most mannered, and not only bringing it off but getting an Oscar nomination for it. As it further happens both actors have been notable Coriolani on stage; Olivier’s, by all accounts, was one of his greatest performances. It seems he made the man likeable. Fiennes doesn’t, and probably couldn’t. He makes him instead perversely admirable, which is probably closer to the play’s truth.</p>
 <p>The name Coriolanus is an honorific bestowed on Martius for having conquered Corioles. In one of Shakespeare’s (and Redgrave’s) nicest touches his mother, on his return to Rome, gives a half-proud half-shy smile at having to pronounce this new word. It also leads to his being invited by his fellow-patricians to run for the top job of Consul. The catch is that the election process means meeting the lower classes face to face, showing them his war-wounds, and asking for their literal and metaphorical “voices”. This he loathes doing; he has nothing but contempt for “the people” and has never disguised it. He’s also, despite his bravado, pathologically shy. Under pressure, he consents to go through the motions; but his distaste shows through, and he ends up being banished, by popular acclaim. Once again the movie takes an antique custom and makes it seem contemporary. It is after all only an extreme literal version of what politicians routinely do to solicit votes. Some of the arguments that in the text happen in the market-place are transferred to a TV studio. It’s too much of a clever thing when a real-life newscaster, playing himself, addresses his audience in blank verse, but otherwise these scenes too work with amazing naturalness, especially when a female citizen-pundit states the anti-Coriolanus case in the most earnestly reasonable of tones.</p>
 <p>Making something contemporary isn’t the same as making it timeless. Coriolanus in the theatre is one of the very few plays that can capture the sensation of history on the move. The movie, with all its apparent technological advantages, doesn’t do that, partly because the text has been so streamlined. Coriolanus’ exile, with no judicial process, is credible in the play, where it’s the climax of a long inexorable process. In the movie, you wonder where the people-power has suddenly come from. Admittedly the protagonist makes it easier by taking matters into his own hands; telling the populace “I banish you” he turns his back on Rome and on Roman exceptionalism. “There is” he proclaims with terse and clinching eloquence “a world elsewhere.”</p>
-<p>One of Fiennes’ finest moments in the film, this is also one of the few occasions on which he allows himself a long speech. Elsewhere he plays things very close to his chest. Perhaps he’s bowing to perceived necessity. Film and TV have always had a problem with Shakespeare’s language. One reason Cox’s performance works so well is that most of his role is in conversational prose; asked to speak rhetorical verse on screen, most actors’ instinct is to scale it down, aiming for a kind of naturalism that, given the size of the words, sounds very unnatural. The one performer here who rides right over that compromise is Redgrave. One reviewer has said that Redgrave, though a great actress, is not the greatest verse-speaker. Actually she’s a superb verse-speaker, able to preserve the shape and momentum of the lines while still making them sound real. Her role, the third-longest in the play, has been cut less than anyone else’s; which is sensible as the climax depends on letting her talk at length. Coriolanus, breaking what would once have been his ultimate taboo, has offered his services to the Volscians and they’re marching unstoppably on Rome, which knows it’s about to receive the same treatment that it inflicted on Corioles. Only his mother, who has guided his every step, can stop the human war-machine in his tracks. Why she should want to I’ve never quite understood (wouldn’t she be inclined to tell him to burn down the ungrateful city with her blessing?) but patriotism trumps maternity. She doesn’t do it alone; she has the support of the wife whom Martius calls his “gracious silence” whose influence is more believable in Jessica Chastain’s performance than in any other I have seen, and of their young son whose words and actions also makes more sense here than ever before. The turning-point of this very public drama is determined, ironically enough, by private affections. Volumnia’s victory is signalled by the most eloquent stage-direction in Shakespeare, followed by one of the most devastating lines. The direction is “he holds her by the hand, silent”; the line is “oh mother, mother what have you done?” The machine breaks. The greatest Coriolanus I’ve ever seen was Nicol Williamson, whose death was announced last week, and he uttered those words with a giant, wracking sob. He fell apart before our eyes and ears. Fiennes’ collapse isn’t on that massive scale but it’s wrenching enough.</p>
+<p>One of Fiennes’ finest moments in the film, this is also one of the few occasions on which he allows himself a long speech. Elsewhere he plays things very close to his chest. Perhaps he’s bowing to perceived necessity. Film and TV have always had a problem with Shakespeare’s language. One reason Cox’s performance works so well is that most of his role is in conversational prose; asked to speak rhetorical verse on screen, most actors’ instinct is to scale it down, aiming for a kind of naturalism that, given the size of the words, sounds very unnatural. The one performer here who rides right over that compromise is Redgrave. One reviewer has said that Redgrave, though a great actress, is not the greatest verse-speaker. Actually she’s a superb verse-speaker, able to preserve the shape and momentum of the lines while still making them sound real.</p>
+<p>Her role, the third-longest in the play, has been cut less than anyone else’s; which is sensible as the climax depends on letting her talk at length. Coriolanus, breaking what would once have been his ultimate taboo, has offered his services to the Volscians and they’re marching unstoppably on Rome, which knows it’s about to receive the same treatment that it inflicted on Corioles. Only his mother, who has guided his every step, can stop the human war-machine in his tracks. Why she should want to I’ve never quite understood (wouldn’t she be inclined to tell him to burn down the ungrateful city with her blessing?) but patriotism trumps maternity. She doesn’t do it alone; she has the support of the wife whom Martius calls his “gracious silence” whose influence is more believable in Jessica Chastain’s performance than in any other I have seen, and of their young son whose words and actions also makes more sense here than ever before.</p>
+<p>The turning-point of this very public drama is determined, ironically enough, by private affections. Volumnia’s victory is signalled by the most eloquent stage-direction in Shakespeare, followed by one of the most devastating lines. The direction is “he holds her by the hand, silent”; the line is “oh mother, mother what have you done?” The machine breaks. The greatest Coriolanus I’ve ever seen was Nicol Williamson, whose death was announced last week, and he uttered those words with a giant, wracking sob. He fell apart before our eyes and ears. Fiennes’ collapse isn’t on that massive scale but it’s wrenching enough.</p>
 <p>Volumnia returns to Rome in triumph, though the film falls down in not showing us her awareness that in saving the city she has signed her son’s death-warrant. (Martha Henry, in two successive Stratford Festival productions, has brought this off superbly.) Coriolanus returns to the Volscians, to be murdered by his enemy-turned-ally Aufidius, who’s been awaiting just such an opportunity. He says he’s sorry afterwards, but the film predictably cuts this, just as much earlier it’s cut Martius’ surprisingly touching sympathy for a Volscian captive who’d once been kind to him and his characteristic and rather endearing failure to remember the man’s name.</p>
 <p>Those are losses. Sympathy doesn’t equal sentimentality: certainly not in a play whose climax is a man’s surrender to human bonds he thought he had transcended. Sympathy is also, in Shakespeare, unpredictable and impartial. The citizens are fickle and easily manipulated; they’re also real men (and, in the film, women) with real grievances. Coriolanus’ views on the poor are to the right of Mitt Romney’s, but no-one could accuse him of playing politics; in fact his friends wish he could. The play has been claimed for both right and left, but it eludes both. All that, all the essentials, the film gets sternly and thrillingly right.</p></div></article>
       </section>
@@ -292,6 +316,6 @@
       </section>
     </footer>
 
-    <script src="./app.js?v=194" type="module"></script>
+    <script src="./app.js?v=233" type="module"></script>
   </body>
 </html>

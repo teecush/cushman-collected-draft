@@ -13,31 +13,33 @@
     <link rel="apple-touch-icon" href="../apple-touch-icon.svg">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Rubik:wght@400;600;700;800;900&display=swap">
-    <link rel="stylesheet" href="./styles.css?v=173">
+    <link rel="stylesheet" href="./styles.css?v=174">
     <link rel="stylesheet" href="./catalog.css?v=194">
-    <link rel="stylesheet" href="./classic.css?v=194">
+    <link rel="stylesheet" href="./classic.css?v=233">
   </head>
   <body class="article-open">
     <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="site-header">
       <nav class="site-nav site-nav-left" id="siteNavLeft" aria-label="Primary navigation left">
-        <a class="nav-search" href="#search" aria-label="Search the archive"><span></span></a>
-        <a href="#section:current">Recent</a>
+        <a href="#search">Search</a>
         <div class="nav-folder nav-folder-wide">
           <a href="#section:browse">Browse</a>
           <div class="nav-dropdown nav-mega">
             <div class="nav-subfolder">
               <a href="#section:collections">Collections</a>
               <div class="nav-side-menu">
+                <a href="#collection:recent">Recent</a>
+                <a href="#correspondence:famous-letters">Special Letters</a>
                 <a href="#section:shakespeare">Shakespeare</a>
                 <a href="#collection:sondheim">Sondheim</a>
+                <a href="#collection:stoppard">Stoppard</a>
                 <a href="#collection:musicals">Musicals</a>
                 <a href="#collection:stratford">Stratford</a>
                 <a href="#collection:shaw">Shaw</a>
                 <a href="#collection:television">TV Reviews</a>
                 <a href="#collection:albums">Music Reviews</a>
                 <a href="#collection:books">Book Reviews</a>
-                <a href="#collection:profiles">Profiles &amp; Obits</a>
+                <a href="#collection:profiles">Artist Profiles</a>
                 <a href="#collection:early">Early Writing</a>
               </div>
             </div>
@@ -46,7 +48,6 @@
               <div class="nav-side-menu">
                 <a href="#works">All Works</a>
                 <a href="#people">All People</a>
-                <a href="#index:publications">Publications</a>
                 <a href="#places">Places</a>
               </div>
             </div>
@@ -72,21 +73,21 @@
       </a>
       <nav class="site-nav site-nav-right" id="siteNavRight" aria-label="Primary navigation right">
         <div class="nav-folder">
-          <a href="#explore">Explore</a>
+          <a href="#section:explore">Explore</a>
           <div class="nav-dropdown">
-            <a href="#explore">Article Explorer</a>
             <a href="#map">Map</a>
             <a href="#timeline">Timeline</a>
+            <a href="#explore">Article Explorer</a>
             <a href="#correspondence">Correspondence</a>
           </div>
         </div>
         <div class="nav-folder">
-          <a href="#about">About</a>
+          <a href="#section:about">About</a>
           <div class="nav-dropdown">
             <a href="#about">About Robert Cushman</a>
             <a href="#critics-circle">Critic's Circle</a>
             <a href="https://www.cushmancollected.com/checkout/donate?donatePageId=5c9b8016652dea361e5feb7d" target="_blank" rel="noopener">Donate</a>
-            <a href="#subscribe">Subscribe</a>
+            <a href="#contact">Contact &amp; Newsletter</a>
           </div>
         </div>
       </nav>
@@ -102,10 +103,25 @@
 
     <nav class="drawer" id="drawer" aria-label="Site navigation">
       <a href="#search">Search the Archive</a>
-      <a href="#section:current">Recent</a>
       <details>
         <summary>Browse</summary>
-        <a href="#section:collections">Collections</a>
+        <a href="#section:browse">Browse overview</a>
+        <details class="drawer-collection-menu">
+          <summary>Collections</summary>
+          <a href="#collection:recent">Recent</a>
+          <a href="#correspondence:famous-letters">Special Letters</a>
+          <a href="#section:shakespeare">Shakespeare</a>
+          <a href="#collection:sondheim">Sondheim</a>
+          <a href="#collection:stoppard">Stoppard</a>
+          <a href="#collection:musicals">Musicals</a>
+          <a href="#collection:stratford">Stratford</a>
+          <a href="#collection:shaw">Shaw</a>
+          <a href="#collection:television">TV Reviews</a>
+          <a href="#collection:albums">Music Reviews</a>
+          <a href="#collection:books">Book Reviews</a>
+          <a href="#collection:profiles">Artist Profiles</a>
+          <a href="#collection:early">Early Writing</a>
+        </details>
         <a href="#master-index:all-works">All Works</a>
         <a href="#master-index:all-people">All People</a>
         <a href="#index:publications">Publications</a>
@@ -113,17 +129,19 @@
       </details>
       <details>
         <summary>Explore</summary>
-        <a href="#explore">Article Explorer</a>
+        <a href="#section:explore">Explore overview</a>
         <a href="#map">Map</a>
         <a href="#timeline">Timeline</a>
+        <a href="#explore">Article Explorer</a>
         <a href="#correspondence">Correspondence</a>
       </details>
       <details>
         <summary>About</summary>
+        <a href="#section:about">About overview</a>
         <a href="#about">About Robert Cushman</a>
         <a href="#critics-circle">Critic's Circle</a>
         <a href="https://www.cushmancollected.com/checkout/donate?donatePageId=5c9b8016652dea361e5feb7d" target="_blank" rel="noopener">Donate</a>
-        <a href="#subscribe">Contact &amp; Newsletter</a>
+        <a href="#contact">Contact &amp; Newsletter</a>
       </details>
     </nav>
 
@@ -225,7 +243,11 @@
         </a>
       </section>
 
-      <section class="frontpage-directory" id="frontpageDirectory" aria-label="Primary site paths"></section>
+      <section class="browse-heading site-index-heading">
+        <h2>Site Index</h2>
+      </section>
+
+      <section class="frontpage-directory" id="frontpageDirectory" aria-label="Site index"></section>
 
       <section class="browse-heading home-secondary-nav" id="browse">
         <h2>Browse the Archive</h2>
@@ -252,7 +274,9 @@
 <p>The show is about the experiences of Filipino nannies working in Canada. Most of these experiences seem to be unhappy ones. A program note says that &quot;Canada&#x27;s Live-In Caregiver Program is an important one,&quot; but the production expresses serious reservations about the live-in part, which it sees as an open invitation to exploitation. Anyway, it&#x27;s hard not to be bothered by the paradox of women separated by oceans from their own children while looking after other people&#x27;s. Paradox, in fact, is a gentle way of putting it. There are moving scenes here, the more heartbreaking for being largely played for comedy, of the nannies phoning home to their own large families, dealing with birthday requests, inquiring after absentee husbands. Still, the government and system most at fault here are not Canada&#x27;s but the Philippines&#x27; own, running on the cheap exported labour of women whose greatest dream is to earn citizenship somewhere else. That&#x27;s harder to dramatize, though.</p>
 <p>On a case-by-case basis, too, the Canadian families who do treat their Filipino nannies with respect might be harder to make theatrically interesting than those who don&#x27;t. None of the employers actually appear in the play; we only hear about them. One fairly harrowing scene shows a nanny having presumably coerced sex with the man of the house while thinking desperately about her own family, and then being upbraided by the wife on the lines of &quot;this is how you show your gratitude for us taking you into our home.&quot; Most of it, though, isn&#x27;t that stark. We start by thinking that the three performers will be spending all evening as a fluid, generalized collective, but they soon take on individual identities. The prevailing note, as they battle with inhuman schedules and immigration red tape, is of shared and mostly cheerful stoicism.</p>
 <p>Where the show falls down is in focusing on a fourth, offstage character: a nanny named Grace who attracts all the bad fortune and treatment the other three manage, at least, to live with. The play turns into a tribute, or an offering to her; but it&#x27;s hard to be moved by someone we haven&#x27;t met, especially when she&#x27;s clearly a symbol rather than a person. Otherwise, no complaints: The show unfolds with delicacy, considerable virtuosity and a passion that&#x27;s more effective for being understated. It&#x27;s the work of the Sulong Theatre Collective. As Pete Seeger and the gang once very nearly sang: Sulong, it&#x27;s been good to know yuh.</p>
-<p>In the reporting of this year&#x27;s Governor General&#x27;s Awards, the name of Robin Phillips, perhaps because he&#x27;s neither a pop musician nor from Quebec, has been rather neglected. It&#x27;s also true that his most famous achievements, as director of the Stratford Festival from 1975 to 1980, are now in what must seem to some the distant past. And so all the more reason for pointing out that his lifetime achievement award is long overdue. Phillips probably had a greater influence on the festival&#x27;s image than any director since its founder, Tyrone Guthrie. He increased its sheer scale and volume of productions; more importantly, he gave it his own personal style, in which sensitivity to text and actors combined with extraordinary visual flair. There are moments from his 1977 production of A Midsummer Night&#x27;s Dream whose magic still reverberates in my mind, even though I didn&#x27;t much care for the production as a whole. His Richard III, the same year, with Brian Bedford and an unbelievably believable battle, remains one of the two or three best Shakespeares I have seen on the Festival stage; though his Measure for Measure two years before was, by many accounts, even better. He had a second lease at Stratford when, during John Neville&#x27;s regime, he directed a young company whose productions had a 100% strike rate of success. Its members became the nucleus of Soulpepper whose first two productions Phillips also directed; the first of them, Don Carlos, set a high standard that the company has sometimes equalled but never surpassed. Not all of his productions have been easy to love -- I once wrote of his Stratford comedies of the later &#x27;70s that they seemed to be coming off an especially elegant conveyor belt --but it&#x27;s been very rare for them to lack distinction; arriving late for his last-to-date Stratford production ( King John, 1993) I was struck full in the face by the quality of it, even before I&#x27;d had time to get my bearings. He has not, by general agreement, been the easiest person, but those who bear the scars of working with him are also often among his greatest fans. I was on the preliminary committee for the G-G&#x27;s Awards two years ago, and the sheaf of testimonials in his favour, from some of our greatest talents, was extraordinary. He didn&#x27;t make it to the shortlist then. I&#x27;m glad that the decision makers have finally seen the light.</p>
+<p>In the reporting of this year&#x27;s Governor General&#x27;s Awards, the name of Robin Phillips, perhaps because he&#x27;s neither a pop musician nor from Quebec, has been rather neglected. It&#x27;s also true that his most famous achievements, as director of the Stratford Festival from 1975 to 1980, are now in what must seem to some the distant past. And so all the more reason for pointing out that his lifetime achievement award is long overdue. Phillips probably had a greater influence on the festival&#x27;s image than any director since its founder, Tyrone Guthrie. He increased its sheer scale and volume of productions; more importantly, he gave it his own personal style, in which sensitivity to text and actors combined with extraordinary visual flair. There are moments from his 1977 production of A Midsummer Night&#x27;s Dream whose magic still reverberates in my mind, even though I didn&#x27;t much care for the production as a whole.</p>
+<p>His Richard III, the same year, with Brian Bedford and an unbelievably believable battle, remains one of the two or three best Shakespeares I have seen on the Festival stage; though his Measure for Measure two years before was, by many accounts, even better. He had a second lease at Stratford when, during John Neville&#x27;s regime, he directed a young company whose productions had a 100% strike rate of success. Its members became the nucleus of Soulpepper whose first two productions Phillips also directed; the first of them, Don Carlos, set a high standard that the company has sometimes equalled but never surpassed. Not all of his productions have been easy to love -- I once wrote of his Stratford comedies of the later &#x27;70s that they seemed to be coming off an especially elegant conveyor belt --but it&#x27;s been very rare for them to lack distinction; arriving late for his last-to-date Stratford production ( King John, 1993) I was struck full in the face by the quality of it, even before I&#x27;d had time to get my bearings.</p>
+<p>He has not, by general agreement, been the easiest person, but those who bear the scars of working with him are also often among his greatest fans. I was on the preliminary committee for the G-G&#x27;s Awards two years ago, and the sheaf of testimonials in his favour, from some of our greatest talents, was extraordinary. He didn&#x27;t make it to the shortlist then. I&#x27;m glad that the decision makers have finally seen the light.</p>
 <p>- Future Folk runs through March 13 at Theatre Passe Muraille Backspace. Visit passemuraille.on.cafor details.</p>
 <p>Color Photo: Alex Felipe / From left: Future Folk&#x27;s Catherine Hernandez, Karen Ancheta and Aura Carcueva.; Caption:</p></div></article>
       </section>
@@ -288,6 +312,6 @@
       </section>
     </footer>
 
-    <script src="./app.js?v=194" type="module"></script>
+    <script src="./app.js?v=233" type="module"></script>
   </body>
 </html>
