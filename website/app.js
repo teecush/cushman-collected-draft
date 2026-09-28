@@ -1,4 +1,5 @@
 import {renderHomeCollections} from './home-collections.js?v=237';
+import {renderPlaywrightStage} from './playwright-stage.js?v=238';
 import {collectionTitleText,setCollectionTitle} from './collection-title.js?v=2';
 import {spotlightRecord} from './collections-engine.js?v=237';
 import { createCatalog } from "./catalog.js?v=237";
@@ -5881,16 +5882,19 @@ function scrollToSection(selector) {
 
 async function init() {
   try {
-    const [response, aliasesResponse, standaloneResponse, curationResponse] = await Promise.all([
+    const [response, aliasesResponse, standaloneResponse, curationResponse, playwrightResponse] = await Promise.all([
       fetch(DATA_URL),
       fetch(ALIASES_URL),
       fetch(STANDALONE_CORRESPONDENCE_URL).catch(() => null),
       fetch(new URL('./collection-curation.json?v=236', import.meta.url)),
+      fetch(new URL('./playwright-collections.json?v=238', import.meta.url)),
     ]);
     if (!response.ok) throw new Error(`Could not load records (${response.status})`);
     state.records = await response.json();
     if(!curationResponse.ok)throw new Error('Collection details could not load');
     state.collectionCuration=await curationResponse.json();
+    if(!playwrightResponse.ok)throw new Error('Playwright collections could not load');
+    state.collectionCuration.playwrights=await playwrightResponse.json();
     state.aliases = aliasesResponse.ok ? await aliasesResponse.json() : {};
     state.standaloneCorrespondence = standaloneResponse?.ok
       ? asArray((await standaloneResponse.json()).collections)
@@ -6053,6 +6057,7 @@ let homeMapObserver;
 function renderClassicHome() {
   els.searchInput.placeholder = '';
   renderHomeCollections(document.querySelector('#homeCollections'),state.collectionCuration,catalog.getCollections());
+  renderPlaywrightStage(document.querySelector('#homePlaywrights'),state.collectionCuration.playwrights);
   document.querySelector('#homeMap').hidden = false;
   renderFrontpageDirectory();
   renderCurrentFeature();

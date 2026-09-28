@@ -1,7 +1,7 @@
 import {INDEX_LETTERS,indexSections} from './index-engine.js?v=173';
 import {theatreIllustration, renderFestivalMap, festivalLocation} from './festival-map.js?v=173';
 import {serialize, publicationYear, normalize} from './catalog-engine.js?v=173';
-import {COLLECTIONS,workKey} from './collections-engine.js?v=237';
+import {COLLECTIONS,workKey} from './collections-engine.js?v=238';
 import {setCollectionTitle} from './collection-title.js?v=2';
 
 export function createCollectionViews({state,els,h,node,link,button,openIndex,getCollections}) {
@@ -26,6 +26,13 @@ export function createCollectionViews({state,els,h,node,link,button,openIndex,ge
   function artwork(collection,item,cls='') {
     const wrapper=node('div',undefined,'collection-art '+collection.kind+' '+cls);
     const asset=state.collectionCuration?.artwork?.[collection.id+':'+item.id];
+    if(collection.kind==='playwright'&&!asset){
+      const marks=['I','II','III','IV'];
+      const index=[...item.id].reduce((sum,char)=>sum+char.charCodeAt(0),0)%4;
+      wrapper.classList.add('variant-'+index);
+      wrapper.append(node('span',marks[index],'playwright-art-mark'),node('span',item.title,'art-title'));
+      return wrapper;
+    }
     const profileFallback=()=>{
       wrapper.classList.add('profile-fallback');
       const image=node('img');image.src=new URL('./assets/collections/profile-silhouette.svg',import.meta.url).href;image.alt='';image.loading='lazy';
@@ -137,6 +144,18 @@ export function createCollectionViews({state,els,h,node,link,button,openIndex,ge
       const pages=node('span',undefined,'sondheim-letters-feature-pages');
       ['1972-06-15-p01.jpg','2001-11-08-p01.jpg'].forEach(file=>{const image=node('img');image.src=new URL('../site_export/content/media/correspondence/famous-letters/stephen-sondheim/'+file,import.meta.url).href;image.alt='';image.loading='lazy';pages.append(image);});
       feature.append(copy,pages);els.indexContent.append(feature);
+    }
+    if(collection.kind==='playwright'){
+      const hero=node('div',undefined,'playwright-collection-hero');
+      const portrait=node('img');portrait.src=new URL(collection.portrait,import.meta.url).href;portrait.alt=`Portrait of ${collection.person}`;portrait.loading='eager';
+      const copy=node('div',undefined,'playwright-collection-copy');
+      copy.append(node('p','The plays and productions in Robert Cushman’s reviews.','playwright-collection-intro'));
+      copy.append(node('p',`${collection.items.length} works · ${collection.records.length} articles`,'playwright-collection-count'));
+      const credit=node('p',undefined,'playwright-collection-credit');
+      const source=link('Portrait source',collection.source);source.target='_blank';source.rel='noopener';
+      credit.append(source,document.createTextNode(` · ${collection.creator||'Creator not stated'} · ${collection.license||'See source for rights'}`));
+      if(collection.licenseUrl){const licence=link('Licence',collection.licenseUrl);licence.target='_blank';licence.rel='noopener';credit.append(document.createTextNode(' · '),licence);}
+      copy.append(credit);hero.append(portrait,copy);els.indexContent.append(hero);
     }
     const field=node('label',undefined,'collection-find collection-find-compact');
     const search=node('input');search.type='search';search.setAttribute('aria-label',id==='profiles'?'Search for a person':'Search this collection');search.placeholder='Search this collection';search.value=params.get('q')||'';field.append(search);els.indexContent.append(field);

@@ -774,3 +774,43 @@ body.catalog-page #indexView.directory-page.sticky-directory .index-controls lab
   padding:10px 34px 10px 10px;border:1px solid #c7c8c6;border-radius:2px;background-color:rgba(255,255,255,.78);
   background-position:right 10px center;color:#444;font:400 14px/26px var(--sans);
 }
+
+/* A single, illustrated doorway to the playwright collections. */
+#homePlaywrights{margin:0 0 48px;}
+:is(.article-open,.index-open,.map-open,.search-open) #homePlaywrights{display:none;}
+.playwright-stage-heading{border-top:1px solid var(--rule);padding-top:32px;margin:0 0 22px;}
+.playwright-stage-heading h2{margin:0;}
+.playwright-stage-scroll{overflow-x:auto;background:#f2eee6;border-top:5px solid var(--blue-dark);scrollbar-color:#a7abad #e6e3de;scrollbar-width:thin;}
+.playwright-stage-image{position:relative;isolation:isolate;width:100%;min-width:990px;aspect-ratio:1774 / 887;}
+.playwright-stage-image>img{display:block;width:100%;height:100%;object-fit:cover;}
+.playwright-figure{position:absolute;z-index:2;color:var(--ink);text-decoration:none;outline:0;touch-action:pan-x;-webkit-tap-highlight-color:transparent;}
+.playwright-figure svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible;pointer-events:none;opacity:0;transition:opacity .18s ease;}
+.playwright-figure svg path{fill:none;stroke:#1681b5;stroke-width:2;vector-effect:non-scaling-stroke;filter:drop-shadow(0 0 5px #1687bd) drop-shadow(0 0 11px #1687bd);}
+.playwright-figure-name{position:absolute;z-index:3;min-width:max-content;transform:translate(-50%,-50%);font:800 clamp(16px,1.65vw,23px)/1 var(--sans);letter-spacing:.035em;color:#104c70;text-shadow:0 1px #fff,1px 0 #fff,-1px 0 #fff,0 -1px #fff,0 3px 7px #fff;opacity:0;pointer-events:none;transition:opacity .15s ease;}
+.playwright-figure:hover,.playwright-figure:focus-visible,.playwright-figure.is-selected{z-index:20;}
+.playwright-figure:is(:hover,:focus-visible,.is-selected) svg,.playwright-figure:is(:hover,:focus-visible,.is-selected) .playwright-figure-name{opacity:1;}
+.playwright-figure:focus-visible{outline:2px solid var(--blue-dark);outline-offset:3px;}
+.playwright-stage-hint{margin:12px 0 8px;color:var(--muted);font:13px/1.5 var(--sans);}
+.playwright-stage-credits{padding:0 0 13px;border-bottom:1px solid var(--rule);font:12px/1.5 var(--sans);color:var(--muted);}
+.playwright-stage-credits summary{cursor:pointer;color:var(--blue-dark);font-weight:700;}
+.playwright-stage-credits ul{columns:3;column-gap:26px;list-style:none;padding:0;margin:10px 0;}
+.playwright-stage-credits li{break-inside:avoid;margin:0 0 7px;}
+.playwright-stage-credits a{color:var(--blue-dark);}
+@media(max-width:700px){.playwright-stage-image{min-width:860px;}.playwright-figure-name{font-size:17px;}.playwright-stage-credits ul{columns:1;}}
+@media(prefers-reduced-motion:reduce){.playwright-figure svg,.playwright-figure-name{transition:none;}}
+
+/* Portrait-led author pages retain the archive's restrained card vocabulary. */
+.playwright-collection-hero{display:grid;grid-template-columns:minmax(115px,200px) minmax(0,1fr);align-items:center;gap:clamp(18px,3vw,42px);margin:24px 0 10px;padding:22px;background:#ede9e1;border-top:5px solid var(--blue-dark);}
+.playwright-collection-hero>img{display:block;width:100%;aspect-ratio:3 / 4;object-fit:cover;object-position:center 22%;filter:grayscale(1);border:1px solid #c7c4bb;}
+.playwright-collection-intro{margin:0 0 18px;font:clamp(21px,2.4vw,34px)/1.2 var(--serif);}
+.playwright-collection-count{margin:0 0 20px;color:var(--blue-dark);font:800 12px/1.3 var(--sans);letter-spacing:.09em;text-transform:uppercase;}
+.playwright-collection-credit{margin:0;color:var(--muted);font:11px/1.5 var(--sans);}
+.playwright-collection-credit a{color:var(--blue-dark);}
+.collection-gallery.playwright{grid-template-columns:repeat(4,minmax(0,1fr));gap:24px 18px;}
+.collection-art.playwright{position:relative;aspect-ratio:1.32;padding:16px;overflow:hidden;background:#e9e4db;border:1px solid #cfc9bd;border-top:5px solid var(--blue-dark);color:#17384c;}
+.collection-art.playwright.variant-1{background:#e5e7e1;}.collection-art.playwright.variant-2{background:#ebe3dd;}.collection-art.playwright.variant-3{background:#e5e2e8;}
+.collection-art.playwright .playwright-art-mark{position:absolute;right:-5%;bottom:-23%;font:italic 160px/1 var(--serif);color:#426b8040;pointer-events:none;}
+.collection-art.playwright .art-title{position:relative;z-index:1;max-width:94%;font:700 clamp(16px,1.6vw,25px)/1.15 var(--serif);text-shadow:0 1px #fff8;}
+.collection-gallery.playwright .collection-item:hover .collection-art,.collection-gallery.playwright .collection-item:focus-visible .collection-art{border-color:var(--blue-dark);box-shadow:0 3px 12px #162e421f;}
+@media(max-width:850px){.collection-gallery.playwright{grid-template-columns:repeat(3,minmax(0,1fr));}}
+@media(max-width:600px){.playwright-collection-hero{grid-template-columns:100px minmax(0,1fr);padding:12px;gap:14px;}.playwright-collection-intro{font-size:20px;margin-bottom:12px;}.collection-gallery.playwright{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 12px;}.collection-art.playwright{padding:8px;}.collection-art.playwright .art-title{font-size:16px;}}

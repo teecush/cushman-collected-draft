@@ -72,6 +72,24 @@ export function makeCollections(records, h, curation = {}) {
     else if(fix.albumTitles===undefined&&record.recording_title&&!/concert|convention|at the concert hall/i.test(record.recording_title))add('albums',record,h.splitEntityList(record.recording_title));
     if(!fix.excludeProfiles&&/Profile|Obituary/.test(record.article_category))add('profiles',record,(fix.subjects||h.splitEntityList(record.subject_people)).filter(name=>name!=='Arlene Gould'));
   }
+  const recordBySlug=new Map(records.map(record=>[record.slug,record]));
+  for(const person of curation.playwrights?.people||[]){
+    if(['William Shakespeare','Tom Stoppard'].includes(person.person))continue;
+    const collection={id:person.id,title:`${person.surname} Collection`,kind:'playwright',person:person.person,portrait:person.portrait,source:person.source,creator:person.creator,license:person.license,licenseUrl:person.licenseUrl,records:[],items:[],ungrouped:[]};
+    const map=new Map();
+    for(const work of person.works){
+      const linked=work.slugs.map(slug=>recordBySlug.get(slug)).filter(Boolean);
+      if(!linked.length)continue;
+      const id=workKey(work.title).replaceAll(' ','-');
+      const item=map.get(id)||{id,title:work.title,records:[]};
+      for(const record of linked)if(!item.records.some(existing=>existing.slug===record.slug))item.records.push(record);
+      map.set(id,item);
+    }
+    collection.items=[...map.values()].sort((a,b)=>workKey(a.title).localeCompare(workKey(b.title)));
+    collection.records=[...new Map(collection.items.flatMap(item=>item.records).map(record=>[record.slug,record])).values()];
+    definitions.set(person.id,collection);
+    itemMaps.set(person.id,map);
+  }
   for(const [id,collection] of definitions){
     collection.items=[...itemMaps.get(id).values()].sort((a,b)=>(id==='television' ? b.records.length-a.records.length : 0)||(id==='sondheim'?SONDHEIM_SHOWS.indexOf(a.title)-SONDHEIM_SHOWS.indexOf(b.title):0)||workKey(a.title).localeCompare(workKey(b.title)));
     collection.recordIds=new Set(collection.records.map(r=>r.slug));
