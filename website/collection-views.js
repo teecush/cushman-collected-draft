@@ -5,12 +5,22 @@ import {COLLECTIONS,workKey} from './collections-engine.js?v=238';
 import {setCollectionTitle} from './collection-title.js?v=2';
 
 export function createCollectionViews({state,els,h,node,link,button,openIndex,getCollections}) {
-  let activeMap=null, generation=0, artObserver=null, alphabetObserver=null, alphabetScrollCleanup=null;
-  const dispose=()=>{alphabetScrollCleanup?.();alphabetScrollCleanup=null;alphabetObserver?.disconnect();alphabetObserver=null;artObserver?.disconnect();artObserver=null;els.indexView.classList.remove('collection-page','festival-page','sticky-collection');generation++;activeMap?.remove();activeMap=null;document.querySelector('.collection-result-art')?.remove();};
+  let activeMap=null, generation=0, artObserver=null, alphabetObserver=null, alphabetScrollCleanup=null, stickyTitleObserver=null, stickyNavObserver=null;
+  const dispose=()=>{alphabetScrollCleanup?.();alphabetScrollCleanup=null;alphabetObserver?.disconnect();alphabetObserver=null;artObserver?.disconnect();artObserver=null;stickyTitleObserver?.disconnect();stickyTitleObserver=null;stickyNavObserver?.disconnect();stickyNavObserver=null;els.indexContent.style.removeProperty('--collection-title-height');els.indexView.classList.remove('collection-page','festival-page','sticky-collection');generation++;activeMap?.remove();activeMap=null;document.querySelector('.collection-result-art')?.remove();};
+  function observeStickyTitle(target) {
+    stickyTitleObserver?.disconnect();
+    if(!target)return;
+    const measure=()=>els.indexContent.style.setProperty('--collection-title-height',`${Math.ceil(target.getBoundingClientRect().height)}px`);
+    stickyTitleObserver=new ResizeObserver(measure);stickyTitleObserver.observe(target);measure();
+  }
   function frame() {
     els.indexView.classList.add('collection-page','sticky-catalog','sticky-collection');
     const back=els.indexView.querySelector(':scope > .back-link');
     back.href='#home';back.textContent='Back to home';
+    observeStickyTitle(els.indexContent.querySelector('h1'));
+    stickyNavObserver?.disconnect();
+    const nav=els.indexContent.querySelector('.catalog-tabs');
+    if(nav){const measure=()=>els.indexContent.style.setProperty('--directory-nav-height',`${Math.ceil(nav.getBoundingClientRect().height)}px`);stickyNavObserver=new ResizeObserver(measure);stickyNavObserver.observe(nav);measure();}
   }
   function fitTitles(root) {
     const fit=()=>root.querySelectorAll('.art-title').forEach(title=>{
@@ -221,7 +231,7 @@ export function createCollectionViews({state,els,h,node,link,button,openIndex,ge
     const select=node('select');select.setAttribute('aria-label','Season');select.append(new Option('All years',''));years.forEach(y=>select.append(new Option(y,y)));select.value=year;field.append(select);
     const map=node('div',undefined,'places-map festival-map');map.setAttribute('aria-label',collection.title+' festival venues');
     const list=node('div',undefined,'festival-venues'),all=link('',resultsHref(collection),'primary-action');
-    const header=node('div',undefined,'festival-header');els.indexContent.querySelector('.catalog-tabs').before(header);header.append(titleGroup,field);
+    const header=node('div',undefined,'festival-header');els.indexContent.querySelector('.catalog-tabs').before(header);header.append(titleGroup,field);observeStickyTitle(titleGroup);
     els.indexContent.append(map,node('p','Select a theatre to browse its articles. ≈ marks an approximate location.','festival-map-note'),all,list);
     const draw=async({scrollToReviews=true}={})=>{
       const token=++generation;activeMap?.remove();activeMap=null;

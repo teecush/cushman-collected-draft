@@ -692,19 +692,31 @@ body.catalog-page #indexView.collection-page #indexContent>.catalog-tabs{
   body.catalog-page #indexView.festival-page .festival-header h1.styled-collection-title{font-size:clamp(23px,6vw,30px);}
 }
 
-/* The catalog row is the shared scrolling context; full page titles scroll away. */
+/* Keep each collection's name immediately above its sticky catalog row. */
+body.catalog-page #indexView.sticky-collection #indexContent>h1,
+body.catalog-page #indexView.festival-page .festival-title-group{
+  position:sticky;top:var(--catalog-header-height,104px);z-index:35;
+  background:var(--paper,#fff);box-shadow:0 -8px 0 var(--paper,#fff);
+  padding-bottom:12px;
+}
+body.catalog-page #indexView.sticky-collection #indexContent>h1{margin:0;}
+body.catalog-page #indexView.festival-page .festival-title-group{align-self:start;}
+body.catalog-page #indexView.festival-page .festival-title-group h1{position:static;padding:0;box-shadow:none;}
 body.catalog-page #indexView.sticky-collection .catalog-tabs{
-  position:sticky;top:var(--catalog-header-height,104px);z-index:34;background:var(--paper,#fff);
+  position:sticky;top:calc(var(--catalog-header-height,104px) + var(--collection-title-height,60px));z-index:34;background:var(--paper,#fff);
   box-shadow:0 -8px 0 var(--paper,#fff),0 1px 0 var(--rule);
 }
 body.catalog-page #indexView.sticky-collection .profiles-alphabet{
-  top:calc(var(--catalog-header-height,104px) + var(--directory-nav-height,50px));z-index:33;
+  top:calc(var(--catalog-header-height,104px) + var(--collection-title-height,60px) + var(--directory-nav-height,50px));z-index:33;
   background:var(--paper,#fff);
 }
 body.catalog-page #indexView.sticky-collection .collection-alphabet-gallery>a,
 body.catalog-page #indexView.sticky-collection .collection-alphabet-list>a,
 body.catalog-page #indexView.sticky-collection .index-letter-section>h2{
-  scroll-margin-top:calc(var(--catalog-header-height,104px) + var(--directory-nav-height,50px) + var(--index-alphabet-height,64px) + 22px);
+  scroll-margin-top:calc(var(--catalog-header-height,104px) + var(--collection-title-height,60px) + var(--directory-nav-height,50px) + var(--index-alphabet-height,64px) + 22px);
+}
+body.catalog-page #indexView.sticky-collection .shakespeare-play-group-section{
+  scroll-margin-top:calc(var(--catalog-header-height,104px) + var(--collection-title-height,60px) + var(--directory-nav-height,50px) + 12px);
 }
 
 /* Shaw and Stratford keep their selector beside the logo initially, then below the sticky catalog row. */
@@ -714,7 +726,7 @@ body.catalog-page #indexView.festival-page #indexContent{
 body.catalog-page #indexView.festival-page .festival-header{display:contents;}
 body.catalog-page #indexView.festival-page .festival-header .festival-title-group{grid-column:1;grid-row:1;}
 body.catalog-page #indexView.festival-page .festival-header .festival-year{
-  grid-column:2;grid-row:1;position:sticky;top:calc(var(--catalog-header-height,104px) + var(--directory-nav-height,50px));z-index:32;
+  grid-column:2;grid-row:1;position:sticky;top:calc(var(--catalog-header-height,104px) + var(--collection-title-height,60px) + var(--directory-nav-height,50px));z-index:32;
   width:160px;margin:0;background:var(--paper,#fff);padding:6px 0 12px;align-self:start;
 }
 body.catalog-page #indexView.festival-page #indexContent>.catalog-tabs{grid-column:1/-1;grid-row:2;}
@@ -735,7 +747,7 @@ body.catalog-page.search-open #archive>.catalog-tabs{
   body.catalog-page #indexView.festival-page .festival-header .festival-title-group{grid-column:1/-1;grid-row:1;}
   body.catalog-page #indexView.festival-page .festival-header .festival-year{grid-row:2;grid-column:2;}
   body.catalog-page #indexView.festival-page #indexContent>.catalog-tabs{grid-row:3;}
-  body.catalog-page #indexView.festival-page .festival-header .festival-year{width:150px;}
+  body.catalog-page #indexView.festival-page .festival-header .festival-year{position:static;width:150px;}
 }
 @media(max-width:359px){
   body.catalog-page #indexView.directory-page .index-alphabet,
