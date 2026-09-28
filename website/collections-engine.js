@@ -1,17 +1,17 @@
 import {normalize, publicationYear} from './catalog-engine.js?v=173';
 export const COLLECTIONS = [
-  {id:'recent',title:'The Recent Collection',kind:'recent',href:'#collection:recent',intro:'Recent writing published for Cushman Collected.'},
-  {id:'shakespeare',title:'The Shakespeare Collection',kind:'plays',href:'#section:shakespeare',intro:'The plays, the productions, and a lifetime of returning to Shakespeare.'},
-  {id:'sondheim',title:'The Sondheim Collection',kind:'musicals',intro:'The musicals, the lyrics, and the art of Stephen Sondheim.'},
-  {id:'stoppard',title:'The Stoppard Collection',kind:'plays',intro:'Reviews and writing about the plays of Tom Stoppard.'},
-  {id:'musicals',title:'The Musicals Collection',kind:'musicals',intro:'Return to a favourite show, or discover one you have never seen.'},
-  {id:'stratford',title:'The Stratford Collection',kind:'festival',intro:'Explore the Stratford Festival, theatre by theatre and season by season.'},
-  {id:'shaw',title:'The Shaw Collection',kind:'festival',intro:'Explore the Shaw Festival, theatre by theatre and season by season.'},
-  {id:'television',title:'The TV Reviews Collection',kind:'television',intro:'Small screens, big stories. Browse the shows Robert wrote about.'},
-  {id:'albums',title:'The Music Reviews Collection',kind:'albums',intro:'Recordings, singers, and the songs worth listening to again.'},
-  {id:'books',title:'The Book Reviews Collection',kind:'books',intro:'A shelf of books about the people and ideas behind the arts.'},
-  {id:'profiles',title:'The Artist Profiles Collection',kind:'portraits',intro:'The artists behind the work, in profiles and remembrances.'},
-  {id:'early',title:'The Early Writing Collection',kind:'early',intro:'The beginning: writing published from 1963 through 1966.'},
+  {id:'recent',title:'Recent Collection',kind:'recent',href:'#collection:recent',intro:'Recent writing published for Cushman Collected.'},
+  {id:'shakespeare',title:'Shakespeare Collection',kind:'plays',href:'#section:shakespeare',intro:'The plays, the productions, and a lifetime of returning to Shakespeare.'},
+  {id:'sondheim',title:'Sondheim Collection',kind:'musicals',intro:'The musicals, the lyrics, and the art of Stephen Sondheim.'},
+  {id:'stoppard',title:'Stoppard Collection',kind:'plays',intro:'Reviews and writing about the plays of Tom Stoppard.'},
+  {id:'musicals',title:'Musicals Collection',kind:'musicals',intro:'Return to a favourite show, or discover one you have never seen.'},
+  {id:'stratford',title:'Stratford Collection',kind:'festival',intro:'Explore the Stratford Festival, theatre by theatre and season by season.'},
+  {id:'shaw',title:'Shaw Collection',kind:'festival',intro:'Explore the Shaw Festival, theatre by theatre and season by season.'},
+  {id:'television',title:'TV Reviews Collection',kind:'television',intro:'Small screens, big stories. Browse the shows Robert wrote about.'},
+  {id:'albums',title:'Music Reviews Collection',kind:'albums',intro:'Recordings, singers, and the songs worth listening to again.'},
+  {id:'books',title:'Book Reviews Collection',kind:'books',intro:'A shelf of books about the people and ideas behind the arts.'},
+  {id:'profiles',title:'Artist Profiles Collection',kind:'portraits',intro:'The artists behind the work, in profiles and remembrances.'},
+  {id:'early',title:'Early Writing Collection',kind:'early',intro:'The beginning: writing published from 1963 through 1966.'},
 ];
 export const SONDHEIM_SHOWS = ['West Side Story','Gypsy','A Funny Thing Happened on the Way to the Forum','Anyone Can Whistle','Do I Hear a Waltz?','Company','Follies','A Little Night Music','The Frogs','Pacific Overtures','Side by Side by Sondheim','Sweeney Todd','Merrily We Roll Along','Marry Me a Little','Sunday in the Park with George','Into the Woods','Assassins','Passion','Saturday Night','Putting It Together','Bounce','Road Show','Sondheim on Sondheim','Old Friends','Here We Are'];
 export const STOPPARD_PLAYS = ['Rosencrantz and Guildenstern Are Dead','The Real Inspector Hound','Jumpers','Travesties','Every Good Boy Deserves Favour','The Real Thing','Arcadia','Indian Ink','The Invention of Love','The Coast of Utopia',"Rock 'n' Roll",'Heroes','The Hard Problem','Leopoldstadt'];

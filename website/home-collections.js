@@ -1,6 +1,6 @@
 // Homepage previews reuse credited archive artwork; every card opens its collection.
-import {COLLECTIONS,SONDHEIM_SHOWS,workKey} from './collections-engine.js?v=234';
-import {setCollectionTitle} from './collection-title.js?v=1';
+import {COLLECTIONS,SONDHEIM_SHOWS,workKey} from './collections-engine.js?v=237';
+import {setCollectionTitle} from './collection-title.js?v=2';
 const examples = {
   books:['swing-time','all-or-nothing-at-all-a-life-of-frank-sinatra','broadway-anecdotes'],
   albums:['both-sides-now','art-of-romance','gypsy'],
@@ -11,7 +11,7 @@ function element(tag,cls,text){const el=document.createElement(tag);el.className
 export function renderHomeCollections(root,curation,collections,{includePublications=true}={}){
   if(!root)return;
   const grid=element('div','home-collection-grid');
-  const famousLetters={id:'famous-letters',title:'The Special Letters Collection',href:'#correspondence:famous-letters'};
+  const famousLetters={id:'famous-letters',title:'Special Letters Collection',href:'#correspondence:famous-letters'};
   const specs=[COLLECTIONS[0],famousLetters,...COLLECTIONS.slice(1),...(includePublications?[{id:'publications',title:'Publications',href:'#index:publications'}]:[])];
   for(const spec of specs){
     const card=element('a','home-collection-card '+spec.id);card.href=spec.href||'#collection:'+spec.id;

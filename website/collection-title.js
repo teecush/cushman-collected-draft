@@ -3,7 +3,7 @@ function collectionName(title) {
 }
 
 export function collectionTitleText(title) {
-  return `The ${collectionName(title)} Collection`;
+  return `${collectionName(title)} Collection`;
 }
 
 export function setCollectionTitle(element,title) {
@@ -12,8 +12,6 @@ export function setCollectionTitle(element,title) {
   const part=(className,text)=>{const span=document.createElement('span');span.className=className;span.textContent=text;return span;};
   element.classList.add('styled-collection-title');
   element.replaceChildren(
-    part('collection-title-script','The'),
-    document.createTextNode(' '),
     part('collection-title-name',name),
     document.createTextNode(' '),
     part('collection-title-script','Collection'),

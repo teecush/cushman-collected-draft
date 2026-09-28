@@ -1,11 +1,11 @@
-import {renderHomeCollections} from './home-collections.js?v=236';
-import {collectionTitleText,setCollectionTitle} from './collection-title.js?v=1';
-import {spotlightRecord} from './collections-engine.js?v=234';
-import { createCatalog } from "./catalog.js?v=236";
+import {renderHomeCollections} from './home-collections.js?v=237';
+import {collectionTitleText,setCollectionTitle} from './collection-title.js?v=2';
+import {spotlightRecord} from './collections-engine.js?v=237';
+import { createCatalog } from "./catalog.js?v=237";
 import { FEATURES } from "./features.js?v=173";
 const DATA_URL = new URL("../site_export/data/catalog.json?v=233", import.meta.url);
 const ALIASES_URL = new URL("../site_export/data/route_aliases.json?v=1", import.meta.url);
-const STANDALONE_CORRESPONDENCE_URL = new URL("../site_export/data/standalone_correspondence.json?v=233", import.meta.url);
+const STANDALONE_CORRESPONDENCE_URL = new URL("../site_export/data/standalone_correspondence.json?v=237", import.meta.url);
 const CONTENT_ROOT = new URL("../site_export/content/reviews/", import.meta.url);
 const MEDIA_ASSET_VERSION = "site-audit-20260909";
 const PAGE_SIZE = 36;
@@ -5060,7 +5060,7 @@ function asArray(value) {
 
 function mediaAssetUrl(localPath) {
   const url = new URL(`../site_export/content/${localPath}`, import.meta.url);
-  url.searchParams.set("v", MEDIA_ASSET_VERSION);
+  url.searchParams.set("v", /\/harold-pinter\/1976-04-07-p01\.jpg$/.test(localPath) ? "telegram-upright-20260927" : MEDIA_ASSET_VERSION);
   return url.toString();
 }
 

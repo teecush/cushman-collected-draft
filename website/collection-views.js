@@ -1,12 +1,12 @@
 import {INDEX_LETTERS,indexSections} from './index-engine.js?v=173';
 import {theatreIllustration, renderFestivalMap, festivalLocation} from './festival-map.js?v=173';
 import {serialize, publicationYear, normalize} from './catalog-engine.js?v=173';
-import {COLLECTIONS,workKey} from './collections-engine.js?v=234';
-import {setCollectionTitle} from './collection-title.js?v=1';
+import {COLLECTIONS,workKey} from './collections-engine.js?v=237';
+import {setCollectionTitle} from './collection-title.js?v=2';
 
 export function createCollectionViews({state,els,h,node,link,button,openIndex,getCollections}) {
   let activeMap=null, generation=0, artObserver=null, alphabetObserver=null, alphabetScrollCleanup=null;
-  const dispose=()=>{alphabetScrollCleanup?.();alphabetScrollCleanup=null;alphabetObserver?.disconnect();alphabetObserver=null;artObserver?.disconnect();artObserver=null;els.indexView.classList.remove('collection-page','festival-page','sticky-collection','festival-context-stuck');generation++;activeMap?.remove();activeMap=null;document.querySelector('.collection-result-art')?.remove();};
+  const dispose=()=>{alphabetScrollCleanup?.();alphabetScrollCleanup=null;alphabetObserver?.disconnect();alphabetObserver=null;artObserver?.disconnect();artObserver=null;els.indexView.classList.remove('collection-page','festival-page','sticky-collection');generation++;activeMap?.remove();activeMap=null;document.querySelector('.collection-result-art')?.remove();};
   function frame() {
     els.indexView.classList.add('collection-page','sticky-catalog','sticky-collection');
     const back=els.indexView.querySelector(':scope > .back-link');
@@ -195,7 +195,9 @@ export function createCollectionViews({state,els,h,node,link,button,openIndex,ge
     els.indexView.classList.add('festival-page');
     const heading=els.indexContent.querySelector('h1');
     const logo=state.collectionCuration?.homeArtwork?.[collection.id];
-    if(logo?.src){const img=node('img');img.src=logo.src;img.alt='';img.setAttribute('aria-hidden','true');img.className='festival-heading-logo';heading.append(img);heading.classList.add('festival-heading');}
+    const titleGroup=node('div',undefined,'festival-title-group');
+    titleGroup.append(heading);
+    if(logo?.src){const img=node('img');img.src=logo.src;img.alt='';img.setAttribute('aria-hidden','true');img.className='festival-heading-logo';titleGroup.append(img);}
     const years=[...new Set(collection.records.map(publicationYear).filter(Boolean))].sort().reverse();
     let year=years.includes(params.get('year'))?params.get('year'):'';
     const selectedTheatre=params.get('theatre')||'';
@@ -204,10 +206,8 @@ export function createCollectionViews({state,els,h,node,link,button,openIndex,ge
     const select=node('select');select.setAttribute('aria-label','Season');select.append(new Option('All years',''));years.forEach(y=>select.append(new Option(y,y)));select.value=year;field.append(select);
     const map=node('div',undefined,'places-map festival-map');map.setAttribute('aria-label',collection.title+' festival venues');
     const list=node('div',undefined,'festival-venues'),all=link('',resultsHref(collection),'primary-action');
-    const header=node('div',undefined,'festival-header');heading.before(header);header.append(heading,field);
+    const header=node('div',undefined,'festival-header');els.indexContent.querySelector('.catalog-tabs').before(header);header.append(titleGroup,field);
     els.indexContent.append(map,node('p','Select a theatre to browse its articles. ≈ marks an approximate location.','festival-map-note'),all,list);
-    const syncStickyContext=()=>{const top=parseFloat(getComputedStyle(field).top)||0;els.indexView.classList.toggle('festival-context-stuck',scrollY>0&&field.getBoundingClientRect().top<=top+1);};
-    alphabetScrollCleanup?.();window.addEventListener('scroll',syncStickyContext,{passive:true});alphabetScrollCleanup=()=>window.removeEventListener('scroll',syncStickyContext);requestAnimationFrame(syncStickyContext);
     const draw=async({scrollToReviews=true}={})=>{
       const token=++generation;activeMap?.remove();activeMap=null;
       const extra=year?{from:year,to:year}:{};
