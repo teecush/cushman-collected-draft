@@ -1,5 +1,10 @@
 {
   "records": {
+    "1975-09-20-mr-welland-and-the-masculine-mystique": {
+      "tvTitles": [
+        "The Wild West Show"
+      ]
+    },
     "2008-02-25-jon-stewart-s-amiable-double-bind-host-performed-well-in-spite-of-nicholson-s": {
       "tvTitles": [
         "Academy Awards"
@@ -204,7 +209,8 @@
       ]
     },
     "1990-10-05-cross-current-an-exhilarating-ride-on-the-shifting-tides-of-the-music-business": {
-      "albumTitles": []
+      "albumTitles": [],
+      "excludeTelevision": true
     },
     "1995-12-01-it-was-a-very-good-career": {
       "albumTitles": []
@@ -3272,6 +3278,72 @@
       "src": "assets/collections/cast-pass5-will-rogers-follies.jpg",
       "alt": "The Will Rogers Follies cast-recording cover",
       "fit": "contain"
+    },
+    "television:academy-awards": {
+      "src": "assets/collections/tv-academy-awards-81st-red-carpet.jpg",
+      "alt": "Red carpet at the 81st Academy Awards in 2009; event photograph, not a broadcast still",
+      "fit": "cover",
+      "position": "50% 50%"
+    },
+    "television:beijing-olympic-games-coverage": {
+      "src": "assets/collections/tv-beijing-2008-opening-ceremony.jpg",
+      "alt": "Opening ceremony of the 2008 Beijing Olympics; event photograph, not a broadcast still",
+      "fit": "cover",
+      "position": "50% 50%"
+    },
+    "musicals:monty-pythons-spamalot": {
+      "src": "assets/collections/commons-spamalot-broadway-2006.jpg",
+      "alt": "Spamalot cast at Broadway on Broadway in 2006; illustrates the musical, not the reviewed Toronto production",
+      "fit": "cover",
+      "position": "50% 50%"
+    },
+    "musicals:kiss-me-kate": {
+      "src": "assets/collections/commons-kiss-me-kate-muny-2011.jpg",
+      "alt": "Kiss Me, Kate at The Muny in 2011; illustrates the musical, not the reviewed Stratford production",
+      "fit": "contain",
+      "position": "50% 50%"
+    },
+    "musicals:man-of-la-mancha": {
+      "src": "assets/collections/commons-man-of-la-mancha-uark-2018.jpg",
+      "alt": "Man of La Mancha at the University of Arkansas in 2018; illustrates the musical, not the reviewed Stratford production",
+      "fit": "cover",
+      "position": "50% 50%"
+    },
+    "musicals:pippin": {
+      "src": "assets/collections/commons-pippin-mmt-2017.jpg",
+      "alt": "Pippin in MMT ensemble opening number, February 2017; illustration of the musical, not the production reviewed by Robert Cushman",
+      "fit": "cover",
+      "position": "50% 50%"
+    },
+    "musicals:rent": {
+      "src": "assets/collections/commons-rent-otterbein-2015.jpg",
+      "alt": "Rent in Otterbein University Theatre & Dance 2015 staging, Roger and Mimi; illustration of the musical, not the production reviewed by Robert Cushman",
+      "fit": "cover",
+      "position": "50% 50%"
+    },
+    "musicals:rocky-horror-show": {
+      "src": "assets/collections/commons-rocky-horror-show-2005.jpg",
+      "alt": "The Rocky Horror Show in 2005 stage production of The Rocky Horror Show showing Frank-N-Furter; illustration of the musical, not the production reviewed by Robert Cushman",
+      "fit": "contain",
+      "position": "50% 50%"
+    },
+    "musicals:radio-city-christmas-spectacular": {
+      "src": "assets/collections/commons-radio-city-rockettes-2009.jpg",
+      "alt": "Radio City Christmas Spectacular in Radio City Rockettes performing March of the Wooden Soldier in the 2009 New York Christmas Spectacular; illustration of the musical, not the production reviewed by Robert Cushman",
+      "fit": "contain",
+      "position": "50% 50%"
+    },
+    "musicals:ragtime": {
+      "src": "assets/collections/commons-ragtime-2019.jpg",
+      "alt": "Ragtime in 2019 stage production of Ragtime; illustration of the musical, not the production reviewed by Robert Cushman",
+      "fit": "cover",
+      "position": "50% 50%"
+    },
+    "musicals:starlight-express": {
+      "src": "assets/collections/commons-starlight-express-bochum-2018.jpg",
+      "alt": "Starlight Express in 2018 Bochum encore of Starlight Express; illustration of the musical, not the production reviewed by Robert Cushman",
+      "fit": "cover",
+      "position": "50% 50%"
     }
   },
   "excludedMusicalTitles": [

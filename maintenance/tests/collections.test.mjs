@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
 import {spotlightRecord,makeCollections,workKey} from '../../website/collections-engine.js';
 import {parse,serialize} from '../../website/catalog-engine.js';
 const records=[
@@ -52,6 +53,13 @@ const revised=makeCollections([
 assert.deepEqual(revised.get('television').items.map(x=>x.title),['Zebra','The Apple','Banana'],'TV coverage precedes alphabetic ordering for ties');
 assert.deepEqual(revised.get('albums').records.map(x=>x.slug),['song'],'Verified song writing joins Music Reviews without including concerts');
 assert(revised.get('albums').itemMap.get('you-re-the-top').recordIds.has('song'));
+
+const publishedCuration=JSON.parse(readFileSync(new URL('../../website/collection-curation.json',import.meta.url)));
+const correctedTelevision=makeCollections([
+ {slug:'1975-09-20-mr-welland-and-the-masculine-mystique',article_category:'Television Feature',production_title:'The Wild West Show; Good Lad Terry; Bangelstein\'s Boys; Say Goodnight to Grandma'},
+ {slug:'1990-10-05-cross-current-an-exhilarating-ride-on-the-shifting-tides-of-the-music-business',article_category:'Music Review',collections:['The Television Collection'],production_title:'Songbook'},
+],h,publishedCuration).get('television');
+assert.deepEqual(correctedTelevision.items.map(item=>item.title),['The Wild West Show'],'TV index excludes an incidental episode, stage play and radio series');
 
 const editorial=makeCollections([
  {slug:'cats',article_category:'Theatre Review',production_title:'Cats',people:[],collections:['The Musical Collection']},

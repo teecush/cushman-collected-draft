@@ -1,7 +1,8 @@
 import {INDEX_LETTERS,indexSections} from './index-engine.js?v=173';
 import {theatreIllustration, renderFestivalMap, festivalLocation} from './festival-map.js?v=173';
 import {serialize, publicationYear, normalize} from './catalog-engine.js?v=173';
-import {COLLECTIONS,workKey} from './collections-engine.js?v=233';
+import {COLLECTIONS,workKey} from './collections-engine.js?v=234';
+import {setCollectionTitle} from './collection-title.js?v=1';
 
 export function createCollectionViews({state,els,h,node,link,button,openIndex,getCollections}) {
   let activeMap=null, generation=0, artObserver=null, alphabetObserver=null, alphabetScrollCleanup=null;
@@ -25,6 +26,12 @@ export function createCollectionViews({state,els,h,node,link,button,openIndex,ge
   function artwork(collection,item,cls='') {
     const wrapper=node('div',undefined,'collection-art '+collection.kind+' '+cls);
     const asset=state.collectionCuration?.artwork?.[collection.id+':'+item.id];
+    const profileFallback=()=>{
+      wrapper.classList.add('profile-fallback');
+      const image=node('img');image.src=new URL('./assets/collections/profile-silhouette.svg',import.meta.url).href;image.alt='';image.loading='lazy';
+      image.addEventListener('error',()=>{image.remove();wrapper.classList.remove('profile-fallback');wrapper.append(node('span',item.title,'art-title'));},{once:true});
+      wrapper.append(image);
+    };
     if(!asset?.src && ['musicals','television'].includes(collection.id)){
       const palettes=['#19384b','#543940','#37504b','#4d4560','#624630','#344858'];
       const index=[...item.id].reduce((sum,char)=>sum+char.charCodeAt(0),0)%palettes.length;
@@ -35,8 +42,9 @@ export function createCollectionViews({state,els,h,node,link,button,openIndex,ge
     if(screen!==wrapper){wrapper.append(screen);screen.style.backgroundColor=asset?.screenColor||'#e1e9df';}
     if(asset?.src){
       const img=node('img');img.src=asset.src;img.alt='';if(asset.fit)img.style.objectFit=asset.fit;if(collection.kind==='television'&&asset.fit==='contain')img.classList.add('television-logo');if(asset.position)img.style.objectPosition=asset.position;img.loading='lazy';wrapper.classList.add('has-artwork');
-      img.addEventListener('error',()=>{img.remove();wrapper.classList.remove('has-artwork');screen.append(node('span',item.title,'art-title'));},{once:true});screen.append(img);
-    } else screen.append(node('span',item.title,'art-title'));
+      img.addEventListener('error',()=>{img.remove();wrapper.classList.remove('has-artwork');if(collection.id==='profiles')profileFallback();else screen.append(node('span',item.title,'art-title'));},{once:true});screen.append(img);
+    } else if(collection.id==='profiles')profileFallback();
+    else screen.append(node('span',item.title,'art-title'));
     return wrapper;
   }
   function itemLink(collection,item,label='',cls='') {
@@ -66,7 +74,7 @@ export function createCollectionViews({state,els,h,node,link,button,openIndex,ge
     els.indexContent.append(node('p','Artwork identifies the publications, shows, books, recordings and people discussed in this archive. Copyright remains with the respective rights holders. Source and licence details are listed below.','landing-intro'));
     const content=node('div',undefined,'image-credits');els.indexContent.append(content);
     try {
-      const response=await fetch(new URL('./assets/collections/credits.json?v=235',import.meta.url));
+      const response=await fetch(new URL('./assets/collections/credits.json?v=236',import.meta.url));
       if(!response.ok)throw new Error('Credits unavailable');
       const entries=await response.json();if(token!==generation)return;
       for(const asset of entries){
@@ -112,6 +120,7 @@ export function createCollectionViews({state,els,h,node,link,button,openIndex,ge
     const collection=getCollections().get(id);
     const active=collection.kind==='festival'?'places':id==='profiles'?'people':['early','recent'].includes(id)?'articles':'works';
     openIndex(collection.title,active);frame();
+    setCollectionTitle(els.indexContent.querySelector('h1'),collection.title);
     if(collection.kind==='recent'){recent(collection);return;}
     if(collection.kind==='festival'){festival(collection,params);return;}
     if(collection.kind==='early'){
@@ -186,7 +195,7 @@ export function createCollectionViews({state,els,h,node,link,button,openIndex,ge
     els.indexView.classList.add('festival-page');
     const heading=els.indexContent.querySelector('h1');
     const logo=state.collectionCuration?.homeArtwork?.[collection.id];
-    if(logo?.src){const img=node('img');img.src=logo.src;img.alt=collection.id==='shaw'?'Shaw Festival':'Stratford Festival';const label=node('span','collection','festival-heading-label');heading.replaceChildren(img,label);heading.classList.add('festival-heading');}
+    if(logo?.src){const img=node('img');img.src=logo.src;img.alt='';img.setAttribute('aria-hidden','true');img.className='festival-heading-logo';heading.append(img);heading.classList.add('festival-heading');}
     const years=[...new Set(collection.records.map(publicationYear).filter(Boolean))].sort().reverse();
     let year=years.includes(params.get('year'))?params.get('year'):'';
     const selectedTheatre=params.get('theatre')||'';

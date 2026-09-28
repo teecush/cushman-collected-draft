@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Portrait unavailable">
+  <circle cx="100" cy="100" r="100" fill="#e6e9e7"/>
+  <path d="M24 200c3-35 20-59 49-67a44 44 0 0 0 54 0c29 8 46 32 49 67Z" fill="#93a3a8"/>
+  <ellipse cx="100" cy="77" rx="34" ry="41" fill="#93a3a8"/>
+  <path d="M71 143c9 10 19 15 29 15s20-5 29-15" fill="none" stroke="#d7dfdd" stroke-width="3" stroke-linecap="round"/>
+</svg>
