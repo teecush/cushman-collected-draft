@@ -13,6 +13,8 @@ const siteBase=process.env.SITE_BASE||'http://127.0.0.1:8788/website/';
     await desktop.goto(siteBase,{waitUntil:'domcontentloaded'});
     await desktop.locator('#homePlaywrights .playwright-figure').first().waitFor();
     if(await desktop.locator('#homePlaywrights .playwright-figure').count()!==15)throw Error('Expected fifteen playwright figures');
+    if(await desktop.locator('#homePlaywrights .playwright-contours path').count()!==15)throw Error('Expected fifteen individual outlines');
+    if(await desktop.locator('#homePlaywrights .playwright-stage-hint, #homePlaywrights .playwright-stage-credits').count())throw Error('Instructions or credits still visible below the group');
     await desktop.locator('#homePlaywrights').screenshot({path:path.join(out,'site-stage-desktop.png')});
     const headHits=await desktop.evaluate(()=>{
       const stage=document.querySelector('.playwright-stage-image');
@@ -42,6 +44,14 @@ const siteBase=process.env.SITE_BASE||'http://127.0.0.1:8788/website/';
     mobile.on('pageerror',error=>errors.push(error.message));
     await mobile.goto(siteBase,{waitUntil:'domcontentloaded'});
     await mobile.locator('#homePlaywrights .playwright-figure').first().waitFor();
+    for(const width of [320,375,390]){
+      await mobile.setViewportSize({width,height:844});
+      const mobileWidth=await mobile.evaluate(()=>{
+        const frame=document.querySelector('.playwright-stage-scroll');
+        return {client:frame.clientWidth,content:frame.scrollWidth,viewport:document.documentElement.clientWidth};
+      });
+      if(mobileWidth.content>mobileWidth.client+1 || mobileWidth.client>mobileWidth.viewport)throw Error('Mobile group needs sideways scrolling at '+width+'px: '+JSON.stringify(mobileWidth));
+    }
     await mobile.locator('#homePlaywrights').screenshot({path:path.join(out,'site-stage-mobile.png')});
     await mobile.evaluate(()=>window.scrollTo(0,window.scrollY+document.querySelector('#homePlaywrights').getBoundingClientRect().top-100));
     await mobile.screenshot({path:path.join(out,'site-stage-mobile-viewport.png')});

@@ -780,24 +780,19 @@ body.catalog-page #indexView.directory-page.sticky-directory .index-controls lab
 :is(.article-open,.index-open,.map-open,.search-open) #homePlaywrights{display:none;}
 .playwright-stage-heading{border-top:1px solid var(--rule);padding-top:32px;margin:0 0 22px;}
 .playwright-stage-heading h2{margin:0;}
-.playwright-stage-scroll{overflow-x:auto;background:#f2eee6;border-top:5px solid var(--blue-dark);scrollbar-color:#a7abad #e6e3de;scrollbar-width:thin;}
-.playwright-stage-image{position:relative;isolation:isolate;width:100%;min-width:990px;aspect-ratio:1774 / 887;}
+.playwright-stage-scroll{overflow:hidden;background:#f2eee6;border-top:5px solid var(--blue-dark);}
+.playwright-stage-image{position:relative;isolation:isolate;width:100%;aspect-ratio:1774 / 887;}
 .playwright-stage-image>img{display:block;width:100%;height:100%;object-fit:cover;}
-.playwright-figure{position:absolute;z-index:2;color:var(--ink);text-decoration:none;outline:0;touch-action:pan-x;-webkit-tap-highlight-color:transparent;}
-.playwright-figure svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible;pointer-events:none;opacity:0;transition:opacity .18s ease;}
-.playwright-figure svg path{fill:none;stroke:#1681b5;stroke-width:2;vector-effect:non-scaling-stroke;filter:drop-shadow(0 0 5px #1687bd) drop-shadow(0 0 11px #1687bd);}
+.playwright-contours{position:absolute;inset:0;width:100%;height:100%;overflow:visible;pointer-events:none;}
+.playwright-contours path{fill:none;stroke:#1681b5;stroke-width:6;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke;filter:drop-shadow(0 0 4px #1687bd) drop-shadow(0 0 10px #1687bd);opacity:0;transition:opacity .18s ease;}
+.playwright-figure{position:absolute;z-index:2;color:var(--ink);text-decoration:none;outline:0;touch-action:pan-y;-webkit-tap-highlight-color:transparent;}
 .playwright-figure-name{position:absolute;z-index:3;min-width:max-content;transform:translate(-50%,-50%);font:800 clamp(16px,1.65vw,23px)/1 var(--sans);letter-spacing:.035em;color:#104c70;text-shadow:0 1px #fff,1px 0 #fff,-1px 0 #fff,0 -1px #fff,0 3px 7px #fff;opacity:0;pointer-events:none;transition:opacity .15s ease;}
 .playwright-figure:hover,.playwright-figure:focus-visible,.playwright-figure.is-selected{z-index:20;}
-.playwright-figure:is(:hover,:focus-visible,.is-selected) svg,.playwright-figure:is(:hover,:focus-visible,.is-selected) .playwright-figure-name{opacity:1;}
+.playwright-figure:is(:hover,:focus-visible,.is-selected) .playwright-figure-name{opacity:1;}
+.playwright-contours path.is-active{opacity:1;}
 .playwright-figure:focus-visible{outline:2px solid var(--blue-dark);outline-offset:3px;}
-.playwright-stage-hint{margin:12px 0 8px;color:var(--muted);font:13px/1.5 var(--sans);}
-.playwright-stage-credits{padding:0 0 13px;border-bottom:1px solid var(--rule);font:12px/1.5 var(--sans);color:var(--muted);}
-.playwright-stage-credits summary{cursor:pointer;color:var(--blue-dark);font-weight:700;}
-.playwright-stage-credits ul{columns:3;column-gap:26px;list-style:none;padding:0;margin:10px 0;}
-.playwright-stage-credits li{break-inside:avoid;margin:0 0 7px;}
-.playwright-stage-credits a{color:var(--blue-dark);}
-@media(max-width:700px){.playwright-stage-image{min-width:860px;}.playwright-figure-name{font-size:17px;}.playwright-stage-credits ul{columns:1;}}
-@media(prefers-reduced-motion:reduce){.playwright-figure svg,.playwright-figure-name{transition:none;}}
+@media(max-width:700px){.playwright-figure-name{font-size:14px;padding:2px 4px;background:#fffdd9de;border-radius:2px;text-shadow:none;}.playwright-contours path{stroke-width:4;}}
+@media(prefers-reduced-motion:reduce){.playwright-contours path,.playwright-figure-name{transition:none;}}
 
 /* Portrait-led author pages retain the archive's restrained card vocabulary. */
 .playwright-collection-hero{display:grid;grid-template-columns:minmax(115px,200px) minmax(0,1fr);align-items:center;gap:clamp(18px,3vw,42px);margin:24px 0 10px;padding:22px;background:#ede9e1;border-top:5px solid var(--blue-dark);}

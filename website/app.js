@@ -1,5 +1,5 @@
 import {renderHomeCollections} from './home-collections.js?v=237';
-import {renderPlaywrightStage} from './playwright-stage.js?v=238';
+import {renderPlaywrightStage} from './playwright-stage.js?v=240';
 import {collectionTitleText,setCollectionTitle} from './collection-title.js?v=2';
 import {spotlightRecord} from './collections-engine.js?v=237';
 import { createCatalog } from "./catalog.js?v=239";
