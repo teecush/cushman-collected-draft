@@ -36,6 +36,10 @@ const siteBase=process.env.SITE_BASE||'http://127.0.0.1:8788/website/';
     await shaw.click({position:shawHead});
     await desktop.locator('.playwright-collection-hero').waitFor();
     if(!desktop.url().includes('#collection:playwright-george-bernard-shaw'))throw Error('Shaw route failed');
+    const hero=desktop.locator('.playwright-collection-hero');
+    if(await hero.locator('h2').textContent()!=='George Bernard Shaw')throw Error('Full playwright name missing from the portrait card');
+    if(!/\d+ works · \d+ articles/.test(await hero.locator('.playwright-collection-count').textContent()))throw Error('Work and article counts missing');
+    if(await hero.locator('.playwright-collection-intro,.playwright-collection-credit').count())throw Error('Intro or portrait credits still visible in the portrait card');
     if(await desktop.locator('.collection-gallery.playwright .collection-item').count()<15)throw Error('Shaw gallery incomplete');
     await desktop.locator('#indexView').screenshot({path:path.join(out,'site-shaw-collection-desktop.png')});
     await desktop.locator('.collection-item').filter({hasText:'Pygmalion'}).first().click();
@@ -44,6 +48,13 @@ const siteBase=process.env.SITE_BASE||'http://127.0.0.1:8788/website/';
     mobile.on('pageerror',error=>errors.push(error.message));
     await mobile.goto(siteBase,{waitUntil:'domcontentloaded'});
     await mobile.locator('#homePlaywrights .playwright-figure').first().waitFor();
+    const crop=await mobile.evaluate(()=>{
+      const stage=document.querySelector('.playwright-stage-image');
+      const sourceWidth=1774, sourceLeft=133, sourceRight=1454;
+      const view=stage.querySelector('.playwright-contours').viewBox.baseVal;
+      return {left:(sourceLeft-view.x)/view.width,right:(view.x+view.width-sourceRight)/view.width};
+    });
+    if(Math.abs(crop.left-crop.right)>.01)throw Error('The outer figures are not centred in the crop: '+JSON.stringify(crop));
     for(const width of [320,375,390]){
       await mobile.setViewportSize({width,height:844});
       const mobileWidth=await mobile.evaluate(()=>{
@@ -62,6 +73,11 @@ const siteBase=process.env.SITE_BASE||'http://127.0.0.1:8788/website/';
     await mobile.screenshot({path:path.join(out,'site-stage-mobile-selected.png')});
     await figure.tap();
     if(!mobile.url().includes('#section:shakespeare'))throw Error('Mobile second tap did not navigate');
+    await mobile.setViewportSize({width:320,height:700});
+    await mobile.goto(siteBase+'#collection:playwright-george-bernard-shaw',{waitUntil:'domcontentloaded'});
+    await mobile.locator('.playwright-collection-hero').waitFor();
+    await mobile.locator('.playwright-collection-hero').screenshot({path:path.join(out,'site-shaw-collection-mobile.png')});
+    if(await mobile.locator('.playwright-collection-hero h2').textContent()!=='George Bernard Shaw')throw Error('Mobile portrait card lost the full name');
     if(errors.length)throw Error('Browser errors: '+errors.join(' | '));
     console.log('Browser checks passed: desktop hover, 15 links, Shaw page, mobile two-tap.');
   }finally{await browser.close();}

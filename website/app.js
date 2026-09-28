@@ -1,8 +1,8 @@
 import {renderHomeCollections} from './home-collections.js?v=237';
-import {renderPlaywrightStage} from './playwright-stage.js?v=240';
+import {renderPlaywrightStage} from './playwright-stage.js?v=241';
 import {collectionTitleText,setCollectionTitle} from './collection-title.js?v=2';
 import {spotlightRecord} from './collections-engine.js?v=237';
-import { createCatalog } from "./catalog.js?v=239";
+import { createCatalog } from "./catalog.js?v=241";
 import { FEATURES } from "./features.js?v=173";
 const DATA_URL = new URL("../site_export/data/catalog.json?v=233", import.meta.url);
 const ALIASES_URL = new URL("../site_export/data/route_aliases.json?v=1", import.meta.url);

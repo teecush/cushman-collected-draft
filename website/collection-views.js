@@ -149,13 +149,9 @@ export function createCollectionViews({state,els,h,node,link,button,openIndex,ge
       const hero=node('div',undefined,'playwright-collection-hero');
       const portrait=node('img');portrait.src=new URL(collection.portrait,import.meta.url).href;portrait.alt=`Portrait of ${collection.person}`;portrait.loading='eager';
       const copy=node('div',undefined,'playwright-collection-copy');
-      copy.append(node('p','The plays and productions in Robert Cushman’s reviews.','playwright-collection-intro'));
+      copy.append(node('h2',collection.person,'playwright-collection-name'));
       copy.append(node('p',`${collection.items.length} works · ${collection.records.length} articles`,'playwright-collection-count'));
-      const credit=node('p',undefined,'playwright-collection-credit');
-      const source=link('Portrait source',collection.source);source.target='_blank';source.rel='noopener';
-      credit.append(source,document.createTextNode(` · ${collection.creator||'Creator not stated'} · ${collection.license||'See source for rights'}`));
-      if(collection.licenseUrl){const licence=link('Licence',collection.licenseUrl);licence.target='_blank';licence.rel='noopener';credit.append(document.createTextNode(' · '),licence);}
-      copy.append(credit);hero.append(portrait,copy);els.indexContent.append(hero);
+      hero.append(portrait,copy);els.indexContent.append(hero);
     }
     const field=node('label',undefined,'collection-find collection-find-compact');
     const search=node('input');search.type='search';search.setAttribute('aria-label',id==='profiles'?'Search for a person':'Search this collection');search.placeholder='Search this collection';search.value=params.get('q')||'';field.append(search);els.indexContent.append(field);

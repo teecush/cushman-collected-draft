@@ -19,6 +19,7 @@ const figureContours = [
   'M584 273 Q552 270 543 296 Q536 318 548 336 L551 352 Q524 362 516 398 L519 461 L537 490 L536 601 L543 727 L547 801 Q539 818 555 831 L579 837 Q595 833 590 821 L580 790 L582 634 L598 648 L611 795 Q608 813 624 827 L651 831 Q668 825 657 811 L648 781 L655 657 L676 485 L676 419 Q670 376 639 356 L621 344 L624 325 Q637 310 624 290 Q608 271 584 273 Z',
   'M705 283 Q677 281 667 307 Q660 327 672 346 L669 363 Q647 371 637 406 L643 469 L658 497 L654 613 L666 745 L671 804 Q664 821 683 834 L707 837 Q726 833 717 818 L709 786 L712 646 L731 780 L733 812 Q731 829 748 836 L780 835 Q797 830 785 812 L776 780 L783 635 L799 480 L800 424 Q794 384 762 365 L745 350 L749 328 Q757 310 742 292 Q729 279 705 283 Z'
 ];
+const stageCrop = {left: 20, width: 1550, height: 887};
 
 // The illustration is a visual doorway; the reviewed-work lists live in the collection data.
 export function renderPlaywrightStage(root, data) {
@@ -42,7 +43,7 @@ export function renderPlaywrightStage(root, data) {
   stage.append(image);
   const contours = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
   contours.classList.add('playwright-contours');
-  contours.setAttribute('viewBox', '0 0 1774 887');
+  contours.setAttribute('viewBox', `${stageCrop.left} 0 ${stageCrop.width} ${stageCrop.height}`);
   contours.setAttribute('aria-hidden', 'true');
   figureContours.forEach((path, index) => {
     const shape = document.createElementNS('http://www.w3.org/2000/svg', 'path');
@@ -71,10 +72,10 @@ export function renderPlaywrightStage(root, data) {
     link.dataset.index = String(index);
     link.href = person.href;
     link.setAttribute('aria-label', `Open the ${person.person} collection`);
-    link.style.left = `${x / 1774 * 100}%`;
-    link.style.top = `${y / 887 * 100}%`;
-    link.style.width = `${width / 1774 * 100}%`;
-    link.style.height = `${height / 887 * 100}%`;
+    link.style.left = `${(x - stageCrop.left) / stageCrop.width * 100}%`;
+    link.style.top = `${y / stageCrop.height * 100}%`;
+    link.style.width = `${width / stageCrop.width * 100}%`;
+    link.style.height = `${height / stageCrop.height * 100}%`;
     const label = el('strong', 'playwright-figure-name', person.surname);
     label.style.left = `${(labelX - x) / width * 100}%`;
     label.style.top = `${(labelY - y) / height * 100}%`;
