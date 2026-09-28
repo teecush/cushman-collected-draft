@@ -1,6 +1,7 @@
 const {chromium,devices}=require('playwright');
 const fs=require('fs');
 const path=require('path');
+const siteBase=process.env.SITE_BASE||'http://127.0.0.1:8788/website/';
 
 (async()=>{
   const browser=await chromium.launch({headless:true,executablePath:'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'});
@@ -9,7 +10,7 @@ const path=require('path');
   try{
     const desktop=await browser.newPage({viewport:{width:1440,height:900},deviceScaleFactor:1});
     desktop.on('pageerror',error=>errors.push(error.message));
-    await desktop.goto('http://127.0.0.1:8788/website/',{waitUntil:'domcontentloaded'});
+    await desktop.goto(siteBase,{waitUntil:'domcontentloaded'});
     await desktop.locator('#homePlaywrights .playwright-figure').first().waitFor();
     if(await desktop.locator('#homePlaywrights .playwright-figure').count()!==15)throw Error('Expected fifteen playwright figures');
     await desktop.locator('#homePlaywrights').screenshot({path:path.join(out,'site-stage-desktop.png')});
@@ -39,7 +40,7 @@ const path=require('path');
     if(!desktop.url().includes('shelf=playwright-george-bernard-shaw')||!desktop.url().includes('item=pygmalion'))throw Error('Filtered work link failed');
     const mobile=await browser.newPage({...devices['iPhone 13'],browserName:undefined});
     mobile.on('pageerror',error=>errors.push(error.message));
-    await mobile.goto('http://127.0.0.1:8788/website/',{waitUntil:'domcontentloaded'});
+    await mobile.goto(siteBase,{waitUntil:'domcontentloaded'});
     await mobile.locator('#homePlaywrights .playwright-figure').first().waitFor();
     await mobile.locator('#homePlaywrights').screenshot({path:path.join(out,'site-stage-mobile.png')});
     await mobile.evaluate(()=>window.scrollTo(0,window.scrollY+document.querySelector('#homePlaywrights').getBoundingClientRect().top-100));
