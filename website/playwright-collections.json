@@ -1,6 +1,6 @@
 {
   "stageVersion": 2,
-  "image": "./assets/collections/playwrights/group-ensemble-22-portraits-corrected.png",
+  "image": "./assets/collections/playwrights/group-ensemble-25-parks-highway-lorca.png",
   "imageSize": [
     1774,
     887
@@ -94,7 +94,7 @@
           177
         ]
       },
-      "portrait": "./assets/collections/playwrights/group-ensemble-22.png",
+      "portrait": "./assets/collections/playwrights/group-ensemble-25-parks-highway-lorca.png",
       "portraitCrop": [
         102,
         104,
@@ -701,7 +701,7 @@
           171
         ]
       },
-      "portrait": "./assets/collections/playwrights/group-ensemble-22.png",
+      "portrait": "./assets/collections/playwrights/group-ensemble-25-parks-highway-lorca.png",
       "portraitCrop": [
         656,
         98,
@@ -1257,7 +1257,7 @@
           188
         ]
       },
-      "portrait": "./assets/collections/playwrights/group-ensemble-22.png",
+      "portrait": "./assets/collections/playwrights/group-ensemble-25-parks-highway-lorca.png",
       "portraitCrop": [
         1296,
         115,
@@ -1349,7 +1349,7 @@
           178
         ]
       },
-      "portrait": "./assets/collections/playwrights/group-ensemble-22.png",
+      "portrait": "./assets/collections/playwrights/group-ensemble-25-parks-highway-lorca.png",
       "portraitCrop": [
         1416,
         105,
@@ -2911,7 +2911,7 @@
           329
         ]
       },
-      "portrait": "./assets/collections/playwrights/group-ensemble-22.png",
+      "portrait": "./assets/collections/playwrights/group-ensemble-25-parks-highway-lorca.png",
       "portraitCrop": [
         1095,
         256,
@@ -2976,7 +2976,7 @@
           333
         ]
       },
-      "portrait": "./assets/collections/playwrights/group-ensemble-22.png",
+      "portrait": "./assets/collections/playwrights/group-ensemble-25-parks-highway-lorca.png",
       "portraitCrop": [
         1245,
         260,
@@ -3156,7 +3156,7 @@
           320
         ]
       },
-      "portrait": "./assets/collections/playwrights/group-ensemble-22-portraits-corrected.png",
+      "portrait": "./assets/collections/playwrights/group-ensemble-25-parks-highway-lorca.png",
       "portraitCrop": [
         1385,
         247,
@@ -3290,7 +3290,7 @@
           327
         ]
       },
-      "portrait": "./assets/collections/playwrights/group-ensemble-22-portraits-corrected.png",
+      "portrait": "./assets/collections/playwrights/group-ensemble-25-parks-highway-lorca.png",
       "portraitCrop": [
         1528,
         254,
@@ -3301,6 +3301,169 @@
       "creator": "Digitally generated illustration",
       "license": "Owner-approved illustration; not a historical group photograph",
       "licenseUrl": ""
+    },
+    {
+      "person": "Suzan-Lori Parks",
+      "surname": "Parks",
+      "id": "playwright-suzan-lori-parks",
+      "href": "#collection:playwright-suzan-lori-parks",
+      "portrait": "./assets/collections/playwrights/group-ensemble-25-parks-highway-lorca.png",
+      "portraitCrop": [
+        253,
+        294,
+        80,
+        105
+      ],
+      "source": "Original illustration commissioned for Cushman Collected",
+      "creator": "Digitally generated illustration using identified portrait references",
+      "license": "Owner-approved original digital illustration",
+      "licenseUrl": "",
+      "foreground": true,
+      "works": [
+        {
+          "title": "Topdog/Underdog",
+          "slugs": [
+            "2011-08-12-the-game-of-the-name-life-is-tough-when-you-are-siblings-called-lincoln-and-booth"
+          ]
+        },
+        {
+          "title": "Father Comes Home from the Wars (Parts I, II, III)",
+          "slugs": [
+            "2016-08-13-it-has-the-feel-of-greatness-the-most-exhilaratingly-ambitious-american"
+          ]
+        }
+      ],
+      "reviewCount": 2,
+      "geometry": {
+        "contour": "M276 298 Q286 291 301 297 Q314 298 320 310 L326 332 L329 357 L345 392 L359 412 Q374 439 377 470 L373 504 L369 536 L357 568 L353 595 L356 622 L365 671 L376 719 L387 773 L396 814 Q407 823 425 830 L432 840 Q435 849 424 852 L384 849 L365 846 L352 837 L345 821 L331 779 L319 733 L306 689 L301 642 L285 702 L279 751 L277 795 L277 814 L298 827 Q308 836 306 846 L284 851 L251 854 L234 849 L232 838 L233 820 L222 775 L216 720 L216 663 L211 623 L209 580 L203 553 L202 525 L205 503 L213 471 L219 432 L232 406 L247 390 L256 372 L259 350 L258 329 Q260 308 276 298 Z",
+        "hitPath": "M276 298 Q286 291 301 297 Q314 298 320 310 L326 332 L329 357 L345 392 L359 412 Q374 439 377 470 L373 504 L369 536 L357 568 L353 595 L356 622 L365 671 L376 719 L387 773 L396 814 Q407 823 425 830 L432 840 Q435 849 424 852 L384 849 L365 846 L352 837 L345 821 L331 779 L319 733 L306 689 L301 642 L285 702 L279 751 L277 795 L277 814 L298 827 Q308 836 306 846 L284 851 L251 854 L234 849 L232 838 L233 820 L222 775 L216 720 L216 663 L211 623 L209 580 L203 553 L202 525 L205 503 L213 471 L219 432 L232 406 L247 390 L256 372 L259 350 L258 329 Q260 308 276 298 Z",
+        "label": [
+          290,
+          510
+        ],
+        "headCenter": [
+          291,
+          341
+        ]
+      },
+      "workOrder": "curated"
+    },
+    {
+      "person": "Tomson Highway",
+      "surname": "Highway",
+      "id": "playwright-tomson-highway",
+      "href": "#collection:playwright-tomson-highway",
+      "portrait": "./assets/collections/playwrights/group-ensemble-25-parks-highway-lorca.png",
+      "portraitCrop": [
+        703,
+        291,
+        94,
+        105
+      ],
+      "source": "Original illustration commissioned for Cushman Collected",
+      "creator": "Digitally generated illustration using identified portrait references",
+      "license": "Owner-approved original digital illustration",
+      "licenseUrl": "",
+      "foreground": true,
+      "works": [
+        {
+          "title": "The Rez Sisters",
+          "slugs": [
+            "2011-11-17-rivalry-both-sibling-political"
+          ]
+        },
+        {
+          "title": "Dry Lips Oughta Move to Kapuskasing",
+          "slugs": [
+            "1991-04-15-theatre-review-dry-lips-oughta-move-to-kapuskasing"
+          ]
+        },
+        {
+          "title": "The (Post) Mistress",
+          "slugs": [
+            "2016-11-02-postage-paid"
+          ]
+        }
+      ],
+      "reviewCount": 3,
+      "geometry": {
+        "contour": "M744 296 Q765 292 779 307 Q787 318 785 340 L783 351 L789 352 L794 370 L800 385 L810 403 L817 433 L818 469 L813 500 L818 541 L815 578 L806 608 L786 611 L783 660 L779 707 L779 761 L782 811 L781 822 L788 830 L797 835 Q803 838 801 842 L791 845 L775 841 L755 836 L740 824 L737 805 L725 764 L713 714 L706 663 L701 708 L697 751 L695 804 L694 825 Q681 838 663 847 Q643 854 635 847 L637 835 L648 823 L659 807 L657 765 L649 718 L648 662 L662 625 L648 615 L648 599 L653 579 L660 561 L667 548 L656 533 L651 515 L651 494 L655 465 L661 428 Q667 401 686 384 L713 373 L719 365 L716 356 L710 347 L710 331 Q712 307 727 301 L744 296 Z",
+        "hitPath": "M744 296 Q765 292 779 307 Q787 318 785 340 L783 351 L789 352 L794 370 L800 385 L810 403 L817 433 L818 469 L813 500 L818 541 L815 578 L806 608 L786 611 L783 660 L779 707 L779 761 L782 811 L781 822 L788 830 L797 835 Q803 838 801 842 L791 845 L775 841 L755 836 L740 824 L737 805 L725 764 L713 714 L706 663 L701 708 L697 751 L695 804 L694 825 Q681 838 663 847 Q643 854 635 847 L637 835 L648 823 L659 807 L657 765 L649 718 L648 662 L662 625 L648 615 L648 599 L653 579 L660 561 L667 548 L656 533 L651 515 L651 494 L655 465 L661 428 Q667 401 686 384 L713 373 L719 365 L716 356 L710 347 L710 331 Q712 307 727 301 L744 296 Z",
+        "label": [
+          750,
+          500
+        ],
+        "headCenter": [
+          757,
+          338
+        ]
+      },
+      "workOrder": "curated"
+    },
+    {
+      "person": "Federico García Lorca",
+      "surname": "Lorca",
+      "id": "playwright-federico-garcia-lorca",
+      "href": "#collection:playwright-federico-garcia-lorca",
+      "portrait": "./assets/collections/playwrights/group-ensemble-25-parks-highway-lorca.png",
+      "portraitCrop": [
+        1457,
+        306,
+        100,
+        103
+      ],
+      "source": "Original illustration commissioned for Cushman Collected",
+      "creator": "Digitally generated illustration using identified portrait references",
+      "license": "Owner-approved original digital illustration",
+      "licenseUrl": "",
+      "foreground": true,
+      "works": [
+        {
+          "title": "Blood Wedding",
+          "slugs": [
+            "2015-03-21-crying-uncle",
+            "2016-03-31-brave-but-foolhardy-spanish-play-customized-for-canada"
+          ]
+        },
+        {
+          "title": "The Love of Don Perlimplín and Belisa in the Garden",
+          "slugs": [
+            "1983-07-03-singin-on-the-stage"
+          ]
+        },
+        {
+          "title": "Doña Rosita, the Spinster",
+          "slugs": [
+            "1983-09-04-exiled-in-hollywood"
+          ]
+        },
+        {
+          "title": "The House of Bernarda Alba",
+          "slugs": [
+            "2002-07-08-greatness-bottled-up-and-ready-to-explode"
+          ]
+        },
+        {
+          "title": "Rocking the Cradle (after Yerma)",
+          "slugs": [
+            "2009-11-14-spain-gets-lost-on-the-way-to-newfoundland-rocking-the-cradle-could-use-a"
+          ]
+        }
+      ],
+      "reviewCount": 6,
+      "geometry": {
+        "contour": "M1496 312 Q1503 307 1511 312 Q1521 308 1526 316 Q1535 312 1540 322 Q1549 325 1546 339 L1547 351 L1544 367 L1540 379 L1548 381 L1550 393 L1567 406 Q1580 417 1585 441 L1589 474 L1584 513 L1580 548 L1579 577 L1571 607 L1543 617 L1536 667 L1528 717 L1524 761 L1523 810 L1523 824 L1530 836 Q1536 845 1526 850 L1505 850 L1494 843 L1491 832 L1496 818 L1490 781 L1485 748 L1476 716 L1467 672 L1460 709 L1458 749 L1452 791 L1450 814 L1455 831 Q1447 844 1426 849 L1404 854 Q1381 855 1379 845 L1387 833 L1409 825 L1415 805 L1412 761 L1407 718 L1405 678 L1408 634 L1407 609 L1416 578 L1421 555 L1412 537 L1409 520 L1413 487 L1421 456 L1430 433 L1447 411 L1466 398 L1476 389 L1479 377 L1474 367 L1474 349 L1477 331 Q1482 315 1496 312 Z",
+        "hitPath": "M1496 312 Q1503 307 1511 312 Q1521 308 1526 316 Q1535 312 1540 322 Q1549 325 1546 339 L1547 351 L1544 367 L1540 379 L1548 381 L1550 393 L1567 406 Q1580 417 1585 441 L1589 474 L1584 513 L1580 548 L1579 577 L1571 607 L1543 617 L1536 667 L1528 717 L1524 761 L1523 810 L1523 824 L1530 836 Q1536 845 1526 850 L1505 850 L1494 843 L1491 832 L1496 818 L1490 781 L1485 748 L1476 716 L1467 672 L1460 709 L1458 749 L1452 791 L1450 814 L1455 831 Q1447 844 1426 849 L1404 854 Q1381 855 1379 845 L1387 833 L1409 825 L1415 805 L1412 761 L1407 718 L1405 678 L1408 634 L1407 609 L1416 578 L1421 555 L1412 537 L1409 520 L1413 487 L1421 456 L1430 433 L1447 411 L1466 398 L1476 389 L1479 377 L1474 367 L1474 349 L1477 331 Q1482 315 1496 312 Z",
+        "label": [
+          1506,
+          508
+        ],
+        "headCenter": [
+          1507,
+          360
+        ]
+      },
+      "workOrder": "curated"
     }
   ],
   "legacyPeople": [

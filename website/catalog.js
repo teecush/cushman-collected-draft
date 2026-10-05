@@ -1,7 +1,7 @@
-import {FIELDS, normalize, nameMatches, publicationYear, timelineYear, serialize, parse, articleForm, articleSubject} from './catalog-engine.js?v=251';
-import {makeCollections, COLLECTIONS} from './collections-engine.js?v=251';
-import {createCollectionViews} from './collection-views.js?v=251';
-import {INDEX_LETTERS, indexOrder, indexEntries, indexSections, indexCategoryParams} from './index-engine.js?v=251';
+import {FIELDS, normalize, nameMatches, publicationYear, timelineYear, serialize, parse, articleForm, articleSubject} from './catalog-engine.js?v=252';
+import {makeCollections, COLLECTIONS} from './collections-engine.js?v=252';
+import {createCollectionViews} from './collection-views.js?v=252';
+import {INDEX_LETTERS, indexOrder, indexEntries, indexSections, indexCategoryParams} from './index-engine.js?v=252';
 export function createCatalog({state, els, h}) {
   let extra = {}, indexCache = new Map(), textIndex = null, textPromise = null, indexResizeObserver = null, indexScrollCleanup = null, archiveNavObserver = null, placesMap = null, collectionData = null;
   const getCollections = () => collectionData ||= makeCollections(state.records, h, state.collectionCuration);

@@ -12,12 +12,33 @@ export function renderPlaywrightStage(root, data, {heading: showHeading = true} 
   const contours=svgEl('svg',{viewBox:`0 0 ${width} ${height}`,'aria-hidden':'true'});contours.classList.add('playwright-contours');
   const hits=svgEl('svg',{viewBox:`0 0 ${width} ${height}`});hits.classList.add('playwright-hit-areas');hits.setAttribute('aria-label','Choose a playwright');
   const shapes=[],labels=[],links=[];let selected=null;
+  // New foreground figures cover parts of the older ensemble. Trim those
+  // outlines at the same visible edges, including the boundary of the overlap.
+  const foreground=data.people.filter(person=>person.foreground);
+  const defs=svgEl('defs');contours.append(defs);
+  const maskId=`foreground-${root.id||'directory'}`;
+  if(foreground.length){
+    const mask=svgEl('mask',{id:maskId,maskUnits:'userSpaceOnUse',x:0,y:0,width,height});
+    mask.append(svgEl('rect',{x:0,y:0,width,height,fill:'white'}));
+    foreground.forEach(person=>mask.append(svgEl('path',{d:person.geometry.contour,style:'fill:black;stroke:none;filter:none;opacity:1'})));
+    defs.append(mask);
+  }
   const highlight=index=>{shapes.forEach((shape,i)=>shape.classList.toggle('is-active',index===i));labels.forEach((label,i)=>label.classList.toggle('is-active',index===i));};
   const pick=index=>{selected=index;links.forEach((link,i)=>{link.classList.toggle('is-selected',index===i);if(index===i)link.setAttribute('aria-current','true');else link.removeAttribute('aria-current');});highlight(index);};
   for(const [index,person] of data.people.entries()){
     const geometry=person.geometry;
     if(!geometry?.contour||!geometry?.hitPath)throw new Error('Missing figure geometry for '+person.person);
-    const outline=svgEl('path',{d:geometry.contour});outline.dataset.index=String(index);shapes.push(outline);contours.append(outline);
+    const shape=svgEl('g');shape.classList.add('playwright-outline');shape.dataset.index=String(index);
+    const visible=svgEl('g');shape.append(visible);
+    visible.append(svgEl('path',{d:geometry.contour}));
+    if(foreground.length&&!person.foreground){
+      visible.setAttribute('mask',`url(#${maskId})`);
+      const clipId=`figure-${root.id||'directory'}-${index}`;
+      const clip=svgEl('clipPath',{id:clipId,clipPathUnits:'userSpaceOnUse'});
+      clip.append(svgEl('path',{d:geometry.contour,style:'fill:black;stroke:none;filter:none;opacity:1'}));defs.append(clip);
+      foreground.forEach(front=>visible.append(svgEl('path',{d:front.geometry.contour,'clip-path':`url(#${clipId})`})));
+    }
+    shapes.push(shape);contours.append(shape);
     const link=svgEl('a',{href:person.href,'aria-label':`Open the ${person.person} collection`,tabindex:'0'});link.classList.add('playwright-hit');link.dataset.index=String(index);
     link.append(svgEl('path',{d:geometry.hitPath}));links.push(link);hits.append(link);
     const label=el('strong','playwright-figure-name',person.surname);const [x,y]=geometry.label;

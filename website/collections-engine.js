@@ -1,5 +1,5 @@
-import {isSondheimFrogs} from './play-authorship.js?v=251';
-import {normalize, publicationYear} from './catalog-engine.js?v=251';
+import {isSondheimFrogs} from './play-authorship.js?v=252';
+import {normalize, publicationYear} from './catalog-engine.js?v=252';
 export const COLLECTIONS = [
   {id:'recent',title:'Recent Collection',kind:'recent',href:'#collection:recent',intro:'Recent writing published for Cushman Collected.'},
   {id:'shakespeare',title:'Shakespeare Collection',kind:'plays',href:'#section:shakespeare',intro:'The plays, the productions, and a lifetime of returning to Shakespeare.'},
@@ -86,13 +86,15 @@ export function makeCollections(records, h, curation = {}) {
       for(const record of linked)if(!item.records.some(existing=>existing.slug===record.slug))item.records.push(record);
       map.set(id,item);
     }
-    collection.items=[...map.values()].sort((a,b)=>workKey(a.title).localeCompare(workKey(b.title)));
+    collection.workOrder=person.workOrder;
+    collection.items=[...map.values()];
     collection.records=[...new Map(collection.items.flatMap(item=>item.records).map(record=>[record.slug,record])).values()];
     definitions.set(person.id,collection);
     itemMaps.set(person.id,map);
   }
   for(const [id,collection] of definitions){
-    collection.items=[...itemMaps.get(id).values()].sort((a,b)=>(id==='television' ? b.records.length-a.records.length : 0)||(id==='sondheim'?SONDHEIM_SHOWS.indexOf(a.title)-SONDHEIM_SHOWS.indexOf(b.title):0)||workKey(a.title).localeCompare(workKey(b.title)));
+    collection.items=[...itemMaps.get(id).values()];
+    if(collection.workOrder!=='curated')collection.items.sort((a,b)=>(id==='television' ? b.records.length-a.records.length : 0)||(id==='sondheim'?SONDHEIM_SHOWS.indexOf(a.title)-SONDHEIM_SHOWS.indexOf(b.title):0)||workKey(a.title).localeCompare(workKey(b.title)));
     collection.recordIds=new Set(collection.records.map(r=>r.slug));
     collection.itemMap=new Map(collection.items.map(item=>[item.id,{...item,recordIds:new Set(item.records.map(r=>r.slug))}]));
   }
