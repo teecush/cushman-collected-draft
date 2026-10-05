@@ -1,12 +1,12 @@
-import {articleDateLabel,timelineYear} from './catalog-engine.js?v=250';
-import {writingNames,henryCycleTitle,shakespeareTitles} from './play-authorship.js?v=250';
-import {renderHomeCollections,HOME_COLLECTION_ORDER} from './home-collections.js?v=250';
-import {renderPlaywrightStage} from './playwright-stage.js?v=250';
+import {articleDateLabel,timelineYear} from './catalog-engine.js?v=251';
+import {writingNames,henryCycleTitle,shakespeareTitles} from './play-authorship.js?v=251';
+import {renderHomeCollections,HOME_COLLECTION_ORDER} from './home-collections.js?v=251';
+import {renderPlaywrightStage} from './playwright-stage.js?v=251';
 import {collectionTitleText,setCollectionTitle} from './collection-title.js?v=2';
-import {spotlightRecord} from './collections-engine.js?v=250';
-import { createCatalog } from "./catalog.js?v=250";
+import {spotlightRecord} from './collections-engine.js?v=251';
+import { createCatalog } from "./catalog.js?v=251";
 import { FEATURES } from "./features.js?v=173";
-const DATA_URL = new URL("../site_export/data/catalog.json?v=250", import.meta.url);
+const DATA_URL = new URL("../site_export/data/catalog.json?v=251", import.meta.url);
 const ALIASES_URL = new URL("../site_export/data/route_aliases.json?v=1", import.meta.url);
 const STANDALONE_CORRESPONDENCE_URL = new URL("../site_export/data/standalone_correspondence.json?v=237", import.meta.url);
 const CONTENT_ROOT = new URL("../site_export/content/reviews/", import.meta.url);
@@ -5887,9 +5887,9 @@ async function init() {
       fetch(DATA_URL),
       fetch(ALIASES_URL),
       fetch(STANDALONE_CORRESPONDENCE_URL).catch(() => null),
-      fetch(new URL('./collection-curation.json?v=250', import.meta.url)),
-      fetch(new URL('./playwright-collections.json?v=250', import.meta.url)),
-      fetch(new URL('../site_export/data/play_introductions.json?v=250', import.meta.url)),
+      fetch(new URL('./collection-curation.json?v=251', import.meta.url)),
+      fetch(new URL('./playwright-collections.json?v=251', import.meta.url)),
+      fetch(new URL('../site_export/data/play_introductions.json?v=251', import.meta.url)),
     ]);
     if (!response.ok) throw new Error(`Could not load records (${response.status})`);
     state.records = await response.json();

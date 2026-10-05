@@ -1,5 +1,5 @@
-import {isSondheimFrogs} from './play-authorship.js?v=250';
-import {normalize, publicationYear} from './catalog-engine.js?v=250';
+import {isSondheimFrogs} from './play-authorship.js?v=251';
+import {normalize, publicationYear} from './catalog-engine.js?v=251';
 export const COLLECTIONS = [
   {id:'recent',title:'Recent Collection',kind:'recent',href:'#collection:recent',intro:'Recent writing published for Cushman Collected.'},
   {id:'shakespeare',title:'Shakespeare Collection',kind:'plays',href:'#section:shakespeare',intro:'The plays, the productions, and a lifetime of returning to Shakespeare.'},
