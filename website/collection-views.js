@@ -1,9 +1,9 @@
 import {INDEX_LETTERS,indexSections} from './index-engine.js?v=173';
 import {theatreIllustration, renderFestivalMap, festivalLocation} from './festival-map.js?v=173';
-import {serialize, publicationYear, normalize} from './catalog-engine.js?v=249';
-import {COLLECTIONS,workKey} from './collections-engine.js?v=249';
+import {serialize, publicationYear, normalize} from './catalog-engine.js?v=250';
+import {COLLECTIONS,workKey} from './collections-engine.js?v=250';
 import {setCollectionTitle} from './collection-title.js?v=2';
-import {renderPlaywrightStage} from './playwright-stage.js?v=249';
+import {renderPlaywrightStage} from './playwright-stage.js?v=250';
 
 export function createCollectionViews({state,els,h,node,link,button,openIndex,getCollections}) {
   let activeMap=null, generation=0, artObserver=null, alphabetObserver=null, alphabetScrollCleanup=null, stickyTitleObserver=null, stickyNavObserver=null;
@@ -93,7 +93,7 @@ export function createCollectionViews({state,els,h,node,link,button,openIndex,ge
     els.indexContent.append(node('p','Artwork identifies the publications, shows, books, recordings and people discussed in this archive. Copyright remains with the respective rights holders. Source and licence details are listed below.','landing-intro'));
     const content=node('div',undefined,'image-credits');els.indexContent.append(content);
     try {
-      const response=await fetch(new URL('./assets/collections/credits.json?v=249',import.meta.url));
+      const response=await fetch(new URL('./assets/collections/credits.json?v=250',import.meta.url));
       if(!response.ok)throw new Error('Credits unavailable');
       const entries=await response.json();if(token!==generation)return;
       for(const asset of entries){
