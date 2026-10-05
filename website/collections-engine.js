@@ -1,3 +1,4 @@
+import {isSondheimFrogs} from './play-authorship.js?v=246';
 import {normalize, publicationYear} from './catalog-engine.js?v=173';
 export const COLLECTIONS = [
   {id:'recent',title:'Recent Collection',kind:'recent',href:'#collection:recent',intro:'Recent writing published for Cushman Collected.'},
@@ -55,14 +56,14 @@ export function makeCollections(records, h, curation = {}) {
     if(names.includes('Recent Collection')||names.includes('Current Collection'))add('recent',record,[]);
     if(year>=1963&&year<=1966)add('early',record,[]);
     if(h.isExplicitShakespeareRecord(record))add('shakespeare',record,[]);
-    const isSondheimFrogs=workValues(record).some(title=>workKey(title)==='frogs') && !((record.people||[]).includes('Aristophanes') && !(record.people||[]).includes('Stephen Sondheim'));
-    const son=sonTitles(record).filter(title=>title!=='The Frogs'||isSondheimFrogs);
+    const sondheimFrogs=isSondheimFrogs(record);
+    const son=sonTitles(record).filter(title=>title!=='The Frogs'||sondheimFrogs);
     if(son.length||(record.people||[]).includes('Stephen Sondheim')||/sondheim/i.test(record.title))add('sondheim',record,son);
     const stop=workValues(record).map(title=>stoppardPlays.get(workKey(title))).filter(Boolean);
     if((record.people||[]).includes('Tom Stoppard')&&stop.length)add('stoppard',record,stop);
     else if(/stoppard/i.test(record.title)&&!stop.length)add('stoppard',record,[]);
-    const musical=workValues(record).filter(title=>!excluded.has(workKey(title))&&(musicalTitles.has(workKey(title))||shows.has(workKey(title))||workKey(title)==='cats')).map(title=>workKey(title)==='frogs'&&!isSondheimFrogs?'The Frogs (Aristophanes adaptation)':title);
-    if(musical.length||names.includes('The Musical Collection')||record.article_category==='Musical Review')add('musicals',record,musical);
+    const musical=workValues(record).filter(title=>!excluded.has(workKey(title))&&(workKey(title)!=='frogs'||sondheimFrogs)&&(musicalTitles.has(workKey(title))||shows.has(workKey(title))||workKey(title)==='cats'));
+    if(musical.length||((names.includes('The Musical Collection')||record.article_category==='Musical Review') && !(!sondheimFrogs && workValues(record).every(title=>workKey(title)==='frogs'))))add('musicals',record,musical);
     if(names.includes('The Stratford Collection')||h.entityValues(record,'companies').some(name=>/^stratford (festival|shakespeare)/i.test(name)))add('stratford',record,[]);
     if(names.includes('The Shaw Collection')||h.entityValues(record,'companies').some(name=>/^shaw festival/i.test(name)))add('shaw',record,[]);
     if(!fix.excludeTelevision&&(fix.tvTitles||/^Television/.test(record.article_category)||names.includes('The Television Collection')))add('television',record,(fix.tvTitles||workValues(record)).map(title=>/^(24(?::|$))/.test(title)?'24':/^The Simpsons(?:\b|:| \/)/.test(title)?'The Simpsons':/^\d+(?:st|nd|rd|th) Academy Awards$/.test(title)?'Academy Awards':title));

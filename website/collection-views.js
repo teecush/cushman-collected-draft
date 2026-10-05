@@ -3,6 +3,7 @@ import {theatreIllustration, renderFestivalMap, festivalLocation} from './festiv
 import {serialize, publicationYear, normalize} from './catalog-engine.js?v=173';
 import {COLLECTIONS,workKey} from './collections-engine.js?v=238';
 import {setCollectionTitle} from './collection-title.js?v=2';
+import {renderPlaywrightStage} from './playwright-stage.js?v=247';
 
 export function createCollectionViews({state,els,h,node,link,button,openIndex,getCollections}) {
   let activeMap=null, generation=0, artObserver=null, alphabetObserver=null, alphabetScrollCleanup=null, stickyTitleObserver=null, stickyNavObserver=null;
@@ -92,7 +93,7 @@ export function createCollectionViews({state,els,h,node,link,button,openIndex,ge
     els.indexContent.append(node('p','Artwork identifies the publications, shows, books, recordings and people discussed in this archive. Copyright remains with the respective rights holders. Source and licence details are listed below.','landing-intro'));
     const content=node('div',undefined,'image-credits');els.indexContent.append(content);
     try {
-      const response=await fetch(new URL('./assets/collections/credits.json?v=245',import.meta.url));
+      const response=await fetch(new URL('./assets/collections/credits.json?v=247',import.meta.url));
       if(!response.ok)throw new Error('Credits unavailable');
       const entries=await response.json();if(token!==generation)return;
       for(const asset of entries){
@@ -111,13 +112,12 @@ export function createCollectionViews({state,els,h,node,link,button,openIndex,ge
     document.querySelector('.collection-result-art')?.remove();
     document.querySelector('.play-introduction-link')?.remove();
     if(v.entityType==='shakespeare-plays' && v.entity){
-      const intro=Object.entries(state.collectionCuration?.shakespeareIntroductions||{}).find(([title])=>h.entitySlug(title)===v.entity);
-      const record=intro && state.records.find(r=>r.slug===intro[1]);
-      if(record){
-        const note=node('aside',undefined,'play-introduction-link');
-        const a=link('Read Robert’s introduction to '+intro[0],'#review:'+record.slug);
-        a.addEventListener('click',event=>h.storeArticleContext(event,record,{records:[record],backHref:window.location.hash,contextLabel:intro[0]}));
-        note.append(a);els.results.before(note);
+      const intro=state.playIntroductions?.find(item=>h.entitySlug(item.play)===v.entity);
+      if(intro){
+        const note=node('section',undefined,'play-introduction-link play-introduction');
+        note.setAttribute('aria-label',`Robert Cushman’s introduction to ${intro.play}`);
+        note.append(...h.paragraphNodes(intro.body, {people:[],roles:{}}));
+        els.results.before(note);
       }
     }
     const collection=getCollections().get(v.shelf), item=collection?.itemMap.get(v.item);
@@ -147,13 +147,10 @@ export function createCollectionViews({state,els,h,node,link,button,openIndex,ge
   }
   function playwrightDirectory() {
     openIndex('Playwright Collections','works');frame();
-    const grid=node('div',undefined,'home-collection-grid');
-    for(const person of state.collectionCuration?.playwrights?.people||[]){
-      const card=link('',person.href,'home-collection-card');
-      const visual=node('span',undefined,'home-collection-visual');const image=node('img');image.src=person.portrait;image.alt=person.person;image.loading='lazy';visual.append(image);
-      const label=node('span',undefined,'home-collection-label');label.append(node('strong',person.person));card.append(visual,label);grid.append(card);
-    }
-    els.indexContent.append(grid);
+    const stage=node('section',undefined,'playwright-directory-stage');
+    stage.setAttribute('aria-label','Choose a playwright');
+    renderPlaywrightStage(stage,state.collectionCuration?.playwrights,{heading:false});
+    els.indexContent.append(stage);
   }
   function show(id,params) {
     const collection=getCollections().get(id);

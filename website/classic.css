@@ -214,6 +214,11 @@ body:not(.feature-redesignedHome):not(.search-open) #archive .advanced-search[op
 .image-credits {max-width:850px;}
 .image-sources-link {font:14px/1.6 var(--sans);margin-top:24px;}
 .play-introduction-link {margin:12px 0 22px;padding:14px 0;border-bottom:1px solid var(--rule);font:16px/1.5 var(--sans);}
+.play-introduction {padding:12px 0 30px;margin:12px 0 30px;font:20px/1.65 var(--serif);}
+.play-introduction p {margin:0 0 1em;}
+.play-introduction p:last-child {margin-bottom:0;}
+.playwright-directory-stage {margin:24px 0 40px;}
+@media(max-width:550px){.play-introduction{font-size:18px;line-height:1.6;}}
 .image-credits section {padding:22px 0;border-bottom:1px solid var(--rule);overflow-wrap:anywhere;}
 .image-credits h2 {font:22px/1.35 var(--serif);}
 .image-credits p,.image-credits a {font:14px/1.6 var(--sans);}

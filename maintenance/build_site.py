@@ -112,6 +112,15 @@ def main():
         page=page.replace('<section class="article-view" id="articleView" hidden>','<section class="article-view" id="articleView">').replace('<article id="article"></article>',article)
         target=SITE/'reviews'/r['slug']/'index.html';target.parent.mkdir(parents=True,exist_ok=True);target.write_text(page)
         urls.append(url)
+    # Introductions belong to play landing pages, not to the article catalog.
+    # Keep old shared article links useful by sending them to the full introduction.
+    for intro in json.loads((DATA/'play_introductions.json').read_text()):
+        entity=re.sub(r'[^a-z0-9]+','-',intro['play'].lower()).strip('-')
+        destination='../../website/#archive?entityType=shakespeare-plays&entity='+entity
+        target=SITE/'reviews'/intro['slug']/'index.html'
+        target.parent.mkdir(parents=True,exist_ok=True)
+        target.write_text('<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="robots" content="noindex,follow"><title>'+html.escape(intro['play'])+' | Cushman Collected</title><meta http-equiv="refresh" content="0;url='+html.escape(destination,quote=True)+'"></head><body><p><a href="'+html.escape(destination,quote=True)+'">Read the introduction to '+html.escape(intro['play'])+'</a></p><script>location.replace('+json.dumps(destination)+')</script></body></html>')
+        (DATA/'articles'/f'{intro["slug"]}.json').unlink(missing_ok=True)
     write_json(DATA/'catalog.json',catalog);write_json(DATA/'search_text.json',texts)
     # Separate map coordinates preserve the curated record-level points without paying for them on every visit.
     write_json(DATA/'map_details.json',{r['slug']:r.get('coordinate_points',[]) for r in records if r.get('coordinate_points')})

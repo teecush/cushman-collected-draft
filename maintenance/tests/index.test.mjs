@@ -45,6 +45,9 @@ assert.equal(recoveredYears.length, 14, 'Fourteen dated articles without a redun
 const undated = records.filter(r => !publicationYear(r));
 const introductions=Object.values(JSON.parse(fs.readFileSync(new URL('../../website/collection-curation.json',import.meta.url))).shakespeareIntroductions);
 assert.equal(introductions.length,5);
-assert(introductions.every(slug=>undated.some(r=>r.slug===slug)), 'Undated introductions must not acquire invented publication years');
+const introContents=JSON.parse(fs.readFileSync(new URL('../../site_export/data/play_introductions.json',import.meta.url)));
+assert.equal(introContents.length,5);
+assert(introductions.every(slug=>!records.some(r=>r.slug===slug)), 'Play introductions are excluded from the article catalog');
+assert(introContents.every(intro=>introductions.includes(intro.slug)&&intro.body.length>1000));
 assert.deepEqual(undated.filter(r=>!introductions.includes(r.slug)).map(r=>r.slug).sort(), ['undated-cocteau-ionesco-becket-new-company-at-a-d-c','undated-a-d-c-theatre-the-two-gentlemen-of-verona'].sort());
 console.log('PASS: timeline/year filters recover 14 dated articles; only genuinely undated writing is separate.');

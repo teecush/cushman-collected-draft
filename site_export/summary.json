@@ -3,16 +3,17 @@
   "source_dir": "/Users/openclaw/Codex Projects/Cushman CODEXted/repaired_structural_v2",
   "counts": {
     "total": 3481,
-    "publish": 3249,
+    "publish": 3244,
     "archive_only": 154,
     "duplicate_variant": 77,
-    "exclude_from_publication": 1
+    "exclude_from_publication": 1,
+    "collection_introduction": 5
   },
-  "public_reviews": 3216,
+  "public_reviews": 3211,
   "archive_records": 264,
   "excluded_records": 1,
   "map_points": 1739,
-  "chat_chunks": 20940,
+  "chat_chunks": 20862,
   "sample_public_record": {
     "slug": "1963-01-11-shades-of-freud",
     "route": "/reviews/1963-01-11-shades-of-freud/",

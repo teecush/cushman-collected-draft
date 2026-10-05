@@ -22,7 +22,7 @@ const figureContours = [
 const stageCrop = {left: 20, width: 1550, height: 887};
 
 // The illustration is a visual doorway; the reviewed-work lists live in the collection data.
-export function renderPlaywrightStage(root, data) {
+export function renderPlaywrightStage(root, data, {heading: showHeading = true} = {}) {
   if (!root || !data?.people?.length) return;
   const el = (tag, cls, label) => {
     const item = document.createElement(tag);
@@ -32,7 +32,6 @@ export function renderPlaywrightStage(root, data) {
   };
   const heading = el('div', 'browse-heading playwright-stage-heading');
   const title = el('h2', '', 'Playwright Collections');
-  title.id = 'playwrightCollectionsTitle';
   heading.append(title);
   const scroll = el('div', 'playwright-stage-scroll');
   const stage = el('div', 'playwright-stage-image');
@@ -98,5 +97,5 @@ export function renderPlaywrightStage(root, data) {
     stage.append(link);
   }
   scroll.append(stage);
-  root.replaceChildren(heading, scroll);
+  root.replaceChildren(...(showHeading ? [heading, scroll] : [scroll]));
 }

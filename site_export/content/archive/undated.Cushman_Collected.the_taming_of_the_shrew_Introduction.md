@@ -11,7 +11,7 @@ collection:
 production_title: The Taming of the Shrew
 playwright:
 - William Shakespeare
-publication_status: publish
+publication_status: collection_introduction
 editorial_status: done
 source_completeness: complete_web_introduction
 editorial_notes: 'Owner-authorized migration from the undated Shakespeare landing-page introduction. Paragraphs and emphasis preserved; decorative dropcap and artificial read-more ellipsis removed. No publication date inferred from the page update date.'

@@ -1,5 +1,5 @@
 // Homepage previews reuse credited archive artwork; every card opens its collection.
-import {COLLECTIONS,SONDHEIM_SHOWS,workKey} from './collections-engine.js?v=237';
+import {COLLECTIONS,SONDHEIM_SHOWS,workKey} from './collections-engine.js?v=246';
 import {setCollectionTitle} from './collection-title.js?v=2';
 const examples = {
   books:['swing-time','all-or-nothing-at-all-a-life-of-frank-sinatra','broadway-anecdotes'],

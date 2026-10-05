@@ -1,10 +1,11 @@
-import {renderHomeCollections,HOME_COLLECTION_ORDER} from './home-collections.js?v=245';
+import {writingNames,henryCycleTitle,shakespeareTitles} from './play-authorship.js?v=247';
+import {renderHomeCollections,HOME_COLLECTION_ORDER} from './home-collections.js?v=247';
 import {renderPlaywrightStage} from './playwright-stage.js?v=243';
 import {collectionTitleText,setCollectionTitle} from './collection-title.js?v=2';
-import {spotlightRecord} from './collections-engine.js?v=237';
-import { createCatalog } from "./catalog.js?v=245";
+import {spotlightRecord} from './collections-engine.js?v=247';
+import { createCatalog } from "./catalog.js?v=247";
 import { FEATURES } from "./features.js?v=173";
-const DATA_URL = new URL("../site_export/data/catalog.json?v=245", import.meta.url);
+const DATA_URL = new URL("../site_export/data/catalog.json?v=247", import.meta.url);
 const ALIASES_URL = new URL("../site_export/data/route_aliases.json?v=1", import.meta.url);
 const STANDALONE_CORRESPONDENCE_URL = new URL("../site_export/data/standalone_correspondence.json?v=237", import.meta.url);
 const CONTENT_ROOT = new URL("../site_export/content/reviews/", import.meta.url);
@@ -69,7 +70,6 @@ const ENTITY_TYPES = [
   { key: "directors", label: "Directors", singular: "Director", role: "director" },
   { key: "actors", label: "Actors", singular: "Actor", role: "actors" },
   { key: "playwrights", label: "Playwrights", singular: "Playwright", role: "playwright" },
-  { key: "composers-lyricists", label: "Composers & Lyricists", singular: "Composer/Lyricist", role: "composer_lyricist" },
   { key: "musical-directors", label: "Musical Directors", singular: "Musical Director", role: "musical_director" },
   { key: "orchestrators", label: "Orchestrators", singular: "Orchestrator", role: "orchestrator" },
   { key: "arrangers", label: "Arrangers", singular: "Arranger", role: "arranger" },
@@ -103,7 +103,6 @@ const MASTER_INDEX_PEOPLE_FILTERS = [
   { key: "actors", label: "Actors", typeKeys: ["actors"] },
   { key: "directors", label: "Directors", typeKeys: ["directors"] },
   { key: "playwrights", label: "Playwrights", typeKeys: ["playwrights"] },
-  { key: "composers-lyricists", label: "Composers & Lyricists", typeKeys: ["composers-lyricists"] },
   { key: "musical-directors", label: "Musical Directors", typeKeys: ["musical-directors"] },
   { key: "orchestrators", label: "Orchestrators", typeKeys: ["orchestrators"] },
   { key: "arrangers", label: "Arrangers", typeKeys: ["arrangers"] },
@@ -838,7 +837,7 @@ const SUBJECT_ROLE_ENTITY = {
   director: { type: "directors", label: "Director" },
   actors: { type: "actors", label: "Actor" },
   playwright: { type: "playwrights", label: "Playwright" },
-  composer_lyricist: { type: "composers-lyricists", label: "Composer/Lyricist" },
+  composer_lyricist: { type: "playwrights", label: "Composer/Lyricist" },
   musical_director: { type: "musical-directors", label: "Musical Director" },
   orchestrator: { type: "orchestrators", label: "Orchestrator" },
   arranger: { type: "arrangers", label: "Arranger" },
@@ -939,17 +938,15 @@ function canonicalPlayKey(value) {
 }
 
 function shakespearePlayTitle(value) {
+  const cycle = henryCycleTitle(value);
+  if (cycle) return cycle;
   const key = canonicalPlayKey(value);
   if (!key) return "";
   return SHAKESPEARE_PLAY_BY_KEY.get(key) || SHAKESPEARE_PLAY_ALIASES.get(key) || "";
 }
 
 function shakespearePlayValues(record) {
-  const values = [
-    ...productionLabelValues(record.production_title),
-    ...groupedProductionLabelValues(record),
-  ];
-  return uniqueEntityValues(values.map(shakespearePlayTitle).filter(Boolean));
+  return shakespeareTitles(record, shakespearePlayTitle, productionLabelValues);
 }
 
 function searchPriorityText(record) {
@@ -1171,12 +1168,13 @@ function optionLabelWithCount(label, count) {
 }
 
 function entityValues(record, type) {
+  if (["playwrights", "composers-lyricists"].includes(type)) return uniqueEntityValues(writingNames(record, splitEntityList));
   const role = entityType(type)?.role;
   if (role) return uniqueEntityValues([...splitEntityList(record.roles?.[role] || []), ...groupedRoleValues(record, role), ...subjectRolesFor(record, role)]);
-  if (type === "people") return uniqueEntityValues([...(record.people || []), ...splitEntityList(record.book_author), ...splitEntityList(record.subject_people), ...productionGroups(record).flatMap((group) => ENTITY_TYPES.filter((item) => item.role).flatMap((item) => splitEntityList(group[item.role] || [])))]);
+  if (type === "people") return uniqueEntityValues([...(record.people || []), ...splitEntityList(record.book_author), ...splitEntityList(record.subject_people), ...productionGroups(record).flatMap((group) => [...ENTITY_TYPES.filter((item) => item.role).map(item => item.role), "composer_lyricist"].flatMap(role => splitEntityList(group[role] || [])))]);
   if (type === "subjects") return uniqueEntityValues(splitEntityList(record.subject_people));
   if (type === "books") return isBookReview(record) ? uniqueEntityValues([...splitEntityList(record.book_title || record.production_title), ...groupedEntityValues(record, "production_title")]) : [];
-  if (type === "shakespeare-plays") return collectionNames(record).includes(SHAKESPEARE_COLLECTION) ? shakespearePlayValues(record) : [];
+  if (type === "shakespeare-plays") return shakespearePlayValues(record);
   if (type === "productions") {
     if (isBookReview(record)) return [];
     return uniqueEntityValues([
@@ -1451,7 +1449,7 @@ function venueMapPoints() {
 }
 
 function entityType(type) {
-  return ENTITY_TYPES.find((item) => item.key === type);
+  return ENTITY_TYPES.find((item) => item.key === (type === "composers-lyricists" ? "playwrights" : type));
 }
 
 function isPersonIndex(typeKey) {
@@ -2539,7 +2537,7 @@ function indexDescription(type) {
     collections: "Editorial collections and special paths.",
     directors: "Directors credited in structured production metadata.",
     actors: "Actors credited in structured production metadata.",
-    playwrights: "Playwrights and dramatic source authors.",
+    playwrights: "Playwrights, composers, lyricists, and dramatic source authors.",
     "composers-lyricists": "Composers, lyricists, and musical writers.",
     "musical-directors": "Musical directors.",
     orchestrators: "Orchestrators credited in structured music metadata.",
@@ -2656,6 +2654,7 @@ function renderEntityIndex(typeKey) {
 }
 
 function masterIndexFilter(filterKey) {
+  if (filterKey === "composers-lyricists") filterKey = "playwrights";
   return MASTER_INDEX_FILTERS.find((filter) => filter.key === filterKey) || MASTER_INDEX_FILTERS.find((filter) => filter.key === DEFAULT_MASTER_INDEX_FILTER);
 }
 
@@ -2718,7 +2717,7 @@ function masterIndexDescription(filterKey) {
     "all-people": "All indexed people across credited and subject roles.",
     actors: "Actors credited in structured production metadata.",
     directors: "Directors credited in structured production metadata.",
-    playwrights: "Playwrights and dramatic source authors.",
+    playwrights: "Playwrights, composers, lyricists, and dramatic source authors.",
     "composers-lyricists": "Composers, lyricists, and musical writers.",
     "musical-directors": "Musical directors.",
     choreographers: "Choreographers.",
@@ -4793,7 +4792,7 @@ const ARTICLE_ROLE_GROUPS = [
   ["playwrights", "Playwright", "playwright", 3],
   ["actors", "Actor", "actors", 8],
   ["producers", "Producer", "producer", 2],
-  ["composers-lyricists", "Music", "composer_lyricist", 4],
+  ["playwrights", "Music", "composer_lyricist", 4],
   ["musical-directors", "Music Director", "musical_director", 2],
   ["orchestrators", "Orchestrator", "orchestrator", 2],
   ["arrangers", "Arranger", "arranger", 2],
@@ -5420,7 +5419,6 @@ function inlineLinkEntities(record) {
     ...entityValues(record, "directors").map((label) => ({ type: "directors", label, priority: 3 })),
     ...entityValues(record, "playwrights").map((label) => ({ type: "playwrights", label, priority: 3 })),
     ...entityValues(record, "actors").map((label) => ({ type: "actors", label, priority: 4 })),
-    ...entityValues(record, "composers-lyricists").map((label) => ({ type: "composers-lyricists", label, priority: 4 })),
     ...entityValues(record, "performers").map((label) => ({ type: "performers", label, priority: 4 })),
     ...entityValues(record, "musicians").map((label) => ({ type: "musicians", label, priority: 4 })),
     ...entityValues(record, "artists").map((label) => ({ type: "artists", label, priority: 4 })),
@@ -5656,6 +5654,8 @@ function route() {
   document.title = "Cushman Collected";
   document.querySelector('meta[name="description"]')?.setAttribute("content", "The collected theatre criticism of Robert Cushman.");
 
+  const introduction = hash.startsWith('#review:') && state.playIntroductions?.find(item=>item.slug===hash.slice(8));
+  if(introduction){window.location.replace('#archive?entityType=shakespeare-plays&entity='+entitySlug(introduction.play));return;}
   if (catalog.route(hash)) return;
 
   if (hash.startsWith("#review:")) {
@@ -5886,12 +5886,13 @@ function scrollToSection(selector) {
 
 async function init() {
   try {
-    const [response, aliasesResponse, standaloneResponse, curationResponse, playwrightResponse] = await Promise.all([
+    const [response, aliasesResponse, standaloneResponse, curationResponse, playwrightResponse, introductionsResponse] = await Promise.all([
       fetch(DATA_URL),
       fetch(ALIASES_URL),
       fetch(STANDALONE_CORRESPONDENCE_URL).catch(() => null),
-      fetch(new URL('./collection-curation.json?v=245', import.meta.url)),
+      fetch(new URL('./collection-curation.json?v=247', import.meta.url)),
       fetch(new URL('./playwright-collections.json?v=238', import.meta.url)),
+      fetch(new URL('../site_export/data/play_introductions.json?v=247', import.meta.url)),
     ]);
     if (!response.ok) throw new Error(`Could not load records (${response.status})`);
     state.records = await response.json();
@@ -5899,6 +5900,8 @@ async function init() {
     state.collectionCuration=await curationResponse.json();
     if(!playwrightResponse.ok)throw new Error('Playwright collections could not load');
     state.collectionCuration.playwrights=await playwrightResponse.json();
+    if(!introductionsResponse.ok)throw new Error('Play introductions could not load');
+    state.playIntroductions=await introductionsResponse.json();
     state.aliases = aliasesResponse.ok ? await aliasesResponse.json() : {};
     state.standaloneCorrespondence = standaloneResponse?.ok
       ? asArray((await standaloneResponse.json()).collections)
@@ -5998,7 +6001,7 @@ window.addEventListener("hashchange", () => {
 });
 document.querySelector(".skip-link").addEventListener("click",event=>{event.preventDefault();const main=document.querySelector("main");main.focus();main.scrollIntoView({block:"start",behavior:"auto"});});
 
-const catalog = createCatalog({state, els, h: { FEATURES, TYPE_GROUPS, PUBLIC_COLLECTION_FILTERS, SHAKESPEARE_COLLECTION, MASTER_INDEX_PEOPLE_FILTERS, MASTER_INDEX_WORK_FILTERS, collectionNames, isExplicitShakespeareRecord, shakespeareGroup, typeGroup, articlePublicationLabel, isIncompleteArticle, entityValues, recordVenueCityPairs, entitySlug, masterIndexFilter, masterIndexEntries, recordMatchesQuery, sortRecords, sortRecordsChronologically, updateSortButtons, renderShakespeareNav, safeResultCard, storeArticleContext, restoreArchivePositionIfNeeded, archiveRestoreForHash, entityMap, entityType, indexSortText, indexDisplayLabel, renderCurrentFeature, renderTiles, renderFrontpageDirectory, renderClassicHome, renderLandingPage, renderNavigationHub, renderHomeCollections, collectionFromSlug, observerFarewellFeature, venueMapPoints, loadMapResources, renderArchiveMap, cityMapPoints, splitEntityList, formatDate, productionParts }});
+const catalog = createCatalog({state, els, h: { FEATURES, TYPE_GROUPS, PUBLIC_COLLECTION_FILTERS, SHAKESPEARE_COLLECTION, MASTER_INDEX_PEOPLE_FILTERS, MASTER_INDEX_WORK_FILTERS, collectionNames, isExplicitShakespeareRecord, shakespeareGroup, typeGroup, articlePublicationLabel, isIncompleteArticle, entityValues, recordVenueCityPairs, entitySlug, masterIndexFilter, masterIndexEntries, recordMatchesQuery, sortRecords, sortRecordsChronologically, updateSortButtons, renderShakespeareNav, safeResultCard, storeArticleContext, restoreArchivePositionIfNeeded, archiveRestoreForHash, entityMap, entityType, indexSortText, indexDisplayLabel, renderCurrentFeature, renderTiles, renderFrontpageDirectory, renderClassicHome, renderLandingPage, renderNavigationHub, renderHomeCollections, collectionFromSlug, observerFarewellFeature, venueMapPoints, loadMapResources, renderArchiveMap, cityMapPoints, splitEntityList, formatDate, productionParts, paragraphNodes }});
 
 init().catch((error) => {
   els.archiveCount.textContent = "Content export unavailable";

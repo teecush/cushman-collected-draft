@@ -1,7 +1,7 @@
 import {FIELDS, normalize, nameMatches, publicationYear, serialize, parse, articleForm, articleSubject} from './catalog-engine.js?v=173';
-import {makeCollections, COLLECTIONS} from './collections-engine.js?v=238';
-import {createCollectionViews} from './collection-views.js?v=245';
-import {INDEX_LETTERS, indexOrder, indexEntries, indexSections, indexCategoryParams} from './index-engine.js?v=245';
+import {makeCollections, COLLECTIONS} from './collections-engine.js?v=247';
+import {createCollectionViews} from './collection-views.js?v=247';
+import {INDEX_LETTERS, indexOrder, indexEntries, indexSections, indexCategoryParams} from './index-engine.js?v=247';
 export function createCatalog({state, els, h}) {
   let extra = {}, indexCache = new Map(), textIndex = null, textPromise = null, indexResizeObserver = null, indexScrollCleanup = null, archiveNavObserver = null, placesMap = null, collectionData = null;
   const getCollections = () => collectionData ||= makeCollections(state.records, h, state.collectionCuration);
@@ -200,6 +200,7 @@ export function createCatalog({state, els, h}) {
     const people = mode === 'people', works = mode === 'works';
     const filters = people ? h.MASTER_INDEX_PEOPLE_FILTERS : h.MASTER_INDEX_WORK_FILTERS;
     let filterKey = params.get(people ? 'role' : 'kind') || (people ? 'all-people' : 'all-works');
+    if (people && filterKey === 'composers-lyricists') filterKey = 'playwrights';
     if (!filters.some(f => f.key === filterKey)) filterKey = people ? 'all-people' : 'all-works';
     const cacheKey = people || works ? 'master:' + filterKey : 'entity:' + type;
     if (!indexCache.has(cacheKey)) indexCache.set(cacheKey, people || works
