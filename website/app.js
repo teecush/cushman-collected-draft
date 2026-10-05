@@ -1,10 +1,10 @@
-import {renderHomeCollections} from './home-collections.js?v=237';
+import {renderHomeCollections,HOME_COLLECTION_ORDER} from './home-collections.js?v=245';
 import {renderPlaywrightStage} from './playwright-stage.js?v=243';
 import {collectionTitleText,setCollectionTitle} from './collection-title.js?v=2';
 import {spotlightRecord} from './collections-engine.js?v=237';
-import { createCatalog } from "./catalog.js?v=242";
+import { createCatalog } from "./catalog.js?v=245";
 import { FEATURES } from "./features.js?v=173";
-const DATA_URL = new URL("../site_export/data/catalog.json?v=233", import.meta.url);
+const DATA_URL = new URL("../site_export/data/catalog.json?v=245", import.meta.url);
 const ALIASES_URL = new URL("../site_export/data/route_aliases.json?v=1", import.meta.url);
 const STANDALONE_CORRESPONDENCE_URL = new URL("../site_export/data/standalone_correspondence.json?v=237", import.meta.url);
 const CONTENT_ROOT = new URL("../site_export/content/reviews/", import.meta.url);
@@ -2352,15 +2352,15 @@ function landingCard(item) {
 }
 
 function renderFrontpageDirectory() {
-  const collectionLinks = [
-    ...[...catalog.getCollections().values()].map((collection) => ({
-      label: collection.title,
-      href: collection.href || `#collection:${collection.id}`,
-      count: collection.records.length,
-      featured: collection.id === "shakespeare",
-    })),
-    {label:"Special Letters collection",href:"#correspondence:famous-letters",count:37},
-  ];
+  const letterCollections=state.standaloneCorrespondence;
+  const letterCount=collection=>asArray(collection.items).length+asArray(collection.groups).reduce((sum,group)=>sum+asArray(group.items).length,0);
+  const correspondenceCount=letterCollections.reduce((sum,collection)=>sum+letterCount(collection),0)+state.records.reduce((sum,record)=>sum+correspondenceItems(record).length,0);
+  const allCollections=catalog.getCollections();
+  const collectionLinks=HOME_COLLECTION_ORDER.filter(id=>!['shakespeare','sondheim','stoppard','publications','famous-letters'].includes(id)).map(id=>allCollections.get(id)).filter(Boolean).map(collection=>({label:collection.title,href:collection.href||`#collection:${collection.id}`,count:collection.records.length,featured:collection.id==='shakespeare'}));
+  collectionLinks.push({label:'Playwright Collections',href:'#section:playwrights',count:state.collectionCuration.playwrights?.people?.length||0});
+  const specialLetters=letterCollections.find(collection=>collection.slug==='famous-letters');
+  if(specialLetters)collectionLinks.push({label:'Special Letters Collection',href:'#correspondence:famous-letters',count:letterCount(specialLetters)});
+
 
   const indexLinks = MASTER_INDEX_FILTERS
     .map((filter) => ({
@@ -2431,9 +2431,9 @@ function renderFrontpageDirectory() {
       titleHref: "#section:explore",
       links: [
         { label: "Archive Map", href: "#map", count: venueMapPoints().length, featured: true },
-        { label: "Timeline", href: "#timeline", count: state.records.length },
+        { label: "Timeline", href: "#timeline", count: state.records.filter(record=>/^\d{4}/.test(record.date||record.year||'')).length },
         { label: "Article Explorer", href: "#explore", count: state.records.length },
-        { label: "Correspondence", href: "#correspondence", count: state.standaloneCorrespondence.length },
+        { label: "Correspondence", href: "#correspondence", count: correspondenceCount },
         { label: "Publications", href: "#index:publications", count: publicationLinks.length },
         ...publicationLinks.slice(0, 3),
       ],
@@ -3498,7 +3498,7 @@ function renderAboutPage() {
     <p>Robert Cushman was born in London and educated at Latymer Upper School, West London and Clare College, Cambridge. He went from there to the BBC where he worked in radio drama, TV arts programs, and for the World Service. He then directed in the London and regional theatre, and was theatre critic of <em>The Observer</em> from 1973 to 1984.</p>
     <p>He moved to Canada in 1987, and was theatre critic of the <em>National Post</em> from its inception in 1999 until 2017. He has written extensively for other British and Canadian newspapers and magazines, and for the <em>New York Times</em>. He has continued to work in the theatre as an author, director and even as performer; the musical <em>Look to the Rainbow</em>, which he devised and directed, was produced in the West End in 1985. He was director of corporate communications for Livent Inc. in 1998-99.</p>
     <p>He has also been a prolific broadcaster, especially on musical theatre and American popular song; popular series include <em>Book, Music and Lyrics</em> (BBC) and <em>Songbook</em> (CBC). His book <em>Fifty Seasons at Stratford</em>, a history of the Stratford Festival, was published in 2002; and he is a record eight-time winner of the Nathan Cohen Award for Excellence in Theatre Criticism.</p>
-    <p>He is married, with three children, and lives in Toronto.</p>
+    <p>He continues to reside and see theatre in Toronto.</p>
   `;
   const archive = document.createElement("section"); archive.className="about-archive";
   archive.innerHTML = `<h2>About the archive</h2><p>This family archive brings together Robert Cushman’s theatre and arts writing from 1963 to 2026. It is an evolving collection, rather than a complete bibliography. Collections overlap, and one article may discuss several productions.</p><p>Texts are transcribed from surviving sources. Editorial notes and bracketed gaps are separate from Robert’s writing. Articles marked “Incomplete surviving source” contain known gaps; missing language has not been reconstructed. Month-only and inferred dates are identified where recorded.</p><p>Letters, notes and working manuscripts provide additional context. Available transcriptions accompany the images; items without a verified transcription remain images with descriptions.</p><p><a href="#contact">Suggest a correction or contact the archive</a> · <a href="#critics-circle">Donor acknowledgements</a></p>`;
@@ -3569,6 +3569,10 @@ function renderNavigationHub(kind) {
     const copy=document.createElement('span');copy.className='navigation-hub-copy';const strong=document.createElement('strong');strong.textContent=label;const p=document.createElement('span');p.textContent=description;copy.append(strong,p);a.append(visual(type),copy);grid.append(a);
   });
   els.indexContent.replaceChildren(title,grid);
+  if(kind==='about'){
+    const sources=document.createElement('p');sources.className='image-sources-link';
+    const a=document.createElement('a');a.href='#image-credits';a.textContent='Image sources';sources.append(a);els.indexContent.append(sources);
+  }
 }
 
 function renderSubscribePage() {
@@ -5886,7 +5890,7 @@ async function init() {
       fetch(DATA_URL),
       fetch(ALIASES_URL),
       fetch(STANDALONE_CORRESPONDENCE_URL).catch(() => null),
-      fetch(new URL('./collection-curation.json?v=236', import.meta.url)),
+      fetch(new URL('./collection-curation.json?v=245', import.meta.url)),
       fetch(new URL('./playwright-collections.json?v=238', import.meta.url)),
     ]);
     if (!response.ok) throw new Error(`Could not load records (${response.status})`);
@@ -6003,12 +6007,14 @@ init().catch((error) => {
 
 function appendFormattedText(parent, text, entities, linked) {
   // Deliberately small, safe Markdown subset; source HTML is always text.
-  const pattern = /(\*\*([^*]+)\*\*|\*([^*]+)\*|_([^_]+)_|`([^`]+)`)/g;
+  const pattern = /(\*\*([^*]+)\*\*|\*([^*]+)\*|_([^_]+)_|`([^`]+)`|\[([^\]]+)\]\((https?:\/\/[^)\s]+)\))/g;
   let cursor=0;
   for (const match of text.matchAll(pattern)) {
     appendInlineLinkedText(parent,text.slice(cursor,match.index),entities,linked);
-    const n=document.createElement(match[2]?'strong':match[5]?'code':'em');
-    appendInlineLinkedText(n,match[2]||match[3]||match[4]||match[5],entities,linked);parent.append(n);cursor=match.index+match[0].length;
+    const n=document.createElement(match[6]?'a':match[2]?'strong':match[5]?'code':'em');
+    if(match[6]){n.href=match[7];n.textContent=match[6];}
+    else appendInlineLinkedText(n,match[2]||match[3]||match[4]||match[5],entities,linked);
+    parent.append(n);cursor=match.index+match[0].length;
   }
   appendInlineLinkedText(parent,text.slice(cursor),entities,linked);
 }

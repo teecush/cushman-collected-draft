@@ -2,6 +2,17 @@ import {nameMatches, normalize} from './catalog-engine.js?v=173';
 
 export const INDEX_LETTERS = [...'ABCDEFGHIJKLMNOPQRSTUVWXYZ', '0–9', '#'];
 
+// A category change starts a new index selection. Do not carry invisible
+// article/collection restrictions across to the newly selected category.
+export function indexCategoryParams(current, mode, category) {
+  const next = new URLSearchParams();
+  for (const key of ['q', 'order', 'letter']) {
+    if (current.get(key)) next.set(key, current.get(key));
+  }
+  next.set(mode === 'people' ? 'role' : 'kind', category);
+  return next;
+}
+
 export function indexOrder(type, requested) {
   return ['alpha', 'coverage'].includes(requested) ? requested : type === 'publications' ? 'coverage' : 'alpha';
 }

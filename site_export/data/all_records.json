@@ -162727,7 +162727,7 @@
     "production_groups": [],
     "media": [],
     "correspondence": [],
-    "word_count": 1090,
+    "word_count": 1091,
     "coordinate_points": [
       {
         "label": "Factory Theatre",
@@ -211990,7 +211990,7 @@
     "production_groups": [],
     "media": [],
     "correspondence": [],
-    "word_count": 1169,
+    "word_count": 1168,
     "coordinate_points": [
       {
         "label": "Tom Patterson Theatre",
@@ -213422,7 +213422,7 @@
     ],
     "media": [],
     "correspondence": [],
-    "word_count": 1306,
+    "word_count": 1307,
     "coordinate_points": [],
     "display_schema": {
       "work_type": "productions",
@@ -252672,7 +252672,7 @@
     ],
     "media": [],
     "correspondence": [],
-    "word_count": 1116,
+    "word_count": 1115,
     "coordinate_points": [],
     "display_schema": {
       "work_type": "productions",
@@ -402862,7 +402862,7 @@
     "production_groups": [],
     "media": [],
     "correspondence": [],
-    "word_count": 1179,
+    "word_count": 1181,
     "coordinate_points": [
       {
         "label": "Richmond Hill Centre for the Performing Arts",
@@ -439982,7 +439982,7 @@
     "production_groups": [],
     "media": [],
     "correspondence": [],
-    "word_count": 923,
+    "word_count": 924,
     "coordinate_points": [
       {
         "label": "Elgin Theatre",
@@ -461940,6 +461940,441 @@
         "John Taylor",
         "Liz Wrangham",
         "Roger Gartland",
+        "William Shakespeare"
+      ]
+    }
+  },
+  {
+    "slug": "undated-a-midsummer-night-s-dream-an-introduction",
+    "route": "/reviews/undated-a-midsummer-night-s-dream-an-introduction/",
+    "source_file": "undated.Cushman_Collected.a_midsummer_nights_dream_Introduction.md",
+    "title": "A Midsummer Night's Dream: An Introduction",
+    "date": "",
+    "date_precision": "unknown",
+    "date_note": "",
+    "year": "",
+    "publication": "",
+    "source_publication": "Cushman Collected",
+    "article_category": "Theatre Essay",
+    "collections": [
+      "The Shakespeare Collection",
+      "Thoughts on Shakespeare"
+    ],
+    "publication_status": "publish",
+    "editorial_status": "done",
+    "editorial_issue_type": "",
+    "source_completeness": "complete_web_introduction",
+    "canonical_file": "",
+    "production_title": "A Midsummer Night's Dream",
+    "company": "",
+    "venue": "",
+    "city": "",
+    "coordinates": [],
+    "people": [
+      "William Shakespeare"
+    ],
+    "roles": {
+      "director": [],
+      "actors": [],
+      "playwright": [
+        "William Shakespeare"
+      ],
+      "composer_lyricist": [],
+      "musical_director": [],
+      "choreographer": [],
+      "orchestrator": [],
+      "arranger": [],
+      "assistant_director": [],
+      "stage_manager": [],
+      "assistant_musical_director": [],
+      "vocal_director": [],
+      "dance_captain": [],
+      "fight_director": [],
+      "dramaturg": [],
+      "producer": [],
+      "set_designer": [],
+      "costume_designer": [],
+      "lighting_designer": [],
+      "sound_designer": [],
+      "musicians": [],
+      "performers": [],
+      "artists": []
+    },
+    "production_groups": [],
+    "media": [],
+    "correspondence": [],
+    "word_count": 1304,
+    "coordinate_points": [],
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "A Midsummer Night's Dream"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
+      "companies": [],
+      "venues": [],
+      "cities": [],
+      "people": [
+        "William Shakespeare"
+      ]
+    }
+  },
+  {
+    "slug": "undated-henry-iv-an-introduction",
+    "route": "/reviews/undated-henry-iv-an-introduction/",
+    "source_file": "undated.Cushman_Collected.henry_iv_Introduction.md",
+    "title": "Henry IV: An Introduction",
+    "date": "",
+    "date_precision": "unknown",
+    "date_note": "",
+    "year": "",
+    "publication": "",
+    "source_publication": "Cushman Collected",
+    "article_category": "Theatre Essay",
+    "collections": [
+      "The Shakespeare Collection",
+      "Thoughts on Shakespeare"
+    ],
+    "publication_status": "publish",
+    "editorial_status": "done",
+    "editorial_issue_type": "",
+    "source_completeness": "complete_web_introduction",
+    "canonical_file": "",
+    "production_title": "Henry IV",
+    "company": "",
+    "venue": "",
+    "city": "",
+    "coordinates": [],
+    "people": [
+      "William Shakespeare"
+    ],
+    "roles": {
+      "director": [],
+      "actors": [],
+      "playwright": [
+        "William Shakespeare"
+      ],
+      "composer_lyricist": [],
+      "musical_director": [],
+      "choreographer": [],
+      "orchestrator": [],
+      "arranger": [],
+      "assistant_director": [],
+      "stage_manager": [],
+      "assistant_musical_director": [],
+      "vocal_director": [],
+      "dance_captain": [],
+      "fight_director": [],
+      "dramaturg": [],
+      "producer": [],
+      "set_designer": [],
+      "costume_designer": [],
+      "lighting_designer": [],
+      "sound_designer": [],
+      "musicians": [],
+      "performers": [],
+      "artists": []
+    },
+    "production_groups": [],
+    "media": [],
+    "correspondence": [],
+    "word_count": 2725,
+    "coordinate_points": [],
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Henry IV"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
+      "companies": [],
+      "venues": [],
+      "cities": [],
+      "people": [
+        "William Shakespeare"
+      ]
+    }
+  },
+  {
+    "slug": "undated-henry-v-an-introduction",
+    "route": "/reviews/undated-henry-v-an-introduction/",
+    "source_file": "undated.Cushman_Collected.henry_v_Introduction.md",
+    "title": "Henry V: An Introduction",
+    "date": "",
+    "date_precision": "unknown",
+    "date_note": "",
+    "year": "",
+    "publication": "",
+    "source_publication": "Cushman Collected",
+    "article_category": "Theatre Essay",
+    "collections": [
+      "The Shakespeare Collection",
+      "Thoughts on Shakespeare"
+    ],
+    "publication_status": "publish",
+    "editorial_status": "done",
+    "editorial_issue_type": "",
+    "source_completeness": "complete_web_introduction",
+    "canonical_file": "",
+    "production_title": "Henry V",
+    "company": "",
+    "venue": "",
+    "city": "",
+    "coordinates": [],
+    "people": [
+      "William Shakespeare"
+    ],
+    "roles": {
+      "director": [],
+      "actors": [],
+      "playwright": [
+        "William Shakespeare"
+      ],
+      "composer_lyricist": [],
+      "musical_director": [],
+      "choreographer": [],
+      "orchestrator": [],
+      "arranger": [],
+      "assistant_director": [],
+      "stage_manager": [],
+      "assistant_musical_director": [],
+      "vocal_director": [],
+      "dance_captain": [],
+      "fight_director": [],
+      "dramaturg": [],
+      "producer": [],
+      "set_designer": [],
+      "costume_designer": [],
+      "lighting_designer": [],
+      "sound_designer": [],
+      "musicians": [],
+      "performers": [],
+      "artists": []
+    },
+    "production_groups": [],
+    "media": [],
+    "correspondence": [],
+    "word_count": 2423,
+    "coordinate_points": [],
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Henry V"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
+      "companies": [],
+      "venues": [],
+      "cities": [],
+      "people": [
+        "William Shakespeare"
+      ]
+    }
+  },
+  {
+    "slug": "undated-henry-vi-an-introduction",
+    "route": "/reviews/undated-henry-vi-an-introduction/",
+    "source_file": "undated.Cushman_Collected.henry_vi_Introduction.md",
+    "title": "Henry VI: An Introduction",
+    "date": "",
+    "date_precision": "unknown",
+    "date_note": "",
+    "year": "",
+    "publication": "",
+    "source_publication": "Cushman Collected",
+    "article_category": "Theatre Essay",
+    "collections": [
+      "The Shakespeare Collection",
+      "Thoughts on Shakespeare"
+    ],
+    "publication_status": "publish",
+    "editorial_status": "done",
+    "editorial_issue_type": "",
+    "source_completeness": "complete_web_introduction",
+    "canonical_file": "",
+    "production_title": "Henry VI",
+    "company": "",
+    "venue": "",
+    "city": "",
+    "coordinates": [],
+    "people": [
+      "William Shakespeare"
+    ],
+    "roles": {
+      "director": [],
+      "actors": [],
+      "playwright": [
+        "William Shakespeare"
+      ],
+      "composer_lyricist": [],
+      "musical_director": [],
+      "choreographer": [],
+      "orchestrator": [],
+      "arranger": [],
+      "assistant_director": [],
+      "stage_manager": [],
+      "assistant_musical_director": [],
+      "vocal_director": [],
+      "dance_captain": [],
+      "fight_director": [],
+      "dramaturg": [],
+      "producer": [],
+      "set_designer": [],
+      "costume_designer": [],
+      "lighting_designer": [],
+      "sound_designer": [],
+      "musicians": [],
+      "performers": [],
+      "artists": []
+    },
+    "production_groups": [],
+    "media": [],
+    "correspondence": [],
+    "word_count": 2980,
+    "coordinate_points": [],
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "Henry VI"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
+      "companies": [],
+      "venues": [],
+      "cities": [],
+      "people": [
+        "William Shakespeare"
+      ]
+    }
+  },
+  {
+    "slug": "undated-the-taming-of-the-shrew-an-introduction",
+    "route": "/reviews/undated-the-taming-of-the-shrew-an-introduction/",
+    "source_file": "undated.Cushman_Collected.the_taming_of_the_shrew_Introduction.md",
+    "title": "The Taming of the Shrew: An Introduction",
+    "date": "",
+    "date_precision": "unknown",
+    "date_note": "",
+    "year": "",
+    "publication": "",
+    "source_publication": "Cushman Collected",
+    "article_category": "Theatre Essay",
+    "collections": [
+      "The Shakespeare Collection",
+      "Thoughts on Shakespeare"
+    ],
+    "publication_status": "publish",
+    "editorial_status": "done",
+    "editorial_issue_type": "",
+    "source_completeness": "complete_web_introduction",
+    "canonical_file": "",
+    "production_title": "The Taming of the Shrew",
+    "company": "",
+    "venue": "",
+    "city": "",
+    "coordinates": [],
+    "people": [
+      "William Shakespeare"
+    ],
+    "roles": {
+      "director": [],
+      "actors": [],
+      "playwright": [
+        "William Shakespeare"
+      ],
+      "composer_lyricist": [],
+      "musical_director": [],
+      "choreographer": [],
+      "orchestrator": [],
+      "arranger": [],
+      "assistant_director": [],
+      "stage_manager": [],
+      "assistant_musical_director": [],
+      "vocal_director": [],
+      "dance_captain": [],
+      "fight_director": [],
+      "dramaturg": [],
+      "producer": [],
+      "set_designer": [],
+      "costume_designer": [],
+      "lighting_designer": [],
+      "sound_designer": [],
+      "musicians": [],
+      "performers": [],
+      "artists": []
+    },
+    "production_groups": [],
+    "media": [],
+    "correspondence": [],
+    "word_count": 3002,
+    "coordinate_points": [],
+    "display_schema": {
+      "work_type": "productions",
+      "work_label": "Production",
+      "company_label": "Company",
+      "primary_browse": "productions",
+      "secondary_browse": ""
+    },
+    "browse_entities": {
+      "books": [],
+      "productions": [
+        "The Taming of the Shrew"
+      ],
+      "subjects": [],
+      "book_authors": [],
+      "publishers": [],
+      "topics": [],
+      "events": [],
+      "networks": [],
+      "companies": [],
+      "venues": [],
+      "cities": [],
+      "people": [
         "William Shakespeare"
       ]
     }

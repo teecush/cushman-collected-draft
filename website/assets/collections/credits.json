@@ -1190,11 +1190,12 @@
   {
     "source": "https://en.wikipedia.org/wiki/File:Follies_(1971_theater_poster).jpg",
     "creator": "",
-    "credit": "http://www.sondheimguide.com/follies.html",
+    "credit": "http://www.sondheimguide.com/follies.html Original 1971 Broadway poster; used as an illustration of the musical, including Follies: In Concert, rather than the staging reviewed.",
     "license": "Fair use",
     "licenseUrl": "",
     "titles": [
-      "Follies"
+      "Follies",
+      "Follies: In Concert"
     ],
     "changes": "Displayed at reduced size."
   },
@@ -6709,5 +6710,27 @@
       "Caryl Churchill — Playwright Collections portrait"
     ],
     "changes": "Source preview stored without image edits; collection page displays it in grayscale."
+  },
+  {
+    "source": "https://commons.wikimedia.org/wiki/File:Don_Juan,_de_Moli%C3%A8re,_en_el_Festival_Internacional_de_Teatro_Cl%C3%A1sico_de_Almagro_01.jpg",
+    "creator": "Guillermo Casas / Festival de Almagro",
+    "credit": "Don Juan: Compagnie Aigle de Sable, Milena Vlach; AlmagroFestival 2012. Image: Guillermo Casas / Festival de Almagro. Illustrative alternate production; not a photograph of the staging reviewed by Robert Cushman.",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "changes": "Resized to maximum 1400pixels; recompressedJPEG; full composition preserved.",
+    "titles": [
+      "Don Juan — playwright collection artwork"
+    ]
+  },
+  {
+    "source": "https://commons.wikimedia.org/wiki/File:En_attendant_Godot,_Festival_d%27Avignon,_1978_f22.jpg",
+    "creator": "Fernand Michaud",
+    "credit": "Waiting for Godot: Avignon Festival 1978; Otomar Krejča; Rufus and Georges Wilson. Image: Fernand Michaud. Illustrative alternate production; not a photograph of the staging reviewed by Robert Cushman.",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "changes": "Resized to maximum 1400pixels; recompressedJPEG; full composition preserved.",
+    "titles": [
+      "Waiting for Godot — playwright collection artwork"
+    ]
   }
 ]

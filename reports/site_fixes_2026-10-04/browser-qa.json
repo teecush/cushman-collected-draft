@@ -1,0 +1,66 @@
+{
+  "base": "http://127.0.0.1:8788/website/",
+  "people": {
+    "hash": "#people?order=coverage&role=directors",
+    "count": "1,084"
+  },
+  "works": {
+    "hash": "#works?letter=A&order=alpha&kind=books",
+    "count": "56"
+  },
+  "Henry IV": {
+    "paragraphs": 9,
+    "href": "#review:undated-henry-iv-an-introduction"
+  },
+  "Henry V": {
+    "paragraphs": 13,
+    "href": "#review:undated-henry-v-an-introduction"
+  },
+  "Henry VI": {
+    "paragraphs": 15,
+    "href": "#review:undated-henry-vi-an-introduction"
+  },
+  "A Midsummer Night’s Dream": {
+    "paragraphs": 11,
+    "href": "#review:undated-a-midsummer-night-s-dream-an-introduction"
+  },
+  "The Taming of the Shrew": {
+    "paragraphs": 13,
+    "href": "#review:undated-the-taming-of-the-shrew-an-introduction"
+  },
+  "stickyArticleNavigation": {
+    "top": 171.5625,
+    "bottom": 205.5,
+    "height": 33.9375,
+    "headerBottom": 111.5625
+  },
+  "playwright-moliere": {
+    "newImageLoaded": true,
+    "duplicateTitlesVisible": 0
+  },
+  "playwright-samuel-beckett": {
+    "newImageLoaded": true,
+    "duplicateTitlesVisible": 0
+  },
+  "phoneFits": true,
+  "aboutUpdated": true,
+  "homeCollectionOrder": [
+    "recent",
+    "profiles",
+    "shakespeare",
+    "sondheim",
+    "stoppard",
+    "musicals",
+    "stratford",
+    "shaw",
+    "television",
+    "albums",
+    "books",
+    "early",
+    "publications",
+    "famous-letters"
+  ],
+  "playwrightGateway": 15,
+  "specialLettersRetained": true,
+  "errors": []
+}

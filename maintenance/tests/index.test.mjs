@@ -1,6 +1,10 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import {indexOrder, indexEntries, indexSections, indexLetter} from '../../website/index-engine.js';
+import {indexOrder, indexEntries, indexSections, indexLetter, indexCategoryParams} from '../../website/index-engine.js';
+
+const scoped = new URLSearchParams('shelf=musicals&item=cats&indexScope=musicals&collection=Musical+Theatre&group=comedy&type=Musical+Review&subject=Musical+theatre&role=composers-lyricists&kind=musicals&q=smith&order=coverage&letter=S&text=1&from=2000');
+assert.deepEqual([...indexCategoryParams(scoped, 'people', 'playwrights')], [['q','smith'],['order','coverage'],['letter','S'],['role','playwrights']]);
+assert.deepEqual([...indexCategoryParams(scoped, 'works', 'books')], [['q','smith'],['order','coverage'],['letter','S'],['kind','books']]);
 
 assert.equal(indexOrder('publications', null), 'coverage');
 assert.equal(indexOrder('publications', 'alpha'), 'alpha', 'Explicit bookmarked order wins');
@@ -39,5 +43,8 @@ assert.equal(publicationYear({year: 'unknown'}), '');
 const recoveredYears = records.filter(r => !r.year && publicationYear(r));
 assert.equal(recoveredYears.length, 14, 'Fourteen dated articles without a redundant year field remain browsable');
 const undated = records.filter(r => !publicationYear(r));
-assert.deepEqual(undated.map(r=>r.slug).sort(), ['undated-cocteau-ionesco-becket-new-company-at-a-d-c','undated-a-d-c-theatre-the-two-gentlemen-of-verona'].sort());
+const introductions=Object.values(JSON.parse(fs.readFileSync(new URL('../../website/collection-curation.json',import.meta.url))).shakespeareIntroductions);
+assert.equal(introductions.length,5);
+assert(introductions.every(slug=>undated.some(r=>r.slug===slug)), 'Undated introductions must not acquire invented publication years');
+assert.deepEqual(undated.filter(r=>!introductions.includes(r.slug)).map(r=>r.slug).sort(), ['undated-cocteau-ionesco-becket-new-company-at-a-d-c','undated-a-d-c-theatre-the-two-gentlemen-of-verona'].sort());
 console.log('PASS: timeline/year filters recover 14 dated articles; only genuinely undated writing is separate.');

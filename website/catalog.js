@@ -1,7 +1,7 @@
 import {FIELDS, normalize, nameMatches, publicationYear, serialize, parse, articleForm, articleSubject} from './catalog-engine.js?v=173';
 import {makeCollections, COLLECTIONS} from './collections-engine.js?v=238';
-import {createCollectionViews} from './collection-views.js?v=242';
-import {INDEX_LETTERS, indexOrder, indexEntries, indexSections} from './index-engine.js?v=173';
+import {createCollectionViews} from './collection-views.js?v=245';
+import {INDEX_LETTERS, indexOrder, indexEntries, indexSections, indexCategoryParams} from './index-engine.js?v=245';
 export function createCatalog({state, els, h}) {
   let extra = {}, indexCache = new Map(), textIndex = null, textPromise = null, indexResizeObserver = null, indexScrollCleanup = null, archiveNavObserver = null, placesMap = null, collectionData = null;
   const getCollections = () => collectionData ||= makeCollections(state.records, h, state.collectionCuration);
@@ -264,9 +264,11 @@ export function createCatalog({state, els, h}) {
       const select = filterSelect = node('select'); filters.forEach(f => select.append(new Option(f.label, f.key))); select.value = filterKey;
       select.addEventListener('change', () => {
         const anchorLetter = order === 'alpha' ? (viewportLetter || letter || currentVisibleLetter()) : '';
-        filterKey = select.value; letter = anchorLetter; updateUrl();
+        filterKey = select.value; letter = anchorLetter;
+        const next = indexCategoryParams(new URLSearchParams(indexHref().split('?')[1]), mode, filterKey);
+        history.replaceState(null, '', base + '?' + next);
         indexResizeObserver?.disconnect();
-        indexPage(mode, new URLSearchParams(indexHref().split('?')[1]), type);
+        indexPage(mode, next, type);
       });
       field.append(select); controls.append(field);
     }
@@ -572,6 +574,7 @@ export function createCatalog({state, els, h}) {
     if(base==='#section:explore'){navigationHub('explore','Explore');return true;}
     if(base==='#section:about'){navigationHub('about','About');return true;}
     if(base==='#section:collections'){collectionViews.directory();return true;}
+    if(base==='#section:playwrights'){collectionViews.playwrightDirectory();return true;}
     if(base==='#section:current'||base==='#current'){collectionViews.show('recent',params);return true;}
     if(base.startsWith('#collection:')||base.startsWith('#browse-collection:')){const id=base.split(':')[1]==='musical'?'musicals':base.split(':')[1];if(getCollections().has(id)&&id!=='shakespeare'){collectionViews.show(id,params);return true;}}
     if(!h.FEATURES.modernBrowseLandings && ['#section:collections','#section:browse','#section:indexes','#section:current','#current'].includes(base)){

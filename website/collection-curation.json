@@ -3344,6 +3344,21 @@
       "alt": "Starlight Express in 2018 Bochum encore of Starlight Express; illustration of the musical, not the production reviewed by Robert Cushman",
       "fit": "cover",
       "position": "50% 50%"
+    },
+    "playwright-moliere:don-juan": {
+      "src": "assets/collections/oct4-playwright-don-juan.jpg",
+      "fit": "contain",
+      "alt": "Don Juan — illustrative alternate production"
+    },
+    "playwright-samuel-beckett:waiting-for-godot": {
+      "src": "assets/collections/oct4-playwright-waiting-for-godot.jpg",
+      "fit": "contain",
+      "alt": "Waiting for Godot — illustrative alternate production"
+    },
+    "musicals:follies-in-concert": {
+      "src": "assets/collections/wiki-d6ba5a01520a3848.jpg",
+      "alt": "Original 1971 Broadway poster for Follies; work-level illustration for Follies: In Concert",
+      "fit": "contain"
     }
   },
   "excludedMusicalTitles": [
@@ -3424,5 +3439,12 @@
     "stratford": {
       "src": "assets/collections/stratford-official-logo.png"
     }
+  },
+  "shakespeareIntroductions": {
+    "Henry IV": "undated-henry-iv-an-introduction",
+    "Henry V": "undated-henry-v-an-introduction",
+    "Henry VI": "undated-henry-vi-an-introduction",
+    "A Midsummer Night's Dream": "undated-a-midsummer-night-s-dream-an-introduction",
+    "The Taming of the Shrew": "undated-the-taming-of-the-shrew-an-introduction"
   }
 }

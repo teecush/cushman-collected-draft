@@ -22,11 +22,19 @@ def body_text(markdown, record):
     blocks=re.split(r'\n{2,}',text)
     has_image=bool(record.get('media')) or any(re.match(r'^!\[.*?\]\(.*?\)$',b) for b in blocks)
     return '\n\n'.join(b.strip() for b in blocks if b.strip() and not re.match(r'^(word count\s*:|credit\s*:|illustrations?\s*:|illustrations?$|e-?mail\s*:)',b,re.I) and not re.match(r'^(?:contact\s*:)?\s*[\w.+-]+@(?:sympatico|rogers|bell|gmail|hotmail|yahoo)\.[a-z]{2,}\s*$',b,re.I) and (has_image or not re.match(r'^(caption|photo caption)\s*:',b,re.I)))
-def inline(text):
+def inline_emphasis(text):
     escaped=html.escape(text)
     escaped=re.sub(r'\*\*([^*]+)\*\*',r'<strong>\1</strong>',escaped)
     escaped=re.sub(r'\*([^*]+)\*',r'<em>\1</em>',escaped)
     return re.sub(r'_([^_]+)_',r'<em>\1</em>',escaped)
+def inline(text):
+    chunks=re.split(r'(\[[^\]]+\]\(https?://[^)\s]+\))',text)
+    out=[]
+    for chunk in chunks:
+        link=re.fullmatch(r'\[([^\]]+)\]\((https?://[^)\s]+)\)',chunk)
+        if link:out.append(f'<a href="{html.escape(link[2],quote=True)}">{inline_emphasis(link[1])}</a>')
+        else:out.append(inline_emphasis(chunk))
+    return ''.join(out)
 def rendered_body(body):
     result=[]
     for block in re.split(r'\n{2,}',body):

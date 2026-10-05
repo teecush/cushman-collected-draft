@@ -1,0 +1,10 @@
+{
+  "public_articles": 3216,
+  "old_article_pages_matched": 352,
+  "old_metadata_disparities": 224,
+  "date_disparities": 10,
+  "new_introductions": 5,
+  "original_urls_preserved": 3211,
+  "backups_and_frontmatter_verified": 1113,
+  "safe_markdown_links": "passed"
+}

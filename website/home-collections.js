@@ -8,11 +8,13 @@ const examples = {
   sondheim:['company','follies','assassins'],
 };
 function element(tag,cls,text){const el=document.createElement(tag);el.className=cls;if(text)el.textContent=text;return el;}
+export const HOME_COLLECTION_ORDER=['recent','profiles','shakespeare','sondheim','stoppard','musicals','stratford','shaw','television','albums','books','early','publications','famous-letters'];
 export function renderHomeCollections(root,curation,collections,{includePublications=true}={}){
   if(!root)return;
   const grid=element('div','home-collection-grid');
   const famousLetters={id:'famous-letters',title:'Special Letters Collection',href:'#correspondence:famous-letters'};
-  const specs=[COLLECTIONS[0],famousLetters,...COLLECTIONS.slice(1),...(includePublications?[{id:'publications',title:'Publications',href:'#index:publications'}]:[])];
+  const available=new Map([...COLLECTIONS,famousLetters,...(includePublications?[{id:'publications',title:'Publications',href:'#index:publications'}]:[])].map(spec=>[spec.id,spec]));
+  const specs=HOME_COLLECTION_ORDER.map(id=>available.get(id)).filter(Boolean);
   for(const spec of specs){
     const card=element('a','home-collection-card '+spec.id);card.href=spec.href||'#collection:'+spec.id;
     const visual=element('span','home-collection-visual');visual.setAttribute('aria-hidden','true');

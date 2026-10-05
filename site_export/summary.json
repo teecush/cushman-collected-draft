@@ -2,17 +2,17 @@
   "export_dir": "/Users/openclaw/Codex Projects/Cushman CODEXted/site_export",
   "source_dir": "/Users/openclaw/Codex Projects/Cushman CODEXted/repaired_structural_v2",
   "counts": {
-    "total": 3476,
-    "publish": 3244,
+    "total": 3481,
+    "publish": 3249,
     "archive_only": 154,
     "duplicate_variant": 77,
     "exclude_from_publication": 1
   },
-  "public_reviews": 3211,
+  "public_reviews": 3216,
   "archive_records": 264,
   "excluded_records": 1,
   "map_points": 1739,
-  "chat_chunks": 20862,
+  "chat_chunks": 20940,
   "sample_public_record": {
     "slug": "1963-01-11-shades-of-freud",
     "route": "/reviews/1963-01-11-shades-of-freud/",
