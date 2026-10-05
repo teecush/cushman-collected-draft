@@ -85,6 +85,10 @@ def credited_titles(record, person):
 
 
 def main():
+    # The approved expanded group has manually traced geometry and curated additions.
+    # This legacy 15-person builder must never silently replace that data.
+    if DEST.exists() and json.loads(DEST.read_text()).get("stageVersion", 1) >= 2:
+        raise SystemExit("Expanded playwright data retained. Update its curated works and geometry directly; the legacy 15-person builder is retired.")
     records = json.loads(CATALOG.read_text())
     sources = {entry["person"]: entry for entry in json.loads((SOURCE / "portrait_sources.json").read_text())}
     people = []

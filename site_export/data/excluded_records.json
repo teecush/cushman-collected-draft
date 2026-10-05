@@ -7,6 +7,8 @@
     "date": "2002-10-01",
     "date_precision": "day",
     "date_note": "",
+    "date_is_estimated": false,
+    "date_label": "",
     "year": "2002",
     "publication": "Books in Canada",
     "source_publication": "Books in Canada",

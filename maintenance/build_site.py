@@ -50,11 +50,14 @@ def rendered_body(body):
     return '\n'.join(result)
 def display_date(r):
     date=r.get('date','')
-    if not date:return 'Undated'
+    if not date or r.get('date_precision')=='unknown':return 'Undated'
     year,month,day=date.split('-')
-    if r.get('date_precision')=='year':return year
-    if r.get('date_precision')=='month':return f'{calendar.month_name[int(month)]} {year}'
-    return f'{calendar.month_abbr[int(month)]} {int(day)}, {year}'
+    precision=r.get('date_precision','day')
+    if precision=='season' and r.get('date_label'):label=r['date_label']
+    elif precision=='year':label=year
+    elif precision=='month':label=f'{calendar.month_name[int(month)]} {year}'
+    else:label=f'{calendar.month_abbr[int(month)]} {int(day)}, {year}'
+    return ('c. ' if r.get('date_is_estimated') else '')+label
 def thumbnail(media):
     path=media.get('local_path','')
     if not path:return

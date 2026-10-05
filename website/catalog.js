@@ -1,7 +1,7 @@
-import {FIELDS, normalize, nameMatches, publicationYear, serialize, parse, articleForm, articleSubject} from './catalog-engine.js?v=173';
-import {makeCollections, COLLECTIONS} from './collections-engine.js?v=247';
-import {createCollectionViews} from './collection-views.js?v=247';
-import {INDEX_LETTERS, indexOrder, indexEntries, indexSections, indexCategoryParams} from './index-engine.js?v=247';
+import {FIELDS, normalize, nameMatches, publicationYear, timelineYear, serialize, parse, articleForm, articleSubject} from './catalog-engine.js?v=249';
+import {makeCollections, COLLECTIONS} from './collections-engine.js?v=249';
+import {createCollectionViews} from './collection-views.js?v=249';
+import {INDEX_LETTERS, indexOrder, indexEntries, indexSections, indexCategoryParams} from './index-engine.js?v=249';
 export function createCatalog({state, els, h}) {
   let extra = {}, indexCache = new Map(), textIndex = null, textPromise = null, indexResizeObserver = null, indexScrollCleanup = null, archiveNavObserver = null, placesMap = null, collectionData = null;
   const getCollections = () => collectionData ||= makeCollections(state.records, h, state.collectionCuration);
@@ -444,7 +444,7 @@ export function createCatalog({state, els, h}) {
     openIndex('Timeline', '');
     const dated = new Map();
     for (const record of state.records) {
-      const key = publicationYear(record);
+      const key = timelineYear(record);
       if (!key) continue;
       if (!dated.has(key)) dated.set(key, []);
       dated.get(key).push(record);

@@ -217,6 +217,11 @@ body:not(.feature-redesignedHome):not(.search-open) #archive .advanced-search[op
 .play-introduction {padding:12px 0 30px;margin:12px 0 30px;font:20px/1.65 var(--serif);}
 .play-introduction p {margin:0 0 1em;}
 .play-introduction p:last-child {margin-bottom:0;}
+.play-introduction {padding-inline:clamp(0px,2vw,28px);}
+.play-introduction h2 {font:700 25px/1.25 var(--serif);margin:0 0 16px;}
+.play-introduction-toggle {display:block;margin:18px 0 0;padding:8px 16px;border:1px solid var(--blue-dark);background:var(--paper);color:var(--blue-dark);font:700 14px/1.3 var(--sans);cursor:pointer;}
+.play-introduction-toggle:hover,.play-introduction-toggle:focus-visible {background:var(--blue-dark);color:var(--paper);}
+.play-introduction-rest[hidden] {display:none;}
 .playwright-directory-stage {margin:24px 0 40px;}
 @media(max-width:550px){.play-introduction{font-size:18px;line-height:1.6;}}
 .image-credits section {padding:22px 0;border-bottom:1px solid var(--rule);overflow-wrap:anywhere;}
@@ -801,17 +806,23 @@ body.catalog-page #indexView.directory-page.sticky-directory .index-controls lab
 .playwright-stage-heading{border-top:1px solid var(--rule);padding-top:32px;margin:0 0 22px;}
 .playwright-stage-heading h2{margin:0;}
 .playwright-stage-scroll{overflow:hidden;background:#f2eee6;border-top:5px solid var(--blue-dark);}
-.playwright-stage-image{position:relative;isolation:isolate;width:100%;aspect-ratio:1550 / 887;}
-.playwright-stage-image>img{display:block;width:100%;height:100%;object-fit:cover;object-position:9% center;}
+.playwright-stage-image{position:relative;isolation:isolate;width:100%;aspect-ratio:1774 / 887;}
+.playwright-stage-image>img{display:block;width:100%;height:100%;object-fit:contain;object-position:center;}
 .playwright-contours{position:absolute;inset:0;width:100%;height:100%;overflow:visible;pointer-events:none;}
-.playwright-contours path{fill:none;stroke:#207aa7;stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke;filter:drop-shadow(0 0 2px #1687bdcc) drop-shadow(0 0 6px #1687bd99);opacity:0;transition:opacity .18s ease;}
+.playwright-contours path{fill:none;stroke:#207aa7;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke;filter:drop-shadow(0 0 2px #1687bdcc) drop-shadow(0 0 6px #1687bd99);opacity:0;transition:opacity .18s ease;}
 .playwright-figure{position:absolute;z-index:2;color:var(--ink);text-decoration:none;outline:0;touch-action:pan-y;-webkit-tap-highlight-color:transparent;}
 .playwright-figure-name{position:absolute;z-index:3;min-width:max-content;transform:translate(-50%,-50%);font:800 clamp(16px,1.65vw,23px)/1 var(--sans);letter-spacing:.035em;color:#104c70;text-shadow:0 1px #fff,1px 0 #fff,-1px 0 #fff,0 -1px #fff,0 3px 7px #fff;opacity:0;pointer-events:none;transition:opacity .15s ease;}
 .playwright-figure:hover,.playwright-figure:focus-visible,.playwright-figure.is-selected{z-index:20;}
 .playwright-figure:is(:hover,:focus-visible,.is-selected) .playwright-figure-name{opacity:1;}
 .playwright-contours path.is-active{opacity:1;}
+.playwright-hit-areas{pointer-events:none;position:absolute;inset:0;width:100%;height:100%;overflow:visible;}
+.playwright-hit path{fill:transparent;stroke:none;pointer-events:all;cursor:pointer;}
+.playwright-hit:focus{outline:none;}
+.playwright-stage-image>.playwright-figure-name.is-active{opacity:1;}
+.playwright-portrait-crop{position:relative;overflow:hidden;width:100%;border:1px solid #c7c4bb;}
+.playwright-portrait-crop>img{position:absolute;max-width:none;object-fit:fill;filter:grayscale(1);}
 .playwright-figure:focus-visible{outline:2px solid var(--blue-dark);outline-offset:3px;}
-@media(max-width:700px){.playwright-figure-name{font-size:14px;padding:2px 4px;background:#fffdd9de;border-radius:2px;text-shadow:none;}.playwright-contours path{stroke-width:2.2;filter:drop-shadow(0 0 2px #1687bdcc) drop-shadow(0 0 4px #1687bd99);}}
+@media(max-width:700px){.playwright-figure-name{font-size:14px;padding:2px 4px;background:#fffdd9de;border-radius:2px;text-shadow:none;}.playwright-contours path{stroke-width:1.8;filter:drop-shadow(0 0 2px #1687bdcc) drop-shadow(0 0 4px #1687bd99);}}
 @media(prefers-reduced-motion:reduce){.playwright-contours path,.playwright-figure-name{transition:none;}}
 
 /* Portrait-led author pages retain the archive's restrained card vocabulary. */

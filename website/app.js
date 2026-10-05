@@ -1,11 +1,12 @@
-import {writingNames,henryCycleTitle,shakespeareTitles} from './play-authorship.js?v=247';
-import {renderHomeCollections,HOME_COLLECTION_ORDER} from './home-collections.js?v=247';
-import {renderPlaywrightStage} from './playwright-stage.js?v=243';
+import {articleDateLabel,timelineYear} from './catalog-engine.js?v=249';
+import {writingNames,henryCycleTitle,shakespeareTitles} from './play-authorship.js?v=249';
+import {renderHomeCollections,HOME_COLLECTION_ORDER} from './home-collections.js?v=249';
+import {renderPlaywrightStage} from './playwright-stage.js?v=249';
 import {collectionTitleText,setCollectionTitle} from './collection-title.js?v=2';
-import {spotlightRecord} from './collections-engine.js?v=247';
-import { createCatalog } from "./catalog.js?v=247";
+import {spotlightRecord} from './collections-engine.js?v=249';
+import { createCatalog } from "./catalog.js?v=249";
 import { FEATURES } from "./features.js?v=173";
-const DATA_URL = new URL("../site_export/data/catalog.json?v=247", import.meta.url);
+const DATA_URL = new URL("../site_export/data/catalog.json?v=249", import.meta.url);
 const ALIASES_URL = new URL("../site_export/data/route_aliases.json?v=1", import.meta.url);
 const STANDALONE_CORRESPONDENCE_URL = new URL("../site_export/data/standalone_correspondence.json?v=237", import.meta.url);
 const CONTENT_ROOT = new URL("../site_export/content/reviews/", import.meta.url);
@@ -766,11 +767,7 @@ function hasActiveFilters() {
 
 function formatDate(value) {
   if (value && typeof value === "object") {
-    const record = value;
-    if (!record.date) return "Undated";
-    if (record.date_precision === "year") return String(record.year || record.date.slice(0, 4));
-    if (record.date_precision === "month") return new Date(`${record.date}T00:00:00`).toLocaleDateString("en-US", { month: "long", year: "numeric" });
-    value = record.date;
+    return articleDateLabel(value);
   }
   if (!value) return "";
   const date = new Date(`${value}T00:00:00`);
@@ -2429,7 +2426,7 @@ function renderFrontpageDirectory() {
       titleHref: "#section:explore",
       links: [
         { label: "Archive Map", href: "#map", count: venueMapPoints().length, featured: true },
-        { label: "Timeline", href: "#timeline", count: state.records.filter(record=>/^\d{4}/.test(record.date||record.year||'')).length },
+        { label: "Timeline", href: "#timeline", count: state.records.filter(record=>timelineYear(record)).length },
         { label: "Article Explorer", href: "#explore", count: state.records.length },
         { label: "Correspondence", href: "#correspondence", count: correspondenceCount },
         { label: "Publications", href: "#index:publications", count: publicationLinks.length },
@@ -3086,8 +3083,8 @@ function renderTimelineTool() {
   tool.className = "timeline-tool";
   const years = new Map();
   state.records.forEach((record) => {
-    if (!record.year) return;
-    const key = String(record.year);
+    const key = timelineYear(record);
+    if (!key) return;
     if (!years.has(key)) years.set(key, []);
     years.get(key).push(record);
   });
@@ -3363,8 +3360,8 @@ function renderTimelineToolV2() {
   tool.className = "timeline-tool";
   const years = new Map();
   state.records.forEach((record) => {
-    if (!record.year) return;
-    const key = String(record.year);
+    const key = timelineYear(record);
+    if (!key) return;
     if (!years.has(key)) years.set(key, []);
     years.get(key).push(record);
   });
@@ -5890,9 +5887,9 @@ async function init() {
       fetch(DATA_URL),
       fetch(ALIASES_URL),
       fetch(STANDALONE_CORRESPONDENCE_URL).catch(() => null),
-      fetch(new URL('./collection-curation.json?v=247', import.meta.url)),
-      fetch(new URL('./playwright-collections.json?v=238', import.meta.url)),
-      fetch(new URL('../site_export/data/play_introductions.json?v=247', import.meta.url)),
+      fetch(new URL('./collection-curation.json?v=249', import.meta.url)),
+      fetch(new URL('./playwright-collections.json?v=249', import.meta.url)),
+      fetch(new URL('../site_export/data/play_introductions.json?v=249', import.meta.url)),
     ]);
     if (!response.ok) throw new Error(`Could not load records (${response.status})`);
     state.records = await response.json();

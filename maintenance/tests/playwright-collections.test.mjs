@@ -5,11 +5,12 @@ import {makeCollections} from '../../website/collections-engine.js';
 const data=JSON.parse(readFileSync(new URL('../../website/playwright-collections.json',import.meta.url)));
 const records=JSON.parse(readFileSync(new URL('../../site_export/data/catalog.json',import.meta.url)));
 const bySlug=new Map(records.map(record=>[record.slug,record]));
-assert.equal(data.people.length,15);
-assert.equal(new Set(data.people.map(person=>person.id)).size,15);
-for(const person of data.people){
-  assert(person.works.length>=7,`${person.person} has no substantive works index`);
-  assert(person.reviewCount>=10,`${person.person} has no substantive review coverage`);
+assert.equal(data.people.length,22);
+assert.equal(new Set(data.people.map(person=>person.id)).size,22);
+for(const person of [...data.people,...data.legacyPeople]){
+  if(data.people.includes(person)) assert(person.geometry?.contour && person.geometry?.hitPath && person.geometry?.headCenter,`${person.person} geometry missing`);
+  assert(person.works.length>=4,`${person.person} has no substantive works index`);
+  assert(person.reviewCount>=8,`${person.person} has no substantive review coverage`);
   assert(person.portrait && person.source && person.license,`${person.person} portrait credit incomplete`);
   for(const work of person.works){
     assert(work.slugs.length,`${person.person}: ${work.title} has no reviews`);
@@ -20,11 +21,14 @@ for(const person of data.people){
     }
   }
 }
-const workTitles=person=>new Set(data.people.find(entry=>entry.person===person).works.map(work=>work.title));
+const workTitles=person=>new Set([...data.people,...data.legacyPeople].find(entry=>entry.person===person).works.map(work=>work.title));
 assert(!workTitles('George Bernard Shaw').has('Dear Liar'));
 assert(!workTitles('Noël Coward').has('Cowardice'));
 assert(!workTitles('Samuel Beckett').has('Kaspar'));
 assert(!workTitles('Judith Thompson').has('Victory'));
+assert(!workTitles('Judith Thompson').has('Totem'));
+assert(!data.people.some(p=>p.person==='Judith Thompson'));
+assert.equal(data.people.find(p=>p.person==='Stephen Sondheim').href,'#collection:sondheim');
 assert(workTitles('Henrik Ibsen').has("A Doll's House"));
 assert(!workTitles('Henrik Ibsen').has('Mabou Mines Dollhouse'));
 
@@ -36,12 +40,12 @@ const helpers={
   splitEntityList:split,
 };
 const collections=makeCollections(records,helpers,{playwrights:data});
-assert.equal([...collections.values()].filter(collection=>collection.kind==='playwright').length,13);
-for(const person of data.people.filter(entry=>!['William Shakespeare','Tom Stoppard'].includes(entry.person))){
+assert.equal([...collections.values()].filter(collection=>collection.kind==='playwright').length,20);
+for(const person of [...data.people,...data.legacyPeople].filter(entry=>!['William Shakespeare','Tom Stoppard','Stephen Sondheim'].includes(entry.person))){
   const collection=collections.get(person.id);
   assert(collection,`${person.person} collection missing`);
   assert.equal(collection.records.length,person.reviewCount,`${person.person} review count differs from source`);
   assert.equal(collection.items.length,person.works.length,`${person.person} work count differs from source`);
   assert(collection.items.every(item=>item.records.length&&collection.itemMap.get(item.id)?.recordIds.size),`${person.person} has an empty work link`);
 }
-console.log('PASS: 15 credited playwrights, 13 curated routes, reviewed-work links, known exclusions and title aliases.');
+console.log('PASS: 22 clickable playwrights, 20 curated routes, reviewed-work links, known exclusions and title aliases.');

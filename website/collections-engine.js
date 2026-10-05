@@ -1,5 +1,5 @@
-import {isSondheimFrogs} from './play-authorship.js?v=246';
-import {normalize, publicationYear} from './catalog-engine.js?v=173';
+import {isSondheimFrogs} from './play-authorship.js?v=249';
+import {normalize, publicationYear} from './catalog-engine.js?v=249';
 export const COLLECTIONS = [
   {id:'recent',title:'Recent Collection',kind:'recent',href:'#collection:recent',intro:'Recent writing published for Cushman Collected.'},
   {id:'shakespeare',title:'Shakespeare Collection',kind:'plays',href:'#section:shakespeare',intro:'The plays, the productions, and a lifetime of returning to Shakespeare.'},
@@ -21,7 +21,7 @@ export function spotlightRecord(records, date = new Date()) {
   records = records.filter(record => !record.authorship_note && record.author !== "Unknown");
   if (!records.length) return null;
   const day = new Intl.DateTimeFormat('en-CA',{timeZone:'America/Toronto',year:'numeric',month:'2-digit',day:'2-digit'}).format(date);
-  const anniversary = records.filter(record => record.date?.slice(5) === day.slice(5) && record.date.slice(0,4) < day.slice(0,4) && (!record.date_precision || record.date_precision === 'day'));
+  const anniversary = records.filter(record => !record.date_is_estimated && record.date?.slice(5) === day.slice(5) && record.date.slice(0,4) < day.slice(0,4) && (!record.date_precision || record.date_precision === 'day'));
   if (!anniversary.length) return null;
   // Rotate among matching dates each year, independent of catalog ordering.
   const sorted = anniversary.sort((a,b)=>a.slug.localeCompare(b.slug));
@@ -74,9 +74,9 @@ export function makeCollections(records, h, curation = {}) {
     if(!fix.excludeProfiles&&/Profile|Obituary/.test(record.article_category))add('profiles',record,(fix.subjects||h.splitEntityList(record.subject_people)).filter(name=>name!=='Arlene Gould'));
   }
   const recordBySlug=new Map(records.map(record=>[record.slug,record]));
-  for(const person of curation.playwrights?.people||[]){
-    if(['William Shakespeare','Tom Stoppard'].includes(person.person))continue;
-    const collection={id:person.id,title:`${person.surname} Collection`,kind:'playwright',person:person.person,portrait:person.portrait,source:person.source,creator:person.creator,license:person.license,licenseUrl:person.licenseUrl,records:[],items:[],ungrouped:[]};
+  for(const person of [...(curation.playwrights?.people||[]),...(curation.playwrights?.legacyPeople||[])]){
+    if(['William Shakespeare','Tom Stoppard','Stephen Sondheim'].includes(person.person))continue;
+    const collection={id:person.id,title:`${person.surname} Collection`,kind:'playwright',person:person.person,portrait:person.portrait,portraitCrop:person.portraitCrop,source:person.source,creator:person.creator,license:person.license,licenseUrl:person.licenseUrl,records:[],items:[],ungrouped:[]};
     const map=new Map();
     for(const work of person.works){
       const linked=work.slugs.map(slug=>recordBySlug.get(slug)).filter(Boolean);

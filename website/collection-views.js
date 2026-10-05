@@ -1,9 +1,9 @@
 import {INDEX_LETTERS,indexSections} from './index-engine.js?v=173';
 import {theatreIllustration, renderFestivalMap, festivalLocation} from './festival-map.js?v=173';
-import {serialize, publicationYear, normalize} from './catalog-engine.js?v=173';
-import {COLLECTIONS,workKey} from './collections-engine.js?v=238';
+import {serialize, publicationYear, normalize} from './catalog-engine.js?v=249';
+import {COLLECTIONS,workKey} from './collections-engine.js?v=249';
 import {setCollectionTitle} from './collection-title.js?v=2';
-import {renderPlaywrightStage} from './playwright-stage.js?v=247';
+import {renderPlaywrightStage} from './playwright-stage.js?v=249';
 
 export function createCollectionViews({state,els,h,node,link,button,openIndex,getCollections}) {
   let activeMap=null, generation=0, artObserver=null, alphabetObserver=null, alphabetScrollCleanup=null, stickyTitleObserver=null, stickyNavObserver=null;
@@ -93,7 +93,7 @@ export function createCollectionViews({state,els,h,node,link,button,openIndex,ge
     els.indexContent.append(node('p','Artwork identifies the publications, shows, books, recordings and people discussed in this archive. Copyright remains with the respective rights holders. Source and licence details are listed below.','landing-intro'));
     const content=node('div',undefined,'image-credits');els.indexContent.append(content);
     try {
-      const response=await fetch(new URL('./assets/collections/credits.json?v=247',import.meta.url));
+      const response=await fetch(new URL('./assets/collections/credits.json?v=249',import.meta.url));
       if(!response.ok)throw new Error('Credits unavailable');
       const entries=await response.json();if(token!==generation)return;
       for(const asset of entries){
@@ -116,7 +116,19 @@ export function createCollectionViews({state,els,h,node,link,button,openIndex,ge
       if(intro){
         const note=node('section',undefined,'play-introduction-link play-introduction');
         note.setAttribute('aria-label',`Robert Cushman’s introduction to ${intro.play}`);
-        note.append(...h.paragraphNodes(intro.body, {people:[],roles:{}}));
+        const paragraphs=h.paragraphNodes(intro.body, {people:[],roles:{}});
+        const heading=node('h2',`Robert’s Intro to ${intro.play}`);
+        const rest=node('div',undefined,'play-introduction-rest');
+        rest.id='playIntroductionMore';rest.hidden=true;
+        rest.append(...paragraphs.slice(1));
+        const toggle=button('Read more',()=>{
+          rest.hidden=!rest.hidden;
+          toggle.textContent=rest.hidden?'Read more':'Read less';
+          toggle.setAttribute('aria-expanded',String(!rest.hidden));
+        },'play-introduction-toggle');
+        toggle.setAttribute('aria-expanded','false');
+        toggle.setAttribute('aria-controls',rest.id);
+        note.append(heading,paragraphs[0],rest,toggle);
         els.results.before(note);
       }
     }
@@ -180,7 +192,14 @@ export function createCollectionViews({state,els,h,node,link,button,openIndex,ge
       const copy=node('div',undefined,'playwright-collection-copy');
       copy.append(node('h2',collection.person,'playwright-collection-name'));
       copy.append(node('p',`${collection.items.length} works · ${collection.records.length} articles`,'playwright-collection-count'));
-      hero.append(portrait,copy);els.indexContent.append(hero);
+      let visual=portrait;
+      if(collection.portraitCrop){
+        const [x,y,width,height]=collection.portraitCrop;
+        visual=node('div',undefined,'playwright-portrait-crop');visual.style.aspectRatio=`${width}/${height}`;
+        portrait.style.cssText=`width:${1774/width*100}%;height:${887/height*100}%;left:${-x/width*100}%;top:${-y/height*100}%;`;
+        visual.append(portrait);
+      }
+      hero.append(visual,copy);els.indexContent.append(hero);
     }
     const field=node('label',undefined,'collection-find collection-find-compact');
     const search=node('input');search.type='search';search.setAttribute('aria-label',id==='profiles'?'Search for a person':'Search this collection');search.placeholder='Search this collection';search.value=params.get('q')||'';field.append(search);els.indexContent.append(field);

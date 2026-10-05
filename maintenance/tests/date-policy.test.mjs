@@ -1,0 +1,22 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import {articleDateLabel,timelineYear} from '../../website/catalog-engine.js';
+import {spotlightRecord} from '../../website/collections-engine.js';
+assert.equal(timelineYear({year:'1969',date_precision:'unknown'}),'');
+assert.equal(articleDateLabel({year:'1969',date_precision:'unknown'}),'Undated');
+assert.equal(timelineYear({date:'1967-03-01',date_precision:'month'}),'1967');
+assert.equal(articleDateLabel({date:'1967-03-01',date_precision:'month',date_is_estimated:true}),'c. March 1967');
+assert.equal(articleDateLabel({date:'1968-09-01',date_precision:'season',date_label:'Autumn 1968'}),'Autumn 1968');
+assert.equal(articleDateLabel({date:'1975-09-28',date_precision:'day',date_is_estimated:true}),'c. Sep 28, 1975');
+assert.equal(spotlightRecord([{slug:'estimated',date:'1975-09-28',date_precision:'day',date_is_estimated:true}],new Date('2026-09-28T16:00:00Z')),null);
+const records=JSON.parse(fs.readFileSync(new URL('../../site_export/data/catalog.json',import.meta.url)));
+const newTitles=['Children When They Sleep','Two Cities',"Lady Windermere's Fan",'Climb the Greased Pole','Two Gentlemen of Verona','Green Room: Doing What Comes Naturally'];
+for(const title of newTitles){const matches=records.filter(r=>r.title===title&&r.source_file.includes('Plays_and_Players'));assert.equal(matches.length,1,`One complete source record for ${title}`);const r=matches[0];assert(r.word_count>350);if(title==='Two Cities'){assert.equal(articleDateLabel(r),'Undated');assert.equal(timelineYear(r),'');}else{assert.equal(r.date_precision,'month');assert(r.date_is_estimated);assert(!/\b1,/.test(articleDateLabel(r)));}}
+const intros=JSON.parse(fs.readFileSync(new URL('../../site_export/data/play_introductions.json',import.meta.url)));
+assert(intros.every(i=>!records.some(r=>r.slug===i.slug)));
+const undated=records.filter(r=>articleDateLabel(r)==='Undated');
+assert.equal(undated.length,3);assert(undated.every(r=>!timelineYear(r)));
+assert.equal(records.filter(r=>r.title==='Open on Sundays').length,1);
+assert.equal(records.filter(r=>r.title==='The Strange Case of Martin Richter').length,1);
+for(const r of records.filter(r=>r.date_precision==='month'||r.date_precision==='season'))assert(!/\b1,/.test(articleDateLabel(r)));
+console.log('PASS: six complete sources, no duplicates, labelled estimates, month/season precision, no false anniversary and no undated timeline entries.');

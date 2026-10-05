@@ -1,6 +1,1525 @@
 {
-  "image": "./assets/collections/playwrights/group-ensemble.jpg",
+  "stageVersion": 2,
+  "image": "./assets/collections/playwrights/group-ensemble-22.png",
+  "imageSize": [
+    1774,
+    887
+  ],
   "people": [
+    {
+      "person": "Oscar Wilde",
+      "surname": "Wilde",
+      "id": "playwright-oscar-wilde",
+      "href": "#collection:playwright-oscar-wilde",
+      "reviewCount": 20,
+      "works": [
+        {
+          "title": "A Woman of No Importance",
+          "slugs": [
+            "2000-06-01-wilde-s-earnest-had-important-predecessor"
+          ],
+          "notes": ""
+        },
+        {
+          "title": "An Ideal Husband",
+          "slugs": [
+            "1978-02-05-the-phantom-from-vietnam",
+            "2007-08-31-an-earnest-effort-of-lesser-importance",
+            "2010-05-29-finding-strength-in-weaknesses-shaw-s-staging-of-an-ideal-husband-is-one-of-the-play-s-best"
+          ],
+          "notes": ""
+        },
+        {
+          "title": "Ever Yours, Oscar",
+          "slugs": [
+            "2009-06-25-the-importance-of-reading-oscar"
+          ],
+          "notes": ""
+        },
+        {
+          "title": "Lady Windermere's Fan",
+          "slugs": [
+            "1967-03-01-lady-windermere-s-fan",
+            "1994-07-31-theatre-the-little-goose-grows-up",
+            "2013-06-15-one-and-a-half-masterpieces-a-major-production-of-oscar-wilde-s-minor-play"
+          ],
+          "notes": ""
+        },
+        {
+          "title": "Salome",
+          "slugs": [
+            "2003-05-21-pacino-shows-off-but-very-creatively"
+          ],
+          "notes": ""
+        },
+        {
+          "title": "The Happy Prince",
+          "slugs": [
+            "2002-04-26-a-musical-worth-taking-your-parents-to"
+          ],
+          "notes": "Leslie Arden musical adaptation of Wilde's story; source-author inclusion."
+        },
+        {
+          "title": "The Importance of Being Earnest",
+          "slugs": [
+            "1975-03-23-the-obscurity-of-miller-s-earnest",
+            "1977-12-18-enter-tripenstein",
+            "1982-09-19-in-love-with-earnest",
+            "1997-09-06-classics-buoy-atlantic-festival-theatre-review-as-wolfville-s-third-season",
+            "1999-03-25-the-importance-of-being-true-to-the-script",
+            "2000-06-07-a-three-act-play-in-four-acts",
+            "2004-05-10-when-you-speak-of-love",
+            "2006-06-17-endings-droop-in-the-dust-soulpepper-s-earnest-is-rhythm-deaf",
+            "2009-06-04-the-discerning-upper-crust-would-approve"
+          ],
+          "notes": ""
+        },
+        {
+          "title": "The Picture of Dorian Gray",
+          "slugs": [
+            "1975-02-16-fighting-off-sharks"
+          ],
+          "notes": ""
+        }
+      ],
+      "geometry": {
+        "contour": "M 123 145 L 132 136 L 145 130 L 166 128 L 184 130 L 195 138 L 201 148 L 212 153 L 218 168 L 220 182 L 225 188 L 225 202 L 217 214 L 208 220 L 206 230 L 232 228 L 254 236 L 247 248 L 232 251 L 217 251 L 194 255 L 177 265 L 168 277 L 157 294 L 156 314 L 147 344 L 131 361 L 117 378 L 100 419 L 85 490 L 76 539 L 48 536 L 58 494 L 75 393 L 80 373 L 65 367 L 56 352 L 52 332 L 52 312 L 59 287 L 65 277 L 61 260 L 54 250 L 49 238 L 57 232 L 62 215 L 67 219 L 68 232 L 77 228 L 87 236 L 91 249 L 88 265 L 95 250 L 113 239 L 139 232 L 139 222 L 124 223 L 113 214 L 110 202 L 110 189 L 117 178 L 117 160 Z",
+        "hitPath": "M 123 145 L 132 136 L 145 130 L 166 128 L 184 130 L 195 138 L 201 148 L 212 153 L 218 168 L 220 182 L 225 188 L 225 202 L 217 214 L 208 220 L 206 230 L 232 228 L 254 236 L 247 248 L 232 251 L 217 251 L 194 255 L 177 265 L 168 277 L 157 294 L 156 314 L 147 344 L 131 361 L 117 378 L 100 419 L 85 490 L 76 539 L 48 536 L 58 494 L 75 393 L 80 373 L 65 367 L 56 352 L 52 332 L 52 312 L 59 287 L 65 277 L 61 260 L 54 250 L 49 238 L 57 232 L 62 215 L 67 219 L 68 232 L 77 228 L 87 236 L 91 249 L 88 265 L 95 250 L 113 239 L 139 232 L 139 222 L 124 223 L 113 214 L 110 202 L 110 189 L 117 178 L 117 160 Z",
+        "label": [
+          167,
+          69
+        ],
+        "headCenter": [
+          167,
+          177
+        ]
+      },
+      "portrait": "./assets/collections/playwrights/group-ensemble-22.png",
+      "portraitCrop": [
+        102,
+        104,
+        130,
+        173
+      ],
+      "source": "Original group illustration commissioned for Cushman Collected",
+      "creator": "Digitally generated illustration",
+      "license": "Owner-approved illustration; not a historical group photograph",
+      "licenseUrl": ""
+    },
+    {
+      "person": "Anton Chekhov",
+      "surname": "Chekhov",
+      "id": "playwright-anton-chekhov",
+      "href": "#collection:playwright-anton-chekhov",
+      "portrait": "./assets/collections/playwrights/03-anton-chekhov.jpg",
+      "box": [
+        626,
+        132,
+        178,
+        603
+      ],
+      "label": [
+        715.0,
+        104
+      ],
+      "works": [
+        {
+          "title": "Chekhov's Shorts",
+          "slugs": [
+            "1999-11-25-true-to-the-gentle-and-ruthless-chekhov"
+          ]
+        },
+        {
+          "title": "In the Ravine",
+          "slugs": [
+            "2002-02-09-the-long-and-short-of-chekhov"
+          ]
+        },
+        {
+          "title": "Peasants and Peasant Women",
+          "slugs": [
+            "2005-05-07-two-sides-of-alice-dont-quite-mesh-main-character-lacks-plausibility",
+            "2005-05-14-chekhov-s-heartache"
+          ]
+        },
+        {
+          "title": "Platonov",
+          "slugs": [
+            "1999-09-09-a-great-modern-play-brilliantly-done",
+            "2000-07-10-a-switchback-ride-between-farce-and-tragedy"
+          ]
+        },
+        {
+          "title": "Swan Song",
+          "slugs": [
+            "2002-09-16-the-master-and-the-apprentice"
+          ]
+        },
+        {
+          "title": "The Bear",
+          "slugs": [
+            "2002-09-16-the-master-and-the-apprentice",
+            "2005-01-17-whistle-while-you-clap-new-company-scores-with-bare-knuckled-knock-out-debut",
+            "2006-07-04-the-tsar-crossed-lovers"
+          ]
+        },
+        {
+          "title": "The Cherry Orchard",
+          "slugs": [
+            "1978-02-19-fizzling-fireworks-in-hall-s-orchard",
+            "2010-06-05-what-good-is-reality-anyway-shaw-s-season-strong-with-the-cherry-orchard"
+          ]
+        },
+        {
+          "title": "The Dangers of Tobacco",
+          "slugs": [
+            "2002-09-16-the-master-and-the-apprentice"
+          ]
+        },
+        {
+          "title": "The Seagull",
+          "slugs": [
+            "1975-11-02-down-in-the-country",
+            "1976-08-15-the-gull-flies-again",
+            "1981-04-12-the-seagull-flies-to-ireland",
+            "1981-10-18-a-soaring-seagull",
+            "2001-08-16-why-do-you-always-wear-modern-dress",
+            "2014-03-22-bird-in-their-hands-the-chekhov-collective-s-ethos-of-a-yearlong-process-has",
+            "2015-01-22-for-the-birds-chekhov-s-the-seagull-flies-high-in-crow-s-theatre-production"
+          ]
+        },
+        {
+          "title": "The Tragic Role",
+          "slugs": [
+            "2002-09-16-the-master-and-the-apprentice"
+          ]
+        },
+        {
+          "title": "The Wood Demon",
+          "slugs": [
+            "1973-09-02-a-chekhovian-powerhouse",
+            "1974-03-17-more-cheers-for-chekhov"
+          ]
+        },
+        {
+          "title": "Three Sisters",
+          "slugs": [
+            "1976-06-27-waiting-for-hickey",
+            "1979-10-07-the-sisters-of-stratford",
+            "1980-04-13-a-mad-world-in-arden",
+            "2003-05-28-found-in-translation",
+            "2007-09-08-three-sisters-who-break-your-heart-laszlo-marton-s-soulpepper-production-tops",
+            "2009-06-06-sisters-doing-it-for-and-to-themselves-martha-henry-s-production-a-triumph"
+          ]
+        },
+        {
+          "title": "Uncle Vanya",
+          "slugs": [
+            "1977-02-20-uncle-leo",
+            "1982-05-23-in-the-trap",
+            "1999-08-23-rage-and-regret-narrowly-focused",
+            "2001-08-02-dazzling-performances-drive-familiar-chekhov",
+            "2002-07-26-none-so-moving-as-this",
+            "2008-06-11-it-was-the-best-and-now-it-s-better",
+            "2016-05-19-back-down-the-rabbit-hole-again-a-literal-not-logical-tone-is-the-reverse"
+          ]
+        },
+        {
+          "title": "Ward No. 6",
+          "slugs": [
+            "2004-03-08-it-s-a-madhouse"
+          ]
+        }
+      ],
+      "reviewCount": 34,
+      "source": "https://commons.wikimedia.org/wiki/File:Anton_Chekhov_1889.jpg",
+      "creator": "V. Chekhovskii, Moscow",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "geometry": {
+        "contour": "M 294 153 L 298 144 L 312 136 L 326 133 L 343 135 L 355 140 L 362 151 L 365 167 L 363 183 L 359 195 L 355 210 L 347 223 L 349 234 L 363 242 L 374 251 L 353 256 L 332 261 L 316 272 L 305 289 L 297 307 L 295 328 L 282 350 L 275 337 L 275 315 L 267 293 L 251 270 L 258 250 L 280 237 L 302 229 L 301 218 L 294 205 L 292 189 L 289 178 L 292 168 Z",
+        "hitPath": "M 294 153 L 298 144 L 312 136 L 326 133 L 343 135 L 355 140 L 362 151 L 365 167 L 363 183 L 359 195 L 355 210 L 347 223 L 349 234 L 363 242 L 374 251 L 353 256 L 332 261 L 316 272 L 305 289 L 297 307 L 295 328 L 282 350 L 275 337 L 275 315 L 267 293 L 251 270 L 258 250 L 280 237 L 302 229 L 301 218 L 294 205 L 292 189 L 289 178 L 292 168 Z",
+        "label": [
+          329,
+          69
+        ],
+        "headCenter": [
+          329,
+          184
+        ]
+      }
+    },
+    {
+      "person": "George Bernard Shaw",
+      "surname": "Shaw",
+      "id": "playwright-george-bernard-shaw",
+      "href": "#collection:playwright-george-bernard-shaw",
+      "portrait": "./assets/collections/playwrights/02-george-bernard-shaw.jpg",
+      "box": [
+        465,
+        106,
+        220,
+        652
+      ],
+      "label": [
+        575.0,
+        78
+      ],
+      "works": [
+        {
+          "title": "Androcles and the Lion",
+          "slugs": [
+            "2017-09-19-the-art-of-theatre-is-the-art-of-acting-canadian-theatre-quality-gives-this"
+          ]
+        },
+        {
+          "title": "Arms and the Man",
+          "slugs": [
+            "1978-04-23-return-of-don-juan",
+            "1981-10-18-a-soaring-seagull",
+            "2006-05-08-upped-in-charms"
+          ]
+        },
+        {
+          "title": "Caesar and Cleopatra",
+          "slugs": [
+            "2002-05-23-festival-opens-with-shaw-at-his-most-shakespearean",
+            "2008-08-19-my-pharaoh-lady"
+          ]
+        },
+        {
+          "title": "Candida",
+          "slugs": [
+            "1993-07-10-theatre-candida",
+            "2002-07-09-which-shaw-will-she-go-for-in-the-end",
+            "2011-06-08-irish-pride-marital-divide"
+          ]
+        },
+        {
+          "title": "Fanny's First Play",
+          "slugs": [
+            "2001-07-07-play-s-best-joke-was-cut"
+          ]
+        },
+        {
+          "title": "Geneva",
+          "slugs": [
+            "2013-06-15-one-and-a-half-masterpieces-a-major-production-of-oscar-wilde-s-minor-play"
+          ]
+        },
+        {
+          "title": "Getting Married",
+          "slugs": [
+            "1999-06-01-no-marriage-no-sex-yet-sparks-still-fly",
+            "2008-05-27-marriage-isn-t-for-everyone"
+          ]
+        },
+        {
+          "title": "Heartbreak House",
+          "slugs": [
+            "1975-03-02-the-happiest-of-heartbreaks",
+            "1983-03-13-half-cock-heartbreak",
+            "1999-05-27-oh-what-a-lovely-dream",
+            "2011-05-28-of-heartbreakers-and-horsebackers-shaw-festival-s-50th-season-gets-off-to"
+          ]
+        },
+        {
+          "title": "In Good King Charles's Golden Days",
+          "slugs": [
+            "2009-05-25-the-king-et-al-a-production-to-make-shaw-proud-of-his-namesake-festival"
+          ]
+        },
+        {
+          "title": "John Bull's Other Island",
+          "slugs": [
+            "1980-06-01-shaw-s-bad-dreams"
+          ]
+        },
+        {
+          "title": "Major Barbara",
+          "slugs": [
+            "2005-07-13-barbara-deserves-promotion-shavian-conception-of-charity-begins-with-this",
+            "2013-05-25-for-betters-and-in-verse-shaw-festival-begins-with-maugham-runyon-and-some"
+          ]
+        },
+        {
+          "title": "Man and Superman",
+          "slugs": [
+            "1977-05-29-jonson-to-the-life",
+            "2004-07-06-shaw-s-hell-is-heavenly",
+            "2004-07-17-man-and-superman-six-exhilarating-hours-including-lunch",
+            "2019-10-12-to-hell-and-back"
+          ]
+        },
+        {
+          "title": "Misalliance",
+          "slugs": [
+            "1973-04-29-hands-across-the-channel",
+            "1990-05-25-theatre-review-misalliance",
+            "2003-05-23-gbs-has-plot-twists-falling-from-the-sky",
+            "2012-05-29-men-women-and-a-barrage-of-rhetoric"
+          ]
+        },
+        {
+          "title": "Mrs. Warren's Profession",
+          "slugs": [
+            "1997-03-25-theatre-review-mrs-warren-s-profession",
+            "2008-07-30-pieces-of-what-stratford-should-be-3",
+            "2016-05-19-back-down-the-rabbit-hole-again-a-literal-not-logical-tone-is-the-reverse"
+          ]
+        },
+        {
+          "title": "On the Rocks",
+          "slugs": [
+            "1982-05-09-shaw-for-our-times"
+          ]
+        },
+        {
+          "title": "Pygmalion",
+          "slugs": [
+            "1974-05-19-today-i-improvise",
+            "2004-05-10-when-you-speak-of-love",
+            "2004-05-29-shaw-festival-s-pygmalion-clear-and-exhilarating",
+            "2004-06-05-pygmalion",
+            "2004-06-19-simon-bradbury-plays-dustman-doolittle-with-aplomb",
+            "2004-08-14-simon-bradbury-handles-the-dustman-s-prose-arias-with-aplomb",
+            "2011-06-04-it-is-in-fact-quite-loverly-my-fair-lady-at-shaw-festival-makes-for",
+            "2015-07-11-tick-talk-present-set-pygmalion-suffers-from-a-temporal-flaw-in-logic-but"
+          ]
+        },
+        {
+          "title": "Saint Joan",
+          "slugs": [
+            "1993-05-28-theatre-review-saint-joan",
+            "2007-05-11-tender-is-the-knight-with-so-much-at-stake"
+          ]
+        },
+        {
+          "title": "The Admirable Bashville",
+          "slugs": [
+            "1982-07-25-telling-a-tale-of-two-cities"
+          ]
+        },
+        {
+          "title": "The Apple Cart",
+          "slugs": [
+            "2000-07-17-haunted-by-our-past-the-politics-mores-and-class-conflicts-of-the-20th-century"
+          ]
+        },
+        {
+          "title": "The Dark Lady of the Sonnets",
+          "slugs": [
+            "1982-07-25-telling-a-tale-of-two-cities"
+          ]
+        },
+        {
+          "title": "The Devil's Disciple",
+          "slugs": [
+            "2009-07-17-diabolic-morality"
+          ]
+        },
+        {
+          "title": "The Doctor's Dilemma",
+          "slugs": [
+            "2000-05-27-a-wonderful-treatment-of-shaws-medical-morality-play",
+            "2010-07-17-medical-muddle"
+          ]
+        },
+        {
+          "title": "The Man of Destiny",
+          "slugs": [
+            "1993-07-12-theatre-review-the-man-of-destiny"
+          ]
+        },
+        {
+          "title": "The Millionairess",
+          "slugs": [
+            "1979-01-07-england-s-a-prison",
+            "2001-05-25-margaret-thatcher-meets-ayn-rand",
+            "2012-07-11-mo-money-mo-problems-shaw-s-millionairess-struggles-to-settle-its-own-accounts"
+          ]
+        },
+        {
+          "title": "The Philanderer",
+          "slugs": [
+            "2007-05-28-the-fence-sitters-of-love-need-not-apply",
+            "2014-07-26-the-plotted-besotted-love-saves-the-day-if-not-the-play-in-george-bernard"
+          ]
+        },
+        {
+          "title": "Too True to Be Good",
+          "slugs": [
+            "2006-05-30-the-imperfect-crime"
+          ]
+        },
+        {
+          "title": "Village Wooing",
+          "slugs": [
+            "1999-07-22-delightful-lunchtime-wooing-follows-shaw-s-formula-from-a-to-z"
+          ]
+        },
+        {
+          "title": "Widowers' Houses",
+          "slugs": [
+            "2003-05-27-and-the-important-people-lived-happily-ever-after"
+          ]
+        },
+        {
+          "title": "You Never Can Tell",
+          "slugs": [
+            "2005-11-26-you-never-can-tell",
+            "2015-05-20-a-farce-to-be-reckoned-with-shaw-s-comedy-of-errors-you-never-can-tell-persuades"
+          ]
+        }
+      ],
+      "reviewCount": 59,
+      "source": "https://commons.wikimedia.org/wiki/File:Portrait_of_George_Bernard_Shaw_LCCN2004674432.jpg",
+      "creator": "Coburn, Alvin Langdon, 1882-1966, photographer",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "geometry": {
+        "contour": "M 410 134 L 414 119 L 426 109 L 443 105 L 456 104 L 471 111 L 478 122 L 480 139 L 485 149 L 488 162 L 485 175 L 480 188 L 480 198 L 487 207 L 509 213 L 530 220 L 531 240 L 531 268 L 526 279 L 507 289 L 494 307 L 485 330 L 479 372 L 470 392 L 451 396 L 441 372 L 435 345 L 436 324 L 433 302 L 422 281 L 406 265 L 390 253 L 402 236 L 419 224 L 416 213 L 420 198 L 414 186 L 412 170 L 410 156 Z",
+        "hitPath": "M 410 134 L 414 119 L 426 109 L 443 105 L 456 104 L 471 111 L 478 122 L 480 139 L 485 149 L 488 162 L 485 175 L 480 188 L 480 198 L 487 207 L 509 213 L 530 220 L 531 240 L 531 268 L 526 279 L 507 289 L 494 307 L 485 330 L 479 372 L 470 392 L 451 396 L 441 372 L 435 345 L 436 324 L 433 302 L 422 281 L 406 265 L 390 253 L 402 236 L 419 224 L 416 213 L 420 198 L 414 186 L 412 170 L 410 156 Z",
+        "label": [
+          449,
+          69
+        ],
+        "headCenter": [
+          449,
+          164
+        ]
+      }
+    },
+    {
+      "person": "Henrik Ibsen",
+      "surname": "Ibsen",
+      "id": "playwright-henrik-ibsen",
+      "href": "#collection:playwright-henrik-ibsen",
+      "portrait": "./assets/collections/playwrights/04-henrik-ibsen.jpg",
+      "box": [
+        771,
+        105,
+        190,
+        670
+      ],
+      "label": [
+        866.0,
+        77
+      ],
+      "works": [
+        {
+          "title": "A Doll's House",
+          "slugs": [
+            "1981-07-12-war-games",
+            "1996-08-10-theatre-review-a-doll-s-house",
+            "2000-11-25-a-feminist-play-written-by-a-man-who-was-not-a-feminist-at-all",
+            "2007-01-26-it-s-the-levels-man",
+            "2016-08-17-reverse-modernization-theatre-review-a-doll-s-house-the-39-steps-young"
+          ]
+        },
+        {
+          "title": "An Enemy of the People",
+          "slugs": [
+            "2015-10-26-the-bending-point-tarragons-gender-switching-enemy-of-the-people-embodies"
+          ]
+        },
+        {
+          "title": "Ghosts",
+          "slugs": [
+            "1978-06-04-shakespeare-as-i-like-it",
+            "1999-10-23-puzzling-symbolism-just-one-of-the-faults",
+            "2006-09-21-a-haunting-production",
+            "2011-10-19-bemusing-my-religion"
+          ]
+        },
+        {
+          "title": "Hedda Gabler",
+          "slugs": [
+            "1975-07-20-double-death",
+            "2005-06-04-playing-ibsen-forward-is-an-idea-that-doesnt-work-hedda-gabler-a-disaster",
+            "2005-06-11-on-stage",
+            "2012-08-15-green-eyed-monster-shaw-nails-the-inevitable-tragedy-of-ibsen-s-anti-heroine"
+          ]
+        },
+        {
+          "title": "John Gabriel Borkman",
+          "slugs": [
+            "2003-10-31-a-conspiracy-to-bring-famous-old-plays-to-toronto",
+            "2007-04-13-dolls-without-the-house"
+          ]
+        },
+        {
+          "title": "Little Eyolf",
+          "slugs": [
+            "2003-10-31-a-conspiracy-to-bring-famous-old-plays-to-toronto"
+          ]
+        },
+        {
+          "title": "Peer Gynt",
+          "slugs": [
+            "1982-06-20-peer-gynt-goes-roundabout",
+            "2010-02-02-a-moveable-piece"
+          ]
+        },
+        {
+          "title": "Rosmersholm",
+          "slugs": [
+            "2006-08-10-incredible-ibsen"
+          ]
+        },
+        {
+          "title": "The Lady from the Sea",
+          "slugs": [
+            "1979-05-20-honest-trickery",
+            "2015-05-23-good-news-bad-news-shaw-festival-s-the-lady-from-the-sea-excellent-and"
+          ]
+        },
+        {
+          "title": "The Wild Duck",
+          "slugs": [
+            "2005-07-30-a-cruelly-effective-wild-duck-but-olympia-loses-its-bite"
+          ]
+        },
+        {
+          "title": "When We Dead Awaken",
+          "slugs": [
+            "1975-11-09-consumed-by-flames",
+            "2003-10-31-a-conspiracy-to-bring-famous-old-plays-to-toronto"
+          ]
+        }
+      ],
+      "reviewCount": 23,
+      "source": "https://commons.wikimedia.org/wiki/File:Henrik_Ibsen_av_Eilif_Peterssen_1895.jpg",
+      "creator": "Eilif Peterssen",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "geometry": {
+        "contour": "M 539 142 L 544 129 L 554 123 L 556 116 L 568 112 L 580 110 L 595 112 L 606 116 L 616 123 L 625 132 L 634 143 L 636 159 L 632 174 L 625 185 L 620 198 L 609 210 L 616 219 L 637 226 L 646 233 L 637 259 L 632 289 L 620 326 L 632 377 L 612 384 L 591 376 L 576 366 L 568 343 L 567 321 L 561 300 L 548 287 L 534 280 L 534 242 L 541 219 L 559 210 L 553 202 L 546 188 L 540 176 L 535 161 L 536 150 Z",
+        "hitPath": "M 539 142 L 544 129 L 554 123 L 556 116 L 568 112 L 580 110 L 595 112 L 606 116 L 616 123 L 625 132 L 634 143 L 636 159 L 632 174 L 625 185 L 620 198 L 609 210 L 616 219 L 637 226 L 646 233 L 637 259 L 632 289 L 620 326 L 632 377 L 612 384 L 591 376 L 576 366 L 568 343 L 567 321 L 561 300 L 548 287 L 534 280 L 534 242 L 541 219 L 559 210 L 553 202 L 546 188 L 540 176 L 535 161 L 536 150 Z",
+        "label": [
+          587,
+          69
+        ],
+        "headCenter": [
+          587,
+          168
+        ]
+      }
+    },
+    {
+      "person": "Eugene O'Neill",
+      "surname": "O'Neill",
+      "id": "playwright-eugene-o-neill",
+      "href": "#collection:playwright-eugene-o-neill",
+      "reviewCount": 15,
+      "works": [
+        {
+          "title": "A Moon for the Misbegotten",
+          "slugs": [
+            "1983-06-26-unexplosive-bomb",
+            "2009-05-28-a-drink-to-their-stealth"
+          ],
+          "notes": ""
+        },
+        {
+          "title": "A Wife for a Life",
+          "slugs": [
+            "2013-06-15-one-and-a-half-masterpieces-a-major-production-of-oscar-wilde-s-minor-play"
+          ],
+          "notes": ""
+        },
+        {
+          "title": "Ah, Wilderness!",
+          "slugs": [
+            "2004-06-02-eugene-o-neill-simon",
+            "2004-06-12-ah-wilderness-tells-of-boyhood-as-o-neill-would-have-wished-it"
+          ],
+          "notes": ""
+        },
+        {
+          "title": "Anna Christie",
+          "slugs": [
+            "1979-10-14-case-for-subsidies"
+          ],
+          "notes": ""
+        },
+        {
+          "title": "Desire Under the Elms",
+          "slugs": [
+            "2012-03-08-buying-the-farm"
+          ],
+          "notes": ""
+        },
+        {
+          "title": "Hughie",
+          "slugs": [
+            "1980-01-27-distant-laughter",
+            "2008-07-05-american-star-wows-stratford-brian-dennehy-plays-an-expansive-drunk-and-a",
+            "2012-02-11-man-vs-man-the-double-and-hughie-two-delightful-duets"
+          ],
+          "notes": ""
+        },
+        {
+          "title": "Long Day's Journey into Night",
+          "slugs": [
+            "2012-03-03-say-terrible-things-apologize-repeat-the-eugene-oneill-formula-holds-up",
+            "2018-06-23-to-kill-a-mockingbird-long-day-s-journey-into-night"
+          ],
+          "notes": ""
+        },
+        {
+          "title": "The Emperor Jones",
+          "slugs": [
+            "1980-10-26-wood-fun"
+          ],
+          "notes": ""
+        },
+        {
+          "title": "The Iceman Cometh",
+          "slugs": [
+            "1976-06-27-waiting-for-hickey"
+          ],
+          "notes": ""
+        },
+        {
+          "title": "The Long Voyage Home",
+          "slugs": [
+            "1980-01-20-defending-a-good-man"
+          ],
+          "notes": ""
+        }
+      ],
+      "geometry": {
+        "contour": "M 686 132 L 695 121 L 710 114 L 728 112 L 745 112 L 753 120 L 755 134 L 757 146 L 755 157 L 751 168 L 752 182 L 745 196 L 739 211 L 746 220 L 766 228 L 782 237 L 781 262 L 776 285 L 765 301 L 758 321 L 766 349 L 760 376 L 739 384 L 730 361 L 723 348 L 724 331 L 720 312 L 719 294 L 713 279 L 704 271 L 689 266 L 666 269 L 642 281 L 647 261 L 655 231 L 676 215 L 688 207 L 688 191 L 682 176 L 681 156 Z",
+        "hitPath": "M 686 132 L 695 121 L 710 114 L 728 112 L 745 112 L 753 120 L 755 134 L 757 146 L 755 157 L 751 168 L 752 182 L 745 196 L 739 211 L 746 220 L 766 228 L 782 237 L 781 262 L 776 285 L 765 301 L 758 321 L 766 349 L 760 376 L 739 384 L 730 361 L 723 348 L 724 331 L 720 312 L 719 294 L 713 279 L 704 271 L 689 266 L 666 269 L 642 281 L 647 261 L 655 231 L 676 215 L 688 207 L 688 191 L 682 176 L 681 156 Z",
+        "label": [
+          721,
+          69
+        ],
+        "headCenter": [
+          721,
+          171
+        ]
+      },
+      "portrait": "./assets/collections/playwrights/group-ensemble-22.png",
+      "portraitCrop": [
+        656,
+        98,
+        130,
+        173
+      ],
+      "source": "Original group illustration commissioned for Cushman Collected",
+      "creator": "Digitally generated illustration",
+      "license": "Owner-approved illustration; not a historical group photograph",
+      "licenseUrl": ""
+    },
+    {
+      "person": "Bertolt Brecht",
+      "surname": "Brecht",
+      "id": "playwright-bertolt-brecht",
+      "href": "#collection:playwright-bertolt-brecht",
+      "portrait": "./assets/collections/playwrights/07-bertolt-brecht.jpg",
+      "box": [
+        765,
+        273,
+        178,
+        565
+      ],
+      "label": [
+        854.0,
+        414.25
+      ],
+      "works": [
+        {
+          "title": "A Man's A Man",
+          "slugs": [
+            "1975-11-09-consumed-by-flames"
+          ]
+        },
+        {
+          "title": "Drums in the Night",
+          "slugs": [
+            "1973-09-02-a-chekhovian-powerhouse"
+          ]
+        },
+        {
+          "title": "Happy End",
+          "slugs": [
+            "2003-10-02-royalty-gangsters-and-classic-brecht-weill-songs",
+            "2005-06-01-both-these-ends-justify-the-means",
+            "2005-06-11-on-stage"
+          ]
+        },
+        {
+          "title": "Mother Courage and Her Children",
+          "slugs": [
+            "2014-06-14-the-full-bertolt-brecht-s-mother-courage-and-her-children-gets-an-exceptionally"
+          ]
+        },
+        {
+          "title": "Saint Joan of the Stockyards",
+          "slugs": [
+            "1974-05-19-today-i-improvise"
+          ]
+        },
+        {
+          "title": "Schweyk in the Second World War",
+          "slugs": [
+            "1977-08-21-making-you-blub",
+            "1982-09-26-the-little-man"
+          ]
+        },
+        {
+          "title": "Señora Carrar's Rifles",
+          "slugs": [
+            "2014-01-11-spoof-of-the-matter-killer-business-gets-silly-while-rifles-goes-political"
+          ]
+        },
+        {
+          "title": "The Caucasian Chalk Circle",
+          "slugs": [
+            "1980-02-03-king-ramaz"
+          ]
+        },
+        {
+          "title": "The Good Woman of Setzuan",
+          "slugs": [
+            "1977-10-16-doubts-about-brecht"
+          ]
+        },
+        {
+          "title": "The Private Life of the Third Reich",
+          "slugs": [
+            "1979-09-16-who-cares-who-dunnit"
+          ]
+        },
+        {
+          "title": "The Threepenny Opera",
+          "slugs": [
+            "1986-05-01-the-threepenny-opera",
+            "2007-02-03-soulpepper-gets-to-the-core-of-heartless-play"
+          ]
+        }
+      ],
+      "reviewCount": 15,
+      "source": "https://commons.wikimedia.org/wiki/File:Bertolt-Brecht.jpg",
+      "creator": "Kolbe, Jörg",
+      "license": "CC BY-SA 3.0 de",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en",
+      "geometry": {
+        "contour": "M 795 154 L 801 144 L 814 136 L 830 132 L 844 135 L 854 139 L 861 148 L 866 160 L 868 176 L 868 192 L 863 204 L 853 218 L 848 231 L 862 237 L 870 251 L 876 269 L 878 263 L 878 245 L 875 232 L 870 224 L 873 215 L 883 213 L 891 209 L 899 212 L 897 217 L 886 220 L 895 228 L 899 241 L 902 258 L 899 274 L 910 290 L 921 300 L 927 310 L 927 319 L 918 335 L 905 349 L 897 364 L 882 377 L 870 370 L 877 347 L 878 332 L 874 313 L 865 295 L 850 287 L 832 284 L 808 291 L 783 310 L 779 293 L 783 282 L 788 261 L 789 237 L 803 226 L 801 214 L 797 200 L 797 185 L 793 177 Z",
+        "hitPath": "M 795 154 L 801 144 L 814 136 L 830 132 L 844 135 L 854 139 L 861 148 L 866 160 L 868 176 L 868 192 L 863 204 L 853 218 L 848 231 L 862 237 L 870 251 L 876 269 L 878 263 L 878 245 L 875 232 L 870 224 L 873 215 L 883 213 L 891 209 L 899 212 L 897 217 L 886 220 L 895 228 L 899 241 L 902 258 L 899 274 L 910 290 L 921 300 L 927 310 L 927 319 L 918 335 L 905 349 L 897 364 L 882 377 L 870 370 L 877 347 L 878 332 L 874 313 L 865 295 L 850 287 L 832 284 L 808 291 L 783 310 L 779 293 L 783 282 L 788 261 L 789 237 L 803 226 L 801 214 L 797 200 L 797 185 L 793 177 Z",
+        "label": [
+          831,
+          69
+        ],
+        "headCenter": [
+          831,
+          181
+        ]
+      }
+    },
+    {
+      "person": "Samuel Beckett",
+      "surname": "Beckett",
+      "id": "playwright-samuel-beckett",
+      "href": "#collection:playwright-samuel-beckett",
+      "portrait": "./assets/collections/playwrights/09-samuel-beckett.jpg",
+      "box": [
+        1124,
+        124,
+        205,
+        623
+      ],
+      "label": [
+        1226.5,
+        96
+      ],
+      "works": [
+        {
+          "title": "All But Gone",
+          "slugs": [
+            "2016-10-19-controller-controller"
+          ]
+        },
+        {
+          "title": "Beckett Shorts",
+          "slugs": [
+            "1973-06-24-two-from-the-critics",
+            "2004-12-10-boisterous-beckett-bits-best-brainy-bertolt-brecht"
+          ]
+        },
+        {
+          "title": "Endgame",
+          "slugs": [
+            "1999-07-27-rage-against-the-body-s-limitations",
+            "2012-11-03-the-means-to-an-end"
+          ]
+        },
+        {
+          "title": "Footfalls",
+          "slugs": [
+            "2000-04-18-cheerfulness-will-keep-breaking-in"
+          ]
+        },
+        {
+          "title": "Happy Days",
+          "slugs": [
+            "1975-03-16-from-frayn-to-beckett",
+            "1979-06-10-playing-for-kicks",
+            "2003-07-18-poised-between-delight-and-despair"
+          ]
+        },
+        {
+          "title": "Krapp's Last Tape",
+          "slugs": [
+            "2000-04-18-cheerfulness-will-keep-breaking-in",
+            "undated-cocteau-ionesco-becket-new-company-at-a-d-c"
+          ]
+        },
+        {
+          "title": "Play and Other Plays",
+          "slugs": [
+            "1976-05-23-in-a-hellish-half-light"
+          ]
+        },
+        {
+          "title": "The Beckett Trilogy",
+          "slugs": [
+            "2015-10-24-godot-of-small-things-the-beckett-trilogy-reveals-the-careful-showman-behind"
+          ]
+        },
+        {
+          "title": "Waiting for Godot",
+          "slugs": [
+            "1981-02-22-acting-your-age",
+            "2004-06-21-transformed-by-time",
+            "2004-06-26-hutt-putters-around-and-steals-the-show-while-waiting-for-godot",
+            "2004-08-21-waiting-for-godot-has-a-chance-at-greatness-as-the-run-progress",
+            "2013-07-06-super-tramps-stratford-s-waiting-for-godot-features-a-natty-vladimir-a-great",
+            "2017-09-27-parting-with-tradition-theatre-review-waiting-for-godot"
+          ]
+        }
+      ],
+      "reviewCount": 18,
+      "source": "https://commons.wikimedia.org/wiki/File:Samuel_Beckett%2C_Pic%2C_1_%28cropped%29.jpg",
+      "creator": "Roger Pic",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "geometry": {
+        "contour": "M 940 130 L 944 120 L 951 110 L 963 109 L 974 104 L 985 107 L 993 110 L 1006 115 L 1011 123 L 1017 133 L 1014 149 L 1012 164 L 1010 178 L 1007 193 L 1000 207 L 1001 218 L 1016 231 L 1048 245 L 1043 272 L 1046 308 L 1029 299 L 1019 291 L 1005 286 L 988 288 L 975 297 L 967 309 L 957 327 L 950 347 L 943 365 L 919 375 L 918 369 L 924 348 L 934 334 L 938 320 L 935 300 L 929 278 L 929 255 L 936 233 L 947 222 L 945 209 L 938 197 L 935 179 L 934 163 L 938 149 Z",
+        "hitPath": "M 940 130 L 944 120 L 951 110 L 963 109 L 974 104 L 985 107 L 993 110 L 1006 115 L 1011 123 L 1017 133 L 1014 149 L 1012 164 L 1010 178 L 1007 193 L 1000 207 L 1001 218 L 1016 231 L 1048 245 L 1043 272 L 1046 308 L 1029 299 L 1019 291 L 1005 286 L 988 288 L 975 297 L 967 309 L 957 327 L 950 347 L 943 365 L 919 375 L 918 369 L 924 348 L 934 334 L 938 320 L 935 300 L 929 278 L 929 255 L 936 233 L 947 222 L 945 209 L 938 197 L 935 179 L 934 163 L 938 149 Z",
+        "label": [
+          976,
+          69
+        ],
+        "headCenter": [
+          976,
+          172
+        ]
+      }
+    },
+    {
+      "person": "Tennessee Williams",
+      "surname": "Williams",
+      "id": "playwright-tennessee-williams",
+      "href": "#collection:playwright-tennessee-williams",
+      "portrait": "./assets/collections/playwrights/12-tennessee-williams.jpg",
+      "box": [
+        1262,
+        267,
+        190,
+        568
+      ],
+      "label": [
+        1357.0,
+        409.0
+      ],
+      "works": [
+        {
+          "title": "A Lovely Sunday for Creve Coeur",
+          "slugs": [
+            "2014-07-19-oceans-of-emotion-a-masterful-take-on-the-sea-and-a-mirthful-production-of"
+          ]
+        },
+        {
+          "title": "A Perfect Analysis Given By A Parrot",
+          "slugs": [
+            "1999-11-18-a-lunch-size-portion-of-tennessee-williams"
+          ]
+        },
+        {
+          "title": "A Streetcar Named Desire",
+          "slugs": [
+            "1974-03-17-more-cheers-for-chekhov",
+            "1999-07-20-next-stop-heartbreak-and-destruction",
+            "2019-10-25-streetcars-to-soulpepper-past"
+          ]
+        },
+        {
+          "title": "Cat on a Hot Tin Roof",
+          "slugs": [
+            "2005-06-07-of-cats-brothers-and-hot-relations",
+            "2011-05-31-theatre-review-cat-on-a-hot-tin-roof"
+          ]
+        },
+        {
+          "title": "Orpheus Descending",
+          "slugs": [
+            "2005-07-06-production-makes-a-case-for-the-ultimate-williams-play",
+            "2007-01-09-from-italy-with-a-valentine"
+          ]
+        },
+        {
+          "title": "Suddenly Last Summer",
+          "slugs": [
+            "1983-07-03-singin-on-the-stage"
+          ]
+        },
+        {
+          "title": "Summer and Smoke",
+          "slugs": [
+            "2007-07-23-genesis-of-blanche-dubois-summer-and-smoke"
+          ]
+        },
+        {
+          "title": "Talk to Me Like the Rain and Let Me Listen",
+          "slugs": [
+            "1999-04-28-tennessee-williams-for-two"
+          ]
+        },
+        {
+          "title": "The Glass Menagerie",
+          "slugs": [
+            "2005-01-17-whistle-while-you-clap-new-company-scores-with-bare-knuckled-knock-out-debut",
+            "2005-01-29-glass-menagerie-gets-off-to-a-firm-start-but-wilts-thereafter",
+            "2006-06-08-meet-the-transparents",
+            "2011-07-09-romance-meets-reality-soulpepper-s-take-on-glass-menagerie-magnificently-moving"
+          ]
+        },
+        {
+          "title": "This Property is Condemned",
+          "slugs": [
+            "1975-04-06-the-kiss-in-the-cafe"
+          ]
+        },
+        {
+          "title": "Vieux Carré",
+          "slugs": [
+            "1978-08-20-back-to-new-orleans",
+            "2012-03-31-now-playing"
+          ]
+        }
+      ],
+      "reviewCount": 19,
+      "source": "https://commons.wikimedia.org/wiki/File:Tennessee_Williams_NYWTS.jpg",
+      "creator": "Orlando Fernandez, World Telegram staff photographer",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "geometry": {
+        "contour": "M 1058 161 L 1064 151 L 1076 144 L 1090 139 L 1105 141 L 1116 147 L 1124 156 L 1128 173 L 1129 186 L 1127 202 L 1121 218 L 1119 231 L 1137 237 L 1164 249 L 1168 278 L 1170 300 L 1158 287 L 1141 279 L 1128 279 L 1111 286 L 1100 299 L 1094 314 L 1089 337 L 1086 356 L 1077 374 L 1064 370 L 1054 346 L 1052 323 L 1055 300 L 1054 275 L 1049 252 L 1069 238 L 1079 233 L 1075 222 L 1065 212 L 1059 197 L 1056 183 L 1055 174 Z",
+        "hitPath": "M 1058 161 L 1064 151 L 1076 144 L 1090 139 L 1105 141 L 1116 147 L 1124 156 L 1128 173 L 1129 186 L 1127 202 L 1121 218 L 1119 231 L 1137 237 L 1164 249 L 1168 278 L 1170 300 L 1158 287 L 1141 279 L 1128 279 L 1111 286 L 1100 299 L 1094 314 L 1089 337 L 1086 356 L 1077 374 L 1064 370 L 1054 346 L 1052 323 L 1055 300 L 1054 275 L 1049 252 L 1069 238 L 1079 233 L 1075 222 L 1065 212 L 1059 197 L 1056 183 L 1055 174 Z",
+        "label": [
+          1095,
+          69
+        ],
+        "headCenter": [
+          1095,
+          188
+        ]
+      }
+    },
+    {
+      "person": "Harold Pinter",
+      "surname": "Pinter",
+      "id": "playwright-harold-pinter",
+      "href": "#collection:playwright-harold-pinter",
+      "portrait": "./assets/collections/playwrights/10-harold-pinter.jpg",
+      "box": [
+        1144,
+        265,
+        172,
+        571
+      ],
+      "label": [
+        1230.0,
+        407.75
+      ],
+      "works": [
+        {
+          "title": "A Kind of Alaska",
+          "slugs": [
+            "1982-10-17-faraway-places"
+          ]
+        },
+        {
+          "title": "A Slight Ache",
+          "slugs": [
+            "1973-10-21-pinter-s-mixed-doubles"
+          ]
+        },
+        {
+          "title": "Ashes to Ashes",
+          "slugs": [
+            "1999-02-12-classic-pinter-carrying-pain-with-pride"
+          ]
+        },
+        {
+          "title": "Betrayal",
+          "slugs": [
+            "1979-03-11-theatre",
+            "2000-09-11-pinter-reconsidered-considerably-redeemed",
+            "2000-10-09-pinter-s-betrayal-becomes-a-most-admired-work",
+            "2019-10-25-streetcars-to-soulpepper-past"
+          ]
+        },
+        {
+          "title": "Celebration",
+          "slugs": [
+            "2001-10-20-pinter-commands-the-spoken-word"
+          ]
+        },
+        {
+          "title": "Family Voices",
+          "slugs": [
+            "1982-10-17-faraway-places"
+          ]
+        },
+        {
+          "title": "Landscape",
+          "slugs": [
+            "1973-10-21-pinter-s-mixed-doubles"
+          ]
+        },
+        {
+          "title": "No Man's Land",
+          "slugs": [
+            "1975-04-27-mr-pinter-s-spoonerisms",
+            "2003-07-14-second-hand-satire-is-sweet"
+          ]
+        },
+        {
+          "title": "Other Places",
+          "slugs": [
+            "1982-10-17-faraway-places"
+          ]
+        },
+        {
+          "title": "The Birthday Party",
+          "slugs": [
+            "1975-01-19-true-love-conquers-all-as-usual"
+          ]
+        },
+        {
+          "title": "The Caretaker",
+          "slugs": [
+            "1980-11-16-illuminating-labour",
+            "1981-05-31-back-to-arden-s-dance",
+            "2006-11-03-dynamite-diego"
+          ]
+        },
+        {
+          "title": "The Dumb Waiter",
+          "slugs": [
+            "2004-07-16-a-double-bill-with-the-requisite-two-wise-guys",
+            "2004-07-24-the-dumb-waiter-the-zoo-story"
+          ]
+        },
+        {
+          "title": "The Homecoming",
+          "slugs": [
+            "1978-05-07-disorderly-conduct",
+            "2011-08-16-menace-through-anxiety"
+          ]
+        },
+        {
+          "title": "The Hothouse",
+          "slugs": [
+            "1980-05-04-inside-pinter-s-hothouse"
+          ]
+        },
+        {
+          "title": "The Lover",
+          "slugs": [
+            "2005-02-24-videocabaret-makes-riel-impact-with-limited-resources"
+          ]
+        },
+        {
+          "title": "Victoria Station",
+          "slugs": [
+            "1982-10-17-faraway-places"
+          ]
+        }
+      ],
+      "reviewCount": 20,
+      "source": "https://commons.wikimedia.org/wiki/File:Harold_Pinter_1962.jpg",
+      "creator": "Jack de Nijs  for  Anefo",
+      "license": "CC0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "geometry": {
+        "contour": "M 1187 158 L 1193 146 L 1208 136 L 1222 132 L 1237 130 L 1249 136 L 1259 147 L 1265 162 L 1267 179 L 1264 195 L 1259 211 L 1250 226 L 1256 236 L 1282 242 L 1303 241 L 1314 244 L 1312 258 L 1319 279 L 1310 289 L 1297 292 L 1282 300 L 1270 314 L 1259 333 L 1254 351 L 1240 378 L 1225 387 L 1204 386 L 1198 369 L 1195 350 L 1195 331 L 1188 316 L 1180 309 L 1176 282 L 1172 249 L 1185 234 L 1196 225 L 1190 210 L 1185 195 L 1182 178 Z",
+        "hitPath": "M 1187 158 L 1193 146 L 1208 136 L 1222 132 L 1237 130 L 1249 136 L 1259 147 L 1265 162 L 1267 179 L 1264 195 L 1259 211 L 1250 226 L 1256 236 L 1282 242 L 1303 241 L 1314 244 L 1312 258 L 1319 279 L 1310 289 L 1297 292 L 1282 300 L 1270 314 L 1259 333 L 1254 351 L 1240 378 L 1225 387 L 1204 386 L 1198 369 L 1195 350 L 1195 331 L 1188 316 L 1180 309 L 1176 282 L 1172 249 L 1185 234 L 1196 225 L 1190 210 L 1185 195 L 1182 178 Z",
+        "label": [
+          1222,
+          69
+        ],
+        "headCenter": [
+          1222,
+          183
+        ]
+      }
+    },
+    {
+      "person": "David Mamet",
+      "surname": "Mamet",
+      "id": "playwright-david-mamet",
+      "href": "#collection:playwright-david-mamet",
+      "reviewCount": 13,
+      "works": [
+        {
+          "title": "American Buffalo",
+          "slugs": [
+            "1978-07-23-theatre-round-up",
+            "2006-04-08-american-buffalo-lacks-exuberance-lucid-but-not-up-to-company-s-standards"
+          ],
+          "notes": ""
+        },
+        {
+          "title": "Boston Marriage",
+          "slugs": [
+            "2015-04-18-femmes-the-breaks-david-mamet-s-boston-marriage-offers-a-19th-century-female-focused"
+          ],
+          "notes": ""
+        },
+        {
+          "title": "Duck Variations",
+          "slugs": [
+            "1977-12-11-riotous-appetites"
+          ],
+          "notes": ""
+        },
+        {
+          "title": "Glengarry Glen Ross",
+          "slugs": [
+            "1983-09-25-all-american-boys",
+            "1983-10-02-back-to-the-fifties",
+            "2003-04-08-despite-loss-of-sponsor-world-stage-fest-is-smokin",
+            "2009-04-14-on-swashbucklers-single-malts-survival"
+          ],
+          "notes": ""
+        },
+        {
+          "title": "Oleanna",
+          "slugs": [
+            "2011-02-08-sexual-perversity-in-toronto"
+          ],
+          "notes": ""
+        },
+        {
+          "title": "Race",
+          "slugs": [
+            "2013-04-20-about-the-law-race-is-mamet-in-fine-fettle-though-the-subject-of-the-play"
+          ],
+          "notes": ""
+        },
+        {
+          "title": "Romance",
+          "slugs": [
+            "2006-06-10-everyone-is-racist-or-homophobic-or-both-romance-is-funny-oddly-liberating"
+          ],
+          "notes": ""
+        },
+        {
+          "title": "Sexual Perversity in Chicago",
+          "slugs": [
+            "1977-12-11-riotous-appetites"
+          ],
+          "notes": ""
+        },
+        {
+          "title": "Speed-the-Plow",
+          "slugs": [
+            "2002-05-11-aggression-heads-to-hollywood",
+            "2012-07-21-everyone-s-a-whore-soulpepper-s-take-on-speed-the-plow-is-a-seductive-one"
+          ],
+          "notes": ""
+        }
+      ],
+      "geometry": {
+        "contour": "M 1325 156 L 1332 145 L 1344 138 L 1358 136 L 1373 136 L 1386 141 L 1394 153 L 1399 169 L 1396 186 L 1394 204 L 1387 219 L 1389 231 L 1410 235 L 1438 242 L 1434 251 L 1428 278 L 1421 288 L 1411 303 L 1404 320 L 1397 348 L 1392 374 L 1377 385 L 1364 371 L 1356 345 L 1344 317 L 1330 301 L 1324 285 L 1320 258 L 1322 241 L 1334 231 L 1336 218 L 1329 208 L 1325 194 L 1322 180 L 1322 167 Z",
+        "hitPath": "M 1325 156 L 1332 145 L 1344 138 L 1358 136 L 1373 136 L 1386 141 L 1394 153 L 1399 169 L 1396 186 L 1394 204 L 1387 219 L 1389 231 L 1410 235 L 1438 242 L 1434 251 L 1428 278 L 1421 288 L 1411 303 L 1404 320 L 1397 348 L 1392 374 L 1377 385 L 1364 371 L 1356 345 L 1344 317 L 1330 301 L 1324 285 L 1320 258 L 1322 241 L 1334 231 L 1336 218 L 1329 208 L 1325 194 L 1322 180 L 1322 167 Z",
+        "label": [
+          1361,
+          69
+        ],
+        "headCenter": [
+          1361,
+          188
+        ]
+      },
+      "portrait": "./assets/collections/playwrights/group-ensemble-22.png",
+      "portraitCrop": [
+        1296,
+        115,
+        130,
+        173
+      ],
+      "source": "Original group illustration commissioned for Cushman Collected",
+      "creator": "Digitally generated illustration",
+      "license": "Owner-approved illustration; not a historical group photograph",
+      "licenseUrl": ""
+    },
+    {
+      "person": "Sam Shepard",
+      "surname": "Shepard",
+      "id": "playwright-sam-shepard",
+      "href": "#collection:playwright-sam-shepard",
+      "reviewCount": 12,
+      "works": [
+        {
+          "title": "Buried Child",
+          "slugs": [
+            "1978-12-17-chicago-chuffer",
+            "2009-01-15-brooding-american"
+          ],
+          "notes": ""
+        },
+        {
+          "title": "Cowboy Mouth",
+          "slugs": [
+            "2013-02-09-selfcentred-a-pair-of-plays-turn-personal-stories-into-misguided-myths"
+          ],
+          "notes": "Co-written with Patti Smith; both credited in the matched production group."
+        },
+        {
+          "title": "Fool for Love",
+          "slugs": [
+            "1983-08-21-kings-and-drag-queens",
+            "1984-12-01-fool-for-love",
+            "2005-08-20-follows-flowers-in-fool",
+            "2019-07-23-fool-me-twice"
+          ],
+          "notes": ""
+        },
+        {
+          "title": "Geography of a Horse Dreamer",
+          "slugs": [
+            "1974-03-03-monty-mania"
+          ],
+          "notes": ""
+        },
+        {
+          "title": "Seduced",
+          "slugs": [
+            "1980-05-25-friends-romans-the-lot"
+          ],
+          "notes": ""
+        },
+        {
+          "title": "Suicide in B Flat",
+          "slugs": [
+            "1977-10-23-and-rosmersholm-makes-five"
+          ],
+          "notes": ""
+        },
+        {
+          "title": "The Tooth of Crime",
+          "slugs": [
+            "1983-09-25-all-american-boys"
+          ],
+          "notes": ""
+        },
+        {
+          "title": "True West",
+          "slugs": [
+            "2013-04-06-toaster-fight-sam-shepard-s-true-west-finally-works-the-whipping-boy-s-dixieland"
+          ],
+          "notes": ""
+        }
+      ],
+      "geometry": {
+        "contour": "M 1439 136 L 1447 122 L 1460 116 L 1473 114 L 1483 114 L 1495 113 L 1509 122 L 1518 128 L 1522 140 L 1518 152 L 1518 168 L 1513 183 L 1512 199 L 1505 213 L 1506 227 L 1523 231 L 1543 239 L 1539 270 L 1541 288 L 1528 289 L 1518 300 L 1510 318 L 1502 335 L 1498 356 L 1495 374 L 1482 380 L 1471 367 L 1470 345 L 1475 324 L 1480 306 L 1474 289 L 1460 279 L 1443 276 L 1436 281 L 1442 252 L 1446 237 L 1460 227 L 1456 213 L 1451 201 L 1447 187 L 1444 170 L 1442 156 Z",
+        "hitPath": "M 1439 136 L 1447 122 L 1460 116 L 1473 114 L 1483 114 L 1495 113 L 1509 122 L 1518 128 L 1522 140 L 1518 152 L 1518 168 L 1513 183 L 1512 199 L 1505 213 L 1506 227 L 1523 231 L 1543 239 L 1539 270 L 1541 288 L 1528 289 L 1518 300 L 1510 318 L 1502 335 L 1498 356 L 1495 374 L 1482 380 L 1471 367 L 1470 345 L 1475 324 L 1480 306 L 1474 289 L 1460 279 L 1443 276 L 1436 281 L 1442 252 L 1446 237 L 1460 227 L 1456 213 L 1451 201 L 1447 187 L 1444 170 L 1442 156 Z",
+        "label": [
+          1481,
+          69
+        ],
+        "headCenter": [
+          1481,
+          178
+        ]
+      },
+      "portrait": "./assets/collections/playwrights/group-ensemble-22.png",
+      "portraitCrop": [
+        1416,
+        105,
+        130,
+        173
+      ],
+      "source": "Original group illustration commissioned for Cushman Collected",
+      "creator": "Digitally generated illustration",
+      "license": "Owner-approved illustration; not a historical group photograph",
+      "licenseUrl": ""
+    },
+    {
+      "person": "Tom Stoppard",
+      "surname": "Stoppard",
+      "id": "playwright-tom-stoppard",
+      "href": "#collection:stoppard",
+      "portrait": "./assets/collections/playwrights/06-tom-stoppard.jpg",
+      "box": [
+        268,
+        228,
+        240,
+        607
+      ],
+      "label": [
+        388.0,
+        379.75
+      ],
+      "works": [
+        {
+          "title": "Arcadia",
+          "slugs": [
+            "2013-08-03-pulling-out-stoppard-shaw-festival-s-arcadia-sparkles-but-what-about",
+            "2014-11-15-heads-will-roll-two-new-ish-productions-are-more-successful-at-evoking-worlds"
+          ]
+        },
+        {
+          "title": "Beckett Shorts",
+          "slugs": [
+            "1973-06-24-two-from-the-critics"
+          ]
+        },
+        {
+          "title": "Every Good Boy Deserves Favour",
+          "slugs": [
+            "1977-07-03-vonnegut-s-near-myth",
+            "1978-06-18-drama-for-actors-and-orchestra",
+            "1978-07-09-ben-jonson-to-bruce-forsyth"
+          ]
+        },
+        {
+          "title": "Heroes",
+          "slugs": [
+            "2005-11-19-london-theatres-inspire-deja-vu-same-musicals-as-toronto-and-then-there-s"
+          ]
+        },
+        {
+          "title": "If You're Glad I'll Be Frank",
+          "slugs": [
+            "1976-12-05-updating-king-lear"
+          ]
+        },
+        {
+          "title": "Indian Ink",
+          "slugs": [
+            "2002-04-09-stoppard-gem-translates-so-well"
+          ]
+        },
+        {
+          "title": "Jumpers",
+          "slugs": [
+            "1985-05-01-tom-and-viv-and-jumpers"
+          ]
+        },
+        {
+          "title": "Night and Day",
+          "slugs": [
+            "1978-11-12-scooping-up-africa",
+            "1979-03-11-theatre"
+          ]
+        },
+        {
+          "title": "On the Razzle",
+          "slugs": [
+            "1981-09-27-stoppard-on-the-razzle"
+          ]
+        },
+        {
+          "title": "Professional Foul",
+          "slugs": [
+            "1977-10-02-nights-of-opera-and-telly"
+          ]
+        },
+        {
+          "title": "Rock 'n' Roll",
+          "slugs": [
+            "2008-02-28-rocking-the-republic",
+            "2009-10-05-the-sound-of-the-fury"
+          ]
+        },
+        {
+          "title": "Rosencrantz And Guildenstern Are Dead",
+          "slugs": [
+            "1975-01-19-tragedy-of-the-hungry-tribe"
+          ]
+        },
+        {
+          "title": "Rosencrantz and Guildenstern Are Dead",
+          "slugs": [
+            "2013-02-21-the-bard-reworked-soulpepper-finds-new-depths-in-stoppard-while-shakespeare-s"
+          ]
+        },
+        {
+          "title": "Shakespeare in Love",
+          "slugs": [
+            "2016-06-29-passion-and-wit-share-the-stage-shakespeare-in-love-a-delight"
+          ]
+        },
+        {
+          "title": "The Coast of Utopia",
+          "slugs": [
+            "2002-12-02-stoppard-trilogy-revealing-if-not-revolutionary"
+          ]
+        },
+        {
+          "title": "The Knight of the Burning Pestle",
+          "slugs": [
+            "1975-06-22-quixote-in-his-windmill"
+          ]
+        },
+        {
+          "title": "The Real Inspector Hound",
+          "slugs": [
+            "1976-12-05-updating-king-lear"
+          ]
+        },
+        {
+          "title": "The Real Thing",
+          "slugs": [
+            "1982-11-21-playtime",
+            "2000-08-07-three-plays-in-search-of-a-city-find-new-york",
+            "2006-06-19-a-lean-mean-meta-play-machine"
+          ]
+        },
+        {
+          "title": "Travesties",
+          "slugs": [
+            "1974-06-16-stoppard-run-wilde",
+            "1975-01-01-best-of-1974-roundup",
+            "2009-02-21-the-second-time-as-farce-travesties-repeats-history-in-the-form-of-a-diplomat-s"
+          ]
+        }
+      ],
+      "reviewCount": 27,
+      "source": "https://commons.wikimedia.org/wiki/File:Tom_Stoppard%2C_playwright%2C_NYC_%28cropped%29.jpg",
+      "creator": "Gotfryd, Bernard, photographer",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "geometry": {
+        "contour": "M 1560 142 L 1566 130 L 1574 122 L 1587 119 L 1595 113 L 1608 116 L 1618 116 L 1633 121 L 1648 126 L 1657 136 L 1662 149 L 1663 164 L 1658 177 L 1661 191 L 1655 207 L 1647 221 L 1648 234 L 1674 239 L 1694 241 L 1710 251 L 1718 276 L 1724 306 L 1729 328 L 1733 350 L 1731 375 L 1717 402 L 1707 410 L 1696 403 L 1686 393 L 1662 379 L 1640 367 L 1627 353 L 1620 336 L 1617 316 L 1609 299 L 1599 285 L 1584 278 L 1565 278 L 1550 287 L 1548 270 L 1551 244 L 1572 232 L 1574 221 L 1565 206 L 1558 190 L 1555 177 L 1557 160 Z",
+        "hitPath": "M 1560 142 L 1566 130 L 1574 122 L 1587 119 L 1595 113 L 1608 116 L 1618 116 L 1633 121 L 1648 126 L 1657 136 L 1662 149 L 1663 164 L 1658 177 L 1661 191 L 1655 207 L 1647 221 L 1648 234 L 1674 239 L 1694 241 L 1710 251 L 1718 276 L 1724 306 L 1729 328 L 1733 350 L 1731 375 L 1717 402 L 1707 410 L 1696 403 L 1686 393 L 1662 379 L 1640 367 L 1627 353 L 1620 336 L 1617 316 L 1609 299 L 1599 285 L 1584 278 L 1565 278 L 1550 287 L 1548 270 L 1551 244 L 1572 232 L 1574 221 L 1565 206 L 1558 190 L 1555 177 L 1557 160 Z",
+        "label": [
+          1609,
+          69
+        ],
+        "headCenter": [
+          1609,
+          178
+        ]
+      }
+    },
     {
       "person": "William Shakespeare",
       "surname": "Shakespeare",
@@ -688,471 +2207,194 @@
       "source": "https://commons.wikimedia.org/wiki/File:William_Shakespeare_by_John_Taylor%2C_edited.jpg",
       "creator": "Attributed to   John Taylor",
       "license": "Public domain",
-      "licenseUrl": ""
+      "licenseUrl": "",
+      "geometry": {
+        "contour": "M189 256 Q210 251 232 259 Q246 263 254 277 Q266 275 269 288 Q279 293 273 302 Q278 307 273 316 Q278 322 266 328 Q267 338 253 339 L254 347 L281 364 Q260 373 248 390 L236 410 Q224 426 219 448 Q217 472 227 484 Q233 506 248 515 Q259 531 276 539 L266 562 L248 617 L250 642 Q248 669 245 696 L244 744 L235 792 L234 807 Q239 822 233 833 Q232 844 217 845 Q202 847 197 838 Q193 831 198 817 L201 787 L205 752 L206 711 L197 645 L174 644 L169 687 Q176 714 163 746 L151 791 L153 806 Q159 815 154 826 L126 831 L124 824 Q109 833 88 832 Q71 831 74 823 Q77 816 93 813 L111 797 L119 777 L127 739 Q135 715 129 692 L131 666 L136 641 L108 637 L111 626 L79 615 L84 598 L66 590 L78 523 L79 478 Q75 455 85 427 L92 396 Q101 373 122 362 L150 350 L169 333 Q167 320 171 299 Q168 288 179 280 Q175 267 189 256 Z",
+        "hitPath": "M189 256 Q210 251 232 259 Q246 263 254 277 Q266 275 269 288 Q279 293 273 302 Q278 307 273 316 Q278 322 266 328 Q267 338 253 339 L254 347 L281 364 Q260 373 248 390 L236 410 Q224 426 219 448 Q217 472 227 484 Q233 506 248 515 Q259 531 276 539 L266 562 L248 617 L250 642 Q248 669 245 696 L244 744 L235 792 L234 807 Q239 822 233 833 Q232 844 217 845 Q202 847 197 838 Q193 831 198 817 L201 787 L205 752 L206 711 L197 645 L174 644 L169 687 Q176 714 163 746 L151 791 L153 806 Q159 815 154 826 L126 831 L124 824 Q109 833 88 832 Q71 831 74 823 Q77 816 93 813 L111 797 L119 777 L127 739 Q135 715 129 692 L131 666 L136 641 L108 637 L111 626 L79 615 L84 598 L66 590 L78 523 L79 478 Q75 455 85 427 L92 396 Q101 373 122 362 L150 350 L169 333 Q167 320 171 299 Q168 288 179 280 Q175 267 189 256 Z",
+        "label": [
+          174,
+          574
+        ],
+        "headCenter": [
+          209,
+          306
+        ]
+      }
     },
     {
-      "person": "George Bernard Shaw",
-      "surname": "Shaw",
-      "id": "playwright-george-bernard-shaw",
-      "href": "#collection:playwright-george-bernard-shaw",
-      "portrait": "./assets/collections/playwrights/02-george-bernard-shaw.jpg",
+      "person": "Molière",
+      "surname": "Molière",
+      "id": "playwright-moliere",
+      "href": "#collection:playwright-moliere",
+      "portrait": "./assets/collections/playwrights/11-moli-re.jpg",
       "box": [
-        465,
-        106,
-        220,
-        652
+        1017,
+        271,
+        180,
+        571
       ],
       "label": [
-        575.0,
-        78
+        1107.0,
+        413.75
       ],
       "works": [
         {
-          "title": "Androcles and the Lion",
+          "title": "Don Juan",
           "slugs": [
-            "2017-09-19-the-art-of-theatre-is-the-art-of-acting-canadian-theatre-quality-gives-this"
-          ]
-        },
-        {
-          "title": "Arms and the Man",
-          "slugs": [
-            "1978-04-23-return-of-don-juan",
-            "1981-10-18-a-soaring-seagull",
-            "2006-05-08-upped-in-charms"
-          ]
-        },
-        {
-          "title": "Caesar and Cleopatra",
-          "slugs": [
-            "2002-05-23-festival-opens-with-shaw-at-his-most-shakespearean",
-            "2008-08-19-my-pharaoh-lady"
-          ]
-        },
-        {
-          "title": "Candida",
-          "slugs": [
-            "1993-07-10-theatre-candida",
-            "2002-07-09-which-shaw-will-she-go-for-in-the-end",
-            "2011-06-08-irish-pride-marital-divide"
-          ]
-        },
-        {
-          "title": "Fanny's First Play",
-          "slugs": [
-            "2001-07-07-play-s-best-joke-was-cut"
-          ]
-        },
-        {
-          "title": "Geneva",
-          "slugs": [
-            "2013-06-15-one-and-a-half-masterpieces-a-major-production-of-oscar-wilde-s-minor-play"
-          ]
-        },
-        {
-          "title": "Getting Married",
-          "slugs": [
-            "1999-06-01-no-marriage-no-sex-yet-sparks-still-fly",
-            "2008-05-27-marriage-isn-t-for-everyone"
-          ]
-        },
-        {
-          "title": "Heartbreak House",
-          "slugs": [
-            "1975-03-02-the-happiest-of-heartbreaks",
-            "1983-03-13-half-cock-heartbreak",
-            "1999-05-27-oh-what-a-lovely-dream",
-            "2011-05-28-of-heartbreakers-and-horsebackers-shaw-festival-s-50th-season-gets-off-to"
-          ]
-        },
-        {
-          "title": "In Good King Charles's Golden Days",
-          "slugs": [
-            "2009-05-25-the-king-et-al-a-production-to-make-shaw-proud-of-his-namesake-festival"
-          ]
-        },
-        {
-          "title": "John Bull's Other Island",
-          "slugs": [
-            "1980-06-01-shaw-s-bad-dreams"
-          ]
-        },
-        {
-          "title": "Major Barbara",
-          "slugs": [
-            "2005-07-13-barbara-deserves-promotion-shavian-conception-of-charity-begins-with-this",
-            "2013-05-25-for-betters-and-in-verse-shaw-festival-begins-with-maugham-runyon-and-some"
-          ]
-        },
-        {
-          "title": "Man and Superman",
-          "slugs": [
-            "1977-05-29-jonson-to-the-life",
-            "2004-07-06-shaw-s-hell-is-heavenly",
-            "2004-07-17-man-and-superman-six-exhilarating-hours-including-lunch",
-            "2019-10-12-to-hell-and-back"
-          ]
-        },
-        {
-          "title": "Misalliance",
-          "slugs": [
-            "1973-04-29-hands-across-the-channel",
-            "1990-05-25-theatre-review-misalliance",
-            "2003-05-23-gbs-has-plot-twists-falling-from-the-sky",
-            "2012-05-29-men-women-and-a-barrage-of-rhetoric"
-          ]
-        },
-        {
-          "title": "Mrs. Warren's Profession",
-          "slugs": [
-            "1997-03-25-theatre-review-mrs-warren-s-profession",
-            "2008-07-30-pieces-of-what-stratford-should-be-3",
-            "2016-05-19-back-down-the-rabbit-hole-again-a-literal-not-logical-tone-is-the-reverse"
-          ]
-        },
-        {
-          "title": "On the Rocks",
-          "slugs": [
-            "1982-05-09-shaw-for-our-times"
-          ]
-        },
-        {
-          "title": "Pygmalion",
-          "slugs": [
-            "1974-05-19-today-i-improvise",
-            "2004-05-10-when-you-speak-of-love",
-            "2004-05-29-shaw-festival-s-pygmalion-clear-and-exhilarating",
-            "2004-06-05-pygmalion",
-            "2004-06-19-simon-bradbury-plays-dustman-doolittle-with-aplomb",
-            "2004-08-14-simon-bradbury-handles-the-dustman-s-prose-arias-with-aplomb",
-            "2011-06-04-it-is-in-fact-quite-loverly-my-fair-lady-at-shaw-festival-makes-for",
-            "2015-07-11-tick-talk-present-set-pygmalion-suffers-from-a-temporal-flaw-in-logic-but"
-          ]
-        },
-        {
-          "title": "Saint Joan",
-          "slugs": [
-            "1993-05-28-theatre-review-saint-joan",
-            "2007-05-11-tender-is-the-knight-with-so-much-at-stake"
-          ]
-        },
-        {
-          "title": "The Admirable Bashville",
-          "slugs": [
-            "1982-07-25-telling-a-tale-of-two-cities"
-          ]
-        },
-        {
-          "title": "The Apple Cart",
-          "slugs": [
-            "2000-07-17-haunted-by-our-past-the-politics-mores-and-class-conflicts-of-the-20th-century"
-          ]
-        },
-        {
-          "title": "The Dark Lady of the Sonnets",
-          "slugs": [
-            "1982-07-25-telling-a-tale-of-two-cities"
-          ]
-        },
-        {
-          "title": "The Devil's Disciple",
-          "slugs": [
-            "2009-07-17-diabolic-morality"
-          ]
-        },
-        {
-          "title": "The Doctor's Dilemma",
-          "slugs": [
-            "2000-05-27-a-wonderful-treatment-of-shaws-medical-morality-play",
-            "2010-07-17-medical-muddle"
-          ]
-        },
-        {
-          "title": "The Man of Destiny",
-          "slugs": [
-            "1993-07-12-theatre-review-the-man-of-destiny"
-          ]
-        },
-        {
-          "title": "The Millionairess",
-          "slugs": [
-            "1979-01-07-england-s-a-prison",
-            "2001-05-25-margaret-thatcher-meets-ayn-rand",
-            "2012-07-11-mo-money-mo-problems-shaw-s-millionairess-struggles-to-settle-its-own-accounts"
-          ]
-        },
-        {
-          "title": "The Philanderer",
-          "slugs": [
-            "2007-05-28-the-fence-sitters-of-love-need-not-apply",
-            "2014-07-26-the-plotted-besotted-love-saves-the-day-if-not-the-play-in-george-bernard"
-          ]
-        },
-        {
-          "title": "Too True to Be Good",
-          "slugs": [
-            "2006-05-30-the-imperfect-crime"
-          ]
-        },
-        {
-          "title": "Village Wooing",
-          "slugs": [
-            "1999-07-22-delightful-lunchtime-wooing-follows-shaw-s-formula-from-a-to-z"
-          ]
-        },
-        {
-          "title": "Widowers' Houses",
-          "slugs": [
-            "2003-05-27-and-the-important-people-lived-happily-ever-after"
-          ]
-        },
-        {
-          "title": "You Never Can Tell",
-          "slugs": [
-            "2005-11-26-you-never-can-tell",
-            "2015-05-20-a-farce-to-be-reckoned-with-shaw-s-comedy-of-errors-you-never-can-tell-persuades"
-          ]
-        }
-      ],
-      "reviewCount": 59,
-      "source": "https://commons.wikimedia.org/wiki/File:Portrait_of_George_Bernard_Shaw_LCCN2004674432.jpg",
-      "creator": "Coburn, Alvin Langdon, 1882-1966, photographer",
-      "license": "Public domain",
-      "licenseUrl": ""
-    },
-    {
-      "person": "Anton Chekhov",
-      "surname": "Chekhov",
-      "id": "playwright-anton-chekhov",
-      "href": "#collection:playwright-anton-chekhov",
-      "portrait": "./assets/collections/playwrights/03-anton-chekhov.jpg",
-      "box": [
-        626,
-        132,
-        178,
-        603
-      ],
-      "label": [
-        715.0,
-        104
-      ],
-      "works": [
-        {
-          "title": "Chekhov's Shorts",
-          "slugs": [
-            "1999-11-25-true-to-the-gentle-and-ruthless-chekhov"
-          ]
-        },
-        {
-          "title": "In the Ravine",
-          "slugs": [
-            "2002-02-09-the-long-and-short-of-chekhov"
-          ]
-        },
-        {
-          "title": "Peasants and Peasant Women",
-          "slugs": [
-            "2005-05-07-two-sides-of-alice-dont-quite-mesh-main-character-lacks-plausibility",
-            "2005-05-14-chekhov-s-heartache"
-          ]
-        },
-        {
-          "title": "Platonov",
-          "slugs": [
-            "1999-09-09-a-great-modern-play-brilliantly-done",
-            "2000-07-10-a-switchback-ride-between-farce-and-tragedy"
-          ]
-        },
-        {
-          "title": "Swan Song",
-          "slugs": [
-            "2002-09-16-the-master-and-the-apprentice"
-          ]
-        },
-        {
-          "title": "The Bear",
-          "slugs": [
-            "2002-09-16-the-master-and-the-apprentice",
-            "2005-01-17-whistle-while-you-clap-new-company-scores-with-bare-knuckled-knock-out-debut",
-            "2006-07-04-the-tsar-crossed-lovers"
-          ]
-        },
-        {
-          "title": "The Cherry Orchard",
-          "slugs": [
-            "1978-02-19-fizzling-fireworks-in-hall-s-orchard",
-            "2010-06-05-what-good-is-reality-anyway-shaw-s-season-strong-with-the-cherry-orchard"
-          ]
-        },
-        {
-          "title": "The Dangers of Tobacco",
-          "slugs": [
-            "2002-09-16-the-master-and-the-apprentice"
-          ]
-        },
-        {
-          "title": "The Seagull",
-          "slugs": [
-            "1975-11-02-down-in-the-country",
-            "1976-08-15-the-gull-flies-again",
+            "1976-05-23-in-a-hellish-half-light",
+            "1978-03-12-dying-to-be-dead",
             "1981-04-12-the-seagull-flies-to-ireland",
-            "1981-10-18-a-soaring-seagull",
-            "2001-08-16-why-do-you-always-wear-modern-dress",
-            "2014-03-22-bird-in-their-hands-the-chekhov-collective-s-ethos-of-a-yearlong-process-has",
-            "2015-01-22-for-the-birds-chekhov-s-the-seagull-flies-high-in-crow-s-theatre-production"
+            "1983-02-20-breaking-bonds",
+            "2006-10-23-our-chaussettes-were-knocked-off"
           ]
         },
         {
-          "title": "The Tragic Role",
+          "title": "Le Bourgeois Gentilhomme",
           "slugs": [
-            "2002-09-16-the-master-and-the-apprentice"
+            "2005-04-30-worldstage-makes-virtue-of-necessity-crouchs-my-arm-shows-potential-of-one-person"
           ]
         },
         {
-          "title": "The Wood Demon",
+          "title": "Tartuffe",
           "slugs": [
-            "1973-09-02-a-chekhovian-powerhouse",
-            "1974-03-17-more-cheers-for-chekhov"
+            "1976-11-21-moli-re-caught-in-a-trap",
+            "2000-08-14-yes-tartuffe-you-are-indeed-worthy",
+            "2014-08-16-the-greatest-sitcom-moliere-s-tartuffe-is-the-original-farce-and-soulpepper-s"
           ]
         },
         {
-          "title": "Three Sisters",
+          "title": "The Imaginary Invalid",
           "slugs": [
-            "1976-06-27-waiting-for-hickey",
-            "1979-10-07-the-sisters-of-stratford",
-            "1980-04-13-a-mad-world-in-arden",
-            "2003-05-28-found-in-translation",
-            "2007-09-08-three-sisters-who-break-your-heart-laszlo-marton-s-soulpepper-production-tops",
-            "2009-06-06-sisters-doing-it-for-and-to-themselves-martha-henry-s-production-a-triumph"
+            "1981-10-25-moli-re-s-dying-fall",
+            "2007-10-31-more-sickness-than-health"
           ]
         },
         {
-          "title": "Uncle Vanya",
+          "title": "The Learned Ladies",
           "slugs": [
-            "1977-02-20-uncle-leo",
-            "1982-05-23-in-the-trap",
-            "1999-08-23-rage-and-regret-narrowly-focused",
-            "2001-08-02-dazzling-performances-drive-familiar-chekhov",
-            "2002-07-26-none-so-moving-as-this",
-            "2008-06-11-it-was-the-best-and-now-it-s-better",
-            "2016-05-19-back-down-the-rabbit-hole-again-a-literal-not-logical-tone-is-the-reverse"
+            "1981-10-11-classroom-memories"
           ]
         },
         {
-          "title": "Ward No. 6",
+          "title": "The Misanthrope",
           "slugs": [
-            "2004-03-08-it-s-a-madhouse"
+            "1981-07-05-fresh-air",
+            "2011-08-17-dupes-dopes-drag-queens-invade-stratford"
+          ]
+        },
+        {
+          "title": "The School for Wives",
+          "slugs": [
+            "1981-03-29-having-a-ball-with-bleasdale",
+            "2000-08-10-the-deeper-double-takes"
+          ]
+        },
+        {
+          "title": "The Sicilian",
+          "slugs": [
+            "2009-07-11-french-farce-meets-bonnie-and-clyde-only-at-the-fringe-plus-one-show-that"
           ]
         }
       ],
-      "reviewCount": 34,
-      "source": "https://commons.wikimedia.org/wiki/File:Anton_Chekhov_1889.jpg",
-      "creator": "V. Chekhovskii, Moscow",
+      "reviewCount": 17,
+      "source": "https://commons.wikimedia.org/wiki/File:Pierre_Mignard_-_Portrait_de_Jean-Baptiste_Poquelin_dit_Moli%C3%A8re_%281622-1673%29_-_Google_Art_Project_%28cropped%29.jpg",
+      "creator": "Pierre Mignard I",
       "license": "Public domain",
-      "licenseUrl": ""
+      "licenseUrl": "",
+      "geometry": {
+        "contour": "M335 257 Q347 247 355 256 Q369 249 377 257 Q390 251 399 260 Q411 258 419 267 Q431 263 437 278 Q449 280 440 292 Q447 298 444 309 Q452 315 443 326 Q450 333 443 342 Q450 351 443 360 Q450 365 441 376 L459 382 Q441 389 439 413 L434 445 L433 488 L434 533 Q428 550 446 567 L441 593 L440 643 L436 681 L422 681 L416 695 L407 703 L401 739 Q396 765 389 792 L391 806 Q404 811 419 822 Q430 831 418 835 Q394 837 376 828 L355 823 L351 817 L355 797 L357 771 L356 741 L362 705 L349 702 L346 722 Q345 749 335 773 L323 806 L313 819 Q310 840 300 847 Q288 854 276 849 Q268 847 274 836 L288 813 L295 800 L296 771 L301 728 L301 700 L286 692 L289 680 L250 676 L256 630 L267 578 L276 539 Q259 531 248 515 Q233 506 227 484 Q217 472 219 448 Q224 426 236 410 L248 390 Q260 373 281 364 L300 357 Q300 347 292 344 Q286 335 294 329 Q285 320 294 313 Q286 303 297 296 Q294 285 308 281 Q304 269 318 266 Q319 256 335 257 Z",
+        "hitPath": "M335 257 Q347 247 355 256 Q369 249 377 257 Q390 251 399 260 Q411 258 419 267 Q431 263 437 278 Q449 280 440 292 Q447 298 444 309 Q452 315 443 326 Q450 333 443 342 Q450 351 443 360 Q450 365 441 376 L459 382 Q441 389 439 413 L434 445 L433 488 L434 533 Q428 550 446 567 L441 593 L440 643 L436 681 L422 681 L416 695 L407 703 L401 739 Q396 765 389 792 L391 806 Q404 811 419 822 Q430 831 418 835 Q394 837 376 828 L355 823 L351 817 L355 797 L357 771 L356 741 L362 705 L349 702 L346 722 Q345 749 335 773 L323 806 L313 819 Q310 840 300 847 Q288 854 276 849 Q268 847 274 836 L288 813 L295 800 L296 771 L301 728 L301 700 L286 692 L289 680 L250 676 L256 630 L267 578 L276 539 Q259 531 248 515 Q233 506 227 484 Q217 472 219 448 Q224 426 236 410 L248 390 Q260 373 281 364 L300 357 Q300 347 292 344 Q286 335 294 329 Q285 320 294 313 Q286 303 297 296 Q294 285 308 281 Q304 269 318 266 Q319 256 335 257 Z",
+        "label": [
+          350,
+          577
+        ],
+        "headCenter": [
+          378,
+          314
+        ]
+      }
     },
     {
-      "person": "Henrik Ibsen",
-      "surname": "Ibsen",
-      "id": "playwright-henrik-ibsen",
-      "href": "#collection:playwright-henrik-ibsen",
-      "portrait": "./assets/collections/playwrights/04-henrik-ibsen.jpg",
+      "person": "Caryl Churchill",
+      "surname": "Churchill",
+      "id": "playwright-caryl-churchill",
+      "href": "#collection:playwright-caryl-churchill",
+      "portrait": "./assets/collections/playwrights/15-caryl-churchill.jpg",
       "box": [
-        771,
-        105,
-        190,
-        670
+        644,
+        278,
+        159,
+        560
       ],
       "label": [
-        866.0,
-        77
+        723.5,
+        418.0
       ],
       "works": [
         {
-          "title": "A Doll's House",
+          "title": "A Number",
           "slugs": [
-            "1981-07-12-war-games",
-            "1996-08-10-theatre-review-a-doll-s-house",
-            "2000-11-25-a-feminist-play-written-by-a-man-who-was-not-a-feminist-at-all",
-            "2007-01-26-it-s-the-levels-man",
-            "2016-08-17-reverse-modernization-theatre-review-a-doll-s-house-the-39-steps-young"
+            "2006-01-21-attack-of-the-cloned-sons-a-number-gives-new-meaning-to-daddy-issues"
           ]
         },
         {
-          "title": "An Enemy of the People",
+          "title": "Cloud Nine",
           "slugs": [
-            "2015-10-26-the-bending-point-tarragons-gender-switching-enemy-of-the-people-embodies"
+            "1979-04-01-that-old-sex-war",
+            "2010-01-30-love-is-a-battlefield-megan-follows-leads-stellar-cast-in-cloud-9"
           ]
         },
         {
-          "title": "Ghosts",
+          "title": "Fen",
           "slugs": [
-            "1978-06-04-shakespeare-as-i-like-it",
-            "1999-10-23-puzzling-symbolism-just-one-of-the-faults",
-            "2006-09-21-a-haunting-production",
-            "2011-10-19-bemusing-my-religion"
+            "1983-02-20-breaking-bonds"
           ]
         },
         {
-          "title": "Hedda Gabler",
+          "title": "Objections to Sex and Violence",
           "slugs": [
-            "1975-07-20-double-death",
-            "2005-06-04-playing-ibsen-forward-is-an-idea-that-doesnt-work-hedda-gabler-a-disaster",
-            "2005-06-11-on-stage",
-            "2012-08-15-green-eyed-monster-shaw-nails-the-inevitable-tragedy-of-ibsen-s-anti-heroine"
+            "1975-01-05-on-the-beach"
           ]
         },
         {
-          "title": "John Gabriel Borkman",
+          "title": "Serious Money",
           "slugs": [
-            "2003-10-31-a-conspiracy-to-bring-famous-old-plays-to-toronto",
-            "2007-04-13-dolls-without-the-house"
+            "2010-08-28-when-light-verse-becomes-too-heavy-caryl-churchill-s-play-is-prescient-but"
           ]
         },
         {
-          "title": "Little Eyolf",
+          "title": "Seven Jewish Children: A Play for Gaza",
           "slugs": [
-            "2003-10-31-a-conspiracy-to-bring-famous-old-plays-to-toronto"
+            "2009-05-20-even-if-you-see-it-you-might-not-believe-it"
           ]
         },
         {
-          "title": "Peer Gynt",
+          "title": "Top Girls",
           "slugs": [
-            "1982-06-20-peer-gynt-goes-roundabout",
-            "2010-02-02-a-moveable-piece"
-          ]
-        },
-        {
-          "title": "Rosmersholm",
-          "slugs": [
-            "2006-08-10-incredible-ibsen"
-          ]
-        },
-        {
-          "title": "The Lady from the Sea",
-          "slugs": [
-            "1979-05-20-honest-trickery",
-            "2015-05-23-good-news-bad-news-shaw-festival-s-the-lady-from-the-sea-excellent-and"
-          ]
-        },
-        {
-          "title": "The Wild Duck",
-          "slugs": [
-            "2005-07-30-a-cruelly-effective-wild-duck-but-olympia-loses-its-bite"
-          ]
-        },
-        {
-          "title": "When We Dead Awaken",
-          "slugs": [
-            "1975-11-09-consumed-by-flames",
-            "2003-10-31-a-conspiracy-to-bring-famous-old-plays-to-toronto"
+            "1983-02-13-touch-of-the-bunters",
+            "2007-07-07-crammed-with-first-rate-actors-top-girls-dazzles-with-wit-and-imagination",
+            "2008-11-08-sisters-are-doing-it-for-themselves-an-improved-top-girls-showcases-incredible",
+            "2015-07-02-historical-precedents"
           ]
         }
       ],
-      "reviewCount": 23,
-      "source": "https://commons.wikimedia.org/wiki/File:Henrik_Ibsen_av_Eilif_Peterssen_1895.jpg",
-      "creator": "Eilif Peterssen",
-      "license": "Public domain",
-      "licenseUrl": ""
+      "reviewCount": 11,
+      "source": "https://commons.wikimedia.org/wiki/File:Caryl_Churchill%2C_playwright.jpg",
+      "creator": "Petticonifer",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "geometry": {
+        "contour": "M515 284 Q524 280 533 286 Q545 279 552 290 Q565 285 569 300 Q577 306 568 319 Q573 331 564 343 L558 349 L559 367 L581 374 L601 387 Q592 410 600 435 L609 469 Q614 495 622 516 Q628 542 617 568 L611 614 L615 666 L620 711 L590 718 L585 735 L594 787 L591 802 Q597 819 589 831 Q589 842 576 844 L557 841 Q534 834 534 821 L534 806 L539 790 L537 750 L541 706 L541 646 L532 606 L516 672 L505 727 L493 795 L492 809 L490 824 Q476 842 453 848 Q432 852 433 841 Q436 832 451 826 L459 810 L462 792 L463 770 L468 708 L447 708 L434 702 L440 643 L441 593 L446 567 Q428 550 434 533 L433 488 L434 445 L439 413 Q441 389 459 382 L486 368 L489 353 Q480 342 480 330 Q471 328 477 317 Q468 309 481 300 Q477 291 492 291 Q497 280 506 286 Q510 279 515 284 Z",
+        "hitPath": "M515 284 Q524 280 533 286 Q545 279 552 290 Q565 285 569 300 Q577 306 568 319 Q573 331 564 343 L558 349 L559 367 L581 374 L601 387 Q592 410 600 435 L609 469 Q614 495 622 516 Q628 542 617 568 L611 614 L615 666 L620 711 L590 718 L585 735 L594 787 L591 802 Q597 819 589 831 Q589 842 576 844 L557 841 Q534 834 534 821 L534 806 L539 790 L537 750 L541 706 L541 646 L532 606 L516 672 L505 727 L493 795 L492 809 L490 824 Q476 842 453 848 Q432 852 433 841 Q436 832 451 826 L459 810 L462 792 L463 770 L468 708 L447 708 L434 702 L440 643 L441 593 L446 567 Q428 550 434 533 L433 488 L434 445 L439 413 Q441 389 459 382 L486 368 L489 353 Q480 342 480 330 Q471 328 477 317 Q468 309 481 300 Q477 291 492 291 Q497 280 506 286 Q510 279 515 284 Z",
+        "label": [
+          523,
+          479
+        ],
+        "headCenter": [
+          534,
+          328
+        ]
+      }
     },
     {
       "person": "Noël Coward",
@@ -1270,248 +2512,120 @@
       "source": "https://commons.wikimedia.org/wiki/File:Noel_Coward_Allan_warren_edit_1.jpg",
       "creator": "Allan Warren",
       "license": "CC BY-SA 3.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "geometry": {
+        "contour": "M666 272 Q681 263 699 269 Q715 273 719 287 L723 308 Q724 321 716 333 L707 345 L707 358 L727 366 L758 378 L766 392 Q747 402 744 431 L739 461 L731 492 Q730 515 733 531 Q735 552 750 568 L742 601 L732 645 L726 680 L728 688 L724 733 L717 792 L716 807 Q727 819 734 825 Q737 837 720 838 Q698 837 674 826 L668 820 L669 800 L669 777 L666 734 L667 682 L677 620 L666 595 L654 650 L646 716 L639 783 L635 812 Q642 822 640 836 Q633 848 615 845 Q603 844 604 830 L606 816 L608 801 L608 759 L614 717 L620 711 L615 666 L611 614 L617 568 Q628 542 622 516 Q614 495 609 469 L600 435 Q592 410 601 387 L613 396 L617 390 L615 379 L614 365 L618 352 L629 343 L635 335 L639 337 L638 344 L632 352 L640 351 L646 359 L650 365 L648 371 L642 368 L648 377 L644 384 L637 385 L635 398 L633 407 L644 404 L650 377 L659 366 L659 353 L651 342 L649 328 L650 311 Q648 291 666 272 Z",
+        "hitPath": "M666 272 Q681 263 699 269 Q715 273 719 287 L723 308 Q724 321 716 333 L707 345 L707 358 L727 366 L758 378 L766 392 Q747 402 744 431 L739 461 L731 492 Q730 515 733 531 Q735 552 750 568 L742 601 L732 645 L726 680 L728 688 L724 733 L717 792 L716 807 Q727 819 734 825 Q737 837 720 838 Q698 837 674 826 L668 820 L669 800 L669 777 L666 734 L667 682 L677 620 L666 595 L654 650 L646 716 L639 783 L635 812 Q642 822 640 836 Q633 848 615 845 Q603 844 604 830 L606 816 L608 801 L608 759 L614 717 L620 711 L615 666 L611 614 L617 568 Q628 542 622 516 Q614 495 609 469 L600 435 Q592 410 601 387 L613 396 L617 390 L615 379 L614 365 L618 352 L629 343 L635 335 L639 337 L638 344 L632 352 L640 351 L646 359 L650 365 L648 371 L642 368 L648 377 L644 384 L637 385 L635 398 L633 407 L644 404 L650 377 L659 366 L659 353 L651 342 L649 328 L650 311 Q648 291 666 272 Z",
+        "label": [
+          681,
+          470
+        ],
+        "headCenter": [
+          686,
+          310
+        ]
+      }
     },
     {
-      "person": "Tom Stoppard",
-      "surname": "Stoppard",
-      "id": "playwright-tom-stoppard",
-      "href": "#collection:stoppard",
-      "portrait": "./assets/collections/playwrights/06-tom-stoppard.jpg",
+      "person": "Hannah Moscovitch",
+      "surname": "Moscovitch",
+      "id": "playwright-hannah-moscovitch",
+      "href": "#collection:playwright-hannah-moscovitch",
+      "portrait": "./assets/collections/playwrights/14-hannah-moscovitch.jpg",
       "box": [
-        268,
-        228,
-        240,
-        607
+        510,
+        267,
+        169,
+        573
       ],
       "label": [
-        388.0,
-        379.75
+        594.5,
+        410.25
       ],
       "works": [
         {
-          "title": "Arcadia",
+          "title": "Bunny",
           "slugs": [
-            "2013-08-03-pulling-out-stoppard-shaw-festival-s-arcadia-sparkles-but-what-about",
-            "2014-11-15-heads-will-roll-two-new-ish-productions-are-more-successful-at-evoking-worlds"
+            "2016-08-24-rabbit-run-bunny-offers-something-rare"
           ]
         },
         {
-          "title": "Beckett Shorts",
+          "title": "East of Berlin",
           "slugs": [
-            "1973-06-24-two-from-the-critics"
+            "2007-10-27-sins-of-the-father-hannah-moscovitchs-east-of-berlin-has-mystery-nazis-and",
+            "2009-01-23-the-view-from-here-the-holocaust-from-three-perspectives"
           ]
         },
         {
-          "title": "Every Good Boy Deserves Favour",
+          "title": "Essay",
           "slugs": [
-            "1977-07-03-vonnegut-s-near-myth",
-            "1978-06-18-drama-for-actors-and-orchestra",
-            "1978-07-09-ben-jonson-to-bruce-forsyth"
+            "2005-08-13-pitres-annie-goes-great-guns-but-good-songs-cant-save-second-act",
+            "2008-01-30-the-marvelous-ms-moscovitch"
           ]
         },
         {
-          "title": "Heroes",
+          "title": "In This World",
           "slugs": [
-            "2005-11-19-london-theatres-inspire-deja-vu-same-musicals-as-toronto-and-then-there-s"
+            "2010-05-15-authentic-voice-lends-depth-to-teen-trials-hannah-moscovitch-has-another-winner"
           ]
         },
         {
-          "title": "If You're Glad I'll Be Frank",
+          "title": "Infinity",
           "slugs": [
-            "1976-12-05-updating-king-lear"
+            "2015-04-11-the-string-theory-of-everything"
           ]
         },
         {
-          "title": "Indian Ink",
+          "title": "Little One",
           "slugs": [
-            "2002-04-09-stoppard-gem-translates-so-well"
+            "2011-08-13-hannah-moscovitch-s-monologues-and-more-a-round-up-of-summerworks-best-and",
+            "2013-02-23-the-family-way-hannah-moscovitch-our-most-competent-playwright-does-domestic"
           ]
         },
         {
-          "title": "Jumpers",
+          "title": "Mexico City",
           "slugs": [
-            "1985-05-01-tom-and-viv-and-jumpers"
+            "2007-08-11-cuckoos-marriage-and-conrad-black-summerworks-takes-on-all-of-these-subjects"
           ]
         },
         {
-          "title": "Night and Day",
+          "title": "The Children's Republic",
           "slugs": [
-            "1978-11-12-scooping-up-africa",
-            "1979-03-11-theatre"
+            "2011-11-23-the-troubled-the-troublemakers-children-s-republic-best-canadian-play-in"
           ]
         },
         {
-          "title": "On the Razzle",
+          "title": "The Russian Play",
           "slugs": [
-            "1981-09-27-stoppard-on-the-razzle"
+            "2007-02-23-back-with-the-ussr",
+            "2008-01-30-the-marvelous-ms-moscovitch",
+            "2019-09-05-monosyllabic"
           ]
         },
         {
-          "title": "Professional Foul",
+          "title": "This Is War",
           "slugs": [
-            "1977-10-02-nights-of-opera-and-telly"
-          ]
-        },
-        {
-          "title": "Rock 'n' Roll",
-          "slugs": [
-            "2008-02-28-rocking-the-republic",
-            "2009-10-05-the-sound-of-the-fury"
-          ]
-        },
-        {
-          "title": "Rosencrantz And Guildenstern Are Dead",
-          "slugs": [
-            "1975-01-19-tragedy-of-the-hungry-tribe"
-          ]
-        },
-        {
-          "title": "Rosencrantz and Guildenstern Are Dead",
-          "slugs": [
-            "2013-02-21-the-bard-reworked-soulpepper-finds-new-depths-in-stoppard-while-shakespeare-s"
-          ]
-        },
-        {
-          "title": "Shakespeare in Love",
-          "slugs": [
-            "2016-06-29-passion-and-wit-share-the-stage-shakespeare-in-love-a-delight"
-          ]
-        },
-        {
-          "title": "The Coast of Utopia",
-          "slugs": [
-            "2002-12-02-stoppard-trilogy-revealing-if-not-revolutionary"
-          ]
-        },
-        {
-          "title": "The Knight of the Burning Pestle",
-          "slugs": [
-            "1975-06-22-quixote-in-his-windmill"
-          ]
-        },
-        {
-          "title": "The Real Inspector Hound",
-          "slugs": [
-            "1976-12-05-updating-king-lear"
-          ]
-        },
-        {
-          "title": "The Real Thing",
-          "slugs": [
-            "1982-11-21-playtime",
-            "2000-08-07-three-plays-in-search-of-a-city-find-new-york",
-            "2006-06-19-a-lean-mean-meta-play-machine"
-          ]
-        },
-        {
-          "title": "Travesties",
-          "slugs": [
-            "1974-06-16-stoppard-run-wilde",
-            "1975-01-01-best-of-1974-roundup",
-            "2009-02-21-the-second-time-as-farce-travesties-repeats-history-in-the-form-of-a-diplomat-s"
+            "2013-01-10-why-we-fight-personal-drama-leads-to-national-trauma-in-brilliant-morally"
           ]
         }
       ],
-      "reviewCount": 27,
-      "source": "https://commons.wikimedia.org/wiki/File:Tom_Stoppard%2C_playwright%2C_NYC_%28cropped%29.jpg",
-      "creator": "Gotfryd, Bernard, photographer",
-      "license": "Public domain",
-      "licenseUrl": ""
-    },
-    {
-      "person": "Bertolt Brecht",
-      "surname": "Brecht",
-      "id": "playwright-bertolt-brecht",
-      "href": "#collection:playwright-bertolt-brecht",
-      "portrait": "./assets/collections/playwrights/07-bertolt-brecht.jpg",
-      "box": [
-        765,
-        273,
-        178,
-        565
-      ],
-      "label": [
-        854.0,
-        414.25
-      ],
-      "works": [
-        {
-          "title": "A Man's A Man",
-          "slugs": [
-            "1975-11-09-consumed-by-flames"
-          ]
-        },
-        {
-          "title": "Drums in the Night",
-          "slugs": [
-            "1973-09-02-a-chekhovian-powerhouse"
-          ]
-        },
-        {
-          "title": "Happy End",
-          "slugs": [
-            "2003-10-02-royalty-gangsters-and-classic-brecht-weill-songs",
-            "2005-06-01-both-these-ends-justify-the-means",
-            "2005-06-11-on-stage"
-          ]
-        },
-        {
-          "title": "Mother Courage and Her Children",
-          "slugs": [
-            "2014-06-14-the-full-bertolt-brecht-s-mother-courage-and-her-children-gets-an-exceptionally"
-          ]
-        },
-        {
-          "title": "Saint Joan of the Stockyards",
-          "slugs": [
-            "1974-05-19-today-i-improvise"
-          ]
-        },
-        {
-          "title": "Schweyk in the Second World War",
-          "slugs": [
-            "1977-08-21-making-you-blub",
-            "1982-09-26-the-little-man"
-          ]
-        },
-        {
-          "title": "Señora Carrar's Rifles",
-          "slugs": [
-            "2014-01-11-spoof-of-the-matter-killer-business-gets-silly-while-rifles-goes-political"
-          ]
-        },
-        {
-          "title": "The Caucasian Chalk Circle",
-          "slugs": [
-            "1980-02-03-king-ramaz"
-          ]
-        },
-        {
-          "title": "The Good Woman of Setzuan",
-          "slugs": [
-            "1977-10-16-doubts-about-brecht"
-          ]
-        },
-        {
-          "title": "The Private Life of the Third Reich",
-          "slugs": [
-            "1979-09-16-who-cares-who-dunnit"
-          ]
-        },
-        {
-          "title": "The Threepenny Opera",
-          "slugs": [
-            "1986-05-01-the-threepenny-opera",
-            "2007-02-03-soulpepper-gets-to-the-core-of-heartless-play"
-          ]
-        }
-      ],
-      "reviewCount": 15,
-      "source": "https://commons.wikimedia.org/wiki/File:Bertolt-Brecht.jpg",
-      "creator": "Kolbe, Jörg",
-      "license": "CC BY-SA 3.0 de",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en"
+      "reviewCount": 14,
+      "source": "https://commons.wikimedia.org/wiki/File:Hannah_Moscovitch_at_San_Diego_Comic_Con_2026.jpg",
+      "creator": "Kevin Paul",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "geometry": {
+        "contour": "M796 291 Q808 286 818 291 Q830 282 839 292 Q851 289 857 299 Q869 297 871 307 Q881 309 875 320 Q885 327 875 334 Q884 340 875 348 Q884 354 874 361 Q874 371 862 373 L853 374 L853 383 L877 384 L897 391 L911 415 Q919 442 925 463 Q936 477 930 498 L920 531 L911 547 L913 584 L917 632 L920 682 L915 688 L915 694 L908 697 L912 759 L918 800 L919 814 Q929 825 931 840 Q931 850 917 850 Q903 850 896 843 L890 828 L890 811 L878 807 L864 761 L851 696 L844 657 L830 631 L821 657 L827 711 L835 754 L841 790 L838 810 L837 825 Q834 838 817 841 Q794 844 791 835 L795 822 L805 810 L808 791 L798 793 L790 769 L788 727 L782 690 L759 689 L747 683 L726 680 L732 645 L742 601 L750 568 Q735 552 733 531 Q730 515 731 492 L739 461 L744 431 Q747 402 766 392 L783 384 L782 375 Q769 376 767 366 Q755 367 760 354 Q750 347 758 339 Q750 330 760 322 Q756 310 768 308 Q766 298 779 298 Q780 287 792 294 L796 291 Z",
+        "hitPath": "M796 291 Q808 286 818 291 Q830 282 839 292 Q851 289 857 299 Q869 297 871 307 Q881 309 875 320 Q885 327 875 334 Q884 340 875 348 Q884 354 874 361 Q874 371 862 373 L853 374 L853 383 L877 384 L897 391 L911 415 Q919 442 925 463 Q936 477 930 498 L920 531 L911 547 L913 584 L917 632 L920 682 L915 688 L915 694 L908 697 L912 759 L918 800 L919 814 Q929 825 931 840 Q931 850 917 850 Q903 850 896 843 L890 828 L890 811 L878 807 L864 761 L851 696 L844 657 L830 631 L821 657 L827 711 L835 754 L841 790 L838 810 L837 825 Q834 838 817 841 Q794 844 791 835 L795 822 L805 810 L808 791 L798 793 L790 769 L788 727 L782 690 L759 689 L747 683 L726 680 L732 645 L742 601 L750 568 Q735 552 733 531 Q730 515 731 492 L739 461 L744 431 Q747 402 766 392 L783 384 L782 375 Q769 376 767 366 Q755 367 760 354 Q750 347 758 339 Q750 330 760 322 Q756 310 768 308 Q766 298 779 298 Q780 287 792 294 L796 291 Z",
+        "label": [
+          827,
+          480
+        ],
+        "headCenter": [
+          827,
+          335
+        ]
+      }
     },
     {
       "person": "Alan Ayckbourn",
@@ -1621,403 +2735,575 @@
       "source": "https://commons.wikimedia.org/wiki/File:Sir_Alan_Ayckbourn_P4220001.JPG",
       "creator": "John Thaxter",
       "license": "CC BY-SA 3.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "geometry": {
+        "contour": "M984 291 Q1005 283 1022 295 Q1036 305 1037 323 L1034 342 Q1032 357 1020 367 L1018 376 L1040 381 L1065 386 L1075 396 L1077 436 L1081 471 L1078 504 L1071 539 L1064 558 L1070 585 L1054 591 L1058 655 L1060 721 L1066 794 L1069 809 Q1080 819 1079 833 Q1076 842 1061 841 Q1039 840 1019 829 L1014 824 L1014 810 L1006 803 L1005 769 L999 715 L994 649 L983 600 L975 641 L968 695 L964 754 L969 802 L962 808 Q965 825 953 833 Q938 840 925 833 Q919 830 924 818 L927 808 L922 797 L921 745 L920 700 L920 682 L917 632 L913 584 L911 547 L920 531 L930 498 Q936 477 925 463 Q919 442 911 415 L897 391 L906 388 L928 379 L958 368 L970 360 L968 348 L962 341 L961 325 Q965 316 969 324 L971 308 Q975 296 984 291 Z",
+        "hitPath": "M984 291 Q1005 283 1022 295 Q1036 305 1037 323 L1034 342 Q1032 357 1020 367 L1018 376 L1040 381 L1065 386 L1075 396 L1077 436 L1081 471 L1078 504 L1071 539 L1064 558 L1070 585 L1054 591 L1058 655 L1060 721 L1066 794 L1069 809 Q1080 819 1079 833 Q1076 842 1061 841 Q1039 840 1019 829 L1014 824 L1014 810 L1006 803 L1005 769 L999 715 L994 649 L983 600 L975 641 L968 695 L964 754 L969 802 L962 808 Q965 825 953 833 Q938 840 925 833 Q919 830 924 818 L927 808 L922 797 L921 745 L920 700 L920 682 L917 632 L913 584 L911 547 L920 531 L930 498 Q936 477 925 463 Q919 442 911 415 L897 391 L906 388 L928 379 L958 368 L970 360 L968 348 L962 341 L961 325 Q965 316 969 324 L971 308 Q975 296 984 291 Z",
+        "label": [
+          995,
+          480
+        ],
+        "headCenter": [
+          1002,
+          331
+        ]
+      }
     },
     {
-      "person": "Samuel Beckett",
-      "surname": "Beckett",
-      "id": "playwright-samuel-beckett",
-      "href": "#collection:playwright-samuel-beckett",
-      "portrait": "./assets/collections/playwrights/09-samuel-beckett.jpg",
-      "box": [
-        1124,
-        124,
-        205,
-        623
-      ],
-      "label": [
-        1226.5,
-        96
-      ],
+      "person": "Stephen Sondheim",
+      "surname": "Sondheim",
+      "id": "playwright-stephen-sondheim",
+      "href": "#collection:sondheim",
       "works": [
         {
-          "title": "All But Gone",
+          "title": "Company",
           "slugs": [
-            "2016-10-19-controller-controller"
+            "1972-03-01-company",
+            "2014-07-09-relationship-material",
+            "2018-12-10-london-theatre-some-dark-and-light-matters",
+            "2026-02-08-the-company-way"
           ]
         },
         {
-          "title": "Beckett Shorts",
+          "title": "Pacific Overtures",
           "slugs": [
-            "1973-06-24-two-from-the-critics",
-            "2004-12-10-boisterous-beckett-bits-best-brainy-bertolt-brecht"
+            "1976-06-20-east-of-broadway"
           ]
         },
         {
-          "title": "Endgame",
+          "title": "Side by Side by Sondheim",
           "slugs": [
-            "1999-07-27-rage-against-the-body-s-limitations",
-            "2012-11-03-the-means-to-an-end"
+            "1976-08-01-trucking-in-from-hull",
+            "1978-04-09-on-stage",
+            "2004-12-03-send-in-the-frowns",
+            "2004-12-11-sondheim-revue-marred-by-a-coy-gentility-and-stilted-narration"
           ]
         },
         {
-          "title": "Footfalls",
+          "title": "Sweeney Todd",
           "slugs": [
-            "2000-04-18-cheerfulness-will-keep-breaking-in"
+            "1979-03-11-the-demon-barber",
+            "1980-07-06-the-demon-barber-strikes-again",
+            "1980-11-02-sweeney-gets-the-chop",
+            "2003-04-01-rave-and-a-haircut",
+            "2007-11-10-a-cut-above-sweeney-todd-and-his-madness-descend-on-the-princess-of-wales",
+            "2007-12-08-turtles-turtles-rah-rah-rah-this-performance-ensemble-does-some-lovely"
           ]
         },
         {
-          "title": "Happy Days",
+          "title": "Amadeus",
           "slugs": [
-            "1975-03-16-from-frayn-to-beckett",
-            "1979-06-10-playing-for-kicks",
-            "2003-07-18-poised-between-delight-and-despair"
+            "1981-01-25-exporting-amadeus"
           ]
         },
         {
-          "title": "Krapp's Last Tape",
+          "title": "Candide",
           "slugs": [
-            "2000-04-18-cheerfulness-will-keep-breaking-in",
-            "undated-cocteau-ionesco-becket-new-company-at-a-d-c"
+            "1981-08-23-rescuing-candide",
+            "1997-05-01-theatre-review-candide"
           ]
         },
         {
-          "title": "Play and Other Plays",
+          "title": "The Passion",
           "slugs": [
-            "1976-05-23-in-a-hellish-half-light"
+            "1994-05-21-theatre-it-s-only-a-part-of-love-the-word-is-that-passion"
           ]
         },
         {
-          "title": "The Beckett Trilogy",
+          "title": "Passion / Broken Glass",
           "slugs": [
-            "2015-10-24-godot-of-small-things-the-beckett-trilogy-reveals-the-careful-showman-behind"
+            "1994-06-04-passion-flowers-theatre-review-stephen-sondheim-has-his-humour-on-a-very"
           ]
         },
         {
-          "title": "Waiting for Godot",
+          "title": "Into the Woods",
           "slugs": [
-            "1981-02-22-acting-your-age",
-            "2004-06-21-transformed-by-time",
-            "2004-06-26-hutt-putters-around-and-steals-the-show-while-waiting-for-godot",
-            "2004-08-21-waiting-for-godot-has-a-chance-at-greatness-as-the-run-progress",
-            "2013-07-06-super-tramps-stratford-s-waiting-for-godot-features-a-natty-vladimir-a-great",
-            "2017-09-27-parting-with-tradition-theatre-review-waiting-for-godot"
+            "1995-04-22-spectator-following-rapunzel-and-the-gang-into-the-enchanted-woods",
+            "2005-06-08-stratford-fest-does-well-by-arguably-sondheims-best"
+          ]
+        },
+        {
+          "title": "Sunday in the Park with George",
+          "slugs": [
+            "2000-02-18-making-a-clearer-picture-from-the-fragments",
+            "2009-05-26-portrait-of-an-artist"
+          ]
+        },
+        {
+          "title": "Merrily We Roll Along",
+          "slugs": [
+            "2002-05-28-the-right-songs-in-the-wrong-show"
+          ]
+        },
+        {
+          "title": "Gypsy",
+          "slugs": [
+            "2005-07-02-gypsy"
+          ]
+        },
+        {
+          "title": "A Little Night Music",
+          "slugs": [
+            "2008-07-08-tears-from-the-clowns",
+            "2016-09-08-scandinavia-on-stage-in-canada-theatre-review"
+          ]
+        },
+        {
+          "title": "Follies: In Concert",
+          "slugs": [
+            "2008-10-03-a-comeback-with-kick"
+          ]
+        },
+        {
+          "title": "Road Show",
+          "slugs": [
+            "2008-12-01-one-of-the-better-things-that-ever-has-happened"
+          ]
+        },
+        {
+          "title": "West Side Story",
+          "slugs": [
+            "2009-06-09-not-so-witty-but-gritty-and-faithfully-played"
+          ]
+        },
+        {
+          "title": "A Funny Thing Happened on the Way to the Forum",
+          "slugs": [
+            "2009-07-02-those-rollicking-romans",
+            "2010-12-24-cute-overload"
+          ]
+        },
+        {
+          "title": "Assassins",
+          "slugs": [
+            "2010-02-17-a-killer-musical-show"
+          ]
+        },
+        {
+          "title": "On a Clear Day You Can See Forever / Follies / Relatively Speaking",
+          "slugs": [
+            "2011-12-22-gone-broadway-where-to-go-and-what-to-see-for-a-fan-of-the-stage-in-nyc"
+          ]
+        },
+        {
+          "title": "Marry Me a Little",
+          "slugs": [
+            "2014-03-08-sorta-stephen-sondheim-a-mashed-up-musical-that-works-about-as-well-as-it"
+          ]
+        },
+        {
+          "title": "Sweeney Todd: The Demon Barber of Fleet Street",
+          "slugs": [
+            "2016-08-03-simply-the-best-this-version-of-sweeney-todd-feels-like-a-masterpiece"
           ]
         }
       ],
-      "reviewCount": 18,
-      "source": "https://commons.wikimedia.org/wiki/File:Samuel_Beckett%2C_Pic%2C_1_%28cropped%29.jpg",
-      "creator": "Roger Pic",
-      "license": "Public domain",
+      "reviewCount": 37,
+      "geometry": {
+        "contour": "M1140 281 Q1149 272 1160 279 Q1173 278 1184 286 Q1197 292 1199 307 Q1208 316 1200 329 Q1204 342 1194 354 L1189 366 L1181 373 L1190 380 L1220 385 L1247 395 L1251 403 L1244 444 L1237 480 L1234 514 L1237 548 L1237 573 L1226 584 L1227 625 L1230 689 L1233 748 L1238 801 L1235 813 Q1245 820 1251 831 Q1258 845 1244 845 Q1225 850 1207 841 L1197 830 L1194 813 L1184 803 L1179 767 L1170 715 L1160 664 L1155 624 L1144 660 L1145 727 L1149 783 L1147 799 Q1144 813 1137 825 Q1123 835 1103 832 Q1090 831 1097 822 L1106 811 L1109 796 L1105 749 L1099 705 L1094 645 L1087 592 L1074 588 L1068 577 L1070 557 Q1082 531 1079 505 L1081 470 L1079 428 L1078 399 L1082 387 L1112 376 L1128 368 L1130 357 Q1118 346 1114 331 L1114 312 Q1109 303 1118 298 Q1114 289 1127 289 Q1127 280 1140 281 Z",
+        "hitPath": "M1140 281 Q1149 272 1160 279 Q1173 278 1184 286 Q1197 292 1199 307 Q1208 316 1200 329 Q1204 342 1194 354 L1189 366 L1181 373 L1190 380 L1220 385 L1247 395 L1251 403 L1244 444 L1237 480 L1234 514 L1237 548 L1237 573 L1226 584 L1227 625 L1230 689 L1233 748 L1238 801 L1235 813 Q1245 820 1251 831 Q1258 845 1244 845 Q1225 850 1207 841 L1197 830 L1194 813 L1184 803 L1179 767 L1170 715 L1160 664 L1155 624 L1144 660 L1145 727 L1149 783 L1147 799 Q1144 813 1137 825 Q1123 835 1103 832 Q1090 831 1097 822 L1106 811 L1109 796 L1105 749 L1099 705 L1094 645 L1087 592 L1074 588 L1068 577 L1070 557 Q1082 531 1079 505 L1081 470 L1079 428 L1078 399 L1082 387 L1112 376 L1128 368 L1130 357 Q1118 346 1114 331 L1114 312 Q1109 303 1118 298 Q1114 289 1127 289 Q1127 280 1140 281 Z",
+        "label": [
+          1165,
+          480
+        ],
+        "headCenter": [
+          1160,
+          329
+        ]
+      },
+      "portrait": "./assets/collections/playwrights/group-ensemble-22.png",
+      "portraitCrop": [
+        1095,
+        256,
+        130,
+        173
+      ],
+      "source": "Original group illustration commissioned for Cushman Collected",
+      "creator": "Digitally generated illustration",
+      "license": "Owner-approved illustration; not a historical group photograph",
       "licenseUrl": ""
     },
     {
-      "person": "Harold Pinter",
-      "surname": "Pinter",
-      "id": "playwright-harold-pinter",
-      "href": "#collection:playwright-harold-pinter",
-      "portrait": "./assets/collections/playwrights/10-harold-pinter.jpg",
-      "box": [
-        1144,
-        265,
-        172,
-        571
-      ],
-      "label": [
-        1230.0,
-        407.75
-      ],
+      "person": "Edward Albee",
+      "surname": "Albee",
+      "id": "playwright-edward-albee",
+      "href": "#collection:playwright-edward-albee",
+      "reviewCount": 9,
       "works": [
         {
-          "title": "A Kind of Alaska",
+          "title": "A Delicate Balance",
           "slugs": [
-            "1982-10-17-faraway-places"
-          ]
+            "2007-08-20-on-the-edge-of-the-carpet"
+          ],
+          "notes": ""
         },
         {
-          "title": "A Slight Ache",
+          "title": "The Goat, or Who Is Sylvia?",
           "slugs": [
-            "1973-10-21-pinter-s-mixed-doubles"
-          ]
+            "2005-12-03-albee-lets-the-goat-out-of-the-pasture"
+          ],
+          "notes": ""
         },
         {
-          "title": "Ashes to Ashes",
-          "slugs": [
-            "1999-02-12-classic-pinter-carrying-pain-with-pride"
-          ]
-        },
-        {
-          "title": "Betrayal",
-          "slugs": [
-            "1979-03-11-theatre",
-            "2000-09-11-pinter-reconsidered-considerably-redeemed",
-            "2000-10-09-pinter-s-betrayal-becomes-a-most-admired-work",
-            "2019-10-25-streetcars-to-soulpepper-past"
-          ]
-        },
-        {
-          "title": "Celebration",
-          "slugs": [
-            "2001-10-20-pinter-commands-the-spoken-word"
-          ]
-        },
-        {
-          "title": "Family Voices",
-          "slugs": [
-            "1982-10-17-faraway-places"
-          ]
-        },
-        {
-          "title": "Landscape",
-          "slugs": [
-            "1973-10-21-pinter-s-mixed-doubles"
-          ]
-        },
-        {
-          "title": "No Man's Land",
-          "slugs": [
-            "1975-04-27-mr-pinter-s-spoonerisms",
-            "2003-07-14-second-hand-satire-is-sweet"
-          ]
-        },
-        {
-          "title": "Other Places",
-          "slugs": [
-            "1982-10-17-faraway-places"
-          ]
-        },
-        {
-          "title": "The Birthday Party",
-          "slugs": [
-            "1975-01-19-true-love-conquers-all-as-usual"
-          ]
-        },
-        {
-          "title": "The Caretaker",
-          "slugs": [
-            "1980-11-16-illuminating-labour",
-            "1981-05-31-back-to-arden-s-dance",
-            "2006-11-03-dynamite-diego"
-          ]
-        },
-        {
-          "title": "The Dumb Waiter",
+          "title": "The Zoo Story",
           "slugs": [
             "2004-07-16-a-double-bill-with-the-requisite-two-wise-guys",
             "2004-07-24-the-dumb-waiter-the-zoo-story"
-          ]
+          ],
+          "notes": ""
         },
         {
-          "title": "The Homecoming",
+          "title": "Who's Afraid of Virginia Woolf?",
           "slugs": [
-            "1978-05-07-disorderly-conduct",
-            "2011-08-16-menace-through-anxiety"
-          ]
-        },
-        {
-          "title": "The Hothouse",
-          "slugs": [
-            "1980-05-04-inside-pinter-s-hothouse"
-          ]
-        },
-        {
-          "title": "The Lover",
-          "slugs": [
-            "2005-02-24-videocabaret-makes-riel-impact-with-limited-resources"
-          ]
-        },
-        {
-          "title": "Victoria Station",
-          "slugs": [
-            "1982-10-17-faraway-places"
-          ]
+            "1981-08-30-life-with-george",
+            "2001-06-04-a-nasty-little-parlour-game-designed-for-four-like-minded-souls",
+            "2006-04-08-american-buffalo-lacks-exuberance-lucid-but-not-up-to-company-s-standards",
+            "2009-09-21-nothing-to-fear-here",
+            "2014-12-20-a-family-affair-in-the-best-way-a-revelatory-look-at-who-s-afraid-of-virginia"
+          ],
+          "notes": ""
         }
       ],
-      "reviewCount": 20,
-      "source": "https://commons.wikimedia.org/wiki/File:Harold_Pinter_1962.jpg",
-      "creator": "Jack de Nijs  for  Anefo",
-      "license": "CC0",
-      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
-    },
-    {
-      "person": "Molière",
-      "surname": "Molière",
-      "id": "playwright-moliere",
-      "href": "#collection:playwright-moliere",
-      "portrait": "./assets/collections/playwrights/11-moli-re.jpg",
-      "box": [
-        1017,
-        271,
-        180,
-        571
+      "geometry": {
+        "contour": "M1287 294 Q1302 284 1319 292 Q1335 291 1343 305 Q1351 314 1349 329 Q1354 340 1345 354 L1339 365 L1340 376 L1361 383 L1383 392 L1396 390 Q1384 405 1387 426 L1389 456 L1381 492 Q1380 519 1389 537 L1385 556 L1381 582 L1391 592 L1393 641 L1399 703 L1401 756 L1404 803 L1403 816 Q1414 829 1418 840 Q1415 850 1400 850 Q1383 850 1372 841 L1369 827 L1363 816 L1357 801 L1355 769 L1348 713 L1336 650 L1322 615 L1328 666 L1333 722 L1333 774 L1330 806 L1322 815 Q1325 829 1310 833 Q1283 836 1265 830 Q1259 827 1265 821 L1279 811 L1290 806 L1289 788 L1285 739 L1277 690 L1265 643 L1250 603 L1246 598 L1247 589 L1244 570 Q1234 554 1238 534 L1240 508 L1245 479 L1253 452 L1259 434 L1260 421 L1257 415 L1258 404 L1264 395 L1270 390 L1275 385 L1279 387 L1278 394 L1270 399 L1280 397 L1286 402 L1284 409 L1274 408 L1283 416 L1280 424 L1276 424 L1276 437 L1277 450 L1290 442 L1299 379 L1291 372 L1283 361 Q1274 349 1275 335 L1271 320 Q1274 303 1287 294 Z",
+        "hitPath": "M1287 294 Q1302 284 1319 292 Q1335 291 1343 305 Q1351 314 1349 329 Q1354 340 1345 354 L1339 365 L1340 376 L1361 383 L1383 392 L1396 390 Q1384 405 1387 426 L1389 456 L1381 492 Q1380 519 1389 537 L1385 556 L1381 582 L1391 592 L1393 641 L1399 703 L1401 756 L1404 803 L1403 816 Q1414 829 1418 840 Q1415 850 1400 850 Q1383 850 1372 841 L1369 827 L1363 816 L1357 801 L1355 769 L1348 713 L1336 650 L1322 615 L1328 666 L1333 722 L1333 774 L1330 806 L1322 815 Q1325 829 1310 833 Q1283 836 1265 830 Q1259 827 1265 821 L1279 811 L1290 806 L1289 788 L1285 739 L1277 690 L1265 643 L1250 603 L1246 598 L1247 589 L1244 570 Q1234 554 1238 534 L1240 508 L1245 479 L1253 452 L1259 434 L1260 421 L1257 415 L1258 404 L1264 395 L1270 390 L1275 385 L1279 387 L1278 394 L1270 399 L1280 397 L1286 402 L1284 409 L1274 408 L1283 416 L1280 424 L1276 424 L1276 437 L1277 450 L1290 442 L1299 379 L1291 372 L1283 361 Q1274 349 1275 335 L1271 320 Q1274 303 1287 294 Z",
+        "label": [
+          1323,
+          480
+        ],
+        "headCenter": [
+          1310,
+          333
+        ]
+      },
+      "portrait": "./assets/collections/playwrights/group-ensemble-22.png",
+      "portraitCrop": [
+        1245,
+        260,
+        130,
+        173
       ],
-      "label": [
-        1107.0,
-        413.75
-      ],
-      "works": [
-        {
-          "title": "Don Juan",
-          "slugs": [
-            "1976-05-23-in-a-hellish-half-light",
-            "1978-03-12-dying-to-be-dead",
-            "1981-04-12-the-seagull-flies-to-ireland",
-            "1983-02-20-breaking-bonds",
-            "2006-10-23-our-chaussettes-were-knocked-off"
-          ]
-        },
-        {
-          "title": "Le Bourgeois Gentilhomme",
-          "slugs": [
-            "2005-04-30-worldstage-makes-virtue-of-necessity-crouchs-my-arm-shows-potential-of-one-person"
-          ]
-        },
-        {
-          "title": "Tartuffe",
-          "slugs": [
-            "1976-11-21-moli-re-caught-in-a-trap",
-            "2000-08-14-yes-tartuffe-you-are-indeed-worthy",
-            "2014-08-16-the-greatest-sitcom-moliere-s-tartuffe-is-the-original-farce-and-soulpepper-s"
-          ]
-        },
-        {
-          "title": "The Imaginary Invalid",
-          "slugs": [
-            "1981-10-25-moli-re-s-dying-fall",
-            "2007-10-31-more-sickness-than-health"
-          ]
-        },
-        {
-          "title": "The Learned Ladies",
-          "slugs": [
-            "1981-10-11-classroom-memories"
-          ]
-        },
-        {
-          "title": "The Misanthrope",
-          "slugs": [
-            "1981-07-05-fresh-air",
-            "2011-08-17-dupes-dopes-drag-queens-invade-stratford"
-          ]
-        },
-        {
-          "title": "The School for Wives",
-          "slugs": [
-            "1981-03-29-having-a-ball-with-bleasdale",
-            "2000-08-10-the-deeper-double-takes"
-          ]
-        },
-        {
-          "title": "The Sicilian",
-          "slugs": [
-            "2009-07-11-french-farce-meets-bonnie-and-clyde-only-at-the-fringe-plus-one-show-that"
-          ]
-        }
-      ],
-      "reviewCount": 17,
-      "source": "https://commons.wikimedia.org/wiki/File:Pierre_Mignard_-_Portrait_de_Jean-Baptiste_Poquelin_dit_Moli%C3%A8re_%281622-1673%29_-_Google_Art_Project_%28cropped%29.jpg",
-      "creator": "Pierre Mignard I",
-      "license": "Public domain",
+      "source": "Original group illustration commissioned for Cushman Collected",
+      "creator": "Digitally generated illustration",
+      "license": "Owner-approved illustration; not a historical group photograph",
       "licenseUrl": ""
     },
     {
-      "person": "Tennessee Williams",
-      "surname": "Williams",
-      "id": "playwright-tennessee-williams",
-      "href": "#collection:playwright-tennessee-williams",
-      "portrait": "./assets/collections/playwrights/12-tennessee-williams.jpg",
-      "box": [
-        1262,
-        267,
-        190,
-        568
-      ],
-      "label": [
-        1357.0,
-        409.0
-      ],
+      "person": "Daniel MacIvor",
+      "surname": "MacIvor",
+      "id": "playwright-daniel-macivor",
+      "href": "#collection:playwright-daniel-macivor",
+      "reviewCount": 21,
       "works": [
         {
-          "title": "A Lovely Sunday for Creve Coeur",
+          "title": "Arigato, Tokyo",
           "slugs": [
-            "2014-07-19-oceans-of-emotion-a-masterful-take-on-the-sea-and-a-mirthful-production-of"
-          ]
+            "2013-03-30-friends-like-these-playwright-melissa-jane-gibson-debuts-in-toronto-with-an"
+          ],
+          "notes": ""
         },
         {
-          "title": "A Perfect Analysis Given By A Parrot",
+          "title": "Bingo!",
           "slugs": [
-            "1999-11-18-a-lunch-size-portion-of-tennessee-williams"
-          ]
+            "2014-05-24-art-imitating-death-judith-thompson-s-play-of-the-ashley-smith-tragedy-may"
+          ],
+          "notes": ""
         },
         {
-          "title": "A Streetcar Named Desire",
+          "title": "Cake and Dirt",
           "slugs": [
-            "1974-03-17-more-cheers-for-chekhov",
-            "1999-07-20-next-stop-heartbreak-and-destruction",
-            "2019-10-25-streetcars-to-soulpepper-past"
-          ]
+            "2015-03-14-a-house-divided-molly-parker-takes-to-the-boards-for-only-the-second-time"
+          ],
+          "notes": ""
         },
         {
-          "title": "Cat on a Hot Tin Roof",
+          "title": "Communion",
           "slugs": [
-            "2005-06-07-of-cats-brothers-and-hot-relations",
-            "2011-05-31-theatre-review-cat-on-a-hot-tin-roof"
-          ]
+            "2010-03-06-the-doctor-is-in-and-has-ammunition-communion-tackles-the-same-topics"
+          ],
+          "notes": ""
         },
         {
-          "title": "Orpheus Descending",
+          "title": "Cul-de-sac",
           "slugs": [
-            "2005-07-06-production-makes-a-case-for-the-ultimate-williams-play",
-            "2007-01-09-from-italy-with-a-valentine"
-          ]
+            "2004-10-15-the-perfect-avenue-for-his-talent",
+            "2004-10-30-cul-de-sac-a-tour-de-force-daniel-macivor-in-top-form-in-self-written-solo"
+          ],
+          "notes": ""
         },
         {
-          "title": "Suddenly Last Summer",
+          "title": "Here Lies Henry",
           "slugs": [
-            "1983-07-03-singin-on-the-stage"
-          ]
+            "2006-10-03-his-words-may-lie-but-his-performance-rings-true"
+          ],
+          "notes": ""
         },
         {
-          "title": "Summer and Smoke",
+          "title": "His Greatness",
           "slugs": [
-            "2007-07-23-genesis-of-blanche-dubois-summer-and-smoke"
-          ]
+            "2011-10-01-the-show-the-assistant-his-boss-his-lover-daniel-macivor-s-return-to"
+          ],
+          "notes": ""
         },
         {
-          "title": "Talk to Me Like the Rain and Let Me Listen",
+          "title": "House",
           "slugs": [
-            "1999-04-28-tennessee-williams-for-two"
-          ]
+            "2007-03-09-da-coda-for-da-da-kamera"
+          ],
+          "notes": ""
         },
         {
-          "title": "The Glass Menagerie",
+          "title": "How It Works",
           "slugs": [
-            "2005-01-17-whistle-while-you-clap-new-company-scores-with-bare-knuckled-knock-out-debut",
-            "2005-01-29-glass-menagerie-gets-off-to-a-firm-start-but-wilts-thereafter",
-            "2006-06-08-meet-the-transparents",
-            "2011-07-09-romance-meets-reality-soulpepper-s-take-on-glass-menagerie-magnificently-moving"
-          ]
+            "2007-11-17-this-is-your-family-on-drugs-relationships-ruptured-and-repaired-in-daniel-macivor-s-how-it-works"
+          ],
+          "notes": ""
         },
         {
-          "title": "This Property is Condemned",
+          "title": "In on It",
           "slugs": [
-            "1975-04-06-the-kiss-in-the-cafe"
-          ]
+            "2002-04-03-a-bit-of-this-and-that"
+          ],
+          "notes": ""
         },
         {
-          "title": "Vieux Carré",
+          "title": "Jump",
           "slugs": [
-            "1978-08-20-back-to-new-orleans",
-            "2012-03-31-now-playing"
-          ]
+            "2001-01-16-love-means-never-having-to-say-anything"
+          ],
+          "notes": ""
+        },
+        {
+          "title": "Marion Bridge",
+          "slugs": [
+            "2007-05-26-in-the-distillery-it-takes-two-villages-marion-bridge-brings-cape-breton-to-the-stage-third-time-s-the-charm-for-our-town"
+          ],
+          "notes": ""
+        },
+        {
+          "title": "Monster",
+          "slugs": [
+            "2007-01-20-welcome-back-to-t-o-three-outstanding-shows-from-past-seasons-return"
+          ],
+          "notes": ""
+        },
+        {
+          "title": "See Bob Run",
+          "slugs": [
+            "1999-09-03-they-ll-give-you-a-good-talking-to"
+          ],
+          "notes": ""
+        },
+        {
+          "title": "The Best Brothers",
+          "slugs": [
+            "2012-07-31-mother-would-be-twice-as-proud"
+          ],
+          "notes": ""
+        },
+        {
+          "title": "The Soldier Dreams",
+          "slugs": [
+            "1997-03-29-theatre-review-the-soldier-dreams"
+          ],
+          "notes": ""
+        },
+        {
+          "title": "This Is What Happens Next",
+          "slugs": [
+            "2010-04-21-keeping-it-very-real"
+          ],
+          "notes": ""
+        },
+        {
+          "title": "Was Spring",
+          "slugs": [
+            "2012-04-11-sophocles-if-you-please"
+          ],
+          "notes": "Text explicitly identifies MacIvor's Was Spring. Other names in this group belong to Ajax & Little Iliad; do not inherit those co-credits."
+        },
+        {
+          "title": "Who Killed Spalding Gray?",
+          "slugs": [
+            "2016-12-08-being-name-checked-maybe-not-coincidental"
+          ],
+          "notes": ""
+        },
+        {
+          "title": "Wild Abandon",
+          "slugs": [
+            "1999-09-03-they-ll-give-you-a-good-talking-to"
+          ],
+          "notes": ""
+        },
+        {
+          "title": "You Are Here",
+          "slugs": [
+            "2001-09-28-alison-this-is-your-play"
+          ],
+          "notes": ""
         }
       ],
-      "reviewCount": 19,
-      "source": "https://commons.wikimedia.org/wiki/File:Tennessee_Williams_NYWTS.jpg",
-      "creator": "Orlando Fernandez, World Telegram staff photographer",
-      "license": "Public domain",
+      "geometry": {
+        "contour": "M1420 283 Q1430 273 1444 278 Q1456 271 1468 280 Q1484 281 1484 298 L1489 313 Q1496 317 1490 331 L1486 342 L1480 351 L1483 366 L1510 372 L1535 380 Q1549 388 1553 410 L1559 443 L1567 478 Q1573 506 1563 529 L1552 546 L1539 563 L1542 586 L1548 615 L1527 621 L1515 615 L1515 644 L1523 692 L1534 752 L1544 803 L1542 818 Q1551 829 1554 842 Q1550 852 1537 851 Q1523 852 1517 846 L1510 836 L1509 818 L1502 809 L1498 777 L1485 728 L1470 671 L1460 629 L1446 607 L1447 659 L1454 710 L1468 759 L1474 803 L1471 817 Q1468 827 1450 829 L1421 829 Q1401 829 1405 819 L1414 808 L1430 802 L1424 777 L1417 746 L1409 688 L1402 634 L1391 592 L1381 582 L1385 556 L1389 537 Q1380 519 1381 492 L1389 456 L1387 426 Q1384 405 1396 390 L1410 381 L1417 369 L1416 357 Q1405 345 1405 330 L1403 313 Q1398 303 1409 300 Q1404 291 1414 289 L1420 283 Z",
+        "hitPath": "M1420 283 Q1430 273 1444 278 Q1456 271 1468 280 Q1484 281 1484 298 L1489 313 Q1496 317 1490 331 L1486 342 L1480 351 L1483 366 L1510 372 L1535 380 Q1549 388 1553 410 L1559 443 L1567 478 Q1573 506 1563 529 L1552 546 L1539 563 L1542 586 L1548 615 L1527 621 L1515 615 L1515 644 L1523 692 L1534 752 L1544 803 L1542 818 Q1551 829 1554 842 Q1550 852 1537 851 Q1523 852 1517 846 L1510 836 L1509 818 L1502 809 L1498 777 L1485 728 L1470 671 L1460 629 L1446 607 L1447 659 L1454 710 L1468 759 L1474 803 L1471 817 Q1468 827 1450 829 L1421 829 Q1401 829 1405 819 L1414 808 L1430 802 L1424 777 L1417 746 L1409 688 L1402 634 L1391 592 L1381 582 L1385 556 L1389 537 Q1380 519 1381 492 L1389 456 L1387 426 Q1384 405 1396 390 L1410 381 L1417 369 L1416 357 Q1405 345 1405 330 L1403 313 Q1398 303 1409 300 Q1404 291 1414 289 L1420 283 Z",
+        "label": [
+          1453,
+          480
+        ],
+        "headCenter": [
+          1450,
+          320
+        ]
+      },
+      "portrait": "./assets/collections/playwrights/group-ensemble-22.png",
+      "portraitCrop": [
+        1385,
+        247,
+        130,
+        173
+      ],
+      "source": "Original group illustration commissioned for Cushman Collected",
+      "creator": "Digitally generated illustration",
+      "license": "Owner-approved illustration; not a historical group photograph",
       "licenseUrl": ""
     },
+    {
+      "person": "Michael Healey",
+      "surname": "Healey",
+      "id": "playwright-michael-healey",
+      "href": "#collection:playwright-michael-healey",
+      "reviewCount": 18,
+      "works": [
+        {
+          "title": "Are You Okay",
+          "slugs": [
+            "2011-03-09-life-crisis-without-the-mid"
+          ],
+          "notes": ""
+        },
+        {
+          "title": "Courageous",
+          "slugs": [
+            "2010-01-09-connecting-the-dots-in-this-plea-for-tolerance-with-courageous-and-east-of"
+          ],
+          "notes": ""
+        },
+        {
+          "title": "Generous",
+          "slugs": [
+            "2005-12-21-short-plays-bring-out-politics-and-poets",
+            "2006-09-30-healey-s-generous-lives-up-to-its-title"
+          ],
+          "notes": ""
+        },
+        {
+          "title": "Hotel Loopy",
+          "slugs": [
+            "2003-05-15-don-t-bother-they-re-here"
+          ],
+          "notes": ""
+        },
+        {
+          "title": "Olympia",
+          "slugs": [
+            "2005-07-30-a-cruelly-effective-wild-duck-but-olympia-loses-its-bite"
+          ],
+          "notes": "Ferenc Molnár original; article explicitly identifies Healey as adapter."
+        },
+        {
+          "title": "On the Rocks",
+          "slugs": [
+            "2011-07-12-shaken-not-stirred"
+          ],
+          "notes": ""
+        },
+        {
+          "title": "Plan B",
+          "slugs": [
+            "2002-01-10-two-sexy-solitudes"
+          ],
+          "notes": ""
+        },
+        {
+          "title": "Proud",
+          "slugs": [
+            "2012-10-02-a-pygmalion-for-the-political-age"
+          ],
+          "notes": ""
+        },
+        {
+          "title": "Rune Arlidge",
+          "slugs": [
+            "2004-03-04-it-s-all-downhill-from-here"
+          ],
+          "notes": ""
+        },
+        {
+          "title": "The Dangers of Tobacco",
+          "slugs": [
+            "2002-09-16-the-master-and-the-apprentice"
+          ],
+          "notes": "Chekhov original with Healey adaptation; joint production credit."
+        },
+        {
+          "title": "The Drawer Boy",
+          "slugs": [
+            "1999-03-02-emotional-roller-coaster-makes-stunning-debut",
+            "1999-09-28-lost-memories-and-stolen-stories",
+            "2001-04-16-a-friendship-finely-sketched",
+            "2007-11-03-season-starts-with-decades-best-after-40-years-theatre-passe-muraille-continues"
+          ],
+          "notes": ""
+        },
+        {
+          "title": "The Innocent Eye Test",
+          "slugs": [
+            "2006-03-17-royal-canadian-anti-farce"
+          ],
+          "notes": ""
+        },
+        {
+          "title": "The Physicists",
+          "slugs": [
+            "2015-06-01-blinded-with-science"
+          ],
+          "notes": ""
+        },
+        {
+          "title": "The Road to Hell",
+          "slugs": [
+            "1999-09-23-two-plays-in-a-handbasket"
+          ],
+          "notes": "Pair of one-act comedies written/performed by Michael Healey and Kate Lynch; umbrella title retained."
+        }
+      ],
+      "geometry": {
+        "contour": "M1577 282 Q1590 274 1605 282 Q1619 280 1626 289 Q1635 297 1635 310 L1633 326 Q1642 325 1640 339 L1635 348 L1630 359 L1634 372 L1662 379 L1685 386 Q1700 397 1702 416 L1711 456 L1717 496 Q1718 516 1707 532 L1694 549 L1691 569 L1701 603 Q1680 609 1667 601 L1661 597 L1660 623 L1672 676 L1684 724 L1690 770 L1690 811 L1687 824 Q1695 835 1694 845 Q1694 854 1678 854 Q1662 854 1657 846 L1657 830 L1654 817 L1648 803 L1647 771 L1639 734 L1622 690 L1608 644 L1598 618 L1598 660 L1605 706 L1616 753 L1618 797 L1624 814 L1621 829 Q1606 838 1590 839 L1571 839 Q1552 840 1554 830 L1565 820 L1575 814 L1581 801 L1578 785 L1568 756 L1561 710 L1550 662 L1543 621 L1548 615 L1542 586 L1539 563 L1552 546 L1563 529 Q1573 506 1567 478 L1559 443 L1553 410 Q1549 388 1535 380 L1562 371 L1569 361 L1565 348 L1556 333 L1554 314 Q1547 307 1556 300 Q1553 291 1569 289 L1577 282 Z",
+        "hitPath": "M1577 282 Q1590 274 1605 282 Q1619 280 1626 289 Q1635 297 1635 310 L1633 326 Q1642 325 1640 339 L1635 348 L1630 359 L1634 372 L1662 379 L1685 386 Q1700 397 1702 416 L1711 456 L1717 496 Q1718 516 1707 532 L1694 549 L1691 569 L1701 603 Q1680 609 1667 601 L1661 597 L1660 623 L1672 676 L1684 724 L1690 770 L1690 811 L1687 824 Q1695 835 1694 845 Q1694 854 1678 854 Q1662 854 1657 846 L1657 830 L1654 817 L1648 803 L1647 771 L1639 734 L1622 690 L1608 644 L1598 618 L1598 660 L1605 706 L1616 753 L1618 797 L1624 814 L1621 829 Q1606 838 1590 839 L1571 839 Q1552 840 1554 830 L1565 820 L1575 814 L1581 801 L1578 785 L1568 756 L1561 710 L1550 662 L1543 621 L1548 615 L1542 586 L1539 563 L1552 546 L1563 529 Q1573 506 1567 478 L1559 443 L1553 410 Q1549 388 1535 380 L1562 371 L1569 361 L1565 348 L1556 333 L1554 314 Q1547 307 1556 300 Q1553 291 1569 289 L1577 282 Z",
+        "label": [
+          1610,
+          481
+        ],
+        "headCenter": [
+          1593,
+          327
+        ]
+      },
+      "portrait": "./assets/collections/playwrights/group-ensemble-22.png",
+      "portraitCrop": [
+        1528,
+        254,
+        130,
+        173
+      ],
+      "source": "Original group illustration commissioned for Cushman Collected",
+      "creator": "Digitally generated illustration",
+      "license": "Owner-approved illustration; not a historical group photograph",
+      "licenseUrl": ""
+    }
+  ],
+  "legacyPeople": [
     {
       "person": "Judith Thompson",
       "surname": "Thompson",
@@ -2097,12 +3383,6 @@
           ]
         },
         {
-          "title": "Totem",
-          "slugs": [
-            "2011-08-27-savage-whimsy-or-how-to-describe-white-biting-dog-and-cirque-s-totem"
-          ]
-        },
-        {
           "title": "Watching Glory Die",
           "slugs": [
             "2014-05-24-art-imitating-death-judith-thompson-s-play-of-the-ashley-smith-tragedy-may"
@@ -2120,165 +3400,6 @@
       "creator": "Canada's Theatre Museum",
       "license": "CC BY 3.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/3.0"
-    },
-    {
-      "person": "Hannah Moscovitch",
-      "surname": "Moscovitch",
-      "id": "playwright-hannah-moscovitch",
-      "href": "#collection:playwright-hannah-moscovitch",
-      "portrait": "./assets/collections/playwrights/14-hannah-moscovitch.jpg",
-      "box": [
-        510,
-        267,
-        169,
-        573
-      ],
-      "label": [
-        594.5,
-        410.25
-      ],
-      "works": [
-        {
-          "title": "Bunny",
-          "slugs": [
-            "2016-08-24-rabbit-run-bunny-offers-something-rare"
-          ]
-        },
-        {
-          "title": "East of Berlin",
-          "slugs": [
-            "2007-10-27-sins-of-the-father-hannah-moscovitchs-east-of-berlin-has-mystery-nazis-and",
-            "2009-01-23-the-view-from-here-the-holocaust-from-three-perspectives"
-          ]
-        },
-        {
-          "title": "Essay",
-          "slugs": [
-            "2005-08-13-pitres-annie-goes-great-guns-but-good-songs-cant-save-second-act",
-            "2008-01-30-the-marvelous-ms-moscovitch"
-          ]
-        },
-        {
-          "title": "In This World",
-          "slugs": [
-            "2010-05-15-authentic-voice-lends-depth-to-teen-trials-hannah-moscovitch-has-another-winner"
-          ]
-        },
-        {
-          "title": "Infinity",
-          "slugs": [
-            "2015-04-11-the-string-theory-of-everything"
-          ]
-        },
-        {
-          "title": "Little One",
-          "slugs": [
-            "2011-08-13-hannah-moscovitch-s-monologues-and-more-a-round-up-of-summerworks-best-and",
-            "2013-02-23-the-family-way-hannah-moscovitch-our-most-competent-playwright-does-domestic"
-          ]
-        },
-        {
-          "title": "Mexico City",
-          "slugs": [
-            "2007-08-11-cuckoos-marriage-and-conrad-black-summerworks-takes-on-all-of-these-subjects"
-          ]
-        },
-        {
-          "title": "The Children's Republic",
-          "slugs": [
-            "2011-11-23-the-troubled-the-troublemakers-children-s-republic-best-canadian-play-in"
-          ]
-        },
-        {
-          "title": "The Russian Play",
-          "slugs": [
-            "2007-02-23-back-with-the-ussr",
-            "2008-01-30-the-marvelous-ms-moscovitch",
-            "2019-09-05-monosyllabic"
-          ]
-        },
-        {
-          "title": "This Is War",
-          "slugs": [
-            "2013-01-10-why-we-fight-personal-drama-leads-to-national-trauma-in-brilliant-morally"
-          ]
-        }
-      ],
-      "reviewCount": 14,
-      "source": "https://commons.wikimedia.org/wiki/File:Hannah_Moscovitch_at_San_Diego_Comic_Con_2026.jpg",
-      "creator": "Kevin Paul",
-      "license": "CC BY 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/4.0"
-    },
-    {
-      "person": "Caryl Churchill",
-      "surname": "Churchill",
-      "id": "playwright-caryl-churchill",
-      "href": "#collection:playwright-caryl-churchill",
-      "portrait": "./assets/collections/playwrights/15-caryl-churchill.jpg",
-      "box": [
-        644,
-        278,
-        159,
-        560
-      ],
-      "label": [
-        723.5,
-        418.0
-      ],
-      "works": [
-        {
-          "title": "A Number",
-          "slugs": [
-            "2006-01-21-attack-of-the-cloned-sons-a-number-gives-new-meaning-to-daddy-issues"
-          ]
-        },
-        {
-          "title": "Cloud Nine",
-          "slugs": [
-            "1979-04-01-that-old-sex-war",
-            "2010-01-30-love-is-a-battlefield-megan-follows-leads-stellar-cast-in-cloud-9"
-          ]
-        },
-        {
-          "title": "Fen",
-          "slugs": [
-            "1983-02-20-breaking-bonds"
-          ]
-        },
-        {
-          "title": "Objections to Sex and Violence",
-          "slugs": [
-            "1975-01-05-on-the-beach"
-          ]
-        },
-        {
-          "title": "Serious Money",
-          "slugs": [
-            "2010-08-28-when-light-verse-becomes-too-heavy-caryl-churchill-s-play-is-prescient-but"
-          ]
-        },
-        {
-          "title": "Seven Jewish Children: A Play for Gaza",
-          "slugs": [
-            "2009-05-20-even-if-you-see-it-you-might-not-believe-it"
-          ]
-        },
-        {
-          "title": "Top Girls",
-          "slugs": [
-            "1983-02-13-touch-of-the-bunters",
-            "2007-07-07-crammed-with-first-rate-actors-top-girls-dazzles-with-wit-and-imagination",
-            "2008-11-08-sisters-are-doing-it-for-themselves-an-improved-top-girls-showcases-incredible",
-            "2015-07-02-historical-precedents"
-          ]
-        }
-      ],
-      "reviewCount": 11,
-      "source": "https://commons.wikimedia.org/wiki/File:Caryl_Churchill%2C_playwright.jpg",
-      "creator": "Petticonifer",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
     }
   ]
 }

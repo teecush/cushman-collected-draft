@@ -13,6 +13,21 @@ export function publicationYear(record) {
   const date = String(record.date || '');
   return /^\d{4}-\d{2}-\d{2}$/.test(date) ? date.slice(0, 4) : '';
 }
+// A catalog year is not automatically a known publication date. Undated
+// articles may carry contextual years, but never acquire a timeline position.
+export function timelineYear(record) {
+  if(record.date_precision==='unknown' || !/^\d{4}-\d{2}-\d{2}$/.test(String(record.date||'')))return '';
+  return String(record.date).slice(0,4);
+}
+export function articleDateLabel(record) {
+  if(!timelineYear(record))return 'Undated';
+  const precision=record.date_precision||'day', date=new Date(`${record.date}T00:00:00`);
+  if(Number.isNaN(date.valueOf()))return 'Undated';
+  const label=precision==='season' && record.date_label ? record.date_label
+    : precision==='year' ? String(record.date).slice(0,4)
+    : date.toLocaleDateString('en-US',precision==='month'?{month:'long',year:'numeric'}:{year:'numeric',month:'short',day:'numeric'});
+  return (record.date_is_estimated?'c. ':'')+label;
+}
 export function serialize(values, base = '#archive') {
   const params = new URLSearchParams();
   FIELDS.forEach(key => { if (values[key] !== undefined && values[key] !== '' && values[key] !== null) params.set(key, String(values[key])); });

@@ -6732,5 +6732,24 @@
     "titles": [
       "Waiting for Godot — playwright collection artwork"
     ]
+  },
+  {
+    "source": "Original illustration commissioned for Cushman Collected",
+    "creator": "Digitally generated illustration",
+    "credit": "Owner-approved imagined group of 22 playwrights, not a historical group photograph.",
+    "license": "Owner-approved original digital illustration",
+    "licenseUrl": "",
+    "titles": [
+      "Playwright Collections group portrait",
+      "Oscar Wilde portrait",
+      "Stephen Sondheim portrait",
+      "Michael Healey portrait",
+      "Daniel MacIvor portrait",
+      "Eugene O’Neill portrait",
+      "David Mamet portrait",
+      "Edward Albee portrait",
+      "Sam Shepard portrait"
+    ],
+    "changes": "Individual collection portraits are displayed as crops of the approved composite; interactive outlines are manually traced."
   }
 ]
