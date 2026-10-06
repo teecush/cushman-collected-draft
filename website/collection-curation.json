@@ -3359,6 +3359,21 @@
       "src": "assets/collections/wiki-d6ba5a01520a3848.jpg",
       "alt": "Original 1971 Broadway poster for Follies; work-level illustration for Follies: In Concert",
       "fit": "contain"
+    },
+    "playwright-henrik-ibsen:hedda-gabler": {
+      "src": "assets/collections/oct5-hedda-gabler.jpg",
+      "alt": "Hedda Gabler — Kristiania Theater, 1891; Christian Krohg illustration published 14 March 1891. Historical or alternate production of the same work; not established as a staging reviewed by Robert Cushman.",
+      "fit": "contain"
+    },
+    "musicals:she-loves-me": {
+      "src": "assets/collections/oct5-she-loves-me.jpg",
+      "alt": "She Loves Me — 1963 Broadway publicity photograph of Barbara Baxley and Jack Cassidy; Friedman-Abeles Studio. Historical or alternate production of the same work; not established as a staging reviewed by Robert Cushman.",
+      "fit": "contain"
+    },
+    "musicals:high-society": {
+      "src": "assets/collections/oct5-high-society.jpg",
+      "alt": "High Society — Baden-Baden theatre festival rehearsal, 11 September 2010; Nadine Kettler. Historical or alternate production of the same work; not established as a staging reviewed by Robert Cushman.",
+      "fit": "contain"
     }
   },
   "excludedMusicalTitles": [
