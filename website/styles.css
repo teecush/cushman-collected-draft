@@ -4065,8 +4065,21 @@ h1 {
 
 @media (max-width: 760px) {
   /* An open phone menu occupies its own surface, above every sticky page row. */
-  body.navigation-open { overflow: hidden; }
-  body.navigation-open .site-header { background: white; }
+  body.navigation-open {
+    position: fixed;
+    top: var(--navigation-scroll-offset, 0);
+    left: 0;
+    right: 0;
+    width: 100%;
+    overflow: hidden;
+  }
+  body.navigation-open .site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: white;
+  }
   .drawer {
     left: 0;
     right: 0;

@@ -4,7 +4,7 @@ import {renderHomeCollections,HOME_COLLECTION_ORDER} from './home-collections.js
 import {renderPlaywrightStage} from './playwright-stage.js?v=252';
 import {collectionTitleText,setCollectionTitle} from './collection-title.js?v=2';
 import {spotlightRecord} from './collections-engine.js?v=252';
-import { createCatalog } from "./catalog.js?v=254";
+import { createCatalog } from "./catalog.js?v=256";
 import { FEATURES } from "./features.js?v=173";
 const DATA_URL = new URL("../site_export/data/catalog.json?v=252", import.meta.url);
 const ALIASES_URL = new URL("../site_export/data/route_aliases.json?v=1", import.meta.url);
@@ -5490,13 +5490,14 @@ function escapeRegExp(value) {
   return String(value).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
 
+let navigationScrollPosition = null;
 let loadedArticleHash = '';
 let readingSaveTimer = null, lastReadingSave = 0;
 function saveReadingPosition() {
   clearTimeout(readingSaveTimer);readingSaveTimer=null;
   if (!document.body.classList.contains('article-open') || loadedArticleHash !== window.location.hash) return;
   lastReadingSave=Date.now();
-  history.replaceState({...history.state, readingPosition:{hash:loadedArticleHash,y:window.scrollY}},'');
+  history.replaceState({...history.state, readingPosition:{hash:loadedArticleHash,y:navigationScrollPosition?.y ?? window.scrollY}},'');
 }
 window.addEventListener('scroll',()=>{
   if(Date.now()-lastReadingSave>=500)saveReadingPosition();
@@ -5627,6 +5628,10 @@ async function showReview(slug) {
 }
 
 function setNavigationOpen(isOpen) {
+  if (isOpen && !els.drawer.classList.contains("is-open")) {
+    navigationScrollPosition = { x: window.scrollX, y: window.scrollY };
+    document.body.style.setProperty("--navigation-scroll-offset", `${-navigationScrollPosition.y}px`);
+  }
   els.drawer.classList.toggle("is-open", isOpen);
   document.body.classList.toggle("navigation-open", isOpen);
   els.menuButton.setAttribute("aria-expanded", String(isOpen));
@@ -5634,6 +5639,12 @@ function setNavigationOpen(isOpen) {
   document.querySelector("main").inert = isOpen;
   document.querySelector(".site-footer").inert = isOpen;
   if (isOpen) els.drawer.scrollTop = 0;
+  else if (navigationScrollPosition) {
+    const position = navigationScrollPosition;
+    navigationScrollPosition = null;
+    document.body.style.removeProperty("--navigation-scroll-offset");
+    window.scrollTo({ left: position.x, top: position.y, behavior: "auto" });
+  }
 }
 
 function route() {

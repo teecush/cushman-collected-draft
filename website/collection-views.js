@@ -250,7 +250,7 @@ export function createCollectionViews({state,els,h,node,link,button,openIndex,ge
     alpha.hidden=!items.length;
     const measure=()=>content.style.setProperty('--index-alphabet-height',alpha.getBoundingClientRect().height+'px');
     alphabetObserver?.disconnect();alphabetObserver=new ResizeObserver(measure);alphabetObserver.observe(alpha);
-    let scrollFrame=0;const onScroll=()=>{if(performance.now()<suppressScrollSyncUntil||scrollFrame)return;scrollFrame=requestAnimationFrame(()=>{scrollFrame=0;if(performance.now()>=suppressScrollSyncUntil)setActiveLetter(visibleLetter(),{updateUrl:true});});};
+    let scrollFrame=0;const onScroll=()=>{if(document.body.classList.contains('navigation-open')||performance.now()<suppressScrollSyncUntil||scrollFrame)return;scrollFrame=requestAnimationFrame(()=>{scrollFrame=0;if(!document.body.classList.contains('navigation-open')&&performance.now()>=suppressScrollSyncUntil)setActiveLetter(visibleLetter(),{updateUrl:true});});};
     alphabetScrollCleanup?.();window.addEventListener('scroll',onScroll,{passive:true});alphabetScrollCleanup=()=>{window.removeEventListener('scroll',onScroll);if(scrollFrame)cancelAnimationFrame(scrollFrame);};
     fitTitles(content);requestAnimationFrame(()=>{measure();const letter=new URLSearchParams(location.hash.split('?')[1]||'').get('letter');if(letter&&headings.has(letter))jump(letter);else setActiveLetter(visibleLetter(),{updateUrl:true});});
   }

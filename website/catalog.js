@@ -1,6 +1,6 @@
 import {FIELDS, normalize, nameMatches, publicationYear, timelineYear, serialize, parse, articleForm, articleSubject} from './catalog-engine.js?v=252';
 import {makeCollections, COLLECTIONS} from './collections-engine.js?v=252';
-import {createCollectionViews} from './collection-views.js?v=254';
+import {createCollectionViews} from './collection-views.js?v=256';
 import {INDEX_LETTERS, indexOrder, indexEntries, indexSections, indexCategoryParams} from './index-engine.js?v=252';
 export function createCatalog({state, els, h}) {
   let extra = {}, indexCache = new Map(), textIndex = null, textPromise = null, indexResizeObserver = null, indexScrollCleanup = null, archiveNavObserver = null, placesMap = null, collectionData = null;
@@ -406,6 +406,7 @@ export function createCatalog({state, els, h}) {
     {
       indexResizeObserver.observe(controls); indexResizeObserver.observe(nav);
       const onScroll = () => {
+        if (document.body.classList.contains("navigation-open")) return;
         if (order === 'alpha') {
           const visibleLetter = currentVisibleLetter();
           if (visibleLetter && visibleLetter !== viewportLetter) {
