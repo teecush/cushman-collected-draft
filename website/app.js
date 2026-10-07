@@ -5626,9 +5626,19 @@ async function showReview(slug) {
   restoreReadingPosition(requestedHash);
 }
 
+function setNavigationOpen(isOpen) {
+  els.drawer.classList.toggle("is-open", isOpen);
+  document.body.classList.toggle("navigation-open", isOpen);
+  els.menuButton.setAttribute("aria-expanded", String(isOpen));
+  els.menuButton.setAttribute("aria-label", isOpen ? "Close navigation menu" : "Open navigation menu");
+  document.querySelector("main").inert = isOpen;
+  document.querySelector(".site-footer").inert = isOpen;
+  if (isOpen) els.drawer.scrollTop = 0;
+}
+
 function route() {
   const hash = window.location.hash || (document.documentElement.dataset.articleSlug ? `#review:${document.documentElement.dataset.articleSlug}` : "#home");
-  els.drawer.classList.remove("is-open");
+  setNavigationOpen(false);
   els.filterControls.classList.remove("is-open");
   els.filterToggle.setAttribute("aria-expanded", "false");
   els.archive.hidden = true;
@@ -5642,7 +5652,6 @@ function route() {
     else link.removeAttribute("aria-current");
   });
   els.archive.querySelector("h1").textContent = FEATURES.modernCatalogPresentation ? "Catalog" : "Search the Archive";
-  els.menuButton.setAttribute("aria-expanded", "false");
   document.querySelectorAll(".site-nav a, .drawer a").forEach(link => {
     const href = link.getAttribute("href");
     const current = href === hash.split("?")[0] || (href === "#archive" && /^#(archive|search|people|works|index|entity|places|master-index)/.test(hash));
@@ -5925,9 +5934,11 @@ async function init() {
 }
 
 els.menuButton.addEventListener("click", () => {
-  const isOpen = els.drawer.classList.toggle("is-open");
-  els.menuButton.setAttribute("aria-expanded", String(isOpen));
-  els.menuButton.setAttribute("aria-label", isOpen ? "Close navigation menu" : "Open navigation menu");
+  setNavigationOpen(!els.drawer.classList.contains("is-open"));
+});
+
+window.matchMedia("(max-width: 760px)").addEventListener("change", event => {
+  if (!event.matches) setNavigationOpen(false);
 });
 
 document.addEventListener("click", (event) => {
@@ -5938,17 +5949,13 @@ document.addEventListener("click", (event) => {
   if (els.drawer.classList.contains("is-open")
     && !els.drawer.contains(event.target)
     && !els.menuButton.contains(event.target)) {
-    els.drawer.classList.remove("is-open");
-    els.menuButton.setAttribute("aria-expanded", "false");
-    els.menuButton.setAttribute("aria-label", "Open navigation menu");
+    setNavigationOpen(false);
   }
 });
 
 els.drawer.addEventListener("click", (event) => {
   if (event.target.closest("a")) {
-    els.drawer.classList.remove("is-open");
-    els.menuButton.setAttribute("aria-expanded", "false");
-    els.menuButton.setAttribute("aria-label", "Open navigation menu");
+    setNavigationOpen(false);
   }
 });
 
@@ -5985,9 +5992,7 @@ document.addEventListener("keydown", (event) => {
     openShareMenu.querySelector(":scope > summary")?.focus();
   }
   if (els.drawer.classList.contains("is-open")) {
-    els.drawer.classList.remove("is-open");
-    els.menuButton.setAttribute("aria-expanded", "false");
-    els.menuButton.setAttribute("aria-label", "Open navigation menu");
+    setNavigationOpen(false);
     els.menuButton.focus();
   }
 });

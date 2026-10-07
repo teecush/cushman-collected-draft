@@ -266,9 +266,9 @@ select {
 
 .drawer {
   position: fixed;
-  top: 104px;
+  top: var(--catalog-header-height, 104px);
   left: 20px;
-  z-index: 30;
+  z-index: 1150;
   display: none;
   width: min(320px, calc(100vw - 40px));
   padding: 18px 22px;
@@ -4064,6 +4064,24 @@ h1 {
 }
 
 @media (max-width: 760px) {
+  /* An open phone menu occupies its own surface, above every sticky page row. */
+  body.navigation-open { overflow: hidden; }
+  body.navigation-open .site-header { background: white; }
+  .drawer {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    height: auto;
+    box-sizing: border-box;
+    padding: 24px 24px max(24px, env(safe-area-inset-bottom));
+    border: 0;
+    box-shadow: none;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    align-content: start;
+  }
+
   .site-header {
     gap: 8px;
     padding-inline: 12px;
