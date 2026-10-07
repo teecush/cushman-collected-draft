@@ -18,12 +18,14 @@ for(const size of [180,192,512]){
  assert.equal(bytes.readUInt32BE(16),size);
  assert.equal(bytes.readUInt32BE(20),size);
 }
+const mask=fs.readFileSync(root+'icons/cc-maskable-512.png');
+assert.equal(mask.readUInt32BE(16),512); assert.equal(mask.readUInt32BE(20),512);
 assert(manifest.icons.some(icon=>icon.sizes==='512x512'&&icon.purpose.includes('maskable')));
 const catalog=JSON.parse(fs.readFileSync(root+'site_export/data/catalog.json','utf8'));
 for(const relative of ['website/index.html',...catalog.map(row=>'reviews/'+row.slug+'/index.html')]){
  const html=fs.readFileSync(root+relative,'utf8');
- assert(html.includes('<link rel="manifest" href="../manifest.webmanifest">'),relative);
- assert(html.includes('<link rel="apple-touch-icon" sizes="180x180" href="../icons/cc-180.png">'),relative);
+ assert(html.includes('<link rel="manifest" href="../manifest.webmanifest?v=2">'),relative);
+ assert(html.includes('<link rel="apple-touch-icon" sizes="180x180" href="../icons/cc-180.png?v=2">'),relative);
  assert(html.includes('<meta name="apple-mobile-web-app-capable" content="yes">'),relative);
  assert(html.includes('src="./web-app.js?v=1"'),relative);
 }

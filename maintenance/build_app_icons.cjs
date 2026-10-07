@@ -8,9 +8,11 @@ const { chromium } = require(process.env.PLAYWRIGHT_MODULE || path.join(os.homed
   const root = path.resolve(__dirname, '..');
   const browser = await chromium.launch({ executablePath: process.env.CHROME_PATH || '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome', headless: true });
   try {
-    for (const size of [512, 192, 180]) {
+    for (const variant of [{size:512},{size:192},{size:180},{size:512,maskable:true}]) {
+      const {size,maskable}=variant;
       const page = await browser.newPage({ viewport: { width: size, height: size }, deviceScaleFactor: 1 });
-      const svg = fs.readFileSync(path.join(root, 'icons/cc-source.svg'), 'utf8');
+      let svg = fs.readFileSync(path.join(root, 'icons/cc-source.svg'), 'utf8');
+      if(maskable) svg=svg.replace('<defs>', '<g transform="translate(256 256) scale(.75) translate(-256 -256)"><defs>').replace('</svg>\n','</g></svg>\n');
       await page.setContent(`<style>html,body{margin:0;width:100%;height:100%}svg{display:block;width:100%;height:100%}</style>${svg}`);
       await page.evaluate(async () => {
         await document.fonts.ready;
@@ -20,7 +22,7 @@ const { chromium } = require(process.env.PLAYWRIGHT_MODULE || path.join(os.homed
           probe.src = img.getAttribute('href');
         });
       });
-      await page.screenshot({ path: path.join(root, `icons/cc-${size}.png`) });
+      await page.screenshot({ path: path.join(root, `icons/cc-${maskable ? "maskable-" : ""}${size}.png`) });
       await page.close();
     }
   } finally { await browser.close(); }
