@@ -3374,6 +3374,51 @@
       "src": "assets/collections/oct5-high-society.jpg",
       "alt": "High Society — Baden-Baden theatre festival rehearsal, 11 September 2010; Nadine Kettler. Historical or alternate production of the same work; not established as a staging reviewed by Robert Cushman.",
       "fit": "contain"
+    },
+    "playwright-george-bernard-shaw:pygmalion": {
+      "src": "assets/collections/oct6-pygmalion.jpg",
+      "alt": "Pygmalion — Mrs Patrick Campbell as Eliza, His Majesty's Theatre, London; Sketch magazine, 22 April 1914. Historical or alternate production of the same work; not established as a staging reviewed by Robert Cushman.",
+      "fit": "contain"
+    },
+    "musicals:buddy": {
+      "src": "assets/collections/oct6-buddy.jpg",
+      "alt": "Buddy — The Muny, 2015; Andy Christopher as Buddy Holly. Historical or alternate production of the same work; not established as a staging reviewed by Robert Cushman.",
+      "fit": "contain"
+    },
+    "musicals:gondoliers": {
+      "src": "assets/collections/oct6-gondoliers.jpg",
+      "alt": "The Gondoliers — Federal Music Project / WPA poster, Cleveland, 1936–37; Library of Congress collection. Historical or alternate production of the same work; not established as a staging reviewed by Robert Cushman.",
+      "fit": "contain"
+    },
+    "musicals:merry-widow": {
+      "src": "assets/collections/oct6-merry-widow.jpg",
+      "alt": "The Merry Widow — Maribor National Theatre playbill, 28 November 1925; Vesela vdova / The Merry Widow. Historical or alternate production of the same work; not established as a staging reviewed by Robert Cushman.",
+      "fit": "contain"
+    },
+    "musicals:my-one-and-only": {
+      "src": "assets/collections/oct6-my-one-and-only.jpg",
+      "alt": "My One and Only — The Muny, 2008. Historical or alternate production of the same work; not established as a staging reviewed by Robert Cushman.",
+      "fit": "contain"
+    },
+    "musicals:titanic": {
+      "src": "assets/collections/oct6-titanic.jpg",
+      "alt": "Titanic — The Muny, 2010. Historical or alternate production of the same work; not established as a staging reviewed by Robert Cushman.",
+      "fit": "contain"
+    },
+    "musicals:irving-berlin-s-white-christmas": {
+      "src": "assets/collections/oct6-white-christmas.jpg",
+      "alt": "Irving Berlin's White Christmas — The Muny, 2006. Historical or alternate production of the same work; not established as a staging reviewed by Robert Cushman.",
+      "fit": "contain"
+    },
+    "musicals:grease": {
+      "src": "assets/collections/oct6-grease.jpg",
+      "alt": "Grease — Royal Theater aboard Harmony of the Seas, 26 November 2018. Historical or alternate production of the same work; not established as a staging reviewed by Robert Cushman.",
+      "fit": "contain"
+    },
+    "playwright-anton-chekhov:seagull": {
+      "src": "assets/collections/oct6-the-seagull.jpg",
+      "alt": "The Seagull — Moscow Art Theatre, 1898; photograph published in 1917. Historical or alternate production of the same work; not established as a staging reviewed by Robert Cushman.",
+      "fit": "contain"
     }
   },
   "excludedMusicalTitles": [

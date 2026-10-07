@@ -287,7 +287,7 @@
   },
   {
     "source": "https://commons.wikimedia.org/wiki/File:Studio_publicity_Angela_Lansbury.jpg",
-    "creator": "Unknown authorUnknown author",
+    "creator": "Unknown author",
     "credit": "Originally available on the art.co.uk website; as of December 2022 the URL was no longer functioning as the company no longer operated in the United Kingdom.",
     "license": "Public domain",
     "licenseUrl": "",
@@ -474,7 +474,7 @@
   },
   {
     "source": "https://commons.wikimedia.org/wiki/File:Betty_Comden_(c._1960)_(cropped).jpg",
-    "creator": "Unknown authorUnknown author",
+    "creator": "Unknown author",
     "credit": "Original publication: Jefferson City Daily Capital News Newspaper Archives January 16, 1960 Page 12; also published that day in Jefferson City Post Tribune and Daily Capital News; immediate",
     "license": "Public domain",
     "licenseUrl": "",
@@ -881,7 +881,7 @@
   },
   {
     "source": "https://commons.wikimedia.org/wiki/File:Curb_Your_Enthusiasm.png",
-    "creator": "Unknown authorUnknown author",
+    "creator": "Unknown author",
     "credit": "HBO.",
     "license": "Public domain",
     "licenseUrl": "",
@@ -1839,7 +1839,7 @@
   },
   {
     "source": "https://commons.wikimedia.org/wiki/File:JG-Benedick-1959.jpg",
-    "creator": "Unknown authorUnknown author",
+    "creator": "Unknown author",
     "credit": "Ebay",
     "license": "Public domain",
     "licenseUrl": "",
@@ -1938,7 +1938,7 @@
   },
   {
     "source": "https://commons.wikimedia.org/wiki/File:Jule_Styne_(1961_still).jpg",
-    "creator": "Unknown authorUnknown author",
+    "creator": "Unknown author",
     "credit": "eBay (front & back)",
     "license": "Public domain",
     "licenseUrl": "",
@@ -3655,7 +3655,7 @@
   },
   {
     "source": "https://commons.wikimedia.org/wiki/File:NewYorkTimes.svg",
-    "creator": "Unknown authorUnknown author",
+    "creator": "Unknown author",
     "credit": "Transferred from the English Wikipedia. http://en.wikipedia.org/wiki/File:NewYorkTimes.svg",
     "license": "Public domain",
     "licenseUrl": "",
@@ -3963,7 +3963,7 @@
   },
   {
     "source": "https://commons.wikimedia.org/wiki/File:The_Wire_logo.svg",
-    "creator": "Unknown authorUnknown author",
+    "creator": "Unknown author",
     "credit": "Vektordaten: http://www.hbo.com/assets/pdf/schedule/hbo_may10_ee.pdf\nPositionierungsvorlage, Proportionen & Farbinfo: http://i628.photobucket.com/albums/uu6/arocknrolla/WireLogo_Black.jpg",
     "license": "Public domain",
     "licenseUrl": "",
@@ -6787,5 +6787,104 @@
       "High Society"
     ],
     "changes": "Resized to a maximum of 1400 pixels and recompressed as JPEG; complete composition retained. Derivative distributed under CC BY-SA 4.0."
+  },
+  {
+    "source": "https://commons.wikimedia.org/wiki/File:Moscow_Art_Theatre_production_of_Anton_Chekhov%27s_The_Seagull_1898.jpg",
+    "creator": "Moscow Art Theatre",
+    "credit": "Moscow Art Theatre, 1898; photograph published in 1917. Historical or alternate production of the same work; not established as a staging reviewed by Robert Cushman.",
+    "license": "Public domain",
+    "licenseUrl": "",
+    "titles": [
+      "The Seagull"
+    ],
+    "changes": "Resized to a maximum of 1400 pixels and recompressed as JPEG; complete composition retained."
+  },
+  {
+    "source": "https://commons.wikimedia.org/wiki/File:Mrs._Patrick_Campbell_as_Eliza_Doolittle_1914.jpg",
+    "creator": "Sketch Magazine",
+    "credit": "Mrs Patrick Campbell as Eliza, His Majesty's Theatre, London; Sketch magazine, 22 April 1914. Historical or alternate production of the same work; not established as a staging reviewed by Robert Cushman.",
+    "license": "Public domain",
+    "licenseUrl": "",
+    "titles": [
+      "Pygmalion"
+    ],
+    "changes": "Resized to a maximum of 1400 pixels and recompressed as JPEG; complete composition retained."
+  },
+  {
+    "source": "https://commons.wikimedia.org/wiki/File:Buddy_The_Buddy_Holly_Story-The_Muny-6.jpg",
+    "creator": "Meetmeatthemuny",
+    "credit": "The Muny, 2015; Andy Christopher as Buddy Holly. Historical or alternate production of the same work; not established as a staging reviewed by Robert Cushman.",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "titles": [
+      "Buddy"
+    ],
+    "changes": "Resized to a maximum of 1400 pixels and recompressed as JPEG; complete composition retained. Derivative distributed under CC BY-SA 4.0."
+  },
+  {
+    "source": "https://commons.wikimedia.org/wiki/File:Federal_Music_presents_Gilbert_%26_Sullivan%27s_light_opera_%22The_gondoliers%22_LCCN98517164.jpg",
+    "creator": "Work Projects Administration Poster Collection",
+    "credit": "Federal Music Project / WPA poster, Cleveland, 1936–37; Library of Congress collection. Historical or alternate production of the same work; not established as a staging reviewed by Robert Cushman.",
+    "license": "Public domain",
+    "licenseUrl": "",
+    "titles": [
+      "The Gondoliers"
+    ],
+    "changes": "Resized to a maximum of 1400 pixels and recompressed as JPEG; complete composition retained."
+  },
+  {
+    "source": "https://commons.wikimedia.org/wiki/File:Plakat_za_predstavo_Vesela_vdova_v_Narodnem_gledali%C5%A1%C4%8Du_v_Mariboru_28._novembra_1925.jpg",
+    "creator": "Unknown author",
+    "credit": "Maribor National Theatre playbill, 28 November 1925; Vesela vdova / The Merry Widow. Historical or alternate production of the same work; not established as a staging reviewed by Robert Cushman.",
+    "license": "Public domain",
+    "licenseUrl": "",
+    "titles": [
+      "The Merry Widow"
+    ],
+    "changes": "Resized to a maximum of 1400 pixels and recompressed as JPEG; complete composition retained."
+  },
+  {
+    "source": "https://commons.wikimedia.org/wiki/File:My_One_and_Only_2008_The_Muny.jpg",
+    "creator": "Meetmeatthemuny",
+    "credit": "The Muny, 2008. Historical or alternate production of the same work; not established as a staging reviewed by Robert Cushman.",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "titles": [
+      "My One and Only"
+    ],
+    "changes": "Resized to a maximum of 1400 pixels and recompressed as JPEG; complete composition retained. Derivative distributed under CC BY-SA 4.0."
+  },
+  {
+    "source": "https://commons.wikimedia.org/wiki/File:Titanic_at_The_Muny_in_2010.jpg",
+    "creator": "Meetmeatthemuny",
+    "credit": "The Muny, 2010. Historical or alternate production of the same work; not established as a staging reviewed by Robert Cushman.",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "titles": [
+      "Titanic"
+    ],
+    "changes": "Resized to a maximum of 1400 pixels and recompressed as JPEG; complete composition retained. Derivative distributed under CC BY-SA 4.0."
+  },
+  {
+    "source": "https://commons.wikimedia.org/wiki/File:White_Christmas_at_The_Muny_in_2006.jpg",
+    "creator": "Meetmeatthemuny",
+    "credit": "The Muny, 2006. Historical or alternate production of the same work; not established as a staging reviewed by Robert Cushman.",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "titles": [
+      "Irving Berlin's White Christmas"
+    ],
+    "changes": "Resized to a maximum of 1400 pixels and recompressed as JPEG; complete composition retained. Derivative distributed under CC BY-SA 4.0."
+  },
+  {
+    "source": "https://commons.wikimedia.org/wiki/File:Grease_The_Broadway_Musical_(46286989391).jpg",
+    "creator": "Thank You (23 Millions+) views from Los Angeles, USA",
+    "credit": "Royal Theater aboard Harmony of the Seas, 26 November 2018. Historical or alternate production of the same work; not established as a staging reviewed by Robert Cushman.",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "titles": [
+      "Grease"
+    ],
+    "changes": "Resized to a maximum of 1400 pixels and recompressed as JPEG; complete composition retained."
   }
 ]
