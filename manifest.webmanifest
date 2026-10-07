@@ -1,0 +1,26 @@
+{
+  "id": "./website/",
+  "name": "Cushman Collected",
+  "short_name": "CC",
+  "description": "The collected theatre criticism of Robert Cushman.",
+  "lang": "en",
+  "start_url": "./website/",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "icons": [
+    {
+      "src": "./icons/cc-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icons/cc-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
