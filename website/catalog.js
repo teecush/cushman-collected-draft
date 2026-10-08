@@ -1,6 +1,6 @@
 import {FIELDS, normalize, nameMatches, publicationYear, timelineYear, serialize, parse, articleForm, articleSubject} from './catalog-engine.js?v=252';
 import {makeCollections, COLLECTIONS} from './collections-engine.js?v=252';
-import {createCollectionViews} from './collection-views.js?v=256';
+import {createCollectionViews} from './collection-views.js?v=257';
 import {INDEX_LETTERS, indexOrder, indexEntries, indexSections, indexCategoryParams} from './index-engine.js?v=252';
 export function createCatalog({state, els, h}) {
   let extra = {}, indexCache = new Map(), textIndex = null, textPromise = null, indexResizeObserver = null, indexScrollCleanup = null, archiveNavObserver = null, placesMap = null, collectionData = null;
@@ -82,7 +82,7 @@ export function createCatalog({state, els, h}) {
       let value=v[key];if(key==='shelf')value=getCollections().get(value)?.title||value;if(key==='item')value=getCollections().get(v.shelf)?.itemMap.get(value)?.title||value;if(value==='__unspecified__')value='Not recorded';if(key==='entity')value=h.entityMap(v.entityType).get(value)?.label||value;
       if(key==='type')value=h.TYPE_GROUPS.find(x=>x.value===value)?.label||value;
       if(key==='text')value='Included';
-      const b=button('',()=>{const next=values();delete next[key];if(key==='shelf')delete next.item;if(key==='collection')delete next.group;if(key==='entity')delete next.entityType;delete next.shown;setValues(next);apply();history.replaceState(null,'',href());});
+      const b=button('',()=>{const next=values();delete next[key];if(key==='shelf')delete next.item;if(key==='collection')delete next.group;if(key==='entity')delete next.entityType;delete next.shown;setValues(next);apply();history.replaceState({...history.state},'',href());});
       const remove=node('span','×','filter-chip-remove');remove.setAttribute('aria-hidden','true');
       b.append(document.createTextNode(`${label}: ${value} `),remove);b.setAttribute('aria-label',`Remove ${label}: ${value}`);chips.append(b);
     });
@@ -125,13 +125,13 @@ export function createCatalog({state, els, h}) {
       }
       fragment.append(card);
     });
-    if(shown<total)fragment.append(button(`Show next ${Math.min(36,total-shown)} articles (${(total-shown).toLocaleString()} remaining)`,()=>{const old=shown;state.visible+=36;history.replaceState(null,'',href());render();els.results.querySelectorAll('.result-card')[old]?.focus({preventScroll:true});},'load-more'));
+    if(shown<total)fragment.append(button(`Show next ${Math.min(36,total-shown)} articles (${(total-shown).toLocaleString()} remaining)`,()=>{const old=shown;state.visible+=36;history.replaceState({...history.state},'',href());render();els.results.querySelectorAll('.result-card')[old]?.focus({preventScroll:true});},'load-more'));
     els.results.replaceChildren(fragment);
     if(state.pendingArchiveRestore){state.visible=Math.max(state.visible,state.pendingArchiveRestore.visibleCount||36,(state.pendingArchiveRestore.index||0)+1);h.restoreArchivePositionIfNeeded();}
   }
-  function clear(){setValues({});apply();history.replaceState(null,'',href());els.searchInput.focus({preventScroll:true});}
+  function clear(){setValues({});apply();history.replaceState({...history.state},'',href());els.searchInput.focus({preventScroll:true});}
   function selectField(labelText,key,options,parent,emptyLabel='All') {
-    const label=node('label');label.append(node('span',labelText));const input=node('select');input.dataset.catalogFilter=key;input.append(new Option(emptyLabel,''));options.forEach(item=>input.append(new Option(typeof item==='string'?item:item[1],typeof item==='string'?item:item[0])));input.addEventListener('change',()=>{extra[key]=input.value;apply();history.replaceState(null,'',href());});label.append(input);parent.append(label);return input;
+    const label=node('label');label.append(node('span',labelText));const input=node('select');input.dataset.catalogFilter=key;input.append(new Option(emptyLabel,''));options.forEach(item=>input.append(new Option(typeof item==='string'?item:item[1],typeof item==='string'?item:item[0])));input.addEventListener('change',()=>{extra[key]=input.value;apply();history.replaceState({...history.state},'',href());});label.append(input);parent.append(label);return input;
   }
   function install() {
     const header = document.querySelector('.site-header');
@@ -145,7 +145,7 @@ export function createCatalog({state, els, h}) {
     const advancedToggle = node('button', 'Advanced', 'advanced-search-toggle'); advancedToggle.type = 'button'; advancedToggle.setAttribute('aria-expanded', 'false');
     advancedToggle.addEventListener('click', () => { disclosure.open = !disclosure.open; });
     disclosure.addEventListener('toggle', () => advancedToggle.setAttribute('aria-expanded', disclosure.open ? 'true' : 'false'));
-    const scope=node('div',undefined,'search-scope');const label=node('label');label.className='search-text-scope';const check=node('input');check.type='checkbox';check.id='searchArticleText';check.addEventListener('change',()=>{extra.text=check.checked?'1':'';apply();history.replaceState(null,'',href());});label.append(check,document.createTextNode(' Search article text'));scope.append(els.archiveCount,label,advancedToggle,disclosure);els.archive.querySelector('.search-panel').append(scope);
+    const scope=node('div',undefined,'search-scope');const label=node('label');label.className='search-text-scope';const check=node('input');check.type='checkbox';check.id='searchArticleText';check.addEventListener('change',()=>{extra.text=check.checked?'1':'';apply();history.replaceState({...history.state},'',href());});label.append(check,document.createTextNode(' Search article text'));scope.append(els.archiveCount,label,advancedToggle,disclosure);els.archive.querySelector('.search-panel').append(scope);
     els.archive.querySelector('.search-label-row').remove();
     const panel = els.archive.querySelector('.search-panel');
     const form = node('form', undefined, 'archive-search-form'); form.setAttribute('role', 'search');
@@ -157,11 +157,11 @@ export function createCatalog({state, els, h}) {
       event.preventDefault();
       const query = els.searchInput.value.trim();
       if (query !== state.query) state.sort = query ? 'relevance' : 'newest';
-      state.query = query; apply(); history.replaceState(null, '', href());
+      state.query = query; apply(); history.replaceState({...history.state}, '', href());
     });
     els.filterToggle.hidden = true; disclosure.append(els.filterControls);
     const grid=node('div',undefined,'catalog-filter-grid');
-    for(const [labelText,key] of [['From year','from'],['To year','to']]){const label=node('label');label.append(node('span',labelText));const input=node('input');input.type='number';input.min='1963';input.max='2026';input.placeholder=key==='from'?'1963':'2026';input.dataset.catalogFilter=key;input.addEventListener('change',()=>{extra[key]=input.value;apply();history.replaceState(null,'',href());});label.append(input);grid.append(label);}
+    for(const [labelText,key] of [['From year','from'],['To year','to']]){const label=node('label');label.append(node('span',labelText));const input=node('input');input.type='number';input.min='1963';input.max='2026';input.placeholder=key==='from'?'1963':'2026';input.dataset.catalogFilter=key;input.addEventListener('change',()=>{extra[key]=input.value;apply();history.replaceState({...history.state},'',href());});label.append(input);grid.append(label);}
     selectField('Publication','publication',[...new Set(state.records.map(h.articlePublicationLabel))].sort(),grid,'All publications');
     selectField('Subject','subject',[...new Set(state.records.map(r=>articleSubject(r.article_category)))].sort(),grid,'All subjects');
     selectField('Form','form',[...new Set(state.records.map(r=>articleForm(r.article_category)))].sort(),grid,'All forms');
@@ -170,7 +170,7 @@ export function createCatalog({state, els, h}) {
     const categoryLabel=els.typeFilter.parentElement;categoryLabel.querySelector('span').classList.remove('visually-hidden');categoryLabel.querySelector('span').textContent='Original category';els.typeFilter.setAttribute('aria-label','Original category');advanced.append(categoryLabel);
     for(const [labelText,key,type] of [['Company','company','companies'],['City','city','cities'],['Venue','venue','venues'],['Person','person','people']]){
       const label=node('label');label.append(node('span',labelText));const input=node('input');input.type='search';input.placeholder=`Enter exact ${labelText.toLowerCase()} name`;input.dataset.catalogFilter=key;input.setAttribute('list',`choices-${key}`);const list=node('datalist');list.id=`choices-${key}`;
-      let timer;input.addEventListener('input',()=>{clearTimeout(timer);timer=setTimeout(()=>{const entries=[...h.entityMap(type).values()].filter(e=>nameMatches(e.label,input.value)).slice(0,40);list.replaceChildren(...entries.map(e=>new Option(e.label)));},100);});input.addEventListener('change',()=>{extra[key]=input.value;apply();history.replaceState(null,'',href());});label.append(input,list);advanced.append(label);
+      let timer;input.addEventListener('input',()=>{clearTimeout(timer);timer=setTimeout(()=>{const entries=[...h.entityMap(type).values()].filter(e=>nameMatches(e.label,input.value)).slice(0,40);list.replaceChildren(...entries.map(e=>new Option(e.label)));},100);});input.addEventListener('change',()=>{extra[key]=input.value;apply();history.replaceState({...history.state},'',href());});label.append(input,list);advanced.append(label);
     }
     selectField('Person’s role','role',h.MASTER_INDEX_PEOPLE_FILTERS.filter(f=>f.key!=='all-people').map(f=>[f.typeKeys[0],f.label]),advanced,'All roles');
     selectField('Surviving source','completeness',[['partial','Incomplete surviving source'],['complete','No recorded source gaps']],advanced,'All sources');els.filterControls.append(advanced);
@@ -183,7 +183,7 @@ export function createCatalog({state, els, h}) {
     document.body.classList.add('catalog-page');
     els.archive.hidden=false;
     setValues(v);
-    history.replaceState(null,"",href());
+    history.replaceState({...history.state},"",href());
     state.pendingArchiveRestore=h.archiveRestoreForHash(href());
     const restoring=Boolean(state.pendingArchiveRestore);
     if(state.pendingArchiveRestore)state.visible=Math.max(state.visible,state.pendingArchiveRestore.visibleCount||36,(state.pendingArchiveRestore.index||0)+1);
@@ -236,7 +236,7 @@ export function createCatalog({state, els, h}) {
       if (people || works) p.set(people ? 'role' : 'kind', filterKey);
       return base + '?' + p;
     }
-    const updateUrl = () => history.replaceState(null, '', indexHref());
+    const updateUrl = () => history.replaceState({...history.state}, '', indexHref());
     let filterSelect, filterDisplayLabel, filterDisplayMobileLabel, filterDisplayCount, compactCount = '', viewportLetter = letter;
     const mobileFilterLabels = {
       'composers-lyricists': 'Composers',
@@ -267,7 +267,7 @@ export function createCatalog({state, els, h}) {
         const anchorLetter = order === 'alpha' ? (viewportLetter || letter || currentVisibleLetter()) : '';
         filterKey = select.value; letter = anchorLetter;
         const next = indexCategoryParams(new URLSearchParams(indexHref().split('?')[1]), mode, filterKey);
-        history.replaceState(null, '', base + '?' + next);
+        history.replaceState({...history.state}, '', base + '?' + next);
         indexResizeObserver?.disconnect();
         indexPage(mode, next, type);
       });
@@ -488,7 +488,7 @@ export function createCatalog({state, els, h}) {
       else if (right > rail.scrollLeft + rail.clientWidth) rail.scrollLeft = right - rail.clientWidth;
     }
     function draw() {
-      history.replaceState(null, '', `#timeline?year=${year}${shown > 36 ? '&shown=' + shown : ''}`);
+      history.replaceState({...history.state}, '', `#timeline?year=${year}${shown > 36 ? '&shown=' + shown : ''}`);
       const records = h.sortRecordsChronologically(dated.get(year) || []);
       selected.replaceChildren(node('span', 'Selected year'), node('strong', year), node('em', `${records.length.toLocaleString()} ${records.length === 1 ? 'article' : 'articles'}`));
       for (const [key, bar] of bars) {
@@ -538,7 +538,7 @@ export function createCatalog({state, els, h}) {
         select.value=selected;
       }
     };
-    const draw=()=>{updateFacets();const records=state.records.filter(r=>matches(r,v));history.replaceState(null,'',serialize(v,'#explore'));count.textContent=`${records.length.toLocaleString()} matching articles · showing ${Math.min(18,records.length)} below`;all.href=serialize({...v,origin:window.location.hash});all.textContent=`View all ${records.length.toLocaleString()} matching articles`;preview.replaceChildren(...h.sortRecords(records).slice(0,18).map(r=>h.safeResultCard(r,{records,backHref:window.location.hash,contextLabel:'Article Explorer',titleFirst:h.FEATURES.compactResults})));};
+    const draw=()=>{updateFacets();const records=state.records.filter(r=>matches(r,v));history.replaceState({...history.state},'',serialize(v,'#explore'));count.textContent=`${records.length.toLocaleString()} matching articles · showing ${Math.min(18,records.length)} below`;all.href=serialize({...v,origin:window.location.hash});all.textContent=`View all ${records.length.toLocaleString()} matching articles`;preview.replaceChildren(...h.sortRecords(records).slice(0,18).map(r=>h.safeResultCard(r,{records,backHref:window.location.hash,contextLabel:'Article Explorer',titleFirst:h.FEATURES.compactResults})));};
     for(const [labelText,key] of facets){
       const label=node('label');label.append(node('span',labelText));const select=node('select');facetControls.set(key,select);select.addEventListener('change',()=>{v[key]=select.value;if(key==='from')v.to=select.value;draw();});label.append(select);controls.append(label);
     }

@@ -213,7 +213,7 @@ export function createCollectionViews({state,els,h,node,link,button,openIndex,ge
       if(!items.length)content.append(node('p','No titles match this search.'));
       if(collection.ungrouped.length&&!query){content.append(node('h2',id==='sondheim'?'Essays, profiles and other writing':'More writing'),recordList(collection.ungrouped,collection.title));}
     };
-    search.addEventListener('input',()=>{const p=new URLSearchParams();if(search.value)p.set('q',search.value);history.replaceState(null,'','#collection:'+id+(p.size?'?'+p:''));draw();});draw();
+    search.addEventListener('input',()=>{const p=new URLSearchParams();if(search.value)p.set('q',search.value);history.replaceState({...history.state},'','#collection:'+id+(p.size?'?'+p:''));draw();});draw();
   }
   function alphabetGallery(collection,items,content,query,single=[]) {
     const continuous=collection.id==='musicals';
@@ -236,7 +236,7 @@ export function createCollectionViews({state,els,h,node,link,button,openIndex,ge
     }
     const route=letter=>{const p=new URLSearchParams();if(query)p.set('q',query);p.set('letter',letter);return '#collection:'+collection.id+'?'+p;};
     let activeLetter='',suppressScrollSyncUntil=0;
-    const setActiveLetter=(letter,{updateUrl=false}={})=>{if(!headings.has(letter)||letter===activeLetter)return;activeLetter=letter;alpha.querySelectorAll('a').forEach(a=>{if(a.dataset.letter===letter)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current');});if(updateUrl)history.replaceState(null,'',route(letter));};
+    const setActiveLetter=(letter,{updateUrl=false}={})=>{if(!headings.has(letter)||letter===activeLetter)return;activeLetter=letter;alpha.querySelectorAll('a').forEach(a=>{if(a.dataset.letter===letter)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current');});if(updateUrl)history.replaceState({...history.state},'',route(letter));};
     const visibleLetter=()=>{const cutoff=alpha.getBoundingClientRect().bottom+6;let current='',currentTop=-Infinity;for(const [initial,heading] of headings){const top=heading.getBoundingClientRect().top;if(top<=cutoff+8&&top>currentTop+1){current=initial;currentTop=top;}else if(top>cutoff+8)break;}return current||headings.keys().next().value||'';};
     const jump=letter=>{const heading=headings.get(letter);if(!heading)return;suppressScrollSyncUntil=performance.now()+600;setActiveLetter(letter,{updateUrl:true});let target=heading;
       if(continuous&&heading.parentElement===continuousGallery){const rowTop=heading.offsetTop;target=[...continuousGallery.children].find(card=>card.offsetTop===rowTop)||heading;}
@@ -277,7 +277,7 @@ export function createCollectionViews({state,els,h,node,link,button,openIndex,ge
       const records=collection.records.filter(r=>!year||publicationYear(r)===year);
       const ids=new Set(records.map(r=>r.slug));
       all.href=resultsHref(collection,null,extra);all.textContent='Browse all '+records.length+' articles'+(year?' from '+year:'');
-      const pageParams=new URLSearchParams();if(year)pageParams.set('year',year);if(selectedTheatre)pageParams.set('theatre',selectedTheatre);history.replaceState(null,'','#collection:'+collection.id+(pageParams.size?'?'+pageParams:''));
+      const pageParams=new URLSearchParams();if(year)pageParams.set('year',year);if(selectedTheatre)pageParams.set('theatre',selectedTheatre);history.replaceState({...history.state},'','#collection:'+collection.id+(pageParams.size?'?'+pageParams:''));
       list.replaceChildren(node('h2','The theatres'));
       map.replaceChildren(node('p','Loading the festival map…'));
       // Match the Canadian festival city, not venues with the same name elsewhere.

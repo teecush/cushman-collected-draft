@@ -35,6 +35,32 @@ body {
   white-space: nowrap;
 }
 
+/* Installed apps have no browser toolbar. Keep a quiet, thumb-sized back control. */
+.web-app-back { display: none; }
+.web-app-mode { padding-bottom: calc(72px + env(safe-area-inset-bottom, 0px)); }
+.web-app-mode .web-app-back {
+  position: fixed;
+  left: max(16px, env(safe-area-inset-left, 0px));
+  bottom: calc(12px + env(safe-area-inset-bottom, 0px));
+  z-index: 1100;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  min-height: 44px;
+  padding: 8px 16px 8px 10px;
+  border: 1px solid var(--rule);
+  border-radius: 24px;
+  background: var(--paper);
+  color: var(--blue-dark);
+  box-shadow: 0 2px 10px #00000018;
+  font: 600 14px/1 var(--sans);
+  cursor: pointer;
+}
+.web-app-back svg { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.web-app-back:disabled { color: #888; box-shadow: none; cursor: default; }
+.web-app-back:focus-visible { outline: 2px solid var(--blue-dark); outline-offset: 3px; }
+.web-app-mode.navigation-open .web-app-back { display: none; }
+
 a {
   color: var(--blue);
   text-decoration: none;
@@ -151,6 +177,8 @@ select {
   min-width: 220px;
   padding: 10px;
 }
+
+.nav-mega > a { display: block; padding: 10px 8px; }
 
 .nav-subfolder {
   position: relative;
@@ -282,6 +310,31 @@ select {
 .drawer.is-open {
   display: grid;
   gap: 14px;
+}
+
+.drawer-search { display: flex; align-items: center; min-height: 44px; }
+.drawer-groups { display: grid; grid-template-columns: 1fr 1fr; gap: 18px 24px; }
+.drawer-group { min-width: 0; border-top: 1px solid var(--rule); padding-top: 10px; }
+.drawer-browse { grid-column: 1 / -1; }
+.drawer-group-heading {
+  display: flex;
+  align-items: center;
+  min-height: 32px;
+  color: var(--blue-dark);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+}
+.drawer-group-links { display: grid; }
+.drawer-browse .drawer-group-links { grid-template-columns: 1fr 1fr; column-gap: 24px; }
+.drawer-group-links a { display: flex; align-items: center; min-height: 44px; padding: 6px 0; line-height: 1.35; }
+.drawer :is(a:hover,a:focus-visible) { color: var(--ink); }
+@media (max-height: 650px) {
+  .drawer.is-open { gap: 6px; }
+  .drawer-groups { gap: 10px 18px; }
+  .drawer-group { padding-top: 6px; }
+  .drawer-group-links a { min-height: 34px; padding-block: 4px; }
 }
 
 .drawer details {
@@ -4683,6 +4736,10 @@ h1 {
   }
 }
 
+@media (max-width: 760px) and (max-height: 650px) {
+  .drawer { padding: 12px 18px max(12px, env(safe-area-inset-bottom)); }
+}
+
 @media (max-width: 350px) {
   main { padding-inline: 14px; }
   .index-view h1 { font-size: 32px; overflow-wrap: anywhere; }
@@ -4691,6 +4748,7 @@ h1 {
 }
 
 @media print {
+  .web-app-back { display: none !important; }
   .site-header,
   .drawer,
   .site-footer,

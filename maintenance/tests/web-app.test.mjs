@@ -27,6 +27,6 @@ for(const relative of ['website/index.html',...catalog.map(row=>'reviews/'+row.s
  assert(html.includes('<link rel="manifest" href="../manifest.webmanifest?v=3">'),relative);
  assert(html.includes('<link rel="apple-touch-icon" sizes="180x180" href="../icons/cc-180.png?v=3">'),relative);
  assert(html.includes('<meta name="apple-mobile-web-app-capable" content="yes">'),relative);
- assert(html.includes('src="./web-app.js?v=1"'),relative);
+ assert(html.includes('src="./web-app.js?v=2"'),relative);
 }
 console.log(`PASS: portable project/domain scope, PNG dimensions, maskable icon and web-app metadata on the homepage and ${catalog.length} article pages.`);

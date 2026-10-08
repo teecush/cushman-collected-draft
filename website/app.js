@@ -4,7 +4,7 @@ import {renderHomeCollections,HOME_COLLECTION_ORDER} from './home-collections.js
 import {renderPlaywrightStage} from './playwright-stage.js?v=252';
 import {collectionTitleText,setCollectionTitle} from './collection-title.js?v=2';
 import {spotlightRecord} from './collections-engine.js?v=252';
-import { createCatalog } from "./catalog.js?v=256";
+import { createCatalog } from "./catalog.js?v=257";
 import { FEATURES } from "./features.js?v=173";
 const DATA_URL = new URL("../site_export/data/catalog.json?v=252", import.meta.url);
 const ALIASES_URL = new URL("../site_export/data/route_aliases.json?v=1", import.meta.url);
@@ -1721,7 +1721,7 @@ function applyFilters() { catalog.apply(); }
 function archiveStateHref() { return catalog.href(); }
 
 function syncArchiveUrl() {
-  history.replaceState(null, "", archiveStateHref());
+  history.replaceState({...history.state}, "", archiveStateHref());
 }
 
 function scheduleFilterUpdate({ updateUrl = true } = {}) {
@@ -3685,7 +3685,7 @@ async function renderMapView() {
   const countLabel=document.createElement("p");countLabel.className="map-filter-count";countLabel.setAttribute("aria-live","polite");
   const listButton=document.createElement("button"),mapButton=document.createElement("button");listButton.type=mapButton.type="button";listButton.textContent="List";mapButton.textContent="Map and list";
   let listOnly=params.get("view")==="list";
-  const sync=()=>{const p=new URLSearchParams();if(search.value)p.set("q",search.value);if(listOnly)p.set("view","list");history.replaceState(null,"","#map"+(p.size?"?"+p:""));shell.classList.toggle("map-list-only",listOnly);listButton.setAttribute("aria-pressed",String(listOnly));mapButton.setAttribute("aria-pressed",String(!listOnly));};
+  const sync=()=>{const p=new URLSearchParams();if(search.value)p.set("q",search.value);if(listOnly)p.set("view","list");history.replaceState({...history.state},"","#map"+(p.size?"?"+p:""));shell.classList.toggle("map-list-only",listOnly);listButton.setAttribute("aria-pressed",String(listOnly));mapButton.setAttribute("aria-pressed",String(!listOnly));};
   listButton.addEventListener("click",()=>{listOnly=true;sync();});mapButton.addEventListener("click",()=>{listOnly=false;sync();window.dispatchEvent(new Event("resize"));});
   const options=document.createElement('details');options.className='map-options';
   const optionsTitle=document.createElement('summary');optionsTitle.textContent='Map options';
