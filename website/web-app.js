@@ -2,36 +2,64 @@
 (() => {
   const script = document.currentScript;
   const displayMode = window.matchMedia('(display-mode: standalone)');
-  let backButton;
-  let entryIndex = 0;
+  let navigationBar, backButton, forwardButton;
+  let entryIndex = 0, lastEntryIndex = 0, trail = '';
   const entryPath = window.location.pathname;
-  const syncBackButton = () => {
-    const entry = history.state?.ccAppNavigation;
-    if (entry?.path === entryPath && Number.isInteger(entry.index)) entryIndex = entry.index;
-    else history.replaceState({...history.state, ccAppNavigation: {path: entryPath, index: entryIndex}}, '');
-    if (backButton) backButton.disabled = entryIndex === 0;
+  const validEntry = entry => entry?.path === entryPath && Number.isInteger(entry.index) && entry.index >= 0;
+  const readLastEntry = () => {
+    try { return Math.max(entryIndex, Number(sessionStorage.getItem('cc-app-navigation:' + trail)) || 0); }
+    catch { return Math.max(entryIndex, lastEntryIndex); }
+  };
+  const syncControls = () => {
+    history.replaceState({...history.state, ccAppNavigation: {path: entryPath, index: entryIndex, trail}}, '');
+    try { sessionStorage.setItem('cc-app-navigation:' + trail, String(lastEntryIndex)); } catch { /* History still works without session storage. */ }
+    backButton.disabled = entryIndex === 0;
+    forwardButton.disabled = entryIndex >= lastEntryIndex;
   };
   const setAppMode = () => {
     const installed = displayMode.matches || navigator.standalone === true;
     document.body.classList.toggle('web-app-mode', installed);
-    if (!installed || backButton) return;
-    backButton = document.createElement('button');
-    backButton.type = 'button';
-    backButton.className = 'web-app-back';
-    backButton.setAttribute('aria-label', 'Go back');
-    backButton.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14 6-6 6 6 6"/></svg><span>Back</span>';
-    backButton.addEventListener('click', () => { if (entryIndex > 0) history.back(); });
-    document.body.append(backButton);
-    syncBackButton();
+    if (!installed || navigationBar) return;
+    const entry = history.state?.ccAppNavigation;
+    entryIndex = validEntry(entry) ? entry.index : 0;
+    trail = (validEntry(entry) && entry.trail) || crypto.randomUUID();
+    lastEntryIndex = readLastEntry();
+    navigationBar = document.createElement('nav');
+    navigationBar.className = 'web-app-navigation';
+    navigationBar.setAttribute('aria-label', 'App navigation');
+    const control = (label, markup, action) => {
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'web-app-navigation-button';
+      button.setAttribute('aria-label', label);
+      button.innerHTML = markup;
+      button.addEventListener('click', action);
+      navigationBar.append(button);
+      return button;
+    };
+    backButton = control('Go back', '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14 6-6 6 6 6"/></svg><span>Back</span>', () => { if (entryIndex > 0) history.back(); });
+    control('Home', '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7M5 9v12h5v-7h4v7h5V9"/></svg><span>Home</span>', () => {
+      if (location.hash === '#home' || !location.hash && !document.documentElement.dataset.articleSlug) window.scrollTo({top: 0, behavior: 'auto'});
+      else location.hash = '#home';
+    });
+    forwardButton = control('Go forward', '<span>Forward</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m10 6 6 6-6 6"/></svg>', () => { if (entryIndex < lastEntryIndex) history.forward(); });
+    document.body.append(navigationBar);
+    syncControls();
   };
   window.addEventListener('popstate', event => {
-    if (!backButton) return;
+    if (!navigationBar) return;
     const entry = event.state?.ccAppNavigation;
-    if (entry?.path === entryPath && Number.isInteger(entry.index)) entryIndex = entry.index;
-    else entryIndex += 1;
-    syncBackButton();
+    if (validEntry(entry)) {
+      entryIndex = entry.index;
+      if (entry.trail) trail = entry.trail;
+      lastEntryIndex = readLastEntry();
+    } else {
+      entryIndex += 1;
+      lastEntryIndex = entryIndex;
+    }
+    syncControls();
   });
-  window.addEventListener('hashchange', () => { if (backButton) syncBackButton(); });
+  window.addEventListener('hashchange', () => { if (navigationBar) syncControls(); });
   displayMode.addEventListener('change', setAppMode);
   setAppMode();
   if (!script || !('serviceWorker' in navigator) || !window.isSecureContext) return;

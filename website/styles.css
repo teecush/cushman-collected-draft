@@ -35,31 +35,43 @@ body {
   white-space: nowrap;
 }
 
-/* Installed apps have no browser toolbar. Keep a quiet, thumb-sized back control. */
-.web-app-back { display: none; }
+/* Installed apps have no browser toolbar. Keep navigation above the device safe area. */
+.web-app-navigation { display: none; }
 .web-app-mode { padding-bottom: calc(72px + env(safe-area-inset-bottom, 0px)); }
-.web-app-mode .web-app-back {
+.web-app-mode .web-app-navigation {
   position: fixed;
-  left: max(16px, env(safe-area-inset-left, 0px));
-  bottom: calc(12px + env(safe-area-inset-bottom, 0px));
+  inset-inline: 0;
+  bottom: 0;
   z-index: 1100;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: center;
+  padding: 6px max(12px, env(safe-area-inset-right, 0px)) calc(6px + env(safe-area-inset-bottom, 0px)) max(12px, env(safe-area-inset-left, 0px));
+  border-top: 1px solid var(--rule);
+  background: var(--paper);
+  box-shadow: 0 -2px 10px #0000000a;
+}
+.web-app-navigation-button {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 4px;
   min-height: 44px;
-  padding: 8px 16px 8px 10px;
-  border: 1px solid var(--rule);
-  border-radius: 24px;
-  background: var(--paper);
+  padding: 8px 4px;
+  border: 0;
+  border-radius: 4px;
+  background: transparent;
   color: var(--blue-dark);
-  box-shadow: 0 2px 10px #00000018;
-  font: 600 14px/1 var(--sans);
+  font: 600 12px/1 var(--sans);
   cursor: pointer;
 }
-.web-app-back svg { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
-.web-app-back:disabled { color: #888; box-shadow: none; cursor: default; }
-.web-app-back:focus-visible { outline: 2px solid var(--blue-dark); outline-offset: 3px; }
-.web-app-mode.navigation-open .web-app-back { display: none; }
+.web-app-navigation-button:first-child { justify-self: start; }
+.web-app-navigation-button:last-child { justify-self: end; }
+.web-app-navigation-button svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.web-app-navigation-button:disabled { color: #888; cursor: default; }
+.web-app-navigation-button:not(:disabled):hover { background: var(--cream); }
+.web-app-navigation-button:focus-visible { outline: 2px solid var(--blue-dark); outline-offset: 1px; }
+.web-app-mode.navigation-open .web-app-navigation { display: none; }
 
 a {
   color: var(--blue);
@@ -4748,7 +4760,8 @@ h1 {
 }
 
 @media print {
-  .web-app-back { display: none !important; }
+  .web-app-navigation { display: none !important; }
+  body.web-app-mode { padding-bottom: 0; }
   .site-header,
   .drawer,
   .site-footer,
