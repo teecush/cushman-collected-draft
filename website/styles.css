@@ -57,6 +57,7 @@ body {
   justify-content: center;
   gap: 4px;
   min-height: 44px;
+  min-width: 44px;
   padding: 8px 4px;
   border: 0;
   border-radius: 4px;
@@ -67,7 +68,7 @@ body {
 }
 .web-app-navigation-button:first-child { justify-self: start; }
 .web-app-navigation-button:last-child { justify-self: end; }
-.web-app-navigation-button svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.web-app-navigation-button svg { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
 .web-app-navigation-button:disabled { color: #888; cursor: default; }
 .web-app-navigation-button:not(:disabled):hover { background: var(--cream); }
 .web-app-navigation-button:focus-visible { outline: 2px solid var(--blue-dark); outline-offset: 1px; }

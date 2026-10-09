@@ -37,12 +37,12 @@
       navigationBar.append(button);
       return button;
     };
-    backButton = control('Go back', '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14 6-6 6 6 6"/></svg><span>Back</span>', () => { if (entryIndex > 0) history.back(); });
-    control('Home', '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7M5 9v12h5v-7h4v7h5V9"/></svg><span>Home</span>', () => {
+    backButton = control('Go back', '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14 6-6 6 6 6"/></svg>', () => { if (entryIndex > 0) history.back(); });
+    control('Home', '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7M5 9v12h5v-7h4v7h5V9"/></svg>', () => {
       if (location.hash === '#home' || !location.hash && !document.documentElement.dataset.articleSlug) window.scrollTo({top: 0, behavior: 'auto'});
       else location.hash = '#home';
     });
-    forwardButton = control('Go forward', '<span>Forward</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m10 6 6 6-6 6"/></svg>', () => { if (entryIndex < lastEntryIndex) history.forward(); });
+    forwardButton = control('Go forward', '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m10 6 6 6-6 6"/></svg>', () => { if (entryIndex < lastEntryIndex) history.forward(); });
     document.body.append(navigationBar);
     syncControls();
   };
