@@ -4,7 +4,7 @@ import {renderHomeCollections,HOME_COLLECTION_ORDER} from './home-collections.js
 import {renderPlaywrightStage} from './playwright-stage.js?v=252';
 import {collectionTitleText,setCollectionTitle} from './collection-title.js?v=2';
 import {spotlightRecord} from './collections-engine.js?v=252';
-import { createCatalog } from "./catalog.js?v=258";
+import { createCatalog } from "./catalog.js?v=259";
 import { FEATURES } from "./features.js?v=173";
 const DATA_URL = new URL("../site_export/data/catalog.json?v=text-20261010", import.meta.url);
 const ALIASES_URL = new URL("../site_export/data/route_aliases.json?v=1", import.meta.url);

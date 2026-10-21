@@ -156,6 +156,8 @@ export function createCatalog({state, els, h}) {
     form.addEventListener('submit', event => {
       event.preventDefault();
       const query = els.searchInput.value.trim();
+      // Release focus on submission so the phone keyboard closes before results update.
+      els.searchInput.blur();
       if (query !== state.query) state.sort = query ? 'relevance' : 'newest';
       state.query = query; apply(); history.replaceState({...history.state}, '', href());
     });
