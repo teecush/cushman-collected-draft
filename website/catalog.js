@@ -95,7 +95,7 @@ export function createCatalog({state, els, h}) {
   }
   async function ensureText() {
     if(textIndex)return;
-    if(!textPromise)textPromise=fetch(new URL('../site_export/data/search_text.json?v=text-20261010',import.meta.url)).then(r=>{if(!r.ok)throw Error('Text search unavailable');return r.json();}).then(data=>textIndex=data).catch(error=>{textPromise=null;throw error;});
+    if(!textPromise)textPromise=fetch(new URL('../site_export/data/search_text.json?v=text-20261024',import.meta.url)).then(r=>{if(!r.ok)throw Error('Text search unavailable');return r.json();}).then(data=>textIndex=data).catch(error=>{textPromise=null;throw error;});
     return textPromise;
   }
   function apply({preserve=false}={}) {
