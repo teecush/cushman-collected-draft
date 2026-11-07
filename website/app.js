@@ -5,8 +5,9 @@ import {renderPlaywrightStage} from './playwright-stage.js?v=252';
 import {collectionTitleText,setCollectionTitle} from './collection-title.js?v=2';
 import {spotlightRecord} from './collections-engine.js?v=252';
 import { createCatalog } from "./catalog.js?v=260";
+import {applyBodyPresentation,openingBlockClass} from './article-formatting.js?v=1';
 import { FEATURES } from "./features.js?v=173";
-const DATA_URL = new URL("../site_export/data/catalog.json?v=headings-20261107", import.meta.url);
+const DATA_URL = new URL("../site_export/data/catalog.json?v=body-20261107", import.meta.url);
 const ALIASES_URL = new URL("../site_export/data/route_aliases.json?v=1", import.meta.url);
 const STANDALONE_CORRESPONDENCE_URL = new URL("../site_export/data/standalone_correspondence.json?v=237", import.meta.url);
 const CONTENT_ROOT = new URL("../site_export/content/reviews/", import.meta.url);
@@ -4619,7 +4620,7 @@ function publicArticleBody(markdown, record = null) {
     }
     break;
   }
-  return blocks.join("\n\n");
+  return applyBodyPresentation(blocks.join("\n\n"), record?.body_presentation);
 }
 
 function safeDecodeHashValue(value) {
@@ -4662,7 +4663,8 @@ function plainParagraphNodes(markdown, record = null) {
     .filter(Boolean)
     .map((block) => {
       const p = document.createElement("p");
-      p.textContent = block.replace(/\s*\n\s*/g, " ");
+      p.className = openingBlockClass(block, record?.body_presentation);
+      p.textContent = p.className === "article-opening-credit" ? block : block.replace(/\s*\n\s*/g, " ");
       return p;
     });
 }
@@ -4683,8 +4685,8 @@ function articleTitleNodes(record) {
   return { date, title, deck, meta, titleParts };
 }
 
-function fallbackArticleBodyNodes(markdown) {
-  const nodes = plainParagraphNodes(markdown);
+function fallbackArticleBodyNodes(markdown, record = null) {
+  const nodes = plainParagraphNodes(markdown, record);
   return nodes.length
     ? nodes
     : [articleLoadNotice("The article has no readable body text in the exported source file.")];
@@ -4703,6 +4705,15 @@ async function renderEmergencyArticle(slug, error) {
     return;
   }
 
+  if (record.detail_path) {
+    try {
+      const response = await fetch(new URL(record.detail_path, DATA_URL));
+      if (response.ok) record = {...record, ...await response.json()};
+    } catch (detailError) {
+      console.warn("Using catalog metadata in plain article reader", detailError);
+    }
+  }
+
   let markdown = "";
   let notice = articleLoadNotice("The enhanced article view failed, so the plain article text is shown here.", record.source_file);
   try {
@@ -4716,7 +4727,7 @@ async function renderEmergencyArticle(slug, error) {
   const body = document.createElement("div");
   body.className = "article-body";
   body.id = "article-text";
-  body.replaceChildren(...fallbackArticleBodyNodes(markdown));
+  body.replaceChildren(...fallbackArticleBodyNodes(markdown, record));
   const nav = articleContextNav(record);
   const articleParts = [];
   if (nav) articleParts.push(nav);
@@ -4771,7 +4782,9 @@ function paragraphNodes(markdown, record) {
     if (/^(?:---|\*\*\*)$/.test(block)) { nodes.push(document.createElement("hr")); continue; }
     const heading = block.match(/^(#{1,6})\s+([\s\S]*)$/);
     const p = document.createElement(heading ? `h${Math.min(6, heading[1].length + 1)}` : "p");
-    appendFormattedText(p, (heading ? heading[2] : block).replace(/\s*\n\s*/g, " "), inlineEntities, linkedSlugs);
+    p.className = openingBlockClass(block, record?.body_presentation);
+    const blockText = heading ? heading[2] : block;
+    appendFormattedText(p, p.className === "article-opening-credit" ? blockText : blockText.replace(/\s*\n\s*/g, " "), inlineEntities, linkedSlugs);
     nodes.push(p);
   }
   return nodes;

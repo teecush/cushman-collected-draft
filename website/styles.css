@@ -2298,6 +2298,21 @@ h1 {
   font-size: 21px;
 }
 
+.article-body p.article-opening-credit {
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.55;
+  color: var(--muted);
+  white-space: pre-line;
+  margin-bottom: 28px;
+}
+
+.article-body p.article-opening-note {
+  font-style: italic;
+  line-height: 1.5;
+  margin-bottom: 28px;
+}
+
 .article-image {
   margin: 0 0 30px;
 }

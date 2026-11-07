@@ -35,7 +35,16 @@ def inline(text):
         if link:out.append(f'<a href="{html.escape(link[2],quote=True)}">{inline_emphasis(link[1])}</a>')
         else:out.append(inline_emphasis(chunk))
     return ''.join(out)
-def rendered_body(body):
+def apply_body_presentation(body, presentation):
+    if not presentation:return body
+    prefix=presentation.get('source_prefix','')
+    if prefix:
+        if not body.startswith(prefix):raise ValueError('Stale article opening presentation')
+        body=presentation['replacement']+body[len(prefix):]
+    for edit in sorted(presentation.get('contact_edits',[]),key=lambda x:len(x['before']),reverse=True):
+        body=body.replace(edit['before'],edit['after'])
+    return '\n\n'.join(block.strip() for block in re.split(r'\n{2,}',body) if block.strip())
+def rendered_body(body, presentation=None):
     result=[]
     for block in re.split(r'\n{2,}',body):
         image=re.fullmatch(r'!\[(.*?)\]\((.*?)\)',block.strip())
@@ -46,7 +55,10 @@ def rendered_body(body):
                 result.append(f'<figure><img loading="lazy" src="{html.escape(url,quote=True)}" alt="{html.escape(image[1],quote=True)}"></figure>')
             continue
         cls=' class="article-editorial-note"' if re.match(r'^\*?(Editorial note:|\[)',block) else ''
-        result.append(f'<p{cls}>{inline(re.sub(chr(10), " ", block))}</p>')
+        if presentation and block in presentation.get('credits',[]):cls=' class="article-opening-credit"'
+        elif presentation and block in presentation.get('notes',[]):cls=' class="article-opening-note"'
+        visible_text=block if cls==' class="article-opening-credit"' else re.sub(chr(10)," ",block)
+        result.append(f'<p{cls}>{inline(visible_text)}</p>')
     return '\n'.join(result)
 def display_date(r):
     date=r.get('date','')
@@ -77,6 +89,7 @@ def thumbnail(media):
 def main():
     records=json.loads((DATA/'public_reviews.json').read_text())
     heading_overrides=json.loads((DATA/'article_heading_overrides.json').read_text())
+    body_overrides=json.loads((DATA/'article_body_overrides.json').read_text())
     by_slug={r['slug']:r for r in records}
     for slug,override in heading_overrides.items():
         if slug not in by_slug or override['source_title']!=by_slug[slug]['title']:
@@ -93,6 +106,7 @@ def main():
         if r['slug'] in heading_overrides:
             override=heading_overrides[r['slug']]
             r['display_heading']={'headline':override['headline'],'deck':override['deck']}
+        if r['slug'] in body_overrides:r['body_presentation']=body_overrides[r['slug']]
         if not source.is_file():raise ValueError(f'Missing article: {source}')
         r['content_version']=hashlib.sha256(source.read_bytes()).hexdigest()[:12]
         body=body_text(source.read_text(),r)
@@ -100,7 +114,7 @@ def main():
         for item in r.get('correspondence',[]):
             for media in item.get('media',[]):thumbnail(media)
         write_json(DATA/'articles'/f'{r["slug"]}.json',r)
-        light={k:v for k,v in r.items() if k not in ('browse_entities','display_schema','coordinate_points','media')}
+        light={k:v for k,v in r.items() if k not in ('browse_entities','display_schema','coordinate_points','media','body_presentation')}
         # Coordinates for maps are loaded on demand; catalog roles/production relationships remain complete.
         if r.get('media'):light['media']=r['media'][:1]
         detail_hash=hashlib.sha256(json.dumps(r,sort_keys=True).encode()).hexdigest()[:12]
@@ -120,7 +134,8 @@ def main():
         if r.get('authorship_note'):article+=f'<p class="public-date-note">{html.escape(r["authorship_note"])}</p>'
         if r.get('date_note'):article+=f'<p class="public-date-note">{html.escape(r["date_note"])}</p>'
         if any(re.search(r'incomplete|missing_(page|pages|portion|continuation|intervening)',str(r.get(k,'')),re.I) for k in ('editorial_status','editorial_issue_type','source_completeness')):article+='<aside class="article-incomplete-notice">Incomplete surviving source. Bracketed notes mark known gaps.</aside>'
-        article+=f'<div class="article-body" id="article-text">{rendered_body(body)}</div></article>'
+        display_body=apply_body_presentation(body,r.get('body_presentation'))
+        article+=f'<div class="article-body" id="article-text">{rendered_body(display_body,r.get("body_presentation"))}</div></article>'
         page=page.replace('<section class="article-view" id="articleView" hidden>','<section class="article-view" id="articleView">').replace('<article id="article"></article>',article)
         target=SITE/'reviews'/r['slug']/'index.html';target.parent.mkdir(parents=True,exist_ok=True);target.write_text(page)
         urls.append(url)

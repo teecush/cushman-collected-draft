@@ -1,0 +1,38 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import vm from 'node:vm';
+import {applyBodyPresentation,openingBlockClass} from '../../website/article-formatting.js';
+const root=new URL('../../',import.meta.url);
+const read=p=>JSON.parse(fs.readFileSync(new URL(p,root),'utf8'));
+const app=fs.readFileSync(new URL('website/app.js',root),'utf8');
+const stripFrontmatter=s=>s.replace(/^---[\s\S]*?\n---\s*/,'').trim();
+const source=app.slice(app.indexOf('function publicArticleBody('),app.indexOf('function safeDecodeHashValue('));
+const publicBody=vm.runInNewContext(source+';publicArticleBody',{stripFrontmatter,applyBodyPresentation});
+const overrides=read('site_export/data/article_body_overrides.json');
+const records=read('site_export/data/public_reviews.json');
+const money=s=>s.match(/\$\s?\d+(?:[.,]\d+)*/g)||[];
+let changed=0;
+for(const r of records){
+ const md=fs.readFileSync(new URL('site_export/content/reviews/'+r.source_file,root),'utf8');
+ const before=publicBody(md,r),presentation=overrides[r.slug];
+ if(!presentation)continue;
+ const after=publicBody(md,{...r,body_presentation:presentation});
+ assert.notEqual(after,before,r.slug+' should change');
+ const opening=presentation.source_prefix ? (presentation.replacement+before.slice(presentation.source_prefix.length)).trim() : before;
+ assert.deepEqual(money(after),money(opening),'Every price survives contact cleanup: '+r.slug);
+ for(const {before:b} of presentation.contact_edits)assert(!after.includes(b),'Contact block was not transformed: '+r.slug);
+ assert.equal(applyBodyPresentation(before,presentation),after,'Shared reader agrees: '+r.slug);
+ changed++;
+}
+const lion=records.find(r=>r.slug==='1990-06-04-theatre-review-lion-in-the-streets');
+const lionText=fs.readFileSync(new URL('site_export/content/reviews/'+lion.source_file,root),'utf8');
+const formatted=publicBody(lionText,{...lion,body_presentation:overrides[lion.slug]});
+assert(formatted.startsWith('Exploring a limitless domain of human misery\n\nJudith Thompsons Lion in the Streets'));
+assert(!formatted.includes('Written and directed by Judith Thompson'));
+assert(!formatted.includes('Monday, June 04, 1990'));
+assert.equal(openingBlockClass('Exploring a limitless domain of human misery',overrides[lion.slug]),'article-opening-note');
+assert.equal(applyBodyPresentation('New source text',{source_prefix:'Old source text',replacement:''}),'New source text','Stale presentation fails safely');
+const run=records.find(r=>r.slug==='1999-01-22-bridging-the-distance-of-four-generations');
+const runMd=fs.readFileSync(new URL('site_export/content/reviews/'+run.source_file,root),'utf8');
+assert(publicBody(runMd,{...run,body_presentation:overrides[run.slug]}).includes('Runs until Jan. 31.'));
+console.log(`PASS: ${changed} reviewed displays, all price values preserved, contact edits applied, Lion opening separated, run notice retained and stale-source safeguard.`);
