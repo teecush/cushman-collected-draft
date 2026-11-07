@@ -6,7 +6,7 @@ import {collectionTitleText,setCollectionTitle} from './collection-title.js?v=2'
 import {spotlightRecord} from './collections-engine.js?v=252';
 import { createCatalog } from "./catalog.js?v=260";
 import { FEATURES } from "./features.js?v=173";
-const DATA_URL = new URL("../site_export/data/catalog.json?v=text-20261024", import.meta.url);
+const DATA_URL = new URL("../site_export/data/catalog.json?v=headings-20261107", import.meta.url);
 const ALIASES_URL = new URL("../site_export/data/route_aliases.json?v=1", import.meta.url);
 const STANDALONE_CORRESPONDENCE_URL = new URL("../site_export/data/standalone_correspondence.json?v=237", import.meta.url);
 const CONTENT_ROOT = new URL("../site_export/content/reviews/", import.meta.url);
@@ -3410,7 +3410,7 @@ function renderTimelineToolV2() {
     records.forEach((record) => {
       const link = document.createElement("a");
       link.href = `#review:${record.slug}`;
-      const split = headlineParts(record.title);
+      const split = headlineParts(record.title, record);
       const dateParts = ({primary: formatDate(record), secondary: ""});
       const date = document.createElement("span");
       date.className = "timeline-date";
@@ -4342,7 +4342,7 @@ function cardSecondaryParts(record, primaryValues = []) {
 }
 
 function cardDisplay(record, options = {}) {
-  const titleParts = headlineParts(record.title || record.production_title || "Untitled");
+  const titleParts = headlineParts(record.title || record.production_title || "Untitled", record);
   const primaryValues = cardPrimaryValues(record);
   if (options.titleFirst) {
     return {
@@ -4428,7 +4428,8 @@ function storeArticleContext(event, record, context = {}) {
   }
 }
 
-function headlineParts(title) {
+function headlineParts(title, record = null) {
+  if (record?.display_heading) return record.display_heading;
   const text = String(title || "").trim();
   const match = text.match(/^(.+?)[;:]\s*(.+)$/);
   if (!match) return { headline: text, deck: "" };
@@ -4668,7 +4669,7 @@ function plainParagraphNodes(markdown, record = null) {
 
 function articleTitleNodes(record) {
   const title = document.createElement("h1");
-  const titleParts = headlineParts(record?.title || record?.production_title || "Untitled");
+  const titleParts = headlineParts(record?.title || record?.production_title || "Untitled", record);
   title.textContent = titleParts.headline;
   const deck = document.createElement("p");
   deck.className = "article-deck";

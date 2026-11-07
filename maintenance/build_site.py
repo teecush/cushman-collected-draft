@@ -76,6 +76,11 @@ def thumbnail(media):
     media['thumbnail_path']=str(dest.relative_to(EXPORT/'content'))
 def main():
     records=json.loads((DATA/'public_reviews.json').read_text())
+    heading_overrides=json.loads((DATA/'article_heading_overrides.json').read_text())
+    by_slug={r['slug']:r for r in records}
+    for slug,override in heading_overrides.items():
+        if slug not in by_slug or override['source_title']!=by_slug[slug]['title']:
+            raise ValueError(f'Stale article heading override: {slug}')
     # Every category must have an explicit frontend mapping, preventing collapsed fallback counts.
     app=(SITE/'website/app.js').read_text();types=app[app.index('const TYPE_GROUPS = ['):app.index('const TYPE_BY_CATEGORY')]
     known=set(re.findall(r'"([^"]+)"',types))
@@ -85,6 +90,9 @@ def main():
     shell=shell.replace('<head>','<head>\n    <base href="../../website/">',1)
     for raw in records:
         r=clean(raw);source=EXPORT/'content/reviews'/r['source_file']
+        if r['slug'] in heading_overrides:
+            override=heading_overrides[r['slug']]
+            r['display_heading']={'headline':override['headline'],'deck':override['deck']}
         if not source.is_file():raise ValueError(f'Missing article: {source}')
         r['content_version']=hashlib.sha256(source.read_bytes()).hexdigest()[:12]
         body=body_text(source.read_text(),r)
@@ -107,7 +115,8 @@ def main():
         page=re.sub(r'<meta property="og:title" content="[^"]*">',lambda m:f'<meta property="og:title" content="{html.escape(r["title"],quote=True)}">',page,count=1)
         page=re.sub(r'<meta property="og:description" content="[^"]*">',lambda m:f'<meta property="og:description" content="{html.escape(description,quote=True)}">',page,count=1)
         page=page.replace('<meta property="og:type" content="website">',f'<meta property="og:type" content="article"><meta property="og:url" content="{url}"><link rel="canonical" href="{url}">')
-        article=f'<article id="article"><time>{display_date(r)}</time><h1>{title}</h1><p class="article-meta">{html.escape(author)} · {html.escape(r.get("publication") or r.get("source_publication",""))}</p>'
+        visible_title=html.escape(r.get('display_heading',{}).get('headline',r['title']))
+        article=f'<article id="article"><time>{display_date(r)}</time><h1>{visible_title}</h1><p class="article-meta">{html.escape(author)} · {html.escape(r.get("publication") or r.get("source_publication",""))}</p>'
         if r.get('authorship_note'):article+=f'<p class="public-date-note">{html.escape(r["authorship_note"])}</p>'
         if r.get('date_note'):article+=f'<p class="public-date-note">{html.escape(r["date_note"])}</p>'
         if any(re.search(r'incomplete|missing_(page|pages|portion|continuation|intervening)',str(r.get(k,'')),re.I) for k in ('editorial_status','editorial_issue_type','source_completeness')):article+='<aside class="article-incomplete-notice">Incomplete surviving source. Bracketed notes mark known gaps.</aside>'
