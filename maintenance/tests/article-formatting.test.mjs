@@ -27,11 +27,12 @@ for(const r of records){
 const lion=records.find(r=>r.slug==='1990-06-04-theatre-review-lion-in-the-streets');
 const lionText=fs.readFileSync(new URL('site_export/content/reviews/'+lion.source_file,root),'utf8');
 const formatted=publicBody(lionText,{...lion,body_presentation:overrides[lion.slug]});
-assert(formatted.startsWith('Exploring a limitless domain of human misery\n\nJudith Thompsons Lion in the Streets'));
+assert(formatted.startsWith('Judith Thompsons Lion in the Streets'));
 assert(!formatted.includes('Written and directed by Judith Thompson'));
 assert(!formatted.includes('Monday, June 04, 1990'));
-assert.equal(openingBlockClass('Exploring a limitless domain of human misery',overrides[lion.slug]),'article-opening-note');
+assert(!formatted.includes('Exploring a limitless domain of human misery'),'Recovered headline moves above the body');
 assert.equal(applyBodyPresentation('New source text',{source_prefix:'Old source text',replacement:''}),'New source text','Stale presentation fails safely');
+assert.equal(applyBodyPresentation('New source text',{heading_prefix:'Old source text',heading_replacement:''}),'New source text','Stale headline extraction fails safely');
 const run=records.find(r=>r.slug==='1999-01-22-bridging-the-distance-of-four-generations');
 const runMd=fs.readFileSync(new URL('site_export/content/reviews/'+run.source_file,root),'utf8');
 assert(publicBody(runMd,{...run,body_presentation:overrides[run.slug]}).includes('Runs until Jan. 31.'));

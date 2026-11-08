@@ -9,6 +9,12 @@ export function applyBodyPresentation(body, presentation) {
   for (const {before, after} of [...(presentation.contact_edits || [])].sort((a,b) => b.before.length-a.before.length)) {
     text = text.split(before).join(after);
   }
+  text = text.split(/\n{2,}/).map(block => block.trim()).filter(Boolean).join('\n\n');
+  if (presentation.heading_prefix) {
+    // Apply only the reviewed opening; a changed source must never lose new prose.
+    if (!text.startsWith(presentation.heading_prefix)) return body;
+    text = presentation.heading_replacement + text.slice(presentation.heading_prefix.length);
+  }
   return text.split(/\n{2,}/).map(block => block.trim()).filter(Boolean).join('\n\n');
 }
 

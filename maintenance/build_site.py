@@ -17,6 +17,25 @@ def clean(value):
     if isinstance(value,dict):return {k:clean(v) for k,v in value.items() if v not in ('',[],{},None) and k not in ('source_photo','canonical_file','editorial_notes','source_path')}
     if isinstance(value,list):return [clean(v) for v in value]
     return value
+def source_heading(markdown):
+    """Read only the source's folded textual title, never truncate at a YAML line wrap.
+
+    This deliberately handles scalar title strings only, not arbitrary YAML objects.
+    Raw catalogue titles and identity fields remain unchanged.
+    """
+    front=re.match(r'^---\n([\s\S]*?)\n---',markdown)
+    if not front:return None
+    match=re.search(r'^title:[ \t]*(.*(?:\n[ \t]+[^\n]+)*)',front[1],re.M)
+    if not match:return None
+    text=' '.join(line.strip() for line in match[1].splitlines()).strip()
+    if not text or text.startswith(('>','|','[','{')):return None
+    if text.startswith("'"):
+        if not text.endswith("'"):return None
+        return text[1:-1].replace("''", "'")
+    if text.startswith('"'):
+        try:return json.loads(text)
+        except json.JSONDecodeError:return None
+    return text
 def body_text(markdown, record):
     text=re.sub(r'^---[\s\S]*?\n---\s*','',markdown).strip()
     blocks=re.split(r'\n{2,}',text)
@@ -43,6 +62,11 @@ def apply_body_presentation(body, presentation):
         body=presentation['replacement']+body[len(prefix):]
     for edit in sorted(presentation.get('contact_edits',[]),key=lambda x:len(x['before']),reverse=True):
         body=body.replace(edit['before'],edit['after'])
+    body='\n\n'.join(block.strip() for block in re.split(r'\n{2,}',body) if block.strip())
+    if presentation.get('heading_prefix'):
+        prefix=presentation['heading_prefix']
+        if not body.startswith(prefix):raise ValueError('Stale source headline presentation')
+        body=presentation['heading_replacement']+body[len(prefix):]
     return '\n\n'.join(block.strip() for block in re.split(r'\n{2,}',body) if block.strip())
 def rendered_body(body, presentation=None):
     result=[]
@@ -108,8 +132,12 @@ def main():
             r['display_heading']={'headline':override['headline'],'deck':override['deck']}
         if r['slug'] in body_overrides:r['body_presentation']=body_overrides[r['slug']]
         if not source.is_file():raise ValueError(f'Missing article: {source}')
+        source_markdown=source.read_text()
+        expected=heading_overrides.get(r['slug'],{}).get('source_heading_text')
+        if expected and source_heading(source_markdown)!=expected:
+            raise ValueError(f'Stale wrapped source heading: {r["slug"]}')
         r['content_version']=hashlib.sha256(source.read_bytes()).hexdigest()[:12]
-        body=body_text(source.read_text(),r)
+        body=body_text(source_markdown,r)
         for media in r.get('media',[]):thumbnail(media)
         for item in r.get('correspondence',[]):
             for media in item.get('media',[]):thumbnail(media)
@@ -122,15 +150,19 @@ def main():
         texts[r['slug']]=re.sub(r'!\[.*?\]\(.*?\)','',body).replace('*','')
         url=BASE+'reviews/'+quote(r['slug'])+'/'
         author="Unsigned (authorship unconfirmed)" if r.get("authorship_note") else r.get("author") or "Robert Cushman"
-        description=f'{r["title"]}, {author}. {r.get("publication") or r.get("source_publication","")}, {display_date(r)}.'
-        title=html.escape(r['title']);page=shell.replace('<html lang="en">',f'<html lang="en" data-article-slug="{html.escape(r["slug"],quote=True)}">',1).replace('<body>','<body class="article-open">',1)
+        heading=r.get('display_heading',{})
+        public_title=heading.get('headline',r['title'])
+        description=f'{public_title}, {author}. {r.get("publication") or r.get("source_publication","")}, {display_date(r)}.'
+        title=html.escape(public_title);page=shell.replace('<html lang="en">',f'<html lang="en" data-article-slug="{html.escape(r["slug"],quote=True)}">',1).replace('<body>','<body class="article-open">',1)
         page=re.sub(r'<title>.*?</title>',lambda m:f'<title>{title} | Cushman Collected</title>',page,count=1)
         page=re.sub(r'<meta\s+name="description"\s+content="[^"]*"\s*>',lambda m:f'<meta name="description" content="{html.escape(description,quote=True)}">',page,count=1)
-        page=re.sub(r'<meta property="og:title" content="[^"]*">',lambda m:f'<meta property="og:title" content="{html.escape(r["title"],quote=True)}">',page,count=1)
+        page=re.sub(r'<meta property="og:title" content="[^"]*">',lambda m:f'<meta property="og:title" content="{html.escape(public_title,quote=True)}">',page,count=1)
         page=re.sub(r'<meta property="og:description" content="[^"]*">',lambda m:f'<meta property="og:description" content="{html.escape(description,quote=True)}">',page,count=1)
         page=page.replace('<meta property="og:type" content="website">',f'<meta property="og:type" content="article"><meta property="og:url" content="{url}"><link rel="canonical" href="{url}">')
         visible_title=html.escape(r.get('display_heading',{}).get('headline',r['title']))
-        article=f'<article id="article"><time>{display_date(r)}</time><h1>{visible_title}</h1><p class="article-meta">{html.escape(author)} · {html.escape(r.get("publication") or r.get("source_publication",""))}</p>'
+        article=f'<article id="article"><time>{display_date(r)}</time><h1>{visible_title}</h1>'
+        if heading.get('deck'):article+=f'<p class="article-deck">{html.escape(heading["deck"])}</p>'
+        article+=f'<p class="article-meta">{html.escape(author)} · {html.escape(r.get("publication") or r.get("source_publication",""))}</p>'
         if r.get('authorship_note'):article+=f'<p class="public-date-note">{html.escape(r["authorship_note"])}</p>'
         if r.get('date_note'):article+=f'<p class="public-date-note">{html.escape(r["date_note"])}</p>'
         if any(re.search(r'incomplete|missing_(page|pages|portion|continuation|intervening)',str(r.get(k,'')),re.I) for k in ('editorial_status','editorial_issue_type','source_completeness')):article+='<aside class="article-incomplete-notice">Incomplete surviving source. Bracketed notes mark known gaps.</aside>'

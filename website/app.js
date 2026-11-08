@@ -5,9 +5,9 @@ import {renderPlaywrightStage} from './playwright-stage.js?v=252';
 import {collectionTitleText,setCollectionTitle} from './collection-title.js?v=2';
 import {spotlightRecord} from './collections-engine.js?v=252';
 import { createCatalog } from "./catalog.js?v=260";
-import {applyBodyPresentation,openingBlockClass} from './article-formatting.js?v=1';
+import {applyBodyPresentation,openingBlockClass} from './article-formatting.js?v=2';
 import { FEATURES } from "./features.js?v=173";
-const DATA_URL = new URL("../site_export/data/catalog.json?v=body-20261107", import.meta.url);
+const DATA_URL = new URL("../site_export/data/catalog.json?v=recovered-headings-20261107", import.meta.url);
 const ALIASES_URL = new URL("../site_export/data/route_aliases.json?v=1", import.meta.url);
 const STANDALONE_CORRESPONDENCE_URL = new URL("../site_export/data/standalone_correspondence.json?v=237", import.meta.url);
 const CONTENT_ROOT = new URL("../site_export/content/reviews/", import.meta.url);
@@ -950,6 +950,8 @@ function shakespearePlayValues(record) {
 function searchPriorityText(record) {
   return [
     record.title,
+    record.display_heading?.headline,
+    record.display_heading?.deck,
     articleWorkValues(record),
     record.production_title,
     record.book_title,
@@ -1544,6 +1546,8 @@ function pushSearchValue(parts, value) {
 function searchableParts(record) {
   const parts = [
     record.title,
+    record.display_heading?.headline,
+    record.display_heading?.deck,
     record.production_title,
     record.company,
     record.venue,
@@ -1615,7 +1619,7 @@ function searchMatchInfo(record, rawQuery) {
   const query = normalizeSearchText(rawQuery);
   if (!query) return null;
   const fields = [
-    ["Title", record.title],
+    ["Title", record.display_heading ? [record.display_heading.headline, record.display_heading.deck] : record.title],
     [displaySchema(record).workLabel, articleWorkValues(record)],
     ["Person", [record.subject_people, record.people, record.roles]],
     ["Company", record.company],
@@ -4351,7 +4355,8 @@ function cardDisplay(record, options = {}) {
       title: titleParts.headline,
       deck: titleParts.deck,
       primaryValues,
-      secondary: compactParts([...primaryValues, ...cardSecondaryParts(record, primaryValues)]).slice(0, 4),
+      secondary: compactParts([...primaryValues, ...cardSecondaryParts(record, primaryValues)])
+        .filter(part => normalizeSearchText(part) !== normalizeSearchText(titleParts.headline)).slice(0, 4),
     };
   }
   const primary = compactValueList(primaryValues, 2);
@@ -4471,7 +4476,7 @@ function fallbackResultCard(record) {
   const title = document.createElement("span");
   title.className = "card-title";
   const headline = document.createElement("strong");
-  headline.textContent = record?.title || record?.production_title || "Untitled";
+  headline.textContent = headlineParts(record?.title || record?.production_title || "Untitled", record).headline;
   title.append(headline);
 
   const meta = document.createElement("span");
@@ -4547,7 +4552,9 @@ function resultCard(record, context = {}) {
   copy.append(date, title);
   if (productionPartsList.length) copy.append(production);
   const matchInfo = context.query ? searchMatchInfo(record, context.query) : null;
-  if (matchInfo) {
+  const repeatsVisibleTitle = matchInfo?.label === "Title"
+    && normalizeSearchText([display.title, display.deck].filter(Boolean).join(" ")).includes(normalizeSearchText(matchInfo.value));
+  if (matchInfo && !repeatsVisibleTitle) {
     const match = document.createElement("span");
     match.className = "search-match-line";
     match.textContent = `Matched ${matchInfo.label.toLowerCase()}: ${clipWords(matchInfo.value, 18)}`;
@@ -5566,8 +5573,8 @@ async function showReview(slug) {
 
   if (window.location.hash !== requestedHash) return;
   const { date, title, deck, meta, titleParts } = articleTitleNodes(record);
-  document.title = `${record.title} | Cushman Collected`;
-  document.querySelector('meta[name="description"]')?.setAttribute("content", `${record.title}, ${articleAuthor(record)}. ${articlePublicationLabel(record)}, ${formatDate(record)}.`);
+  document.title = `${titleParts.headline} | Cushman Collected`;
+  document.querySelector('meta[name="description"]')?.setAttribute("content", `${titleParts.headline}, ${articleAuthor(record)}. ${articlePublicationLabel(record)}, ${formatDate(record)}.`);
 
   const body = document.createElement("div");
   body.className = "article-body";

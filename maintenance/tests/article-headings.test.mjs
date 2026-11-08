@@ -15,12 +15,12 @@ for(const record of catalog){
  const override=overrides[record.slug];
  if(override){
   assert.equal(override.source_title,original.title);
-  assert.deepEqual(JSON.parse(JSON.stringify(parts(record.title,record))),{headline:override.headline,deck:''});
+  assert.deepEqual(JSON.parse(JSON.stringify(parts(record.title,record))),{headline:override.headline,deck:override.deck});
   const detail=read('site_export/data/'+record.detail_path.split('?')[0]);
   assert.deepEqual(detail.display_heading,record.display_heading,'Direct and catalog article routes agree');
  }else assert.equal(record.display_heading,undefined);
 }
-assert.equal(parts('Close Encounters With Genius: The Young Steven Spielberg',catalog.find(r=>r.slug==='1997-07-05-close-encounters-with-genius-the-young-steven-spielberg')).deck,'');
+assert(parts('Close Encounters With Genius: The Young Steven Spielberg',catalog.find(r=>r.slug==='1997-07-05-close-encounters-with-genius-the-young-steven-spielberg')).deck.endsWith('extraordinary sophistication and invention.'));
 assert.equal(parts('Richard III: Reign of Terror').deck,'Reign of Terror','Legitimate play subtitles survive');
 assert.equal(parts('Theatre Review: A Midsummer Night\'s Dream').deck,'A Midsummer Night\'s Dream','Work title survives');
 assert.equal(parts('Music: The Man Who Got Rhythm').deck,'The Man Who Got Rhythm','Printed headline survives');
