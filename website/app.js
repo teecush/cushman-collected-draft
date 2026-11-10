@@ -7,7 +7,7 @@ import {spotlightRecord} from './collections-engine.js?v=252';
 import { createCatalog } from "./catalog.js?v=260";
 import {applyBodyPresentation,openingBlockClass} from './article-formatting.js?v=2';
 import { FEATURES } from "./features.js?v=173";
-const DATA_URL = new URL("../site_export/data/catalog.json?v=recovered-headings-20261107", import.meta.url);
+const DATA_URL = new URL("../site_export/data/catalog.json?v=text-20261110", import.meta.url);
 const ALIASES_URL = new URL("../site_export/data/route_aliases.json?v=1", import.meta.url);
 const STANDALONE_CORRESPONDENCE_URL = new URL("../site_export/data/standalone_correspondence.json?v=237", import.meta.url);
 const CONTENT_ROOT = new URL("../site_export/content/reviews/", import.meta.url);
